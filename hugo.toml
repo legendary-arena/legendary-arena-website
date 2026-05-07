@@ -1,0 +1,35 @@
+baseURL = "https://www.legendary-arena.com/"
+locale = "en-us"
+title = "Legendary Arena"
+theme = "PaperMod"
+
+# Pretty URLs without /index.html
+canonifyURLs = true
+
+# RSS, sitemap, etc.
+enableRobotsTXT = true
+
+[params]
+  env = "production"
+  description = "A digital adaptation of the Legendary: A Marvel Deck Building Game."
+  author = "Jeffery Jensen"
+  defaultTheme = "auto"            # respects user's system light/dark preference
+  ShowReadingTime = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = false
+  ShowToc = true
+
+  # Home page hero (minimal placeholder for v1)
+  [params.homeInfoParams]
+    Title = "Legendary Arena"
+    Content = "A digital adaptation of the Legendary deck-building card game. Coming soon."
+
+[markup]
+  [markup.highlight]
+    style = "monokai"
+    lineNos = false
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
