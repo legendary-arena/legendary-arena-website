@@ -55,11 +55,12 @@ not-done regardless of its DoD.
 
 ```
 WP-001 → WP-002 → WP-003 → WP-004 → WP-005 → WP-006 ┬→ WP-007a
-                                                    └→ WP-007b   (parallel)
+                                                    ├→ WP-007b
+                                                    └→ WP-008   (all three parallel)
 ```
 
-WP-007a and WP-007b can run in parallel after WP-006 completes; they have
-no shared write paths.
+WP-007a, WP-007b, and WP-008 can run in parallel after WP-006 completes;
+they have no shared write paths.
 
 ---
 
@@ -68,15 +69,16 @@ no shared write paths.
 | WP | Title | Status | Dependencies | Est. effort |
 |---|---|---|---|---|
 | WP-001 | Hugo skeleton + PaperMod theme | ✅ Done | — | half-day |
-| WP-002 | LA brand definition + tokens v1 | ⏭️ Up next | WP-001 | 1–2 days |
+| WP-002 | LA brand definition + tokens v1 | 🔄 In progress | WP-001 | 1–2 days |
 | WP-003 | Apply LA brand via theme overrides | ⏸️ Pending | WP-002 | 1 day |
 | WP-004 | Content scaffolding + first 3 pages | ⏸️ Pending | WP-003 | half-day |
 | WP-005 | Pagefind search integration | ⏸️ Pending | WP-004 | half-day |
 | WP-006 | Cloudflare Pages deploy + custom domain | ⏸️ Pending | WP-005 | half-day |
 | WP-007a | play.legendary-arena.com deploy | ⏸️ Pending | WP-006 | 1 day |
-| WP-007b | registry.legendary-arena.com deploy | ⏸️ Pending | WP-006 | 1 day |
+| WP-007b | Registry viewer brand integration (cards.barefootbetters.com) | ⏸️ Pending | WP-006 | ~half-day–1 day |
+| WP-008 | SEO baseline (Hugo equivalent of RankMath features) | ⏸️ Pending | WP-006 | ~1 day |
 
-**Total realistic effort:** ~5–7 days of focused work.
+**Total realistic effort:** ~6–8 days of focused work.
 
 ---
 
@@ -150,9 +152,9 @@ for all subsequent WPs.
 
 ---
 
-## WP-002 — LA brand definition + tokens v1 ⏭️
+## WP-002 — LA brand definition + tokens v1 🔄
 
-**Status:** Up next
+**Status:** In progress — Phase A + Phase B documentation drafted (v1 DRAFT); lock pending WP-003 verification
 **Effort:** 1–2 days
 **Dependencies:** WP-001
 
@@ -161,6 +163,7 @@ for all subsequent WPs.
 - Spec complete: ✅
 - Dependencies met: ✅
 - Ready for execution: ✅
+- Currently executing: ✅ (drafts complete 2026-05-07; lock pending verification)
 
 ### Preconditions
 
@@ -189,7 +192,10 @@ Establish Legendary Arena's visual identity and produce a versioned
 - Color palette: primary, secondary, accent, neutrals, semantic
   (success/warning/error). Light + dark variants.
 - Typography: display font, body font, mono font. Pick from Google Fonts
-  for v1; document fallbacks.
+  for v1; document fallbacks. Define a complete type scale —
+  H1, H2, H3, H4, H5, H6, body, and small — each with pixel/rem size,
+  line height, weight, and named CSS custom property
+  (`--la-font-size-h1`, `--la-line-height-h1`, etc.).
 - Spacing scale: base unit (4px or 8px), scale (4/8/12/16/24/32/48/64/96),
   usage rules.
 - Output `brand-tokens.css` with version header.
@@ -242,17 +248,26 @@ summary of changes.
 - Tokens are CSS custom properties (e.g., `--la-color-primary`), not Sass
   variables — so consumers can override via runtime CSS if needed
 - Naming convention documented in `palette.md` and applied consistently
+- Brand docs (`docs/brand/*.md`) are written for **both human and AI
+  consumption**: explicit hex values, named tokens, usage rules, no
+  reliance on visual references alone. A future Claude session reading
+  these docs should be able to make brand-consistent styling decisions
+  without re-asking for clarification.
 
 ### Definition of Done
 
-- [ ] `docs/brand/strategy.md` written and committed
-- [ ] `docs/brand/palette.md` written with hex values + semantic mappings
-      (light + dark variants both defined)
-- [ ] `docs/brand/typography.md` written with Google Fonts choices +
-      fallbacks
-- [ ] `docs/brand/spacing.md` written with scale + usage rules
-- [ ] `docs/brand/CHANGELOG.md` initialized with v1 entry
-- [ ] `static/brand-tokens.css` produced with version header
+- [x] `docs/brand/strategy.md` written and committed (v1 DRAFT, 2026-05-07)
+- [x] `docs/brand/palette.md` written with hex values + semantic mappings
+      (light + dark variants both defined; v1 DRAFT, 2026-05-07)
+- [x] `docs/brand/typography.md` written with Google Fonts choices,
+      fallbacks, AND complete type scale (hero + H1–H6, body, small) with
+      sizes, line heights, weights, and named tokens (v1 DRAFT, 2026-05-07)
+- [x] `docs/brand/spacing.md` written with scale + usage rules
+      (also covers radii, z-index, motion; v1 DRAFT, 2026-05-07)
+- [x] `docs/brand/CHANGELOG.md` initialized with v1 entry (2026-05-07)
+- [x] `static/brand-tokens.css` produced with version header — includes
+      `--la-font-size-*` and `--la-line-height-*` tokens for the
+      full type scale (v1 DRAFT, 2026-05-07)
 
 ### Exit criteria
 
@@ -282,6 +297,25 @@ summary of changes.
   Phase B decisions cascade from it.
 - Sleep on the strategy if possible. Brand decisions made in one sitting
   tend to converge on safe-but-generic.
+
+### Progress (2026-05-07)
+
+- **Phase A** drafted as `docs/brand/strategy.md` v1 DRAFT — includes
+  Global brand invariants, tone invariants, CTA contract, terminology
+  rules, brand failure modes, Phase B exit criteria.
+- **Phase B documentation** drafted: `palette.md`, `typography.md`,
+  `spacing.md` all v1 DRAFT with parallel governance structure
+  (authority blocks, failure modes, contract references, exit criteria).
+  `CHANGELOG.md` v1 entry initialized.
+- **Phase B implementation** drafted: `static/brand-tokens.css` v1 DRAFT
+  with full token set (colors light+dark, hero+H1–H6 typography,
+  9-step spacing, radii, z-index, motion). Contract violation fixed
+  in this draft (error red separated from CTA red per
+  strategy.md §4 constraint).
+- **Status remains "In progress"** until WP-003 verifies tokens render
+  correctly against real pages. Lock criteria are the exit criteria
+  in `strategy.md §11`. When all five hold, all brand artifacts move
+  from "v1 DRAFT" to "v1 LOCKED" and this WP marks ✅ Done.
 
 ---
 
@@ -607,7 +641,8 @@ production deploy pipeline.
 - [ ] `brand-tokens.css` accessible at
       `https://www.legendary-arena.com/brand-tokens.css` with
       CORS-friendly headers (`Access-Control-Allow-Origin: *` or
-      explicit play/registry origins)
+      explicit consumer origins: `play.legendary-arena.com`,
+      `cards.barefootbetters.com`)
 - [ ] Token version v1 visible in the version header comment when
       fetching the CSS
 
@@ -618,7 +653,7 @@ production deploy pipeline.
 - Broken links or 404s on the live site
 - HTTPS misconfigured (mixed content, expired cert, missing redirect)
 - `brand-tokens.css` not fetchable cross-origin (CORS blocks
-  `play.*` / `registry.*`)
+  `play.legendary-arena.com` or `cards.barefootbetters.com`)
 - Preview deploys not creating on PRs
 
 ### Rollback
@@ -726,16 +761,16 @@ Deploy `arena-client` (from the engine monorepo) at
 
 ---
 
-## WP-007b — registry.legendary-arena.com deploy ⏸️
+## WP-007b — Registry viewer brand integration (cards.barefootbetters.com) ⏸️
 
 **Status:** Pending WP-006
-**Effort:** ~1 day
+**Effort:** ~half-day to ~1 day (smaller than originally scoped — no new deployment)
 **Dependencies:** WP-006
 
 ### Parallelization
 
-- Can run in parallel with WP-007a after WP-006 completes (no shared
-  write paths)
+- Can run in parallel with WP-007a and WP-008 after WP-006 completes
+  (no shared write paths)
 
 ### Readiness
 
@@ -746,42 +781,55 @@ Deploy `arena-client` (from the engine monorepo) at
 ### Preconditions
 
 - WP-006 complete; `brand-tokens.css` reachable cross-origin
-- `registry-viewer` build pipeline working in the engine monorepo
-- DNS access for `registry.legendary-arena.com` confirmed
+- Existing `cards.barefootbetters.com` deployment accessible and
+  editable
+- DNS for `cards.barefootbetters.com` already in place (existing)
+
+### Note on registry URL
+
+Per vision.md (Decisions log 2026-05-07), the registry remains at
+`cards.barefootbetters.com` for v1. The future migration to
+`registry.legendary-arena.com` is a deferred separate effort with its
+own scoped WP — **not part of this WP**.
 
 ### Goal
 
-Deploy `registry-viewer` at `registry.legendary-arena.com`, consuming
-brand tokens for visual unity.
+Update the existing `cards.barefootbetters.com` deployment of
+`registry-viewer` to consume brand tokens and present a unified
+header/footer matching www and play. **No new deployment** — this is
+a brand-integration update to an existing site.
 
 ### Deliverables
 
-- Cloudflare Pages project for `registry-viewer`
-- Build configured for Vue static export
 - `registry-viewer` HTML imports
   `https://www.legendary-arena.com/brand-tokens.css`
-- Custom domain bound: `registry.legendary-arena.com`
-- Shared header/footer matching www brand
+- Shared header/footer matching www brand identity (links to
+  `www.legendary-arena.com` and `play.legendary-arena.com`)
 - Local fallback copy of `brand-tokens.css` bundled with the
   registry-viewer
-- Registry's structured search remains intact (Pagefind is www-only)
+- Registry's structured search and card browsing remain intact
+  (Pagefind is www-only; no overlap)
+- Updated deploy of `cards.barefootbetters.com` reflecting the brand
+  changes
 
 ### Cross-site contract
 
 Same as WP-007a: tokens consumed via cross-origin link, major-version
-updates coordinated, local fallback included.
+updates coordinated across all consumers, local fallback included.
 
 ### Constraints
 
 - No engine changes solely for branding
 - Existing card-search / filter functionality unmodified
 - Brand tokens consumed by reference, not copied/forked
+- No URL changes — `cards.barefootbetters.com` stays the canonical
+  registry URL for v1
 
 ### Definition of Done
 
-- [ ] `https://registry.legendary-arena.com` loads the registry
-- [ ] Visual identity matches www (same colors, type, spacing, header,
-      footer)
+- [ ] `https://cards.barefootbetters.com` loads with updated brand
+- [ ] Visual identity matches www (same colors, type, spacing,
+      header, footer)
 - [ ] Header has working nav links to `www.legendary-arena.com` and
       `play.legendary-arena.com`
 - [ ] Card browsing/filtering unaffected (smoke test)
@@ -790,12 +838,12 @@ updates coordinated, local fallback included.
 
 ### Exit criteria
 
-- [ ] Lighthouse ≥ 90 on `registry.legendary-arena.com`
+- [ ] Lighthouse ≥ 90 on `cards.barefootbetters.com`
 - [ ] No console errors in production
-- [ ] Cross-origin token fetch succeeds
+- [ ] Cross-origin token fetch succeeds (verify in DevTools network tab)
 - [ ] Token version v1 confirmed via version header
-- [ ] Card search returns expected results (smoke test: search a known
-      card, verify hit)
+- [ ] Card search still returns expected results (smoke test: search
+      a known card, verify hit)
 
 ### Failure conditions
 
@@ -806,13 +854,154 @@ updates coordinated, local fallback included.
 
 ### Rollback
 
-- Cloudflare Pages: revert deploy
-- If regression came from a `registry-viewer` source change: revert in
-  engine monorepo
+- Cloudflare Pages: revert deploy of `cards.barefootbetters.com`
+- If regression came from a `registry-viewer` source change: revert
+  in engine monorepo
 
 ---
 
-## After WP-007 — what's not yet planned
+## WP-008 — SEO baseline + Schema.org markup ⏸️
+
+**Status:** Pending WP-006
+**Effort:** ~1 day
+**Dependencies:** WP-006
+
+### Parallelization
+
+- Can run in parallel with WP-007a and WP-007b after WP-006 completes
+  (no shared write paths — touches Hugo templates and front-matter,
+  not the deploy configs of the other apps)
+
+### Readiness
+
+- Spec complete: ✅
+- Dependencies met: ❌ (waiting on WP-006)
+- Ready for execution: ❌
+
+### Preconditions
+
+- WP-006 complete; live URL available for external validators
+  (Facebook Sharing Debugger, Twitter Card Validator, Google's
+  Rich Results Test, Google Search Console)
+- Real content in place (WP-004) so meta descriptions and Schema markup
+  describe real data, not placeholders
+
+### Why this WP exists
+
+RankMath is the popular WordPress SEO plugin. **RankMath itself is
+WordPress-only and cannot run on Hugo.** However, nearly every feature
+RankMath provides has a Hugo-native equivalent — some built-in to
+PaperMod, some requiring small custom partials. This WP delivers the
+Hugo equivalent of a "RankMath-configured" baseline.
+
+### Goal
+
+Implement Hugo-native SEO equivalents to RankMath: meta tags, Open
+Graph, Twitter Cards, Schema.org JSON-LD, sitemap and robots
+verification, Search Console submission. Codify ongoing SEO discipline
+in a conventions doc.
+
+### Deliverables
+
+**Hugo template work:**
+- Custom partial: `layouts/_partials/seo/schema.html` rendering
+  Schema.org JSON-LD with appropriate type per page:
+  - `Organization` + `WebSite` on home
+  - `AboutPage` on about
+  - `Blog` on blog index
+  - `BlogPosting` + `BreadcrumbList` on individual posts
+- Verified PaperMod's built-in OG and Twitter Card tags work correctly
+- `robots.txt` verified accessible (already enabled in `hugo.toml`)
+- `sitemap.xml` verified accessible (Hugo generates automatically)
+
+**Front-matter discipline:**
+- Every page has a `description` field (meta description, ≤ 160 chars)
+- Every page has appropriate `tags` and `categories` where relevant
+- Image-bearing pages have alt text on every image
+
+**Operational:**
+- `sitemap.xml` submitted to Google Search Console
+- OG tags validated via Facebook Sharing Debugger
+- Twitter Card tags validated via Twitter Card Validator
+- Schema.org markup validated via Google's Rich Results Test
+
+**Documentation:**
+- `docs/05-SEO-CONVENTIONS.md` — front-matter requirements, alt-text
+  rules, internal linking guidelines, external validator URLs
+
+### Out of scope
+
+- **Keyword analysis / scoring** — RankMath proprietary; manual content
+  review serves the same purpose
+- **Internal link suggestions** — RankMath proprietary; not worth
+  replicating
+- **404 monitoring** — post-launch; covered by Cloudflare Pages
+  analytics if/when added
+- **Visual SEO scoring dashboard** — overkill for a small marketing site
+
+### Constraints
+
+- All Schema.org markup must validate against schema.org standards
+  (verify with Google's Rich Results Test on each page type)
+- No SEO technique that risks search-engine penalty (no keyword
+  stuffing, no hidden text, no doorway pages, no cloaking)
+- SEO data lives in front-matter, not page bodies — keeps content
+  separate from metadata
+- No SEO partial may break the page if its data is missing (graceful
+  fallback)
+
+### Definition of Done
+
+- [ ] `layouts/_partials/seo/schema.html` partial implemented
+- [ ] Partial included in PaperMod's `<head>` override
+      (`layouts/_partials/extend_head.html` or equivalent)
+- [ ] Schema validates via Google's Rich Results Test on at least one
+      page of each type (home, about, blog post)
+- [ ] OG tags pass Facebook Sharing Debugger on home + a blog post
+- [ ] Twitter cards pass Twitter Card Validator on home + a blog post
+- [ ] `sitemap.xml` accessible at
+      `https://www.legendary-arena.com/sitemap.xml`
+- [ ] `robots.txt` accessible at
+      `https://www.legendary-arena.com/robots.txt`
+- [ ] `sitemap.xml` submitted to Google Search Console
+- [ ] All committed pages have non-empty `description` front-matter
+      (≤ 160 chars)
+- [ ] `docs/05-SEO-CONVENTIONS.md` written and committed
+
+### Exit criteria
+
+- [ ] All four external validators (Rich Results, FB Debugger, Twitter
+      Validator, Search Console) report no errors on tested pages
+- [ ] Lighthouse SEO score ≥ 95 on home page (above the ≥ 90 baseline)
+- [ ] No console errors introduced by SEO templates
+- [ ] Schema partial degrades gracefully when front-matter fields are
+      missing (no template errors)
+
+### Failure conditions
+
+- Schema.org markup fails validation (broken JSON-LD)
+- OG/Twitter previews look wrong on social platforms
+- Lighthouse SEO score drops vs WP-006 baseline
+- Page renders break when front-matter fields are missing
+
+### Rollback
+
+- Revert SEO commits on `main`. Site reverts to WP-006 state with
+  PaperMod's defaults still active. No external SEO depends on the
+  custom Schema partial, so rollback is safe.
+
+### Notes
+
+- The RankMath ↔ Hugo equivalency table in `ENHANCEMENT-REQUESTS.md`
+  (ER-007) documents what each RankMath feature maps to.
+- Schema.org JSON-LD is the most technical piece. PaperMod doesn't ship
+  with it; the custom partial is the new work.
+- Search Console submission is operational, not code: paste the
+  sitemap URL into search.google.com/search-console.
+
+---
+
+## Beyond the current WPs — future work without WPs yet
 
 Future work without WPs yet:
 
