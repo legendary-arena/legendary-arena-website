@@ -29,18 +29,62 @@ token values consumed by Hugo and CSS.
 
 ---
 
+## Global brand invariants
+
+Non-negotiable rules governing all brand expression across all
+surfaces. Violations of these rules block WP completion (W003/W004)
+regardless of other DoD compliance.
+
+- The brand always leads with **player agency and mastery**, not
+  mechanics.
+- The brand never describes itself as a "fan project" in user-facing
+  copy. (Internal documentation may; the brand surface may not.)
+- The brand never depends on **external IP naming** or **external
+  artwork** for clarity or comprehension.
+- All messaging must work as **original content** — no reliance on
+  Marvel familiarity for a reader to understand what Legendary Arena
+  is or why it matters.
+- All visual expression must be reproducible using **brand tokens
+  only** — no ad-hoc color values, font choices, or spacing outside
+  `static/brand-tokens.css`.
+- **Cross-site consistency** (www, play, registry) is enforced via
+  shared tokens. No site may redefine brand values independently.
+
+---
+
 ## 1. Brand positioning
 
-Legendary Arena is the digital, skill-first evolution of the
-Legendary deck-building system. Players assemble decks, face
-escalating threats, and earn standing through demonstrated mastery —
-not through grind, payment, or chance.
+**Legendary Arena (LA)** is a skill-first, web-based deck-building
+system where players assemble decks, face deterministic scenarios,
+and earn standing through demonstrated mastery.
 
-### Where this sits relative to the source system
+It preserves the fantasy of heroic deck-building while removing:
+
+- setup friction
+- randomness-driven outcomes
+- progression tied to time or spending
+
+### What "deterministic" means here
+
+"Deterministic" refers to:
+
+- Consistent rules — given identical inputs, the engine produces
+  identical state transitions
+- No hidden or probabilistic progression systems (no loot boxes, no
+  random rewards, no time-gated unlocks)
+- Outcomes driven by player decisions within a knowable system
+
+It does **not** imply removal of all randomness. Shuffle order, draw
+luck, and similar in-session randomness are preserved — that's
+core to deck-building. The determinism is at the **system level**:
+the rules don't change, the standings don't drift, the system
+doesn't grade on a curve.
+
+### Where LA sits relative to the source system
 
 The original Legendary system positions players in cooperative
-hero-assembly against an escalating villain threat. Legendary Arena
-keeps that fantasy and shifts emphasis:
+hero-assembly against an escalating villain threat. LA keeps that
+fantasy and shifts emphasis:
 
 | | Source system | Legendary Arena |
 |---|---|---|
@@ -70,6 +114,17 @@ The fantasy is identical. The product shape is different.
 - **No irony.** No winks, no self-deprecation, no "we know it's silly"
 - **No hype.** Exclamation marks reserved for genuinely earned moments
 
+### Tone invariants (enforceable rules)
+
+These are bright lines, not preferences. Brand-facing copy that
+violates any of them is broken and must be rewritten.
+
+- **No emoji** in brand-facing copy (headlines, body, CTAs, marketing)
+- **No humor that undermines stakes** ("yeah this is silly but...",
+  "we tried our best", etc.)
+- **No conversational filler** ("hey", "let's", "so", "well")
+- **No questions as primary headlines** ("Want to play?" — never)
+
 ### Verb palette
 
 Use these throughout copy:
@@ -81,7 +136,7 @@ Avoid filler verbs (`get`, `try`, `enjoy`) and softeners
 
 ### Tone — do / don't
 
-| ✅ Do | ❌ Don't |
+| Do | Don't |
 |---|---|
 | Speak directly to the player | Speak about the player in third person |
 | Lead with the fantasy ("The arena awaits") | Lead with mechanics ("Build a deck of...") |
@@ -105,18 +160,37 @@ Illustrative voice exemplars, not locked copy.
 > Outplay the threat.
 > Every session pushes back.
 
-**CTA pattern:**
+### CTA contract
 
-Single verb plus destination. "Play now." "Browse cards." "Read the
-rules." Avoid: "Click here to start playing the game."
+All primary CTAs **must**:
+
+- Be ≤ 2 words
+- Use a single verb
+- Map directly to an action the user takes by clicking
+
+**Allowed examples:**
+
+- "Play now"
+- "Browse cards"
+- "Read rules"
+- "View registry"
+
+**Disallowed patterns:**
+
+- "Click here" (no agency)
+- "Start playing now" (3 words, redundant)
+- "Click here to start playing the game" (multi-clause, verbose)
+- "Get started" only acceptable if no clearer verb exists
+
+Secondary CTAs (in body copy, not primary buttons) may run longer if
+clarity demands, but should still avoid the disallowed patterns.
 
 ---
 
 ## 3. Product terminology
 
-These are the canonical terms used across all surfaces (www, play,
-cards, blog, in-game). Pick one term per concept and use it
-consistently.
+Canonical terms used across all surfaces (www, play, cards, blog,
+in-game). Pick one term per concept and use it consistently.
 
 | Concept | Canonical term |
 |---|---|
@@ -130,9 +204,35 @@ consistently.
 | Player progress and standing | Mastery |
 | In-session win | Victory |
 
-These terms originate in the Legendary deck-building system. They are
-gameplay-mechanic vocabulary — functional terminology, not third-party
-marketing copy.
+These terms originate in the Legendary deck-building system. They
+are gameplay-mechanic vocabulary — functional terminology, not
+third-party marketing copy.
+
+### Terminology rules
+
+- Each concept maps to exactly **one canonical term**
+- Synonyms must not be introduced without an entry in
+  `01-VISION.md` Decisions log
+- UI labels, URLs, and copy must use the canonical term
+  consistently
+- Deviations require explicit justification (e.g., character-count
+  constraint in a UI label, UX clarity for a specific surface) AND
+  a Decisions log entry
+
+### Cross-site consistency
+
+The terminology above must remain consistent across all three
+properties:
+
+- `www.legendary-arena.com` — marketing
+- `play.legendary-arena.com` — game client
+- `cards.barefootbetters.com` — registry (current; future
+  `registry.legendary-arena.com`)
+
+**No site may redefine terms independently.** If a term proves
+inadequate on one surface, the canonical term in this document
+changes (with a Decisions log entry); all three surfaces then
+update together.
 
 ---
 
@@ -140,6 +240,18 @@ marketing copy.
 
 These are **directions**, not locked decisions. Phase B turns each
 into a specific token value.
+
+### Tokenization requirement
+
+All directions in this section MUST resolve to:
+
+- **Explicit CSS custom properties**, defined in
+  `static/brand-tokens.css`
+- **Named with the `--la-*` prefix** for cross-site collision
+  avoidance
+
+No visual values may exist outside token definitions. If a value
+appears that isn't a token, the brand contract is violated.
 
 ### Color
 
@@ -154,6 +266,12 @@ A dark, cinematic base with bright, saturated accents.
 | Semantic success | Green | Specific hex |
 | Semantic warning | Amber | Specific hex |
 | Semantic error | Red (distinct from CTA red) | Specific hex |
+
+**Constraint — red distinguishability:** CTA red and error red MUST
+be visually distinguishable by hue, saturation, or brightness. Two
+different "alert" reds in the same UI is broken. If they're hard to
+tell apart at a glance in either light or dark mode, the contract
+is violated.
 
 Optional in-game element mapping (confirm in Phase B):
 
@@ -180,7 +298,7 @@ Specific usage rules locked in `spacing.md` (Phase B).
 
 ---
 
-## 5. Layout patterns (informational)
+## 5. Layout patterns (non-binding guidance)
 
 Content-architecture observations, not prescriptions. WP-003 (theme
 overrides) and WP-004 (content) make the actual layout decisions.
@@ -198,8 +316,14 @@ Three short blocks with a verb each. Example shape:
 ### Pattern C — Three-site ecosystem links
 
 Explicit, equal-weight cross-links between www, play, and the
-registry (`cards.barefootbetters.com` for v1). The user should always
-know there are three sites and where each one lives.
+registry. The user should always know there are three sites and
+where each one lives.
+
+> **Note on registry URL:** the registry is currently at
+> `cards.barefootbetters.com`. This is **transitional for v1**. The
+> future canonical domain is `registry.legendary-arena.com`. When
+> the migration happens, all cross-site references update together
+> (per §3 cross-site consistency rule).
 
 ---
 
@@ -217,16 +341,23 @@ visual commitments.
 
 ## 7. Differentiation messaging
 
-The brand's differentiation appears in copy where natural — particularly
-on the home page and the About page. These are **supporting points**,
+The brand differentiates Legendary Arena from **both**:
+
+- The original Legendary system (cooperative-with-light-competition,
+  physical, expansion-driven)
+- Modern live-service game models (grind, time-gating, monetized
+  progression, paid advantage)
+
+These differentiations appear in copy where natural — particularly
+on the home page and the About page. They are **supporting points**,
 not the lead claim. The lead is the fantasy; differentiation reinforces.
 
 Themes to weave in:
 
-- **Skill-first.** Standing is earned, not bought.
-- **No grind.** Sessions are bounded; no time-gated progression.
-- **No pay-to-win.** Outcomes depend on play, not purchases.
-- **Modern.** Online, deterministic, multiplayer.
+- **Skill-first** — outcomes reflect player decisions
+- **No grind** — no time-based progression systems
+- **No pay-to-win** — no gameplay advantage from spending
+- **Deterministic system** — consistent, learnable rules
 
 Use these where they advance the message; don't force them into copy
 that's about something else.
@@ -265,22 +396,54 @@ source system, treated as functional mechanic naming.
 
 ### Legal / IP consideration (for the team's awareness)
 
-Legendary Arena is a fan-project digital adaptation. Brand decisions
-in this document attempt to:
+LA is a fan-project digital adaptation **as an internal
+characterization** — vital context for legal review and project
+planning. Per Global brand invariants, this characterization does
+**not** appear in user-facing copy. Brand decisions in this document
+attempt to:
 
 - Avoid reproducing protected marketing copy
 - Avoid protected character names or imagery
 - Use mechanic vocabulary (Hero, Mastermind, Scheme) as functional
   terminology only
 
-A separate review with the project's legal counsel is the appropriate
-next step before public launch. This brand strategy does not replace
-that review; it captures what the brand *intends* to do, not whether
-what it does is cleared.
+A separate review with the project's legal counsel is the
+appropriate next step before public launch. This brand strategy
+does not replace that review; it captures what the brand *intends*
+to do, not whether what it does is cleared.
 
 ---
 
-## 10. Next steps (Phase B of WP-002)
+## 10. Brand failure modes
+
+The brand is considered **degraded** if any of the following
+conditions appear in shipped output. Treat each as a failure
+condition that fails W003 / W004 DoD.
+
+- **Generic adjectives** — copy reaches for "fun", "exciting",
+  "awesome", "epic" as the lead descriptor
+- **Mechanics-first explanation** — copy explains how the game
+  works before establishing fantasy and stakes
+- **Terminology drift** — different surfaces use different terms for
+  the same concept (e.g., "Mastermind" on www vs "Boss" on play)
+- **Visual style divergence** — colors, fonts, or spacing values
+  appear that aren't defined in `brand-tokens.css`
+- **CTA inconsistency** — CTAs that violate the §2 CTA contract
+  (verbose, multi-clause, "click here" style)
+- **Tone violations** — emoji in brand copy, humor that undermines
+  stakes, conversational filler, questions-as-headlines
+- **External IP dependency** — copy that requires Marvel familiarity
+  to make sense
+- **Self-deprecation** — copy that calls the project "fan-made",
+  "amateur", "side project" in user-facing surfaces
+
+Brand failure modes are bright lines, not soft preferences. A WP
+DoD that meets every other criterion but produces a brand failure
+mode is **not done**.
+
+---
+
+## 11. Next steps (Phase B of WP-002)
 
 Phase B converts the directions in this document into locked tokens:
 
@@ -295,6 +458,20 @@ Phase B converts the directions in this document into locked tokens:
 - [ ] `static/brand-tokens.css` — produced from the above with version
       header (per WP-002 token versioning contract)
 
-When Phase B completes, this document is reviewed against the locked
-tokens for any drift, refined as needed, and the status changes from
-"v1 draft" to "v1 locked."
+### Phase B exit criteria
+
+Phase B is complete only if **all** of the following hold:
+
+- [ ] Tokens are defined for every role specified in §4
+- [ ] Tokens are applied to a rendered Hugo page (verifiable in
+      `hugo server` preview)
+- [ ] Cross-site consumption is verified — `play.*` and the registry
+      successfully fetch and apply `brand-tokens.css` from www
+- [ ] No visual values exist outside token definitions (no hardcoded
+      hex, no inline font sizes, no magic spacing values)
+- [ ] Lighthouse scores still ≥ 90 in Performance, Accessibility,
+      Best Practices, SEO on at least the home page
+
+When all five exit criteria are met, this document is reviewed
+against the locked tokens for any drift, refined as needed, and the
+status changes from "v1 draft" to "v1 locked."
