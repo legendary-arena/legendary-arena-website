@@ -1,0 +1,29 @@
+{{- /* Legendary Arena — project-level extend_head override.
+       Overrides themes/PaperMod/layouts/_partials/extend_head.html
+       (which is intentionally an empty stub for this purpose).
+
+       Inserted into <head> on every page.
+
+       References:
+       - static/brand-tokens.css (the API contract for visual tokens)
+       - docs/brand/strategy.md §4 (font family directions)
+       - docs/brand/typography.md §3 (locked font choices)
+*/ -}}
+
+{{- /* §1. Brand tokens
+       MUST load before assets/css/extended/custom.css for the
+       var(--la-*) references in custom.css to resolve. Hugo serves
+       files from static/ at the site root. */ -}}
+<link rel="stylesheet" href="/brand-tokens.css">
+
+{{- /* §2. Web fonts (Google Fonts)
+       Display: Bebas Neue (single weight)
+       Body:    Inter weights 400 / 500 / 600 / 700
+                (matches per-role weight tokens in typography.md §6)
+       Mono:    JetBrains Mono weight 400
+
+       display=swap prefers FOUT (Flash of Unstyled Text) over FOIT
+       (Flash of Invisible Text) — see typography.md §13. */ -}}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap">
