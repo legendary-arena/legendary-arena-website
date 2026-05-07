@@ -1,0 +1,475 @@
+/*
+ * Legendary Arena — PaperMod Theme Overrides + Brand Application
+ * Version: v1 DRAFT (WP-003 implementation; pending verification)
+ * Date: 2026-05-07
+ *
+ * Depends on: static/brand-tokens.css (loaded as a sibling stylesheet
+ *             OR @imported below — see "Loading order" note below)
+ *
+ * Contract:
+ * - All values referenced via CSS custom properties from brand-tokens.css
+ * - No raw color/spacing/font/transition values (exception: see // why:
+ *   comments where unavoidable, e.g., button text on CTA red)
+ * - Mode-aware via CSS-variable cascade (light = :root, dark = .dark)
+ * - Respects prefers-reduced-motion per spacing.md §10
+ *
+ * Reference docs:
+ * - docs/brand/strategy.md (positioning, voice, tokenization rule)
+ * - docs/brand/palette.md (color tokens)
+ * - docs/brand/typography.md (font/size/weight/letter-spacing tokens)
+ * - docs/brand/spacing.md (spacing/radii/z-index/motion tokens)
+ *
+ * Loading order:
+ * - brand-tokens.css MUST be loaded BEFORE this file (otherwise the
+ *   var() references resolve to nothing). PaperMod's pipeline pulls
+ *   files from assets/css/extended/ in alphabetical order; if you
+ *   add other extended CSS files, ensure brand-tokens.css is also
+ *   wired in (via Hugo partial in layouts/_partials/extend_head.html
+ *   referencing /brand-tokens.css from static/, or by @import here).
+ *
+ * Section organization:
+ *   §1. Global base (html, body)
+ *   §2. Typography elements (h1–h6, p, small) — global overrides
+ *   §3. Links
+ *   §4. PaperMod-specific overrides (real classes shipped by the theme)
+ *   §5. Forward-compat utility classes (for future content/shortcodes)
+ *   §6. Accessibility (focus-visible, prefers-reduced-motion)
+ */
+
+
+/* =========================================================
+   §1. GLOBAL BASE
+   ========================================================= */
+
+html {
+  font-family: var(--la-font-body);
+  color: var(--la-color-text-primary);
+  background-color: var(--la-color-bg-primary);
+  font-size: 16px;
+  line-height: var(--la-line-height-body);
+  /* why: 16px is the spec base for the rem scale (typography.md §4);
+     all other sizes derive from it via rem */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   §2. TYPOGRAPHY ELEMENTS (h1–h6, p, small)
+   Per-heading tokens used (typography.md §5.2 rule:
+   "prefer per-role tokens over generic for headings + body")
+   ========================================================= */
+
+h1,
+h2 {
+  font-family: var(--la-font-display);
+  letter-spacing: var(--la-letter-spacing-display);
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: var(--la-space-3);
+}
+
+h1 {
+  font-size: var(--la-font-size-h1);
+  line-height: var(--la-line-height-h1);
+  font-weight: var(--la-font-weight-h1);
+}
+
+h2 {
+  font-size: var(--la-font-size-h2);
+  line-height: var(--la-line-height-h2);
+  font-weight: var(--la-font-weight-h2);
+}
+
+h3 {
+  font-family: var(--la-font-body);
+  font-size: var(--la-font-size-h3);
+  line-height: var(--la-line-height-h3);
+  font-weight: var(--la-font-weight-h3);
+  letter-spacing: var(--la-letter-spacing-normal);
+  margin-top: 0;
+  margin-bottom: var(--la-space-3);
+}
+
+h4 {
+  font-family: var(--la-font-body);
+  font-size: var(--la-font-size-h4);
+  line-height: var(--la-line-height-h4);
+  font-weight: var(--la-font-weight-h4);
+  letter-spacing: var(--la-letter-spacing-normal);
+  margin-top: 0;
+  margin-bottom: var(--la-space-3);
+}
+
+h5 {
+  font-family: var(--la-font-body);
+  font-size: var(--la-font-size-h5);
+  line-height: var(--la-line-height-h5);
+  font-weight: var(--la-font-weight-h5);
+  letter-spacing: var(--la-letter-spacing-normal);
+  margin-top: 0;
+  margin-bottom: var(--la-space-2);
+}
+
+h6 {
+  font-family: var(--la-font-body);
+  font-size: var(--la-font-size-h6);
+  line-height: var(--la-line-height-h6);
+  font-weight: var(--la-font-weight-h6);
+  letter-spacing: var(--la-letter-spacing-normal);
+  margin-top: 0;
+  margin-bottom: var(--la-space-2);
+}
+
+p {
+  font-size: var(--la-font-size-body);
+  line-height: var(--la-line-height-body);
+  font-weight: var(--la-font-weight-body);
+  margin-top: 0;
+  margin-bottom: var(--la-space-4);
+}
+
+small {
+  font-size: var(--la-font-size-small);
+  line-height: var(--la-line-height-small);
+  color: var(--la-color-text-muted);
+}
+
+
+/* =========================================================
+   §3. LINKS
+   ========================================================= */
+
+a {
+  color: var(--la-color-blue);
+  text-decoration: none;
+  transition: color var(--la-transition-fast);
+}
+
+a:hover {
+  color: var(--la-color-blue-bright);
+}
+
+
+/* =========================================================
+   §4. PAPERMOD OVERRIDES
+   These selectors target classes PaperMod actually emits.
+   Verify by inspecting rendered HTML during WP-003 execution
+   (PaperMod versions may evolve their class names).
+   ========================================================= */
+
+/* §4.1 Main content container */
+
+.main {
+  padding-left: var(--la-space-6);
+  padding-right: var(--la-space-6);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding-left: var(--la-space-4);
+    padding-right: var(--la-space-4);
+  }
+}
+
+/* §4.2 Header + logo */
+
+.header {
+  background-color: var(--la-color-bg-primary);
+  border-bottom: 1px solid var(--la-color-border-subtle);
+}
+
+.logo a {
+  font-family: var(--la-font-display);
+  font-size: var(--la-font-size-h3);
+  /* why: H3 (28px) reads better as a wordmark than H4 (22px); H1/H2
+     would compete with page titles */
+  font-weight: var(--la-font-weight-h2);
+  line-height: var(--la-line-height-h3);
+  letter-spacing: var(--la-letter-spacing-display);
+  text-transform: uppercase;
+  color: var(--la-color-text-primary);
+}
+
+/* §4.3 Navigation
+   PaperMod renders both .nav (wrapper) and .menu (list).
+   Targeting both for compatibility across versions. */
+
+.nav a,
+.menu a {
+  color: var(--la-color-text-secondary);
+  transition: color var(--la-transition-fast);
+}
+
+.nav a:hover,
+.menu a:hover {
+  color: var(--la-color-text-primary);
+}
+
+.menu {
+  gap: var(--la-space-4);
+}
+
+/* §4.4 Post titles + entries */
+
+.post-title {
+  font-family: var(--la-font-display);
+  font-size: var(--la-font-size-h2);
+  line-height: var(--la-line-height-h2);
+  font-weight: var(--la-font-weight-h2);
+  letter-spacing: var(--la-letter-spacing-display);
+  text-transform: uppercase;
+}
+
+.post-entry,
+.first-entry {
+  background-color: var(--la-color-bg-secondary);
+  padding: var(--la-space-5);
+  border-radius: var(--la-radius-md);
+  border: 1px solid var(--la-color-border-subtle);
+  transition: background-color var(--la-transition-fast);
+}
+
+.post-entry:hover,
+.first-entry:hover {
+  background-color: var(--la-color-surface-hover);
+}
+
+.entry-content {
+  font-size: var(--la-font-size-body);
+  line-height: var(--la-line-height-body);
+}
+
+/* §4.5 Tags + meta */
+
+.tag,
+.post-meta,
+.meta {
+  font-size: var(--la-font-size-small);
+  line-height: var(--la-line-height-small);
+  color: var(--la-color-text-secondary);
+}
+
+/* §4.6 Footer */
+
+.footer {
+  margin-top: var(--la-space-8);
+  padding-top: var(--la-space-6);
+  padding-bottom: var(--la-space-6);
+  border-top: 1px solid var(--la-color-border-subtle);
+  color: var(--la-color-text-muted);
+  font-size: var(--la-font-size-small);
+  line-height: var(--la-line-height-small);
+}
+
+/* §4.7 Code blocks
+   Inline code and code blocks need different treatment. */
+
+code,
+pre {
+  font-family: var(--la-font-mono);
+  background-color: var(--la-color-bg-tertiary);
+  border-radius: var(--la-radius-sm);
+}
+
+code {
+  /* Inline code: tight padding, smaller-than-body */
+  padding: 0.1em var(--la-space-2);
+  font-size: 0.875em;
+}
+
+pre {
+  /* Block code: roomier padding, scrollable horizontal */
+  padding: var(--la-space-4);
+  overflow-x: auto;
+  line-height: var(--la-line-height-body);
+}
+
+pre code {
+  /* When inside <pre>, the inline padding/background is redundant */
+  padding: 0;
+  background: none;
+  font-size: inherit;
+}
+
+
+/* =========================================================
+   §5. FORWARD-COMPAT UTILITY CLASSES
+   These classes don't match anything PaperMod ships. They're
+   here for content authored in WP-004 (and beyond) — markdown
+   shortcodes, custom layouts, etc. Until that content exists,
+   these selectors match nothing and have no rendered effect.
+   ========================================================= */
+
+/* §5.1 Hero section
+   Used only above-the-fold on the home page (one per page).
+   Uses the dedicated --la-font-size-hero / --la-line-height-hero
+   tokens (typography.md §4.1). */
+
+.hero {
+  padding-top: var(--la-space-8);
+  padding-bottom: var(--la-space-8);
+  text-align: left;
+}
+
+.hero h1 {
+  font-family: var(--la-font-display);
+  font-size: var(--la-font-size-hero);
+  line-height: var(--la-line-height-hero);
+  font-weight: var(--la-font-weight-h1);
+  letter-spacing: var(--la-letter-spacing-display);
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: var(--la-space-4);
+}
+
+.hero p {
+  font-size: var(--la-font-size-h4);
+  line-height: var(--la-line-height-h4);
+  color: var(--la-color-text-secondary);
+  max-width: 640px;
+  margin-top: 0;
+  margin-bottom: var(--la-space-5);
+}
+
+/* §5.2 Buttons / CTAs
+   Per strategy.md §2 CTA contract: ≤ 2 words, single verb. */
+
+.button,
+.btn {
+  display: inline-block;
+  padding: var(--la-space-2) var(--la-space-4);
+  background-color: var(--la-color-red);
+  color: #ffffff;
+  /* why: white text on CTA red — contrast verified ≥ AA in both
+     modes; no token for "on-CTA" text yet. Candidate for future
+     addition if we add more colored backgrounds with text. */
+  border: 0;
+  border-radius: var(--la-radius-md);
+  font-family: var(--la-font-body);
+  font-size: var(--la-font-size-body);
+  font-weight: var(--la-font-weight-medium);
+  letter-spacing: var(--la-letter-spacing-normal);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color var(--la-transition-fast);
+}
+
+.button:hover,
+.btn:hover {
+  background-color: var(--la-color-red-bright);
+}
+
+.button:active,
+.btn:active {
+  background-color: var(--la-color-red-muted);
+}
+
+/* §5.3 Cards */
+
+.card {
+  background-color: var(--la-color-bg-secondary);
+  padding: var(--la-space-5);
+  border-radius: var(--la-radius-md);
+  border: 1px solid var(--la-color-border-subtle);
+  transition: background-color var(--la-transition-fast);
+}
+
+.card:hover {
+  background-color: var(--la-color-surface-hover);
+}
+
+/* §5.4 Sections (vertical rhythm helpers) */
+
+.section {
+  padding-top: var(--la-space-7);
+  padding-bottom: var(--la-space-7);
+}
+
+.section-lg {
+  padding-top: var(--la-space-8);
+  padding-bottom: var(--la-space-8);
+}
+
+@media (max-width: 768px) {
+  /* Spacing.md §8: scale down one tier on mobile */
+  .section {
+    padding-top: var(--la-space-6);
+    padding-bottom: var(--la-space-6);
+  }
+  .section-lg {
+    padding-top: var(--la-space-7);
+    padding-bottom: var(--la-space-7);
+  }
+  .hero {
+    padding-top: var(--la-space-7);
+    padding-bottom: var(--la-space-7);
+  }
+}
+
+/* §5.5 Utility helpers */
+
+.text-muted {
+  color: var(--la-color-text-muted);
+}
+
+.text-gold {
+  color: var(--la-color-gold);
+}
+
+.text-bright-gold {
+  color: var(--la-color-gold-bright);
+}
+
+.bg-surface {
+  background-color: var(--la-color-surface);
+}
+
+.bg-secondary {
+  background-color: var(--la-color-bg-secondary);
+}
+
+
+/* =========================================================
+   §6. ACCESSIBILITY
+   ========================================================= */
+
+/* §6.1 Focus rings — visible only on keyboard focus
+   :focus-visible avoids showing rings on mouse-click for users
+   who don't need them (improves perceived polish for keyboard
+   AND mouse users) */
+
+:focus-visible {
+  outline: 2px solid var(--la-color-blue-bright);
+  outline-offset: 2px;
+  /* why: 2px outline + 2px offset gives visible rings against both
+     surface and bg-primary in both modes (palette.md §8 contrast
+     pairs verified) */
+}
+
+/* Suppress default :focus styling that browsers apply on click */
+:focus:not(:focus-visible) {
+  outline: 0;
+}
+
+/* §6.2 Reduced motion
+   WCAG 2.3.3 + spacing.md §10: respect the user's preference. */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0ms !important;
+    animation-duration: 0ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+  /* why: forces all animations and transitions to instantaneous for
+     users who prefer reduced motion. The !important is required to
+     override per-element transition rules. */
+}
