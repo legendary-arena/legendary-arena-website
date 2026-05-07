@@ -1,0 +1,25 @@
+# Hugo build outputs
+public/
+resources/
+.hugo_build.lock
+hugo_stats.json
+
+# Node modules (some Hugo themes pull JS dependencies)
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment files
+.env
+.env.local
+
+# Build artifacts from theme tooling
+.cache/
