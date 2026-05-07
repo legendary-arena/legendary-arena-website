@@ -1,0 +1,243 @@
+/*
+ * Legendary Arena Brand Tokens
+ * Version: v1 (DRAFT — Phase B output; pending review and lock)
+ * Date: 2026-05-07
+ *
+ * This file is consumed cross-origin by play.legendary-arena.com and
+ * the registry viewer (currently cards.barefootbetters.com; future
+ * registry.legendary-arena.com). Treat as a public API.
+ *
+ * Breaking changes require a major version bump (v2) AND coordinated
+ * updates to consumers per WP-007a and WP-007b BEFORE the new version
+ * publishes.
+ *
+ * Source:    docs/brand/strategy.md (Phase A directions)
+ * Changelog: docs/brand/CHANGELOG.md (token version history)
+ */
+
+
+/* =========================================================
+   MODE-INDEPENDENT TOKENS
+   These values do not change between light and dark modes.
+   ========================================================= */
+
+:root {
+
+  /* --- TYPOGRAPHY: FAMILIES --- */
+  --la-font-display: "Bebas Neue", "Anton", "Oswald", system-ui, sans-serif;
+  --la-font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --la-font-mono: "JetBrains Mono", "IBM Plex Mono", Consolas, monospace;
+
+  /* --- TYPOGRAPHY: SIZE SCALE --- */
+  --la-font-size-h1: 3rem;        /* 48px */
+  --la-font-size-h2: 2.25rem;     /* 36px */
+  --la-font-size-h3: 1.75rem;     /* 28px */
+  --la-font-size-h4: 1.375rem;    /* 22px */
+  --la-font-size-h5: 1.125rem;    /* 18px */
+  --la-font-size-h6: 1rem;        /* 16px */
+  --la-font-size-body: 1rem;      /* 16px */
+  --la-font-size-small: 0.875rem; /* 14px */
+
+  /* --- TYPOGRAPHY: LINE HEIGHTS (per role) --- */
+  --la-line-height-h1: 1.1;
+  --la-line-height-h2: 1.15;
+  --la-line-height-h3: 1.2;
+  --la-line-height-h4: 1.3;
+  --la-line-height-h5: 1.4;
+  --la-line-height-h6: 1.5;
+  --la-line-height-body: 1.6;
+  --la-line-height-small: 1.5;
+
+  /* --- TYPOGRAPHY: LINE HEIGHTS (generic) --- */
+  --la-line-height-tight: 1.1;
+  --la-line-height-normal: 1.4;
+  --la-line-height-relaxed: 1.6;
+
+  /* --- TYPOGRAPHY: WEIGHTS (per role) --- */
+  --la-font-weight-h1: 700;
+  --la-font-weight-h2: 700;
+  --la-font-weight-h3: 600;
+  --la-font-weight-h4: 600;
+  --la-font-weight-h5: 500;
+  --la-font-weight-h6: 500;
+  --la-font-weight-body: 400;
+  --la-font-weight-small: 400;
+
+  /* --- TYPOGRAPHY: WEIGHTS (generic) --- */
+  --la-font-weight-regular: 400;
+  --la-font-weight-medium: 500;
+  --la-font-weight-semibold: 600;
+  --la-font-weight-bold: 700;
+
+  /* --- TYPOGRAPHY: LETTER-SPACING --- */
+  --la-letter-spacing-tight: -0.01em;
+  --la-letter-spacing-normal: 0;
+  --la-letter-spacing-wide: 0.04em;
+  --la-letter-spacing-display: 0.04em;
+  /* why: condensed display fonts read better with slight tracking */
+
+  /* --- SPACING SCALE (8-point system, 9 steps) --- */
+  --la-space-1: 4px;
+  --la-space-2: 8px;
+  --la-space-3: 12px;
+  --la-space-4: 16px;
+  --la-space-5: 24px;
+  --la-space-6: 32px;
+  --la-space-7: 48px;
+  --la-space-8: 64px;
+  --la-space-9: 96px;
+
+  /* --- BORDER RADIUS --- */
+  --la-radius-sm: 4px;
+  --la-radius-md: 8px;
+  --la-radius-lg: 16px;
+  --la-radius-xl: 24px;
+  --la-radius-pill: 9999px;
+
+  /* --- Z-INDEX LAYERS --- */
+  --la-z-base: 0;
+  --la-z-dropdown: 5;
+  --la-z-sticky: 10;
+  --la-z-overlay: 50;
+  --la-z-modal: 100;
+  --la-z-toast: 200;
+
+  /* --- TRANSITIONS --- */
+  --la-transition-fast: 120ms ease-in-out;
+  --la-transition-base: 180ms ease-in-out;
+  --la-transition-slow: 280ms ease;
+}
+
+
+/* =========================================================
+   LIGHT MODE (default)
+   PaperMod adds .dark class for dark mode; absence = light.
+   ========================================================= */
+
+:root {
+
+  /* --- BACKGROUNDS --- */
+  --la-color-bg-primary: #fdfcf8;     /* warm off-white */
+  --la-color-bg-secondary: #f3f1ea;   /* elevated panels */
+  --la-color-bg-tertiary: #e8e5db;    /* deeper sections */
+
+  /* --- SURFACES --- */
+  --la-color-surface: #ffffff;        /* cards on light bg */
+  --la-color-surface-hover: #f8f6f0;
+
+  /* --- TEXT --- */
+  --la-color-text-primary: #1a1d2e;   /* near-black with warm tint */
+  --la-color-text-secondary: #4a5168;
+  --la-color-text-muted: #767e94;
+
+  /* --- BORDERS --- */
+  --la-color-border-subtle: #d8d3c5;
+  --la-color-border-strong: #b8b3a4;
+
+  /* --- BRAND COLORS (light mode tuning) --- */
+  /* why: gold/red/blue darkened for contrast on light backgrounds */
+  --la-color-gold: #b8901f;
+  --la-color-gold-bright: #d4af37;
+  --la-color-gold-muted: #856710;
+
+  --la-color-red: #c92a30;
+  --la-color-red-bright: #e5484d;
+  --la-color-red-muted: #8a1a1f;
+
+  --la-color-blue: #2563eb;
+  --la-color-blue-bright: #3b82f6;
+  --la-color-blue-muted: #1e40af;
+
+  /* --- SEMANTIC --- */
+  --la-color-success: #15803d;
+  --la-color-warning: #b45309;
+  --la-color-error: var(--la-color-red);
+
+  /* --- GAMEPLAY MAPPING --- */
+  --la-color-attack: var(--la-color-red);
+  --la-color-recruit: var(--la-color-blue);
+  --la-color-victory: var(--la-color-gold);
+
+  /* --- EFFECTS --- */
+  --la-gradient-gold: linear-gradient(
+    90deg,
+    var(--la-color-gold-muted),
+    var(--la-color-gold-bright)
+  );
+
+  --la-gradient-hero: linear-gradient(
+    135deg,
+    var(--la-color-blue),
+    var(--la-color-red)
+  );
+
+  --la-shadow-soft: 0 2px 8px rgba(26, 29, 46, 0.08);
+  --la-shadow-strong: 0 8px 24px rgba(26, 29, 46, 0.15);
+}
+
+
+/* =========================================================
+   DARK MODE
+   Activated via .dark on <html> (PaperMod convention).
+   ========================================================= */
+
+.dark {
+
+  /* --- BACKGROUNDS --- */
+  --la-color-bg-primary: #0b0f19;     /* deep navy-black, cinematic base */
+  --la-color-bg-secondary: #121826;   /* elevated panels */
+  --la-color-bg-tertiary: #1a2234;    /* cards / overlays */
+
+  /* --- SURFACES --- */
+  --la-color-surface: #1c2438;
+  --la-color-surface-hover: #242f4a;
+
+  /* --- TEXT --- */
+  --la-color-text-primary: #f5f7fb;
+  --la-color-text-secondary: #a7b0c5;
+  --la-color-text-muted: #6e7893;
+
+  /* --- BORDERS --- */
+  --la-color-border-subtle: #2a3550;
+  --la-color-border-strong: #3a4668;
+
+  /* --- BRAND COLORS (dark mode tuning) --- */
+  /* why: brighter saturation reads correctly against dark backgrounds */
+  --la-color-gold: #d4af37;
+  --la-color-gold-bright: #f0c94a;
+  --la-color-gold-muted: #9e7c1c;
+
+  --la-color-red: #e5484d;
+  --la-color-red-bright: #ff5c62;
+  --la-color-red-muted: #a72d32;
+
+  --la-color-blue: #3b82f6;
+  --la-color-blue-bright: #60a5fa;
+  --la-color-blue-muted: #1e40af;
+
+  /* --- SEMANTIC --- */
+  --la-color-success: #22c55e;
+  --la-color-warning: #f59e0b;
+  --la-color-error: var(--la-color-red);
+
+  /* --- GAMEPLAY MAPPING --- */
+  --la-color-attack: var(--la-color-red);
+  --la-color-recruit: var(--la-color-blue);
+  --la-color-victory: var(--la-color-gold);
+
+  /* --- EFFECTS --- */
+  --la-gradient-gold: linear-gradient(
+    90deg,
+    var(--la-color-gold-muted),
+    var(--la-color-gold-bright)
+  );
+
+  --la-gradient-hero: linear-gradient(
+    135deg,
+    var(--la-color-blue),
+    var(--la-color-red)
+  );
+
+  --la-shadow-soft: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --la-shadow-strong: 0 8px 24px rgba(0, 0, 0, 0.6);
+}
