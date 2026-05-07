@@ -19,8 +19,11 @@ Initial token set covering:
 
 - **Colors:** backgrounds (3), surfaces (2), text (3), borders (2),
   brand (gold/red/blue × 3 variants each), semantic
-  (success/warning/error), gameplay mapping
-  (attack/recruit/victory). Light + dark mode variants for all.
+  (success/warning/error). Error red is a **distinct hex from CTA
+  red** (`#991b1b` light / `#dc2626` dark) per `strategy.md §4` +
+  `palette.md §5.3` constraint — must not be aliased. Gameplay
+  mapping: attack/recruit/victory. Light + dark mode variants for
+  all colors.
 - **Typography:** font families (display/body/mono), full type scale
   (H1–H6 + body + small) with sizes, line heights, weights, and
   letter-spacing tokens. Per-heading line-height and weight tokens
