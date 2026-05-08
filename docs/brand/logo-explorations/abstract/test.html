@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Logo shape test — abstract symbols (no letters)</title>
+  <style>
+    body {
+      font: 14px/1.5 -apple-system, system-ui, sans-serif;
+      color: #1a1d2e;
+      background: #fdfcf8;
+      margin: 24px;
+      max-width: 1500px;
+    }
+    h1 { font-size: 22px; margin: 0 0 4px; }
+    .meta { color: #1a1d2e99; font-size: 12px; margin-bottom: 24px; max-width: 900px; }
+    h2 {
+      font-size: 16px;
+      margin: 32px 0 4px;
+      padding: 6px 12px;
+      background: #1a1d2e;
+      color: #fdfcf8;
+      border-radius: 3px;
+    }
+    .concept { color: #1a1d2e99; font-size: 12px; margin: 4px 0 8px; max-width: 900px; }
+    .row {
+      display: flex;
+      align-items: end;
+      gap: 24px;
+      padding: 12px 16px;
+      background: #fff8;
+      border: 1px solid #1a1d2e22;
+      border-radius: 4px;
+    }
+    .cell { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+    .label { font-size: 11px; color: #1a1d2e99; font-variant-numeric: tabular-nums; }
+    .swatch {
+      display: inline-block;
+      padding: 4px;
+      background: #fdfcf8;
+      border: 1px dashed #1a1d2e44;
+    }
+    .s16  svg, .s16  { width: 16px;  height: 16px; }
+    .s32  svg, .s32  { width: 32px;  height: 32px; }
+    .s64  svg, .s64  { width: 64px;  height: 64px; }
+    .s128 svg, .s128 { width: 128px; height: 128px; }
+    .s256 svg, .s256 { width: 256px; height: 256px; }
+    .s512 svg, .s512 { width: 512px; height: 512px; }
+    .swatch svg { display: block; }
+  </style>
+</head>
+<body>
+
+  <h1>Logo shape test — abstract symbols (no letters)</h1>
+  <div class="meta">
+    Four abstract directions, deliberately rough. Each is one engineered shape
+    with a strong silhouette — no letterforms. Rendered at 16, 32, 64, 128, 256,
+    and 512px against <code>#fdfcf8</code> per <code>logo-brief.md</code> §5.
+    <strong>These are conversation-starters, not candidates.</strong> If one
+    direction feels right, take it to Figma; don't iterate on the SVG.
+  </div>
+
+  <div id="root"></div>
+
+  <script>
+    const directions = [
+      {
+        id: 'A',
+        name: 'The Keep',
+        concept: 'Square fortification, top-down. Outer wall, inner court, four cardinal gates. Reads as "the arena as architecture" — fortified, deterministic, centered. Silhouette is a square ring with four gate breaks.',
+        svg: `
+          <path fill="currentColor" fill-rule="evenodd" d="
+            M80 80 H432 V432 H80 Z
+            M160 160 H352 V352 H160 Z
+            M236 80 H276 V160 H236 Z
+            M236 352 H276 V432 H236 Z
+            M80 236 H160 V276 H80 Z
+            M352 236 H432 V276 H352 Z
+          "/>
+        `,
+      },
+      {
+        id: 'B',
+        name: 'The Summit',
+        concept: 'Stepped silhouette ascending to a peak. Three deterministic levels: base, mid, apex. Reads as "earned mastery" — climbing, ranked, the player at the top of a system. Silhouette is unmistakable at any size.',
+        svg: `
+          <path fill="currentColor" d="M80 432 H432 V380 H372 V300 L256 100 L140 300 V380 H80 Z"/>
+        `,
+      },
+      {
+        id: 'C',
+        name: 'The Diamond',
+        concept: 'A diamond split by a horizon line. Top half meets bottom half. Reads as "deterministic duality" — hero and threat, attack and defense, the vs. that defines an arena. Strong rotational symmetry, no ornament.',
+        svg: `
+          <path fill="currentColor" d="
+            M256 80  L424 248 L88 248 Z
+            M88 264  L424 264 L256 432 Z
+          "/>
+        `,
+      },
+      {
+        id: 'D',
+        name: 'The Hand',
+        concept: 'Three cards fanned from a single pivot. Most product-true direction — the deck is the player\'s instrument. Risk: at small sizes the tilt collapses. The fan needs to read at 32px or this direction dies.',
+        svg: `
+          <g fill="currentColor">
+            <rect x="206" y="100" width="100" height="320" />
+            <rect x="206" y="100" width="100" height="320" transform="rotate(-25 256 420)" />
+            <rect x="206" y="100" width="100" height="320" transform="rotate(25 256 420)" />
+          </g>
+        `,
+      },
+    ];
+
+    const sizes = [16, 32, 64, 128, 256, 512];
+
+    function makeRow(dir) {
+      const cells = sizes.map(size => `
+        <div class="cell">
+          <span class="swatch s${size}">
+            <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img">
+              ${dir.svg}
+            </svg>
+          </span>
+          <span class="label">${size}px</span>
+        </div>
+      `).join('');
+      return `
+        <h2>${dir.id} — ${dir.name}</h2>
+        <div class="concept">${dir.concept}</div>
+        <div class="row">${cells}</div>
+      `;
+    }
+
+    const params = new URLSearchParams(location.search);
+    const filter = params.get('only');
+    const list = filter
+      ? directions.filter(d => d.id === filter)
+      : directions;
+    document.getElementById('root').innerHTML = list.map(makeRow).join('');
+  </script>
+
+</body>
+</html>

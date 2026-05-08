@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Logo concept render test</title>
+  <style>
+    body {
+      font: 14px/1.5 -apple-system, system-ui, sans-serif;
+      color: #1a1d2e;
+      background: #fdfcf8;
+      margin: 24px;
+      max-width: 1500px;
+    }
+    h1 { font-size: 22px; margin: 0 0 4px; }
+    .meta { color: #1a1d2e99; font-size: 12px; margin-bottom: 24px; max-width: 900px; }
+    h2 {
+      font-size: 18px;
+      margin: 32px 0 8px;
+      padding: 6px 12px;
+      background: #1a1d2e;
+      color: #fdfcf8;
+      border-radius: 3px;
+    }
+    h3 { font-size: 14px; margin: 24px 0 6px; }
+    .concept-meta { color: #1a1d2e99; font-size: 12px; margin-bottom: 8px; }
+    .row {
+      display: flex;
+      align-items: end;
+      gap: 24px;
+      padding: 12px 16px;
+      background: #fff8;
+      border: 1px solid #1a1d2e22;
+      border-radius: 4px;
+      margin-bottom: 8px;
+    }
+    .cell { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+    .label { font-size: 11px; color: #1a1d2e99; font-variant-numeric: tabular-nums; }
+    .swatch {
+      display: inline-block;
+      padding: 4px;
+      background: #fdfcf8;
+      border: 1px dashed #1a1d2e44;
+    }
+    .s16  svg { width: 16px;  height: 16px;  display: block; }
+    .s32  svg { width: 32px;  height: 32px;  display: block; }
+    .s64  svg { width: 64px;  height: 64px;  display: block; }
+    .s256 svg { width: 256px; height: 256px; display: block; }
+    .s512 svg { width: 512px; height: 512px; display: block; }
+  </style>
+</head>
+<body>
+
+  <h1>Logo concept render test</h1>
+  <div class="meta">
+    Each row renders the same SVG path data at five sizes (16, 32, 64, 256, 512px).
+    The first half uses <code>fill-rule="evenodd"</code> (as the source AI generated).
+    The second half uses <code>fill-rule="nonzero"</code> (the SVG default — expected
+    to fix the L-corner overlap bug visible in D3 and D4 under evenodd).
+    Color is <code>currentColor</code> against <code>#fdfcf8</code> background per
+    <code>logo-brief.md</code> §5.
+  </div>
+
+  <div id="root"></div>
+
+  <script>
+    const directions = [
+      {
+        id: 'D1',
+        name: 'Hard-Grid LA (Bauhaus Pillar)',
+        d: [
+          'M132 92 H220 V356 H380 V420 H132 Z',
+          'M260 420 L356 420 L308 160 Z',
+          'M284 278 H332 V314 H284 Z',
+        ].join(' ')
+      },
+      {
+        id: 'D2',
+        name: 'Arena-Tier Rings (Rank Ladder Disc)',
+        d: [
+          'M256 32 A224 224 0 1 1 255.9 32 Z',
+          'M256 92 A164 164 0 1 0 256.1 92 Z',
+          'M152 170 H190 V352 H152 Z',
+          'M206 352 H360 V390 H206 Z',
+          'M220 332 L318 332 L269 164 Z',
+          'M246 260 H292 V294 H246 Z',
+          'M144 188 H368 V220 H144 Z',
+          'M168 238 H344 V268 H168 Z',
+          'M196 286 H316 V314 H196 Z',
+        ].join(' ')
+      },
+      {
+        id: 'D3',
+        name: 'Deck-Edge Monogram (Card Stack)',
+        d: [
+          'M148 120 H196 V388 H148 Z',
+          'M148 352 H344 V400 H148 Z',
+          'M230 388 L320 388 L275 160 Z',
+          'M256 260 H294 V292 H256 Z',
+          'M214 170 L382 140 L394 188 L226 218 Z',
+          'M214 238 L368 212 L380 260 L214 286 Z',
+          'M214 306 L350 284 L362 332 L214 352 Z',
+        ].join(' ')
+      },
+      {
+        id: 'D4',
+        name: 'Split-Axis Monogram (Deterministic Duality)',
+        d: [
+          'M120 92 H192 V420 H120 Z',
+          'M120 360 H392 V420 H120 Z',
+          'M256 120 L392 420 H332 L256 252 L180 420 H120 Z',
+          'M256 206 L312 340 H200 Z',
+        ].join(' ')
+      },
+    ];
+
+    const sizes = [16, 32, 64, 256, 512];
+
+    function makeSvg(pathData, fillRule) {
+      return `
+        <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img">
+          <path fill="currentColor" fill-rule="${fillRule}" d="${pathData}"/>
+        </svg>
+      `;
+    }
+
+    function makeRow(dir, fillRule) {
+      const cells = sizes.map(size => `
+        <div class="cell">
+          <span class="swatch s${size}">${makeSvg(dir.d, fillRule)}</span>
+          <span class="label">${size}px</span>
+        </div>
+      `).join('');
+      return `
+        <h3>${dir.id} — ${dir.name}</h3>
+        <div class="row">${cells}</div>
+      `;
+    }
+
+    function makeSection(fillRule) {
+      const rows = directions.map(d => makeRow(d, fillRule)).join('');
+      return `
+        <h2>fill-rule = "${fillRule}"</h2>
+        <div class="concept-meta">${
+          fillRule === 'evenodd'
+            ? 'As the source AI generated. Overlapping subpaths in the L produce holes at the inside corner (D3, D4).'
+            : 'SVG default. Overlapping subpaths fill solidly. Compare D3 and D4 corners against the evenodd renders above.'
+        }</div>
+        ${rows}
+      `;
+    }
+
+    const params = new URLSearchParams(location.search);
+    const filter = params.get('only'); // e.g. "D3-evenodd"
+
+    if (filter) {
+      const [dirId, rule] = filter.split('-');
+      const dir = directions.find(d => d.id === dirId);
+      if (dir && (rule === 'evenodd' || rule === 'nonzero')) {
+        document.getElementById('root').innerHTML = `
+          <h2>fill-rule = "${rule}"</h2>
+          ${makeRow(dir, rule)}
+        `;
+      } else {
+        document.getElementById('root').innerHTML = '<p>Bad filter.</p>';
+      }
+    } else {
+      document.getElementById('root').innerHTML =
+        makeSection('evenodd') + makeSection('nonzero');
+    }
+  </script>
+
+</body>
+</html>

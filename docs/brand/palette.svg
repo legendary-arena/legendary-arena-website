@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="4400" viewBox="0 0 720 4400" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <title>Legendary Arena — Color Palette v1 (Light + Dark)</title>
+  <desc>Color swatch derived from docs/brand/palette.md. Brand identity = 3 colors only (gold, red, blue), shown at the top with HEX/RGB for quick reference. Full variants for each brand color appear in their own sections below (§4.1, §4.2, §4.3). CTA (§4.2.1) and class colors (§4.4) are mode-stable.</desc>
+
+  <rect width="720" height="4400" fill="#0b0f19"/>
+
+  <!-- Title block -->
+  <text x="360" y="44" font-size="22" font-weight="700" fill="#f5f7fb" text-anchor="middle">Legendary Arena — Color Palette v1</text>
+  <text x="360" y="68" font-size="13" fill="#a7b0c5" text-anchor="middle">Light mode (left) · Dark mode (right) · Source: docs/brand/palette.md</text>
+
+  <!-- Brand identity callout — explicit "3 colors" boundary -->
+  <rect x="160" y="80" width="400" height="22" rx="4" fill="#d4af37" opacity="0.18"/>
+  <rect x="160" y="80" width="400" height="22" rx="4" fill="none" stroke="#d4af37" stroke-width="1" opacity="0.7"/>
+  <text x="360" y="95" font-size="11" font-weight="700" fill="#d4af37" text-anchor="middle" letter-spacing="2">BRAND IDENTITY = 3 COLORS — GOLD · RED · BLUE</text>
+
+  <!-- Column header strip -->
+  <text x="180" y="120" font-size="12" font-weight="600" fill="#6e7893" text-anchor="middle" letter-spacing="2">LIGHT MODE</text>
+  <text x="540" y="120" font-size="12" font-weight="600" fill="#6e7893" text-anchor="middle" letter-spacing="2">DARK MODE</text>
+
+  <!-- =================================================================== -->
+  <!-- THE THREE BRAND COLORS — at-a-glance reference for designers -->
+  <!-- =================================================================== -->
+  <text x="20" y="148" font-size="15" font-weight="700" fill="#d4af37">THE THREE BRAND COLORS — at a glance (full variants below in §4.1, §4.2, §4.3)</text>
+
+  <!-- Gold (brand color 1 of 3) -->
+  <g transform="translate(20,165)">
+    <rect width="320" height="90" rx="6" fill="#b8901f"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#f5f7fb">--la-color-gold</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">HEX  #b8901f</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">RGB  184, 144, 31</text>
+    <text x="304" y="28" font-size="11" font-weight="700" fill="#f5f7fb" text-anchor="end" letter-spacing="1">BRAND 1 / 3</text>
+    <text x="304" y="76" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb" text-anchor="end">brand · mastery</text>
+  </g>
+  <g transform="translate(380,165)">
+    <rect width="320" height="90" rx="6" fill="#d4af37"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#1a1d2e">--la-color-gold</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#1a1d2e">HEX  #d4af37</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#1a1d2e">RGB  212, 175, 55</text>
+    <text x="304" y="28" font-size="11" font-weight="700" fill="#1a1d2e" text-anchor="end" letter-spacing="1">BRAND 1 / 3</text>
+    <text x="304" y="76" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#1a1d2e" text-anchor="end">brand · mastery</text>
+  </g>
+
+  <!-- Red (brand color 2 of 3) -->
+  <g transform="translate(20,265)">
+    <rect width="320" height="90" rx="6" fill="#7a1d1f"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#f5f7fb">--la-color-red</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">HEX  #7a1d1f</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">RGB  122, 29, 31</text>
+    <text x="304" y="28" font-size="11" font-weight="700" fill="#f5f7fb" text-anchor="end" letter-spacing="1">BRAND 2 / 3</text>
+    <text x="304" y="76" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb" text-anchor="end">action · accents</text>
+  </g>
+  <g transform="translate(380,265)">
+    <rect width="320" height="90" rx="6" fill="#a83034"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#f5f7fb">--la-color-red</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">HEX  #a83034</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">RGB  168, 48, 52</text>
+    <text x="304" y="28" font-size="11" font-weight="700" fill="#f5f7fb" text-anchor="end" letter-spacing="1">BRAND 2 / 3</text>
+    <text x="304" y="76" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb" text-anchor="end">action · accents</text>
+  </g>
+
+  <!-- Blue (brand color 3 of 3) -->
+  <g transform="translate(20,365)">
+    <rect width="320" height="90" rx="6" fill="#1e3a8a"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#f5f7fb">--la-color-blue</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">HEX  #1e3a8a</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">RGB  30, 58, 138</text>
+    <text x="304" y="28" font-size="11" font-weight="700" fill="#f5f7fb" text-anchor="end" letter-spacing="1">BRAND 3 / 3</text>
+    <text x="304" y="76" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb" text-anchor="end">system · links</text>
+  </g>
+  <g transform="translate(380,365)">
+    <rect width="320" height="90" rx="6" fill="#3753b8"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#f5f7fb">--la-color-blue</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">HEX  #3753b8</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">RGB  55, 83, 184</text>
+    <text x="304" y="28" font-size="11" font-weight="700" fill="#f5f7fb" text-anchor="end" letter-spacing="1">BRAND 3 / 3</text>
+    <text x="304" y="76" font-size="11" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb" text-anchor="end">system · links</text>
+  </g>
+
+  <!-- Divider line between brand showcase and the rest of the system -->
+  <line x1="20" y1="480" x2="700" y2="480" stroke="#d4af37" stroke-width="1" opacity="0.4"/>
+
+  <!-- =================================================================== -->
+  <!-- 1. Backgrounds -->
+  <!-- =================================================================== -->
+  <text x="20" y="510" font-size="15" font-weight="700" fill="#d4af37">§3.1 Backgrounds</text>
+
+  <!-- bg-primary -->
+  <g transform="translate(20,525)">
+    <rect width="320" height="90" rx="6" fill="#fdfcf8"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#1a1d2e">--la-color-bg-primary</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#1a1d2e">HEX  #fdfcf8</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#1a1d2e">RGB  253, 252, 248</text>
+  </g>
+  <g transform="translate(380,525)">
+    <rect width="320" height="90" rx="6" fill="#0b0f19" stroke="#2a3550" stroke-width="1"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#f5f7fb">--la-color-bg-primary</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">HEX  #0b0f19</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">RGB  11, 15, 25</text>
+  </g>
+
+  <!-- bg-secondary -->
+  <g transform="translate(20,625)">
+    <rect width="320" height="90" rx="6" fill="#f3f1ea"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#1a1d2e">--la-color-bg-secondary</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#1a1d2e">HEX  #f3f1ea</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#1a1d2e">RGB  243, 241, 234</text>
+  </g>
+  <g transform="translate(380,625)">
+    <rect width="320" height="90" rx="6" fill="#121826"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#f5f7fb">--la-color-bg-secondary</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">HEX  #121826</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">RGB  18, 24, 38</text>
+  </g>
+
+  <!-- bg-tertiary -->
+  <g transform="translate(20,725)">
+    <rect width="320" height="90" rx="6" fill="#e8e5db"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#1a1d2e">--la-color-bg-tertiary</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#1a1d2e">HEX  #e8e5db</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#1a1d2e">RGB  232, 229, 219</text>
+  </g>
+  <g transform="translate(380,725)">
+    <rect width="320" height="90" rx="6" fill="#1a2234"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#f5f7fb">--la-color-bg-tertiary</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">HEX  #1a2234</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">RGB  26, 34, 52</text>
+  </g>
+
+  <!-- =================================================================== -->
+  <!-- 2. Surfaces -->
+  <!-- =================================================================== -->
+  <text x="20" y="850" font-size="15" font-weight="700" fill="#d4af37">§3.2 Surfaces</text>
+
+  <!-- surface -->
+  <g transform="translate(20,865)">
+    <rect width="320" height="90" rx="6" fill="#ffffff" stroke="#d8d3c5" stroke-width="1"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#1a1d2e">--la-color-surface</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#1a1d2e">HEX  #ffffff</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#1a1d2e">RGB  255, 255, 255</text>
+  </g>
+  <g transform="translate(380,865)">
+    <rect width="320" height="90" rx="6" fill="#1c2438"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#f5f7fb">--la-color-surface</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">HEX  #1c2438</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">RGB  28, 36, 56</text>
+  </g>
+
+  <!-- surface-hover -->
+  <g transform="translate(20,965)">
+    <rect width="320" height="90" rx="6" fill="#f8f6f0"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#1a1d2e">--la-color-surface-hover</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#1a1d2e">HEX  #f8f6f0</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#1a1d2e">RGB  248, 246, 240</text>
+  </g>
+  <g transform="translate(380,965)">
+    <rect width="320" height="90" rx="6" fill="#242f4a"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#f5f7fb">--la-color-surface-hover</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">HEX  #242f4a</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">RGB  36, 47, 74</text>
+  </g>
+
+  <!-- =================================================================== -->
+  <!-- 3. Text -->
+  <!-- =================================================================== -->
+  <text x="20" y="1090" font-size="15" font-weight="700" fill="#d4af37">§3.3 Text</text>
+
+  <!-- text-primary -->
+  <g transform="translate(20,1105)">
+    <rect width="320" height="90" rx="6" fill="#1a1d2e"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#f5f7fb">--la-color-text-primary</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">HEX  #1a1d2e</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">RGB  26, 29, 46</text>
+  </g>
+  <g transform="translate(380,1105)">
+    <rect width="320" height="90" rx="6" fill="#f5f7fb"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#1a1d2e">--la-color-text-primary</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#1a1d2e">HEX  #f5f7fb</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#1a1d2e">RGB  245, 247, 251</text>
+  </g>
+
+  <!-- text-secondary -->
+  <g transform="translate(20,1205)">
+    <rect width="320" height="90" rx="6" fill="#4a5168"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#f5f7fb">--la-color-text-secondary</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">HEX  #4a5168</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">RGB  74, 81, 104</text>
+  </g>
+  <g transform="translate(380,1205)">
+    <rect width="320" height="90" rx="6" fill="#a7b0c5"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#1a1d2e">--la-color-text-secondary</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#1a1d2e">HEX  #a7b0c5</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#1a1d2e">RGB  167, 176, 197</text>
+  </g>
+
+  <!-- text-muted -->
+  <g transform="translate(20,1305)">
+    <rect width="320" height="90" rx="6" fill="#767e94"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#f5f7fb">--la-color-text-muted</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">HEX  #767e94</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">RGB  118, 126, 148</text>
+  </g>
+  <g transform="translate(380,1305)">
+    <rect width="320" height="90" rx="6" fill="#6e7893"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#f5f7fb">--la-color-text-muted</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">HEX  #6e7893</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">RGB  110, 120, 147</text>
+  </g>
+
+  <!-- =================================================================== -->
+  <!-- 4. Borders -->
+  <!-- =================================================================== -->
+  <text x="20" y="1430" font-size="15" font-weight="700" fill="#d4af37">§3.4 Borders</text>
+
+  <!-- border-subtle -->
+  <g transform="translate(20,1445)">
+    <rect width="320" height="90" rx="6" fill="#d8d3c5"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#1a1d2e">--la-color-border-subtle</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#1a1d2e">HEX  #d8d3c5</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#1a1d2e">RGB  216, 211, 197</text>
+  </g>
+  <g transform="translate(380,1445)">
+    <rect width="320" height="90" rx="6" fill="#2a3550"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#f5f7fb">--la-color-border-subtle</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">HEX  #2a3550</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">RGB  42, 53, 80</text>
+  </g>
+
+  <!-- border-strong -->
+  <g transform="translate(20,1545)">
+    <rect width="320" height="90" rx="6" fill="#b8b3a4"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#1a1d2e">--la-color-border-strong</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#1a1d2e">HEX  #b8b3a4</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#1a1d2e">RGB  184, 179, 164</text>
+  </g>
+  <g transform="translate(380,1545)">
+    <rect width="320" height="90" rx="6" fill="#3a4668"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#f5f7fb">--la-color-border-strong</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">HEX  #3a4668</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">RGB  58, 70, 104</text>
+  </g>
+
+  <!-- =================================================================== -->
+  <!-- 5. Gold (BRAND COLOR 1 of 3) — full variants -->
+  <!-- =================================================================== -->
+  <text x="20" y="1670" font-size="15" font-weight="700" fill="#d4af37">§4.1 Gold (brand / achievement) — BRAND COLOR 1 of 3 · full variants</text>
+
+  <!-- gold -->
+  <g transform="translate(20,1685)">
+    <rect width="320" height="90" rx="6" fill="#b8901f"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#f5f7fb">--la-color-gold</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">HEX  #b8901f</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">RGB  184, 144, 31</text>
+  </g>
+  <g transform="translate(380,1685)">
+    <rect width="320" height="90" rx="6" fill="#d4af37"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#1a1d2e">--la-color-gold</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#1a1d2e">HEX  #d4af37</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#1a1d2e">RGB  212, 175, 55</text>
+  </g>
+
+  <!-- gold-bright -->
+  <g transform="translate(20,1785)">
+    <rect width="320" height="90" rx="6" fill="#d4af37"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#1a1d2e">--la-color-gold-bright</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#1a1d2e">HEX  #d4af37</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#1a1d2e">RGB  212, 175, 55</text>
+  </g>
+  <g transform="translate(380,1785)">
+    <rect width="320" height="90" rx="6" fill="#f0c94a"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#1a1d2e">--la-color-gold-bright</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#1a1d2e">HEX  #f0c94a</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#1a1d2e">RGB  240, 201, 74</text>
+  </g>
+
+  <!-- gold-muted -->
+  <g transform="translate(20,1885)">
+    <rect width="320" height="90" rx="6" fill="#856710"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#f5f7fb">--la-color-gold-muted</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">HEX  #856710</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">RGB  133, 103, 16</text>
+  </g>
+  <g transform="translate(380,1885)">
+    <rect width="320" height="90" rx="6" fill="#9e7c1c"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#f5f7fb">--la-color-gold-muted</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">HEX  #9e7c1c</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">RGB  158, 124, 28</text>
+  </g>
+
+  <!-- =================================================================== -->
+  <!-- 6. Red (BRAND COLOR 2 of 3) — full variants -->
+  <!-- =================================================================== -->
+  <text x="20" y="2010" font-size="15" font-weight="700" fill="#d4af37">§4.2 Red (action / accents) — BRAND COLOR 2 of 3 · full variants</text>
+
+  <!-- red -->
+  <g transform="translate(20,2025)">
+    <rect width="320" height="90" rx="6" fill="#7a1d1f"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#f5f7fb">--la-color-red</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">HEX  #7a1d1f</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">RGB  122, 29, 31</text>
+  </g>
+  <g transform="translate(380,2025)">
+    <rect width="320" height="90" rx="6" fill="#a83034"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#f5f7fb">--la-color-red</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">HEX  #a83034</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">RGB  168, 48, 52</text>
+  </g>
+
+  <!-- red-bright -->
+  <g transform="translate(20,2125)">
+    <rect width="320" height="90" rx="6" fill="#a83034"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#f5f7fb">--la-color-red-bright</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">HEX  #a83034</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">RGB  168, 48, 52</text>
+  </g>
+  <g transform="translate(380,2125)">
+    <rect width="320" height="90" rx="6" fill="#c44248"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#f5f7fb">--la-color-red-bright</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">HEX  #c44248</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">RGB  196, 66, 72</text>
+  </g>
+
+  <!-- red-muted -->
+  <g transform="translate(20,2225)">
+    <rect width="320" height="90" rx="6" fill="#4d0d10"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#f5f7fb">--la-color-red-muted</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">HEX  #4d0d10</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">RGB  77, 13, 16</text>
+  </g>
+  <g transform="translate(380,2225)">
+    <rect width="320" height="90" rx="6" fill="#7a1d1f"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#f5f7fb">--la-color-red-muted</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">HEX  #7a1d1f</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">RGB  122, 29, 31</text>
+  </g>
+
+  <!-- =================================================================== -->
+  <!-- 7. CTA (mode-stable) -->
+  <!-- =================================================================== -->
+  <text x="20" y="2350" font-size="15" font-weight="700" fill="#d4af37">§4.2.1 CTA — primary action backgrounds (mode-stable: same in light + dark)</text>
+
+  <!-- cta -->
+  <g transform="translate(20,2365)">
+    <rect width="680" height="90" rx="6" fill="#7a1d1f"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#f5f7fb">--la-color-cta</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">HEX  #7a1d1f</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">RGB  122, 29, 31</text>
+    <text x="664" y="28" font-size="11" font-weight="600" fill="#f5f7fb" text-anchor="end" letter-spacing="1">MODE-STABLE</text>
+    <text x="664" y="76" font-size="12" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb" text-anchor="end">white text contrast ~10.4:1 (AAA)</text>
+  </g>
+
+  <!-- cta-bright -->
+  <g transform="translate(20,2465)">
+    <rect width="680" height="90" rx="6" fill="#a83034"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#f5f7fb">--la-color-cta-bright</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">HEX  #a83034</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">RGB  168, 48, 52</text>
+    <text x="664" y="28" font-size="11" font-weight="600" fill="#f5f7fb" text-anchor="end" letter-spacing="1">MODE-STABLE</text>
+    <text x="664" y="76" font-size="12" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb" text-anchor="end">hover state — AA waived for non-resting</text>
+  </g>
+
+  <!-- cta-muted -->
+  <g transform="translate(20,2565)">
+    <rect width="680" height="90" rx="6" fill="#4d0d10"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#f5f7fb">--la-color-cta-muted</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">HEX  #4d0d10</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">RGB  77, 13, 16</text>
+    <text x="664" y="28" font-size="11" font-weight="600" fill="#f5f7fb" text-anchor="end" letter-spacing="1">MODE-STABLE</text>
+    <text x="664" y="76" font-size="12" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb" text-anchor="end">active / pressed state</text>
+  </g>
+
+  <!-- =================================================================== -->
+  <!-- 8. Blue (BRAND COLOR 3 of 3) — full variants -->
+  <!-- =================================================================== -->
+  <text x="20" y="2690" font-size="15" font-weight="700" fill="#d4af37">§4.3 Blue (system / interaction / recruit) — BRAND COLOR 3 of 3 · full variants</text>
+
+  <!-- blue -->
+  <g transform="translate(20,2705)">
+    <rect width="320" height="90" rx="6" fill="#1e3a8a"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#f5f7fb">--la-color-blue</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">HEX  #1e3a8a</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">RGB  30, 58, 138</text>
+  </g>
+  <g transform="translate(380,2705)">
+    <rect width="320" height="90" rx="6" fill="#3753b8"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#f5f7fb">--la-color-blue</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">HEX  #3753b8</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">RGB  55, 83, 184</text>
+  </g>
+
+  <!-- blue-bright -->
+  <g transform="translate(20,2805)">
+    <rect width="320" height="90" rx="6" fill="#1d4ed8"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#f5f7fb">--la-color-blue-bright</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">HEX  #1d4ed8</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">RGB  29, 78, 216</text>
+  </g>
+  <g transform="translate(380,2805)">
+    <rect width="320" height="90" rx="6" fill="#3b82f6"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#f5f7fb">--la-color-blue-bright</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">HEX  #3b82f6</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">RGB  59, 130, 246</text>
+  </g>
+
+  <!-- blue-muted -->
+  <g transform="translate(20,2905)">
+    <rect width="320" height="90" rx="6" fill="#172554"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#f5f7fb">--la-color-blue-muted</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">HEX  #172554</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">RGB  23, 37, 84</text>
+  </g>
+  <g transform="translate(380,2905)">
+    <rect width="320" height="90" rx="6" fill="#172554"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#f5f7fb">--la-color-blue-muted</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">HEX  #172554</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">RGB  23, 37, 84</text>
+  </g>
+
+  <!-- =================================================================== -->
+  <!-- 9. Class colors (mode-stable, NOT brand) -->
+  <!-- =================================================================== -->
+  <text x="20" y="3030" font-size="15" font-weight="700" fill="#d4af37">§4.4 Class colors (per-hero-class identity) — NOT BRAND · mode-stable</text>
+
+  <!-- class-strength -->
+  <g transform="translate(20,3045)">
+    <rect width="680" height="90" rx="6" fill="#40b93c"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#1a1d2e">--la-color-class-strength</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#1a1d2e">HEX  #40b93c</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#1a1d2e">RGB  64, 185, 60</text>
+    <text x="664" y="28" font-size="11" font-weight="600" fill="#1a1d2e" text-anchor="end" letter-spacing="1">MODE-STABLE · CLASS</text>
+    <text x="664" y="76" font-size="12" font-family="ui-monospace, Consolas, monospace" fill="#1a1d2e" text-anchor="end">strength · primary fill</text>
+  </g>
+
+  <!-- class-strength-muted -->
+  <g transform="translate(20,3145)">
+    <rect width="680" height="90" rx="6" fill="#164b33"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#f5f7fb">--la-color-class-strength-muted</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">HEX  #164b33</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">RGB  22, 75, 51</text>
+    <text x="664" y="28" font-size="11" font-weight="600" fill="#f5f7fb" text-anchor="end" letter-spacing="1">MODE-STABLE · CLASS</text>
+    <text x="664" y="76" font-size="12" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb" text-anchor="end">strength · depth / shadow</text>
+  </g>
+
+  <!-- class-covert -->
+  <g transform="translate(20,3245)">
+    <rect width="680" height="90" rx="6" fill="#ee2223"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#f5f7fb">--la-color-class-covert</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">HEX  #ee2223</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">RGB  238, 34, 35</text>
+    <text x="664" y="28" font-size="11" font-weight="600" fill="#f5f7fb" text-anchor="end" letter-spacing="1">MODE-STABLE · CLASS</text>
+    <text x="664" y="76" font-size="12" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb" text-anchor="end">covert · primary fill</text>
+  </g>
+
+  <!-- class-covert-muted -->
+  <g transform="translate(20,3345)">
+    <rect width="680" height="90" rx="6" fill="#ae2136"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#f5f7fb">--la-color-class-covert-muted</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">HEX  #ae2136</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">RGB  174, 33, 54</text>
+    <text x="664" y="28" font-size="11" font-weight="600" fill="#f5f7fb" text-anchor="end" letter-spacing="1">MODE-STABLE · CLASS</text>
+    <text x="664" y="76" font-size="12" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb" text-anchor="end">covert · depth / shadow</text>
+  </g>
+
+  <!-- class-instinct -->
+  <g transform="translate(20,3445)">
+    <rect width="680" height="90" rx="6" fill="#f9b00b"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#1a1d2e">--la-color-class-instinct</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#1a1d2e">HEX  #f9b00b</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#1a1d2e">RGB  249, 176, 11</text>
+    <text x="664" y="28" font-size="11" font-weight="600" fill="#1a1d2e" text-anchor="end" letter-spacing="1">MODE-STABLE · CLASS</text>
+    <text x="664" y="76" font-size="12" font-family="ui-monospace, Consolas, monospace" fill="#1a1d2e" text-anchor="end">instinct · primary fill</text>
+  </g>
+
+  <!-- class-instinct-muted (NEW — derived) -->
+  <g transform="translate(20,3545)">
+    <rect width="680" height="90" rx="6" fill="#92400e"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#f5f7fb">--la-color-class-instinct-muted</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">HEX  #92400e</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">RGB  146, 64, 14</text>
+    <text x="664" y="28" font-size="11" font-weight="600" fill="#f5f7fb" text-anchor="end" letter-spacing="1">MODE-STABLE · CLASS · DERIVED</text>
+    <text x="664" y="76" font-size="12" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb" text-anchor="end">instinct · depth / shadow</text>
+  </g>
+
+  <!-- class-ranged -->
+  <g transform="translate(20,3645)">
+    <rect width="680" height="90" rx="6" fill="#31a5d6"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#1a1d2e">--la-color-class-ranged</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#1a1d2e">HEX  #31a5d6</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#1a1d2e">RGB  49, 165, 214</text>
+    <text x="664" y="28" font-size="11" font-weight="600" fill="#1a1d2e" text-anchor="end" letter-spacing="1">MODE-STABLE · CLASS</text>
+    <text x="664" y="76" font-size="12" font-family="ui-monospace, Consolas, monospace" fill="#1a1d2e" text-anchor="end">ranged · primary fill</text>
+  </g>
+
+  <!-- class-ranged-muted (NEW — derived) -->
+  <g transform="translate(20,3745)">
+    <rect width="680" height="90" rx="6" fill="#155e75"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#f5f7fb">--la-color-class-ranged-muted</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">HEX  #155e75</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">RGB  21, 94, 117</text>
+    <text x="664" y="28" font-size="11" font-weight="600" fill="#f5f7fb" text-anchor="end" letter-spacing="1">MODE-STABLE · CLASS · DERIVED</text>
+    <text x="664" y="76" font-size="12" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb" text-anchor="end">ranged · depth / shadow</text>
+  </g>
+
+  <!-- class-tech -->
+  <g transform="translate(20,3845)">
+    <rect width="680" height="90" rx="6" fill="#a7a5a6"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#1a1d2e">--la-color-class-tech</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#1a1d2e">HEX  #a7a5a6</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#1a1d2e">RGB  167, 165, 166</text>
+    <text x="664" y="28" font-size="11" font-weight="600" fill="#1a1d2e" text-anchor="end" letter-spacing="1">MODE-STABLE · CLASS</text>
+    <text x="664" y="76" font-size="12" font-family="ui-monospace, Consolas, monospace" fill="#1a1d2e" text-anchor="end">tech · primary fill</text>
+  </g>
+
+  <!-- class-tech-muted -->
+  <g transform="translate(20,3945)">
+    <rect width="680" height="90" rx="6" fill="#666666"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#f5f7fb">--la-color-class-tech-muted</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">HEX  #666666</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">RGB  102, 102, 102</text>
+    <text x="664" y="28" font-size="11" font-weight="600" fill="#f5f7fb" text-anchor="end" letter-spacing="1">MODE-STABLE · CLASS</text>
+    <text x="664" y="76" font-size="12" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb" text-anchor="end">tech · depth / shadow</text>
+  </g>
+
+  <!-- =================================================================== -->
+  <!-- 10. Semantic -->
+  <!-- =================================================================== -->
+  <text x="20" y="4070" font-size="15" font-weight="700" fill="#d4af37">§5 Semantic — success · warning · error</text>
+
+  <!-- success -->
+  <g transform="translate(20,4085)">
+    <rect width="320" height="90" rx="6" fill="#15803d"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#f5f7fb">--la-color-success</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">HEX  #15803d</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">RGB  21, 128, 61</text>
+  </g>
+  <g transform="translate(380,4085)">
+    <rect width="320" height="90" rx="6" fill="#22c55e"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#1a1d2e">--la-color-success</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#1a1d2e">HEX  #22c55e</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#1a1d2e">RGB  34, 197, 94</text>
+  </g>
+
+  <!-- warning -->
+  <g transform="translate(20,4185)">
+    <rect width="320" height="90" rx="6" fill="#b45309"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#f5f7fb">--la-color-warning</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">HEX  #b45309</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">RGB  180, 83, 9</text>
+  </g>
+  <g transform="translate(380,4185)">
+    <rect width="320" height="90" rx="6" fill="#f59e0b"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#1a1d2e">--la-color-warning</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#1a1d2e">HEX  #f59e0b</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#1a1d2e">RGB  245, 158, 11</text>
+  </g>
+
+  <!-- error -->
+  <g transform="translate(20,4285)">
+    <rect width="320" height="90" rx="6" fill="#991b1b"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#f5f7fb">--la-color-error</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">HEX  #991b1b</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">RGB  153, 27, 27</text>
+  </g>
+  <g transform="translate(380,4285)">
+    <rect width="320" height="90" rx="6" fill="#dc2626"/>
+    <text x="16" y="28" font-size="15" font-weight="600" fill="#f5f7fb">--la-color-error</text>
+    <text x="16" y="56" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">HEX  #dc2626</text>
+    <text x="16" y="76" font-size="13" font-family="ui-monospace, Consolas, monospace" fill="#f5f7fb">RGB  220, 38, 38</text>
+  </g>
+</svg>

@@ -114,6 +114,37 @@
 
 
 /* =========================================================
+   MODE-STABLE COLOR TOKENS
+   Class colors (per palette.md §4.4) identify gameplay class,
+   not brand identity. They are mode-stable: same value in light
+   and dark. NOT overridden in html[data-theme="dark"] below.
+
+   Non-role constraint: class colors MUST NOT be used for brand
+   identity, CTA elements, system semantics, or marketing visuals.
+   See palette.md §4.4 + §10 failure mode (class color used as
+   brand identity).
+   ========================================================= */
+
+:root {
+
+  /* --- CLASS COLORS (per-hero-class identity) ---
+     Source: barefootbetters-legendary-setup/public/img/icons/
+              hero-classes/class-{strength,covert,instinct,ranged,tech}.svg
+     Mode-stable: same hex in light and dark. */
+  --la-color-class-strength: #40b93c;
+  --la-color-class-strength-muted: #164b33;
+  --la-color-class-covert: #ee2223;
+  --la-color-class-covert-muted: #ae2136;
+  --la-color-class-instinct: #f9b00b;
+  --la-color-class-instinct-muted: #92400e;       /* derived — icon has no shadow source */
+  --la-color-class-ranged: #31a5d6;
+  --la-color-class-ranged-muted: #155e75;         /* derived — icon has no shadow source */
+  --la-color-class-tech: #a7a5a6;
+  --la-color-class-tech-muted: #666666;
+}
+
+
+/* =========================================================
    LIGHT MODE (default)
    PaperMod resolves the active theme via <html data-theme="...">,
    set by its head/footer scripts to "light" or "dark" (never "auto"
@@ -142,29 +173,32 @@
   --la-color-border-strong: #b8b3a4;
 
   /* --- BRAND COLORS (light mode tuning) --- */
-  /* why: gold/red/blue darkened for contrast on light backgrounds */
+  /* why: gold/red/blue darkened for contrast on light backgrounds.
+     Red sits in the deep maroon family (not cherry), blue in the
+     deep navy family (not royal blue) — see palette.md §4.2 / §4.3
+     tonal-direction notes (2026-05-08 brand iteration). */
   --la-color-gold: #b8901f;
   --la-color-gold-bright: #d4af37;
   --la-color-gold-muted: #856710;
 
-  --la-color-red: #c92a30;
-  --la-color-red-bright: #e5484d;
-  --la-color-red-muted: #8a1a1f;
+  --la-color-red: #7a1d1f;
+  --la-color-red-bright: #a83034;
+  --la-color-red-muted: #4d0d10;
 
   /* CTA button background — pinned across modes to satisfy palette.md
      §8 contrast pair "white on red (button bg) — AA, both modes."
-     Dark `--la-color-red` (#e5484d) is too light for 4.5:1 on white.
-     `--la-color-cta` resolves to the light-mode brand red in both
-     modes, which gives 5.44:1 with white in light and ~5.44:1 in dark.
+     Following the 2026-05-08 brand shift, CTA pins to the new maroon
+     scale (cohesive with brand red). White text on `#7a1d1f` is
+     ~10.4:1 in both modes (AAA, well above the 4.5:1 AA threshold).
      Non-button red usages (gradients, attack semantic, accents) still
-     route through `--la-color-red` and keep their per-mode tuning. */
-  --la-color-cta: #c92a30;
-  --la-color-cta-bright: #e5484d;
-  --la-color-cta-muted: #8a1a1f;
+     route through `--la-color-red`. */
+  --la-color-cta: #7a1d1f;
+  --la-color-cta-bright: #a83034;
+  --la-color-cta-muted: #4d0d10;
 
-  --la-color-blue: #2563eb;
-  --la-color-blue-bright: #3b82f6;
-  --la-color-blue-muted: #1e40af;
+  --la-color-blue: #1e3a8a;
+  --la-color-blue-bright: #1d4ed8;
+  --la-color-blue-muted: #172554;
 
   /* --- SEMANTIC --- */
   --la-color-success: #15803d;
@@ -227,26 +261,27 @@ html[data-theme="dark"] {
   --la-color-border-strong: #3a4668;
 
   /* --- BRAND COLORS (dark mode tuning) --- */
-  /* why: brighter saturation reads correctly against dark backgrounds */
+  /* why: lifted saturation reads correctly against dark backgrounds while
+     preserving the deep-maroon and deep-navy tonal direction set in light
+     mode. Brand iteration 2026-05-08 — see palette.md §12 changelog. */
   --la-color-gold: #d4af37;
   --la-color-gold-bright: #f0c94a;
   --la-color-gold-muted: #9e7c1c;
 
-  --la-color-red: #e5484d;
-  --la-color-red-bright: #ff5c62;
-  --la-color-red-muted: #a72d32;
+  --la-color-red: #a83034;
+  --la-color-red-bright: #c44248;
+  --la-color-red-muted: #7a1d1f;
 
   /* CTA button background — same value across modes (see :root block).
-     The dark mode brand red (#e5484d) only gives 3.91:1 with white text;
-     pinning CTA to the light-mode value gives 5.44:1 in both modes
-     and satisfies palette.md §8 contrast contract. */
-  --la-color-cta: #c92a30;
-  --la-color-cta-bright: #e5484d;
-  --la-color-cta-muted: #8a1a1f;
+     Pinned to the maroon `#7a1d1f` for ~10.4:1 contrast on white text
+     (AAA) in both modes. Brand iteration 2026-05-08. */
+  --la-color-cta: #7a1d1f;
+  --la-color-cta-bright: #a83034;
+  --la-color-cta-muted: #4d0d10;
 
-  --la-color-blue: #3b82f6;
-  --la-color-blue-bright: #60a5fa;
-  --la-color-blue-muted: #1e40af;
+  --la-color-blue: #3753b8;
+  --la-color-blue-bright: #3b82f6;
+  --la-color-blue-muted: #172554;
 
   /* --- SEMANTIC --- */
   --la-color-success: #22c55e;
