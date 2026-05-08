@@ -10,10 +10,18 @@ new version publishes.
 
 ---
 
-## v1 (2026-05-07) — DRAFT
+## v1 (2026-05-07) — LOCKED for www; cross-site consumption pending WP-007a/b
 
-**Status:** Draft, not yet locked. Pending Phase B review against
-rendered output (WP-003) before status changes to "Locked."
+**Status:** Locked for `www.legendary-arena.com`. WP-002 + WP-003 jointly
+verified the contract against rendered pages on 2026-05-07: brand
+tokens load and resolve in both modes, all `palette.md §8` contrast
+pairs pass WCAG AA (12 / 12), Lighthouse home-page scores at 91 / 100 /
+100 / 100 (Performance / Accessibility / Best Practices / SEO), no
+console errors, no horizontal scroll on 375×667 mobile,
+`prefers-reduced-motion` honored. Cross-site consumption by
+`play.legendary-arena.com` and `cards.barefootbetters.com` is verified
+separately under WP-007a / WP-007b and is explicitly carved out of
+this lock.
 
 Initial token set covering:
 

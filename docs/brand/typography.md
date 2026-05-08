@@ -1,6 +1,6 @@
-# Legendary Arena — Typography (v1 Draft)
+# Legendary Arena — Typography (v1 LOCKED for WWW)
 
-**Status:** v1 DRAFT — Phase B; pending review against rendered output (WP-003)
+**Status:** v1 LOCKED for WWW — Phase B; locked 2026-05-07 [^cross-site]
 **Owner:** Jeffery Jensen
 **Last updated:** 2026-05-07
 
@@ -11,6 +11,14 @@
 > CSS is treated as broken until corrected. No font sizes, line heights,
 > weights, or letter-spacing values may exist anywhere else in the
 > project without explicit `// why:` justification.
+
+[^cross-site]: "Locked for WWW" — typography tokens verified against
+rendered pages at `www.legendary-arena.com` under WP-003 on 2026-05-07.
+Bebas Neue / Inter / JetBrains Mono load via Google Fonts with
+`display=swap`; computed h1 fontFamily resolves to Bebas Neue stack;
+type scale verified at desktop (1280×800) and mobile (375×667).
+Cross-site consumption (`play.*`, `cards.*`) is verified separately
+under WP-007a / WP-007b and is explicitly carved out of this lock.
 
 ---
 

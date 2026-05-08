@@ -1,6 +1,6 @@
-# Legendary Arena — Spacing & Layout Primitives (v1 Draft)
+# Legendary Arena — Spacing & Layout Primitives (v1 LOCKED for WWW)
 
-**Status:** v1 DRAFT — Phase B; pending review against rendered output (WP-003)
+**Status:** v1 LOCKED for WWW — Phase B; locked 2026-05-07 [^cross-site]
 **Owner:** Jeffery Jensen
 **Last updated:** 2026-05-07
 
@@ -12,6 +12,15 @@
 > until corrected. No spacing, radius, z-index, or motion values may
 > exist anywhere else in the project without explicit `// why:`
 > justification.
+
+[^cross-site]: "Locked for WWW" — spacing, radii, z-index, and motion
+tokens verified against rendered pages at `www.legendary-arena.com`
+under WP-003 on 2026-05-07. Mobile rule from §8 (drop one tier on
+viewports < 768px) verified at 375×667 — `.main` padding-left/right
+resolves to `--la-space-4` (16px). `prefers-reduced-motion: reduce`
+respected per §10. Cross-site consumption (`play.*`, `cards.*`) is
+verified separately under WP-007a / WP-007b and is explicitly carved
+out of this lock.
 
 ---
 

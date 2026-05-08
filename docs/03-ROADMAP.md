@@ -69,8 +69,8 @@ they have no shared write paths.
 | WP | Title | Status | Dependencies | Est. effort |
 |---|---|---|---|---|
 | WP-001 | Hugo skeleton + PaperMod theme | ✅ Done | — | half-day |
-| WP-002 | LA brand definition + tokens v1 | 🔄 In progress | WP-001 | 1–2 days |
-| WP-003 | Apply LA brand via theme overrides | ⏸️ Pending | WP-002 | 1 day |
+| WP-002 | LA brand definition + tokens v1 | ✅ Done | WP-001 | 1–2 days |
+| WP-003 | Apply LA brand via theme overrides | ✅ Done | WP-002 | 1 day |
 | WP-004 | Content scaffolding + first 3 pages | ⏸️ Pending | WP-003 | half-day |
 | WP-005 | Pagefind search integration | ⏸️ Pending | WP-004 | half-day |
 | WP-006 | Cloudflare Pages deploy + custom domain | ⏸️ Pending | WP-005 | half-day |
@@ -152,18 +152,19 @@ for all subsequent WPs.
 
 ---
 
-## WP-002 — LA brand definition + tokens v1 🔄
+## WP-002 — LA brand definition + tokens v1 ✅
 
-**Status:** In progress — Phase A + Phase B documentation drafted (v1 DRAFT); lock pending WP-003 verification
-**Effort:** 1–2 days
+**Status:** Done (2026-05-07)
+**Effort actual:** ~1 day
 **Dependencies:** WP-001
+**Commits:** `5066d47` (strategy v1 draft), `941a11b` (brand-tokens.css + CHANGELOG draft), `071b304` (strategy strengthening: invariants, CTA contract, failure modes), `3f76a3e` (palette v1 draft + error/CTA red fix), `dc7f08b` (DoD ticks + lock-pending state), `3a5ffe4` (typography v1 draft + spacing v1 draft + hero tier), `bc62d94` (`--la-color-cta` additive token + palette §4.2.1 + mode-switching contract documentation)
 
 ### Readiness
 
 - Spec complete: ✅
 - Dependencies met: ✅
 - Ready for execution: ✅
-- Currently executing: ✅ (drafts complete 2026-05-07; lock pending verification)
+- Executed: ✅
 
 ### Preconditions
 
@@ -271,11 +272,16 @@ summary of changes.
 
 ### Exit criteria
 
-- [ ] `brand-tokens.css` consumed successfully by Hugo
-      (referenced from a test stylesheet or page)
-- [ ] Hugo build still produces a clean site after token integration
-- [ ] No console errors when served
-- [ ] Token file is well-formed CSS (validates)
+- [x] `brand-tokens.css` consumed successfully by Hugo
+      (loaded via `layouts/_partials/extend_head.html`; rendered tokens
+      verified via `getComputedStyle()` in headless Chrome — both modes)
+- [x] Hugo build still produces a clean site after token integration
+      (`hugo server` ran cleanly during WP-003 verification)
+- [x] No console errors when served (Lighthouse `errors-in-console`
+      audit: 0 items; puppeteer-core console + pageerror + requestfailed
+      listeners: 0 events)
+- [x] Token file is well-formed CSS (validates; no internal broken
+      references; PaperMod color compatibility shim aliased correctly)
 
 ### Failure conditions
 
@@ -312,24 +318,40 @@ summary of changes.
   9-step spacing, radii, z-index, motion). Contract violation fixed
   in this draft (error red separated from CTA red per
   strategy.md §4 constraint).
-- **Status remains "In progress"** until WP-003 verifies tokens render
-  correctly against real pages. Lock criteria are the exit criteria
-  in `strategy.md §11`. When all five hold, all brand artifacts move
-  from "v1 DRAFT" to "v1 LOCKED" and this WP marks ✅ Done.
+
+### Lock (2026-05-07)
+
+WP-003 verification surfaced and resolved one drafting gap (additive
+token `--la-color-cta` was needed to satisfy `palette.md §8` row 5).
+After the additive change all Phase B exit criteria from `strategy.md §11`
+are satisfied for www. Brand artifacts are now **v1 LOCKED for WWW**;
+cross-site consumption (`play.*`, `cards.*`) is verified separately
+under WP-007a / WP-007b and explicitly carved out of this lock.
+
+Lock receipts:
+- `static/brand-tokens.css` header: `Version: v1` (no DRAFT suffix)
+- `docs/brand/strategy.md`, `palette.md`, `typography.md`, `spacing.md`
+  status: `v1 LOCKED for WWW`
+- `docs/brand/CHANGELOG.md` v1 status: `Locked for www; cross-site
+  consumption pending WP-007a/b`
+- `docs/01-VISION.md` Decisions log: 2026-05-07 entry recording the
+  joint WP-002 + WP-003 lock with verification summary
 
 ---
 
-## WP-003 — Apply LA brand via theme overrides ⏸️
+## WP-003 — Apply LA brand via theme overrides ✅
 
-**Status:** Pending WP-002
-**Effort:** 1 day
+**Status:** Done (2026-05-07)
+**Effort actual:** ~1 day (implementation + verification)
 **Dependencies:** WP-002
+**Commits:** `a2e3e8b` (custom.css with token references; reduced-motion respected), `052815a` (brand tokens loaded via extend_head.html; smoke-test verified rendering, no console errors), `bc62d94` (verification fixes — selector bug, PaperMod compatibility shim, body.list bg, touch target, footer contrast, favicons, CTA token routing)
 
 ### Readiness
 
 - Spec complete: ✅
-- Dependencies met: ❌ (waiting on WP-002)
-- Ready for execution: ❌
+- Dependencies met: ✅
+- Ready for execution: ✅
+- Executed: ✅
 
 ### Preconditions
 
@@ -369,21 +391,52 @@ recommended override location for CSS is `assets/css/extended/`.
 
 ### Definition of Done
 
-- [ ] Home page reflects LA brand colors and typography
-- [ ] Light and dark modes both look intentional and on-brand
-- [ ] Header, footer, body text, links all consume brand tokens
-- [ ] `themes/PaperMod/` is unmodified (`git submodule status` clean)
-- [ ] `hugo server` renders without errors
-- [ ] No `!important` declarations without `// why:` comments
+- [x] Home page reflects LA brand colors and typography (verified via
+      `getComputedStyle()`: bg-primary, text-primary, h1 font-family
+      (Bebas Neue) all resolve to LA tokens in both modes)
+- [x] Light and dark modes both look intentional and on-brand (LA tokens
+      active in both modes after the `html[data-theme="dark"]` selector
+      fix; PaperMod's --theme / --primary / --code-bg routed through LA
+      tokens via the compatibility shim)
+- [x] Header, footer, body text, links all consume brand tokens
+      (.logo a, .nav/.menu a, .footer, .footer a, body, .main, h1–h6
+      all reference --la-* tokens)
+- [x] `themes/PaperMod/` is unmodified (`git submodule status` shows
+      `c4ca7ca486ecd67c8f6bba31551a6ee0d1455926 themes/PaperMod (heads/master)`
+      with no `+` modification flag)
+- [x] `hugo server` renders without errors (confirmed during verification)
+- [x] No `!important` declarations without `// why:` comments
+      (only `!important` in the `prefers-reduced-motion` block, with
+      `// why:` explaining override of per-element transitions)
 
 ### Exit criteria
 
-- [ ] Lighthouse score ≥ 90 on home page (perf, a11y, best practices, SEO)
-- [ ] Visual inspection: site reads as "Legendary Arena's marketing site,"
-      not "default PaperMod"
-- [ ] No regressions vs WP-001 baseline (page still loads, all links work)
-- [ ] Before/after DOM diff shows no structural breakage (only style
-      changes)
+- [x] Lighthouse score ≥ 90 on home page (Performance: 91, Accessibility: 100,
+      Best Practices: 100, SEO: 100)
+- [x] Visual inspection: site reads as "Legendary Arena's marketing site,"
+      not "default PaperMod" (Bebas Neue display font on h1/h2 + warm
+      off-white / deep navy mode-specific surfaces are immediately
+      distinct from PaperMod's stock white/neutral grays)
+- [x] No regressions vs WP-001 baseline (home page still loads; all
+      links functional — header logo, footer attribution links, top-link;
+      no 404s)
+- [x] Before/after DOM diff shows no structural breakage (only style
+      changes; PaperMod's emitted HTML structure is unchanged because
+      no template overrides modified the body markup)
+
+### Additional verification (WP-003 lock-pass, 2026-05-07)
+
+- [x] WCAG AA on all `palette.md §8` contrast pairs verified by direct
+      computation (12 / 12 pass; text-primary on bg-primary hits AAA in
+      both modes)
+- [x] Mobile viewport 375×667 — no horizontal scroll; .main padding
+      drops from --la-space-6 (32px) to --la-space-4 (16px) per
+      `spacing.md §8`
+- [x] `prefers-reduced-motion: reduce` honored (transition-duration and
+      animation-duration forced to 0ms in custom.css §6.2)
+- [x] Browser console clean: 0 errors, 0 page errors, 0 failed network
+      requests (verified via puppeteer-core listeners on a cache-disabled
+      page)
 
 ### Failure conditions
 

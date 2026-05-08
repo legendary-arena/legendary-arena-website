@@ -1,6 +1,6 @@
-# Legendary Arena — Color Palette (v1 Draft)
+# Legendary Arena — Color Palette (v1 LOCKED for WWW)
 
-**Status:** v1 DRAFT — Phase B; pending review against rendered output (WP-003)
+**Status:** v1 LOCKED for WWW — Phase B; locked 2026-05-07 [^cross-site]
 **Owner:** Jeffery Jensen
 **Last updated:** 2026-05-07
 
@@ -10,6 +10,14 @@
 > directly from this file; if they disagree, this file wins and the
 > CSS is treated as broken until corrected. No color values may exist
 > anywhere else in the project without explicit `// why:` justification.
+
+[^cross-site]: "Locked for WWW" — verified against rendered pages at
+`www.legendary-arena.com` under WP-003 on 2026-05-07. WCAG AA verified
+on every contrast pair listed in §8 (computed values: see CHANGELOG.md
+v1 lock entry). Cross-site consumption by `play.*` and `cards.*` is
+verified separately under WP-007a / WP-007b and is explicitly carved
+out of this lock. Breaking changes still require the major version
+bump + coordinated consumer updates per `01-VISION.md` Global invariants.
 
 ---
 

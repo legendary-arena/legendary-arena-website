@@ -1,15 +1,17 @@
 /*
  * Legendary Arena Brand Tokens
- * Version: v1 (DRAFT — Phase B output; pending review and lock)
+ * Version: v1
  * Date: 2026-05-07
  *
- * This file is consumed cross-origin by play.legendary-arena.com and
- * the registry viewer (currently cards.barefootbetters.com; future
- * registry.legendary-arena.com). Treat as a public API.
+ * Locked for www.legendary-arena.com on 2026-05-07 (WP-002 + WP-003).
+ * Cross-site consumption by play.legendary-arena.com and the registry
+ * viewer (cards.barefootbetters.com today; future
+ * registry.legendary-arena.com) is verified separately under WP-007a
+ * and WP-007b and is explicitly carved out of the www lock.
  *
- * Breaking changes require a major version bump (v2) AND coordinated
- * updates to consumers per WP-007a and WP-007b BEFORE the new version
- * publishes.
+ * Treat this file as a public API. Breaking changes require a major
+ * version bump (v2) AND coordinated updates to consumers per WP-007a
+ * and WP-007b BEFORE the new version publishes.
  *
  * Source:    docs/brand/strategy.md (Phase A directions)
  * Changelog: docs/brand/CHANGELOG.md (token version history)

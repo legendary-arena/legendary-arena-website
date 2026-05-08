@@ -1,13 +1,22 @@
-# Legendary Arena — Brand Strategy (v1 Draft)
+# Legendary Arena — Brand Strategy (v1 LOCKED for WWW)
 
-**Status:** v1 draft — Phase A of WP-002 input; pending formal review
+**Status:** v1 LOCKED for WWW — Phase A of WP-002, locked 2026-05-07 [^cross-site]
 **Owner:** Jeffery Jensen
 **Last updated:** 2026-05-07
 
 > **Authority:** This document captures Phase A of WP-002 (LA brand
-> definition). It is subordinate to `01-VISION.md`. When WP-002 formally
-> executes, this document is reviewed, refined as needed, and locked.
-> Until then, it is **draft input**, not committed brand identity.
+> definition). It is subordinate to `01-VISION.md`. WP-002 + WP-003
+> jointly verified the brand against rendered pages on 2026-05-07;
+> all Phase A directions reflected in committed brand identity.
+
+[^cross-site]: "Locked for WWW" means verified at
+`www.legendary-arena.com` (Hugo build, both modes, Lighthouse ≥ 90,
+WCAG AA, mobile viewport). Cross-site consumption by
+`play.legendary-arena.com` and `cards.barefootbetters.com` is verified
+separately under WP-007a / WP-007b and is explicitly carved out of
+this lock. A breaking change to tokens still requires the major
+version bump + coordinated consumer updates per `01-VISION.md` Global
+invariants.
 
 ---
 

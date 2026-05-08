@@ -1,6 +1,6 @@
 # Legendary Arena Website — Vision
 
-**Status:** v1 — decisions locked, brand identity pending (WP-002)
+**Status:** v1 — decisions locked, brand identity v1 LOCKED for WWW (WP-002 + WP-003 done 2026-05-07; cross-site consumption pending WP-007a/b)
 **Repo:** github.com/legendary-arena/legendary-arena-website
 **Production URL:** https://www.legendary-arena.com
 **Last updated:** 2026-05-07
@@ -249,6 +249,7 @@ and what doesn't.
 | 2026-05-07 | Added SEO baseline to v1 scope (WP-008) | RankMath-equivalent SEO is a baseline expectation for a public marketing site; making it explicit prevents it from being skipped or reinvented mid-project |
 | 2026-05-07 | Registry remains at `cards.barefootbetters.com` for v1; migration to `registry.legendary-arena.com` deferred to a future scoped effort | Reality recognized: the registry already exists at cards.* and migration would be a substantial coordinated change. Pinning v1 on a non-blocking domain change adds risk without proportionate benefit. |
 | 2026-05-07 | Karpathy LLM-wiki pattern evaluated for www; rejected. Engineering wiki spawned in engine project. Player wiki (if needed) → registry.* (per ER-016). | Marketing site scope must remain conversion-focused; wiki content would violate permanent non-goals on card/gameplay data. Reference material belongs with reference material (registry); engineering knowledge belongs with engineering code (engine project). |
+| 2026-05-07 | WP-002 + WP-003 locked — brand v1 verified at www.legendary-arena.com (Lighthouse 91/100/100/100, both modes, mobile 375×667, all `palette.md §8` contrast pairs WCAG AA). Brand artifacts move from "v1 DRAFT" to "v1 LOCKED for WWW." | All Phase B exit criteria from `strategy.md §11` met except cross-site consumption (deferred to WP-007a/b). Verification surfaced and resolved a silent dark-mode selector bug, a touch-target gap, a footer contrast violation, missing favicons, and the need for an additive `--la-color-cta` token to satisfy white-on-CTA AA in dark mode — all documented in `docs/brand/CHANGELOG.md`. |
 
 ## What's locked vs. TBD
 
