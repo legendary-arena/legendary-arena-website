@@ -56,6 +56,53 @@ Source: `docs/brand/strategy.md` Phase A directions.
 - **Body font choice** — currently first-of-fallback-stack
   ("Inter"); confirm or substitute after reading long-form content
 
+### Pre-lock fix (2026-05-07, during WP-003 verification)
+
+- **Dark-mode selector corrected.** The dark block was scoped to
+  `.dark { ... }`, but PaperMod toggles modes via
+  `<html data-theme="dark">`. The `.dark` class is never applied,
+  so LA dark tokens were silently inert — the visible mode change
+  came from PaperMod's own `--theme` variables, not LA tokens.
+  Selector changed to `html[data-theme="dark"]`. Documented in
+  `palette.md §2 Mode-switching contract`. No token *values* changed;
+  this is a routing fix only.
+
+- **`--la-color-cta` / `-bright` / `-muted` added (additive).** The
+  dark variant of `--la-color-red` (`#e5484d`) only achieves 3.91:1
+  with white text — below WCAG AA's 4.5:1 for small text — failing
+  `palette.md §8` row 5 ("white on red CTA — AA, both modes"). Adding
+  a mode-stable CTA token at `#c92a30` in both modes lifts that pair
+  to 5.44:1 in both modes. `--la-color-red` keeps its per-mode tuning
+  for non-button uses (attack semantic, gradients, brand-bright accents).
+  Per §11 token-stability rule, additive token changes are non-breaking
+  within a major version, so this remains v1 (no v2 bump).
+
+- **PaperMod color compatibility shim.** `assets/css/extended/custom.css`
+  redefines PaperMod's named CSS custom properties (`--theme`,
+  `--primary`, `--secondary`, `--code-bg`, etc.) as aliases for LA
+  brand tokens. PaperMod's own rules render in LA colors automatically
+  through this alias layer. Specificity matches PaperMod's
+  `:root[data-theme=dark]` (0,2,0) so the cascade resolves correctly
+  in both modes. Not a token *value* change — just routing.
+
+- **Touch target + footer contrast fixes.** WP-003 verification ran
+  Lighthouse and found two real issues: (a) header logo `<a>` was 17px
+  tall, below WCAG 2.5.8 24×24 minimum; fixed by adding
+  `padding-block: var(--la-space-2)` to `.logo a` in custom.css, raising
+  the touch area to ~33px without altering visible type. (b) footer
+  used `--la-color-text-muted` for 14px (small) text — but palette.md §8
+  ties text-muted to "AA large only"; corrected to `--la-color-text-secondary`
+  for 7.04:1 contrast. Footer background also pinned to
+  `--la-color-bg-primary` so the footer surface matches the rest of the
+  page. Verified Lighthouse a11y = 100, contrast pairs all pass AA.
+
+- **Favicon placeholders.** Added 1×1 transparent PNG placeholders for
+  `favicon.ico`, `favicon-16x16.png`, `favicon-32x32.png`,
+  `apple-touch-icon.png`, and a minimal `safari-pinned-tab.svg` to stop
+  console 404s emitted by PaperMod's hardcoded `<link rel="icon">` tags.
+  Real branded favicons follow real logo design (deferred per
+  `01-VISION.md` Decisions log).
+
 ### Consumers at v1
 
 - `www.legendary-arena.com` — direct (loads from `static/`)

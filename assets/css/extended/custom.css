@@ -41,6 +41,44 @@
    §1. GLOBAL BASE
    ========================================================= */
 
+/* PaperMod compatibility shim — redefine PaperMod's named color
+   custom properties as aliases to LA brand tokens. PaperMod's stylesheet
+   references --theme / --primary / --secondary / --code-bg / etc. by
+   name; routing them to LA tokens makes PaperMod's own rules render
+   in LA colors automatically. Each token's per-mode value still flows
+   from `static/brand-tokens.css`, so the alias is mode-aware via the
+   underlying token. Two blocks are required because PaperMod's own
+   `:root[data-theme="dark"]` override has specificity (0,1,1) and would
+   otherwise win for dark mode. */
+
+:root {
+  --theme: var(--la-color-bg-primary);
+  --entry: var(--la-color-surface);
+  --primary: var(--la-color-text-primary);
+  --secondary: var(--la-color-text-secondary);
+  --tertiary: var(--la-color-bg-tertiary);
+  --content: var(--la-color-text-primary);
+  --code-bg: var(--la-color-bg-secondary);
+  --code-block-bg: var(--la-color-bg-tertiary);
+  --border: var(--la-color-border-subtle);
+}
+
+:root[data-theme="dark"] {
+  /* why: PaperMod's own override is `:root[data-theme=dark]` with
+     specificity (0,2,0) — pseudo-class + attribute. Matching it
+     exactly (instead of `html[data-theme="dark"]` at 0,1,1) keeps
+     the cascade winnable by later position. */
+  --theme: var(--la-color-bg-primary);
+  --entry: var(--la-color-surface);
+  --primary: var(--la-color-text-primary);
+  --secondary: var(--la-color-text-secondary);
+  --tertiary: var(--la-color-bg-tertiary);
+  --content: var(--la-color-text-primary);
+  --code-bg: var(--la-color-bg-secondary);
+  --code-block-bg: var(--la-color-bg-tertiary);
+  --border: var(--la-color-border-subtle);
+}
+
 html {
   font-family: var(--la-font-body);
   color: var(--la-color-text-primary);
@@ -54,6 +92,22 @@ html {
 body {
   margin: 0;
   padding: 0;
+}
+
+/* PaperMod renders list / home pages on body.list with
+   `.list { background: var(--code-bg) }` (light) and
+   `[data-theme=dark] .list { background: var(--theme) }` (dark).
+   That gives list pages a slightly different tone from posts.
+   For LA's marketing site we want uniform page surface across all
+   page types, so anchor body.list to --la-color-bg-primary in both
+   modes. Specificity matches PaperMod's rules; later position wins. */
+
+body.list {
+  background-color: var(--la-color-bg-primary);
+}
+
+:root[data-theme="dark"] body.list {
+  background-color: var(--la-color-bg-primary);
 }
 
 
@@ -185,6 +239,7 @@ a:hover {
 }
 
 .logo a {
+  display: inline-block;
   font-family: var(--la-font-display);
   font-size: var(--la-font-size-h3);
   /* why: H3 (28px) reads better as a wordmark than H4 (22px); H1/H2
@@ -194,6 +249,17 @@ a:hover {
   letter-spacing: var(--la-letter-spacing-display);
   text-transform: uppercase;
   color: var(--la-color-text-primary);
+  padding-block: var(--la-space-2);
+  /* why: WCAG 2.5.8 / Lighthouse target-size — without block padding
+     the wordmark anchor renders ~17px tall and fails the 24×24
+     minimum touch target. --la-space-2 (8px top + 8px bottom) lifts
+     the hit area to ~33px without altering visible type metrics. */
+}
+
+.logo-switches {
+  margin-inline-start: var(--la-space-4);
+  /* why: WCAG 2.5.8 spacing — keeps theme-toggle ≥24px clear of the
+     wordmark anchor so adjacent touch targets don't collide. */
 }
 
 /* §4.3 Navigation
@@ -261,10 +327,29 @@ a:hover {
   margin-top: var(--la-space-8);
   padding-top: var(--la-space-6);
   padding-bottom: var(--la-space-6);
+  background-color: var(--la-color-bg-primary);
+  /* why: PaperMod's default footer renders on a different gray than
+     the page primary; pinning background to LA's --la-color-bg-primary
+     keeps the surface consistent with the rest of the page. */
   border-top: 1px solid var(--la-color-border-subtle);
-  color: var(--la-color-text-muted);
+  color: var(--la-color-text-secondary);
+  /* why: footer text is 14px (small); palette.md §8 ties --la-color-text-muted
+     to "AA large text only," so secondary is the contract-correct token
+     for small footer copy. text-muted on bg-primary is 3.71:1 — below AA. */
   font-size: var(--la-font-size-small);
   line-height: var(--la-line-height-small);
+}
+
+.footer a {
+  color: var(--la-color-text-secondary);
+  text-decoration: underline;
+  /* why: footer links inherit secondary color for AA contrast on small
+     text; underline distinguishes them from surrounding copy without
+     relying on hue alone (WCAG 1.4.1 — color is not the only signal). */
+}
+
+.footer a:hover {
+  color: var(--la-color-blue);
 }
 
 /* §4.7 Code blocks
@@ -344,11 +429,13 @@ pre code {
 .btn {
   display: inline-block;
   padding: var(--la-space-2) var(--la-space-4);
-  background-color: var(--la-color-red);
+  background-color: var(--la-color-cta);
   color: #ffffff;
-  /* why: white text on CTA red — contrast verified ≥ AA in both
-     modes; no token for "on-CTA" text yet. Candidate for future
-     addition if we add more colored backgrounds with text. */
+  /* why: white text on --la-color-cta gives 5.44:1 (light + dark);
+     CTA token is pinned across modes specifically to satisfy
+     palette.md §8 "white on red CTA — AA, both modes." Routing
+     through --la-color-cta (not --la-color-red) preserves the
+     dark-mode brand-bright red for non-button accents. */
   border: 0;
   border-radius: var(--la-radius-md);
   font-family: var(--la-font-body);
@@ -362,12 +449,12 @@ pre code {
 
 .button:hover,
 .btn:hover {
-  background-color: var(--la-color-red-bright);
+  background-color: var(--la-color-cta-bright);
 }
 
 .button:active,
 .btn:active {
-  background-color: var(--la-color-red-muted);
+  background-color: var(--la-color-cta-muted);
 }
 
 /* §5.3 Cards */

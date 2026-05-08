@@ -38,6 +38,24 @@ The color system is built on:
 - **Token-first discipline** — no ad-hoc values
 - **Light + dark modes** — every role defined for both, not just one
 
+### Mode-switching contract
+
+The active mode is selected by the value of the `data-theme` attribute
+on the `<html>` element:
+
+| `<html data-theme="...">` | Tokens active |
+|---|---|
+| `light` (default) | Light-mode block (defined under `:root`) |
+| `dark` | Dark-mode block (defined under `html[data-theme="dark"]`) |
+
+PaperMod's head/footer scripts resolve the user's choice (toggle button,
+`localStorage`, or `prefers-color-scheme`) into one of these two values
+before the page becomes interactive. Consumer sites (`play.*`,
+`registry.*`) MUST set `data-theme` on `<html>` the same way to
+inherit the correct tokens. A site using a different convention (e.g.,
+a `.dark` class on `<body>`) will see the light tokens applied in
+both modes — silent regression.
+
 ---
 
 ## 3. Token reference (light + dark mode)
@@ -102,10 +120,40 @@ maintain contrast on warm off-white backgrounds.
 | `--la-color-red-bright` | `#e5484d` | `#ff5c62` |
 | `--la-color-red-muted` | `#8a1a1f` | `#a72d32` |
 
-**Roles:** primary CTAs ("Play now") · attack semantic · alerts of
-moderate urgency.
+**Roles:** attack semantic · brand-red accents · alerts of moderate
+urgency · gradient endpoints (`--la-gradient-hero`).
+
+**Not for CTA button backgrounds** — use `--la-color-cta` (§4.2.1)
+to satisfy the contrast contract. The dark variant `#e5484d` only
+gives 3.91:1 with white text (below AA 4.5:1), so a separate
+mode-stable token is required for button backgrounds.
 
 **Distinct from error red** — see §5.3 constraint.
+
+### 4.2.1 CTA (primary action backgrounds)
+
+| Token | Light mode | Dark mode |
+|---|---|---|
+| `--la-color-cta` | `#c92a30` | `#c92a30` |
+| `--la-color-cta-bright` | `#e5484d` | `#e5484d` |
+| `--la-color-cta-muted` | `#8a1a1f` | `#8a1a1f` |
+
+**Why mode-stable:** primary CTAs ("Play now") are the conversion
+surface — the contrast contract is non-negotiable. White text on
+`#c92a30` is 5.44:1 in both modes; white text on the dark `#e5484d`
+is 3.91:1 (fails AA). Pinning CTA-button background across modes
+keeps the contract intact without forcing brand red to a single value
+everywhere.
+
+**Roles:** primary CTA buttons (`.button`, `.btn`) · any element where
+"white text on hero red" is required and AA contrast is mandatory.
+
+**Hover** — use `--la-color-cta-bright` (`#e5484d`). The hover state
+does not require AA contrast on white text because the user is no
+longer reading the resting state; the brand-bright pop is intentional
+for interactive feedback.
+
+**Active** — use `--la-color-cta-muted` (`#8a1a1f`).
 
 ### 4.3 Blue (system / interaction)
 
@@ -224,7 +272,7 @@ These pairs MUST pass AA at v1 lock:
 | `--la-color-text-secondary` | `--la-color-bg-primary` | Both | AA |
 | `--la-color-text-muted` | `--la-color-bg-primary` | Both | AA (large text only) |
 | `--la-color-blue` (link) | `--la-color-bg-primary` | Both | AA |
-| White text | `--la-color-red` (button bg) | Both | AA on button text |
+| White text | `--la-color-cta` (button bg) | Both | AA on button text |
 | White text | `--la-color-error` (alert bg) | Both | AA on alert text |
 
 Verification happens during WP-003 (theme application) and is
@@ -290,3 +338,5 @@ tracks revisions to *this document* during the draft phase.
 | Date | Change |
 |---|---|
 | 2026-05-07 | Initial palette definition. Light + dark mode variants for all colors. Distinct error red (`#991b1b` light, `#dc2626` dark) — separated from CTA red per `strategy.md §4` constraint. |
+| 2026-05-07 | WP-003 verification: documented mode-switching contract under §2 — dark mode activates via `html[data-theme="dark"]` (PaperMod's convention), not `.dark` class. Fix landed in `brand-tokens.css` selector. |
+| 2026-05-07 | WP-003 verification: added `--la-color-cta` / `-bright` / `-muted` (§4.2.1). Mode-stable CTA token at `#c92a30` in both modes. Required because dark `--la-color-red` (`#e5484d`) only reaches 3.91:1 with white text — fails palette.md §8 row 5 (AA on button text). `--la-color-red` retains its per-mode tuning for non-button uses (gradients, attack semantic, accents). Additive change per §11 token-stability rule. |

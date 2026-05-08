@@ -113,7 +113,10 @@
 
 /* =========================================================
    LIGHT MODE (default)
-   PaperMod adds .dark class for dark mode; absence = light.
+   PaperMod resolves the active theme via <html data-theme="...">,
+   set by its head/footer scripts to "light" or "dark" (never "auto"
+   after JS runs). We define light as the :root default, then
+   override under html[data-theme="dark"] below.
    ========================================================= */
 
 :root {
@@ -145,6 +148,17 @@
   --la-color-red: #c92a30;
   --la-color-red-bright: #e5484d;
   --la-color-red-muted: #8a1a1f;
+
+  /* CTA button background — pinned across modes to satisfy palette.md
+     §8 contrast pair "white on red (button bg) — AA, both modes."
+     Dark `--la-color-red` (#e5484d) is too light for 4.5:1 on white.
+     `--la-color-cta` resolves to the light-mode brand red in both
+     modes, which gives 5.44:1 with white in light and ~5.44:1 in dark.
+     Non-button red usages (gradients, attack semantic, accents) still
+     route through `--la-color-red` and keep their per-mode tuning. */
+  --la-color-cta: #c92a30;
+  --la-color-cta-bright: #e5484d;
+  --la-color-cta-muted: #8a1a1f;
 
   --la-color-blue: #2563eb;
   --la-color-blue-bright: #3b82f6;
@@ -182,10 +196,15 @@
 
 /* =========================================================
    DARK MODE
-   Activated via .dark on <html> (PaperMod convention).
+   PaperMod sets <html data-theme="dark"> when the user picks dark
+   (via the sun/moon toggle) or when prefers-color-scheme is dark and
+   no explicit preference is stored. The selector below MUST match
+   exactly that — using `.dark` (a different theme convention) would
+   leave LA dark tokens unapplied while PaperMod's own --theme vars
+   masked the regression. See WP-003 verification 2026-05-07.
    ========================================================= */
 
-.dark {
+html[data-theme="dark"] {
 
   /* --- BACKGROUNDS --- */
   --la-color-bg-primary: #0b0f19;     /* deep navy-black, cinematic base */
@@ -214,6 +233,14 @@
   --la-color-red: #e5484d;
   --la-color-red-bright: #ff5c62;
   --la-color-red-muted: #a72d32;
+
+  /* CTA button background — same value across modes (see :root block).
+     The dark mode brand red (#e5484d) only gives 3.91:1 with white text;
+     pinning CTA to the light-mode value gives 5.44:1 in both modes
+     and satisfies palette.md §8 contrast contract. */
+  --la-color-cta: #c92a30;
+  --la-color-cta-bright: #e5484d;
+  --la-color-cta-muted: #8a1a1f;
 
   --la-color-blue: #3b82f6;
   --la-color-blue-bright: #60a5fa;
