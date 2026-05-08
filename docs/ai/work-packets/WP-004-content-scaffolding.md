@@ -108,9 +108,11 @@ Three options, in order of recommendation:
 - **(C) Stick with `homeInfoParams`** — only if A and B both prove
   impractical; you'd lose the styled CTA button.
 
-Decide before authoring; document the choice in
-`docs/04-CONTENT-CONVENTIONS.md` so future contributors know where
-home-page markup lives.
+**Gate.** Step 2 may not begin until: (a) the approach (A, B, or C) is
+chosen, (b) the supporting file(s) for that approach exist (even as
+empty scaffolds), and (c) the choice is recorded in
+`docs/04-CONTENT-CONVENTIONS.md`. Authoring copy before this gate is a
+WP-004 failure — it produces orphaned work when the approach changes.
 
 ### Step 2 — Author home page content
 
@@ -119,6 +121,12 @@ Apply `strategy.md §2` voice + §5 layout patterns. Three-beat structure
 
 1. **What is LA?** — one declarative line above the fold. Lead with
    fantasy ("The arena awaits") not mechanics ("Build a deck of...").
+   Pattern shape lives in `strategy.md §2.5` (Copy patterns → Hero).
+   Concrete fail cases (each violates `strategy.md §10`):
+   - "Build a deck and fight villains." — mechanics-first
+   - "A deck-building game where you..." — definition framing
+   - "An epic, exciting card-battle adventure." — generic adjectives
+   - "Try Legendary Arena today." — weak verb (`try`) + CTA leakage
 2. **Why?** — value prop. Themes from `strategy.md §7`: skill-first,
    no grind, no pay-to-win, deterministic system. Use as supporting
    points, not the lead claim.
@@ -149,6 +157,11 @@ documents the internal-vs-public distinction.
 "Hello World." Could be: project introduction, what's coming, why now,
 what to expect. Voice consistent with home + about.
 
+Not a changelog. The post is a narrative that frames the project for a
+new reader; bullet-listed release notes ("Added X, fixed Y, updated Z")
+are out of place here. If you find yourself listing what shipped, step
+back and write the why instead.
+
 Front-matter must include `title`, `date`, `description` (≤160 chars,
 prep for WP-008 SEO), `draft: false`.
 
@@ -160,6 +173,12 @@ Pre-populate front-matter so future posts don't drift. Verify with:
 ```powershell
 hugo new posts/test-archetype.md
 ```
+
+Open the generated file and confirm all four required fields are
+present and well-formed: `title` (non-empty placeholder), `date` (valid
+ISO timestamp), `description` (string, ≤160 chars, may be empty for
+the author to fill), `draft: false`. Any missing or malformed field
+means the archetype is broken — fix it before deleting the test file.
 
 Then delete the test file. The archetype is part of the DoD.
 
@@ -185,7 +204,11 @@ The verification approach proven in WP-003 is reusable:
 1. Start Hugo via `.claude/launch.json` (`hugo-server` config) or
    `hugo server --port 1313 --bind 127.0.0.1`.
 2. **Visual check** — open both modes, both viewports (1280×800 and
-   375×667). Confirm CTA visible above the fold in both.
+   375×667). CTA test is binary: in each of the four combinations
+   (light/dark × desktop/mobile), without scrolling, at least one
+   `.button` element with the canonical CTA label must be **fully**
+   visible (not partially clipped) within the first viewport height.
+   Any required scroll = fail.
 3. **First-time-reader test** — fresh tab after a break (or a friend);
    can they answer "what is this?" within ~5 seconds?
 4. **Lighthouse** — re-run on the home page and at least one blog
@@ -206,8 +229,12 @@ The verification approach proven in WP-003 is reusable:
    from the WP-003 session as a starting point if you re-create it
    (the file is local, not committed).
 
-Capture the results. Anything below 90 in any Lighthouse category is
-a failure to investigate before locking.
+Capture the four scores from each Lighthouse run (home + at least one
+blog post). They go into the WP-004 lock entry in Step 8 — same
+convention as the WP-003 numbers in the Background section of this
+file. Anything below 90 in any category is a failure to investigate
+before locking. The raw `lighthouse-home.json` / `lighthouse-post.json`
+artifacts are local-only; don't commit them (consistent with WP-003).
 
 ### Step 8 — Lock WP-004
 
@@ -217,6 +244,9 @@ When all DoD + exit criteria pass:
    - WP-004: ⏸️ → ✅ Done
    - Tick all DoD + exit criteria boxes
    - Record final commit hash(es) under `**Commits:**`
+   - Record the four Lighthouse scores (Performance / Accessibility /
+     Best Practices / SEO) for home + blog post, matching the WP-003
+     format in this file's Background section
 2. Add a Decisions log entry to `docs/01-VISION.md` recording the
    home-page-layout decision from Step 1 (especially if A or B —
    that's a structural choice future contributors should know about).
