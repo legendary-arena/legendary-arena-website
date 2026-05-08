@@ -23,3 +23,9 @@ Thumbs.db
 
 # Build artifacts from theme tooling
 .cache/
+
+# Logo-figma scratch artifacts
+# why: project uses pnpm (per pnpm-workspace.yaml); npm-generated lockfiles are stale.
+# why: zips are Figma Make export archives — would pollute history on re-export.
+docs/brand/logo-figma/package-lock.json
+docs/brand/logo-figma/*.zip

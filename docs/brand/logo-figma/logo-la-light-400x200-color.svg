@@ -3,12 +3,12 @@
     <style>@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;display=swap');</style>
   </defs>
   <g id="arena-mark">
-    <path d="M 90 70 L 60 50 L 90 30 Z" fill="#1e40af"/>
-    <path d="M 90 70 L 90 30 L 120 50 Z" fill="#15803d"/>
-    <path d="M 90 70 L 120 50 L 120 90 Z" fill="#1e40af"/>
-    <path d="M 90 70 L 120 90 L 90 110 Z" fill="#15803d"/>
-    <path d="M 90 70 L 90 110 L 60 90 Z" fill="#1e40af"/>
-    <path d="M 90 70 L 60 90 L 60 50 Z" fill="#15803d"/>
+    <path d="M 90 70 L 60 50 L 90 30 Z" fill="#1e3a8a"/>
+    <path d="M 90 70 L 90 30 L 120 50 Z" fill="#7a1d1f"/>
+    <path d="M 90 70 L 120 50 L 120 90 Z" fill="#1e3a8a"/>
+    <path d="M 90 70 L 120 90 L 90 110 Z" fill="#7a1d1f"/>
+    <path d="M 90 70 L 90 110 L 60 90 Z" fill="#1e3a8a"/>
+    <path d="M 90 70 L 60 90 L 60 50 Z" fill="#7a1d1f"/>
     <path d="M 60 50 L 90 30 L 120 50 L 120 90 L 90 110 L 60 90 Z" stroke="#b8901f" stroke-width="3" fill="none"/>
     <path d="M 60 50 L 90 70" stroke="#b8901f" stroke-width="2"/>
     <path d="M 90 30 L 90 70" stroke="#b8901f" stroke-width="2"/>

@@ -2,7 +2,7 @@
 
 **Repo:** github.com/legendary-arena/legendary-arena-website
 **Owner:** Jeffery Jensen
-**Last updated:** 2026-05-07
+**Last updated:** 2026-05-08
 
 > **Authority:** This document tracks Work Packets (WPs) for the marketing
 > site. It is subordinate to `01-VISION.md`. If a WP description here
@@ -54,13 +54,15 @@ not-done regardless of its DoD.
 ## Execution flow
 
 ```
-WP-001 → WP-002 → WP-003 → WP-004 → WP-005 → WP-006 ┬→ WP-007a
-                                                    ├→ WP-007b
-                                                    └→ WP-008   (all three parallel)
+WP-001 → WP-002 → WP-003 → WP-004 → WP-005 → WP-006 ┬→ WP-007a ─┐
+                                                    ├→ WP-007b ─┴→ WP-009
+                                                    └→ WP-008
 ```
 
 WP-007a, WP-007b, and WP-008 can run in parallel after WP-006 completes;
-they have no shared write paths.
+they have no shared write paths. WP-009 (class-color usage audit) is
+single-track and runs after BOTH WP-007a and WP-007b complete — it audits
+their integrations. WP-008 is parallel to WP-009 but does not feed it.
 
 ---
 
@@ -77,8 +79,9 @@ they have no shared write paths.
 | WP-007a | play.legendary-arena.com deploy | ⏸️ Pending | WP-006 | 1 day |
 | WP-007b | Registry viewer brand integration (cards.barefootbetters.com) | ⏸️ Pending | WP-006 | ~half-day–1 day |
 | WP-008 | SEO baseline (Hugo equivalent of RankMath features) | ⏸️ Pending | WP-006 | ~1 day |
+| WP-009 | Class-color usage audit — cross-site *(spec draft pending review — see [`docs/ai/work-packets/WP-009-class-color-usage-audit.md`](ai/work-packets/WP-009-class-color-usage-audit.md))* | ⏸️ Pending | WP-007a, WP-007b | ~0.5–1 day |
 
-**Total realistic effort:** ~6–8 days of focused work.
+**Total realistic effort:** ~6.5–9 days of focused work.
 
 ---
 
@@ -336,6 +339,46 @@ Lock receipts:
   consumption pending WP-007a/b`
 - `docs/01-VISION.md` Decisions log: 2026-05-07 entry recording the
   joint WP-002 + WP-003 lock with verification summary
+
+### Post-lock iteration (2026-05-08, under `palette.md §9.1` Early Lock Revision Window)
+
+The v1 lock above remains in effect; this iteration is governed by
+the §9.1 Early Lock Revision Window exception clause added in this
+same revision pass (codified post-lock redefinitions within 24–72h
+without v2 bump, provided no consumer has integrated and all
+artifacts update atomically). Window is OPEN through
+**2026-05-10 23:59 local**, OR until any downstream consumer
+integrates the v1 tokens, whichever comes first. After window
+close, future redefinitions require formal v1 → v2 bump.
+
+Changes landed under this window (commit `80e6df0`):
+
+- **Brand red:** cherry `#c92a30` / `#e5484d` → deep maroon
+  `#7a1d1f` / `#a83034`. CTA follows the maroon (~10.4:1
+  white-text contrast, AAA — over-satisfies the §8 contract).
+- **Brand blue:** royal `#2563eb` / `#3b82f6` → deep navy
+  `#1e3a8a` / `#3753b8`. Whole bright/muted scale shifted darker.
+- **Class-color subsystem (`palette.md §4.4`):** 10 mode-stable
+  tokens for the 5 hero classes (strength, covert, instinct,
+  ranged, tech) with bright + muted pairs. Sourced from production
+  class icons; two muted variants (instinct, ranged) are derived
+  since their icons lack shadow companions.
+- **Governance refinements:** §9.1 (the exception itself), §5.3
+  distinguishing rule (CTA red vs error red), §4.3 role discipline
+  (`--la-color-blue-bright` for interactive affordance), §7
+  gradient tonal note, §10 failure-mode bullets for class-as-brand
+  and decorative-blue-as-affordance misuse.
+- **Logo work (companion artifacts, not part of WP-002 scope):**
+  `docs/brand/logo-brief.md`, `docs/brand/logo-ai-workflow.md`,
+  `docs/brand/logo-explorations/`, `docs/brand/logo-figma/*.svg`.
+  Wordmark placeholder remains the v1 logo on `www.*`.
+
+End-to-end verification: Hugo serves all updated tokens; runtime
+`getComputedStyle()` resolves the new values in both `data-theme="light"`
+and `data-theme="dark"`; existing tokens unaffected.
+
+See `01-VISION.md` Decisions log entries dated 2026-05-08 for
+detailed rationale on each change.
 
 ---
 
@@ -1058,8 +1101,20 @@ in a conventions doc.
 
 Future work without WPs yet:
 
-- **Logo design** — replace wordmark placeholder. Possibly contractor
-  engagement.
+- **Logo design** — replace wordmark placeholder. Design contract
+  (`docs/brand/logo-brief.md`) and AI-workflow notes
+  (`docs/brand/logo-ai-workflow.md`) committed 2026-05-08; two AI
+  exploration rounds archived under `docs/brand/logo-explorations/`
+  (4 monogram directions + 4 abstract directions, each rendered at
+  16/32/64/128/256/512px). AI iteration ceiling reached — next step
+  is a Figma session or contractor pass starting from the
+  **"D done with B's discipline"** merge thesis (`logo-ai-workflow.md`
+  §7). The brief defines acceptance criteria (`§9`); the workflow
+  doc names the failure modes to filter against (stratified read,
+  pivot blob, wedge collapse, letter mashup). No WP yet — this is
+  a creative/design effort, not an engineering one. Wordmark
+  placeholder stays in production until a candidate clears
+  `logo-brief.md §9`.
 - **api.legendary-arena.com** — game backend on Render. Out of scope for
   this site.
 - **Engine repo transfer** — move
