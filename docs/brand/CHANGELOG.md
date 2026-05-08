@@ -25,15 +25,22 @@ Initial token set covering:
   mapping: attack/recruit/victory. Light + dark mode variants for
   all colors.
 - **Typography:** font families (display/body/mono), full type scale
-  (H1–H6 + body + small) with sizes, line heights, weights, and
-  letter-spacing tokens. Per-heading line-height and weight tokens
-  per WP-002 DoD.
+  with **hero (3.5rem) + H1–H6 + body + small** sizes, per-role line
+  heights and weights, generic line-height/weight tokens for
+  specialized layouts, and letter-spacing tokens (tight / normal /
+  wide / display). Per-heading line-height and weight tokens per
+  WP-002 DoD. Hero tier added above H1 for above-the-fold display
+  text per `typography.md §4.1`.
 - **Spacing:** 8-pt scale (4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 96).
-- **Border radius:** sm / md / lg / xl / pill.
+  Documented in `spacing.md §3`.
+- **Border radius:** sm / md / lg / xl / pill. Documented in
+  `spacing.md §4`.
 - **Z-index layers:** base / dropdown / sticky / overlay / modal /
-  toast.
-- **Transitions:** fast / base / slow.
+  toast. Documented in `spacing.md §5`.
+- **Transitions:** fast (120ms) / base (180ms) / slow (280ms).
+  Documented in `spacing.md §6`.
 - **Effects:** brand gradients, soft + strong shadows (per-mode).
+  Documented in `palette.md §7`.
 
 Source: `docs/brand/strategy.md` Phase A directions.
 
