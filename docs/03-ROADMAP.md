@@ -687,10 +687,10 @@ fix; this score is not a WP-004 regression.
   above the fold; B adds indirection without ergonomic gain. Recorded
   in `docs/01-VISION.md` Decisions log 2026-05-08 and in
   `docs/04-CONTENT-CONVENTIONS.md "Home page markup"`.
-- The pre-existing `[params.homeInfoParams]` block in `hugo.toml` is no
-  longer rendered by the override but was left in place to avoid a
-  config change unrelated to content authoring. Cleaning it up is a
-  candidate for a future small-touch commit, not a WP-004 deliverable.
+- The pre-existing `[params.homeInfoParams]` block in `hugo.toml` (the
+  WP-001 placeholder mechanism) was removed in the WP-004 tidy-up
+  pass before WP-005 began; a comment in `hugo.toml` points future
+  readers to `docs/04-CONTENT-CONVENTIONS.md "Home page markup"`.
 
 ---
 

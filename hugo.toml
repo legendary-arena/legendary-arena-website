@@ -21,10 +21,12 @@ enableRobotsTXT = true
   ShowWordCount = false
   ShowToc = true
 
-  # Home page hero (minimal placeholder for v1)
-  [params.homeInfoParams]
-    Title = "Legendary Arena"
-    Content = "A digital adaptation of the Legendary deck-building card game. Coming soon."
+  # Home page is rendered by layouts/index.html (WP-004 approach A).
+  # PaperMod's [params.homeInfoParams] block was the WP-001 placeholder
+  # mechanism but cannot host a styled .button CTA above the fold,
+  # so it was removed when the override landed. See
+  # docs/04-CONTENT-CONVENTIONS.md "Home page markup" for the full
+  # rationale.
 
 [markup]
   [markup.highlight]

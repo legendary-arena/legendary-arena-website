@@ -38,10 +38,10 @@ Authors edit `content/_index.md` for copy changes. The layout file
 is only touched when the page's structure (not its words) needs to
 change.
 
-The legacy `[params.homeInfoParams]` block in `hugo.toml` is no
-longer rendered by the override and may eventually be removed; it
-was left in place during WP-004 to avoid a config change unrelated
-to content authoring.
+The legacy `[params.homeInfoParams]` block in `hugo.toml` (the
+WP-001 placeholder mechanism) was removed when this override
+landed; a comment in `hugo.toml` points future readers back to
+this section.
 
 ---
 
