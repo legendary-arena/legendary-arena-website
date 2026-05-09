@@ -1,0 +1,50 @@
+{{- /*
+  Home-page override (WP-004 Step 1 — approach A).
+
+  why: PaperMod's default home renders via list.html + the home_info
+  partial driven by hugo.toml [params.homeInfoParams]. That partial
+  doesn't ergonomically support a styled CTA button above the fold,
+  which the brand contract requires (strategy.md §2 CTA contract,
+  custom.css §5.1 .hero / §5.2 .button utility classes).
+
+  Hugo's lookup order picks layouts/index.html ahead of theme/list.html
+  for the home page kind, so this file is the home page renderer.
+  baseof.html still applies body class="list" for .Kind == "home"
+  (custom.css §1 anchors body.list to --la-color-bg-primary in both
+  modes), so this override changes the main block only.
+
+  See docs/04-CONTENT-CONVENTIONS.md "Home page markup" for the
+  contract this file implements.
+*/ -}}
+
+{{- define "main" }}
+
+<section class="hero">
+  {{- /* Hero copy lives in content/_index.md so authors can edit it
+         without touching layout. The page's Title (front-matter) is
+         the hero h1; the page's Content is the supporting prose. */ -}}
+  <h1>{{ .Title }}</h1>
+  {{- with .Content }}
+  <div class="hero-prose">
+    {{ . }}
+  </div>
+  {{- end }}
+  <p>
+    <a class="button" href="{{ .Params.ctaHref | default "https://play.legendary-arena.com/" }}">
+      {{ .Params.ctaLabel | default "Play now" }}
+    </a>
+  </p>
+</section>
+
+{{- with .Params.sections }}
+<div class="section">
+  {{- range . }}
+  <div class="card">
+    <h2>{{ .heading }}</h2>
+    <p>{{ .body | markdownify }}</p>
+  </div>
+  {{- end }}
+</div>
+{{- end }}
+
+{{- end }}
