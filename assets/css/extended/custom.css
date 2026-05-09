@@ -560,3 +560,139 @@ pre code {
      users who prefer reduced motion. The !important is required to
      override per-element transition rules. */
 }
+
+
+/* =========================================================
+   §7. SEARCH UI (Pagefind default UI — WP-005)
+   Routes Pagefind's default UI through brand tokens. The default
+   UI ships with its own .pagefind-ui__* class hierarchy; these
+   selectors target those classes and override colors, borders,
+   focus rings, and result-link styles via var(--la-*) only.
+
+   Layout: #la-search is the third flex child of nav.header-nav
+   (logo, menu, then search). On desktop the input sits inline at
+   the right edge; on mobile it wraps below the menu items.
+
+   Brand-token sources:
+   - palette.md §3, §4 (colors)
+   - typography.md (sizes, weights via tokens already in §1–§5)
+   - spacing.md (radii via --la-radius-*)
+   ========================================================= */
+
+/* §7.1 Mount + responsive layout */
+
+.header-search {
+  /* why: minimum width keeps the input usable on desktop without
+     shoving the menu off-screen; full-width on narrow viewports
+     keeps the input legible when wrapped under the menu. */
+  flex: 1 1 240px;
+  min-width: 240px;
+  max-width: 360px;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .header-search {
+    /* why: full-width on mobile so the wrapped input gets the entire
+       row beneath the menu items rather than competing for a sliver. */
+    flex-basis: 100%;
+    max-width: 100%;
+    margin-top: var(--la-space-2);
+    margin-bottom: var(--la-space-2);
+  }
+}
+
+/* §7.2 Pagefind UI containers */
+
+#la-search,
+.pagefind-ui {
+  width: 100%;
+}
+
+.pagefind-ui {
+  --pagefind-ui-scale: 0.8;
+  --pagefind-ui-primary: var(--la-color-blue-bright);
+  --pagefind-ui-text: var(--la-color-text-primary);
+  --pagefind-ui-background: var(--la-color-bg-primary);
+  --pagefind-ui-border: var(--la-color-border-subtle);
+  --pagefind-ui-tag: var(--la-color-bg-secondary);
+  --pagefind-ui-border-width: 1px;
+  --pagefind-ui-border-radius: var(--la-radius-md);
+  --pagefind-ui-image-border-radius: var(--la-radius-md);
+  --pagefind-ui-image-box-ratio: 3 / 2;
+  --pagefind-ui-font: var(--la-font-body);
+}
+
+/* §7.3 Search input */
+
+.pagefind-ui .pagefind-ui__search-input {
+  font-family: var(--la-font-body);
+  font-size: var(--la-font-size-body);
+  line-height: var(--la-line-height-body);
+  background-color: var(--la-color-surface);
+  color: var(--la-color-text-primary);
+  border: 1px solid var(--la-color-border-subtle);
+  border-radius: var(--la-radius-md);
+  transition: border-color var(--la-transition-fast);
+}
+
+.pagefind-ui .pagefind-ui__search-input::placeholder {
+  color: var(--la-color-text-muted);
+}
+
+.pagefind-ui .pagefind-ui__search-input:focus,
+.pagefind-ui .pagefind-ui__search-input:focus-visible {
+  outline: 2px solid var(--la-color-blue-bright);
+  outline-offset: 2px;
+  border-color: var(--la-color-blue-bright);
+}
+
+.pagefind-ui .pagefind-ui__search-clear {
+  color: var(--la-color-text-secondary);
+}
+
+.pagefind-ui .pagefind-ui__search-clear:hover {
+  color: var(--la-color-text-primary);
+}
+
+/* §7.4 Results panel */
+
+.pagefind-ui .pagefind-ui__drawer,
+.pagefind-ui .pagefind-ui__results-area {
+  background-color: var(--la-color-bg-primary);
+}
+
+.pagefind-ui .pagefind-ui__message,
+.pagefind-ui .pagefind-ui__result-title,
+.pagefind-ui .pagefind-ui__result-excerpt {
+  color: var(--la-color-text-primary);
+  font-family: var(--la-font-body);
+}
+
+.pagefind-ui .pagefind-ui__result {
+  border-top: 1px solid var(--la-color-border-subtle);
+}
+
+.pagefind-ui .pagefind-ui__result-link {
+  color: var(--la-color-blue-bright);
+  text-decoration: none;
+  font-weight: var(--la-font-weight-medium);
+  transition: color var(--la-transition-fast);
+}
+
+.pagefind-ui .pagefind-ui__result-link:hover {
+  color: var(--la-color-blue);
+  text-decoration: underline;
+}
+
+.pagefind-ui mark {
+  /* why: Pagefind highlights query matches in result excerpts via
+     <mark>; default browser yellow clashes with brand. Routing to
+     gold-bright keeps highlights legible in both modes against
+     bg-primary while staying on-brand. */
+  background-color: var(--la-color-gold-bright);
+  color: var(--la-color-text-primary);
+  padding: 0 0.2em;
+  border-radius: var(--la-radius-sm);
+}

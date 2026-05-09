@@ -8,6 +8,7 @@
        - static/brand-tokens.css (the API contract for visual tokens)
        - docs/brand/strategy.md §4 (font family directions)
        - docs/brand/typography.md §3 (locked font choices)
+       - docs/04-CONTENT-CONVENTIONS.md "Search" + "Keyboard shortcuts"
 */ -}}
 
 {{- /* §1. Brand tokens
@@ -27,3 +28,76 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap">
+
+{{- /* §3. Pagefind search UI (WP-005)
+       Loads Pagefind's default UI assets and mounts them on the
+       canonical #la-search slot rendered by header.html.
+
+       - The script is `defer` so it does not block HTML parsing or
+         the critical render path (WP-005 Failure conditions explicitly
+         disallow render-blocking Pagefind assets).
+       - PagefindUI is constructed on DOMContentLoaded. With `defer`,
+         the script executes before that event fires, so PagefindUI
+         is defined by the time the constructor runs.
+       - The CSS link is a non-render-blocking stylesheet only after
+         brand-tokens.css and Google Fonts have loaded; ordering keeps
+         var(--la-*) overrides in custom.css §7 winning the cascade.
+
+       Pagefind only exists in production builds (npm run build);
+       hugo server (dev) does not produce the /pagefind/ directory.
+       The defer + null-guard pattern below means a missing Pagefind
+       (dev mode) just silently no-ops without console errors. */ -}}
+<link rel="stylesheet" href="/pagefind/pagefind-ui.css">
+<script src="/pagefind/pagefind-ui.js" defer></script>
+<script>
+window.addEventListener('DOMContentLoaded', function () {
+  if (typeof PagefindUI === 'undefined') return;
+  new PagefindUI({
+    element: '#la-search',
+    showSubResults: true,
+    resetStyles: false
+  });
+});
+</script>
+
+{{- /* §4. Keyboard shortcuts (WP-005 Step 5)
+       Bindings:
+         /                - focus the search input
+         Ctrl+K (Win/Linux), Cmd+K (macOS) - focus the search input
+
+       Discipline (locked):
+       - Bail when the user is typing in another input/textarea/
+         contenteditable so we don't trap keystrokes in unrelated
+         fields.
+       - preventDefault on the focus path so / does not insert a
+         literal slash in any race-conditioned target, and so the
+         browser's quick-find on / (Firefox) does not fire.
+       - If the search input is not yet mounted (Pagefind script
+         still loading, or dev build with no Pagefind), the
+         querySelector silently returns null and the handler exits;
+         the user just retries. No console error.
+       - Repeat presses are a no-op: focus on an already-focused
+         element is a no-op natively. */ -}}
+<script>
+(function () {
+  function focusSearch() {
+    var input = document.querySelector('#la-search input');
+    if (input) {
+      input.focus();
+      return true;
+    }
+    return false;
+  }
+  document.addEventListener('keydown', function (event) {
+    var target = event.target;
+    if (target && target.matches && target.matches('input, textarea, [contenteditable]')) {
+      return;
+    }
+    var isSlash = event.key === '/' && !event.ctrlKey && !event.metaKey && !event.altKey;
+    var isModK = (event.ctrlKey || event.metaKey) && !event.altKey && event.key && event.key.toLowerCase() === 'k';
+    if (!isSlash && !isModK) return;
+    event.preventDefault();
+    focusSearch();
+  });
+})();
+</script>

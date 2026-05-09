@@ -1,0 +1,49 @@
+{{- /* Legendary Arena — baseof override.
+
+       Overrides themes/PaperMod/layouts/baseof.html. Hugo's lookup
+       order resolves this file ahead of the theme's copy.
+
+       Difference from upstream:
+       - Adds data-pagefind-body to <main class="main">. Pagefind's
+         indexer (run as part of npm run build) treats this attribute
+         as the canonical content boundary: only content inside
+         data-pagefind-body elements is indexed across the site.
+         Header, footer, nav, and any sibling layout chrome are
+         naturally excluded — header/footer do not need
+         data-pagefind-ignore once data-pagefind-body is present.
+         Locked by WP-005 § Step 6.
+
+       Otherwise the markup mirrors upstream so PaperMod theme
+       upgrades remain a copy-and-merge rather than a rewrite.
+*/ -}}
+{{- if lt hugo.Version "0.146.0" }}
+{{- errorf "=> hugo v0.146.0 or greater is required for hugo-PaperMod to build " }}
+{{- end -}}
+
+<!DOCTYPE html>
+{{- $theme := site.Params.defaultTheme | default "auto" }}
+{{- if eq $theme "dark" }}
+<html lang="{{ site.Language }}" dir="{{ .Language.LanguageDirection | default "auto" }}" data-theme="dark">
+{{- else if eq $theme "light" }}
+<html lang="{{ site.Language }}" dir="{{ .Language.LanguageDirection | default "auto" }}" data-theme="light">
+{{- else }}
+<html lang="{{ site.Language }}" dir="{{ .Language.LanguageDirection | default "auto" }}" data-theme="auto">
+{{- end }}
+
+<head>
+    {{- partial "head.html" . }}
+</head>
+
+{{- if (or (ne .Kind `page` ) (eq .Layout `archives`) (eq .Layout `search`)) }}
+<body class="list" id="top">
+{{- else }}
+<body id="top">
+{{- end }}
+    {{ partialCached "header.html" . .Page -}}
+    <main class="main" data-pagefind-body>
+        {{- block "main" . }}{{ end }}
+    </main>
+    {{ partialCached "footer.html" . .Layout .Kind (.Param "hideFooter") (.Param "ShowCodeCopyButtons") -}}
+</body>
+
+</html>
