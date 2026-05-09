@@ -1,0 +1,11 @@
+{
+  "name": "legendary-arena-com",
+  "private": true,
+  "description": "Marketing site source for www.legendary-arena.com (Hugo + Pagefind).",
+  "scripts": {
+    "build": "hugo --minify && npx pagefind --site public"
+  },
+  "devDependencies": {
+    "pagefind": "1.5.2"
+  }
+}
