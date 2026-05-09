@@ -24,6 +24,15 @@ Thumbs.db
 # Build artifacts from theme tooling
 .cache/
 
+# WP-005: local-only verification artifacts
+# why: lighthouse-*.json and build1/2.txt are produced by the WP-005
+# verification flow (Lighthouse audits + reproducibility hash diff).
+# They are local-only — see WP-005 § Step 8.5 / 8.7 + the WP-005 lock
+# entry in 03-ROADMAP.md.
+lighthouse-*.json
+build1.txt
+build2.txt
+
 # Logo-figma scratch artifacts
 # why: project uses pnpm (per pnpm-workspace.yaml); npm-generated lockfiles are stale.
 # why: zips are Figma Make export archives — would pollute history on re-export.
