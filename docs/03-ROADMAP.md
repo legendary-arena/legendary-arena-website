@@ -1450,6 +1450,17 @@ Future work without WPs yet:
   `logo-brief.md §9`.
 - **api.legendary-arena.com** — game backend on Render. Out of scope for
   this site.
+- **Wiki search at `ewiki.legendary-arena.com`** — governed by the
+  engine monorepo, not this roadmap. The engineering wiki is built
+  by `apps/wiki-viewer/` in `barefootbetters/legendary-arena` (see
+  EC-142 / WP-139); a wiki-search WP belongs in that repo's
+  `WORK_INDEX.md` under its full WP/EC governance, with WP-005 cited
+  as the prior-art pattern reference (npm + exact-pin Pagefind,
+  lazy-load + stub, `data-pagefind-body` scope, single-command
+  build, mechanical reproducibility check). The wiki is not a
+  brand-tokens consumer in v1 (see `01-VISION.md` §Cross-site
+  contract — consumers are `play` and `cards` only), so wiki-search
+  work has no cross-dependency on this roadmap's WP-007a/b/009.
 - **Engine repo transfer** — move
   `barefootbetters/legendary-arena` → `legendary-arena/legendary-arena-game`.
   Independent Saturday effort.
