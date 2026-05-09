@@ -73,7 +73,7 @@ their integrations. WP-008 is parallel to WP-009 but does not feed it.
 | WP-001 | Hugo skeleton + PaperMod theme | ✅ Done | — | half-day |
 | WP-002 | LA brand definition + tokens v1 | ✅ Done | WP-001 | 1–2 days |
 | WP-003 | Apply LA brand via theme overrides | ✅ Done | WP-002 | 1 day |
-| WP-004 | Content scaffolding + first 3 pages | ⏸️ Pending | WP-003 | half-day |
+| WP-004 | Content scaffolding + first 3 pages | ✅ Done (2026-05-08) | WP-003 | half-day |
 | WP-005 | Pagefind search integration | ⏸️ Pending | WP-004 | half-day |
 | WP-006 | Cloudflare Pages deploy + custom domain | ⏸️ Pending | WP-005 | half-day |
 | WP-007a | play.legendary-arena.com deploy | ⏸️ Pending | WP-006 | 1 day |
@@ -503,17 +503,19 @@ recommended override location for CSS is `assets/css/extended/`.
 
 ---
 
-## WP-004 — Content scaffolding + first 3 pages ⏸️
+## WP-004 — Content scaffolding + first 3 pages ✅
 
-**Status:** Pending WP-003
-**Effort:** half-day
+**Status:** Done (2026-05-08)
+**Effort actual:** ~half-day (read order + authoring + verification + lock)
 **Dependencies:** WP-003
+**Commits:** `b5f22fd` (content + scaffold — home/about/blog, archetype, conventions, layout override A)
 
 ### Readiness
 
 - Spec complete: ✅
-- Dependencies met: ❌ (waiting on WP-003)
-- Ready for execution: ❌
+- Dependencies met: ✅
+- Ready for execution: ✅
+- Executed: ✅
 
 ### Preconditions
 
@@ -530,12 +532,19 @@ are frictionless.
 
 ### Deliverables
 
-- `content/_index.md` — homepage with hero, value prop, "Play now" CTA
-- `content/about/_index.md` — what LA is, who's behind it, status
-- `content/posts/2026-MM-DD-launch-announcement.md` — first real blog post
-- `archetypes/posts.md` — front-matter template for new posts
-- `docs/04-CONTENT-CONVENTIONS.md` — front-matter rules, slug rules,
-  image conventions
+- `content/_index.md` — homepage with hero ("The arena awaits."), three
+  "why" cards via `params.sections`, "Play now" CTA
+- `content/about/_index.md` — what LA is, who's behind it, status of
+  the three properties (www / cards / play)
+- `content/posts/2026-05-07-launch-announcement.md` — first real blog
+  post ("Opening the arena")
+- `archetypes/posts.md` — four-field-valid front-matter template for
+  `hugo new posts/<slug>.md`
+- `docs/04-CONTENT-CONVENTIONS.md` — home-page-markup decision,
+  front-matter / slug / image / voice / terminology / brand-failure-mode
+  rules
+- `layouts/index.html` — approach A override that hosts the home-page
+  hero + CTA above the fold (PaperMod's `homeInfoParams` partial cannot)
 
 ### Conversion intent (the marketing site's job)
 
@@ -561,22 +570,97 @@ The CTA must be:
 
 ### Definition of Done
 
-- [ ] Home page answers what / why / what-next in that order, above the
-      fold
-- [ ] "Play now" CTA visible above the fold on desktop AND mobile
-- [ ] About page has real content (not lorem ipsum)
-- [ ] One real blog post published (not "Hello World")
-- [ ] `hugo new posts/whatever.md` produces a properly-stubbed post via
-      the archetype
-- [ ] `docs/04-CONTENT-CONVENTIONS.md` committed
+- [x] Home page answers what / why / what-next in that order, above the
+      fold (hero "The arena awaits." + three `params.sections` cards
+      "Skill decides." / "Mastery is earned." / "The rules don't drift."
+      + "Play now" CTA, in that order)
+- [x] "Play now" CTA visible above the fold on desktop AND mobile
+      (binary test PASS in all 4 combos via puppeteer-core +
+      system Chrome — see Additional verification below)
+- [x] About page has real content (not lorem ipsum) —
+      `content/about/_index.md` covers what / who's behind it / where
+      things stand for the three properties
+- [x] One real blog post published (not "Hello World") — "Opening the
+      arena" at `content/posts/2026-05-07-launch-announcement.md`,
+      narrative framing not changelog (per pre-flight locked decision)
+- [x] `hugo new posts/whatever.md` produces a properly-stubbed post via
+      `archetypes/posts.md` (validated 2026-05-08 against
+      `posts/test-archetype.md`; all four required fields well-formed,
+      test file deleted)
+- [x] `docs/04-CONTENT-CONVENTIONS.md` committed
 
 ### Exit criteria
 
-- [ ] First-time-reader test (try on a friend or a fresh tab after a
-      break): they understand what LA is within ~5 seconds
-- [ ] No placeholder text anywhere in the rendered output
-- [ ] Voice consistent across all three pages
-- [ ] Lighthouse ≥ 90 maintained
+- [x] First-time-reader test passes — hero + sub-prose + maroon
+      "Play now" CTA establish "skill-first deck-building system,
+      click here to play" within one viewport on desktop and mobile
+- [x] No placeholder text anywhere in the rendered output (no lorem
+      ipsum, no "TBD", no "Coming soon"; the home page's "what / why /
+      what-next" replaces the WP-001 `homeInfoParams` "Coming soon"
+      placeholder)
+- [x] Voice consistent across all three pages (home / about / blog
+      share the "arena" framing thread, the verb palette from
+      `strategy.md §2.3`, and the declarative-not-hyped tone)
+- [x] Lighthouse ≥ 90 maintained on home + post in all four categories
+      — see Lighthouse scores below
+
+### Lighthouse scores (production build, `hugo --minify`)
+
+Numbers below were measured against the production build served on
+`http://localhost:1314/` via `python -m http.server`. The dev-server
+numbers (against `hugo server --port 1313`) are several points lower
+on the post page — notably Performance ≈ 86, driven by the dev
+server's lack of compression / minification / cache-control headers
+(Lighthouse audits `uses-text-compression`, `unminified-css`,
+`uses-long-cache-ttl`, `render-blocking-resources` all show large
+estimated savings on the dev server but ~zero on the production
+build). Production output is what ships at
+`www.legendary-arena.com`, so production numbers are recorded here.
+Dev-server numbers were captured for regression-vs-WP-003 sanity
+(home P = 89–90, post P = 86, A flapping 95–100 on the logo
+wordmark `target-size` audit) and showed no regression in the
+content authored by WP-004.
+
+| Page | Performance | Accessibility | Best Practices | SEO |
+|---|---|---|---|---|
+| Home (`/`) | 97 | 95 | 96 | 100 |
+| Post (`/posts/2026-05-07-launch-announcement/`) | 98 | 96 | 96 | 100 |
+
+The Accessibility 95 (vs WP-003's 100 on home) is a `target-size`
+audit finding on the header logo wordmark
+(`header.header > nav.header-nav > div.logo > a`, computed bounding
+rect ~111 × 17 px — width passes, height is below the 24 px
+threshold). The wordmark element is unchanged by WP-004; the audit
+appears to flap around the threshold across runs (the same DOM
+scored 100 in WP-003's lock measurement). The deferred branded-logo
+work tracked under `docs/01-VISION.md` Decisions log 2026-05-08
+(logo brief + AI-workflow notes + designer handoff) is the real
+fix; this score is not a WP-004 regression.
+
+### Additional verification (WP-004 lock-pass, 2026-05-08)
+
+- [x] **Binary CTA test PASS in all 4 viewport+mode combinations**
+      (puppeteer-core + system Chrome at
+      `C:/Program Files/Google/Chrome/Application/chrome.exe`;
+      light/dark × 1280×800 / 375×667; `<a class="button">Play now</a>`
+      fully within first viewport height in every combo; bounding
+      rect entirely within `[0, viewport.height]` × `[0, viewport.width]`;
+      no clipping, no scroll required)
+- [x] Hero `<h1>` resolves to `--la-font-size-hero`
+      (computed `font-size: 56px` ≡ 3.5rem),
+      `font-family: "Bebas Neue", Anton, Oswald, system-ui, sans-serif`,
+      `text-transform: uppercase` per `typography.md §4.1 + §8`
+- [x] Browser console clean: 0 errors / 0 page-errors in all 4 combos
+- [x] `git submodule status` shows
+      `c4ca7ca486ecd67c8f6bba31551a6ee0d1455926 themes/PaperMod (heads/master)`
+      with no `+` modification flag (PaperMod source unmodified by
+      WP-004; matches WP-003 lock state)
+- [x] Archetype validated: `hugo new posts/test-archetype.md` produced
+      `title: "Test Archetype"`, `date: 2026-05-08T17:17:04-07:00`
+      (valid ISO 8601), `description: ""` (empty string per locked
+      decision "may be empty for the author"), `draft: false`,
+      `tags: []`, `categories: []`. Test file deleted post-validation.
+- [x] All commits pushed to `origin/main`
 
 ### Failure conditions
 
@@ -591,19 +675,36 @@ The CTA must be:
 - Revert content commits. Site reverts to the brand-styled
   WP-003 placeholder state but remains functional.
 
+### Notes
+
+- **Home-page layout — approach A.** Override `layouts/index.html`
+  chosen over B (Hugo shortcode invoked from `content/_index.md`) and C
+  (PaperMod's `homeInfoParams`). A gives full control of the
+  above-the-fold markup, uses `custom.css §5.1 / §5.2` utility classes
+  natively, and decouples copy (`content/_index.md` front-matter:
+  `title`, hero prose, `ctaLabel`, `ctaHref`, `sections[]`) from layout
+  (`layouts/index.html`). C cannot host a styled `.button` element
+  above the fold; B adds indirection without ergonomic gain. Recorded
+  in `docs/01-VISION.md` Decisions log 2026-05-08 and in
+  `docs/04-CONTENT-CONVENTIONS.md "Home page markup"`.
+- The pre-existing `[params.homeInfoParams]` block in `hugo.toml` is no
+  longer rendered by the override but was left in place to avoid a
+  config change unrelated to content authoring. Cleaning it up is a
+  candidate for a future small-touch commit, not a WP-004 deliverable.
+
 ---
 
 ## WP-005 — Pagefind search integration ⏸️
 
-**Status:** Pending WP-004
+**Status:** Pending (WP-004 ✅ done 2026-05-08; ready for execution)
 **Effort:** half-day
 **Dependencies:** WP-004
 
 ### Readiness
 
 - Spec complete: ✅
-- Dependencies met: ❌ (waiting on WP-004)
-- Ready for execution: ❌
+- Dependencies met: ✅
+- Ready for execution: ✅
 
 ### Preconditions
 
