@@ -38,3 +38,14 @@ build2.txt
 # why: zips are Figma Make export archives — would pollute history on re-export.
 docs/brand/logo-figma/package-lock.json
 docs/brand/logo-figma/*.zip
+
+# WP invocation scratchpads
+# why: preflight / context / session prompt files under docs/ai/invocations/
+# behave like REPL transcripts — they help the executor that day but rarely
+# carry information future WPs depend on. The reconciled session-context
+# file (docs/ai/session-context/...) is the artifact future WPs read.
+# Mirrors the engine repo's convention. Override with `git add -f <path>`
+# if a specific WP cites an invocation file as a normative artifact.
+docs/ai/invocations/preflight-wp*.md
+docs/ai/invocations/context-wp*.md
+docs/ai/invocations/session-wp*.md
