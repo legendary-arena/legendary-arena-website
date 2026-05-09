@@ -2,7 +2,7 @@
 
 **Repo:** github.com/legendary-arena/legendary-arena-website
 **Owner:** Jeffery Jensen
-**Last updated:** 2026-05-08
+**Last updated:** 2026-05-09
 
 > **Authority:** This document tracks Work Packets (WPs) for the marketing
 > site. It is subordinate to `01-VISION.md`. If a WP description here
@@ -74,7 +74,7 @@ their integrations. WP-008 is parallel to WP-009 but does not feed it.
 | WP-002 | LA brand definition + tokens v1 | ✅ Done | WP-001 | 1–2 days |
 | WP-003 | Apply LA brand via theme overrides | ✅ Done | WP-002 | 1 day |
 | WP-004 | Content scaffolding + first 3 pages | ✅ Done (2026-05-08) | WP-003 | half-day |
-| WP-005 | Pagefind search integration | ⏸️ Pending | WP-004 | half-day |
+| WP-005 | Pagefind search integration | ✅ Done (2026-05-09) | WP-004 | half-day |
 | WP-006 | Cloudflare Pages deploy + custom domain | ⏸️ Pending | WP-005 | half-day |
 | WP-007a | play.legendary-arena.com deploy | ⏸️ Pending | WP-006 | 1 day |
 | WP-007b | Registry viewer brand integration (cards.barefootbetters.com) | ⏸️ Pending | WP-006 | ~half-day–1 day |
@@ -694,17 +694,26 @@ fix; this score is not a WP-004 regression.
 
 ---
 
-## WP-005 — Pagefind search integration ⏸️
+## WP-005 — Pagefind search integration ✅
 
-**Status:** Pending (WP-004 ✅ done 2026-05-08; ready for execution)
-**Effort:** half-day
+**Status:** Done (2026-05-09)
+**Effort actual:** ~half-day (scaffold + wiring + lazy-load fix +
+verification + lock)
 **Dependencies:** WP-004
+**Commits:** `cc84549` (pre-flight artifacts), `8dc0623` (Step 1+2:
+build pipeline scaffold — npm + pagefind 1.5.2), `931260c`
+(Steps 3-6: PaperMod search disabled, header + extend_head + CSS
+overrides, baseof data-pagefind-body, keyboard shortcuts), `0334478`
+(Step 7: README + .gitignore for local-only verification artifacts),
+`0479626` (verification fix: lazy-load Pagefind UI + stub input to
+satisfy Lighthouse Performance ≥ 90)
 
 ### Readiness
 
 - Spec complete: ✅
 - Dependencies met: ✅
 - Ready for execution: ✅
+- Executed: ✅
 
 ### Preconditions
 
@@ -743,21 +752,117 @@ Add static, fast search across blog/marketing content. Card data is
 
 ### Definition of Done
 
-- [ ] Pagefind dependency declared (in `package.json` or as a documented
-      binary)
-- [ ] Search input visible in site header
-- [ ] Typing produces relevant matches across home/about/blog content
-- [ ] Card name searches return no results (verify exclusion)
-- [ ] `npm run build` (or equivalent) builds Hugo + Pagefind in one
-      command
-- [ ] Build command documented in `README.md`
+- [x] Pagefind dependency declared (in `package.json` or as a documented
+      binary) — npm route, `pagefind` 1.5.2 exact-pinned in
+      `package.json` + committed `package-lock.json`
+- [x] Search input visible in site header — server-rendered stub
+      `<input id="la-search-stub">` from first paint; real Pagefind
+      default UI replaces it on first interaction (focus / click /
+      shortcut)
+- [x] Typing produces relevant matches across home/about/blog content
+      — Pagefind reports 9 pages, 255 words indexed; manual checks on
+      "arena", "skill", "scenario" all return matches with correct
+      target URLs
+- [x] Card name searches return no results (verify exclusion) — both
+      "Iron Fist" and "Doctor Strange" return zero matches; index
+      scope is structural via `data-pagefind-body` on `<main>` in the
+      baseof override
+- [x] `npm run build` builds Hugo + Pagefind in one command, exits
+      non-zero on either failure (`hugo --minify && npx pagefind
+      --site public`)
+- [x] Build command documented in `README.md` (Prerequisites + Build
+      + Local dev + Reproducibility + CI parity sections)
 
 ### Exit criteria
 
-- [ ] Search returns useful results within ~100ms of typing
-- [ ] Lighthouse ≥ 90 maintained
-- [ ] Build is fully reproducible: clean clone + single command
-      produces a working site
+- [x] Search returns useful results within ~100ms of typing
+      (post-mount; lazy-load adds a one-time ~300 KB fetch on first
+      interaction, after which queries are fully client-side)
+- [x] Lighthouse ≥ 90 maintained — see scores below
+- [x] Build is fully reproducible: clean clone + single command
+      produces a working site (`Compare-Object` over SHA-256 hashes
+      of two consecutive `npm run build` runs returned empty;
+      byte-identical `public/`)
+
+### Lighthouse scores (production build, hugo --minify)
+
+Numbers measured against the production-config build (same script
+that ships) served on `http://127.0.0.1:1314/` via `python -m
+http.server`. Per the WP-005 verification convention (and matching
+WP-004), the local server is served from `public/` after `npm run
+build`. The `--baseURL http://127.0.0.1:1314` override is used
+ONLY for the Lighthouse + console-error verification pass so the
+absolute-URL canonicalization that `canonifyURLs = true` produces
+resolves under localhost DNS — the actual production deploy
+(WP-006) uses the default `https://www.legendary-arena.com/`
+baseURL and the same `npm run build` command.
+
+| Page | Performance | Accessibility | Best Practices | SEO |
+|---|---|---|---|---|
+| Home (`/`) | 92 | 100 | 100 | 100 |
+| Post (`/posts/2026-05-07-launch-announcement/`) | 93 | 100 | 100 | 100 |
+
+Performance variance (3 consecutive runs each, lazy-loaded build):
+
+| Page | Run 1 | Run 2 | Run 3 | Median |
+|---|---|---|---|---|
+| Home | 92 | 98 | 92 | 92 |
+| Post | 99 | 93 | 93 | 93 |
+
+The Accessibility 100 (vs WP-004's 95 on home) reflects that the
+local-baseURL build resolves resources cleanly during the audit;
+the underlying DOM + tokens are unchanged.
+
+The Performance budget — eager-load measurement on the same code
+returned 88-89 on home, below the 90 floor. The lazy-load pattern
+(see §"Decisions log" 2026-05-09) brings it to 92 stable.
+
+### Additional verification (WP-005 lock-pass, 2026-05-09)
+
+- [x] **Reproducibility (mechanical):** two consecutive `npm run
+      build` runs (production config, default baseURL) produce
+      byte-identical `public/`. `Compare-Object` over SHA-256
+      hashes of every file in `public/`, sorted by path, returned
+      empty. `build1.txt` / `build2.txt` retained locally only
+      (gitignored).
+- [x] **Console clean:** Lighthouse `errors-in-console` audit
+      returned `score=1, items=0` on both home and post (same
+      lazy-loaded local-baseURL build). Pagefind UI assets
+      (`pagefind-ui.js`, `pagefind-ui.css`) load lazily on first
+      interaction; until that interaction they are not requested,
+      so eager-load failures are impossible by construction.
+- [x] **Render-blocking check:** Lighthouse
+      `render-blocking-resources` audit — Pagefind UI assets do not
+      appear in the report (consistent with the lazy-load
+      promise). The eager `defer` attempt was abandoned in favour
+      of full lazy-load specifically because even `defer` consumed
+      enough TBT to push Performance under 90.
+- [x] **Index scope (structural):** Pagefind reports "Found a
+      data-pagefind-body element on the site. Ignoring pages
+      without this tag." — header / footer / nav are naturally
+      excluded because `data-pagefind-body` is on `<main>` in
+      `layouts/baseof.html` and they are siblings.
+- [x] **PaperMod Fuse search disabled:** `[outputs] home = ["HTML",
+      "RSS", "JSON"]` removed from `hugo.toml` (replaced by a
+      `# why:` comment); the `JSON` output that produced
+      `public/index.json` (the Fuse index) is no longer built. No
+      `content/search.md` exists. Confirmed: `public/index.json` is
+      absent after `npm run build`. PaperMod's
+      `themes/PaperMod/layouts/search.html` template remains
+      untouched in the submodule.
+- [x] **Submodule clean:** `git submodule status` shows
+      `c4ca7ca486ecd67c8f6bba31551a6ee0d1455926 themes/PaperMod
+      (heads/master)` with no `+` modification flag.
+- [x] **Single-command contract verified:** `git clean -fdx` (in
+      a sibling clone) + `npm ci` + `npm run build` produces a
+      working site with both the static stub input rendered in the
+      header AND the `public/pagefind/` index ready to lazy-load.
+      No additional steps required; identical to the
+      Cloudflare Pages config WP-006 will inherit.
+- [x] **Pagefind output deterministic:** the `Compare-Object`
+      diff above includes `public/pagefind/**` and returned empty;
+      Pagefind 1.5.2 produces stable shard hashes and stable
+      WASM bytes across builds from the same commit.
 
 ### Failure conditions
 
@@ -776,15 +881,15 @@ Add static, fast search across blog/marketing content. Card data is
 
 ## WP-006 — Cloudflare Pages deploy + custom domain ⏸️
 
-**Status:** Pending WP-005
+**Status:** Pending (WP-005 ✅ done 2026-05-09; ready for execution)
 **Effort:** half-day (most of it is DNS propagation waiting)
 **Dependencies:** WP-005
 
 ### Readiness
 
 - Spec complete: ✅
-- Dependencies met: ❌ (waiting on WP-005)
-- Ready for execution: ❌
+- Dependencies met: ✅
+- Ready for execution: ✅
 
 ### Preconditions
 
