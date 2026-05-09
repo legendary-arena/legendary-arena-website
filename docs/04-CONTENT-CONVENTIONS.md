@@ -68,18 +68,44 @@ that touch the build pipeline must re-verify.
 
 ## Search
 
-**UI: Pagefind default UI (WP-005, 2026-05-08).** The search input
-and results panel are rendered by `pagefind-ui.js` +
+**UI: Pagefind default UI, lazy-loaded (WP-005, 2026-05-08).** The
+search input and results panel are rendered by `pagefind-ui.js` +
 `pagefind-ui.css`, bound to a single mount element with the
 canonical id `la-search` (`<div id="la-search"></div>`). The mount
 lives in the project's overridden header partial. All JS targets
 this exact id; aliases (`#search`, `#site-search`, `#pf-search`,
 etc.) MUST NOT be introduced.
 
-Brand-token integration: search-input border, focus ring, results
-panel background, and result-link colors route through `var(--la-*)`
-tokens via overrides in `assets/css/extended/custom.css §7`. No raw
-hex values.
+**Lazy-load pattern (mandatory).** Pagefind's default UI bundle
+(~300 KB across `pagefind-ui.js`, `pagefind.js`,
+`pagefind-worker.js`, the `.wasm` shards, and the CSS) is too heavy
+to load eagerly without dropping Lighthouse Performance below the
+≥ 90 floor. To preserve immediate search affordance without the
+weight cost:
+
+1. The header partial renders a server-side `<input
+   id="la-search-stub">` immediately, styled to look identical to
+   the real Pagefind input.
+2. `extend_head.html` loads `pagefind-ui.{js,css}` only on the
+   first user signal of intent: focusing the stub, clicking the
+   `#la-search` slot, or pressing `/` / `Ctrl+K` / `Cmd+K`.
+3. After load, `PagefindUI({ element: '#la-search' })` is
+   constructed. PagefindUI replaces the children of `#la-search`,
+   so the stub is naturally swapped for the real input. Any text
+   the user typed into the stub before the swap is forwarded to
+   the real input and the real input is focused.
+4. Subsequent shortcut presses just refocus the real input — no
+   reload, no remount.
+
+In dev mode (`hugo server`), `/pagefind/` does not exist; the
+lazy-load script's `onerror` swallows the network failure
+silently so the dev console stays clean.
+
+Brand-token integration: stub-input border + focus ring, real
+search-input border + focus ring, results panel background, and
+result-link colors all route through `var(--la-*)` tokens via
+overrides in `assets/css/extended/custom.css §7`. No raw hex
+values.
 
 **PaperMod's built-in Fuse.js search is disabled** by removing
 `outputs.home = ["HTML", "RSS", "JSON"]` from `hugo.toml` so the

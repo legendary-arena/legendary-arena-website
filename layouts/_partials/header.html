@@ -130,7 +130,19 @@
         {{- /* Pagefind search mount — canonical id locked by WP-005 § Step 4.
                JS in extend_head.html instantiates PagefindUI against this
                exact id. Aliases (#search, #site-search, #pf-search, etc.)
-               are forbidden. */ -}}
-        <div id="la-search" class="header-search" role="search"></div>
+               are forbidden.
+
+               The stub <input> renders an immediate, server-side search
+               affordance. The real Pagefind UI lazy-loads on first
+               interaction (focus / click / keyboard shortcut) — see
+               extend_head.html § Search lazy-load. Lazy-loading keeps
+               ~300 KB of Pagefind assets off the critical path so the
+               marketing pages stay above the Lighthouse Performance ≥ 90
+               floor. */ -}}
+        <div id="la-search" class="header-search" role="search">
+            <input id="la-search-stub" type="search" placeholder="Search"
+                   aria-label="Search the site" autocomplete="off"
+                   data-pagefind-ignore>
+        </div>
     </nav>
 </header>

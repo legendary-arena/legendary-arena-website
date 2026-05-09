@@ -29,57 +29,103 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap">
 
-{{- /* §3. Pagefind search UI (WP-005)
-       Loads Pagefind's default UI assets and mounts them on the
-       canonical #la-search slot rendered by header.html.
+{{- /* §3. Pagefind search — lazy-load + keyboard shortcuts (WP-005)
 
-       - The script is `defer` so it does not block HTML parsing or
-         the critical render path (WP-005 Failure conditions explicitly
-         disallow render-blocking Pagefind assets).
-       - PagefindUI is constructed on DOMContentLoaded. With `defer`,
-         the script executes before that event fires, so PagefindUI
-         is defined by the time the constructor runs.
-       - The CSS link is a non-render-blocking stylesheet only after
-         brand-tokens.css and Google Fonts have loaded; ordering keeps
-         var(--la-*) overrides in custom.css §7 winning the cascade.
+       Why lazy-load: Pagefind's default UI bundle is ~300 KB
+       (pagefind-ui.js 120 KB + pagefind-ui.css 14 KB + pagefind.js
+       45 KB + pagefind-worker.js 41 KB + en.wasm 72 KB +
+       unknown.wasm 68 KB). Loading it eagerly via `defer` was
+       still heavy enough to push Lighthouse Performance below the
+       WP-005 ≥ 90 floor on the marketing home page. The lazy
+       pattern below loads nothing until the user signals intent
+       (focus the stub input, click the search slot, or press a
+       shortcut), which keeps the critical render path clean while
+       preserving immediate search affordance via the stub <input>
+       in header.html.
+
+       Why a server-rendered stub: the user must SEE that search
+       exists before deciding to use it. The stub <input> is real
+       HTML rendered by Hugo, so it appears on first paint and the
+       user can focus it (which triggers lazy load). Pagefind's
+       default UI replaces the contents of #la-search on init — the
+       stub is naturally swapped out.
 
        Pagefind only exists in production builds (npm run build);
-       hugo server (dev) does not produce the /pagefind/ directory.
-       The defer + null-guard pattern below means a missing Pagefind
-       (dev mode) just silently no-ops without console errors. */ -}}
-<link rel="stylesheet" href="/pagefind/pagefind-ui.css">
-<script src="/pagefind/pagefind-ui.js" defer></script>
-<script>
-window.addEventListener('DOMContentLoaded', function () {
-  if (typeof PagefindUI === 'undefined') return;
-  new PagefindUI({
-    element: '#la-search',
-    showSubResults: true,
-    resetStyles: false
-  });
-});
-</script>
+       hugo server (dev) does not produce /pagefind/. Network
+       errors during lazy-load are swallowed silently so dev mode
+       remains console-clean.
 
-{{- /* §4. Keyboard shortcuts (WP-005 Step 5)
-       Bindings:
-         /                - focus the search input
-         Ctrl+K (Win/Linux), Cmd+K (macOS) - focus the search input
+       Bindings (Step 5):
+         /                            focus the search input
+         Ctrl+K (Win/Linux), Cmd+K    focus the search input
 
-       Discipline (locked):
+       Discipline (Step 5, locked):
        - Bail when the user is typing in another input/textarea/
          contenteditable so we don't trap keystrokes in unrelated
-         fields.
+         fields. The stub <input> itself is treated as the search
+         entry point, not a "field to bail on" — pressing the
+         shortcut while focused on the stub still triggers
+         lazy-load.
        - preventDefault on the focus path so / does not insert a
-         literal slash in any race-conditioned target, and so the
-         browser's quick-find on / (Firefox) does not fire.
-       - If the search input is not yet mounted (Pagefind script
-         still loading, or dev build with no Pagefind), the
-         querySelector silently returns null and the handler exits;
-         the user just retries. No console error.
-       - Repeat presses are a no-op: focus on an already-focused
-         element is a no-op natively. */ -}}
+         literal slash and Firefox's quick-find on / does not fire.
+       - Repeat presses are a no-op: focusing an already-focused
+         input is a no-op natively. */ -}}
 <script>
 (function () {
+  var pagefindLoadPromise = null;
+  var pagefindMounted = false;
+
+  function loadPagefind() {
+    if (pagefindLoadPromise) return pagefindLoadPromise;
+    pagefindLoadPromise = new Promise(function (resolve) {
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = '/pagefind/pagefind-ui.css';
+      document.head.appendChild(link);
+
+      var script = document.createElement('script');
+      script.src = '/pagefind/pagefind-ui.js';
+      script.async = true;
+      script.onload = function () {
+        if (typeof PagefindUI !== 'undefined') {
+          // why: capture whatever the user typed into the stub
+          // before Pagefind replaced it, so their first keystrokes
+          // are not lost during the swap.
+          var stub = document.getElementById('la-search-stub');
+          var carryValue = stub ? stub.value : '';
+          new PagefindUI({
+            element: '#la-search',
+            showSubResults: true,
+            resetStyles: false
+          });
+          pagefindMounted = true;
+          // why: PagefindUI replaces #la-search's children
+          // synchronously on construct. Focus the new real input
+          // and replay any carry-over text on the next tick so the
+          // user's intent is preserved across the lazy-swap.
+          setTimeout(function () {
+            var realInput = document.querySelector('#la-search input.pagefind-ui__search-input');
+            if (realInput) {
+              if (carryValue) {
+                realInput.value = carryValue;
+                realInput.dispatchEvent(new Event('input', { bubbles: true }));
+              }
+              realInput.focus();
+            }
+          }, 0);
+        }
+        resolve();
+      };
+      script.onerror = function () {
+        // why: silent — dev mode has no /pagefind/ on disk; logging
+        // would dirty the console for an expected condition.
+        resolve();
+      };
+      document.head.appendChild(script);
+    });
+    return pagefindLoadPromise;
+  }
+
   function focusSearch() {
     var input = document.querySelector('#la-search input');
     if (input) {
@@ -88,16 +134,40 @@ window.addEventListener('DOMContentLoaded', function () {
     }
     return false;
   }
+
+  // Trigger lazy-load on first interaction with the stub (focus or
+  // click), and on first matching keyboard shortcut.
+  document.addEventListener('focusin', function (event) {
+    var target = event.target;
+    if (target && target.id === 'la-search-stub') {
+      loadPagefind();
+    }
+  });
+
+  document.addEventListener('click', function (event) {
+    var target = event.target;
+    if (target && target.closest && target.closest('#la-search')) {
+      loadPagefind();
+    }
+  });
+
   document.addEventListener('keydown', function (event) {
     var target = event.target;
-    if (target && target.matches && target.matches('input, textarea, [contenteditable]')) {
-      return;
-    }
+    var inField = target && target.matches && target.matches('input, textarea, [contenteditable]');
+    // why: the stub input is OUR search entry — pressing / or Ctrl+K
+    // while focused on it should still trigger lazy-load and refocus
+    // the real input. So we exempt #la-search-stub from the
+    // bail-on-input check.
+    if (inField && target.id !== 'la-search-stub') return;
     var isSlash = event.key === '/' && !event.ctrlKey && !event.metaKey && !event.altKey;
     var isModK = (event.ctrlKey || event.metaKey) && !event.altKey && event.key && event.key.toLowerCase() === 'k';
     if (!isSlash && !isModK) return;
     event.preventDefault();
-    focusSearch();
+    if (pagefindMounted) {
+      focusSearch();
+    } else {
+      loadPagefind().then(focusSearch);
+    }
   });
 })();
 </script>

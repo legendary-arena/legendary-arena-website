@@ -603,7 +603,38 @@ pre code {
   }
 }
 
-/* §7.2 Pagefind UI containers */
+/* §7.2 Stub input (server-rendered, lazy-load entry point)
+   Visible from first paint so the user sees a search affordance
+   before Pagefind's UI lazy-loads on first interaction. Styled to
+   match the real Pagefind input visually so the swap is invisible
+   to the user. Replaced when PagefindUI mounts (it overwrites
+   #la-search children). */
+
+#la-search-stub {
+  width: 100%;
+  font-family: var(--la-font-body);
+  font-size: var(--la-font-size-body);
+  line-height: var(--la-line-height-body);
+  background-color: var(--la-color-surface);
+  color: var(--la-color-text-primary);
+  border: 1px solid var(--la-color-border-subtle);
+  border-radius: var(--la-radius-md);
+  padding: var(--la-space-2) var(--la-space-3);
+  transition: border-color var(--la-transition-fast);
+}
+
+#la-search-stub::placeholder {
+  color: var(--la-color-text-muted);
+}
+
+#la-search-stub:focus,
+#la-search-stub:focus-visible {
+  outline: 2px solid var(--la-color-blue-bright);
+  outline-offset: 2px;
+  border-color: var(--la-color-blue-bright);
+}
+
+/* §7.3 Pagefind UI containers */
 
 #la-search,
 .pagefind-ui {
@@ -624,7 +655,7 @@ pre code {
   --pagefind-ui-font: var(--la-font-body);
 }
 
-/* §7.3 Search input */
+/* §7.4 Search input (Pagefind UI, post-mount) */
 
 .pagefind-ui .pagefind-ui__search-input {
   font-family: var(--la-font-body);
@@ -656,7 +687,7 @@ pre code {
   color: var(--la-color-text-primary);
 }
 
-/* §7.4 Results panel */
+/* §7.5 Results panel */
 
 .pagefind-ui .pagefind-ui__drawer,
 .pagefind-ui .pagefind-ui__results-area {
