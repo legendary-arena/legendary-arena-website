@@ -1,7 +1,7 @@
 # Content Conventions
 
-**Status:** v1 (WP-004)
-**Last updated:** 2026-05-08
+**Status:** v1 (WP-004); Build pipeline + Search sections locked under WP-005 (2026-05-09); Production deploy section added under WP-006 (2026-05-09)
+**Last updated:** 2026-05-09
 
 > **Authority:** This document records the content-authoring conventions
 > for `www.legendary-arena.com`. It is subordinate to `01-VISION.md`
@@ -65,6 +65,92 @@ build-time artifact — visible in production builds only (i.e., after
 runs produce byte-identical `public/` per `Compare-Object` over
 SHA-256 hashes of every file. Verified at WP-005 lock; future WPs
 that touch the build pipeline must re-verify.
+
+## Production deploy
+
+**Host: Cloudflare Pages (WP-006, 2026-05-09).** Production URL is
+`https://www.legendary-arena.com`. CF Pages project name:
+`legendary-arena-website`; auto-generated alias:
+`legendary-arena-website.pages.dev`. Build configuration in CF Pages
+matches `README.md` Prerequisites verbatim:
+
+- Production branch: `main`
+- Build command: `npm ci && npm run build`
+- Build output directory: `public`
+- `HUGO_VERSION` env: `0.161.1` (pinned to README's Prerequisites)
+- `NODE_VERSION` env: `22` (Node major; CF resolves to `22.22.0`)
+- Preview deploys: enabled for non-`main` branches and PRs
+
+CF Pages auto-redeploys on every push to `main`. Preview deploys
+land at `<branch-slug>--legendary-arena-website.pages.dev` and at a
+unique-deploy URL like `<deploy-id>.legendary-arena-website.pages.dev`.
+
+### CORS contract for `/brand-tokens.css`
+
+`static/_headers` (Hugo copies it verbatim to `public/_headers`)
+declares the cross-origin contract:
+
+```
+/brand-tokens.css
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=3600, must-revalidate
+```
+
+For these headers to actually reach clients on
+`www.legendary-arena.com`, the CF zone's **Caching → Configuration
+→ Browser Cache TTL** must be set to **"Respect Existing Headers"**.
+CF's default zone-level Browser Cache TTL (4 hours = 14400s)
+otherwise overrides origin Cache-Control. The locked posture
+(1-hour TTL + `must-revalidate`, NOT `immutable`) encodes the
+brand-tokens v1 single-URL contract: v1 → v2 is a coordinated
+consumer swap on the SAME URL `/brand-tokens.css` (not
+filename-versioned URLs like `brand-tokens.v1.css`). Full
+governance trace in `01-VISION.md` Decisions log 2026-05-09
+(WP-006 lock).
+
+### Apex-redirect mechanism
+
+`legendary-arena.com` (apex) is bound to the same CF Pages project
+as `www.legendary-arena.com`, and 301-redirects to www via a
+**zone-level Cloudflare Redirect Rule** (CF dashboard → the
+`legendary-arena.com` zone → Rules → Redirect Rules), created
+from CF's "Redirect from root to WWW" template:
+
+- Wildcard source: `https://legendary-arena.com/*`
+- Dynamic target: `https://www.legendary-arena.com/${1}`
+- Status: 301 Permanent; preserve query string: ON
+
+NOTE: An earlier in-repo `static/_redirects` mechanism specified
+by WP-006 Step 6's original locked decision was discovered to be
+unsupported by Cloudflare Pages — CF's `_redirects` engine accepts
+path-only sources, not full-URL source patterns. The mechanism was
+amended at WP-006 lock to the zone Redirect Rule above. See
+`01-VISION.md` Decisions log 2026-05-09 (WP-006 lock) for the full
+discovery + amendment trace.
+
+### CF zone settings recorded for reproducibility
+
+These two `legendary-arena.com` zone-level settings are
+load-bearing for the contracts above; if a future operator resets
+them to CF defaults, the contracts silently regress. They are
+NOT in the repo (they live in the CF dashboard). They are
+recorded here and in `01-VISION.md` Decisions log so an audit
+reading the repo can verify expected zone state.
+
+- **Caching → Configuration → Browser Cache TTL:** "Respect
+  Existing Headers" (required for `/brand-tokens.css`
+  Cache-Control to fire as locked)
+- **AI Crawl Control / Managed `robots.txt`:** OFF (keeps Hugo's
+  clean `User-agent: *` `robots.txt`; CF's injected
+  `Content-Signal:` directive is not yet recognized by
+  Lighthouse v12 and causes a cosmetic SEO regression)
+
+### Authoring deploys
+
+Pushing a commit to `main` deploys to production on its own. Open
+a PR for any change you'd like a preview URL for; the
+Cloudflare GitHub-app comment on the PR will carry the preview
+URL within ~30 seconds of the push.
 
 ## Search
 

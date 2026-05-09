@@ -75,7 +75,7 @@ their integrations. WP-008 is parallel to WP-009 but does not feed it.
 | WP-003 | Apply LA brand via theme overrides | ✅ Done | WP-002 | 1 day |
 | WP-004 | Content scaffolding + first 3 pages | ✅ Done (2026-05-08) | WP-003 | half-day |
 | WP-005 | Pagefind search integration | ✅ Done (2026-05-09) | WP-004 | half-day |
-| WP-006 | Cloudflare Pages deploy + custom domain | ⏸️ Pending | WP-005 | half-day |
+| WP-006 | Cloudflare Pages deploy + custom domain | ✅ Done (2026-05-09) | WP-005 | half-day |
 | WP-007a | play.legendary-arena.com deploy | ⏸️ Pending | WP-006 | 1 day |
 | WP-007b | Registry viewer brand integration (cards.barefootbetters.com) | ⏸️ Pending | WP-006 | ~half-day–1 day |
 | WP-008 | SEO baseline (Hugo equivalent of RankMath features) | ⏸️ Pending | WP-006 | ~1 day |
@@ -879,17 +879,28 @@ returned 88-89 on home, below the 90 floor. The lazy-load pattern
 
 ---
 
-## WP-006 — Cloudflare Pages deploy + custom domain ⏸️
+## WP-006 — Cloudflare Pages deploy + custom domain ✅
 
-**Status:** Pending (WP-005 ✅ done 2026-05-09; ready for execution)
-**Effort:** half-day (most of it is DNS propagation waiting)
+**Status:** Done (2026-05-09)
+**Effort actual:** ~half-day (CF Pages project + DNS bind + Step 4
+`_headers` + Step 6 apex-mechanism discovery + amendment + verification)
 **Dependencies:** WP-005
+**Commits:** `3c955a8` (Step 4: `static/_headers` — CORS for
+`/brand-tokens.css`), `f397807` (Step 6 first attempt:
+`static/_redirects` — superseded after CF Pages full-URL
+source-pattern incompatibility surfaced), `3871d7d` (PR #1 squash:
+Step 6 amendment — remove no-op `static/_redirects`, doubled as
+Step 7 preview-deploy verification), and the WP-006 lock commit
+itself (this commit).
+**CF Pages project:** `legendary-arena-website` →
+`legendary-arena-website.pages.dev`
 
 ### Readiness
 
 - Spec complete: ✅
 - Dependencies met: ✅
 - Ready for execution: ✅
+- Executed: ✅
 
 ### Preconditions
 
@@ -906,7 +917,7 @@ production deploy pipeline.
 ### Deliverables
 
 - Cloudflare Pages project created, connected to this GitHub repo
-- Build command: `npm run build` (matches local exactly)
+- Build command: `npm ci && npm run build` (matches local exactly)
 - Build output directory: `public`
 - Custom domains bound: `legendary-arena.com` AND `www.legendary-arena.com`
 - Canonical decided: `www.legendary-arena.com` is canonical (per
@@ -924,29 +935,134 @@ production deploy pipeline.
 
 ### Definition of Done
 
-- [ ] `https://www.legendary-arena.com` loads the site
-- [ ] `https://legendary-arena.com` redirects (301 or 308) to
-      `https://www.legendary-arena.com`
-- [ ] Pushing to `main` triggers automatic redeploy
-- [ ] Opening a PR creates a preview deploy (verify with a test PR)
-- [ ] HTTPS works on both apex and www (no cert errors, no mixed content)
+- [x] `https://www.legendary-arena.com` loads the site (verified
+      end-to-end on the live URL)
+- [x] `https://legendary-arena.com` redirects (301) to
+      `https://www.legendary-arena.com` (verified `/`, `/about/`, and
+      a deep post path; path preserved on all three)
+- [x] Pushing to `main` triggers automatic redeploy (verified — PR #1
+      squash-merge to main as `3871d7d` triggered CF Pages production
+      redeploy automatically)
+- [x] Opening a PR creates a preview deploy (verified end-to-end via
+      PR #1 — preview URL `8d381143.legendary-arena-website.pages.dev`;
+      CF GitHub-app comment posted with the URL; preview build log
+      shows the same `npm ci && npm run build` invocation as production)
+- [x] HTTPS works on both apex and www (no cert errors, no
+      mixed-content warnings)
 
 ### Exit criteria
 
-- [ ] Live site matches local build output (spot check 3 pages: home,
-      about, blog post)
-- [ ] No console errors on live site (DevTools → Console clean)
-- [ ] All internal links resolve (no 404s) — verify with a link checker
-      or manual click-through
-- [ ] Lighthouse ≥ 90 on live URL (not just local — production env
-      matters)
-- [ ] `brand-tokens.css` accessible at
+- [x] Live site matches local build output (spot check three pages:
+      home, about, launch post — copy parity confirmed via
+      grep-extracted hero text, `params.sections` cards, post title)
+- [x] No console errors on live site (Lighthouse `errors-in-console`
+      audit returned `score=1, items=0` on both home and post)
+- [x] All internal links resolve (manual sweep: 16 unique internal
+      hrefs across home / about / posts pages all return HTTP 200;
+      zero 404s)
+- [x] Lighthouse ≥ 90 on live URL — see scores below
+- [x] `brand-tokens.css` accessible at
       `https://www.legendary-arena.com/brand-tokens.css` with
-      CORS-friendly headers (`Access-Control-Allow-Origin: *` or
-      explicit consumer origins: `play.legendary-arena.com`,
-      `cards.barefootbetters.com`)
-- [ ] Token version v1 visible in the version header comment when
+      `Access-Control-Allow-Origin: *` and `Cache-Control: public,
+      max-age=3600, must-revalidate`
+- [x] Token version v1 visible in the version header comment when
       fetching the CSS
+
+### Lighthouse scores (live URL, post-Step-8 fixes)
+
+Numbers measured against the production-served live URL after the
+two Step 8 zone-level fixes (Browser Cache TTL → Respect Existing
+Headers; AI Crawl Control / Managed robots.txt → OFF).
+
+| Page | Performance | Accessibility | Best Practices | SEO |
+|---|---|---|---|---|
+| Home (`/`) | 97 | 100 | 100 | 100 |
+| Post (`/posts/2026-05-07-launch-announcement/`) | 99 | 100 | 100 | 100 |
+
+The earlier first-pass Lighthouse run (before the two zone-level
+fixes) measured home P=90 / SEO=92 and post P=92 / SEO=92. Both
+runs satisfy the ≥ 90 floor; the SEO regression to 92 was caused by
+Cloudflare's Managed Content / AI Crawl Control feature injecting a
+`Content-Signal:` directive into `robots.txt` that Lighthouse v12
+doesn't recognize. The Performance jump from 90→97 (home) and
+92→99 (post) on the second run reflects standard
+Lighthouse-on-network variance, not a code change.
+
+### Additional verification (WP-006 lock-pass, 2026-05-09)
+
+- [x] **Apex 301 (curl, three depths):** `curl -I
+      https://legendary-arena.com/` → 301 + `Location:
+      https://www.legendary-arena.com/`; same with `/about/` and
+      `/posts/2026-05-07-launch-announcement/` (path preserved on all)
+- [x] **CORS contract on `/brand-tokens.css`:** `curl -I -H "Origin:
+      https://play.legendary-arena.com"
+      https://www.legendary-arena.com/brand-tokens.css` → 200,
+      `Access-Control-Allow-Origin: *`, `Cache-Control: public,
+      max-age=3600, must-revalidate` (after CF zone Browser Cache
+      TTL was changed from default 4h to "Respect Existing Headers")
+- [x] **Version: v1 in body:** `curl
+      https://www.legendary-arena.com/brand-tokens.css | head` shows
+      the `Version: v1` header comment
+- [x] **CF preview deploy on PRs:** PR #1 (branch
+      `wp006-step7-remove-noop-redirects`) auto-created a preview at
+      `https://8d381143.legendary-arena-website.pages.dev`; CF
+      GitHub-app posted the preview URL on the PR; preview build
+      log identical to production (`npm ci && npm run build`,
+      `nodejs@22.22.0`, `hugo@extended_0.161.1`)
+- [x] **Production redeploy on push to main:** PR #1 squash-merge to
+      main (`3871d7d`) triggered automatic CF Pages production
+      redeploy; verified via GH check-runs API showing successful
+      "Cloudflare Pages" check-run on `3871d7d`
+- [x] **Internal link sweep:** 16 unique internal hrefs across
+      home / about / posts pages all return HTTP 200; zero 404s
+- [x] **Console clean:** Lighthouse `errors-in-console` audit
+      returned 0 items on both home and post
+- [x] **Reproducibility (mechanical):** two consecutive `npm ci &&
+      npm run build` runs (Hugo `v0.161.1` Extended, Node `v24.14.1`
+      locally / `v22.22.0` on CF) produce byte-identical `public/`
+      per `Compare-Object` over SHA-256 hashes of every file in
+      `public/` (empty diff). Pagefind output: 9 pages, 255 words —
+      unchanged from WP-005 lock.
+- [x] **Submodule clean:** `git submodule status` shows
+      `c4ca7ca486ecd67c8f6bba31551a6ee0d1455926 themes/PaperMod
+      (heads/master)` with no `+` modification flag
+- [x] **Pinned env vars in CF Pages:** `HUGO_VERSION=0.161.1`,
+      `NODE_VERSION=22` (from `README.md` Prerequisites; verified
+      in CF build log line "Detected the following tools from
+      environment: nodejs@22.22.0, hugo@extended_0.161.1, npm@10.9.2")
+- [x] **All commits pushed to `origin/main`**
+
+### Apex-redirect mechanism — post-execution amendment
+
+The original Step 6 locked decision specified `static/_redirects`
+(option A) as REQUIRED and PROHIBITED option B (CF dashboard
+rules). During execution this turned out to be technically
+incorrect: Cloudflare Pages' `_redirects` engine does NOT support
+full-URL source patterns — only path-only sources. The committed
+`static/_redirects` file (`f397807`) was silently ignored by CF;
+the apex continued to serve duplicate content (200 with the same
+HTML as `www`).
+
+Replacement mechanism (verified end-to-end):
+- A zone-level Cloudflare **Redirect Rule** on the
+  `legendary-arena.com` zone (Rules → Redirect Rules), created
+  from CF's "Redirect from root to WWW" template
+- Wildcard source pattern: `https://legendary-arena.com/*`
+- Dynamic target: `https://www.legendary-arena.com/${1}`
+- Status: 301 Permanent; preserve query string: ON
+
+The original `static/_redirects` commit was reverted in PR #1
+(squash-merged as `3871d7d`); the file no longer exists in the
+tree.
+
+The full justification — including the in-repo reproducibility
+argument that originally motivated rejecting option B, and how that
+intent is preserved in spirit (zone Redirect Rules are exportable
+via Wrangler CLI or Terraform if config-as-code reproducibility
+becomes load-bearing) — is in `01-VISION.md` Decisions log entry
+2026-05-09 (WP-006 lock). The WP-006 design pack at
+`docs/ai/work-packets/WP-006-cloudflare-deploy.md` carries a
+post-execution amendment section pointing here.
 
 ### Failure conditions
 
@@ -957,12 +1073,23 @@ production deploy pipeline.
 - `brand-tokens.css` not fetchable cross-origin (CORS blocks
   `play.legendary-arena.com` or `cards.barefootbetters.com`)
 - Preview deploys not creating on PRs
+- `Cache-Control` on `/brand-tokens.css` differs from
+  `public, max-age=3600, must-revalidate` (locked decision; requires
+  CF zone Browser Cache TTL = "Respect Existing Headers")
 
 ### Rollback
 
 - Cloudflare Pages: revert to previous deployment via dashboard (one
   click, instant)
 - Repo: revert offending commit on `main`, push, auto-deploys
+- Apex Redirect Rule: in CF zone → Rules → Redirect Rules → toggle
+  off or delete the "Apex to www" rule. Apex reverts to serving
+  duplicate content (the pre-Step-6 state); www remains canonical.
+- DNS: pre-WP-006 state recorded in `01-VISION.md` Decisions log
+  2026-05-09 — zone was already on Cloudflare DNS with no
+  pre-existing public records on the apex (only the `www`,
+  `api`, `ewiki` CNAMEs and `MX` + SPF `TXT` for Namecheap email
+  forwarding existed; WP-006 added the apex CNAME flattening).
 
 ---
 
