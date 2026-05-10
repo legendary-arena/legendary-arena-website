@@ -1,0 +1,65 @@
+#!/bin/sh
+# pre-commit hook — marketing-site staged-file hygiene
+# Enforces: no secrets, no Hugo build outputs, no local verification artifacts.
+# Message-based checks live in commit-msg (pre-commit has no message access).
+#
+# Contract: docs/ai/REFERENCE/01.3-commit-hygiene.md
+
+RED='\033[0;31m'
+NC='\033[0m'
+
+fail() {
+  echo ""
+  echo "${RED}PRE-COMMIT BLOCKED:${NC} $1"
+  echo ""
+  exit 1
+}
+
+# Get staged files (added, modified, copied, renamed)
+STAGED=$(git diff --cached --name-only --diff-filter=ACMR 2>/dev/null)
+
+if [ -z "$STAGED" ]; then
+  exit 0
+fi
+
+# Rule 1: No .env files (may contain secrets) — .env.example is allowed
+echo "$STAGED" | grep -E '\.env$|\.env\.' | grep -vq '\.env\.example$'
+if [ $? -eq 0 ]; then
+  fail "Staged .env file detected (not .env.example). Remove from staging: git reset HEAD <file>"
+fi
+
+# Rule 2: No node_modules
+echo "$STAGED" | grep -q 'node_modules/' && \
+  fail "Staged node_modules/ files detected. node_modules/ is gitignored — if it's staged, run: git reset HEAD node_modules/"
+
+# Rule 3: No public/ (Hugo build output)
+echo "$STAGED" | grep -qE '^public/' && \
+  fail "Staged public/ files detected. public/ is gitignored Hugo build output. Run: git reset HEAD public/"
+
+# Rule 4: No resources/ (Hugo asset cache)
+echo "$STAGED" | grep -qE '^resources/' && \
+  fail "Staged resources/ files detected. resources/ is gitignored Hugo asset cache. Run: git reset HEAD resources/"
+
+# Rule 5: No .hugo_build.lock
+echo "$STAGED" | grep -q '\.hugo_build\.lock$' && \
+  fail "Staged .hugo_build.lock detected. This is gitignored — run: git reset HEAD .hugo_build.lock"
+
+# Rule 6: No credentials files
+echo "$STAGED" | grep -qiE 'credentials\.json|secrets\.json|\.pem$|\.key$' && \
+  fail "Staged credentials or key file detected. Do not commit secrets."
+
+# Rule 7: No local Lighthouse verification artifacts
+# why: lighthouse-*.json files are produced by WP-005 § Step 8.5 / 8.7
+# verification and are local-only per the WP-005 lock entry. Scores are
+# recorded in 03-ROADMAP.md and 01-VISION.md decisions log, not in the
+# repo as JSON.
+echo "$STAGED" | grep -qE '^lighthouse-.*\.json$' && \
+  fail "Staged lighthouse-*.json detected. Lighthouse artifacts are local-only per WP-005. Run: git reset HEAD lighthouse-*.json"
+
+# Rule 8: No build1.txt / build2.txt scratch files
+# why: build1.txt / build2.txt are produced by WP-005 reproducibility hash
+# diff and are gitignored. If they're staged, .gitignore was bypassed.
+echo "$STAGED" | grep -qE '^build[0-9]+\.txt$' && \
+  fail "Staged build*.txt detected. These are WP-005 reproducibility scratch files. Run: git reset HEAD build*.txt"
+
+exit 0

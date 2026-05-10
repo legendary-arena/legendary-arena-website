@@ -1,0 +1,177 @@
+name: Commit Hygiene
+
+# Mirrors .githooks/commit-msg and .githooks/pre-commit rules in CI.
+# Catches commits that bypassed local hooks (--no-verify, missing install,
+# external contributors on a fork).
+#
+# Contract: docs/ai/REFERENCE/01.3-commit-hygiene.md
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  commit-messages:
+    name: Validate commit messages
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # need full history for commit range
+
+      - name: Check commit messages against hygiene rules
+        run: |
+          chmod +x .githooks/commit-msg
+
+          BASE="${{ github.event.pull_request.base.sha }}"
+          HEAD="${{ github.event.pull_request.head.sha }}"
+          COMMITS=$(git rev-list "$BASE".."$HEAD")
+          FAIL=0
+          TOTAL=0
+          PASSED=0
+
+          for SHA in $COMMITS; do
+            TOTAL=$((TOTAL + 1))
+            MSG_FILE=$(mktemp)
+            git log --format='%s' -n 1 "$SHA" > "$MSG_FILE"
+            SUBJECT=$(cat "$MSG_FILE")
+
+            echo "::group::Commit $SHA — $SUBJECT"
+            if .githooks/commit-msg "$MSG_FILE" 2>&1; then
+              echo "Passed"
+              PASSED=$((PASSED + 1))
+            else
+              echo "::error::Commit $SHA failed hygiene check: $SUBJECT"
+              FAIL=$((FAIL + 1))
+            fi
+            echo "::endgroup::"
+            rm -f "$MSG_FILE"
+          done
+
+          echo ""
+          echo "Results: $PASSED/$TOTAL passed, $FAIL failed"
+
+          if [ "$FAIL" -gt 0 ]; then
+            echo ""
+            echo "Fix: amend or rebase commits to use valid prefixes"
+            echo "     (WP-NNN: / ROADMAP: / INFRA: / SPEC:)"
+            echo "See: docs/ai/REFERENCE/01.3-commit-hygiene.md"
+            exit 1
+          fi
+
+  file-hygiene:
+    name: Validate staged file patterns
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check PR diff for forbidden file patterns
+        run: |
+          BASE="${{ github.event.pull_request.base.sha }}"
+          HEAD="${{ github.event.pull_request.head.sha }}"
+          CHANGED=$(git diff --name-only "$BASE".."$HEAD")
+          FAIL=0
+
+          # No .env files (except .env.example)
+          if echo "$CHANGED" | grep -E '\.env$|\.env\.' | grep -vq '\.env\.example$'; then
+            echo "::error::PR includes .env file(s). Remove before merging."
+            FAIL=1
+          fi
+
+          # No node_modules
+          if echo "$CHANGED" | grep -q 'node_modules/'; then
+            echo "::error::PR includes node_modules/ files. These must not be committed."
+            FAIL=1
+          fi
+
+          # No public/ (Hugo build output)
+          if echo "$CHANGED" | grep -qE '^public/'; then
+            echo "::error::PR includes public/ files. Hugo build output must not be committed."
+            FAIL=1
+          fi
+
+          # No resources/ (Hugo asset cache)
+          if echo "$CHANGED" | grep -qE '^resources/'; then
+            echo "::error::PR includes resources/ files. Hugo asset cache must not be committed."
+            FAIL=1
+          fi
+
+          # No .hugo_build.lock
+          if echo "$CHANGED" | grep -q '\.hugo_build\.lock$'; then
+            echo "::error::PR includes .hugo_build.lock. This is gitignored."
+            FAIL=1
+          fi
+
+          # No credentials
+          if echo "$CHANGED" | grep -qiE 'credentials\.json|secrets\.json|\.pem$|\.key$'; then
+            echo "::error::PR includes credential or key file(s). Do not commit secrets."
+            FAIL=1
+          fi
+
+          # No local Lighthouse artifacts
+          if echo "$CHANGED" | grep -qE '^lighthouse-.*\.json$'; then
+            echo "::error::PR includes lighthouse-*.json. These are local-only per WP-005."
+            FAIL=1
+          fi
+
+          # No reproducibility scratch files
+          if echo "$CHANGED" | grep -qE '^build[0-9]+\.txt$'; then
+            echo "::error::PR includes build*.txt. These are WP-005 reproducibility scratch files."
+            FAIL=1
+          fi
+
+          if [ "$FAIL" -eq 0 ]; then
+            echo "All file hygiene checks passed"
+          else
+            exit 1
+          fi
+
+  wp-site-traceability:
+    name: Verify site commits reference WPs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check site-affecting commits have WP prefix
+        run: |
+          BASE="${{ github.event.pull_request.base.sha }}"
+          HEAD="${{ github.event.pull_request.head.sha }}"
+          COMMITS=$(git rev-list "$BASE".."$HEAD")
+          FAIL=0
+
+          for SHA in $COMMITS; do
+            # Get files changed in this commit
+            FILES=$(git diff-tree --no-commit-id --name-only -r "$SHA")
+            HAS_SITE=$(echo "$FILES" | grep -cE '^(content/|layouts/|assets/|static/|archetypes/|data/|i18n/|themes/|hugo\.toml$|package\.json$|package-lock\.json$)' || true)
+
+            if [ "$HAS_SITE" -gt 0 ]; then
+              SUBJECT=$(git log --format='%s' -n 1 "$SHA")
+              IS_WP=$(echo "$SUBJECT" | grep -cE '^WP-[0-9]+[A-Za-z]?:' || true)
+
+              if [ "$IS_WP" -eq 0 ]; then
+                echo "::error::Commit $SHA touches site-affecting files but lacks WP-NNN prefix: $SUBJECT"
+                FAIL=$((FAIL + 1))
+              else
+                # Verify the referenced WP file exists
+                WP_NUM=$(echo "$SUBJECT" | sed -E 's/^WP-([0-9]+[A-Za-z]?).*/\1/')
+                WP_FILE=$(find docs/ai/work-packets -iname "WP-${WP_NUM}-*.md" 2>/dev/null | head -n 1)
+                if [ -z "$WP_FILE" ]; then
+                  echo "::error::Commit $SHA references WP-${WP_NUM} but no WP file exists."
+                  FAIL=$((FAIL + 1))
+                fi
+              fi
+            fi
+          done
+
+          if [ "$FAIL" -eq 0 ]; then
+            echo "All site-affecting commits are WP-traceable"
+          else
+            echo ""
+            echo "Fix: ensure site-affecting commits use WP-NNN: prefix with a valid WP file."
+            echo "See: docs/ai/REFERENCE/01.3-commit-hygiene.md"
+            exit 1
+          fi

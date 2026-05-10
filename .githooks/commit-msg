@@ -1,0 +1,145 @@
+#!/bin/sh
+# commit-msg hook — marketing-site commit message hygiene
+# Enforces: message format, forbidden patterns, WP reference validation,
+# site-affecting-files-require-WP-prefix cross-check.
+#
+# Contract: docs/ai/REFERENCE/01.3-commit-hygiene.md
+# This hook receives the commit message file as $1.
+
+RED='\033[0;31m'
+YELLOW='\033[0;33m'
+NC='\033[0m'
+
+MSG_FILE="$1"
+if [ ! -f "$MSG_FILE" ]; then
+  echo "${RED}COMMIT-MSG ERROR:${NC} No commit message file provided."
+  exit 1
+fi
+
+# Read the subject line (first non-comment, non-empty line)
+SUBJECT=$(grep -v '^#' "$MSG_FILE" | grep -v '^$' | head -n 1)
+
+if [ -z "$SUBJECT" ]; then
+  echo ""
+  echo "${RED}COMMIT BLOCKED:${NC} Empty commit message."
+  echo "Allowed formats:"
+  echo "  WP-NNN[a-z]?: <present-tense summary>   (site changes, WP work)"
+  echo "  ROADMAP: <summary>                       (roadmap-only, outside any WP)"
+  echo "  INFRA: <summary>                         (tooling, hooks, CI)"
+  echo "  SPEC: <summary>                          (governance doc corrections)"
+  echo ""
+  echo "See: docs/ai/REFERENCE/01.3-commit-hygiene.md"
+  echo ""
+  exit 1
+fi
+
+# --- Rule 1: Forbidden patterns ---
+FORBIDDEN="WIP|wip|fix stuff|misc|tmp|updates|changes|debug|quick fix|hotfix|cleanup|refactor"
+echo "$SUBJECT" | grep -qiE "$FORBIDDEN" && {
+  echo ""
+  echo "${RED}COMMIT BLOCKED:${NC} Subject contains a forbidden pattern."
+  echo "Rejected subject: $SUBJECT"
+  echo "Forbidden words: WIP, fix stuff, misc, tmp, updates, changes, debug,"
+  echo "                 quick fix, hotfix, cleanup, refactor"
+  echo "Write a specific, present-tense description instead."
+  echo ""
+  exit 1
+}
+
+# --- Rule 2: Must match an allowed prefix ---
+# Letter suffix on WP accepts either case (WP-007a / WP-007A both valid).
+IS_WP=$(echo "$SUBJECT" | grep -cE '^WP-[0-9]+[A-Za-z]?:')
+IS_ROADMAP=$(echo "$SUBJECT" | grep -cE '^ROADMAP:')
+IS_INFRA=$(echo "$SUBJECT" | grep -cE '^INFRA:')
+IS_SPEC=$(echo "$SUBJECT" | grep -cE '^SPEC:')
+
+if [ "$IS_WP" -eq 0 ] && [ "$IS_ROADMAP" -eq 0 ] && [ "$IS_INFRA" -eq 0 ] && [ "$IS_SPEC" -eq 0 ]; then
+  echo ""
+  echo "${RED}COMMIT BLOCKED:${NC} Subject does not match an allowed prefix."
+  echo "Rejected subject: $SUBJECT"
+  echo "Allowed formats:"
+  echo "  WP-NNN[a-z]?: <present-tense summary>"
+  echo "  ROADMAP: <summary>"
+  echo "  INFRA: <summary>"
+  echo "  SPEC: <summary>"
+  echo ""
+  echo "See: docs/ai/REFERENCE/01.3-commit-hygiene.md"
+  echo ""
+  exit 1
+fi
+
+# --- Rule 3: Subject must be meaningful (>= 12 chars after prefix) ---
+AFTER_PREFIX=$(echo "$SUBJECT" | sed -E 's/^(WP-[0-9]+[A-Za-z]?|ROADMAP|INFRA|SPEC):[[:space:]]*//')
+AFTER_LEN=$(echo -n "$AFTER_PREFIX" | wc -c | tr -d ' ')
+
+if [ "$AFTER_LEN" -lt 12 ]; then
+  echo ""
+  echo "${RED}COMMIT BLOCKED:${NC} Subject too short after prefix ($AFTER_LEN chars, need >= 12)."
+  echo "Rejected subject: $SUBJECT"
+  echo "Write a specific, present-tense description of what changed."
+  echo ""
+  exit 1
+fi
+
+# --- Rule 4: WP-NNN commits must reference an existing WP file ---
+if [ "$IS_WP" -gt 0 ]; then
+  WP_NUM=$(echo "$SUBJECT" | sed -E 's/^WP-([0-9]+[A-Za-z]?).*/\1/')
+
+  # Case-insensitive lookup so WP-007A: resolves WP-007a-*.md (and vice versa).
+  WP_FILE=$(find docs/ai/work-packets -iname "WP-${WP_NUM}-*.md" 2>/dev/null | head -n 1)
+  if [ -z "$WP_FILE" ]; then
+    echo ""
+    echo "${RED}COMMIT BLOCKED:${NC} No WP file found for WP-${WP_NUM}."
+    echo "Expected: docs/ai/work-packets/WP-${WP_NUM}-*.md"
+    echo "Create the WP first, or use INFRA: / ROADMAP: / SPEC: for non-WP work."
+    echo ""
+    exit 1
+  fi
+fi
+
+# --- Rule 5: Site-affecting files require WP-NNN prefix ---
+# Site-affecting = anything that ends up in public/ after `hugo --minify`.
+STAGED=$(git diff --cached --name-only --diff-filter=ACMR 2>/dev/null)
+HAS_SITE=0
+if [ -n "$STAGED" ]; then
+  HAS_SITE=$(echo "$STAGED" | grep -cE '^(content/|layouts/|assets/|static/|archetypes/|data/|i18n/|themes/|hugo\.toml$|package\.json$|package-lock\.json$)' || true)
+fi
+
+if [ "$HAS_SITE" -gt 0 ] && [ "$IS_WP" -eq 0 ]; then
+  echo ""
+  echo "${RED}COMMIT BLOCKED:${NC} Site-affecting files staged but commit is not WP-scoped."
+  echo "Staged files under content/, layouts/, assets/, static/, archetypes/,"
+  echo "data/, i18n/, themes/, or hugo.toml / package.json / package-lock.json"
+  echo "require a WP-NNN: prefix."
+  echo ""
+  echo "Rejected prefix: $(echo "$SUBJECT" | sed -E 's/:.*/:/')"
+  echo ""
+  echo "If this is genuinely tooling (hooks, scripts, CI):"
+  echo "  Move site-affecting files out of staging, or use WP-NNN: prefix."
+  echo ""
+  echo "See: docs/ai/REFERENCE/01.3-commit-hygiene.md"
+  echo ""
+  exit 1
+fi
+
+# --- Rule 6: Brand-token edits should reference a WP (warning only) ---
+# Cross-site contract: changes to static/brand-tokens.css are load-bearing
+# for downstream consumers (play.*, cards.*). Convention is that brand-token
+# edits go through a WP. Not hook-blocked (the WP-prefix check above already
+# enforces this for code-affecting commits), but called out for visibility.
+HAS_BRAND=0
+if [ -n "$STAGED" ]; then
+  HAS_BRAND=$(echo "$STAGED" | grep -cE '^static/brand-tokens\.css$' || true)
+fi
+
+if [ "$HAS_BRAND" -gt 0 ] && [ "$IS_WP" -gt 0 ]; then
+  echo ""
+  echo "${YELLOW}NOTICE:${NC} static/brand-tokens.css is staged. This is a cross-site"
+  echo "API contract consumed by play.* and cards.*. Verify:"
+  echo "  - The commit body references the file's Version header (vN)"
+  echo "  - 01-VISION.md decisions log carries an entry for this change"
+  echo "  - Downstream consumers are coordinated if this is a breaking change"
+  echo ""
+fi
+
+exit 0
