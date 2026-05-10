@@ -10,7 +10,7 @@ new version publishes.
 
 ---
 
-## v1 (2026-05-07) — LOCKED for www; cross-site consumption pending WP-007a/b
+## v1 (2026-05-07) — LOCKED for www; play consumption verified 2026-05-10 (WP-007a); cards consumption pending WP-007b
 
 **Status:** Locked for `www.legendary-arena.com`. WP-002 + WP-003 jointly
 verified the contract against rendered pages on 2026-05-07: brand
