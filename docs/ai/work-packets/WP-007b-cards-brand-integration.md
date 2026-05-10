@@ -41,8 +41,30 @@ it as a separate engine-repo WP.
 
 The marketing-site roadmap is the design source for **what WP-007b
 does**; the engine-repo rules are the constraint for **how the
-registry-viewer edits land**. Both win in their own domains. If they
-appear to conflict, surface the conflict before proceeding.
+registry-viewer edits land**. Both win in their own domains. If
+they appear to conflict, halt and surface — do not pick a side.
+The conflict itself is a WP-scope question, not an executor
+question.
+
+## Execution mode (authoritative)
+
+WP-007b executes in **STRICT INTEGRATION MODE**, not feature mode.
+
+Hard invariant (audit anchor):
+
+> The system must behave identically to pre-WP execution, except
+> for brand presentation (visual tokens, header / footer chrome)
+> and the addition of cross-origin token consumption.
+
+A diff that introduces gameplay logic, data-pipeline behavior
+change, runtime imports, new dependencies, or bundle-shape
+regressions is a WP-007b failure **even if the build passes and
+tests are green**.
+
+This single sentence is the audit anchor: any reviewer can hold
+the diff against it and reject deviations without re-deriving the
+WP's intent. The Permitted / Prohibited surface lists below
+operationalize it; the invariant is the load-bearing rule.
 
 ## Hostname posture (read carefully — do not "fix")
 
@@ -70,50 +92,84 @@ file is read-only consulted in this WP.
 
 ## Execution discipline (non-negotiable)
 
-This WP executes in **strict integration mode**, not feature mode.
+The Execution mode invariant above is the rule. The two lists
+below operationalize it as a permitted / prohibited write
+surface — the audit checks are mechanical: any staged file
+outside Permitted is a failure; any file under Prohibited is a
+failure regardless of intent.
 
-Scope is LIMITED to:
+### Permitted write surface
 
-- Static asset wiring (`apps/registry-viewer/index.html`,
-  `apps/registry-viewer/public/*`)
-- UI presentation (a new
-  `apps/registry-viewer/src/components/branding/` directory; scoped
-  styles inside existing `.vue` SFCs that currently hold raw color
-  hex values; the existing inline `<style>` block in `index.html`)
-- Marketing-repo lock metadata (`03-ROADMAP.md`, `01-VISION.md`
-  Decisions log)
+Allowed modifications are restricted to:
 
-Scope EXCLUDES:
+**Static asset wiring (engine repo):**
+- `apps/registry-viewer/index.html`
+- `apps/registry-viewer/public/*` (specifically: bundling
+  `brand-tokens.local.css`)
 
-- Registry data shape, schema, or Zod validators
-  (`packages/registry/**`, `apps/registry-viewer/src/registry/**`,
-  `apps/registry-viewer/src/lib/*Client.ts`)
-- Any `apps/registry-viewer/src/composables/*.ts` runtime logic
-- The R2 fetch boundary or `public/registry-config.json`
-- Engine packages (`packages/game-engine`, `packages/preplan`,
-  `apps/server`, `apps/arena-client`)
-- Brand-token contract values
-  (`C:\www\legendary-arena-com\static\brand-tokens.css`)
-- Cloudflare Pages project configuration of the existing deploy
-  (build command, output dir, branch — already-set values are NOT
-  changed; the only CF action is a deploy refresh after the source
-  edits land on `main`)
-- DNS for `cards.barefootbetters.com` (already in place; untouched)
-- `docs/ops/domains.json` and `docs/ops/DOMAINS.md` (per Hostname
-  posture above)
+**UI presentation only (engine repo):**
+- A new directory: `apps/registry-viewer/src/components/branding/`
+- Scoped `<style>` blocks inside existing `.vue` SFCs — color
+  replacement only; layout, sizing, and structural CSS are NOT
+  in scope
+- The inline `<style>` block in `index.html` — minimal reset
+  only, all values routed through token variables
+
+**Lock metadata (marketing repo):**
+- `docs/03-ROADMAP.md`
+- `docs/01-VISION.md` (Decisions log entry)
+- This WP file itself (post-lock amendments)
+
+### Explicitly prohibited surfaces
+
+The following MUST remain untouched for the duration of WP-007b:
+
+**Data, schema, runtime (engine repo):**
+- `packages/registry/**`
+- `apps/registry-viewer/src/registry/**`
+- `apps/registry-viewer/src/lib/*Client.ts`
+- `apps/registry-viewer/src/composables/*.ts`
+- `apps/registry-viewer/public/registry-config.json`
+- `apps/registry-viewer/src/main.ts`
+
+**Other engine packages and apps:**
+- `packages/game-engine`
+- `packages/preplan`
+- `apps/server`
+- `apps/arena-client`
+
+**Infrastructure (engine repo):**
+- Cloudflare Pages project configuration of the existing
+  `cards.barefootbetters.com` deploy (build command, output dir,
+  branch); the only CF action in this WP is a deploy refresh
+  triggered by a push to `main`
+- DNS for `cards.barefootbetters.com`
+- `docs/ops/domains.json`
+- `docs/ops/DOMAINS.md`
+
+**Brand-token contract (marketing repo):**
+- `static/brand-tokens.css`
+- `docs/brand/**`
+
+**Other:**
+- `apps/registry-viewer/package.json` and `pnpm-lock.yaml`
+  (no new runtime deps needed)
 - Test infrastructure beyond fixing tests broken by the
   brand-integration edits themselves
 
-Any required change outside this scope MUST:
+### Halt rule
 
-1. Halt execution.
+Any required change outside the Permitted surface, OR any required
+touch of a Prohibited surface, MUST:
+
+1. Halt execution immediately.
 2. Be written as a separate WP in the correct repo (engine-side
    work → engine-repo WP per `.claude/rules/work-packets.md`;
-   marketing-side work → new entry in `03-ROADMAP.md`).
+   marketing-side work → new entry in `docs/03-ROADMAP.md`).
 3. Be explicitly approved before proceeding.
 
 **No "while we're here" edits are permitted.** A diff that touches
-files outside the scope list above is a WP-007b failure condition,
+files outside the Permitted surface is a WP-007b failure condition,
 even if the touched files compile and tests pass.
 
 ## Working directory
@@ -328,7 +384,23 @@ What's pending — **your job**:
 
 ## Task
 
-### Step 1 — Pre-flight + decide what NOT to change
+The execution arc is six phases. Each phase has a clear exit
+criterion; do not enter the next phase until the current phase's
+exit holds. Phase boundaries are also natural commit / hand-off
+points if the WP is split across sessions.
+
+| Phase | Steps | Exit criterion |
+|---|---|---|
+| 1 — Pre-flight | 1, 2 | Pre-conditions verified; no blockers surfaced |
+| 2 — Integration | 3, 4, 5 | Tokens wired; fallback bundled; UI surface consumes tokens |
+| 3 — Validation | 6, 7 | Dev smoke + production-shape build clean |
+| 4 — Deployment | 8 | Production deploy succeeds; site refreshes |
+| 5 — Live verification | 9 | All Exit criteria pass on the live URL |
+| 6 — Lock | 10 | Roadmap + Decisions log updated |
+
+### Phase 1 — Pre-flight
+
+#### Step 1 — Pre-flight + decide what NOT to change
 
 Before opening the CF dashboard or editing `apps/registry-viewer`,
 confirm:
@@ -379,7 +451,7 @@ confirm:
 If any pre-flight check fails, stop and surface — don't push edits
 that depend on a state that isn't true yet.
 
-### Step 2 — Verify the WP-006 CORS contract from a foreign origin
+#### Step 2 — Verify the WP-006 CORS contract from a foreign origin
 
 Before integrating, confirm the contract behaves correctly when
 fetched from an origin that is **not** `www.legendary-arena.com`. The
@@ -408,7 +480,15 @@ drifting back to a non-default value (per WP-006 lock note, it must
 be set to "Respect Existing Headers"); a CF zone-setting regression
 masks as a `Cache-Control` mismatch.
 
-### Step 3 — Wire brand-token consumption into `apps/registry-viewer/index.html`
+**Exit criterion (Phase 1):** WP-006 CORS contract verifies clean
+from a `cards.barefootbetters.com` Origin header; the
+registry-viewer builds locally without errors; the existing
+`cards.barefootbetters.com` deploy is reachable. If any
+pre-flight check failed, do not proceed.
+
+### Phase 2 — Integration
+
+#### Step 3 — Wire brand-token consumption into `apps/registry-viewer/index.html`
 
 Edit `C:\pcloud\BB\DEV\legendary-arena\apps\registry-viewer\index.html`:
 
@@ -484,7 +564,7 @@ Hard rules on the wiring (identical to WP-007a):
   question (separate WP), and do NOT silently substitute a hex
   value as a workaround.
 
-### Step 4 — Bundle the local fallback
+#### Step 4 — Bundle the local fallback
 
 Copy the locked v1 token file from the marketing-site repo into the
 registry-viewer's static-asset directory:
@@ -572,7 +652,7 @@ Hash parity rules (identical to WP-007a):
   there is no race. The hash check at lock is each WP's own
   guarantee.
 
-### Step 5 — Apply brand to the registry-viewer UI surface
+#### Step 5 — Apply brand to the registry-viewer UI surface
 
 The registry-viewer now has the tokens in scope. This step makes
 the UI consume them.
@@ -674,7 +754,16 @@ Specifically, do not touch:
   brand edit breaks a snapshot or DOM-shape test, fix the test in
   the same commit and explain in the commit message)
 
-### Step 6 — Smoke test in dev
+**Exit criterion (Phase 2):** `index.html` carries both `<link>`
+tags in the contractual order; `brand-tokens.local.css` exists
+under `apps/registry-viewer/public/` with byte-parity vs the live
+contract; header / footer mounted at the top-level layout
+boundary; no raw hex remains in `apps/registry-viewer/src/**`
+outside data structures unrelated to color.
+
+### Phase 3 — Validation
+
+#### Step 6 — Smoke test in dev
 
 From the engine monorepo:
 
@@ -707,7 +796,7 @@ Open the dev URL Vite prints. Verify:
 If any check fails, fix in the corresponding source file and
 re-verify. Do not proceed to Step 7 until dev is clean.
 
-### Step 7 — Build + bundle verification
+#### Step 7 — Build + bundle verification
 
 ```powershell
 pnpm --filter registry-viewer build
@@ -739,7 +828,17 @@ Verify in `apps/registry-viewer/dist/`:
 If any check fails, fix in source and rebuild. Do not push to
 `main` (Step 8) until the build is clean.
 
-### Step 8 — Refresh the existing CF Pages deploy
+**Exit criterion (Phase 3):** dev smoke clean (header / footer
+render in all three views, no console errors, cross-origin token
+fetch succeeds, cards / themes / loadout functionality unaffected);
+production-shape build clean (`pnpm --filter registry-viewer
+build` / `test` / `typecheck` / `lint` all pass; bundle byte size
+within single-digit-kB growth vs baseline; no forbidden imports
+in dist).
+
+### Phase 4 — Deployment
+
+#### Step 8 — Refresh the existing CF Pages deploy
 
 This step does **not** create a new CF Pages project, **not**
 change build commands, **not** touch DNS, **not** rebind a custom
@@ -787,7 +886,14 @@ If the build fails on CF, the most likely causes are:
   22. Fix: same as above — verify, do not rewrite as part of
   WP-007b.
 
-### Step 9 — Live verification on `cards.barefootbetters.com`
+**Exit criterion (Phase 4):** PR preview deploy on `*.pages.dev`
+verified clean against the Step 6 smoke checklist; merge to `main`
+lands; CF Pages production deploy reports "Success" on the merge
+commit.
+
+### Phase 5 — Live verification
+
+#### Step 9 — Live verification on `cards.barefootbetters.com`
 
 After the production deploy goes live:
 
@@ -850,7 +956,17 @@ After the production deploy goes live:
 If any check fails, fix in source and redeploy via Step 8. Do not
 proceed to Step 10 until live verification is clean.
 
-### Step 10 — Lock metadata
+**Exit criterion (Phase 5):** all ten Step 9 live-verification
+checks pass on the production URL. Lighthouse ≥ 90 in all four
+categories; no console errors; cross-origin token fetch returns
+`200` with `Version: v1`; deployed snapshot hash-parity holds; no
+mixed content; card / theme / loadout smoke tests pass; brand
+parity vs www reads as the same identity by eye. Any failure here
+sends execution back to the relevant earlier phase.
+
+### Phase 6 — Lock
+
+#### Step 10 — Lock metadata
 
 Two repos, two lock actions:
 
@@ -882,6 +998,38 @@ Confirm the lock by re-running the production hash-parity check
 from Step 9.5 one more time after the marketing-side commits land.
 The hash should still match (the marketing-side edits only touch
 docs, not `static/brand-tokens.css`).
+
+**Exit criterion (Phase 6):** WP-007b status flipped to ✅ Done
+in `03-ROADMAP.md`; Decisions log entry committed in
+`01-VISION.md`; production hash-parity re-verified post-lock.
+The carve-out from WP-002's "v1 LOCKED for WWW" lock is now
+fully closed (WP-007a closed the `play.*` half; WP-007b closes
+the `cards.*` half).
+
+## Non-functional guarantees (audit summary)
+
+After WP-007b locks, the following must remain true. These are
+the mechanical checks a reviewer can run against the diff:
+
+- **No behavior regression** in card / theme / loadout
+  functionality (covered by Step 9 smoke tests).
+- **No data-pipeline change** (no edits under
+  `apps/registry-viewer/src/registry/**`,
+  `apps/registry-viewer/src/lib/*Client.ts`,
+  `apps/registry-viewer/src/composables/*.ts`,
+  `apps/registry-viewer/public/registry-config.json`).
+- **No new runtime imports** in any registry-viewer source file.
+- **No dependency changes** in `package.json` or
+  `pnpm-lock.yaml`.
+- **No bundle-shape regression** beyond single-digit-kB growth
+  for the local-fallback CSS + header / footer Vue component.
+- **No infrastructure drift** (Cloudflare Pages config, DNS,
+  `domains.json`, `DOMAINS.md` all unchanged).
+- **No brand-contract drift** (`static/brand-tokens.css`,
+  `docs/brand/**` unchanged).
+
+If any of these fails, the WP fails — regardless of the visual
+result.
 
 ## Definition of Done
 
