@@ -66,6 +66,27 @@ the diff against it and reject deviations without re-deriving the
 WP's intent. The Permitted / Prohibited surface lists below
 operationalize it; the invariant is the load-bearing rule.
 
+**Enforcement check (mechanical — binary, no interpretation):**
+
+- No changes to runtime imports anywhere in `apps/registry-viewer/src/**`
+  (`git diff` must show zero net-new `import` lines outside the new
+  `src/components/branding/` directory; any net-new import in
+  pre-existing files is a failure).
+- No diffs under `apps/registry-viewer/src/registry/**`,
+  `apps/registry-viewer/src/composables/**`, or
+  `apps/registry-viewer/src/lib/*Client.ts`.
+- `dist/` file-count delta ≤ +3 files vs the pre-WP baseline build
+  (expected additions: header SFC compiled output, footer SFC
+  compiled output if separate, and `brand-tokens.local.css`).
+- `dist/` JS bundle byte-size delta ≤ +10 kB vs the pre-WP baseline
+  (uncompressed, measured consistently — see Step 7 "Baseline
+  definition").
+
+If any of the four checks fails, the invariant is considered broken
+**regardless of visual correctness, passing tests, or Lighthouse
+scores**. Reviewer signs off on these four checks before reading the
+diff for content.
+
 ## Hostname posture (read carefully — do not "fix")
 
 The roadmap, `01-VISION.md` v1 Decisions log (2026-05-07), and
@@ -490,7 +511,36 @@ pre-flight check failed, do not proceed.
 
 #### Step 3 — Wire brand-token consumption into `apps/registry-viewer/index.html`
 
-Edit `C:\pcloud\BB\DEV\legendary-arena\apps\registry-viewer\index.html`:
+**Pre-check (required before any edit to `index.html`):**
+
+Verify that every token name `index.html` is about to reference
+actually exists in the v1 contract. The wiring below references three
+tokens directly:
+
+- `--la-color-bg-primary`
+- `--la-color-text-primary`
+- `--la-font-sans`
+
+Run a quick existence check against the live contract:
+
+```powershell
+$tokens = @('--la-color-bg-primary', '--la-color-text-primary', '--la-font-sans')
+$body = (Invoke-WebRequest -Uri "https://www.legendary-arena.com/brand-tokens.css").Content
+foreach ($t in $tokens) {
+  if ($body -notmatch [regex]::Escape($t)) {
+    throw "Missing token in v1 contract: $t — halt before editing index.html."
+  }
+}
+```
+
+If any token is missing, **halt before editing `index.html`**. A
+missing contract token is a v1 → v2 bump question (separate WP per
+the cross-site contract), not a silent substitution. Surface the gap
+and stop. This pre-check prevents landing a broken page that loads
+but renders unstyled because a referenced custom property never
+resolves.
+
+Then edit `C:\pcloud\BB\DEV\legendary-arena\apps\registry-viewer\index.html`:
 
 ```html
 <!DOCTYPE html>
@@ -623,14 +673,23 @@ Compute SHA-256 of:
 $live = (Invoke-WebRequest -Uri "https://www.legendary-arena.com/brand-tokens.css").Content
 $liveHash = (Get-FileHash -InputStream ([IO.MemoryStream]::new([Text.Encoding]::UTF8.GetBytes($live))) -Algorithm SHA256).Hash
 
-# Local snapshot (excluding the SNAPSHOT comment header)
+# Local snapshot (excluding the SNAPSHOT comment header).
+# Use a multi-line-tolerant replace anchored to the start of the file
+# so the regex doesn't depend on the SNAPSHOT comment fitting on one
+# line or sharing exact spacing with the template.
 $snapshot = Get-Content -Raw `
   C:\pcloud\BB\DEV\legendary-arena\apps\registry-viewer\public\brand-tokens.local.css
-$canonicalBody = ($snapshot -split '/\* SNAPSHOT.*?\*/', 2)[1].TrimStart()
+$canonicalBody = $snapshot -replace '(?s)^\s*/\* SNAPSHOT.*?\*/\s*', ''
 $snapHash = (Get-FileHash -InputStream ([IO.MemoryStream]::new([Text.Encoding]::UTF8.GetBytes($canonicalBody))) -Algorithm SHA256).Hash
 
 if ($liveHash -ne $snapHash) { throw "Snapshot stale — refresh required before lock." }
 ```
+
+The `(?s)` inline option enables single-line (dotall) mode so `.`
+matches newlines; this lets the SNAPSHOT comment span multiple lines
+without breaking the strip. Anchoring with `^\s*` ensures only the
+leading SNAPSHOT block is removed, never a comment that happens to
+appear later in the file.
 
 Hash parity rules (identical to WP-007a):
 
@@ -695,6 +754,36 @@ Unacceptable mount points:
   the "registry still loading" state — the brand shell renders
   even while the data pipeline is in flight).
 
+**Header / Footer import contract (enforceable via grep):**
+
+The branding components are presentation-only. Their imports are a
+closed set:
+
+- MUST NOT import anything from:
+  - `apps/registry-viewer/src/registry/**`
+  - `apps/registry-viewer/src/composables/**`
+  - `apps/registry-viewer/src/lib/*Client.ts`
+- MAY import only:
+  - Vue framework primitives (`vue`, `vue-router` if introduced
+    later — not in this WP)
+  - Local props / constants declared inside
+    `src/components/branding/`
+  - Static URL strings (the two nav targets)
+
+A reviewer can verify this mechanically:
+
+```powershell
+# Should return zero matches:
+Select-String -Path apps/registry-viewer/src/components/branding/*.vue `
+  -Pattern '^\s*import .*from .*(registry|composables|Client)'
+```
+
+Any match is a WP-007b failure. The rule exists because the
+"obvious" failure mode here is a future executor adding a
+"registry-card count badge" or a "last-updated timestamp" to the
+header — both of which couple the brand shell to the data pipeline
+and break the rendering guarantee above.
+
 **Header content:**
 
 - Wordmark / placeholder logo per `palette.md` § 4 routing (use
@@ -710,11 +799,76 @@ Unacceptable mount points:
   `C:\www\legendary-arena-com\layouts\partials\footer.html` or the
   PaperMod footer override for parity).
 
+**Header / Footer styling source of truth:**
+
+Visual parity with www must be achieved **through the token system**,
+not by copying CSS. Specifically:
+
+- All colors, fonts, and spacing values in the new branding
+  components MUST resolve to token variables (`var(--la-*)` or, for
+  spacing/typography scale tokens, the equivalent `--la-space-*` /
+  `--la-font-*` names if v1 exposes them).
+- MUST NOT copy raw CSS rules from
+  `C:\www\legendary-arena-com\layouts\partials\` or from the
+  PaperMod theme into the registry-viewer's branding components.
+  Read the www source for *intent and structure* (what nav items,
+  what hierarchy, what copyright wording), not for *style values*.
+- "Same brand" is defined as "same token references resolving to the
+  same v1 values," not "matching pixel output via duplicated CSS."
+
+If achieving parity appears to require a non-token override (a raw
+hex, a hard-coded font stack, a magic-number spacing), **stop**. The
+gap is a token-coverage question — surface as a v1 → v2 bump
+candidate (separate WP) rather than patching around it locally.
+This is the same rule that protects against silent contract drift
+elsewhere in this WP.
+
 **Per-component color audit:**
 
 Every existing component's scoped `<style>` block under
 `apps/registry-viewer/src/components/` is in audit scope **for color
 values only**. Layout, sizing, and structural CSS are out of scope.
+
+**Allowed CSS transformations (strict — closed set):**
+
+- Replace a color value (hex, `rgb()`, `rgba()` for brand surfaces)
+  with a `var(--la-*)` reference.
+- Introduce a new CSS custom property whose value is a token
+  reference (e.g., `--card-border: var(--la-color-accent);`) when
+  needed to preserve a local naming convention.
+- Add a `:root`-safe fallback inside `var(..., fallback)` ONLY where
+  explicitly required to avoid a flash of unstyled content for a
+  token that loads cross-origin. The fallback value MUST itself be
+  a token reference where one exists; bare hex fallbacks are
+  forbidden except inside `brand-tokens.local.css` (the snapshot).
+
+**Forbidden transformations (even if visually minor — and especially
+if visually minor):**
+
+- Any change to layout properties: `margin`, `padding`, `gap`,
+  `display`, `flex-*`, `grid-*`, `position`, `top`/`right`/`bottom`/
+  `left`, `width`/`height`/`min-*`/`max-*`.
+- Any selector restructuring, nesting change, or `:where()` /
+  `:is()` rewrite.
+- Any addition or removal of CSS classes on DOM elements, including
+  "harmless" wrapper divs.
+- Any typography scaling change: `font-size`, `line-height`,
+  `letter-spacing`, `font-weight`. A `font-family` swap to
+  `var(--la-font-sans)` IS allowed (it's the type-token wiring);
+  numeric scale changes are NOT.
+- Any transition/animation timing or easing change.
+
+If a color replacement causes a layout issue (e.g., a previously
+masked white-on-white element becomes visible and overflows),
+**STOP — do not compensate locally**. The fix is either a real
+layout bug pre-dating WP-007b (separate engine-repo WP) or a
+token-coverage question (separate v1 → v2 WP). Surface either way.
+
+This explicit enumeration exists because the most common drift
+under "color audit" framing is well-meaning "while I'm here, this
+padding looks off" edits — they ship as brand work and bypass
+layout review. The forbidden list closes that loophole.
+
 For each scoped style block:
 
 - Replace any raw hex value (`#xxxxxx`) with `var(--la-*)` from the
@@ -817,6 +971,33 @@ Verify in `apps/registry-viewer/dist/`:
   Vue SFC); total `dist/` size should grow on the order of single-
   digit kilobytes. A multi-megabyte regression points at an
   accidental import.
+
+  **Baseline definition (no ambiguity):**
+
+  - Baseline = the most recent successful `pnpm --filter
+    registry-viewer build` from `origin/main` **before the
+    WP-007b feature branch was created**. Identify the commit by
+    `git log origin/main -- apps/registry-viewer/ | head` taken
+    against the engine monorepo before branching, or the merge-base
+    of the feature branch against `main`.
+  - Capture the baseline by checking out that commit in a clean
+    working tree, running the build, and recording:
+    - Total `dist/` directory size in bytes (`(Get-ChildItem
+      -Recurse apps/registry-viewer/dist | Measure-Object -Sum
+      Length).Sum`).
+    - Per-file size of every `dist/assets/*.js` (so a single
+      regressing chunk is visible, not just the aggregate).
+  - Record both numbers in the PR description for Step 8 so a
+    reviewer can verify the delta without re-running the baseline.
+
+  **Comparison rule:**
+
+  - Total `dist/` byte delta MUST remain within +10 kB
+    (uncompressed). The same metric (uncompressed) is used on
+    both sides — do not mix gzipped vs raw.
+  - Any single JS chunk that grows by more than +5 kB vs its
+    baseline counterpart is a yellow flag — confirm the cause is
+    the header/footer SFC, not a stray import.
 - No `apps/registry-viewer/dist/` artifacts reference any forbidden
   package: grep the dist for `game-engine`, `preplan`, `pg`, or
   `apps/server` source-map references — they MUST NOT appear.
@@ -835,6 +1016,32 @@ production-shape build clean (`pnpm --filter registry-viewer
 build` / `test` / `typecheck` / `lint` all pass; bundle byte size
 within single-digit-kB growth vs baseline; no forbidden imports
 in dist).
+
+**No silent fixes rule (applies across all phases, anchored here):**
+
+Every issue surfaced during validation — dev smoke, build, live
+verification, hash parity — MUST be fixed by editing the source
+files in scope and rebuilding from scratch. Specifically:
+
+- Manual edits to `apps/registry-viewer/dist/**` are strictly
+  forbidden. The `dist/` tree is a build artifact, not a source.
+  Hand-patching it makes the next clean build silently re-introduce
+  the bug.
+- DevTools "Local Overrides," Workspace mappings, or any other
+  browser-side patching mechanism are NOT valid fixes. They mask
+  the problem on one machine.
+- Cloudflare Pages dashboard edits to deployed files (if such a
+  thing were even possible) are NOT valid fixes.
+- Conditional `if (window.location.hostname === 'cards…')` shims
+  inside source code are NOT valid fixes for a contract problem —
+  they hide the real divergence from a future contract refresh.
+
+Every fix must survive a clean rebuild from a fresh `pnpm install
+--frozen-lockfile && pnpm --filter registry-viewer build` and land
+the same way on a teammate's machine, on CI, and on Cloudflare
+Pages. If a problem only reproduces in one of those environments,
+that is itself information worth surfacing — do not patch around
+it.
 
 ### Phase 4 — Deployment
 
@@ -895,31 +1102,30 @@ commit.
 
 #### Step 9 — Live verification on `cards.barefootbetters.com`
 
-After the production deploy goes live:
+After the production deploy goes live, run the checks **in the order
+listed**. The first three are contract checks (fastest signals, run
+without a browser); the rest cost more time / wall clock. If a
+contract check fails, the remaining checks are wasted effort — fix
+the contract first.
 
-1. **Lighthouse ≥ 90 in all four categories** (Performance,
-   Accessibility, Best Practices, SEO). Run from Chrome DevTools or
-   PageSpeed Insights with the production URL. Lower than 90 in any
-   category is a failure condition.
+**Contract checks (run first — fail fast):**
 
-2. **Zero console errors** in production. Open DevTools Console on
-   the live site; reload; trigger each tab (cards, themes, loadout);
-   trigger a card detail open and a theme detail open. Console must
-   be clean (info/log lines from the existing devLog instrumentation
-   are acceptable; errors and uncaught exceptions are not).
-
-3. **Cross-origin token fetch succeeds.** DevTools Network tab,
-   filter by `brand-tokens.css`. The request to
+1. **Cross-origin token fetch succeeds.** DevTools Network tab on
+   the live `cards.barefootbetters.com` page, filter by
+   `brand-tokens.css`. The request to
    `https://www.legendary-arena.com/brand-tokens.css` MUST appear,
    return `200`, carry `Access-Control-Allow-Origin: *`, and serve
-   the body containing `Version: v1`.
+   the body containing `Version: v1`. (Also runnable from a shell
+   without a browser via the `curl -H "Origin: …"` form from
+   Step 2 — that's the fastest variant if the browser isn't
+   already open.)
 
-4. **Local fallback present in the bundle.** `curl
+2. **Local fallback present in the bundle.** `curl
    https://cards.barefootbetters.com/brand-tokens.local.css` must
    return `200` with the snapshot body (SNAPSHOT comment header
    visible).
 
-5. **Hash parity holds in production.** Re-run the snapshot
+3. **Hash parity holds in production.** Re-run the snapshot
    integrity check from Step 4, but hash the deployed
    `https://cards.barefootbetters.com/brand-tokens.local.css`
    instead of the file system copy:
@@ -927,11 +1133,29 @@ After the production deploy goes live:
    ```powershell
    $live = (Invoke-WebRequest -Uri "https://www.legendary-arena.com/brand-tokens.css").Content
    $bundled = (Invoke-WebRequest -Uri "https://cards.barefootbetters.com/brand-tokens.local.css").Content
-   $bundledCanonical = ($bundled -split '/\* SNAPSHOT.*?\*/', 2)[1].TrimStart()
+   $bundledCanonical = $bundled -replace '(?s)^\s*/\* SNAPSHOT.*?\*/\s*', ''
    $liveHash = (Get-FileHash -InputStream ([IO.MemoryStream]::new([Text.Encoding]::UTF8.GetBytes($live))) -Algorithm SHA256).Hash
    $bundledHash = (Get-FileHash -InputStream ([IO.MemoryStream]::new([Text.Encoding]::UTF8.GetBytes($bundledCanonical))) -Algorithm SHA256).Hash
    if ($liveHash -ne $bundledHash) { throw "Production snapshot stale — investigate before lock." }
    ```
+
+   **Only proceed past this point if checks 1–3 pass.** A contract
+   failure here means the page is loading the wrong tokens (or no
+   tokens); Lighthouse and UI smoke are not informative until the
+   contract is intact.
+
+**Quality + UX checks (run after contract checks pass):**
+
+4. **Lighthouse ≥ 90 in all four categories** (Performance,
+   Accessibility, Best Practices, SEO). Run from Chrome DevTools or
+   PageSpeed Insights with the production URL. Lower than 90 in any
+   category is a failure condition.
+
+5. **Zero console errors** in production. Open DevTools Console on
+   the live site; reload; trigger each tab (cards, themes, loadout);
+   trigger a card detail open and a theme detail open. Console must
+   be clean (info/log lines from the existing devLog instrumentation
+   are acceptable; errors and uncaught exceptions are not).
 
 6. **No mixed content warnings.** Production must be HTTPS-only
    (CF Pages enforces this); the cross-origin token URL is HTTPS;
