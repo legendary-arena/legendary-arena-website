@@ -23,11 +23,29 @@
                 (matches per-role weight tokens in typography.md §6)
        Mono:    JetBrains Mono weight 400
 
-       display=swap prefers FOUT (Flash of Unstyled Text) over FOIT
-       (Flash of Invisible Text) — see typography.md §13. */ -}}
+       display=optional (WP-011, 2026-05-10): the browser gives the
+       font ~100 ms to load, then commits to either the web font
+       (if loaded by then) or the system-ui fallback (if not), and
+       never swaps after that commit point. No swap event = no
+       font-swap CLS as a class of regression.
+
+       Prior posture was display=swap, which preferred FOUT (Flash
+       of Unstyled Text) over FOIT (Flash of Invisible Text) — see
+       typography.md §13. The swap window was the underlying
+       enabler of WP-010 Step 4.6's regression: the Inter swap on
+       header menu items pushed .header-nav past its flex-wrap
+       boundary and shifted <main> down (home CLS = 0.344 pre-fix).
+       WP-010 landed a surgical mobile-wrap fix in custom.css §8
+       (which stays in place); WP-011 removes the underlying cause.
+
+       Trade-off: slow-connection users see the system-ui fallback
+       for the entire session. Brand-permitted — strategy.md §10
+       does not list system-ui rendering as a failure mode, and
+       the --la-font-* fallback chain in brand-tokens.css is
+       explicit (typography.md §3.1 / §3.2 / §3.3). */ -}}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=optional">
 
 {{- /* §3. Pagefind search — lazy-load + keyboard shortcuts (WP-005)
 
