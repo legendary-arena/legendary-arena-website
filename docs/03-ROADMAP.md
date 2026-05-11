@@ -88,7 +88,7 @@ half-built chrome would force a re-run after WP-010 lands.
 | WP-007b | Registry viewer brand integration (cards.barefootbetters.com) | ⏸️ Pending | WP-006 | ~half-day–1 day |
 | WP-008 | SEO baseline (Hugo equivalent of RankMath features) | ⏸️ Pending | WP-006 | ~1 day |
 | WP-009 | Class-color usage audit — cross-site *(spec draft pending review — see [`docs/ai/work-packets/WP-009-class-color-usage-audit.md`](ai/work-packets/WP-009-class-color-usage-audit.md))* | ⏸️ Pending | WP-007a, WP-007b, WP-010 | ~0.5–1 day |
-| WP-010 | Header + footer site navigation *(spec draft pending review — see [`docs/ai/work-packets/WP-010-site-navigation.md`](ai/work-packets/WP-010-site-navigation.md))* | ⏸️ Pending | WP-006 | ~half-day |
+| WP-010 | Header + footer site navigation | ✅ Done (2026-05-10) | WP-006 | ~half-day |
 
 **Total realistic effort:** ~7–9.5 days of focused work.
 
@@ -1448,6 +1448,270 @@ in a conventions doc.
   with it; the custom partial is the new work.
 - Search Console submission is operational, not code: paste the
   sitemap URL into search.google.com/search-console.
+
+---
+
+## WP-010 — Header + footer site navigation ✅
+
+**Status:** Done (2026-05-10)
+**Effort actual:** ~half-day (spec lock + implementation + Step 4
+verify, including a font-swap CLS regression diagnosis and CSS-only
+fix surfaced on the Step 4.6 Lighthouse pass)
+**Dependencies:** WP-006
+**Commits:**
+- `793e4bf` SPEC: WP-010 site-navigation bundle — WP body + roadmap
+  row + WP-009 dep update (the governance bundle the pre-flight
+  audited; committed at session start per pre-flight caveat #1)
+- `d571887` WP-010: implement — header menu, footer nav, brand
+  styling, CLS fix
+- this commit (WP-010 lock)
+
+### Readiness
+- Spec complete: ✅
+- Dependencies met: ✅ (WP-006 Done 2026-05-09)
+- Pre-flight: ✅ READY TO EXECUTE (2026-05-10) —
+  `docs/ai/invocations/preflight-wp010-site-navigation.md`
+  (scratchpad, gitignored)
+- Executed: ✅
+
+### Preconditions
+- WP-006 complete (CF Pages deploy + `npm ci && npm run build`
+  contract)
+- Hugo Extended `v0.161.1` (matches WP-006 lock + theme
+  `module.toml` floor of `>= 0.146.0`)
+- Node `v22+` (CI pinned at 22; local `v24.x` permitted)
+- Pagefind `1.5.2` exact-pin in `package-lock.json` (locked
+  under WP-005)
+- `themes/PaperMod` submodule clean at
+  `c4ca7ca486ecd67c8f6bba31551a6ee0d1455926`
+
+### Goal
+Wire the existing `/about/` and `/posts/` pages into the site
+chrome. Pre-WP, both pages shipped at HTTP 200 but the header menu
+(`<ul id="menu">`) rendered empty (no `[[menu.main]]` source) and
+the footer was the PaperMod default (no nav region), so neither was
+reachable from the home page. The smallest WP that makes the site
+navigable.
+
+### Deliverables
+- `[[menu.main]]` block in `hugo.toml` (About weight 10, Blog
+  weight 20) consumed by the existing header partial's
+  `site.Menus.main` iteration at `header.html` lines 104-128
+- `[[menu.footer]]` block in `hugo.toml` (About 10, Blog 20,
+  Play 30, Cards 40) consumed by the new footer override
+- `layouts/_partials/footer.html` — new PaperMod footer override
+  adding `<nav class="footer-nav" aria-label="Footer">` as the
+  first child of `<footer class="footer">`, iterating
+  `site.Menus.footer`. External items (matched via
+  `findRE "://" .URL`) carry `target="_blank" rel="noopener
+  noreferrer"` and the same external-link `<svg>` the header
+  partial uses (`header.html` lines 117-123, byte-identical) so
+  header / footer icon parity is exact. All upstream `<footer>`
+  content preserved (copyright, Hugo + PaperMod credits,
+  scroll-to-top, theme-toggle, menu-scroll restore, code-copy
+  buttons).
+- `assets/css/extended/custom.css §8` — brand styling for the
+  nav surfaces:
+  - §8.1 header `ul#menu li a span.active` — 2px
+    `var(--la-color-blue-bright)` underline for the current-page
+    indicator (per `palette.md §4.3` role discipline:
+    interactive affordances use the bright variant)
+  - Mobile-wrap fix (between §8.1 and §8.2):
+    `@media (max-width: 768px) { .header-nav > .menu
+    { flex-basis: 100%; } }` — forces the menu to its own
+    `.header-nav` flex-line on mobile from first paint so the
+    Inter font swap (Google Fonts `display=swap` via
+    `extend_head.html`) cannot change the row count after first
+    paint. See § Step 4.6 below for the diagnosis.
+  - §8.2 `.footer-nav` — token-driven layout for the footer
+    nav region; hover lifts to `--la-color-text-primary`
+    (mirrors header pattern); `text-decoration: none` overrides
+    §4.6 `.footer a` underline (specificity ties; later position
+    wins); external-link `<svg>` inherits link colour via
+    `stroke="currentColor"` (no raw fill/stroke)
+- No header partial edit; no `themes/PaperMod` submodule bump;
+  no `static/brand-tokens.css` change; no Cloudflare zone-state
+  change; no new dependencies.
+
+### Constraints (all held)
+- `layouts/_partials/header.html` must be byte-identical
+  pre/post (DoD check below)
+- `themes/PaperMod` submodule must stay clean
+  (no `+` in `git submodule status`)
+- No new dependencies (`package.json` /
+  `package-lock.json` unchanged)
+- All colour / font / spacing values via `var(--la-*)` tokens —
+  no raw hex anywhere in the WP-010 CSS additions
+- WP-005 Pagefind mount (`#la-search`) untouched
+
+### Definition of Done
+- [x] `[[menu.main]]` block in `hugo.toml` (About 10, Blog 20)
+- [x] `[[menu.footer]]` block in `hugo.toml` (About 10, Blog 20,
+      Play 30, Cards 40)
+- [x] `layouts/_partials/footer.html` iterates
+      `site.Menus.footer`, preserves theme copyright + Hugo +
+      PaperMod credits
+- [x] Header rendered HTML on every page shows About + Blog
+      links (binary check via `Invoke-WebRequest` + regex on
+      home, about, posts, post)
+- [x] Footer rendered HTML on every page shows the four footer
+      links (binary check on home + post)
+- [x] `layouts/_partials/header.html` byte-identical
+      (`git diff` empty)
+- [x] Internal nav links carry no `target="_blank"` or `rel`
+- [x] External nav links carry both `target="_blank"` AND
+      `rel="noopener noreferrer"` plus the external-link `<svg>`
+- [x] Active state styled and visible on `/about/` and
+      `/posts/` (programmatic `<span class="active">` check on
+      rendered HTML; brand-bright underline per §8.1)
+- [x] No active state in header nav on home `/`
+- [x] All nav text colour, hover, focus, active states use
+      `var(--la-*)` tokens only (verifiable in DevTools; no raw
+      hex in §8)
+- [x] WCAG AA contrast for hover / focus / active states
+      (Lighthouse Accessibility = 100 on every page in both
+      modes per palette.md §8 contract; PaperMod's `data-theme`
+      toggle preserved via my footer override)
+- [x] Theme toggle round-trips cleanly (PaperMod's toggle
+      script preserved verbatim in the footer override; no
+      nav-specific dark-mode rules introduced)
+- [x] DevTools console: zero errors on every page (Lighthouse
+      `errors-in-console` audit returned 0 items on every Step
+      4.6 run)
+- [x] Lighthouse ≥ pre-baseline AND ≥ 90 on all four categories
+      on home + posts + about + post (scores recorded below)
+- [x] Mechanical reproducibility: two consecutive
+      `npm run build` produce byte-identical `public/` —
+      53 files, `Compare-Object` empty
+- [x] Submodule clean
+      (`c4ca7ca486ecd67c8f6bba31551a6ee0d1455926`, no `+`)
+- [x] `docs/03-ROADMAP.md` updated (this commit)
+- [x] `docs/01-VISION.md` Decisions log entry added (this
+      commit)
+- [x] All commits pushed to `origin/main`
+
+### Lighthouse scores (production build at `http://127.0.0.1:1314/`)
+
+3-run sets per page on the mobile preset; raw JSONs gitignored per
+WP-005 convention. Representative scores below.
+
+| Page | Performance | Accessibility | Best Practices | SEO |
+|---|---|---|---|---|
+| `/` (home) | 94 | 100 | 100 | 100 |
+| `/posts/` | 95 | 100 | 100 | 100 |
+| `/about/` | 92 | 100 | 100 | 100 |
+| `/posts/2026-05-07-launch-announcement/` | 97 | 100 | 100 | 100 |
+
+Pre-baseline (from pre-flight): home 92/100/100/100,
+posts 94/100/100/100, about 92/100/100/100. All four pages clear
+the 90 absolute floor AND the per-page pre-baseline; Acc/BP/SEO
+hold at 100 across every measurement.
+
+### Step 4.6 — font-swap CLS regression discovered and fixed inline
+
+The first Step 4.6 pass showed home Performance = 77,
+CLS = 0.344 — a hard regression below the 90 floor AND below the
+pre-baseline 92. Diagnosis:
+
+1. Lighthouse `layout-shifts` audit attributed the shift to
+   `<main class="main" data-pagefind-body="">` — the entire
+   `<main>` element was moving down after first paint.
+2. Controlled before/after on the same commit (`git checkout HEAD
+   -- hugo.toml assets/css/extended/custom.css`, set the
+   `footer.html` override aside, rebuild → Lighthouse) showed home
+   Perf = 94-98 with CLS = 0.000-0.086 in the pre-WP state. The
+   regression was real and attributable to WP-010.
+3. Bisection — three more Lighthouse runs:
+   - Remove only my `custom.css §8` (keep `hugo.toml` menus +
+     footer override) → CLS = 0.344. Not the CSS.
+   - Remove only the footer override (keep `hugo.toml` menus +
+     CSS) → CLS = 0.344. Not the footer.
+   - Conclusion: the cause was purely the `[[menu.main]]`
+     additions in `hugo.toml`.
+4. Root cause: `layouts/_partials/extend_head.html` (outside this
+   WP's allowlist) loads Google Fonts (Bebas Neue, Inter,
+   JetBrains Mono) via `<link rel="stylesheet">` with
+   `display=swap`. The WP-010 menu items render in Inter
+   (`--la-font-body` per `brand-tokens.css`). On narrow viewports
+   the Inter swap pushes (logo + menu) combined width across
+   `.header-nav`'s `flex-wrap` boundary, dropping the menu to its
+   own flex-line ONLY after the font loads — that adds one row of
+   header height post-paint, which shifts `<main>` below it.
+5. Surgical fix within the WP-010 allowlist:
+   `@media (max-width: 768px) { .header-nav > .menu
+   { flex-basis: 100%; } }` in `custom.css` between §8.1 and §8.2.
+   Forces the menu to its own `.header-nav` flex-line on mobile
+   from first paint, so the row count is deterministic regardless
+   of font state. Inter swap can resize menu text without
+   rippling layout into `<main>`.
+
+Post-fix: home Perf = 94-99, CLS = 0.000-0.046 across 3 runs.
+All four measured pages clear both regression floors. The fix
+lives in `custom.css §8` with a `// why:` comment block
+explaining the chain.
+
+This mirrors the WP-006 design-vs-execution-reality pattern (CF
+Pages `_redirects` not supporting full-URL source patterns,
+discovered during WP-006 lock-pass). The WP body anticipated
+"two extra menu DOM nodes will not break this" but missed the
+font-swap interaction. The fix preserves WP-010 scope without
+editing `extend_head.html`, brand-tokens, or font loading.
+
+### Exit criteria
+- [x] Live page renders About + Blog in header on every page
+      (binary check)
+- [x] Live page renders four footer items on every page
+      (binary check, home + post)
+- [x] Active state visible on `/about/` + `/posts/`, absent on
+      `/` (programmatic `<span class="active">` check)
+- [x] WCAG AA hover / focus contrast in both modes (Lighthouse
+      Accessibility = 100 across the suite)
+- [x] Submodule clean (`c4ca7ca`, no `+`)
+- [x] Header partial byte-identical (`git diff` empty)
+- [x] Reproducibility: byte-identical `public/` across two
+      builds (53 files / `Compare-Object` empty)
+- [x] Lighthouse ≥ pre-baseline AND ≥ 90 on home + posts +
+      about + post
+
+### Failure conditions
+None tripped. Step 4.6 surfaced one CLS regression which was
+fixed inline within the WP-010 allowlist. The mobile-wrap fix is
+a CSS-only adjustment in `custom.css` that does not touch
+`extend_head.html`, `brand-tokens.css`, or font loading. If the
+regression had required edits outside the allowlist (e.g.,
+`extend_head.html` for `font-display` tuning), the correct
+response per `01.2-bug-handling.md` would have been to amend the
+WP body via a Decisions log entry before continuing — that
+escalation path was not needed here.
+
+### Rollback
+- `git revert <lock-commit> d571887` reverts both implementation
+  and lock; the header menu returns to its empty state and the
+  PaperMod default footer (no nav region) returns. The pre-flight
+  + WP-010 spec remain in `docs/ai/work-packets/` per the SPEC
+  bundle commit (`793e4bf`) and remain available for re-execution.
+- Cloudflare Pages: pushing the revert to `main` triggers
+  automatic redeploy; live site rolls back within ~30 seconds.
+- No DNS, CF zone, brand-tokens, or submodule changes to roll
+  back — WP-010 didn't touch any of those.
+
+### Notes
+- The execution session ran from an engine-repo worktree
+  (`C:\claude-worktrees\legendary-arena\nervous-nightingale-feda2c`)
+  doing marketing-repo edits via absolute paths to
+  `C:\www\legendary-arena-com\`. Same posture as the pre-flight
+  session. Both repos are independent under "dual-repo layout"
+  convention; engine repo has no commits associated with WP-010.
+- The font-swap CLS discovery suggests a future WP could revisit
+  `font-display` strategy site-wide (`optional` vs `swap` vs
+  preload), or move to self-hosted fonts with explicit metric
+  matching. Out of WP-010 scope; recorded here so it doesn't have
+  to be rediscovered.
+- Mobile layout post-WP: header is now 3 rows on `≤768px` (logo,
+  menu, search) where pre-WP was 2 rows (logo, search). On
+  `≥769px` header remains single-row. The 1-row increase on
+  mobile is a static layout change (visible from first paint),
+  not a Cumulative Layout Shift contributor.
 
 ---
 
