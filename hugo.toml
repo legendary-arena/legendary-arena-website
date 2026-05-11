@@ -41,3 +41,54 @@ enableRobotsTXT = true
 # themes/PaperMod/layouts/search.html template remains untouched in
 # the submodule — it is harmless without content/search.md and
 # without the JSON index.
+
+# Header menu — iterated by layouts/_partials/header.html
+# (custom override; lines 104-128). The PaperMod logo (top-left)
+# already links Home, so Home is intentionally not in this menu.
+[[menu.main]]
+  identifier = "about"
+  name = "About"
+  url = "/about/"
+  weight = 10
+
+[[menu.main]]
+  identifier = "blog"
+  name = "Blog"
+  # why: trailing slash is REQUIRED. The header partial performs
+  # exact string comparison for active-state styling
+  # (cond (strings.HasSuffix .URL "/") .URL ...) at lines 105-107,
+  # then exact-string compare against $page_url at line 112. A
+  # missing trailing slash silently breaks <span class="active">
+  # on the matching page — no error, the active state just never
+  # lands. Hugo's canonifyURLs = true is a complementary guard at
+  # render time but does NOT compensate for missing trailing
+  # slashes in [[menu.main]] / [[menu.footer]] URL fields.
+  url = "/posts/"
+  weight = 20
+
+# Footer menu — iterated by layouts/_partials/footer.html
+# (introduced by WP-010). PaperMod does not iterate
+# site.Menus.footer natively, so the override is the only consumer.
+[[menu.footer]]
+  identifier = "footer-about"
+  name = "About"
+  url = "/about/"
+  weight = 10
+
+[[menu.footer]]
+  identifier = "footer-blog"
+  name = "Blog"
+  url = "/posts/"
+  weight = 20
+
+[[menu.footer]]
+  identifier = "footer-play"
+  name = "Play"
+  url = "https://play.legendary-arena.com/"
+  weight = 30
+
+[[menu.footer]]
+  identifier = "footer-cards"
+  name = "Cards"
+  url = "https://cards.barefootbetters.com/"
+  weight = 40

@@ -727,3 +727,121 @@ pre code {
   padding: 0 0.2em;
   border-radius: var(--la-radius-sm);
 }
+
+
+/* =========================================================
+   §8. NAVIGATION (WP-010)
+   Header menu active-state indicator + footer nav region.
+   Header menu link colour, hover, and focus styles are already
+   covered by §4.3 (.nav a, .menu a) and §6.1 (:focus-visible);
+   §8 adds only the active-state styling and the footer-nav
+   block introduced by this WP.
+   ========================================================= */
+
+/* §8.1 Header menu — active-state indicator
+   PaperMod's header partial wraps the link label in <span> and
+   sets class="active" on the span when its URL matches the
+   current page (header.html line 112). Brand-bright blue
+   underline carries the affordance per palette.md §4.3 role
+   discipline — interactive affordances MUST use
+   --la-color-blue-bright; the deeper --la-color-blue navy reads
+   decorative on its own. Contrast vs --la-color-bg-primary is
+   ~6.4:1 (light) / ~5.4:1 (dark), well above the 3:1 floor for
+   non-text UI-component-state indicators (WCAG 1.4.11).
+
+   Selector targets ul#menu directly (not .header-nav ul#menu)
+   per WP-010 selector-stability rule: .header-nav could be
+   renamed in a future header WP; ul#menu is the invariant
+   surface PaperMod's JS depends on. */
+
+ul#menu li a span.active {
+  border-bottom: 2px solid var(--la-color-blue-bright);
+  padding-bottom: 2px;
+}
+
+/* why: the WP-010 menu items render in --la-font-body (Inter via
+   extend_head.html § 2 Google Fonts). Inter loads with
+   `display=swap`, so on initial paint the browser uses the
+   system-ui fallback; when Inter loads, the menu text re-flows
+   slightly wider in Inter than in system-ui. PaperMod's header
+   layout has `.header-nav { flex-wrap: wrap }` and `.menu
+   { overflow-x: auto; white-space: nowrap }`. The menu itself
+   can't wrap, but the parent .header-nav can wrap its three
+   flex children (logo, menu, search). On narrow viewports the
+   Inter swap pushes the (logo + menu) combined width across the
+   wrap boundary, so the menu drops to its own flex-line ONLY
+   after the font loads — that adds one row of header height
+   AFTER first paint, which shifts <main> below it. Measured at
+   CLS ≈ 0.34 on home (mobile preset) pre-fix.
+
+   The surgical fix: force the menu onto its own .header-nav
+   flex-line on mobile, regardless of font state. With the menu
+   already on a deterministic row from first paint, the Inter
+   swap can change menu text width without changing the row
+   count — which holds <header> height stable. The wrap
+   boundary is no longer a function of font metrics. On
+   ≥ 768px viewports the menu fits comfortably with the logo
+   on one row even post-swap, so no override is needed and the
+   single-row layout is preserved.
+
+   extend_head.html (Google Fonts <link> with display=swap) is
+   outside the WP-010 allowlist, so adjusting font-display or
+   preloading the fonts is not on the table for this WP. Forcing
+   the wrap point in custom.css is the surgical fix that holds
+   within the WP's scope. */
+@media (max-width: 768px) {
+  .header-nav > .menu {
+    flex-basis: 100%;
+  }
+}
+
+/* §8.2 Footer nav region
+   Sits as the first child of <footer class="footer"> per the
+   WP-010 footer.html override, iterates site.Menus.footer from
+   hugo.toml. Uses the same secondary-text colour as the rest of
+   the footer (§4.6) so it reads as footer chrome, with the
+   header-menu hover pattern (lift to text-primary) so it
+   announces interactivity the way the header does.
+
+   text-decoration: none overrides §4.6's .footer a underline —
+   nav links read as navigation, not as body-text references.
+   Specificity for .footer-nav a equals .footer a (both 0,1,1),
+   so position-in-file wins; this block sits below §4.6. */
+
+.footer-nav {
+  margin-bottom: var(--la-space-3);
+}
+
+.footer-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--la-space-4);
+  justify-content: center;
+}
+
+.footer-nav li {
+  margin: 0;
+}
+
+.footer-nav a {
+  color: var(--la-color-text-secondary);
+  text-decoration: none;
+  transition: color var(--la-transition-fast);
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer-nav a:hover {
+  color: var(--la-color-text-primary);
+}
+
+/* The external-link <svg> copied verbatim from header.html
+   lines 117-123 already carries stroke="currentColor", so the
+   icon glyph inherits whatever colour the parent <a> resolves to
+   (secondary in resting state, primary on hover). No fill /
+   stroke overrides here — that would violate palette.md §10's
+   "no raw fill/stroke" guidance and break the resting-vs-hover
+   colour parity with the link text. */
