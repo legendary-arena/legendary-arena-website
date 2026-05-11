@@ -125,12 +125,20 @@ What's pending — **your job**:
 
 In `layouts/_partials/extend_head.html`, line 30, change the
 Google Fonts URL query parameter from `&display=swap` to
-`&display=optional`. Single-character region-of-effect change in
-the `<link rel="stylesheet" href="...">` URL.
+`&display=optional`. Single-region, **single-parameter value
+change** (`display=swap` → `display=optional`) within the
+`<link rel="stylesheet" href="...">` URL.
 
 Update the surrounding comment block (lines 20-30) to record the
-WP-011 rationale: `display=optional` replaces `display=swap` to
-eliminate font-swap CLS as a class of bug.
+WP-011 rationale **while preserving all existing context**. The
+block MUST continue to document:
+
+- why Google Fonts is used
+- which families are loaded
+- any performance considerations already present
+
+Add a concise note: `display=optional` replaces `display=swap` to
+eliminate font-swap-induced CLS at the source.
 
 **Constraints:**
 
@@ -146,6 +154,10 @@ eliminate font-swap CLS as a class of bug.
   `docs/brand/typography.md §3` and §6)
 - Do NOT change anything outside the comment block + the URL
   query parameter
+- The Google Fonts URL MUST contain exactly one `display` query
+  parameter and its value MUST be `optional` in the final state
+  (no duplicates, no mixed values, no templated overrides, no
+  HTML-entity encoding drift such as `&amp;display=optional`)
 
 ### Step 2 — Verify
 
@@ -171,8 +183,10 @@ cd public
 python -m http.server 1314
 ```
 
-Open `http://localhost:1314/` and confirm in DevTools Network
-panel:
+Open `http://localhost:1314/`. Before verifying, perform a hard
+reload with cache disabled (DevTools → Network → Disable cache,
+then Ctrl+F5) to avoid false positives from cached font CSS
+responses. Then confirm in DevTools Network panel:
 
 - The Google Fonts CSS file
   (`fonts.googleapis.com/css2?...&display=optional`) is requested
@@ -215,18 +229,21 @@ Pre-baseline (WP-010 lock, 2026-05-10):
 | `/posts/2026-05-07-launch-announcement/` | 97 | 100 | 100 | 100 |
 
 Post-WP-011 scores MUST NOT drop below these AND MUST NOT drop
-below 90 on any page on any category. CLS specifically should be
-**at or below** pre-WP-011 levels on every page — the `optional`
-posture removes a class of shift, so it should not introduce new
-shifts. Raw JSON is local-only (gitignored per `.gitignore` line
-~31); do NOT commit.
+below 90 on any page on any category. Raw JSON is local-only
+(gitignored per `.gitignore` line ~31); do NOT commit.
 
-**Expected direction:** Performance may improve slightly on
-home / posts / about (no swap event = no late-render reflow);
-Accessibility / Best Practices / SEO should hold at 100. CLS on
-home should drop from the WP-010 post-fix value (~0.046) toward
-zero now that font-swap-related shift is eliminated at the
-source.
+**CLS (hard gate):**
+- MUST be ≤ the WP-010 lock value on every page (home ≤ 0.046,
+  posts ≤ 0.005, about ≤ 0.000, post ≤ 0.004)
+
+**CLS (expected trend, non-blocking):**
+- Should move toward 0.000 due to elimination of font-swap as a
+  shift source. A value above the lock is a hard failure; a
+  value at or near the lock but not at zero is acceptable.
+
+**Expected direction (non-blocking):** Performance may improve
+slightly on home / posts / about (no swap event = no late-render
+reflow); Accessibility / Best Practices / SEO should hold at 100.
 
 #### 2.5 Reproducibility (mirrors WP-005 / WP-010)
 
@@ -246,8 +263,14 @@ Get-ChildItem -Recurse -File public |
 Compare-Object (Get-Content build1.txt) (Get-Content build2.txt)
 ```
 
-`Compare-Object` MUST be empty. Any diff is a failure condition.
-`build1.txt` / `build2.txt` are local-only; do not commit.
+`Compare-Object` MUST be empty. Any non-empty output is a failure:
+
+- Line-order differences count as a failure (deterministic builds
+  must produce identical sorted hash outputs)
+- File content hash differences are a failure
+
+No exceptions. `build1.txt` / `build2.txt` are local-only; do not
+commit.
 
 #### 2.6 Submodule clean
 
@@ -257,6 +280,11 @@ git submodule status
 
 Expect: `c4ca7ca486ecd67c8f6bba31551a6ee0d1455926 themes/PaperMod
 (heads/master)` with no `+`.
+
+Any `+` prefix or detached-HEAD state is a failure condition and
+must be resolved before proceeding to Step 3 (e.g., investigate
+the unintended submodule update or local modification, then
+restore to the locked commit).
 
 #### 2.7 WP-010 mobile-wrap fix unchanged
 
@@ -310,6 +338,12 @@ When all DoD + exit criteria pass:
    - Anything else a future contributor would otherwise have to
      reverse-engineer
 3. Commit at logical milestones throughout the session, then push.
+   Recommended commit granularity:
+   - Edit + comment-block update
+   - Verification artifacts (no raw JSON committed)
+   - Roadmap + Vision Decisions log updates
+
+   Commit messages should reference `WP-011` explicitly.
 
 ## Constraints
 
@@ -344,9 +378,14 @@ When all DoD + exit criteria pass:
 
 - [ ] `extend_head.html` line 30 URL contains `&display=optional`
       (not `&display=swap`)
+- [ ] Google Fonts URL contains exactly one `display` parameter
+      and its value is `optional` (no duplicates, no encoding
+      drift such as `&amp;display=optional`)
 - [ ] Comment block at lines 20-30 updated to record the WP-011
       rationale (`display=optional` over `display=swap` to
-      eliminate font-swap CLS)
+      eliminate font-swap CLS) while preserving all existing
+      context (why Google Fonts, which families, prior
+      performance considerations)
 - [ ] `git diff assets/css/extended/custom.css` is empty (WP-010
       §8 mobile-wrap fix preserved)
 - [ ] `git diff static/brand-tokens.css` is empty (no
