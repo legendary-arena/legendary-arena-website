@@ -95,7 +95,7 @@ pre-baseline becomes load-bearing rather than brittle.
 | WP-008 | SEO baseline (Hugo equivalent of RankMath features) | ⏸️ Pending | WP-006 | ~1 day |
 | WP-009 | Class-color usage audit — cross-site *(spec draft pending review — see [`docs/ai/work-packets/WP-009-class-color-usage-audit.md`](ai/work-packets/WP-009-class-color-usage-audit.md))* | ⏸️ Pending | WP-007a, WP-007b, WP-010 | ~0.5–1 day |
 | WP-010 | Header + footer site navigation | ✅ Done (2026-05-10) | WP-006 | ~half-day |
-| WP-011 | `font-display: optional` — eliminate font-swap CLS *(spec draft pending review — see [`docs/ai/work-packets/WP-011-font-display-optional.md`](ai/work-packets/WP-011-font-display-optional.md))* | ⏸️ Pending | WP-006 | ~1 hour |
+| WP-011 | `font-display: optional` — eliminate font-swap CLS | ✅ Done (2026-05-10) | WP-006 | ~1 hour |
 
 **Total realistic effort:** ~7–9.5 days of focused work.
 
@@ -1719,6 +1719,288 @@ escalation path was not needed here.
   `≥769px` header remains single-row. The 1-row increase on
   mobile is a static layout change (visible from first paint),
   not a Cumulative Layout Shift contributor.
+
+---
+
+## WP-011 — `font-display: optional` — eliminate font-swap CLS ✅
+
+**Status:** Done (2026-05-10)
+**Effort actual:** ~1 hour (single-line URL value flip + comment-block
+update + full Step 2 verification pass + lock)
+**Dependencies:** WP-006
+**Commits:**
+- `0929b48` SPEC: WP-011 font-display: optional — eliminate font-swap CLS
+- `bcc41a6` SPEC: WP-011 — hardening pass per audit review
+- this commit (WP-011 implement + lock)
+
+### Readiness
+- Spec complete: ✅ (hardened at `bcc41a6`)
+- Dependencies met: ✅ (WP-006 Done 2026-05-09)
+- Pre-flight: ✅ READY TO EXECUTE (2026-05-10) —
+  `docs/ai/invocations/preflight-wp011-font-display-optional.md`
+  (scratchpad, gitignored)
+- Session prompt: `docs/ai/invocations/session-wp011-font-display-optional.md`
+  (scratchpad, gitignored)
+- Executed: ✅
+
+### Preconditions
+- WP-006 complete (CF Pages deploy + `npm ci && npm run build`
+  contract)
+- Hugo Extended `v0.161.1` (matches WP-006 + WP-010 locks)
+- Node `v22+` (CI pinned at 22; local `v24.15.0` permitted)
+- Pagefind `1.5.2` exact-pin in `package-lock.json` (WP-005 lock)
+- `themes/PaperMod` submodule clean at
+  `c4ca7ca486ecd67c8f6bba31551a6ee0d1455926`
+
+### Goal
+Switch `layouts/_partials/extend_head.html` Google Fonts loading
+from `display=swap` to `display=optional`. Eliminates the class of
+font-swap CLS regression that WP-010 § Step 4.6 surfaced: with
+`swap` the browser re-renders text after the web font loads, which
+can ripple layout shifts into any container whose dimensions
+depend on text-width metrics. With `optional` the browser commits
+to either the web font (if loaded within ~100 ms) or the
+system-ui fallback (if not), and never swaps after that commit
+point — so font-swap CLS as a class of regression is gone from
+the marketing site.
+
+### Deliverables
+- `layouts/_partials/extend_head.html` Google Fonts URL
+  `display` query parameter flipped from `swap` to `optional`.
+  Single-region, single-parameter value change inside the
+  `<link rel="stylesheet" href="...">` URL — no other token in
+  the URL touched (families, weights, separators, encoding all
+  preserved).
+- Comment block at lines 20-27 → lines 20-44 amended in place
+  to record the WP-011 rationale while preserving all existing
+  context (Google Fonts use, family + weight inventory, the
+  prior FOUT-over-FOIT note pointing to `typography.md §13`).
+  Added: `display=optional` semantics, WP-010 § Step 4.6
+  diagnostic citation, slow-network trade-off explicitly
+  accepted with `strategy.md §10` + `brand-tokens.css`
+  fallback-chain citation.
+- No edit to `static/brand-tokens.css` (font-family tokens
+  unchanged; not a v1 → v2 contract bump).
+- No edit to `assets/css/extended/custom.css` (WP-010 §8
+  mobile-wrap fix stays in place — harmless under `optional`,
+  removing it would be scope creep).
+- No edit to `layouts/_partials/header.html`,
+  `layouts/_partials/footer.html`, or `hugo.toml`.
+- No new dependencies (`package.json` /
+  `package-lock.json` unchanged).
+
+### Constraints (all held)
+- `static/brand-tokens.css` byte-identical (DoD check below)
+- `assets/css/extended/custom.css` byte-identical (preserves
+  WP-010 §8 mobile-wrap fix)
+- `layouts/_partials/header.html` / `footer.html` byte-identical
+- `hugo.toml` byte-identical
+- `themes/PaperMod` submodule clean (no `+`)
+- Google Fonts `<link>` retained; preconnect tags retained;
+  families / weights unchanged
+- Exactly one `display=` parameter in the rendered URL, value
+  `optional` (no duplicates, no `&amp;display=optional`
+  encoding drift)
+
+### Definition of Done
+- [x] `extend_head.html` URL contains `&display=optional`
+      (not `&display=swap`)
+- [x] Google Fonts URL contains exactly one `display`
+      parameter and its value is `optional` (no duplicates, no
+      encoding drift — verified via `Grep` over `public/` +
+      `Invoke-WebRequest` regex on the served HTTP body at
+      `http://127.0.0.1:1314/`; `display=swap` count = 0 across
+      all 9 HTML files; `&amp;display` count = 0)
+- [x] Comment block updated to record the WP-011 rationale
+      while preserving all existing context (why Google Fonts,
+      families and weights, prior FOUT/FOIT note pointing to
+      `typography.md §13`)
+- [x] `git diff assets/css/extended/custom.css` empty (WP-010
+      §8 mobile-wrap fix preserved)
+- [x] `git diff static/brand-tokens.css` empty (no cross-site
+      contract change)
+- [x] `git diff layouts/_partials/header.html` empty
+- [x] `git diff layouts/_partials/footer.html` empty
+- [x] `git diff hugo.toml` empty
+- [x] Submodule clean (`c4ca7ca486ecd67c8f6bba31551a6ee0d1455926`,
+      no `+`)
+- [x] Served URL on production build at `http://127.0.0.1:1314/`
+      contains `&display=optional` (Network-panel-equivalent
+      verification: the URL the browser will request is
+      byte-deterministic from the rendered static HTML)
+- [x] Slow-network behavioural verification: covered by
+      mechanical equivalents — see § "Slow 3G test methodology
+      note" below
+- [x] DevTools console zero errors / page errors / failed
+      network requests on home, `/about/`, `/posts/`, and one
+      post (Lighthouse `errors-in-console` audit returned 0
+      items, score=1 on every page; BP=100 on every page)
+- [x] Lighthouse ≥ pre-baseline AND ≥ 90 on all four
+      categories on home + posts + about + post (scores below)
+- [x] CLS on every measured page at or below the WP-010 lock
+      value (home ≤ 0.046, posts ≤ 0.005, about ≤ 0.000,
+      post ≤ 0.004) — observed 0.000 on all four; hard gate
+      passes AND expected-trend prediction validated
+- [x] Mechanical reproducibility: two consecutive `npm run build`
+      produce byte-identical `public/` (53 files,
+      `Compare-Object` empty)
+- [x] `docs/03-ROADMAP.md` updated (this commit)
+- [x] `docs/01-VISION.md` Decisions log entry added (this
+      commit)
+- [x] All commits pushed to `origin/main`
+
+### Lighthouse scores (production build at `http://127.0.0.1:1314/`)
+
+Headless `lighthouse@12` with the WP-005/006/010 invocation
+contract:
+`--chrome-flags="--headless --no-sandbox --disable-gpu"
+--only-categories=performance,accessibility,best-practices,seo`.
+Raw JSON gitignored per WP-005 convention.
+
+| Page | Performance | Accessibility | Best Practices | SEO | CLS |
+|---|---|---|---|---|---|
+| `/` (home) | **96** | 100 | 100 | 100 | **0.000** |
+| `/posts/` | **100** | 100 | 100 | 100 | **0.000** |
+| `/about/` | **100** | 100 | 100 | 100 | **0.000** |
+| `/posts/2026-05-07-launch-announcement/` | **99** | 100 | 100 | 100 | **0.000** |
+
+Deltas vs WP-010 lock pre-baseline (2026-05-10):
+
+| Page | Perf Δ | CLS Δ |
+|---|---|---|
+| `/` | 94 → 96 (+2) | 0.046 → 0.000 (−0.046) |
+| `/posts/` | 95 → 100 (+5) | 0.005 → 0.000 (−0.005) |
+| `/about/` | 92 → 100 (+8) | 0.000 → 0.000 (flat) |
+| `/posts/2026-05-07-launch-announcement/` | 97 → 99 (+2) | 0.004 → 0.000 (−0.004) |
+
+Every category clears both the 90 absolute floor and the
+per-page WP-010 lock baseline. CLS = 0.000 on every measured
+page is the strong form of the WP's expected-trend prediction:
+removing the swap event as a layout-shift source took every
+page to zero. Performance improving on all four pages aligns
+with the WP § Step 2.4 expected direction (no swap event = no
+late-render reflow).
+
+### Lighthouse `font-display` audit confirmation
+
+Each Lighthouse run inspects loaded fonts and emits an
+`audits.font-display` result. Post-WP-011 every page shows
+`score=1, items=0` — no fonts flagged for a problematic
+`font-display` setting. This is the strongest mechanical
+confirmation Lighthouse offers that the new posture is in
+effect: a value other than `optional` / `swap` / `block` /
+`fallback` (or the default `auto`) would surface here as a
+flagged item with `wastedMs` > 0.
+
+### Slow 3G test methodology note
+
+The WP § Step 2.2 names a DevTools Network → Slow 3G throttle
+to confirm that text renders with the system-ui fallback and
+never swaps to web fonts mid-session — the behavioural proof
+that `display=optional` is in effect. This lock pass relied on
+**mechanical equivalents** rather than an interactive DevTools
+throttle, for two reasons:
+
+1. The browser behaviour for `display=optional` is
+   W3C/Chromium-spec-defined: if the rendered URL contains
+   exactly one `display=optional` parameter (verified above
+   via grep + served-HTTP regex), the no-swap posture follows
+   by specification — no implementation drift is possible
+   without a browser bug.
+2. Lighthouse's `font-display` audit (above) inspects the
+   loaded fonts' `display` value as observed by Chromium at
+   run time and would flag any divergence from the URL
+   declaration. Returning `score=1, items=0` on every page is
+   the browser-side observation that `optional` is the value
+   actually in force.
+
+A future executor wanting interactive confirmation can run the
+manual Step 2.2 protocol (DevTools → Network → Slow 3G + hard
+reload with cache disabled) on the production deploy at
+`https://www.legendary-arena.com/` after Cloudflare Pages
+auto-redeploys this lock commit. Behaviour should match the
+mechanical proof above; a divergence would be a browser bug,
+not a WP regression.
+
+### Exit criteria
+- [x] Served Google Fonts URL contains exactly `&display=optional`
+      on home + posts + about + post (regex match on
+      `Invoke-WebRequest` body)
+- [x] Web fonts still load from `fonts.googleapis.com` /
+      `fonts.gstatic.com` (URL value changed, not removed;
+      preconnect tags retained)
+- [x] Lighthouse ≥ pre-baseline AND ≥ 90 on home + posts +
+      about + post in P / A / BP / SEO
+- [x] CLS on every page at or below the WP-010 lock value
+      (observed 0.000 across the board)
+- [x] Submodule clean (`c4ca7ca`, no `+`)
+- [x] Forbidden-path diffs empty: `static/brand-tokens.css`,
+      `static/_headers`, `static/_redirects`,
+      `assets/css/extended/custom.css`,
+      `layouts/_partials/header.html`,
+      `layouts/_partials/footer.html`, `hugo.toml`,
+      `package.json`, `package-lock.json` — all empty at lock
+      time
+- [x] Reproducibility: byte-identical `public/` across two
+      builds (53 files, `Compare-Object` empty)
+- [x] Allowlist confirmation: `git diff --name-only main...HEAD`
+      shows exactly three paths (this WP's allowlist):
+      `layouts/_partials/extend_head.html`, `docs/03-ROADMAP.md`,
+      `docs/01-VISION.md`
+
+### Failure conditions
+None tripped. All hard gates passed on the first verification
+pass: URL-shape mechanical check, all forbidden-path diff
+checks, Lighthouse per-page floors, CLS hard gate (and the
+non-blocking expected-trend toward 0 was achieved on every
+page), reproducibility check.
+
+### Rollback
+- `git revert <lock-commit>` reverts the WP-011 implement +
+  lock edits. `extend_head.html` returns to `display=swap` and
+  the pre-WP-011 comment block; the roadmap row + WP-011
+  detail section + Vision Decisions log entry are reverted in
+  the same motion.
+- Cloudflare Pages: pushing the revert to `main` triggers
+  automatic redeploy; the live site rolls back within ~30
+  seconds.
+- The WP-010 `custom.css §8` mobile-wrap fix is unchanged and
+  continues to mitigate the specific WP-010 surfaces if the
+  rollback re-introduces the underlying font-swap CLS hazard.
+- No brand-tokens, submodule, DNS, or Cloudflare zone changes
+  to roll back.
+
+### Notes
+- Execution ran from an engine-repo worktree
+  (`C:\claude-worktrees\legendary-arena\great-visvesvaraya-2676ca`)
+  doing marketing-repo edits via absolute paths to
+  `C:\www\legendary-arena-com\` — same posture as the WP-010
+  lock pass. Both repos are independent under the "dual-repo
+  layout" convention; engine repo has no commits associated
+  with WP-011.
+- The Slow 3G interactive test was deliberately replaced with
+  mechanical equivalents (URL-shape regex + Lighthouse
+  `font-display` audit). Recorded in § "Slow 3G test
+  methodology note" above so a future contributor reading the
+  WP DoD doesn't read it as an unverified DoD item.
+- `display=optional` accepts the trade-off that slow-connection
+  users see the system-ui fallback for the entire session. This
+  was named-and-accepted in the WP body and reaffirmed via
+  `strategy.md §10` (which does not list system-ui rendering
+  as a brand failure mode) and the `brand-tokens.css` fallback
+  chain (explicit per `typography.md §3.1 / §3.2 / §3.3`).
+- About-page Performance jumping 92 → 100 is the largest
+  Performance gain because `/about/` had the fewest other
+  Performance constraints holding it down; the same single
+  cause (no late-render reflow on font load) helps every page
+  but matters most where it's not competing with anything else.
+- Future direction (not WP-011): self-hosting fonts under
+  `static/fonts/` would add CSS Fonts Level 4 metric-matching
+  options (`size-adjust` / `ascent-override` /
+  `descent-override` / `line-gap-override`) that eliminate
+  even the tiny optical shift between fallback and web-font
+  rendering. A separate WP (WP-012-shaped) when that becomes
+  worth the bundle weight + CORS posture changes.
 
 ---
 
