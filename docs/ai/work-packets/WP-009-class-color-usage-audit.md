@@ -16,14 +16,14 @@
 
 ## Header
 
-**Status:** ⏸️ Pending (post-draft-review; depends on WP-007a + WP-007b)
+**Status:** ⏸️ Pending (post-draft-review; depends on WP-007a + WP-007b + WP-010)
 **Effort:** ~0.5–1 day (scales with consumer UI surface at audit time)
-**Dependencies:** WP-007a, WP-007b
+**Dependencies:** WP-007a, WP-007b, WP-010
 
 ## Readiness
 
 - Spec complete: 📝 Draft (this file) — pending review
-- Dependencies met: ❌ (waiting on WP-007a + WP-007b)
+- Dependencies met: ❌ (waiting on WP-007a + WP-007b + WP-010)
 - Ready for execution: ❌
 
 ## Preconditions
@@ -32,6 +32,11 @@
   `https://www.legendary-arena.com/brand-tokens.css`
 - WP-007b complete; `cards.barefootbetters.com` consuming brand tokens
   cross-origin from the same URL
+- WP-010 complete; `www.legendary-arena.com` carries header + footer nav
+  in its v1 shape so the audit runs against the chrome's intended surface
+  (the audit's class-color scope does not strictly require WP-010, but
+  auditing a half-built chrome would force a re-run — see roadmap
+  sequencing decision in `docs/03-ROADMAP.md` § Execution flow)
 - Read access to the engine monorepo (`legendary-arena`) confirmed —
   `arena-client` and `registry-viewer` source files reachable for static
   analysis

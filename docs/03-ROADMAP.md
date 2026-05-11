@@ -55,14 +55,22 @@ not-done regardless of its DoD.
 
 ```
 WP-001 → WP-002 → WP-003 → WP-004 → WP-005 → WP-006 ┬→ WP-007a ─┐
-                                                    ├→ WP-007b ─┴→ WP-009
-                                                    └→ WP-008
+                                                    ├→ WP-007b ─┤
+                                                    ├→ WP-010 ──┼→ WP-009
+                                                    └→ WP-008    │
+                                                                 │
+                                                    (WP-008 does not feed WP-009)
 ```
 
-WP-007a, WP-007b, and WP-008 can run in parallel after WP-006 completes;
-they have no shared write paths. WP-009 (class-color usage audit) is
-single-track and runs after BOTH WP-007a and WP-007b complete — it audits
-their integrations. WP-008 is parallel to WP-009 but does not feed it.
+WP-007a, WP-007b, WP-008, and WP-010 can run in parallel after WP-006
+completes; they have no shared write paths. WP-009 (class-color usage
+audit) is single-track and runs after WP-007a, WP-007b, AND WP-010
+complete — it audits the consumer surfaces those WPs land. WP-008 is
+parallel to WP-009 but does not feed it. WP-010 is added to WP-009's
+upstream set so the marketing site's chrome (header + footer nav) is
+in its v1 shape before any audit pass runs against it; the audit's
+class-color scope does not strictly require WP-010, but auditing a
+half-built chrome would force a re-run after WP-010 lands.
 
 ---
 
@@ -79,9 +87,10 @@ their integrations. WP-008 is parallel to WP-009 but does not feed it.
 | WP-007a | play.legendary-arena.com deploy | ✅ Done (2026-05-10) | WP-006 | 1 day |
 | WP-007b | Registry viewer brand integration (cards.barefootbetters.com) | ⏸️ Pending | WP-006 | ~half-day–1 day |
 | WP-008 | SEO baseline (Hugo equivalent of RankMath features) | ⏸️ Pending | WP-006 | ~1 day |
-| WP-009 | Class-color usage audit — cross-site *(spec draft pending review — see [`docs/ai/work-packets/WP-009-class-color-usage-audit.md`](ai/work-packets/WP-009-class-color-usage-audit.md))* | ⏸️ Pending | WP-007a, WP-007b | ~0.5–1 day |
+| WP-009 | Class-color usage audit — cross-site *(spec draft pending review — see [`docs/ai/work-packets/WP-009-class-color-usage-audit.md`](ai/work-packets/WP-009-class-color-usage-audit.md))* | ⏸️ Pending | WP-007a, WP-007b, WP-010 | ~0.5–1 day |
+| WP-010 | Header + footer site navigation *(spec draft pending review — see [`docs/ai/work-packets/WP-010-site-navigation.md`](ai/work-packets/WP-010-site-navigation.md))* | ⏸️ Pending | WP-006 | ~half-day |
 
-**Total realistic effort:** ~6.5–9 days of focused work.
+**Total realistic effort:** ~7–9.5 days of focused work.
 
 ---
 
