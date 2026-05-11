@@ -97,6 +97,7 @@ pre-baseline becomes load-bearing rather than brittle.
 | WP-010 | Header + footer site navigation | ✅ Done (2026-05-10) | WP-006 | ~half-day |
 | WP-011 | `font-display: optional` — eliminate font-swap CLS | ✅ Done (2026-05-10) | WP-006 | ~1 hour |
 | WP-012 | SessionStart hook + prune script — INFRA, ported from engine repo (no section body; see `docs/ai/REFERENCE/01.8-claude-code-hooks.md`) | ✅ Done (2026-05-11) | — | ~1 hour |
+| WP-013 | Marketing-repo hygiene follow-up — .gitignore + 01.8 cross-refs (no section body; see commit history) | ✅ Done (2026-05-11) | — | ~15 min |
 
 **Total realistic effort:** ~7–9.5 days of focused work.
 
