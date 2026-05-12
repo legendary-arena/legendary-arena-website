@@ -1,0 +1,56 @@
+{{- /* Legendary Arena — /brand/ section layout override (WP-014).
+
+       Overrides themes/PaperMod/layouts/list.html for the /brand/
+       section only (Hugo's section-scoped layout lookup —
+       layouts/<section>/list.html resolves ahead of
+       _default/list.html and the theme's copy).
+
+       Mechanism B from WP-014 §Step 5: wrap the rendered section
+       content in `<div class="brand-page">` so the §5 CSS scoped
+       under `.brand-page` applies on this page only. WP-014's WP
+       body authorises "layouts/brand/single.html or equivalent" —
+       the equivalent here is `list.html`, because `_index.md`
+       sections render through the list template, not single.
+
+       Why an override (not frontmatter + theme hook): PaperMod's
+       default list.html exposes no body-class / wrapper-class hook
+       driven by page frontmatter. Mechanism A would require
+       editing layouts/baseof.html, which is outside this WP's
+       allowlist. The override below is isolated to /brand/, does
+       not modify themes/PaperMod/, and is the minimum delta to
+       carry the `.brand-page` root class. Same shape used by
+       WP-010 for the footer partial override.
+
+       Structure mirrors PaperMod list.html for the section-content
+       part only (page-header + post-content); the
+       child-page iteration block is intentionally dropped because
+       /brand/ has no child pages and rendering an empty paginator
+       would just be dead markup.
+*/ -}}
+{{- define "main" }}
+
+<div class="brand-page">
+
+  {{- if .Title }}
+  <header class="page-header">
+    {{- partial "breadcrumbs.html" . }}
+    <h1>{{ .Title }}</h1>
+    {{- if .Description }}
+    <div class="post-description">
+      {{ .Description | markdownify }}
+    </div>
+    {{- end }}
+  </header>
+  {{- end }}
+
+  {{- if .Content }}
+  <div class="post-content md-content">
+    {{- if not (.Param "disableAnchoredHeadings") }}
+    {{- partial "anchored_headings.html" .Content -}}
+    {{- else }}{{ .Content }}{{ end }}
+  </div>
+  {{- end }}
+
+</div>
+
+{{- end }}

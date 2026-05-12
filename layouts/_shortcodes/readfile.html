@@ -1,0 +1,33 @@
+{{- /*
+  readfile — inlines the contents of a project-root-relative file at
+  render time. Introduced under WP-014 §Step 4 to mirror the
+  canonical docs/brand/mood-board-spec.md into Section 8 of /brand/
+  (Path A — the default rendering path).
+
+  Signature:
+    {{< readfile file="/docs/brand/mood-board-spec.md" markdown="true" >}}
+
+  Determinism constraints (WP-014 §Step 4 + Path A determinism rule):
+  - The `file` argument MUST be absolute-relative to the Hugo project
+    root (e.g., /docs/brand/mood-board-spec.md). No environment-
+    specific paths.
+  - The shortcode emits no timestamps, no env-var lookups, no
+    dynamic data — the rendered output is a pure function of the
+    file contents at build time.
+  - Step 6 §8 of the WP runs two consecutive `npm run build` runs
+    and `Compare-Object` over SHA-256 hashes of every file in
+    `public/`. Any non-determinism here fails that check; the
+    fallback (Path B — manually mirror the content into the page
+    file and delete this shortcode) is documented in the WP body.
+
+  Generic utility — not specific to /brand/. Reusable from any
+  content page that needs to inline a repo-relative markdown / HTML
+  file. Acceptable, governed, deterministic.
+*/ -}}
+{{- $file := .Get "file" -}}
+{{- $markdown := .Get "markdown" -}}
+{{- if eq $markdown "true" -}}
+  {{- readFile $file | markdownify -}}
+{{- else -}}
+  {{- readFile $file | safeHTML -}}
+{{- end -}}
