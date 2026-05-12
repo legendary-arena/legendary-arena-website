@@ -219,23 +219,73 @@ Fallbacks: IBM Plex Mono, Consolas.
 Full font stacks in
 [`typography.md` §3](https://github.com/legendary-arena/legendary-arena-website/blob/main/docs/brand/typography.md).
 
+### Type scale — live samples
+
+Each sample below renders at its actual size, weight, and font.
+Hero / H1 / H2 use the display face (Bebas Neue) in uppercase;
+H3-H6 and body use the body face (Inter) in sentence case.
+
+<div style="display: flex; flex-direction: column; gap: var(--la-space-4); margin: var(--la-space-5) 0;">
+  <div style="padding: var(--la-space-3) var(--la-space-4); background: var(--la-color-bg-secondary); border: 1px solid var(--la-color-border-subtle); border-radius: var(--la-radius-md);">
+    <div style="font-family: var(--la-font-display); font-size: var(--la-font-size-hero); line-height: var(--la-line-height-hero); font-weight: 700; letter-spacing: var(--la-letter-spacing-display); text-transform: uppercase; color: var(--la-color-text-primary);">Hero — Legendary Arena</div>
+    <div style="font-family: var(--la-font-mono); font-size: var(--la-font-size-small); color: var(--la-color-text-secondary); margin-top: var(--la-space-2);">Bebas Neue · 3.5rem / 56px · weight 700 · --la-font-size-hero</div>
+  </div>
+  <div style="padding: var(--la-space-3) var(--la-space-4); background: var(--la-color-bg-secondary); border: 1px solid var(--la-color-border-subtle); border-radius: var(--la-radius-md);">
+    <div style="font-family: var(--la-font-display); font-size: var(--la-font-size-h1); line-height: var(--la-line-height-h1); font-weight: 700; letter-spacing: var(--la-letter-spacing-display); text-transform: uppercase; color: var(--la-color-text-primary);">H1 — Forge Your Deck</div>
+    <div style="font-family: var(--la-font-mono); font-size: var(--la-font-size-small); color: var(--la-color-text-secondary); margin-top: var(--la-space-2);">Bebas Neue · 3rem / 48px · weight 700 · --la-font-size-h1</div>
+  </div>
+  <div style="padding: var(--la-space-3) var(--la-space-4); background: var(--la-color-bg-secondary); border: 1px solid var(--la-color-border-subtle); border-radius: var(--la-radius-md);">
+    <div style="font-family: var(--la-font-display); font-size: var(--la-font-size-h2); line-height: var(--la-line-height-h2); font-weight: 700; letter-spacing: var(--la-letter-spacing-display); text-transform: uppercase; color: var(--la-color-text-primary);">H2 — Rally Your Allies</div>
+    <div style="font-family: var(--la-font-mono); font-size: var(--la-font-size-small); color: var(--la-color-text-secondary); margin-top: var(--la-space-2);">Bebas Neue · 2.25rem / 36px · weight 700 · --la-font-size-h2</div>
+  </div>
+  <div style="padding: var(--la-space-3) var(--la-space-4); background: var(--la-color-bg-secondary); border: 1px solid var(--la-color-border-subtle); border-radius: var(--la-radius-md);">
+    <div style="font-family: var(--la-font-body); font-size: var(--la-font-size-h3); line-height: var(--la-line-height-h3); font-weight: 600; letter-spacing: var(--la-letter-spacing-normal); color: var(--la-color-text-primary);">H3 — Unleash a legendary turn</div>
+    <div style="font-family: var(--la-font-mono); font-size: var(--la-font-size-small); color: var(--la-color-text-secondary); margin-top: var(--la-space-2);">Inter · 1.75rem / 28px · weight 600 · --la-font-size-h3</div>
+  </div>
+  <div style="padding: var(--la-space-3) var(--la-space-4); background: var(--la-color-bg-secondary); border: 1px solid var(--la-color-border-subtle); border-radius: var(--la-radius-md);">
+    <div style="font-family: var(--la-font-body); font-size: var(--la-font-size-h4); line-height: var(--la-line-height-h4); font-weight: 600; letter-spacing: var(--la-letter-spacing-normal); color: var(--la-color-text-primary);">H4 — Earn your standing</div>
+    <div style="font-family: var(--la-font-mono); font-size: var(--la-font-size-small); color: var(--la-color-text-secondary); margin-top: var(--la-space-2);">Inter · 1.375rem / 22px · weight 600 · --la-font-size-h4</div>
+  </div>
+  <div style="padding: var(--la-space-3) var(--la-space-4); background: var(--la-color-bg-secondary); border: 1px solid var(--la-color-border-subtle); border-radius: var(--la-radius-md);">
+    <div style="font-family: var(--la-font-body); font-size: var(--la-font-size-h5); line-height: var(--la-line-height-h5); font-weight: 500; letter-spacing: var(--la-letter-spacing-normal); color: var(--la-color-text-primary);">H5 — Choose your heroes wisely</div>
+    <div style="font-family: var(--la-font-mono); font-size: var(--la-font-size-small); color: var(--la-color-text-secondary); margin-top: var(--la-space-2);">Inter · 1.125rem / 18px · weight 500 · --la-font-size-h5</div>
+  </div>
+  <div style="padding: var(--la-space-3) var(--la-space-4); background: var(--la-color-bg-secondary); border: 1px solid var(--la-color-border-subtle); border-radius: var(--la-radius-md);">
+    <div style="font-family: var(--la-font-body); font-size: var(--la-font-size-h6); line-height: var(--la-line-height-h6); font-weight: 500; letter-spacing: var(--la-letter-spacing-normal); color: var(--la-color-text-primary);">H6 — Every card counts</div>
+    <div style="font-family: var(--la-font-mono); font-size: var(--la-font-size-small); color: var(--la-color-text-secondary); margin-top: var(--la-space-2);">Inter · 1rem / 16px · weight 500 · --la-font-size-h6</div>
+  </div>
+  <div style="padding: var(--la-space-3) var(--la-space-4); background: var(--la-color-bg-secondary); border: 1px solid var(--la-color-border-subtle); border-radius: var(--la-radius-md);">
+    <div style="font-family: var(--la-font-body); font-size: var(--la-font-size-body); line-height: var(--la-line-height-body); font-weight: 400; letter-spacing: var(--la-letter-spacing-normal); color: var(--la-color-text-primary);">Body — Assemble your heroes, face the scenario, and earn your standing on the leaderboard.</div>
+    <div style="font-family: var(--la-font-mono); font-size: var(--la-font-size-small); color: var(--la-color-text-secondary); margin-top: var(--la-space-2);">Inter · 1rem / 16px · weight 400 · --la-font-size-body</div>
+  </div>
+  <div style="padding: var(--la-space-3) var(--la-space-4); background: var(--la-color-bg-secondary); border: 1px solid var(--la-color-border-subtle); border-radius: var(--la-radius-md);">
+    <div style="font-family: var(--la-font-body); font-size: var(--la-font-size-small); line-height: var(--la-line-height-small); font-weight: 400; letter-spacing: var(--la-letter-spacing-normal); color: var(--la-color-text-muted);">Small — Captions, footnotes, and metadata</div>
+    <div style="font-family: var(--la-font-mono); font-size: var(--la-font-size-small); color: var(--la-color-text-secondary); margin-top: var(--la-space-2);">Inter · 0.875rem / 14px · weight 400 · --la-font-size-small</div>
+  </div>
+  <div style="padding: var(--la-space-3) var(--la-space-4); background: var(--la-color-bg-secondary); border: 1px solid var(--la-color-border-subtle); border-radius: var(--la-radius-md);">
+    <div style="font-family: var(--la-font-mono); font-size: var(--la-font-size-body); line-height: var(--la-line-height-body); font-weight: 400; letter-spacing: var(--la-letter-spacing-normal); color: var(--la-color-text-primary);">Mono — --la-color-gold: #b8901f;</div>
+    <div style="font-family: var(--la-font-mono); font-size: var(--la-font-size-small); color: var(--la-color-text-secondary); margin-top: var(--la-space-2);">JetBrains Mono · 1rem / 16px · weight 400 · --la-font-mono</div>
+  </div>
+</div>
+
 <details>
 <summary>Full typography spec (size scale, weights, letter-spacing)</summary>
 
 The rem-based scale uses 16px as its base. Each role has a paired
 size + line-height + weight token in `static/brand-tokens.css`.
 
-| Role | Size token | Size | Line-height token | Weight token |
-|---|---|---|---|---|
-| Hero | `--la-font-size-hero` | 3.5rem / 56px | `--la-line-height-hero` (1.05) | `--la-font-weight-h1` (700) |
-| H1 | `--la-font-size-h1` | 3rem / 48px | `--la-line-height-h1` (1.1) | `--la-font-weight-h1` (700) |
-| H2 | `--la-font-size-h2` | 2.25rem / 36px | `--la-line-height-h2` (1.15) | `--la-font-weight-h2` (700) |
-| H3 | `--la-font-size-h3` | 1.75rem / 28px | `--la-line-height-h3` (1.2) | `--la-font-weight-h3` (600) |
-| H4 | `--la-font-size-h4` | 1.375rem / 22px | `--la-line-height-h4` (1.3) | `--la-font-weight-h4` (600) |
-| H5 | `--la-font-size-h5` | 1.125rem / 18px | `--la-line-height-h5` (1.4) | `--la-font-weight-h5` (500) |
-| H6 | `--la-font-size-h6` | 1rem / 16px | `--la-line-height-h6` (1.5) | `--la-font-weight-h6` (500) |
-| Body | `--la-font-size-body` | 1rem / 16px | `--la-line-height-body` (1.6) | `--la-font-weight-body` (400) |
-| Small | `--la-font-size-small` | 0.875rem / 14px | `--la-line-height-small` (1.5) | `--la-font-weight-small` (400) |
+| Role | Font | Size token | Size | Line-height token | Weight token |
+|---|---|---|---|---|---|
+| Hero | Bebas Neue | `--la-font-size-hero` | 3.5rem / 56px | `--la-line-height-hero` (1.05) | `--la-font-weight-h1` (700) |
+| H1 | Bebas Neue | `--la-font-size-h1` | 3rem / 48px | `--la-line-height-h1` (1.1) | `--la-font-weight-h1` (700) |
+| H2 | Bebas Neue | `--la-font-size-h2` | 2.25rem / 36px | `--la-line-height-h2` (1.15) | `--la-font-weight-h2` (700) |
+| H3 | Inter | `--la-font-size-h3` | 1.75rem / 28px | `--la-line-height-h3` (1.2) | `--la-font-weight-h3` (600) |
+| H4 | Inter | `--la-font-size-h4` | 1.375rem / 22px | `--la-line-height-h4` (1.3) | `--la-font-weight-h4` (600) |
+| H5 | Inter | `--la-font-size-h5` | 1.125rem / 18px | `--la-line-height-h5` (1.4) | `--la-font-weight-h5` (500) |
+| H6 | Inter | `--la-font-size-h6` | 1rem / 16px | `--la-line-height-h6` (1.5) | `--la-font-weight-h6` (500) |
+| Body | Inter | `--la-font-size-body` | 1rem / 16px | `--la-line-height-body` (1.6) | `--la-font-weight-body` (400) |
+| Small | Inter | `--la-font-size-small` | 0.875rem / 14px | `--la-line-height-small` (1.5) | `--la-font-weight-small` (400) |
+| Mono | JetBrains Mono | `--la-font-mono` | 1rem / 16px | `--la-line-height-body` (1.6) | 400 |
 
 Hero / H1 / H2 use uppercase with the display letter-spacing token
 (`--la-letter-spacing-display`, 0.04em); H3-H6 and body remain in
