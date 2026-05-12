@@ -147,15 +147,23 @@ jobs:
             # Get files changed in this commit
             FILES=$(git diff-tree --no-commit-id --name-only -r "$SHA")
             HAS_SITE=$(echo "$FILES" | grep -cE '^(content/|layouts/|assets/|static/|archetypes/|data/|i18n/|themes/|hugo\.toml$|package\.json$|package-lock\.json$)' || true)
+            # Site-affecting files OUTSIDE the content lane (content/** + static/images/**).
+            HAS_NONLANE_SITE=$(echo "$FILES" \
+              | grep -E '^(content/|layouts/|assets/|static/|archetypes/|data/|i18n/|themes/|hugo\.toml$|package\.json$|package-lock\.json$)' \
+              | grep -vE '^content/' \
+              | grep -vE '^static/images/' \
+              | wc -l | tr -d ' ')
 
             if [ "$HAS_SITE" -gt 0 ]; then
               SUBJECT=$(git log --format='%s' -n 1 "$SHA")
               IS_WP=$(echo "$SUBJECT" | grep -cE '^WP-[0-9]+[A-Za-z]?:' || true)
+              IS_FIX=$(echo "$SUBJECT" | grep -cE '^FIX:' || true)
+              IS_POST=$(echo "$SUBJECT" | grep -cE '^POST:' || true)
 
-              if [ "$IS_WP" -eq 0 ]; then
-                echo "::error::Commit $SHA touches site-affecting files but lacks WP-NNN prefix: $SUBJECT"
+              if [ "$IS_WP" -eq 0 ] && [ "$IS_FIX" -eq 0 ] && [ "$IS_POST" -eq 0 ]; then
+                echo "::error::Commit $SHA touches site-affecting files but lacks WP-NNN:/FIX:/POST: prefix: $SUBJECT"
                 FAIL=$((FAIL + 1))
-              else
+              elif [ "$IS_WP" -gt 0 ]; then
                 # Verify the referenced WP file exists
                 WP_NUM=$(echo "$SUBJECT" | sed -E 's/^WP-([0-9]+[A-Za-z]?).*/\1/')
                 WP_FILE=$(find docs/ai/work-packets -iname "WP-${WP_NUM}-*.md" 2>/dev/null | head -n 1)
@@ -163,15 +171,22 @@ jobs:
                   echo "::error::Commit $SHA references WP-${WP_NUM} but no WP file exists."
                   FAIL=$((FAIL + 1))
                 fi
+              else
+                # FIX: / POST: must stay in the content lane (content/** + static/images/**).
+                if [ "$HAS_NONLANE_SITE" -gt 0 ]; then
+                  echo "::error::Commit $SHA uses FIX:/POST: but touches paths outside the content lane (content/** + static/images/**): $SUBJECT"
+                  FAIL=$((FAIL + 1))
+                fi
               fi
             fi
           done
 
           if [ "$FAIL" -eq 0 ]; then
-            echo "All site-affecting commits are WP-traceable"
+            echo "All site-affecting commits are WP-traceable or content-lane-scoped"
           else
             echo ""
-            echo "Fix: ensure site-affecting commits use WP-NNN: prefix with a valid WP file."
+            echo "Fix: site-affecting commits must use WP-NNN: (with a WP file), or"
+            echo "     FIX:/POST: when limited to content/** + static/images/**."
             echo "See: docs/ai/REFERENCE/01.3-commit-hygiene.md"
             exit 1
           fi

@@ -98,16 +98,30 @@ if (-not $staged) {
 $staged | ForEach-Object { Write-Host "  $_" }
 Write-Host ""
 
-# Determine if site-affecting files are staged
-$hasSite = $staged | Where-Object {
+# Determine if site-affecting files are staged, and whether any of them
+# fall OUTSIDE the content lane (content/** + static/images/**). The hook
+# enforces this; mirror its categorization here so the prompt shows the
+# right menu.
+$siteAffecting = $staged | Where-Object {
     $_ -match '^(content/|layouts/|assets/|static/|archetypes/|data/|i18n/|themes/|hugo\.toml$|package\.json$|package-lock\.json$)'
 }
+$nonLaneSite = $siteAffecting | Where-Object {
+    $_ -notmatch '^content/' -and $_ -notmatch '^static/images/'
+}
+$hasSite = [bool]$siteAffecting
+$hasNonLaneSite = [bool]$nonLaneSite
 
 # Get or prompt for message
 if (-not $Message) {
     Write-Host "Commit message format:" -ForegroundColor Cyan
-    if ($hasSite) {
-        Write-Host "  WP-NNN[a-z]?: <summary>   (REQUIRED — site-affecting files staged)" -ForegroundColor Green
+    if ($hasNonLaneSite) {
+        Write-Host "  WP-NNN[a-z]?: <summary>   (REQUIRED — out-of-lane site files staged)" -ForegroundColor Green
+        Write-Host "  Out-of-lane files staged:" -ForegroundColor DarkGray
+        $nonLaneSite | ForEach-Object { Write-Host "    $_" -ForegroundColor DarkGray }
+    } elseif ($hasSite) {
+        Write-Host "  WP-NNN[a-z]?: <summary>   (WP work)" -ForegroundColor White
+        Write-Host "  FIX: <summary>             (content-lane edit: typo, copy tweak, broken link)" -ForegroundColor Green
+        Write-Host "  POST: <summary>            (new blog post, content lane)" -ForegroundColor Green
     } else {
         Write-Host "  WP-NNN[a-z]?: <summary>   (WP work)" -ForegroundColor White
         Write-Host "  ROADMAP: <summary>         (roadmap-only)" -ForegroundColor White
@@ -166,11 +180,11 @@ try {
     Write-Host "Commit failed. See hook output above for details." -ForegroundColor Red
     Write-Host ""
     Write-Host "Common fixes:" -ForegroundColor Yellow
-    Write-Host "  - Missing prefix: use WP-NNN: / ROADMAP: / INFRA: / SPEC:" -ForegroundColor Yellow
+    Write-Host "  - Missing prefix: use WP-NNN: / FIX: / POST: / ROADMAP: / INFRA: / SPEC:" -ForegroundColor Yellow
     Write-Host "  - Forbidden word: remove WIP, misc, tmp, etc." -ForegroundColor Yellow
     Write-Host "  - WP not found: check docs/ai/work-packets/" -ForegroundColor Yellow
     Write-Host "  - Subject too short: be more specific (>= 12 chars after prefix)" -ForegroundColor Yellow
-    Write-Host "  - Site files with non-WP prefix: use WP-NNN: or unstage" -ForegroundColor Yellow
+    Write-Host "  - FIX:/POST: with out-of-lane files: use WP-NNN:, or unstage non-content/non-images" -ForegroundColor Yellow
     Write-Host ""
     Write-Host "Full contract: docs/ai/REFERENCE/01.3-commit-hygiene.md" -ForegroundColor Yellow
     exit 1
