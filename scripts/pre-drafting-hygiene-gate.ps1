@@ -38,6 +38,7 @@ function Fail($reason) {
     Write-Host ''
     Write-Host 'STATUS: STOP' -ForegroundColor Red
     Write-Host "REASON: $reason" -ForegroundColor Red
+    Write-Host 'EXIT_CODE: 1' -ForegroundColor Red
     Write-Host ''
     Pop-Location -ErrorAction SilentlyContinue
     exit 1
@@ -64,6 +65,13 @@ function Assert-LastExit($context) {
 
 # ---------- Setup ----------
 
+# Tool availability pre-check (prevents confusing downstream failures)
+foreach ($cmd in @('git', 'gh', 'node')) {
+    if (-not (Get-Command $cmd -ErrorAction SilentlyContinue)) {
+        Fail "Required tool not found in PATH: $cmd. Install and re-run."
+    }
+}
+
 if (-not (Test-Path $repoPath)) {
     Fail "Repo path not found: $repoPath"
 }
@@ -76,10 +84,14 @@ try {
     # ---------- Check 0: Repository identity ----------
     Section 'Check 0: Repository identity (must be marketing repo)'
 
-    # 0a: cwd matches expected path (case-insensitive comparison on Windows)
-    $currentPath = (Get-Location).Path
-    if ($currentPath -ne $repoPath) {
-        Fail "Wrong working directory. Expected: $repoPath`n  Actual: $currentPath"
+    # Normalize both expected and actual paths (handles trailing slashes,
+    # symlinks, mixed-separator paths). Case-insensitive on Windows by default.
+    $normalizedExpected = [IO.Path]::GetFullPath($repoPath).TrimEnd('\')
+
+    # 0a: cwd matches expected path (normalized)
+    $normalizedCurrent = [IO.Path]::GetFullPath((Get-Location).Path).TrimEnd('\')
+    if ($normalizedCurrent -ne $normalizedExpected) {
+        Fail "Wrong working directory.`n  Expected: $normalizedExpected`n  Actual:   $normalizedCurrent"
     }
 
     # 0b: we're actually inside a git working tree (not just a path that happens to exist)
@@ -88,7 +100,15 @@ try {
         Fail 'Not inside a git repository (git rev-parse failed).'
     }
 
-    # 0c: origin remote points at the marketing repo
+    # 0c: git root matches expected (catches nested-repo execution, worktree path mismatch, folder aliasing)
+    $gitRoot = git rev-parse --show-toplevel 2>$null
+    Assert-LastExit 'git rev-parse --show-toplevel'
+    $normalizedGitRoot = [IO.Path]::GetFullPath($gitRoot).TrimEnd('\')
+    if ($normalizedGitRoot -ne $normalizedExpected) {
+        Fail "Git root mismatch.`n  Expected: $normalizedExpected`n  Actual:   $normalizedGitRoot"
+    }
+
+    # 0d: origin remote points at the marketing repo
     $originUrl = git remote get-url origin 2>$null
     if ($LASTEXITCODE -ne 0 -or -not $originUrl) {
         Fail 'No origin remote configured.'
@@ -97,7 +117,7 @@ try {
         Fail "Origin does not match marketing repo.`n  Expected substring: $expectedRemoteSubstring`n  Actual origin: $originUrl"
     }
 
-    # 0d: structural sanity — key marketing-repo file is present
+    # 0e: structural sanity — key marketing-repo file is present
     # (catches: stale checkout, accidental file deletion, wrong fork without the doc tree)
     if (-not (Test-Path 'docs/03-ROADMAP.md')) {
         Fail 'Expected marketing repo structure not found (docs/03-ROADMAP.md missing). Possible stale checkout or wrong fork.'
@@ -164,7 +184,7 @@ try {
         Info "Local is $commitsAhead commit(s) ahead of origin/main (intentional local work). Drafting OK if you plan to push these; otherwise resolve first."
     }
 
-    Pass 'Local aligned with origin/main (or only ahead)'
+    Pass "Local sync verified: ahead=$commitsAhead, behind=$commitsBehind"
 
     # ---------- Check 3: Claude branch hygiene ----------
     Section 'Check 3: Claude branch hygiene'
@@ -182,13 +202,16 @@ try {
     foreach ($branch in $claudeBranches) {
         $ahead = [int](git rev-list --count "origin/main..$branch" 2>$null)
         if ($ahead -gt 0) {
-            # Check for a merged PR with this branch as head
-            $mergedCount = 0
-            try {
-                $mergedCount = [int](gh pr list --state merged --search "head:$branch" --json number --jq 'length' 2>$null)
-            } catch {
-                $mergedCount = 0
+            # Check for a merged PR with this branch as head.
+            # PowerShell does NOT throw on native command non-zero exit, so we
+            # check $LASTEXITCODE explicitly. A gh CLI failure here must NOT
+            # be silently treated as "no merged PR" — that would mask
+            # infrastructure failure as governance failure (false STOP).
+            $mergedCountRaw = gh pr list --state merged --search "head:$branch" --json number --jq 'length' 2>$null
+            if ($LASTEXITCODE -ne 0) {
+                Fail "GitHub CLI query failed for branch '$branch'. Ensure 'gh' is authenticated ('gh auth status'). This is an infrastructure failure, not a governance failure — fix gh, then re-run the gate."
             }
+            $mergedCount = if ($mergedCountRaw) { [int]$mergedCountRaw } else { 0 }
             if ($mergedCount -eq 0) {
                 $unmergedBranches += "$branch ($ahead commit(s) ahead, no merged PR)"
             }
@@ -232,7 +255,10 @@ try {
         $openPrs = @($prsJson | ConvertFrom-Json)
         Info "$($openPrs.Count) open PR(s) — computing file overlap..."
 
-        $overlaps = @()
+        # HashSet deduplicates if a single PR triggers multiple matches per file
+        # (e.g., file matches both an exact-file pattern AND a dir prefix)
+        $overlapSet = New-Object 'System.Collections.Generic.HashSet[string]'
+
         foreach ($pr in $openPrs) {
             $branch = $pr.headRefName
             git fetch origin $branch 2>&1 | Out-Null
@@ -255,13 +281,14 @@ try {
                 }
 
                 if ($hit) {
-                    $overlaps += "PR #$($pr.number) ($($pr.title)) → $file"
+                    [void]$overlapSet.Add("PR #$($pr.number) ($($pr.title)) -> $file")
                 }
             }
         }
 
-        if ($overlaps.Count -gt 0) {
-            Fail "Open PR(s) overlap drafting surfaces:`n  $($overlaps -join "`n  ")`nMerge or wait before drafting (or fold the PR's work into your draft if scope is genuinely shared)."
+        if ($overlapSet.Count -gt 0) {
+            $overlapList = ($overlapSet | Sort-Object) -join "`n  "
+            Fail "Open PR(s) overlap drafting surfaces:`n  $overlapList`nMerge or wait before drafting (or fold the PR's work into your draft if scope is genuinely shared)."
         }
         Pass 'No file overlap with open PRs'
     }
@@ -284,6 +311,7 @@ try {
     # ---------- All checks passed ----------
     Section 'Verdict'
     Write-Host 'STATUS: GO' -ForegroundColor Green
+    Write-Host 'EXIT_CODE: 0' -ForegroundColor Green
     Write-Host 'All hygiene checks passed. Safe to begin WP drafting.'
     Write-Host ''
 
