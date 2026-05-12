@@ -5,18 +5,76 @@ description: "Legendary Arena brand system — colors, typography, tokens, art d
 summary: "Legendary Arena brand system — colors, typography, tokens, art direction, and usage."
 ---
 
-## Brand Overview {#brand-overview}
+<div class="brand-meta">
+  <span>Token version: <strong>v1</strong></span>
+  <span>Last updated: <strong>2026-05-07</strong></span>
+  <span>Surfaces: <code>www</code> · <code>play</code> · <code>cards</code></span>
+</div>
 
-Legendary Arena's visual identity is a token-driven design system
-shared across three surfaces: `www.legendary-arena.com` (marketing),
-`play.legendary-arena.com` (game client), and
-`cards.barefootbetters.com` (card registry). This page is the public
-reference for external creators and partners; the canonical sources
-live under [`docs/brand/*.md`][brand-docs] and
-[`/brand-tokens.css`][tokens].
+## Start Here {#start-here}
+
+Legendary Arena's visual identity is a **token-driven design system**
+shared across three surfaces. All styling resolves through
+[`/brand-tokens.css`](/brand-tokens.css) — no raw hex, no ad-hoc
+typography. This page is the single reference for using the system.
+
+<div class="brand-quickstart">
+  <a href="#color-system" class="brand-quickstart__card">
+    <strong>Designer</strong>
+    <span>Logo, color palette, type scale, art direction, do/don't rules</span>
+  </a>
+  <a href="#token-contract" class="brand-quickstart__card">
+    <strong>Developer</strong>
+    <span>Token contract, copy-paste snippets, spacing scale, interaction patterns</span>
+  </a>
+  <a href="#usage-guidelines" class="brand-quickstart__card">
+    <strong>Partner / Artist</strong>
+    <span>Usage guidelines, brand voice, art direction brief, asset downloads</span>
+  </a>
+</div>
+
+**One rule:** every visual value resolves through `var(--la-*)`.
+The canonical source lives at
+[`docs/brand/*.md`][brand-docs] in the repo.
 
 [brand-docs]: https://github.com/legendary-arena/legendary-arena-website/tree/main/docs/brand
-[tokens]: /brand-tokens.css
+
+## The Game {#the-game}
+
+Legendary Arena is a digital adaptation of the **Legendary**
+deck-building game. Players assemble a team of heroes, face
+escalating scenarios driven by a mastermind villain, and earn
+standing through demonstrated mastery — not luck, not grind.
+
+The core loop: **recruit heroes, build synergy, defeat the
+mastermind.** Every card in a player's deck is a deliberate choice.
+The game rewards knowledge of card interactions and sequencing
+over randomness.
+
+<div class="brand-card-showcase">
+  <figure class="brand-card-figure">
+    <img src="https://images.legendary-arena.com/rlmk/rlmk-hr-medusa-splitting-hairs.webp"
+         alt="Hero card — Medusa, Splitting Hairs (Realm of Kings set)"
+         loading="lazy" />
+    <figcaption>Hero card — recruited into a player's deck</figcaption>
+  </figure>
+  <figure class="brand-card-figure">
+    <img src="https://images.legendary-arena.com/ff04/ff04-mm-galactus.webp"
+         alt="Mastermind card — Galactus (Fantastic Four set)"
+         loading="lazy" />
+    <figcaption>Mastermind card — the villain players defeat</figcaption>
+  </figure>
+</div>
+
+**Three properties** carry the brand across the product:
+
+- **`www.legendary-arena.com`** — marketing, brand page, blog
+- **`play.legendary-arena.com`** — live game client
+- **`cards.barefootbetters.com`** — card registry and browsing
+
+All three consume the same token system
+([`/brand-tokens.css`](/brand-tokens.css)) so the visual language
+is consistent across every surface a player touches.
 
 ## Logo + Identity {#logo-identity}
 
@@ -75,6 +133,393 @@ inside the §Color System collapsible with the gameplay-only
 annotation.
 
 [strategy-voice]: https://github.com/legendary-arena/legendary-arena-website/blob/main/docs/brand/strategy.md
+
+## Card Graphics {#card-graphics}
+
+The game's visual vocabulary includes three icon families used on
+cards, filters, and the deck-builder UI. All icons are SVG,
+designed to read clearly at 24px and scale to 64px+.
+
+### Hero classes (5)
+
+Each hero belongs to one of five gameplay classes. Class icons
+appear on hero cards, filter chips, and class-border treatments.
+Class colors are **gameplay-only** — see §Core Identity.
+
+<div class="brand-icon-grid brand-icon-grid--classes">
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/hero-classes/class-strength.svg"
+         alt="Strength class icon" loading="lazy" />
+    <figcaption>Strength</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/hero-classes/class-covert.svg"
+         alt="Covert class icon" loading="lazy" />
+    <figcaption>Covert</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/hero-classes/class-instinct.svg"
+         alt="Instinct class icon" loading="lazy" />
+    <figcaption>Instinct</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/hero-classes/class-ranged.svg"
+         alt="Ranged class icon" loading="lazy" />
+    <figcaption>Ranged</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/hero-classes/class-tech.svg"
+         alt="Tech class icon" loading="lazy" />
+    <figcaption>Tech</figcaption>
+  </figure>
+</div>
+
+### Hero teams (25)
+
+Team icons identify hero affiliations — Avengers, X-Men,
+Guardians of the Galaxy, etc. They appear on hero cards and
+team-filter UI.
+
+<div class="brand-icon-grid brand-icon-grid--teams">
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/hero-teams/team-avengers.svg"
+         alt="Avengers" loading="lazy" />
+    <figcaption>Avengers</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/hero-teams/team-x-men.svg"
+         alt="X-Men" loading="lazy" />
+    <figcaption>X-Men</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/hero-teams/team-spider-friends.svg"
+         alt="Spider Friends" loading="lazy" />
+    <figcaption>Spider Friends</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/hero-teams/team-fantastic-four.svg"
+         alt="Fantastic Four" loading="lazy" />
+    <figcaption>Fantastic Four</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/hero-teams/team-guardians-of-the-galaxy.svg"
+         alt="Guardians of the Galaxy" loading="lazy" />
+    <figcaption>Guardians</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/hero-teams/team-shield.svg"
+         alt="S.H.I.E.L.D." loading="lazy" />
+    <figcaption>S.H.I.E.L.D.</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/hero-teams/team-x-force.svg"
+         alt="X-Force" loading="lazy" />
+    <figcaption>X-Force</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/hero-teams/team-marvel-knights.svg"
+         alt="Marvel Knights" loading="lazy" />
+    <figcaption>Marvel Knights</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/hero-teams/team-champions.svg"
+         alt="Champions" loading="lazy" />
+    <figcaption>Champions</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/hero-teams/team-inhumans.svg"
+         alt="Inhumans" loading="lazy" />
+    <figcaption>Inhumans</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/hero-teams/team-new-warriors.svg"
+         alt="New Warriors" loading="lazy" />
+    <figcaption>New Warriors</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/hero-teams/team-illuminati.svg"
+         alt="Illuminati" loading="lazy" />
+    <figcaption>Illuminati</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/hero-teams/team-heroes-of-asgard.svg"
+         alt="Heroes of Asgard" loading="lazy" />
+    <figcaption>Heroes of Asgard</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/hero-teams/team-heroes-of-wakanda.svg"
+         alt="Heroes of Wakanda" loading="lazy" />
+    <figcaption>Heroes of Wakanda</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/hero-teams/team-foes-of-asgard.svg"
+         alt="Foes of Asgard" loading="lazy" />
+    <figcaption>Foes of Asgard</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/hero-teams/team-brotherhood.svg"
+         alt="Brotherhood" loading="lazy" />
+    <figcaption>Brotherhood</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/hero-teams/team-cabal.svg"
+         alt="Cabal" loading="lazy" />
+    <figcaption>Cabal</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/hero-teams/team-crime-syndicate.svg"
+         alt="Crime Syndicate" loading="lazy" />
+    <figcaption>Crime Syndicate</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/hero-teams/team-hydra.svg"
+         alt="HYDRA" loading="lazy" />
+    <figcaption>HYDRA</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/hero-teams/team-sinister-six.svg"
+         alt="Sinister Six" loading="lazy" />
+    <figcaption>Sinister Six</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/hero-teams/team-mercs-for-money.svg"
+         alt="Mercs for Money" loading="lazy" />
+    <figcaption>Mercs for Money</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/hero-teams/team-warbound.svg"
+         alt="Warbound" loading="lazy" />
+    <figcaption>Warbound</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/hero-teams/team-venomverse.svg"
+         alt="Venomverse" loading="lazy" />
+    <figcaption>Venomverse</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/hero-teams/team-guardians-of-the-multiverse.svg"
+         alt="Guardians of the Multiverse" loading="lazy" />
+    <figcaption>Guardians of the Multiverse</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/hero-teams/team-x-factor-investigations.svg"
+         alt="X-Factor Investigations" loading="lazy" />
+    <figcaption>X-Factor</figcaption>
+  </figure>
+</div>
+
+### Card sets (40)
+
+Set icons identify which expansion a card belongs to. They appear
+on card faces and in set-filter dropdowns.
+
+<details>
+<summary>All 40 card-set icons</summary>
+
+<div class="brand-icon-grid brand-icon-grid--sets">
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/card-sets/set-core.svg"
+         alt="Core Set" loading="lazy" />
+    <figcaption>Core</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/card-sets/set-dkcy.svg"
+         alt="Dark City" loading="lazy" />
+    <figcaption>Dark City</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/card-sets/set-ff04.svg"
+         alt="Fantastic Four" loading="lazy" />
+    <figcaption>Fantastic Four</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/card-sets/set-pttr.svg"
+         alt="Paint the Town Red" loading="lazy" />
+    <figcaption>Paint the Town Red</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/card-sets/set-gotg.svg"
+         alt="Guardians of the Galaxy" loading="lazy" />
+    <figcaption>Guardians</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/card-sets/set-fear.svg"
+         alt="Fear Itself" loading="lazy" />
+    <figcaption>Fear Itself</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/card-sets/set-ssw1.svg"
+         alt="Secret Wars Volume 1" loading="lazy" />
+    <figcaption>Secret Wars 1</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/card-sets/set-ssw2.svg"
+         alt="Secret Wars Volume 2" loading="lazy" />
+    <figcaption>Secret Wars 2</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/card-sets/set-cvwr.svg"
+         alt="Civil War" loading="lazy" />
+    <figcaption>Civil War</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/card-sets/set-dead.svg"
+         alt="Deadpool" loading="lazy" />
+    <figcaption>Deadpool</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/card-sets/set-noir.svg"
+         alt="Noir" loading="lazy" />
+    <figcaption>Noir</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/card-sets/set-xmen.svg"
+         alt="X-Men" loading="lazy" />
+    <figcaption>X-Men</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/card-sets/set-smhc.svg"
+         alt="Spider-Man Homecoming" loading="lazy" />
+    <figcaption>Homecoming</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/card-sets/set-chmp.svg"
+         alt="Champions" loading="lazy" />
+    <figcaption>Champions</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/card-sets/set-wwhk.svg"
+         alt="World War Hulk" loading="lazy" />
+    <figcaption>World War Hulk</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/card-sets/set-antm.svg"
+         alt="Ant-Man" loading="lazy" />
+    <figcaption>Ant-Man</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/card-sets/set-vnom.svg"
+         alt="Venom" loading="lazy" />
+    <figcaption>Venom</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/card-sets/set-dims.svg"
+         alt="Dimensions" loading="lazy" />
+    <figcaption>Dimensions</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/card-sets/set-rlmk.svg"
+         alt="Realm of Kings" loading="lazy" />
+    <figcaption>Realm of Kings</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/card-sets/set-rvlt.svg"
+         alt="Revelations" loading="lazy" />
+    <figcaption>Revelations</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/card-sets/set-anni.svg"
+         alt="Annihilation" loading="lazy" />
+    <figcaption>Annihilation</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/card-sets/set-wpnx.svg"
+         alt="Weapon X" loading="lazy" />
+    <figcaption>Weapon X</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/card-sets/set-msis.svg"
+         alt="Messiah Complex" loading="lazy" />
+    <figcaption>Messiah Complex</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/card-sets/set-cosm.svg"
+         alt="Into the Cosmos" loading="lazy" />
+    <figcaption>Into the Cosmos</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/card-sets/set-shld.svg"
+         alt="S.H.I.E.L.D." loading="lazy" />
+    <figcaption>S.H.I.E.L.D.</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/card-sets/set-dstr.svg"
+         alt="Doctor Strange" loading="lazy" />
+    <figcaption>Doctor Strange</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/card-sets/set-nmut.svg"
+         alt="New Mutants" loading="lazy" />
+    <figcaption>New Mutants</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/card-sets/set-vill.svg"
+         alt="Villains" loading="lazy" />
+    <figcaption>Villains</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/card-sets/set-ca75.svg"
+         alt="Captain America 75th" loading="lazy" />
+    <figcaption>Cap 75th</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/card-sets/set-msmc.svg"
+         alt="Messiah Complex" loading="lazy" />
+    <figcaption>MSMC</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/card-sets/set-msp1.svg"
+         alt="Marvel Studios Phase 1" loading="lazy" />
+    <figcaption>Phase 1</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/card-sets/set-2099.svg"
+         alt="2099" loading="lazy" />
+    <figcaption>2099</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/card-sets/set-3dtc.svg"
+         alt="3D Trading Cards" loading="lazy" />
+    <figcaption>3D Cards</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/card-sets/set-amwp.svg"
+         alt="Ant-Man and the Wasp" loading="lazy" />
+    <figcaption>Ant-Man &amp; Wasp</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/card-sets/set-asrd.svg"
+         alt="Asgard" loading="lazy" />
+    <figcaption>Asgard</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/card-sets/set-bkpt.svg"
+         alt="Black Panther" loading="lazy" />
+    <figcaption>Black Panther</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/card-sets/set-bkwd.svg"
+         alt="Black Widow" loading="lazy" />
+    <figcaption>Black Widow</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/card-sets/set-mdns.svg"
+         alt="Midnight Sons" loading="lazy" />
+    <figcaption>Midnight Sons</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/card-sets/set-mgtg.svg"
+         alt="MGTG" loading="lazy" />
+    <figcaption>MGTG</figcaption>
+  </figure>
+  <figure class="brand-icon-figure">
+    <img src="https://images.legendary-arena.com/icons/card-sets/set-wtif.svg"
+         alt="What If" loading="lazy" />
+    <figcaption>What If</figcaption>
+  </figure>
+</div>
+
+</details>
 
 ## Color System {#color-system}
 
@@ -294,6 +739,107 @@ expected to be readable.
 
 </details>
 
+## Spacing & Layout {#spacing-layout}
+
+The spacing scale uses an 8-point base with 9 named steps. All
+layout spacing resolves through `--la-space-*` tokens. Full spec
+in [`spacing.md`](https://github.com/legendary-arena/legendary-arena-website/blob/main/docs/brand/spacing.md).
+
+<div class="brand-spacing-grid">
+  <div class="brand-spacing-step">
+    <div class="brand-spacing-bar" style="width: 4px;"></div>
+    <code>--la-space-1</code> <span>4px</span>
+  </div>
+  <div class="brand-spacing-step">
+    <div class="brand-spacing-bar" style="width: 8px;"></div>
+    <code>--la-space-2</code> <span>8px</span>
+  </div>
+  <div class="brand-spacing-step">
+    <div class="brand-spacing-bar" style="width: 12px;"></div>
+    <code>--la-space-3</code> <span>12px</span>
+  </div>
+  <div class="brand-spacing-step">
+    <div class="brand-spacing-bar" style="width: 16px;"></div>
+    <code>--la-space-4</code> <span>16px</span>
+  </div>
+  <div class="brand-spacing-step">
+    <div class="brand-spacing-bar" style="width: 24px;"></div>
+    <code>--la-space-5</code> <span>24px</span>
+  </div>
+  <div class="brand-spacing-step">
+    <div class="brand-spacing-bar" style="width: 32px;"></div>
+    <code>--la-space-6</code> <span>32px</span>
+  </div>
+  <div class="brand-spacing-step">
+    <div class="brand-spacing-bar" style="width: 48px;"></div>
+    <code>--la-space-7</code> <span>48px</span>
+  </div>
+  <div class="brand-spacing-step">
+    <div class="brand-spacing-bar" style="width: 64px;"></div>
+    <code>--la-space-8</code> <span>64px</span>
+  </div>
+  <div class="brand-spacing-step">
+    <div class="brand-spacing-bar" style="width: 96px;"></div>
+    <code>--la-space-9</code> <span>96px</span>
+  </div>
+</div>
+
+**Border radius** — `--la-radius-sm` (4px), `--la-radius-md` (8px),
+`--la-radius-lg` (16px), `--la-radius-xl` (24px),
+`--la-radius-pill` (9999px).
+
+**Z-index layers** — `base` (0), `dropdown` (5), `sticky` (10),
+`overlay` (50), `modal` (100), `toast` (200).
+
+## Interaction Patterns {#interaction-patterns}
+
+Interactive elements follow a consistent set of transition and
+state rules defined in `brand-tokens.css`.
+
+**Transitions** — three speeds, all ease-in-out:
+
+- `--la-transition-fast` — 120ms (hover, focus ring, toggle)
+- `--la-transition-base` — 180ms (expand/collapse, tab switch)
+- `--la-transition-slow` — 280ms (page-level reveal, modal)
+
+**Hover states** — surface elements lift to `--la-color-surface-hover`;
+interactive text shifts to `--la-color-blue-bright`.
+
+**Focus** — visible focus rings use `--la-color-blue-bright` at 2px
+outline offset. Never suppress the default outline without replacing
+it.
+
+**Reduced motion** — all transitions respect `prefers-reduced-motion:
+reduce`. When active, duration collapses to 0ms. See
+[`spacing.md` §10](https://github.com/legendary-arena/legendary-arena-website/blob/main/docs/brand/spacing.md).
+
+## Accessibility {#accessibility}
+
+Accessibility is built into the token system, not bolted on.
+
+**Contrast requirements:**
+
+- Body text on all background tokens must meet **WCAG AA** (4.5:1).
+- Large text (display / H1 / H2) must meet **WCAG AA large** (3:1).
+- `--la-color-cta` on white text exceeds **AAA** (~10.4:1) in both
+  modes — mode-stable by design.
+- `--la-color-text-secondary` on `--la-color-bg-primary` clears AA
+  in both modes (light: 7.1:1, dark: 6.8:1).
+
+**Color independence:** information must not be conveyed by color
+alone. Semantic states (`success`, `warning`, `error`) pair color
+with icon or text label.
+
+**Minimum text size:** body text must not drop below 14px
+(`--la-font-size-small`) anywhere it is expected to be readable.
+
+**Motion:** all animation respects `prefers-reduced-motion`. No
+auto-playing animation without user trigger.
+
+**Focus management:** interactive elements must have a visible focus
+indicator. The system default is a 2px `--la-color-blue-bright`
+outline.
+
 ## Token Contract {#token-contract}
 
 All visual styling MUST consume the canonical tokens defined in
@@ -309,6 +855,70 @@ to consume tokens cross-origin with a bundled fallback per consumer.
 
 `/brand-tokens.css` is a **public API** — treat any proposed token
 change as an API change.
+
+### Copy-paste patterns {#copy-paste-patterns}
+
+**Primary CTA button:**
+
+```css
+.btn-primary {
+  background-color: var(--la-color-cta);
+  color: #fff;
+  font-family: var(--la-font-body);
+  font-weight: var(--la-font-weight-semibold);
+  padding: var(--la-space-3) var(--la-space-5);
+  border: none;
+  border-radius: var(--la-radius-md);
+  transition: background-color var(--la-transition-fast);
+}
+.btn-primary:hover {
+  background-color: var(--la-color-cta-bright);
+}
+.btn-primary:focus-visible {
+  outline: 2px solid var(--la-color-blue-bright);
+  outline-offset: 2px;
+}
+```
+
+**Section card:**
+
+```css
+.card {
+  background-color: var(--la-color-surface);
+  border: 1px solid var(--la-color-border-subtle);
+  border-radius: var(--la-radius-md);
+  padding: var(--la-space-5);
+  transition: background-color var(--la-transition-fast);
+}
+.card:hover {
+  background-color: var(--la-color-surface-hover);
+}
+```
+
+**Display heading:**
+
+```css
+.hero-heading {
+  font-family: var(--la-font-display);
+  font-size: var(--la-font-size-hero);
+  font-weight: var(--la-font-weight-h1);
+  line-height: var(--la-line-height-hero);
+  letter-spacing: var(--la-letter-spacing-display);
+  text-transform: uppercase;
+  color: var(--la-color-gold);
+}
+```
+
+**Consuming tokens cross-origin (play / registry):**
+
+```html
+<link rel="stylesheet"
+      href="https://www.legendary-arena.com/brand-tokens.css"
+      crossorigin="anonymous" />
+```
+
+Each consumer bundles a local fallback copy of `brand-tokens.css`
+that loads if the cross-origin fetch fails — see WP-007a / WP-007b.
 
 ## Usage Guidelines {#usage-guidelines}
 
@@ -329,6 +939,14 @@ Bright lines from
     <span class="usage-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 10 18 20 6"/></svg></span>
     <span><strong>DO</strong> render the logo as gold-on-dark (primary) or white-only (inversion). Two treatments only.</span>
   </li>
+  <li class="usage-do">
+    <span class="usage-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 10 18 20 6"/></svg></span>
+    <span><strong>DO</strong> pair semantic states with icons or text labels — never color alone.</span>
+  </li>
+  <li class="usage-do">
+    <span class="usage-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 10 18 20 6"/></svg></span>
+    <span><strong>DO</strong> provide a visible focus indicator on every interactive element — <code>2px --la-color-blue-bright</code> outline.</span>
+  </li>
   <li class="usage-dont">
     <span class="usage-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg></span>
     <span><strong>DON'T</strong> use class colors (<code>--la-color-class-*</code>) for branding, marketing, CTAs, or the logo. Gameplay tags, not identity.</span>
@@ -341,7 +959,34 @@ Bright lines from
     <span class="usage-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg></span>
     <span><strong>DON'T</strong> introduce raw hex / font / spacing values. Every visual resolves through <code>var(--la-*)</code>.</span>
   </li>
+  <li class="usage-dont">
+    <span class="usage-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg></span>
+    <span><strong>DON'T</strong> suppress the default focus outline without providing an equivalent visible alternative.</span>
+  </li>
+  <li class="usage-dont">
+    <span class="usage-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg></span>
+    <span><strong>DON'T</strong> auto-play animations or transitions that ignore <code>prefers-reduced-motion</code>.</span>
+  </li>
 </ul>
+
+## Assets & Downloads {#assets-downloads}
+
+**Token stylesheet** — [`/brand-tokens.css`](/brand-tokens.css)
+(the canonical source; link or download).
+
+**Logo files** (SVG, production-ready):
+
+- [Primary wordmark (gold on dark)](/brand/logo/logo-la-dark-400x200.svg)
+- [Inversion wordmark (white-only)](/brand/logo/logo-la-light-400x200.svg)
+- [Icon / favicon](/brand/logo/legendary-arena-icon.svg)
+
+**Documentation** (source of truth, in repo):
+
+- [`strategy.md`](https://github.com/legendary-arena/legendary-arena-website/blob/main/docs/brand/strategy.md) — positioning, voice, tone
+- [`palette.md`](https://github.com/legendary-arena/legendary-arena-website/blob/main/docs/brand/palette.md) — full color spec + WCAG contracts
+- [`typography.md`](https://github.com/legendary-arena/legendary-arena-website/blob/main/docs/brand/typography.md) — font families, size scale
+- [`spacing.md`](https://github.com/legendary-arena/legendary-arena-website/blob/main/docs/brand/spacing.md) — spacing, radii, z-index, motion
+- [`CHANGELOG.md`](https://github.com/legendary-arena/legendary-arena-website/blob/main/docs/brand/CHANGELOG.md) — token version history
 
 ## Art Direction (Mood Board) {#art-direction}
 
@@ -350,7 +995,29 @@ one-page Legendary Arena mood board poster. Artists, partners, and
 integrators use it to interpret the brand consistently. The
 canonical source is
 [`docs/brand/mood-board-spec.md`](https://github.com/legendary-arena/legendary-arena-website/blob/main/docs/brand/mood-board-spec.md);
-the body is inlined here at render time so a single edit
+the body is inlined below at render time so a single edit
 propagates.
 
+<details>
+<summary>Full art-direction brief (mood board spec)</summary>
+
 {{< readfile file="/docs/brand/mood-board-spec.md" markdown="true" >}}
+
+</details>
+
+## Governance {#governance}
+
+**Token changes are API changes.** Breaking changes to
+`/brand-tokens.css` require a major version bump (`v1 → v2`) and
+coordinated consumer updates across all three surfaces before the
+new version publishes.
+
+**Proposing a change:** open an issue or PR against the
+[`docs/brand/`](https://github.com/legendary-arena/legendary-arena-website/tree/main/docs/brand)
+directory. Include the token name, proposed value, rationale, and
+which surfaces are affected. Non-breaking additions (new tokens)
+can land in a minor bump; renames or value changes to existing
+tokens are breaking.
+
+**Version history:** see
+[`CHANGELOG.md`](https://github.com/legendary-arena/legendary-arena-website/blob/main/docs/brand/CHANGELOG.md).

@@ -863,6 +863,174 @@ ul#menu li a span.active {
      the shortcode (Color System "Full spec" collapsible)
    ========================================================= */
 
+/* §9.0a Brand meta strip (version + date + surfaces) */
+
+.brand-page .brand-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--la-space-3) var(--la-space-5);
+  margin-bottom: var(--la-space-6);
+  padding: var(--la-space-3) var(--la-space-4);
+  background-color: var(--la-color-bg-secondary);
+  border: 1px solid var(--la-color-border-subtle);
+  border-radius: var(--la-radius-md);
+  font-family: var(--la-font-mono);
+  font-size: var(--la-font-size-small);
+  color: var(--la-color-text-secondary);
+}
+
+/* §9.0b Quick-start audience routing cards */
+
+.brand-page .brand-quickstart {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--la-space-4);
+  margin: var(--la-space-5) 0 var(--la-space-6);
+}
+
+.brand-page .brand-quickstart__card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--la-space-2);
+  padding: var(--la-space-4) var(--la-space-5);
+  background-color: var(--la-color-surface);
+  border: 1px solid var(--la-color-border-subtle);
+  border-radius: var(--la-radius-md);
+  text-decoration: none;
+  color: var(--la-color-text-primary);
+  transition: background-color var(--la-transition-fast),
+              border-color var(--la-transition-fast);
+}
+
+.brand-page .brand-quickstart__card:hover {
+  background-color: var(--la-color-surface-hover);
+  border-color: var(--la-color-blue-bright);
+}
+
+.brand-page .brand-quickstart__card strong {
+  font-family: var(--la-font-display);
+  font-size: var(--la-font-size-h4);
+  letter-spacing: var(--la-letter-spacing-display);
+  text-transform: uppercase;
+  color: var(--la-color-gold);
+}
+
+.brand-page .brand-quickstart__card span {
+  font-size: var(--la-font-size-small);
+  color: var(--la-color-text-secondary);
+  line-height: var(--la-line-height-small);
+}
+
+/* §9.0c Card showcase (The Game section — hero + mastermind side-by-side) */
+
+.brand-page .brand-card-showcase {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--la-space-5);
+  margin: var(--la-space-5) 0 var(--la-space-6);
+}
+
+.brand-page .brand-card-figure {
+  margin: 0;
+  text-align: center;
+}
+
+.brand-page .brand-card-figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--la-radius-md);
+  border: 1px solid var(--la-color-border-subtle);
+}
+
+.brand-page .brand-card-figure figcaption {
+  margin-top: var(--la-space-2);
+  font-family: var(--la-font-mono);
+  font-size: var(--la-font-size-small);
+  color: var(--la-color-text-secondary);
+}
+
+/* §9.0d Icon grids (Card Graphics section — classes, teams, sets) */
+
+.brand-page .brand-icon-grid {
+  display: grid;
+  gap: var(--la-space-4);
+  margin: var(--la-space-5) 0 var(--la-space-6);
+}
+
+.brand-page .brand-icon-grid--classes {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.brand-page .brand-icon-grid--teams,
+.brand-page .brand-icon-grid--sets {
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+}
+
+.brand-page .brand-icon-figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--la-space-1);
+  text-align: center;
+}
+
+.brand-page .brand-icon-figure img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.brand-page .brand-icon-grid--classes .brand-icon-figure img {
+  width: 64px;
+  height: 64px;
+}
+
+.brand-page .brand-icon-figure figcaption {
+  font-size: var(--la-font-size-small);
+  color: var(--la-color-text-secondary);
+  line-height: var(--la-line-height-small);
+}
+
+@media (max-width: 480px) {
+  .brand-page .brand-icon-grid--classes {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .brand-page .brand-card-showcase {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* §9.0e Spacing scale visualisation */
+
+.brand-page .brand-spacing-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--la-space-2);
+  margin: var(--la-space-5) 0 var(--la-space-6);
+}
+
+.brand-page .brand-spacing-step {
+  display: flex;
+  align-items: center;
+  gap: var(--la-space-3);
+  font-family: var(--la-font-mono);
+  font-size: var(--la-font-size-small);
+  color: var(--la-color-text-secondary);
+}
+
+.brand-page .brand-spacing-bar {
+  height: var(--la-space-4);
+  min-width: 4px;
+  background-color: var(--la-color-gold);
+  border-radius: var(--la-radius-sm);
+  opacity: 0.8;
+}
+
+.brand-page .brand-spacing-step code {
+  background-color: var(--la-color-bg-secondary);
+}
+
 /* §9.1 Section spacing
    PaperMod's list template renders section headings (`h2` inside
    .post-content) tight against the preceding block. The brand page
