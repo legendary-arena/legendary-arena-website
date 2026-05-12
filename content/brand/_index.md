@@ -7,9 +7,21 @@ summary: "Legendary Arena brand system — colors, typography, tokens, art direc
 
 <div class="brand-meta">
   <span>Token version: <strong>v1</strong></span>
-  <span>Last updated: <strong>2026-05-07</strong></span>
+  <span>Last updated: <strong>2026-05-12</strong></span>
   <span>Surfaces: <code>www</code> · <code>play</code> · <code>cards</code></span>
 </div>
+
+## Brand Overview {#brand-overview}
+
+**Legendary Arena is a competitive deck-building game where mastery — not luck — determines victory.**
+
+Players assemble a team of heroes, build synergy, and overcome
+escalating scenarios driven by a mastermind villain. Every decision
+compounds. Every card matters. The system rewards knowledge,
+sequencing, and execution.
+
+This page defines the **visual and interaction system** that carries
+that identity across every surface.
 
 ## Start Here {#start-here}
 
@@ -106,10 +118,16 @@ Use only when a light surface forces inversion.
        width="64" height="64" />
 </p>
 
-**Failure mode.** Do not apply class colors
-(`--la-color-class-*`) to the logo — class colors communicate gameplay
-role, not brand identity (see
-[`palette.md` §4.4][palette]).
+### Non-negotiable rules
+
+- Do not recolor the logo
+- Do not apply gradients or effects
+- Do not apply class colors (`--la-color-class-*`) — class colors
+  communicate gameplay role, not brand identity
+  (see [`palette.md` §4.4][palette])
+- Do not alter proportions
+
+Violation weakens brand recognition immediately.
 
 [palette]: https://github.com/legendary-arena/legendary-arena-website/blob/main/docs/brand/palette.md
 
@@ -119,11 +137,28 @@ Brand voice: **cinematic, mature, heroic**. Direct sentences, active
 verbs, no irony — see [`strategy.md` §2][strategy-voice] for the full
 voice + tone rules.
 
-**Identity colors** — three, deliberately restrained:
+### Positioning
 
-- **Gold** — recognition, headlines, achievement, victory
-- **Maroon** (deep, not cherry) — action, CTAs, attack semantic
-- **Navy** (deep, not royal) — system, links, recruit semantic
+Legendary Arena is a **skill-driven strategy system disguised as a
+card game**.
+
+- Not luck-driven
+- Not grind-based
+- Not collection-gated
+
+Victory is earned through **system mastery**. The scoring system
+measures *how well* a game was played — never how long, how often,
+or what was unlocked.
+
+### Identity colors
+
+Three colors define brand recognition — constraint is intentional:
+
+- **Gold** — achievement, recognition, victory
+- **Maroon** (deep, not cherry) — action, CTAs, decisive moments
+- **Navy** (deep, not royal) — system, structure, navigation
+
+Additional color reduces signal strength.
 
 **Class colors are gameplay-only.** The five class tokens
 (`--la-color-class-{strength,covert,instinct,ranged,tech}`) identify a
@@ -550,10 +585,29 @@ on card faces and in set-filter dropdowns.
 
 </details>
 
+## Why This System Exists {#why-this-system-exists}
+
+The brand system enforces four properties:
+
+- **Consistency** — one visual language across all surfaces
+- **Scalability** — new features inherit design automatically
+- **Velocity** — design decisions are pre-encoded in tokens
+- **Integrity** — brand cannot drift over time
+
+The token layer is not styling — it is **governance encoded as code**.
+
 ## Color System {#color-system}
 
 Visual summary first; the full per-mode spec (with class colors)
 lives in the collapsible below.
+
+### How to think about color
+
+| Category | Purpose |
+|----------|---------|
+| Identity | Recognition surfaces — gold, maroon, navy |
+| Action | Interaction and CTA — what the user clicks |
+| System | Layout and readability — backgrounds, text, borders |
 
 ### Palette reference (light + dark)
 
@@ -588,6 +642,8 @@ lives in the collapsible below.
 {{< brand-swatch token="--la-color-bg-secondary" role="Surface · Section" >}}
 {{< brand-swatch token="--la-color-text-primary" role="Text · Primary" >}}
 </div>
+
+System colors must **never compete** with identity colors.
 
 `--la-color-cta` is mode-stable at `#7a1d1f` (~10.4:1 contrast on
 white text in both modes — AAA). `--la-color-blue-bright` carries
@@ -675,6 +731,8 @@ readable; mono is reserved for code, registry, and card-stat surfaces.
 Condensed, high-impact, uppercase-friendly. Used for hero, H1, and
 H2 only — never body text. Fallbacks: Anton, Oswald, system-ui.
 
+Effect: **impact, cinematic scale, authority**.
+
 ### Inter — body
 
 {{< brand-font-sample family="body" sample="Inter" >}}
@@ -683,12 +741,16 @@ Highly readable at all sizes, neutral tone. The default for everything
 readable — paragraphs, navigation, UI. Fallbacks: system-ui,
 -apple-system, Segoe UI.
 
+Effect: **clarity, neutrality, readability**.
+
 ### JetBrains Mono — mono
 
 {{< brand-font-sample family="mono" sample="JetBrains Mono" >}}
 
 Code blocks, card stats, token references, technical content.
 Fallbacks: IBM Plex Mono, Consolas.
+
+Effect: **precision, technical clarity**.
 
 Full font stacks in
 [`typography.md` §3](https://github.com/legendary-arena/legendary-arena-website/blob/main/docs/brand/typography.md).
@@ -768,11 +830,18 @@ expected to be readable.
 
 </details>
 
+### Reality check
+
+Typography is not decoration. It encodes **hierarchy**, **information
+priority**, and **tone**. Misuse breaks comprehension before it breaks
+aesthetics.
+
 ## Spacing & Layout {#spacing-layout}
 
 The spacing scale uses an 8-point base with 9 named steps. All
-layout spacing resolves through `--la-space-*` tokens. Full spec
-in [`spacing.md`](https://github.com/legendary-arena/legendary-arena-website/blob/main/docs/brand/spacing.md).
+layout spacing resolves through `--la-space-*` tokens — spacing
+defines rhythm, not just distance. Full spec in
+[`spacing.md`](https://github.com/legendary-arena/legendary-arena-website/blob/main/docs/brand/spacing.md).
 
 <div class="brand-spacing-grid">
   <div class="brand-spacing-step">
@@ -820,6 +889,9 @@ in [`spacing.md`](https://github.com/legendary-arena/legendary-arena-website/blo
 **Z-index layers** — `base` (0), `dropdown` (5), `sticky` (10),
 `overlay` (50), `modal` (100), `toast` (200).
 
+**Rule:** tight spacing = density / system. Wide spacing = emphasis /
+separation. Never introduce arbitrary pixel values.
+
 ## Interaction Patterns {#interaction-patterns}
 
 Interactive elements follow a consistent set of transition and
@@ -841,6 +913,9 @@ it.
 **Reduced motion** — all transitions respect `prefers-reduced-motion:
 reduce`. When active, duration collapses to 0ms. See
 [`spacing.md` §10](https://github.com/legendary-arena/legendary-arena-website/blob/main/docs/brand/spacing.md).
+
+**Rule:** interaction must feel **responsive**, **predictable**, and
+**controlled**. Never decorative. Always meaningful.
 
 ## Accessibility {#accessibility}
 
@@ -1017,6 +1092,16 @@ Bright lines from
 - [`spacing.md`](https://github.com/legendary-arena/legendary-arena-website/blob/main/docs/brand/spacing.md) — spacing, radii, z-index, motion
 - [`CHANGELOG.md`](https://github.com/legendary-arena/legendary-arena-website/blob/main/docs/brand/CHANGELOG.md) — token version history
 
+## Real-World Application {#real-world-application}
+
+The system must produce consistent results across all surfaces.
+
+- Same CTA color on marketing and game UI
+- Same type hierarchy across pages
+- Same spacing rhythm across layouts
+
+If two surfaces feel different, the system is being violated.
+
 ## Art Direction (Mood Board) {#art-direction}
 
 This is the art-direction brief used when commissioning the
@@ -1050,3 +1135,15 @@ tokens are breaking.
 
 **Version history:** see
 [`CHANGELOG.md`](https://github.com/legendary-arena/legendary-arena-website/blob/main/docs/brand/CHANGELOG.md).
+
+---
+
+## Final Principle
+
+Legendary Arena is not styled — it is **resolved**.
+
+Every visual decision comes from the system.
+Every surface reflects the same identity.
+Every interaction reinforces mastery.
+
+The brand is the system.
