@@ -131,15 +131,19 @@ over randomness.
   </figure>
 </div>
 
-**Three properties** carry the brand across the product:
+**Four properties** carry the brand across the product:
 
 - **`www.legendary-arena.com`** — marketing, brand page, blog
 - **`play.legendary-arena.com`** — live game client
 - **`cards.barefootbetters.com`** — card registry and browsing
+- **`ewiki.legendary-arena.com`** — engineering wiki (architecture,
+  decisions, inventory)
 
-All three consume the same token system
+The first three consume the same token system
 ([`/brand-tokens.css`](/brand-tokens.css)) so the visual language
-is consistent across every surface a player touches.
+is consistent across every surface a player touches. The engineering
+wiki is governed by the engine monorepo and is not a brand-tokens
+consumer in v1.
 
 ## Logo + Identity {#logo-identity}
 
@@ -1159,6 +1163,11 @@ Bright lines from
 - [`typography.md`](https://github.com/legendary-arena/legendary-arena-website/blob/main/docs/brand/typography.md) — font families, size scale
 - [`spacing.md`](https://github.com/legendary-arena/legendary-arena-website/blob/main/docs/brand/spacing.md) — spacing, radii, z-index, motion
 - [`CHANGELOG.md`](https://github.com/legendary-arena/legendary-arena-website/blob/main/docs/brand/CHANGELOG.md) — token version history
+
+**Engineering references** (engine monorepo):
+
+- [Architecture inventory](https://ewiki.legendary-arena.com/architecture-inventory/) — auto-generated weekly from `scripts/architecture-inventory.mjs` (WP-145)
+- [Engineering wiki](https://ewiki.legendary-arena.com/) — decisions, post-mortems, schema docs
 
 ## Real-World Application {#real-world-application}
 
