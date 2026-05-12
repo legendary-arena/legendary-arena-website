@@ -1,0 +1,102 @@
+{{- /* Legendary Arena — project-side Schema.org JSON-LD.
+       Loaded from layouts/_partials/extend_head.html, gated by the
+       same production check PaperMod uses for its OG / Twitter /
+       Schema partials in themes/PaperMod/layouts/_partials/head.html
+       lines 189-194.
+
+       Page-kind matrix:
+
+       Page                     | This partial emits          | PaperMod emits (unchanged)
+       -------------------------|-----------------------------|----------------------------
+       / (home)                 | Organization, WebSite       | (suppressed — see note below)
+       /about/                  | AboutPage                   | BreadcrumbList
+       /posts/                  | Blog                        | BreadcrumbList
+       /posts/<slug>/           | (nothing)                   | BreadcrumbList, BlogPosting
+
+       Suppression of PaperMod's home-page Organization: PaperMod's
+       head.html unconditionally loads templates/schema_json.html
+       on production, which emits Organization on .IsHome. To avoid
+       emitting two Organization entities on the home page (a Rich
+       Results de-duplication tax), this WP introduces a project-
+       side templates/schema_json.html OVERRIDE (Hugo lookup order
+       resolves layouts/_partials/templates/schema_json.html ahead
+       of themes/PaperMod/...). The override re-exports the
+       upstream partial verbatim EXCEPT for the IsHome branch,
+       which is replaced by a no-op so this project-side partial
+       owns the home-page Schema emission. See
+       layouts/_partials/templates/schema_json.html for the override
+       and docs/05-SEO-CONVENTIONS.md for the full discipline.
+
+       References:
+       - docs/03-ROADMAP.md § WP-008 — Deliverables
+       - docs/05-SEO-CONVENTIONS.md
+       - Google docs: WebSite, Organization, AboutPage, Blog
+*/ -}}
+
+{{- if .IsHome }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "{{ site.Params.schema.publisherType | default "Organization" }}",
+  "name": {{ site.Title }},
+  "url": {{ site.Home.Permalink }},
+  "description": {{ site.Params.description | plainify | truncate 180 | safeHTML }},
+  "logo": {{ site.Params.assets.favicon | default "favicon.ico" | absURL }},
+  "sameAs": [
+    {{- with site.Params.schema.sameAs }}
+      {{- range $i, $e := . }}{{ if $i }}, {{ end }}{{ trim $e " " }}{{- end }}
+    {{- end }}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": {{ site.Title }},
+  "url": {{ site.Home.Permalink }},
+  "description": {{ site.Params.description | plainify | truncate 180 | safeHTML }},
+  "inLanguage": {{ site.Language.Lang | default "en-us" }}
+  {{- /* SearchAction intentionally omitted at WP-008 lock. Pagefind
+         is client-only; no URL-addressable search endpoint exists.
+         See docs/05-SEO-CONVENTIONS.md "WebSite + SearchAction
+         decision" and WP-008 § Step 2.2 for the full rationale. */ -}}
+}
+</script>
+{{- end -}}
+
+{{- if eq .RelPermalink "/about/" }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": {{ .Title }},
+  "url": {{ .Permalink }},
+  "description": {{ with .Description | plainify }}{{ . }}{{ else }}{{ .Summary | plainify }}{{ end }},
+  "inLanguage": {{ site.Language.Lang | default "en-us" }},
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": {{ site.Title }},
+    "url": {{ site.Home.Permalink }}
+  }
+}
+</script>
+{{- end -}}
+
+{{- if eq .RelPermalink "/posts/" }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "{{ .Title }} — {{ site.Title }}",
+  "url": {{ .Permalink }},
+  "description": {{ with .Description | plainify }}{{ . }}{{ else }}{{ printf "Devblog, dev journals, release notes from %s." site.Title }}{{ end }},
+  "inLanguage": {{ site.Language.Lang | default "en-us" }},
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": {{ site.Title }},
+    "url": {{ site.Home.Permalink }}
+  }
+}
+</script>
+{{- end -}}
