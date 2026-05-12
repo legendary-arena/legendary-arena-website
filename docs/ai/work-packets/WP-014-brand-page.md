@@ -129,11 +129,21 @@ introduced by WP-010:
 
 ### Step 2 — Create `docs/brand/mood-board-spec.md`
 
-Lift Appendix A of this WP verbatim into a new brand doc at
-`docs/brand/mood-board-spec.md`. The doc is the durable artifact
-for handing to a graphic artist commissioned to produce the
-one-page poster (PDF/SVG); the poster artwork itself is out of
-scope for this WP.
+Lift Appendix A of this WP into a new brand doc at
+`docs/brand/mood-board-spec.md`, preserving content structure,
+wording, and ordering, with **only** the following permitted
+transformations:
+
+- Removal of any personal-cloud URLs (SharePoint, OneDrive,
+  Copilot share links)
+- Minor formatting normalization for markdown linting (whitespace,
+  heading spacing, list indentation)
+- No semantic edits, rewording, or content additions
+
+All remaining content must match Appendix A exactly. The doc is
+the durable artifact for handing to a graphic artist commissioned
+to produce the one-page poster (PDF/SVG); the poster artwork itself
+is out of scope for this WP.
 
 The spec doc must:
 
@@ -182,10 +192,17 @@ and card surfaces.
 
 #### 2. Logo + Identity
 
-- Render the canonical logo (asset from `docs/brand/logo-figma/`
-  or `static/` — confirm canonical export location during execution;
-  if no `static/` export exists yet, add one as part of this WP and
-  log the choice in the decisions log)
+- Render the canonical logo. Resolution rule (deterministic, no
+  decision-making at execution time):
+  1. If a production-ready export exists under `static/brand/logo/`,
+     use that asset
+  2. Otherwise, export the canonical logo from
+     `docs/brand/logo-figma/` into `static/brand/logo/` as
+     `logo-primary.svg` (preferred); fallback to `logo-primary.png`
+     ONLY if an SVG export is genuinely unavailable
+  3. The exported asset becomes the canonical marketing-site logo
+     surface and MUST be referenced from `static/` thereafter
+  4. Record the chosen asset path in the Decisions log (Step 7)
 - Primary usage: gold on dark
 - Inversion: white-only
 - Failure-mode call-out: do NOT apply class colors to the logo
@@ -264,6 +281,17 @@ rendering paths:
   (Implement as a shortcode `layouts/_shortcodes/readfile.html` if
   one does not already exist — small, self-contained, no external
   dependencies.)
+
+  **Path A determinism constraints (hard):**
+  - The file path MUST be absolute-relative to the Hugo project
+    root (e.g., `/docs/brand/mood-board-spec.md`)
+  - `readFile` usage MUST NOT depend on environment-specific paths
+  - The shortcode MUST NOT introduce non-deterministic content
+    (timestamps, dynamic data, build-time env vars)
+
+  If any non-determinism or build inconsistency is observed during
+  Step 6 §8 (reproducibility check), Path A is rejected and Path B
+  is used instead, with the decision recorded in the Decisions log.
 - **Path B (fallback):** Manually mirror the spec content in
   `content/brand/_index.md`. If chosen, add a comment at the top
   of both files reminding contributors to update both. This path
@@ -281,6 +309,27 @@ Either way, the rendered Section 8 must include:
 - (Optional, when artwork lands post-WP) a download link / embed
   of the poster PDF/SVG. WP-014 ships without artwork; a follow-up
   WP commissions and commits the poster.
+
+**Heading anchor IDs (stable, mandatory):**
+
+Each section heading MUST carry a stable anchor ID for external
+deep-linking. Use Hugo / markdown attribute syntax (`{#id}`) on
+each section heading, with these exact IDs:
+
+- §1 Brand Overview → `#brand-overview`
+- §2 Logo + Identity → `#logo-identity`
+- §3 Core Identity (Narrative) → `#core-identity`
+- §4 Color System → `#color-system`
+- §5 Typography System → `#typography-system`
+- §6 Token Contract → `#token-contract`
+- §7 Usage Guidelines → `#usage-guidelines`
+- §8 Art Direction (Mood Board) → `#art-direction`
+
+Rationale: external creators / partners need durable deep-links
+into specific sections. Auto-slug derivation from heading text is
+brittle under future copy edits — explicit pinning makes the
+contract stable. The Step 6 §2 render check confirms each anchor
+resolves correctly in the rendered HTML.
 
 **Editorial constraints (all sections):**
 
@@ -303,10 +352,18 @@ Signature:
 {{< brand-swatch token="--la-color-gold" role="Identity" >}}
 ```
 
-Output: `<div class="brand-swatch" style="background: var(--la-color-gold)">`
-plus the token name and role label as text below. The swatch
-background ONLY uses `var(--<token>)`; no raw hex. The token name
-itself is plain text and acceptable to render literally.
+Output contract (strict):
+
+- Container `<div>` with class `brand-swatch`
+- Single inline style only: `background: var(<token>)`
+- MUST NOT include any other inline styles
+- Child content:
+  - Token name (plain text)
+  - Role label (plain text)
+- No additional layout styling inside the shortcode — the CSS in
+  Step 5 owns all layout decisions
+- No raw hex anywhere; the token name itself is rendered as plain
+  text and acceptable to display literally
 
 **`brand-font-sample.html`** — renders a typography sample.
 
@@ -315,10 +372,15 @@ Signature:
 {{< brand-font-sample family="display" sample="Legendary Arena" >}}
 ```
 
-Output: a sample string in the named family (display / body / mono),
-sized via the canonical type-scale tokens. The font-family value
-must resolve through `var(--la-font-*)` tokens; no raw font-family
-strings.
+Output contract (strict):
+
+- Container `<div>` with class `brand-font-sample`
+- Font family MUST resolve via token only:
+  `font-family: var(--la-font-<family>)`
+- Font size MUST use canonical type-scale tokens
+  (no raw `px` / `rem` / `em` values)
+- No fallback font stacks defined inline
+- Sample content rendered as plain text inside the container
 
 **`readfile.html`** (only if Path A from Step 3 §8 is chosen and
 the shortcode does not already exist) — inlines a markdown file
@@ -345,11 +407,24 @@ from the repo at render time. Minimal implementation:
 ### Step 5 — Brand-page styling (CSS)
 
 In `assets/css/extended/custom.css`, add scoped styling for the
-brand page. Scope selectors under `.brand-page` (set the class on
-the page's outer container via a layout override if PaperMod's
-default `single.html` doesn't provide a sufficient hook — confirm
-during execution; if a layout override is needed, mirror WP-010's
-override pattern).
+brand page. All selectors MUST be scoped under `.brand-page`.
+
+**Root-class application mechanism (mandatory, deterministic):**
+
+The `.brand-page` root class MUST be applied via one of:
+
+1. Frontmatter + layout binding (preferred if the theme's
+   `single.html` supports a body-class or wrapper-class hook
+   driven by page frontmatter)
+2. A dedicated layout override for `/brand/` that wraps the page
+   content in a `.brand-page` container, mirroring WP-010's
+   override pattern
+
+The chosen mechanism MUST:
+
+- NOT modify `themes/PaperMod/`
+- Be isolated to `/brand/` only (must not leak to other pages)
+- Be recorded in the Decisions log (Step 7)
 
 Required selectors:
 
@@ -369,7 +444,14 @@ Required selectors:
 
 **Constraints:**
 
-- All values via `var(--la-*)` tokens. No raw hex anywhere.
+- **Token discipline applies to all of the following surfaces:**
+  - CSS in `assets/css/extended/custom.css`
+  - All shortcode templates under `layouts/_shortcodes/`
+  - Any inline styles emitted by shortcodes (e.g., `brand-swatch`'s
+    `background:` style)
+
+  No exceptions. Any raw hex, raw font name, or raw spacing value
+  is a WP failure.
 - WCAG AA contrast on every text element in both light and dark
   modes (DoD check below).
 - The class-color tokens (`--la-color-class-*`) MUST NOT be used
@@ -394,6 +476,13 @@ Required selectors:
    ```
    At `http://localhost:1314/brand/`:
    - All eight sections render in order
+   - Each section heading carries its prescribed anchor ID (per
+     Step 3 §Heading anchor IDs); deep-link to each
+     (`/brand/#brand-overview`, `/brand/#logo-identity`,
+     `/brand/#core-identity`, `/brand/#color-system`,
+     `/brand/#typography-system`, `/brand/#token-contract`,
+     `/brand/#usage-guidelines`, `/brand/#art-direction`)
+     resolves to the correct section
    - Section 8 renders the full `mood-board-spec.md` content (Path A
      check: edit `mood-board-spec.md`, re-build, confirm change
      propagates to the rendered page)
@@ -476,6 +565,17 @@ Required selectors:
     canonical brand artifact. Adding `docs/brand/mood-board-spec.md`
     is permitted (additive).
 
+11. **No-duplication check** (editorial spot-check):
+    - Sections 3-7 of `/brand/` must summarise canonical docs, not
+      duplicate them verbatim. Section 8 is excluded — it IS a
+      mirror of `mood-board-spec.md` by design.
+    - Spot-check: no paragraph in `content/brand/_index.md`
+      (sections 3-7) should match verbatim content from
+      `docs/brand/strategy.md`, `palette.md`, `typography.md`, or
+      `spacing.md`.
+    - If duplication is detected, replace with a summary plus a
+      link back to the canonical doc.
+
 ### Step 7 — Lock WP-014
 
 When all DoD + exit criteria pass:
@@ -483,10 +583,12 @@ When all DoD + exit criteria pass:
 1. Update `docs/03-ROADMAP.md`:
    - Add WP-014 row to Summary table:
      `| WP-014 | Public /brand/ page + mood-board brief | ✅ Done (YYYY-MM-DD) | WP-010 | ~half-day |`
-   - Add WP-014 detail section (mirror WP-010 format —
-     Status, Effort, Dependencies, Commits, Readiness,
-     Preconditions, Goal, Deliverables, Constraints, DoD,
-     Exit criteria, Failure conditions, Rollback, Notes)
+   - Add WP-014 detail section. Use WP-010's detail section as
+     **structural reference only** (Status, Effort, Dependencies,
+     Commits, Readiness, Preconditions, Goal, Deliverables,
+     Constraints, DoD, Exit criteria, Failure conditions,
+     Rollback, Notes). Do NOT copy WP-010 content — every
+     sub-section must be explicitly populated for WP-014's scope.
    - Tick all DoD + exit criteria boxes
    - Record final commit hash(es)
    - Record Lighthouse scores (Performance / Accessibility /
@@ -507,9 +609,10 @@ When all DoD + exit criteria pass:
 
 ## Constraints
 
-- **Existing brand artifacts are locked.** Do NOT modify
+- **Existing brand artifacts are locked.** The following MUST NOT
+  be modified under any circumstance:
   `docs/brand/{strategy,palette,typography,spacing}.md`,
-  `docs/brand/CHANGELOG.md`, or `static/brand-tokens.css` token
+  `docs/brand/CHANGELOG.md`, and `static/brand-tokens.css` token
   values. The page is presentation-only over the canonical sources.
   Adding `docs/brand/mood-board-spec.md` is the one permitted
   additive change to `docs/brand/`.
@@ -526,7 +629,7 @@ When all DoD + exit criteria pass:
 - **WP-005 Pagefind mount is locked.**
 - **`layouts/index.html` (WP-004 home override) is out of scope.**
 - **`hugo.toml` WP-004 / WP-005 / WP-006 / WP-010 commentary blocks
-  are locked.** Do not touch.
+  are locked.** MUST NOT be modified under any circumstance.
 - **Class colors stay gameplay-only.** They render only as
   reference content inside the Color System collapsible spec, with
   explicit annotation. They MUST NOT be used as brand-page surface
@@ -574,6 +677,11 @@ When all DoD + exit criteria pass:
 - [ ] No active state on home `/` or other pages
 - [ ] All eight page sections present, in order, with shortcode-
       rendered swatches and font samples in §4 and §5
+- [ ] Each of the eight sections carries its prescribed stable
+      anchor ID (`#brand-overview`, `#logo-identity`,
+      `#core-identity`, `#color-system`, `#typography-system`,
+      `#token-contract`, `#usage-guidelines`, `#art-direction`);
+      deep-links to each resolve correctly
 - [ ] Class-color tokens annotated "gameplay-only" in the Color
       System collapsible spec; not used as page surface colors
 - [ ] All page styling uses `var(--la-*)` tokens (verify via
@@ -617,6 +725,8 @@ When all DoD + exit criteria pass:
 - Reproducibility check shows any diff between two `public/` builds
 - Submodule shows `+`
 - Page section count ≠ 8, or sections out of prescribed order
+- Heading anchor IDs missing, malformed, or different from the
+  prescribed list in Step 3 §Heading anchor IDs
 - Section 8 out of sync with `docs/brand/mood-board-spec.md` (Path
   A: rebuild didn't propagate; Path B: sync-reminder comment
   missing or content diverged)
