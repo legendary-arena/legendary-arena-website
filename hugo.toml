@@ -49,6 +49,7 @@ enableRobotsTXT = true
 [markup]
   [markup.highlight]
     style = "monokai"
+    noClasses = false
     lineNos = false
   # why: enable raw HTML pass-through in markdown content so the
   # /brand/ page (WP-014) can carry the mandated <details> /

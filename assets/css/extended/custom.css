@@ -976,14 +976,14 @@ ul#menu li a span.active {
 }
 
 .brand-page .brand-icon-figure img {
-  width: 48px;
-  height: 48px;
+  width: 56px;
+  height: 56px;
   object-fit: contain;
 }
 
 .brand-page .brand-icon-grid--classes .brand-icon-figure img {
-  width: 64px;
-  height: 64px;
+  width: 76px;
+  height: 76px;
 }
 
 .brand-page .brand-icon-figure figcaption {
@@ -1002,26 +1002,24 @@ ul#menu li a span.active {
 }
 
 /* §9.0e Code blocks in brand page — dark bg for copy-paste readability.
-   Chroma's .highlight wrapper and inline bg on <pre> have high
-   specificity; override both with the brand dark-mode surface. */
+   Override the --code-block-bg variable so PaperMod's own !important
+   rule resolves to our dark surface. */
 
-.brand-page .post-content.md-content .highlight:not(table),
-.brand-page .post-content .highlight,
-.brand-page .highlight pre,
-.brand-page pre {
-  background: #0b0f19 !important;
-  background-color: #0b0f19 !important;
-  color: #f5f7fb !important;
-  border: 1px solid var(--la-color-border-subtle);
-  border-radius: var(--la-radius-md);
+.brand-page {
+  --code-block-bg: #0b0f19;
 }
 
-.brand-page .highlight pre {
-  border: none;
+.brand-page .highlight pre,
+.brand-page .chroma {
+  color: #f5f7fb;
+}
+
+.brand-page .chroma .line {
+  color: #f5f7fb;
 }
 
 .brand-page pre code {
-  color: inherit;
+  color: #f5f7fb;
 }
 
 /* §9.0f Spacing scale visualisation */
@@ -1255,6 +1253,17 @@ ul#menu li a span.active {
   font-size: var(--la-font-size-small);
   line-height: var(--la-line-height-small);
   color: var(--la-color-text-secondary);
+}
+
+.brand-page .brand-font-sample--card-display .brand-font-sample__sample {
+  font-size: var(--la-font-size-h2);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.brand-page .brand-font-sample--card-body .brand-font-sample__sample {
+  font-size: var(--la-font-size-h3);
+  letter-spacing: var(--la-letter-spacing-normal);
 }
 
 /* §9.6 Usage Guidelines (Section 7 — DO / DON'T checklist) */

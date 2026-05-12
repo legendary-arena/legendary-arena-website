@@ -142,18 +142,29 @@ designed to read clearly at 24px and scale to 64px+.
 
 ### Card typography
 
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bangers&display=swap">
+
 Two fonts appear on cards and card-adjacent UI. These are
 **game-specific** — separate from the web token system's three
 locked families (Bebas Neue / Inter / JetBrains Mono).
 
-**Bangers** — card-set icon labels. All 40 card-set SVGs reference
-this font for the expansion abbreviation text (CORE, DKCY, FF04,
-etc.). Available as a [Google Font](https://fonts.google.com/specimen/Bangers).
+<div class="brand-font-sample brand-font-sample--card-display">
+  <span class="brand-font-sample__sample" style="font-family: 'Bangers', cursive;">CORE · DKCY · FF04</span>
+  <span class="brand-font-sample__meta">Bangers — card-set icon labels · <a href="https://fonts.google.com/specimen/Bangers">Google Fonts</a></span>
+</div>
 
-**Eurostile Condensed** — card face typography. The closest match
-to the physical card's title and body text. Eurostile is a
-commercial typeface (URW / Linotype); the condensed weight carries
-the card UI's clean, technical feel.
+**Bangers** — all 40 card-set SVGs reference this font for the
+expansion abbreviation text. Bold, comic-style letterforms that
+stay legible at small icon sizes.
+
+<div class="brand-font-sample brand-font-sample--card-body">
+  <span class="brand-font-sample__sample" style="font-family: 'Eurostile', 'Eurostile Condensed', 'Arial Narrow', sans-serif;">Eurostile Condensed</span>
+  <span class="brand-font-sample__meta">Eurostile Condensed — card face typography · commercial (URW / Linotype)</span>
+</div>
+
+**Eurostile Condensed** — the closest match to the physical card's
+title and body text. Clean, technical condensed weight that carries
+the card UI's precise feel.
 
 Neither font is part of `brand-tokens.css` — they live in the game
 asset pipeline, not the cross-site token contract.
