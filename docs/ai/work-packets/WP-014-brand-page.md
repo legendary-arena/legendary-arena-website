@@ -194,17 +194,33 @@ and card surfaces.
 
 - Render the canonical logo. Resolution rule (deterministic, no
   decision-making at execution time):
-  1. If a production-ready export exists under `static/brand/logo/`,
-     use that asset
-  2. Otherwise, export the canonical logo from
-     `docs/brand/logo-figma/` into `static/brand/logo/` as
-     `logo-primary.svg` (preferred); fallback to `logo-primary.png`
-     ONLY if an SVG export is genuinely unavailable
-  3. The exported asset becomes the canonical marketing-site logo
-     surface and MUST be referenced from `static/` thereafter
-  4. Record the chosen asset path in the Decisions log (Step 7)
-- Primary usage: gold on dark
-- Inversion: white-only
+
+  Canonical source assets already exist under
+  `docs/brand/logo-figma/`:
+  - `logo-la-dark-400x200.svg` — primary (gold-on-dark surface)
+  - `logo-la-light-400x200.svg` — inversion (white-only)
+  - `legendary-arena-icon.svg` — icon-only (favicon / square mark)
+  - `logo-la-light-400x200-color.svg` — color variant (NOT used
+    by the marketing site; ignore unless a future WP repurposes it)
+
+  Steps:
+  1. If `static/brand/logo/` already contains a published copy of
+     the three canonical assets above (dark, light, icon), use it.
+     Skip to step 4.
+  2. Otherwise, create `static/brand/logo/` and copy the three
+     canonical sources into it, preserving filenames byte-for-byte:
+     - `static/brand/logo/logo-la-dark-400x200.svg`
+     - `static/brand/logo/logo-la-light-400x200.svg`
+     - `static/brand/logo/legendary-arena-icon.svg`
+  3. The `docs/brand/logo-figma/` directory remains the working
+     source; copy only — do NOT modify or move the source SVGs.
+  4. Reference the `static/brand/logo/` copies from the page using
+     root-relative URLs (e.g., `/brand/logo/logo-la-dark-400x200.svg`).
+  5. Record the asset paths in the Decisions log (Step 7).
+- Primary usage: gold on dark — render `logo-la-dark-400x200.svg`
+- Inversion: white-only — render `logo-la-light-400x200.svg`
+  (only when a light surface forces inversion; the brand page
+  itself uses the dark/primary form)
 - Failure-mode call-out: do NOT apply class colors to the logo
 
 #### 3. Core Identity (Narrative)
