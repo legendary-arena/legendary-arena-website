@@ -20,6 +20,8 @@ live under [`docs/brand/*.md`][brand-docs] and
 
 ## Logo + Identity {#logo-identity}
 
+### Primary — gold on dark
+
 <p>
   <img src="/brand/logo/logo-la-dark-400x200.svg"
        alt="Legendary Arena wordmark (gold on dark — primary)"
@@ -27,10 +29,24 @@ live under [`docs/brand/*.md`][brand-docs] and
        width="400" height="200" />
 </p>
 
-- **Primary** — gold on dark, `/brand/logo/logo-la-dark-400x200.svg`
-- **Inversion** — white-only, `/brand/logo/logo-la-light-400x200.svg`
-  (only when a light surface forces inversion)
-- **Icon / favicon** — `/brand/logo/legendary-arena-icon.svg`
+### Inversion — white-only
+
+<p style="background: var(--la-color-bg-tertiary); padding: var(--la-space-4); border-radius: var(--la-radius-md); display: inline-block;">
+  <img src="/brand/logo/logo-la-light-400x200.svg"
+       alt="Legendary Arena wordmark (white-only — inversion)"
+       class="brand-logo"
+       width="400" height="200" />
+</p>
+
+Use only when a light surface forces inversion.
+
+### Icon / favicon
+
+<p>
+  <img src="/brand/logo/legendary-arena-icon.svg"
+       alt="Legendary Arena icon (favicon)"
+       width="64" height="64" />
+</p>
 
 **Failure mode.** Do not apply class colors
 (`--la-color-class-*`) to the logo — class colors communicate gameplay
@@ -64,6 +80,14 @@ annotation.
 
 Visual summary first; the full per-mode spec (with class colors)
 lives in the collapsible below.
+
+### Palette reference (light + dark)
+
+<p>
+  <img src="/images/brand/palette.svg"
+       alt="Legendary Arena color palette v1 — all tokens in light and dark mode"
+       width="720" />
+</p>
 
 ### Visual summary
 
@@ -170,15 +194,29 @@ Three locked families carry the type system. The display face is used
 sparingly for hero / H1 / H2 only; body is the default for everything
 readable; mono is reserved for code, registry, and card-stat surfaces.
 
-### Visual summary
+### Bebas Neue — display
 
-{{< brand-font-sample family="display" sample="LEGENDARY ARENA" >}}
-{{< brand-font-sample family="body" sample="Forge a deck. Rally allies. Unleash a legendary turn." >}}
-{{< brand-font-sample family="mono" sample="--la-color-gold: #b8901f;" >}}
+{{< brand-font-sample family="display" sample="BEBAS NEUE" >}}
 
-Display: **Bebas Neue** (Anton/Oswald fallbacks). Body: **Inter**
-(system-ui fallback). Mono: **JetBrains Mono** (IBM Plex Mono /
-Consolas fallback). Full stacks in
+Condensed, high-impact, uppercase-friendly. Used for hero, H1, and
+H2 only — never body text. Fallbacks: Anton, Oswald, system-ui.
+
+### Inter — body
+
+{{< brand-font-sample family="body" sample="Inter" >}}
+
+Highly readable at all sizes, neutral tone. The default for everything
+readable — paragraphs, navigation, UI. Fallbacks: system-ui,
+-apple-system, Segoe UI.
+
+### JetBrains Mono — mono
+
+{{< brand-font-sample family="mono" sample="JetBrains Mono" >}}
+
+Code blocks, card stats, token references, technical content.
+Fallbacks: IBM Plex Mono, Consolas.
+
+Full font stacks in
 [`typography.md` §3](https://github.com/legendary-arena/legendary-arena-website/blob/main/docs/brand/typography.md).
 
 <details>
