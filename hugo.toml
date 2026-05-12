@@ -11,7 +11,7 @@ enableRobotsTXT = true
 
 [params]
   env = "production"
-  description = "A digital adaptation of the Legendary: A Marvel Deck Building Game."
+  description = "Legendary Arena is a skill-first, web-based deck-building system. Assemble your heroes, face the scenario, and earn your standing."
   author = "Jeffery Jensen"
   defaultTheme = "auto"            # respects user's system light/dark preference
   ShowReadingTime = true
@@ -27,6 +27,24 @@ enableRobotsTXT = true
   # so it was removed when the override landed. See
   # docs/04-CONTENT-CONVENTIONS.md "Home page markup" for the full
   # rationale.
+
+# Schema.org publisher config (WP-008). Consumed by:
+#   layouts/_partials/seo/schema.html      (Organization + WebSite on home)
+#   themes/PaperMod/layouts/_partials/templates/schema_json.html
+#                                          (BlogPosting.publisher on posts)
+# See docs/05-SEO-CONVENTIONS.md for the full discipline.
+[params.schema]
+  publisherType = "Organization"
+  # sameAs intentionally empty at WP-008 lock. The site has no
+  # canonical social profile URLs to surface yet (no Twitter / X,
+  # no Mastodon, no LinkedIn org page, no GitHub org page at a
+  # public-facing URL). Adding a real entry is the natural
+  # follow-up to a "marketing presence" effort outside WP-008's
+  # scope. Keeping the array empty (vs. omitting the key) makes
+  # the gap explicit to the next author touching this map and
+  # avoids a silent "Organization with no sameAs" Rich Results
+  # warning by emitting the empty array honestly.
+  sameAs = []
 
 [markup]
   [markup.highlight]

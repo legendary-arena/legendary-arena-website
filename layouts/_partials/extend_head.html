@@ -189,3 +189,19 @@
   });
 })();
 </script>
+
+{{- /* §4. Schema.org JSON-LD (WP-008)
+       Loaded only in production builds, matching PaperMod's posture
+       for its OG / Twitter / Schema partials in
+       themes/PaperMod/layouts/_partials/head.html lines 189-194.
+       The project-side override at
+       layouts/_partials/templates/schema_json.html suppresses
+       PaperMod's home-page Organization emission so this partial
+       can own the full Organization + WebSite shape. See
+       docs/ai/work-packets/WP-008-seo-baseline.md § Step 2 for
+       the page-kind matrix and decisions, and
+       docs/05-SEO-CONVENTIONS.md for the ongoing discipline.
+*/ -}}
+{{- if hugo.IsProduction | or (eq site.Params.env "production") }}
+{{- partial "seo/schema.html" . -}}
+{{- end -}}
