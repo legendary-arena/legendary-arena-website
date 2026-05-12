@@ -1001,7 +1001,30 @@ ul#menu li a span.active {
   }
 }
 
-/* §9.0e Spacing scale visualisation */
+/* §9.0e Code blocks in brand page — dark bg for copy-paste readability.
+   Chroma's .highlight wrapper and inline bg on <pre> have high
+   specificity; override both with the brand dark-mode surface. */
+
+.brand-page .post-content.md-content .highlight:not(table),
+.brand-page .post-content .highlight,
+.brand-page .highlight pre,
+.brand-page pre {
+  background: #0b0f19 !important;
+  background-color: #0b0f19 !important;
+  color: #f5f7fb !important;
+  border: 1px solid var(--la-color-border-subtle);
+  border-radius: var(--la-radius-md);
+}
+
+.brand-page .highlight pre {
+  border: none;
+}
+
+.brand-page pre code {
+  color: inherit;
+}
+
+/* §9.0f Spacing scale visualisation */
 
 .brand-page .brand-spacing-grid {
   display: flex;
