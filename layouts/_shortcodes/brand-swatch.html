@@ -1,0 +1,31 @@
+{{- /*
+  brand-swatch — renders a single color swatch sourced from a
+  canonical brand token. Used on /brand/ (WP-014 §Step 4).
+
+  Signature:
+    {{< brand-swatch token="--la-color-gold" role="Identity" >}}
+
+  Output contract (WP-014):
+  - Container <div class="brand-swatch">
+  - Single inline style only:  background: var(<token>)
+  - No other inline styles
+  - Plain-text children: token name + role label
+  - No raw hex anywhere
+  - Layout / dimensions / borders are owned by
+    assets/css/extended/custom.css under .brand-page .brand-swatch
+*/ -}}
+{{- $token := .Get "token" -}}
+{{- $role := .Get "role" -}}
+{{- /* why: Hugo's html/template escapes inline `style` attribute
+       values by default, replacing untrusted CSS with the
+       ZgotmplZ sentinel. The token name passed in (e.g.
+       `--la-color-gold`) is governed input — it appears in the
+       page markdown and resolves against the locked
+       static/brand-tokens.css. Mark the constructed CSS as
+       safeCSS so Hugo emits it verbatim. The shortcode contract
+       is still: `background: var(<token>)` and nothing else. */ -}}
+{{- $style := printf "background: var(%s)" $token | safeCSS -}}
+<div class="brand-swatch" style="{{ $style }}">
+  <span class="brand-swatch__token">{{ $token }}</span>
+  <span class="brand-swatch__role">{{ $role }}</span>
+</div>

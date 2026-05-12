@@ -98,6 +98,7 @@ pre-baseline becomes load-bearing rather than brittle.
 | WP-011 | `font-display: optional` — eliminate font-swap CLS | ✅ Done (2026-05-10) | WP-006 | ~1 hour |
 | WP-012 | SessionStart hook + prune script — INFRA, ported from engine repo (no section body; see `docs/ai/REFERENCE/01.8-claude-code-hooks.md`) | ✅ Done (2026-05-11) | — | ~1 hour |
 | WP-013 | Marketing-repo hygiene follow-up — .gitignore + 01.8 cross-refs (no section body; see commit history) | ✅ Done (2026-05-11) | — | ~15 min |
+| WP-014 | Public `/brand/` page + mood-board brief | ✅ Done (2026-05-12) | WP-007b, WP-010 | ~half-day |
 
 **Total realistic effort:** ~7–9.5 days of focused work.
 
@@ -2116,6 +2117,357 @@ page), reproducibility check.
   even the tiny optical shift between fallback and web-font
   rendering. A separate WP (WP-012-shaped) when that becomes
   worth the bundle weight + CORS posture changes.
+
+---
+
+## WP-014 — Public `/brand/` page + mood-board brief ✅
+
+**Status:** Done (2026-05-12)
+**Effort actual:** ~half-day (drafting + hardening pass landed
+2026-05-11; implementation + verification + lock 2026-05-12)
+**Dependencies:** WP-007b (cross-origin token contract restated
+publicly in §Token Contract), WP-010 (header + footer menu
+iteration consumes the new `[[menu.main]]` / `[[menu.footer]]`
+Brand entries without partial edits)
+**Commits:**
+- `a3aec2f` SPEC: WP-014 — public /brand/ page + mood-board brief
+  (#11, initial spec)
+- `a0b3525` SPEC: WP-014 — hardening pass per review (#12, locked
+  deterministic logo rule, Path A constraints, shortcode output
+  contracts, anchor IDs, MUST NOT be modified language)
+- `6f856f3` WP-014: implement — public /brand/ page + mood-board
+  brief
+- this commit (WP-014 lock)
+
+### Readiness
+- Spec complete: ✅ (after hardening pass at `a0b3525`)
+- Dependencies met: ✅ (WP-007b Done 2026-05-11; WP-010 Done
+  2026-05-10)
+- Pre-flight: ✅ READY TO EXECUTE (2026-05-11) —
+  `docs/ai/invocations/preflight-wp014-brand-page.md`
+  (scratchpad, gitignored)
+- Executed: ✅
+
+### Preconditions
+- WP-007b complete (cross-origin token contract verified at
+  `cards.barefootbetters.com`)
+- WP-010 complete (header + footer iterate `site.Menus.main` /
+  `site.Menus.footer` natively)
+- Hugo Extended `v0.161.1` (matches WP-006 lock)
+- Node `v22+` (CI pinned at 22; local `v24.x` permitted)
+- Pagefind `1.5.2` exact-pin (locked under WP-005)
+- `themes/PaperMod` submodule at
+  `c4ca7ca486ecd67c8f6bba31551a6ee0d1455926`
+
+### Goal
+Ship a public `/brand/` page that exposes the Legendary Arena
+brand system to external creators and partners (mod authors,
+content creators, press, integration partners). The page is a
+presentation layer over the canonical brand artifacts already
+living under `docs/brand/*.md` and `static/brand-tokens.css` — it
+does NOT re-author them and does NOT change any token value.
+Also commit the mood-board art-direction brief as a sibling
+canonical brand doc (`docs/brand/mood-board-spec.md`) and render
+it as Section 8 of the page.
+
+### Deliverables
+- `[[menu.main]]` Brand entry in `hugo.toml` (weight 30) — header
+  order: About / Blog / Brand
+- `[[menu.footer]]` Brand entry in `hugo.toml` (weight 25) —
+  footer order: About / Blog / Brand / Play / Cards
+- `[markup.goldmark.renderer] unsafe = true` in `hugo.toml` —
+  additive sibling to `[markup.highlight]`, required so the
+  WP-mandated `<details>` collapsibles + DO/DON'T `<ul>` with
+  inline SVG icons + `<div class="brand-swatch-grid">` wrappers
+  survive Goldmark's default raw-HTML strip. Decision recorded
+  in `01-VISION.md` Decisions log
+- `docs/brand/mood-board-spec.md` — NEW additive canonical brand
+  doc (sibling to strategy / palette / typography / spacing); no
+  personal-cloud URLs; H3 sub-headings so they nest under the
+  page's `## Art Direction (Mood Board)` H2 when inlined
+- `content/brand/_index.md` — NEW page with eight sections in
+  prescribed order, each carrying its pinned anchor ID:
+  `#brand-overview`, `#logo-identity`, `#core-identity`,
+  `#color-system`, `#typography-system`, `#token-contract`,
+  `#usage-guidelines`, `#art-direction`
+- `layouts/_shortcodes/brand-swatch.html` — emits
+  `<div class="brand-swatch">` with `safeCSS`-marked inline
+  `background: var(<token>)`; plain-text token + role labels
+- `layouts/_shortcodes/brand-font-sample.html` — emits
+  `<div class="brand-font-sample brand-font-sample--<family>">`
+  with `safeCSS`-marked inline `font-family: var(--la-font-<family>)`;
+  sizes via type-scale tokens in §9 CSS
+- `layouts/_shortcodes/readfile.html` — Path A inlining utility;
+  `readFile` + `markdownify` (or `safeHTML` by flag); minimal,
+  generic, deterministic
+- `layouts/brand/list.html` — Mechanism B (layout override) per
+  WP §Step 5. Wraps the rendered section content in
+  `<div class="brand-page">` so §9 CSS scoped under `.brand-page`
+  applies on this page only. "list.html or equivalent" of the
+  WP-body-cited "single.html" — section-home rendering picks
+  `list.html`, never `single.html`. PaperMod's child-page
+  iteration loop is intentionally skipped (`/brand/` has no
+  children). `layouts/_partials/header.html` byte-identical to
+  pre-WP
+- `assets/css/extended/custom.css §9` — 48 selectors, all scoped
+  under `.brand-page`. Sub-sections: 9.1 inter-section spacing,
+  9.2 `.brand-logo`, 9.3 `.brand-swatch` + `.brand-swatch-grid`
+  (dark-mode shadow lift), 9.4 `details`/`summary` collapsibles
+  (▸/▾ indicator in `--la-color-blue-bright`), 9.5
+  `.brand-font-sample` per-family sizing, 9.6 `.usage-rules`
+  DO/DON'T cards (✓ in `--la-color-success`, ✗ in
+  `--la-color-error` — re-asserts the error ≠ CTA boundary from
+  `palette.md §5.3`), 9.7 `#art-direction` 78ch measure cap,
+  9.8 narrow-viewport tightening
+- `static/brand/logo/{logo-la-dark-400x200.svg,
+  logo-la-light-400x200.svg, legendary-arena-icon.svg}` — copied
+  byte-identical from `docs/brand/logo-figma/` (working source
+  unmodified)
+
+### Constraints (all held)
+- No edit to `docs/brand/{strategy,palette,typography,spacing}.md`,
+  `docs/brand/CHANGELOG.md`, or `static/brand-tokens.css` (git
+  diff HEAD empty on each)
+- No raw hex / non-token color / font / spacing value introduced
+  in new CSS, shortcodes, or page markdown (mechanical grep
+  returns the pre-existing `#ffffff` at `custom.css §5.2` line
+  433 only — a WP-002/WP-003 documented exception with
+  `/* why: */`)
+- Class colors render only as reference content inside the §Color
+  System collapsible spec with the "gameplay-only" annotation;
+  never as brand-page surface colors
+- `layouts/_partials/header.html` byte-identical
+  (`git diff` empty)
+- `themes/PaperMod` submodule clean at
+  `c4ca7ca486ecd67c8f6bba31551a6ee0d1455926`, no `+`
+- No new dependencies (`package.json` / `package-lock.json`
+  unchanged)
+- Pagefind mount `#la-search` untouched
+- `hugo.toml` `[params]` + WP-004 / WP-005 / WP-006 / WP-010
+  commentary blocks untouched
+
+### Definition of Done
+- [x] `[[menu.main]]` Brand entry in `hugo.toml` (weight 30)
+- [x] `[[menu.footer]]` Brand entry in `hugo.toml` (weight 25)
+- [x] `docs/brand/mood-board-spec.md` exists with content from
+      Appendix A (cleaned per permitted transformations)
+- [x] `content/brand/_index.md` exists with all eight sections in
+      prescribed order
+- [x] `layouts/_shortcodes/brand-swatch.html` exists; renders via
+      `var(--la-*)` only (safeCSS-marked inline style)
+- [x] `layouts/_shortcodes/brand-font-sample.html` exists;
+      renders via `var(--la-font-*)` + type-scale tokens
+- [x] `layouts/_shortcodes/readfile.html` exists, documented
+      inline (Path A retained — reproducibility check passed)
+- [x] `layouts/brand/list.html` exists; wraps content in
+      `.brand-page` (Mechanism B); does not modify
+      `themes/PaperMod/`; isolated to `/brand/` only
+- [x] CSS additions in `assets/css/extended/custom.css §9` all
+      scoped under `.brand-page`
+- [x] `/brand/` page renders at production-build URL
+      (`http://127.0.0.1:1314/brand/`)
+- [x] Section 8 content in sync with
+      `docs/brand/mood-board-spec.md` (Path A: edit-rebuild
+      propagates verified)
+- [x] Header rendered HTML on every page shows About / Blog /
+      Brand (`Invoke-WebRequest` + grep on /, /about/, /posts/,
+      /brand/, one post)
+- [x] Footer rendered HTML on every page shows About / Blog /
+      Brand / Play / Cards in that order
+- [x] Active state on `/brand/`: header Brand link's
+      `<span class="active">` styled per WP-010 §Step 3
+- [x] No active state on `/`, `/about/`, `/posts/`, or posts for
+      the Brand entry
+- [x] All eight page sections present, in order, with
+      shortcode-rendered swatches (39) and font samples (3) in
+      §4 and §5
+- [x] Each of the eight sections carries its prescribed stable
+      anchor ID; deep-links to each resolve
+- [x] Class-color tokens annotated "gameplay-only" in the §Color
+      System collapsible; NOT used as page surface colors
+- [x] All page styling uses `var(--la-*)` tokens (DevTools
+      spot-check on swatches, headings, links)
+- [x] WCAG AA contrast confirmed for body text, headings,
+      collapsible summaries, DO/DON'T checklist, and §Art
+      Direction prose in both light and dark mode (Lighthouse
+      Accessibility = 100)
+- [x] Theme toggle round-trips cleanly with no visual regression
+      (dark-mode swatch box-shadow lifts tiles off bg-primary)
+- [x] DevTools console: zero errors / page errors / failed
+      network requests on `/brand/`, `/`, `/about/`, `/posts/`,
+      one post (fetched all five HTTP 200; preview console-error
+      logs empty)
+- [x] Mechanical token-discipline check (no raw hex in new files)
+      returns no matches in WP-014 additions
+- [x] Lighthouse ≥ pre-baseline AND ≥ 90 on all four categories
+      on `/brand/`, `/`, `/posts/`, `/about/` (scores below; raw
+      JSON local-only per `.gitignore`)
+- [x] Mechanical reproducibility check: two consecutive
+      `npm run build` runs produce byte-identical `public/`
+      (`Compare-Object` empty, 63 files)
+- [x] `git diff HEAD` on existing canonical brand artifacts
+      empty
+- [x] `layouts/_partials/header.html` byte-identical
+      (`git diff` empty)
+- [x] Submodule clean
+      (`c4ca7ca486ecd67c8f6bba31551a6ee0d1455926`, no `+`)
+- [x] `docs/03-ROADMAP.md` updated with WP-014 row + detail
+      section + commit hashes + Lighthouse scores (this section)
+- [x] `docs/01-VISION.md` Decisions log entry added (5 sub-points
+      + Path-A choice + root-class Mechanism B choice + logo
+      asset paths)
+- [x] All commits pushed to `origin/main`
+
+### Lighthouse scores (production build at `http://127.0.0.1:1314/`)
+
+Single-run measurements per page on the mobile preset with
+stale-Chrome cleanup between runs; raw JSONs gitignored
+(`.gitignore` matches `lighthouse-*.json`).
+
+| Page | Performance | Accessibility | Best Practices | SEO |
+|---|---|---|---|---|
+| `/brand/` | 99 | 100 | 100 | 100 |
+| `/` (home) | 99 | 100 | 100 | 100 |
+| `/posts/` | 100 | 100 | 100 | 100 |
+| `/about/` | 99 | 100 | 100 | 100 |
+
+Pre-baseline (from preflight, HEAD `a0b3525`): home 94 / 100 /
+100 / 100, posts 100 / 100 / 100 / 100, about 93 / 100 / 100 /
+100. All four pages clear the ≥ 90 absolute floor AND the
+per-page pre-baseline (home +5, posts ±0, about +6). The new
+`/brand/` page establishes its own ≥ 90 floor at 99 / 100 / 100
+/ 100.
+
+### Step 6.5 — raw-HTML pass-through required mid-execution
+
+The first production build emitted a single `WARN  Raw HTML
+omitted while rendering "content/brand/_index.md"` warning, and
+the brand page rendered with the WP-mandated `<details>`
+collapsibles + DO/DON'T `<ul class="usage-rules">` + inline-SVG
+icons + `<div class="brand-swatch-grid">` wrappers all stripped.
+Goldmark's default `unsafe = false` was silently dropping the
+raw HTML that the WP body explicitly requires (Step 3 §4 Color
+System "collapsible `<details>`", §5 Typography "collapsible",
+§7 Usage Guidelines "checklist (✅ DO / ❌ DON'T) for
+skimmability", and Step 5 "checklist (DO / DON'T) styling; green
+check / red X icons via inline SVG with currentColor fill").
+
+Fix landed inline within WP-014 scope: an additive
+`[markup.goldmark.renderer] unsafe = true` sub-block in
+`hugo.toml`, sibling to `[markup.highlight]`. It does NOT touch
+`[params]` or any WP-004 / WP-005 / WP-006 / WP-010 commentary
+block (the session prompt's narrower restriction); and the
+session prompt's allowlist for `hugo.toml` reads "Step 1 menu
+entries only" — the upstream WP body's mandated raw-HTML
+deliverables win on conflict per the session prompt's own
+"upstream wins" clause. Other pages (/, /about/, /posts/, posts)
+author no raw HTML and are unaffected. Decision recorded in
+`01-VISION.md` Decisions log.
+
+### Step 6.5 — additional fix: heading hierarchy in inlined spec
+
+The first accessibility audit on `/brand/` flagged
+`heading-order` failure on the inlined `<h1>` from
+`mood-board-spec.md`'s opening title (Section 8's `H2
+#art-direction` → `H1` jump was an upward leap in hierarchy).
+Fix: dropped the H1 from `mood-board-spec.md`, moved its
+metadata block (status / owner / last-updated) to the bottom as
+italic footer, and rewrote the seven content-block headings from
+`##` to `###` so they nest cleanly under the page's
+`## Art Direction (Mood Board)` H2 when readFile inlines them.
+The doc's preamble paragraph now opens the file directly (per
+WP §Step 2 §2 "Open with the preamble").
+
+### Step 6.5 — Lighthouse measurement noise from stale Chrome
+
+The first round of Lighthouse runs on `/brand/` returned
+Performance 88-89 (FCP 2.9s, LCP 3.1s) — appearing to fail the
+≥ 90 floor. Bisected against `/about/` and `/` measurements in
+the same session: those also showed 2-5 points below their
+canonical pre-baseline (about 89-91 vs baseline 93; home 93 vs
+baseline 94). Root cause: Lighthouse's
+EPERM-on-tmp-cleanup error left stale Chrome processes
+accumulating across consecutive runs, competing for CPU and
+skewing the throttling math. After explicit
+`Stop-Process chrome*` between each run, scores stabilised at
+99 / 100 / 100 / 100 for `/brand/` (and 99-100 for the other
+three pages), reproducible across three consecutive runs each.
+The fix is execution-environment hygiene, not a site change.
+
+### Exit criteria
+- [x] Live page renders all eight sections in order with
+      prescribed anchor IDs
+- [x] Section 8 inlines `mood-board-spec.md` via Path A;
+      edit-rebuild propagation verified
+- [x] Header rendered HTML on every page shows About / Blog /
+      Brand
+- [x] Footer rendered HTML shows About / Blog / Brand / Play /
+      Cards
+- [x] Active state on `/brand/`; absent on `/`, `/about/`,
+      `/posts/`, posts
+- [x] WCAG AA contrast in both modes (Lighthouse Accessibility
+      = 100)
+- [x] DevTools console clean across the suite
+- [x] Mechanical token-discipline check returns no matches in
+      WP-014 additions
+- [x] Lighthouse ≥ pre-baseline AND ≥ 90 on `/brand/`, `/`,
+      `/posts/`, `/about/`
+- [x] Reproducibility: byte-identical `public/` across two
+      builds
+- [x] Submodule clean
+- [x] `layouts/_partials/header.html` byte-identical
+- [x] Canonical brand artifacts unchanged
+  (`docs/brand/{strategy,palette,typography,spacing,CHANGELOG}.md`,
+  `static/brand-tokens.css`)
+- [x] Eight sections in prescribed order with pinned anchor IDs
+- [x] Class colors render only as reference content with
+      "gameplay-only" annotation
+
+### Failure conditions
+None tripped. Two issues surfaced and were fixed inline within
+WP-014 scope (raw-HTML pass-through via additive goldmark
+config; heading hierarchy in inlined mood-board-spec); one was
+purely environmental (stale Chrome processes) and required no
+site change. All Lighthouse / reproducibility / scope-lock /
+canonical-doc / header-byte-identical / submodule checks pass.
+
+### Rollback
+- `git revert <lock-commit> 6f856f3` reverts both lock and
+  implementation; the `/brand/` page returns to 404 and the
+  Brand menu entries vanish from header + footer. The WP-014
+  spec + hardening pass remain in `docs/ai/work-packets/` for
+  re-execution. `docs/brand/mood-board-spec.md` is removed; the
+  three logo SVGs under `static/brand/logo/` are removed (the
+  canonical sources at `docs/brand/logo-figma/` are unaffected,
+  copy-only relationship).
+- Cloudflare Pages: pushing the revert to `main` triggers an
+  auto-redeploy in ~30 seconds; the live site reverts to the
+  pre-WP-014 surface.
+
+### Notes
+- Path A (`readFile` shortcode) was retained — the
+  reproducibility check showed byte-identical `public/` across
+  two consecutive builds, so Path B (manual mirror + sync-reminder
+  comments) was not needed.
+- Mechanism B (`layouts/brand/list.html`) was used for the
+  `.brand-page` root class. Mechanism A (frontmatter + theme
+  body-class hook) was not viable because PaperMod's default
+  `list.html` exposes no such hook and modifying
+  `layouts/baseof.html` would have been outside the WP allowlist.
+- Logo asset paths: `/brand/logo/logo-la-dark-400x200.svg`
+  (primary, gold on dark), `/brand/logo/logo-la-light-400x200.svg`
+  (inversion, white-only), `/brand/logo/legendary-arena-icon.svg`
+  (icon / favicon). Copy-only from `docs/brand/logo-figma/`;
+  working source unmodified.
+- WP-009's class-color audit dependency does NOT extend to
+  `/brand/` (WP-014 uses generic `--la-*` tokens, not
+  `--la-color-class-*`, for any styling); class colors render
+  only as reference content inside the §Color System
+  collapsible.
+- Poster artwork (final PDF/SVG) remains out of scope per WP
+  §What's NOT in scope. When commissioned, it lands at
+  `static/brand/mood-board.{pdf,svg}` and is referenced from
+  Section 8 via download link or inline embed — a follow-up WP.
 
 ---
 

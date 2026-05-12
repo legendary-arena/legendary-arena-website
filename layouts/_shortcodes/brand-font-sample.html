@@ -1,0 +1,32 @@
+{{- /*
+  brand-font-sample — renders a typography sample in one of the
+  canonical brand font families. Used on /brand/ (WP-014 §Step 4).
+
+  Signature:
+    {{< brand-font-sample family="display" sample="Legendary Arena" >}}
+
+  Output contract (WP-014):
+  - Container <div class="brand-font-sample brand-font-sample--<family>">
+  - Inline style ONLY references --la-font-<family> (no other inline
+    style, no fallback stack defined inline)
+  - Plain-text sample content inside the container
+  - Sizes come from the canonical type-scale tokens via the
+    .brand-font-sample--<family> selectors in
+    assets/css/extended/custom.css — never raw px / rem / em
+  - No raw hex / font name / spacing values anywhere
+*/ -}}
+{{- $family := .Get "family" -}}
+{{- $sample := .Get "sample" -}}
+{{- /* why: Hugo's html/template escapes inline `style` values by
+       default. The `family` argument is governed input — it
+       resolves to one of `display` / `body` / `mono`, matching
+       the canonical `--la-font-*` tokens in
+       static/brand-tokens.css. Mark the constructed CSS as
+       safeCSS so Hugo emits the var() reference verbatim. The
+       shortcode contract is still: `font-family: var(--la-font-<family>)`
+       and nothing else. */ -}}
+{{- $style := printf "font-family: var(--la-font-%s)" $family | safeCSS -}}
+<div class="brand-font-sample brand-font-sample--{{ $family }}" style="{{ $style }}">
+  <span class="brand-font-sample__sample">{{ $sample }}</span>
+  <span class="brand-font-sample__meta">--la-font-{{ $family }}</span>
+</div>

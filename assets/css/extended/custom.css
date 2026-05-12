@@ -845,3 +845,340 @@ ul#menu li a span.active {
    stroke overrides here — that would violate palette.md §10's
    "no raw fill/stroke" guidance and break the resting-vs-hover
    colour parity with the link text. */
+
+
+/* =========================================================
+   §9. BRAND PAGE (WP-014)
+   Scoped styling for the public /brand/ surface. Every selector
+   is gated under `.brand-page`, applied by the layout override at
+   layouts/brand/list.html (WP-014 §Step 5 mechanism B). No leak
+   to other pages: the root class only exists on /brand/.
+
+   Token discipline (WP-014 §Step 5 + §Step 6 §5):
+   - All colour / font / spacing values via var(--la-*)
+   - No raw hex, no raw font names, no off-token sizes
+   - Class-color tokens (--la-color-class-*) are NEVER used as
+     brand-page surface colours; they appear only as `background`
+     on `.brand-swatch` via the canonical token names passed to
+     the shortcode (Color System "Full spec" collapsible)
+   ========================================================= */
+
+/* §9.1 Section spacing
+   PaperMod's list template renders section headings (`h2` inside
+   .post-content) tight against the preceding block. The brand page
+   needs more breathing room between its eight sections than the
+   site's blog-style cadence provides. Scoped to .brand-page so
+   /posts/ and /about/ keep their existing rhythm. */
+
+.brand-page .post-content > h2 {
+  margin-top: var(--la-space-8);
+  padding-top: var(--la-space-6);
+  border-top: 1px solid var(--la-color-border-subtle);
+}
+
+.brand-page .post-content > h2:first-of-type {
+  margin-top: var(--la-space-6);
+  padding-top: 0;
+  border-top: 0;
+}
+
+@media (max-width: 768px) {
+  /* spacing.md §8: drop one tier on narrow viewports */
+  .brand-page .post-content > h2 {
+    margin-top: var(--la-space-7);
+    padding-top: var(--la-space-5);
+  }
+}
+
+.brand-page .post-content > h3 {
+  margin-top: var(--la-space-6);
+}
+
+/* §9.2 Logo block (Section 2)
+   The primary logo image renders inline inside an opening
+   paragraph. Centre and cap its width so the SVG (which is
+   400x200 viewBox) doesn't stretch the section. */
+
+.brand-page .brand-logo {
+  display: block;
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  margin: var(--la-space-4) 0;
+}
+
+/* §9.3 Color swatches (Section 4)
+   The brand-swatch shortcode emits a flat <div> with the
+   token-driven background. Layout / dimensions live here, never
+   in the shortcode template. */
+
+.brand-page .brand-swatch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: var(--la-space-4);
+  margin: var(--la-space-4) 0 var(--la-space-6);
+  padding: 0;
+  list-style: none;
+}
+
+.brand-page .brand-swatch {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 120px;
+  padding: var(--la-space-3);
+  border: 1px solid var(--la-color-border-subtle);
+  border-radius: var(--la-radius-md);
+  font-family: var(--la-font-mono);
+  font-size: var(--la-font-size-small);
+  line-height: var(--la-line-height-small);
+  /* why: swatch labels read as a token-name + role caption block,
+     anchored to the bottom of each tile so the colour fills the
+     dominant top area. Token labels in mono mirror the source
+     CSS (brand-tokens.css). */
+}
+
+.brand-page .brand-swatch__token,
+.brand-page .brand-swatch__role {
+  display: block;
+  /* Label panel sits over the swatch fill; route its surface to
+     the page-surface token so the label is always legible
+     regardless of the swatch hue / value behind it. Layered
+     padding gives the label its own contained block. */
+  background-color: var(--la-color-bg-primary);
+  color: var(--la-color-text-primary);
+  padding: var(--la-space-1) var(--la-space-2);
+}
+
+.brand-page .brand-swatch__token {
+  border-top-left-radius: var(--la-radius-sm);
+  border-top-right-radius: var(--la-radius-sm);
+  font-weight: var(--la-font-weight-medium);
+}
+
+.brand-page .brand-swatch__role {
+  border-bottom-left-radius: var(--la-radius-sm);
+  border-bottom-right-radius: var(--la-radius-sm);
+  color: var(--la-color-text-secondary);
+  /* why: secondary text on bg-primary clears WCAG AA in both
+     modes per palette.md §8 (light: text-secondary on bg-primary
+     7.1:1; dark: 6.8:1). */
+}
+
+:root[data-theme="dark"] .brand-page .brand-swatch {
+  box-shadow: var(--la-shadow-soft);
+  /* why: dark-mode swatches against deep-navy bg-primary can be
+     hard to distinguish from the page surface when the swatch
+     token is itself dark (e.g., red-muted, blue-muted, bg-tertiary).
+     A subtle drop shadow lifts every tile off the page without
+     introducing a hard border. spacing.md §6 shadow tokens. */
+}
+
+/* §9.4 Collapsible spec (Section 4 + Section 5 "Full spec") */
+
+.brand-page details {
+  margin: var(--la-space-5) 0;
+  padding: var(--la-space-4);
+  background-color: var(--la-color-bg-secondary);
+  border: 1px solid var(--la-color-border-subtle);
+  border-radius: var(--la-radius-md);
+}
+
+.brand-page details > summary {
+  cursor: pointer;
+  font-weight: var(--la-font-weight-semibold);
+  color: var(--la-color-text-primary);
+  list-style: none;
+  padding: var(--la-space-1) 0;
+  /* why: brand-page summary acts as an interactive affordance, so
+     it follows palette.md §4.3 role discipline — hover lifts to
+     the bright-blue interactive token used elsewhere on the page
+     for affordances. */
+  transition: color var(--la-transition-fast);
+}
+
+.brand-page details > summary::marker,
+.brand-page details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.brand-page details > summary::before {
+  content: "▸ ";
+  display: inline-block;
+  margin-right: var(--la-space-1);
+  color: var(--la-color-blue-bright);
+  transition: transform var(--la-transition-fast);
+}
+
+.brand-page details[open] > summary::before {
+  content: "▾ ";
+}
+
+.brand-page details > summary:hover {
+  color: var(--la-color-blue-bright);
+  text-decoration: underline;
+}
+
+/* §9.5 Typography samples (Section 5) */
+
+.brand-page .brand-font-sample {
+  display: flex;
+  flex-direction: column;
+  gap: var(--la-space-2);
+  margin: var(--la-space-4) 0;
+  padding: var(--la-space-5);
+  background-color: var(--la-color-bg-secondary);
+  border: 1px solid var(--la-color-border-subtle);
+  border-radius: var(--la-radius-md);
+}
+
+.brand-page .brand-font-sample__sample {
+  color: var(--la-color-text-primary);
+  line-height: var(--la-line-height-tight);
+  /* why: tight line-height keeps the showcase sample visually
+     dense; the meta label below uses body line-height so the two
+     read as a hero + caption pair. */
+}
+
+.brand-page .brand-font-sample--display .brand-font-sample__sample {
+  font-size: var(--la-font-size-h2);
+  letter-spacing: var(--la-letter-spacing-display);
+  text-transform: uppercase;
+  font-weight: var(--la-font-weight-h2);
+}
+
+.brand-page .brand-font-sample--body .brand-font-sample__sample {
+  font-size: var(--la-font-size-h4);
+  letter-spacing: var(--la-letter-spacing-normal);
+  font-weight: var(--la-font-weight-body);
+}
+
+.brand-page .brand-font-sample--mono .brand-font-sample__sample {
+  font-size: var(--la-font-size-h5);
+  letter-spacing: var(--la-letter-spacing-normal);
+  font-weight: var(--la-font-weight-body);
+}
+
+.brand-page .brand-font-sample__meta {
+  font-family: var(--la-font-mono);
+  font-size: var(--la-font-size-small);
+  line-height: var(--la-line-height-small);
+  color: var(--la-color-text-secondary);
+}
+
+/* §9.6 Usage Guidelines (Section 7 — DO / DON'T checklist) */
+
+.brand-page .usage-rules {
+  list-style: none;
+  margin: var(--la-space-5) 0;
+  padding: 0;
+  display: grid;
+  gap: var(--la-space-3);
+}
+
+.brand-page .usage-rules li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--la-space-3);
+  align-items: start;
+  padding: var(--la-space-4);
+  border: 1px solid var(--la-color-border-subtle);
+  border-radius: var(--la-radius-md);
+  background-color: var(--la-color-bg-secondary);
+}
+
+.brand-page .usage-rules .usage-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--la-space-5);
+  height: var(--la-space-5);
+  border-radius: var(--la-radius-pill);
+  flex-shrink: 0;
+  /* why: icon glyph uses stroke="currentColor" (see content
+     markdown); colour cascade picks up the DO/DON'T variant
+     below. */
+}
+
+.brand-page .usage-rules .usage-do .usage-icon {
+  background-color: var(--la-color-bg-primary);
+  color: var(--la-color-success);
+  border: 1px solid var(--la-color-success);
+}
+
+.brand-page .usage-rules .usage-dont .usage-icon {
+  background-color: var(--la-color-bg-primary);
+  color: var(--la-color-error);
+  border: 1px solid var(--la-color-error);
+  /* why: error token (pure-red family) is the correct semantic
+     for the DON'T cue per palette.md §5.3 — distinct from CTA red
+     (maroon family). Using --la-color-error here re-asserts the
+     "error red ≠ brand red" boundary inside the brand page itself. */
+}
+
+.brand-page .usage-rules code {
+  /* override §4.7 to keep usage-rule code labels on the same
+     surface as the rule (bg-secondary) rather than the global
+     bg-tertiary, so DO/DON'T cards read as one block. */
+  background-color: var(--la-color-bg-primary);
+}
+
+/* §9.7 Art Direction (Section 8)
+   Visually distinct from sections 1-7: denser content, longer
+   prose. Add internal spacing + a subtle banded background so
+   the section reads as a "brief" not a wall. */
+
+.brand-page #art-direction,
+.brand-page #art-direction ~ * {
+  /* nothing here yet — the section heading + body inherit the
+     standard h2 + paragraph styling. The banded background is
+     applied via the heading's adjacent siblings below. */
+}
+
+.brand-page .post-content h2#art-direction {
+  margin-top: var(--la-space-9);
+}
+
+@media (max-width: 768px) {
+  .brand-page .post-content h2#art-direction {
+    margin-top: var(--la-space-8);
+  }
+}
+
+.brand-page .post-content h2#art-direction ~ p,
+.brand-page .post-content h2#art-direction ~ ul,
+.brand-page .post-content h2#art-direction ~ ol,
+.brand-page .post-content h2#art-direction ~ h3,
+.brand-page .post-content h2#art-direction ~ blockquote {
+  max-width: 78ch;
+  /* why: the mood-board brief is long-form prose that becomes hard
+     to scan beyond ~80 characters per line on wide viewports.
+     Capping the measure keeps it readable at desktop widths while
+     still flowing to full width on mobile. */
+}
+
+.brand-page .post-content h2#art-direction ~ blockquote {
+  margin-left: 0;
+  padding: var(--la-space-3) var(--la-space-5);
+  border-left: 4px solid var(--la-color-gold);
+  background-color: var(--la-color-bg-secondary);
+  color: var(--la-color-text-secondary);
+}
+
+/* §9.8 Mobile narrow-viewport adjustments
+   Swatch grids and font samples already use auto-fill / flex,
+   so they shrink naturally. The collapsible details get tighter
+   horizontal padding on narrow viewports to keep token names on
+   one line where possible. */
+
+@media (max-width: 480px) {
+  .brand-page details {
+    padding: var(--la-space-3);
+  }
+  .brand-page .brand-font-sample {
+    padding: var(--la-space-4);
+  }
+  .brand-page .usage-rules li {
+    padding: var(--la-space-3);
+  }
+}
