@@ -93,7 +93,7 @@ pre-baseline becomes load-bearing rather than brittle.
 | WP-007a | play.legendary-arena.com deploy | ✅ Done (2026-05-10) | WP-006 | 1 day |
 | WP-007b | Registry viewer brand integration (cards.barefootbetters.com) | ✅ Done (2026-05-11) | WP-006 | ~half-day–1 day |
 | WP-008 | SEO baseline (Hugo equivalent of RankMath features) | ✅ Done (2026-05-11) | WP-006 | ~1 day |
-| WP-009 | Class-color usage audit — cross-site *(spec draft pending review — see [`docs/ai/work-packets/WP-009-class-color-usage-audit.md`](ai/work-packets/WP-009-class-color-usage-audit.md))* | ⏸️ Pending | WP-007a, WP-007b, WP-010 | ~0.5–1 day |
+| WP-009 | Class-color usage audit — cross-site. Findings: [`docs/brand/audits/class-color-usage-v1.md`](../brand/audits/class-color-usage-v1.md) | ✅ Done (2026-05-12) | WP-007a, WP-007b, WP-010 | ~0.5 day |
 | WP-010 | Header + footer site navigation | ✅ Done (2026-05-10) | WP-006 | ~half-day |
 | WP-011 | `font-display: optional` — eliminate font-swap CLS | ✅ Done (2026-05-10) | WP-006 | ~1 hour |
 | WP-012 | SessionStart hook + prune script — INFRA, ported from engine repo (no section body; see `docs/ai/REFERENCE/01.8-claude-code-hooks.md`) | ✅ Done (2026-05-11) | — | ~1 hour |
