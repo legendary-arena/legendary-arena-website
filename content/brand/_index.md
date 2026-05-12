@@ -80,7 +80,7 @@ is consistent across every surface a player touches.
 
 ### Primary — gold on dark
 
-<p>
+<p style="background: #0b0f19; padding: var(--la-space-4); border-radius: var(--la-radius-md); display: inline-block;">
   <img src="/brand/logo/logo-la-dark-400x200.svg"
        alt="Legendary Arena wordmark (gold on dark — primary)"
        class="brand-logo"
