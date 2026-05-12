@@ -24,6 +24,8 @@ if [ -z "$SUBJECT" ]; then
   echo "${RED}COMMIT BLOCKED:${NC} Empty commit message."
   echo "Allowed formats:"
   echo "  WP-NNN[a-z]?: <present-tense summary>   (site changes, WP work)"
+  echo "  FIX: <summary>                           (content-lane edit: typo, copy tweak, broken link)"
+  echo "  POST: <YYYY-MM-DD — summary>             (new blog post, content lane)"
   echo "  ROADMAP: <summary>                       (roadmap-only, outside any WP)"
   echo "  INFRA: <summary>                         (tooling, hooks, CI)"
   echo "  SPEC: <summary>                          (governance doc corrections)"
@@ -49,16 +51,20 @@ echo "$SUBJECT" | grep -qiE "$FORBIDDEN" && {
 # --- Rule 2: Must match an allowed prefix ---
 # Letter suffix on WP accepts either case (WP-007a / WP-007A both valid).
 IS_WP=$(echo "$SUBJECT" | grep -cE '^WP-[0-9]+[A-Za-z]?:')
+IS_FIX=$(echo "$SUBJECT" | grep -cE '^FIX:')
+IS_POST=$(echo "$SUBJECT" | grep -cE '^POST:')
 IS_ROADMAP=$(echo "$SUBJECT" | grep -cE '^ROADMAP:')
 IS_INFRA=$(echo "$SUBJECT" | grep -cE '^INFRA:')
 IS_SPEC=$(echo "$SUBJECT" | grep -cE '^SPEC:')
 
-if [ "$IS_WP" -eq 0 ] && [ "$IS_ROADMAP" -eq 0 ] && [ "$IS_INFRA" -eq 0 ] && [ "$IS_SPEC" -eq 0 ]; then
+if [ "$IS_WP" -eq 0 ] && [ "$IS_FIX" -eq 0 ] && [ "$IS_POST" -eq 0 ] && [ "$IS_ROADMAP" -eq 0 ] && [ "$IS_INFRA" -eq 0 ] && [ "$IS_SPEC" -eq 0 ]; then
   echo ""
   echo "${RED}COMMIT BLOCKED:${NC} Subject does not match an allowed prefix."
   echo "Rejected subject: $SUBJECT"
   echo "Allowed formats:"
   echo "  WP-NNN[a-z]?: <present-tense summary>"
+  echo "  FIX: <summary>            (content-lane edit)"
+  echo "  POST: <summary>           (new blog post, content lane)"
   echo "  ROADMAP: <summary>"
   echo "  INFRA: <summary>"
   echo "  SPEC: <summary>"
@@ -69,7 +75,7 @@ if [ "$IS_WP" -eq 0 ] && [ "$IS_ROADMAP" -eq 0 ] && [ "$IS_INFRA" -eq 0 ] && [ "
 fi
 
 # --- Rule 3: Subject must be meaningful (>= 12 chars after prefix) ---
-AFTER_PREFIX=$(echo "$SUBJECT" | sed -E 's/^(WP-[0-9]+[A-Za-z]?|ROADMAP|INFRA|SPEC):[[:space:]]*//')
+AFTER_PREFIX=$(echo "$SUBJECT" | sed -E 's/^(WP-[0-9]+[A-Za-z]?|FIX|POST|ROADMAP|INFRA|SPEC):[[:space:]]*//')
 AFTER_LEN=$(echo -n "$AFTER_PREFIX" | wc -c | tr -d ' ')
 
 if [ "$AFTER_LEN" -lt 12 ]; then
@@ -97,27 +103,57 @@ if [ "$IS_WP" -gt 0 ]; then
   fi
 fi
 
-# --- Rule 5: Site-affecting files require WP-NNN prefix ---
+# --- Rule 5: Site-affecting files require WP-NNN: (or content-lane prefix) ---
 # Site-affecting = anything that ends up in public/ after `hugo --minify`.
+# The content lane (FIX:/POST:) is a narrowed exemption: it allows site-affecting
+# commits without WP-NNN: ONLY when every site-affecting file is content prose
+# (content/**) or a content image (static/images/**). Everything else
+# site-affecting — layouts, archetypes, brand-tokens, _headers, hugo.toml,
+# package.json, themes, data, i18n, non-image static/ — still requires WP-NNN:.
 STAGED=$(git diff --cached --name-only --diff-filter=ACMR 2>/dev/null)
 HAS_SITE=0
+HAS_NONLANE_SITE=0
 if [ -n "$STAGED" ]; then
   HAS_SITE=$(echo "$STAGED" | grep -cE '^(content/|layouts/|assets/|static/|archetypes/|data/|i18n/|themes/|hugo\.toml$|package\.json$|package-lock\.json$)' || true)
+  # Site-affecting files that fall OUTSIDE the content lane.
+  HAS_NONLANE_SITE=$(echo "$STAGED" \
+    | grep -E '^(content/|layouts/|assets/|static/|archetypes/|data/|i18n/|themes/|hugo\.toml$|package\.json$|package-lock\.json$)' \
+    | grep -vE '^content/' \
+    | grep -vE '^static/images/' \
+    | wc -l | tr -d ' ')
 fi
 
-if [ "$HAS_SITE" -gt 0 ] && [ "$IS_WP" -eq 0 ]; then
+# Block ROADMAP:/INFRA:/SPEC: outright when site-affecting files are staged.
+if [ "$HAS_SITE" -gt 0 ] && [ "$IS_WP" -eq 0 ] && [ "$IS_FIX" -eq 0 ] && [ "$IS_POST" -eq 0 ]; then
   echo ""
-  echo "${RED}COMMIT BLOCKED:${NC} Site-affecting files staged but commit is not WP-scoped."
+  echo "${RED}COMMIT BLOCKED:${NC} Site-affecting files staged but commit is not WP/FIX/POST-scoped."
   echo "Staged files under content/, layouts/, assets/, static/, archetypes/,"
   echo "data/, i18n/, themes/, or hugo.toml / package.json / package-lock.json"
-  echo "require a WP-NNN: prefix."
+  echo "require WP-NNN: (any site path), FIX: (content lane), or POST: (content lane)."
   echo ""
   echo "Rejected prefix: $(echo "$SUBJECT" | sed -E 's/:.*/:/')"
   echo ""
-  echo "If this is genuinely tooling (hooks, scripts, CI):"
-  echo "  Move site-affecting files out of staging, or use WP-NNN: prefix."
-  echo ""
   echo "See: docs/ai/REFERENCE/01.3-commit-hygiene.md"
+  echo ""
+  exit 1
+fi
+
+# FIX:/POST: are limited to the content lane (content/** + static/images/**).
+if [ "$HAS_NONLANE_SITE" -gt 0 ] && { [ "$IS_FIX" -gt 0 ] || [ "$IS_POST" -gt 0 ]; }; then
+  echo ""
+  echo "${RED}COMMIT BLOCKED:${NC} FIX:/POST: is limited to the content lane."
+  echo "Allowed paths: content/** and static/images/**"
+  echo "Out-of-lane site-affecting files staged:"
+  echo "$STAGED" \
+    | grep -E '^(content/|layouts/|assets/|static/|archetypes/|data/|i18n/|themes/|hugo\.toml$|package\.json$|package-lock\.json$)' \
+    | grep -vE '^content/' \
+    | grep -vE '^static/images/' \
+    | sed 's/^/  /'
+  echo ""
+  echo "Fix: use WP-NNN: prefix (with a WP file in docs/ai/work-packets/),"
+  echo "     or unstage the out-of-lane files and commit them separately."
+  echo ""
+  echo "See: docs/ai/REFERENCE/01.3-commit-hygiene.md §Content lane"
   echo ""
   exit 1
 fi
