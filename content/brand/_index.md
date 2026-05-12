@@ -133,10 +133,10 @@ over randomness.
 
 **Four properties** carry the brand across the product:
 
-- **`www.legendary-arena.com`** — marketing, brand page, blog
-- **`play.legendary-arena.com`** — live game client
-- **`cards.barefootbetters.com`** — card registry and browsing
-- **`ewiki.legendary-arena.com`** — engineering wiki (architecture,
+- **[`www.legendary-arena.com`](https://www.legendary-arena.com)** — marketing, brand page, blog
+- **[`play.legendary-arena.com`](https://play.legendary-arena.com)** — live game client
+- **[`cards.barefootbetters.com`](https://cards.barefootbetters.com)** — card registry and browsing
+- **[`ewiki.legendary-arena.com`](https://ewiki.legendary-arena.com)** — engineering wiki (architecture,
   decisions, inventory)
 
 The first three consume the same token system
