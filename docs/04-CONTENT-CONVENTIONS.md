@@ -1,7 +1,7 @@
 # Content Conventions
 
-**Status:** v1 (WP-004); Build pipeline + Search sections locked under WP-005 (2026-05-09); Production deploy section added under WP-006 (2026-05-09)
-**Last updated:** 2026-05-09
+**Status:** v1 (WP-004); Build pipeline + Search sections locked under WP-005 (2026-05-09); Production deploy section added under WP-006 (2026-05-09); description-field rule now enforced under WP-008 (2026-05-11) — see [`05-SEO-CONVENTIONS.md`](05-SEO-CONVENTIONS.md)
+**Last updated:** 2026-05-11
 
 > **Authority:** This document records the content-authoring conventions
 > for `www.legendary-arena.com`. It is subordinate to `01-VISION.md`
@@ -152,6 +152,16 @@ a PR for any change you'd like a preview URL for; the
 Cloudflare GitHub-app comment on the PR will carry the preview
 URL within ~30 seconds of the push.
 
+### SEO surface
+
+The marketing site's SEO discipline (Schema.org JSON-LD partial,
+external validator gates, `robots.txt` + `sitemap.xml` posture,
+Google Search Console verification, site-level meta-description
+contract) is governed by [`05-SEO-CONVENTIONS.md`](05-SEO-CONVENTIONS.md)
+(WP-008, 2026-05-11). When editing copy that changes meta
+descriptions, OG / Twitter cards, or any front-matter consumed by
+the Schema partial, consult that doc.
+
 ## Search
 
 **UI: Pagefind default UI, lazy-loaded (WP-005, 2026-05-08).** The
@@ -276,7 +286,7 @@ Every page and post must include:
 |---|---|
 | `title` | Sentence-case headline; no trailing punctuation |
 | `date` | ISO 8601 with timezone (e.g., `2026-05-07T10:00:00-05:00`) |
-| `description` | 1–2 sentences, ≤ 160 characters; SEO + social share preview (prep for WP-008) |
+| `description` | 1–2 sentences, ≤ 160 characters; SEO + social-share preview. Enforced under WP-008 — see [`05-SEO-CONVENTIONS.md`](05-SEO-CONVENTIONS.md) for the full discipline (Schema.org partial, validator gates, site-level fallback contract). |
 | `draft` | `false` for anything intended to publish |
 
 Posts additionally use:
