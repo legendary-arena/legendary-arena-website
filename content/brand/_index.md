@@ -140,6 +140,24 @@ The game's visual vocabulary includes three icon families used on
 cards, filters, and the deck-builder UI. All icons are SVG,
 designed to read clearly at 24px and scale to 64px+.
 
+### Card typography
+
+Two fonts appear on cards and card-adjacent UI. These are
+**game-specific** — separate from the web token system's three
+locked families (Bebas Neue / Inter / JetBrains Mono).
+
+**Bangers** — card-set icon labels. All 40 card-set SVGs reference
+this font for the expansion abbreviation text (CORE, DKCY, FF04,
+etc.). Available as a [Google Font](https://fonts.google.com/specimen/Bangers).
+
+**Eurostile Condensed** — card face typography. The closest match
+to the physical card's title and body text. Eurostile is a
+commercial typeface (URW / Linotype); the condensed weight carries
+the card UI's clean, technical feel.
+
+Neither font is part of `brand-tokens.css` — they live in the game
+asset pipeline, not the cross-site token contract.
+
 ### Hero classes (5)
 
 Each hero belongs to one of five gameplay classes. Class icons
