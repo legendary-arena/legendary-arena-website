@@ -23,6 +23,59 @@ sequencing, and execution.
 This page defines the **visual and interaction system** that carries
 that identity across every surface.
 
+### Mission
+
+To build the definitive, faithful, digital home for the greatest
+cooperative deck-building experience ever created — engineered to
+last, funded in a way that protects the vision forever, and designed
+to send real value back to the creators who make it possible.
+
+### Vision
+
+Legendary Arena becomes not only a place to play, but a **training
+ground for mastery** — where excellence is measurable, replayable,
+and earned.
+
+### Slogan
+
+**Mastery — not luck — determines victory.**
+
+### The brand in 30 seconds
+
+Legendary Arena is the digital adaptation of the Legendary
+deck-building game. You recruit heroes, build synergy, and face
+escalating scenarios driven by a mastermind villain. There is no
+luck gate, no grind treadmill, no pay-to-win shortcut. The game
+measures *how well* you played — not how long or what you unlocked.
+A PAR-based scoring system makes skill visible, improvement
+measurable, and every scenario worth revisiting with intention.
+Every game is replayable, every score is verified, and competition
+is earned through demonstrated mastery.
+
+### Brand themes
+
+Four themes define the emotional territory of Legendary Arena:
+
+- **Mastery** — skill is the only currency; victory is earned
+- **Heroism** — saving lives outweighs playing it safe; the scoring
+  system rewards courage over caution
+- **Escalation** — difficulty compounds; every decision echoes
+  forward through the scenario
+- **Integrity** — fairness is structural, not moderated; replays are
+  deterministic, scores are transparent, and the system never lies
+
+### Emotional framework
+
+The brand should make people feel:
+
+- **Accomplishment** — "I earned this"
+- **Agency** — "My decisions mattered"
+- **Respect** — "This system treats me as a capable player"
+- **Aspiration** — "I can get better at this"
+
+The brand must never make people feel manipulated, lucky, or
+patronized.
+
 ## Start Here {#start-here}
 
 Legendary Arena's visual identity is a **token-driven design system**
@@ -136,6 +189,21 @@ Violation weakens brand recognition immediately.
 Brand voice: **cinematic, mature, heroic**. Direct sentences, active
 verbs, no irony — see [`strategy.md` §2][strategy-voice] for the full
 voice + tone rules.
+
+### Words to avoid
+
+These terms contradict the brand's identity and must not appear in
+any brand-facing copy, UI text, or marketing surface:
+
+| Avoid | Why | Use instead |
+|-------|-----|-------------|
+| luck, RNG, random | Implies outcome is uncontrolled | skill, mastery, decision |
+| grind, farm, repeat | Implies value comes from volume | refine, improve, revisit |
+| loot, gacha, pack | Implies randomized purchase | content, expansion, set |
+| pay-to-win, premium advantage | Violates non-goal NG-1 | cosmetic, supporter, presentation |
+| addictive, hooked | Implies exploitation | compelling, rewarding, deep |
+| casual | Dismissive of player investment | accessible, approachable |
+| meta, tier list | Implies solved optimization | strategy, composition, approach |
 
 ### Positioning
 
