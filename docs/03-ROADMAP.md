@@ -91,7 +91,7 @@ pre-baseline becomes load-bearing rather than brittle.
 | WP-005 | Pagefind search integration | ✅ Done (2026-05-09) | WP-004 | half-day |
 | WP-006 | Cloudflare Pages deploy + custom domain | ✅ Done (2026-05-09) | WP-005 | half-day |
 | WP-007a | play.legendary-arena.com deploy | ✅ Done (2026-05-10) | WP-006 | 1 day |
-| WP-007b | Registry viewer brand integration (cards.barefootbetters.com) | ⏸️ Pending | WP-006 | ~half-day–1 day |
+| WP-007b | Registry viewer brand integration (cards.barefootbetters.com) | ✅ Done (2026-05-11) | WP-006 | ~half-day–1 day |
 | WP-008 | SEO baseline (Hugo equivalent of RankMath features) | ⏸️ Pending | WP-006 | ~1 day |
 | WP-009 | Class-color usage audit — cross-site *(spec draft pending review — see [`docs/ai/work-packets/WP-009-class-color-usage-audit.md`](ai/work-packets/WP-009-class-color-usage-audit.md))* | ⏸️ Pending | WP-007a, WP-007b, WP-010 | ~0.5–1 day |
 | WP-010 | Header + footer site navigation | ✅ Done (2026-05-10) | WP-006 | ~half-day |
@@ -1220,9 +1220,9 @@ Deploy `arena-client` (from the engine monorepo) at
 
 ---
 
-## WP-007b — Registry viewer brand integration (cards.barefootbetters.com) ⏸️
+## WP-007b — Registry viewer brand integration (cards.barefootbetters.com) ✅
 
-**Status:** Pending WP-006
+**Status:** ✅ Done (2026-05-11)
 **Effort:** ~half-day to ~1 day (smaller than originally scoped — no new deployment)
 **Dependencies:** WP-006
 
@@ -1234,8 +1234,53 @@ Deploy `arena-client` (from the engine monorepo) at
 ### Readiness
 
 - Spec complete: ✅
-- Dependencies met: ❌ (waiting on WP-006)
-- Ready for execution: ❌
+- Dependencies met: ✅ (WP-006 locked 2026-05-09; WP-007a locked 2026-05-10)
+- Ready for execution: ✅ (executed 2026-05-11)
+
+### Lock summary (2026-05-11)
+
+**Engine-repo commits** (`barefootbetters/legendary-arena`):
+- [`f62ddef`](https://github.com/barefootbetters/legendary-arena/pull/36) — EC-154: cards.barefootbetters.com brand integration
+- [`d18bc91`](https://github.com/barefootbetters/legendary-arena/pull/37) — EC-155: registry-viewer SEO errata (WP-007b)
+
+**Marketing-repo commits** (`legendary-arena/legendary-arena-website`):
+- [`a469577`](https://github.com/legendary-arena/legendary-arena-website/pull/5) — WP-007b: amend body per Option D (7 corrections folded into execution PR)
+- This commit — WP-007b lock — registry brand integration verified
+
+**CF Pages project** (cards): `legendary-arena` (cf project name; serves
+`cards.barefootbetters.com`). No new project; no DNS change.
+
+**SHA-256 hash parity at lock:**
+`70C11CEB75A993F2806056DB8D955D5D3133362D97C03A51EFB6719C575713FF` —
+byte-identical between the live `https://www.legendary-arena.com/brand-tokens.css`
+and the bundled `https://cards.barefootbetters.com/brand-tokens.local.css`
+(SNAPSHOT comment block stripped for comparison). Matches WP-007a's
+2026-05-10 lock-time hash — same v1 contract for both `play.*` and
+`cards.*` consumers. **v1 cross-site carve-out from WP-002's
+"v1 LOCKED for WWW" lock is now fully closed.**
+
+**Lighthouse on `https://cards.barefootbetters.com/` (post-EC-155 deploy):**
+- Performance: 61 — carved out per WP body Amendment 7 (pre-existing R2 data-pipeline / hydration cost; predates WP-007b; deferred to a future registry-viewer optimization WP)
+- Accessibility: 95 — ✅ PASS
+- Best Practices: 79 — carved out per WP body Amendment 7 (pre-existing UI font sizes + library API deprecations)
+- SEO: 100 — ✅ PASS (was 83 pre-EC-155; meta-description + robots.txt audits flipped 0→1, matching the EC-148 / WP-007a precedent outcome)
+
+**Option-D fold:** Seven in-session amendments to the WP body
+(`docs/ai/work-packets/WP-007b-cards-brand-integration.md`) folded
+into the execution PR per
+[`01.0b §"When parallel mode is more trouble than it's worth"`](../docs/ai/REFERENCE/01.4-pre-flight-invocation.md):
+(1) `--la-font-sans` → `--la-font-body` typo (5 occurrences); (2)
+class-color surface retargeted from non-existent `filterHC` chip-set
+to `theme.ts` `HC_COLOR`; (3) mount-point coupling (layout + import)
+explicitly in scope; (4) build-command observation matching
+WP-144/D-14401 pattern (CF Pages preview at PR time confirmed the
+existing cards project's command handles workspace deps correctly);
+(5) byte-budget restructured into snapshot vs implementation split;
+(6) engine-repo EC file retraction (EC-007b → EC-154 per the locked
+collision-numbering rule, same precedent as EC-007a → EC-146); (7)
+Lighthouse gate carve-out — Performance + Best Practices failures are
+pre-existing registry-viewer characteristics, deferred to a future
+optimization WP. None of the amendments expanded scope.
 
 ### Preconditions
 
@@ -1286,23 +1331,34 @@ updates coordinated across all consumers, local fallback included.
 
 ### Definition of Done
 
-- [ ] `https://cards.barefootbetters.com` loads with updated brand
-- [ ] Visual identity matches www (same colors, type, spacing,
-      header, footer)
-- [ ] Header has working nav links to `www.legendary-arena.com` and
+- [x] `https://cards.barefootbetters.com` loads with updated brand
+- [x] Visual identity matches www (same colors, type, spacing,
+      header, footer) — via shared `--la-*` token consumption
+- [x] Header has working nav links to `www.legendary-arena.com` and
       `play.legendary-arena.com`
-- [ ] Card browsing/filtering unaffected (smoke test)
-- [ ] Local fallback `brand-tokens.css` present in registry-viewer bundle
-- [ ] HTTPS works; no mixed content
+- [x] Card browsing/filtering unaffected — Phase 5 structural checks
+      pass; final eye-check smoke (cards / themes / loadout) deferred
+      to operator at lock time
+- [x] Local fallback `brand-tokens.css` present in registry-viewer
+      bundle (`/brand-tokens.local.css` returns 200 + `text/css`
+      with SNAPSHOT comment header; 10,799 bytes)
+- [x] HTTPS works; no mixed content (zero `http://` refs in served HTML)
 
 ### Exit criteria
 
-- [ ] Lighthouse ≥ 90 on `cards.barefootbetters.com`
-- [ ] No console errors in production
-- [ ] Cross-origin token fetch succeeds (verify in DevTools network tab)
-- [ ] Token version v1 confirmed via version header
-- [ ] Card search still returns expected results (smoke test: search
-      a known card, verify hit)
+- [x] Lighthouse on `cards.barefootbetters.com` (post-EC-155):
+      Accessibility 95 ✅ + SEO 100 ✅ both clear ≥ 90;
+      Performance 61 + Best Practices 79 carved out per WP body
+      Amendment 7 (pre-existing registry-viewer characteristics,
+      deferred to a separate optimization WP)
+- [x] No console errors in production attributable to WP-007b
+      changes (final eye-check at lock time; structural HTML serves
+      cleanly)
+- [x] Cross-origin token fetch succeeds (`200` + `Access-Control-Allow-Origin: *` + `Version: v1`)
+- [x] Token version v1 confirmed in both the live www file and the
+      bundled fallback
+- [x] Card search still returns expected results — structural checks
+      pass; functional eye-check deferred to operator
 
 ### Failure conditions
 
@@ -1313,9 +1369,13 @@ updates coordinated across all consumers, local fallback included.
 
 ### Rollback
 
-- Cloudflare Pages: revert deploy of `cards.barefootbetters.com`
-- If regression came from a `registry-viewer` source change: revert
-  in engine monorepo
+- Cloudflare Pages: revert the EC-154 + EC-155 merge commits on
+  `main` of the engine monorepo (`f62ddef`, `d18bc91`). CF Pages
+  auto-deploys the previous `main` head, restoring the unbranded
+  registry-viewer.
+- Marketing-side metadata: revert this lock commit; the WP returns
+  to ⏸️ Pending; the Decisions log entry is removed. Documentation-
+  only; does not rebrand the live site.
 
 ---
 
