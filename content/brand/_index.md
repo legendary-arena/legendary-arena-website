@@ -319,37 +319,27 @@ Bright lines from
 <ul class="usage-rules">
   <li class="usage-do">
     <span class="usage-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 10 18 20 6"/></svg></span>
-    <strong>DO</strong> use <code>--la-color-blue-bright</code> on
-    interactive elements — links, focus rings, hover, active. The
-    deeper navy base reads decorative.
+    <span><strong>DO</strong> use <code>--la-color-blue-bright</code> on interactive elements — links, focus rings, hover, active. The deeper navy base reads decorative.</span>
   </li>
   <li class="usage-do">
     <span class="usage-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 10 18 20 6"/></svg></span>
-    <strong>DO</strong> use <code>--la-color-cta</code> for primary
-    CTA backgrounds — mode-stable, AAA on white text.
+    <span><strong>DO</strong> use <code>--la-color-cta</code> for primary CTA backgrounds — mode-stable, AAA on white text.</span>
   </li>
   <li class="usage-do">
     <span class="usage-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 12 10 18 20 6"/></svg></span>
-    <strong>DO</strong> render the logo as gold-on-dark (primary) or
-    white-only (inversion). Two treatments only.
+    <span><strong>DO</strong> render the logo as gold-on-dark (primary) or white-only (inversion). Two treatments only.</span>
   </li>
   <li class="usage-dont">
     <span class="usage-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg></span>
-    <strong>DON'T</strong> use class colors
-    (<code>--la-color-class-*</code>) for branding, marketing, CTAs,
-    or the logo. Gameplay tags, not identity.
+    <span><strong>DON'T</strong> use class colors (<code>--la-color-class-*</code>) for branding, marketing, CTAs, or the logo. Gameplay tags, not identity.</span>
   </li>
   <li class="usage-dont">
     <span class="usage-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg></span>
-    <strong>DON'T</strong> reuse brand red
-    (<code>--la-color-red</code> / <code>-cta</code>, maroon family)
-    as an error state. Error uses <code>--la-color-error</code>
-    (pure-red family).
+    <span><strong>DON'T</strong> reuse brand red (<code>--la-color-red</code> / <code>-cta</code>, maroon family) as an error state. Error uses <code>--la-color-error</code> (pure-red family).</span>
   </li>
   <li class="usage-dont">
     <span class="usage-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg></span>
-    <strong>DON'T</strong> introduce raw hex / font / spacing values.
-    Every visual resolves through <code>var(--la-*)</code>.
+    <span><strong>DON'T</strong> introduce raw hex / font / spacing values. Every visual resolves through <code>var(--la-*)</code>.</span>
   </li>
 </ul>
 
