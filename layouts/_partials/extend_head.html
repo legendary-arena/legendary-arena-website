@@ -205,3 +205,9 @@
 {{- if hugo.IsProduction | or (eq site.Params.env "production") }}
 {{- partial "seo/schema.html" . -}}
 {{- end -}}
+
+{{- /* §5. Snipcart cart (WP-019)
+       Preconnect to Snipcart CDN and load the default cart theme.
+       The JS is loaded in extend_footer.html (deferred). */ -}}
+<link rel="preconnect" href="https://cdn.snipcart.com">
+<link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.7.1/default/snipcart.css">

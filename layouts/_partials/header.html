@@ -127,6 +127,21 @@
             {{- end }}
         </ul>
 
+        {{- /* Snipcart cart button (WP-019).
+               .snipcart-checkout is a Snipcart-reserved class that
+               opens the cart on click. .snipcart-items-count is
+               auto-populated by Snipcart JS with the item count. */ -}}
+        <button class="snipcart-checkout header-cart" aria-label="Shopping cart">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <circle cx="9" cy="21" r="1"></circle>
+                <circle cx="20" cy="21" r="1"></circle>
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            <span class="snipcart-items-count"></span>
+        </button>
+
         {{- /* Pagefind search mount — canonical id locked by WP-005 § Step 4.
                JS in extend_head.html instantiates PagefindUI against this
                exact id. Aliases (#search, #site-search, #pf-search, etc.)
