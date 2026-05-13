@@ -1,0 +1,24 @@
+{{- /* Newsletter signup form partial (WP-015).
+       Rendered on the home page and in the footer.
+       Submits to /api/subscribe (CF Pages Function).
+       The form uses progressive enhancement: without JS the form
+       still submits (POST to /api/subscribe returns JSON), but
+       the intended UX is a fetch()-based submission with inline
+       success/error messaging and no page reload.
+*/ -}}
+<form class="newsletter-form" action="/api/subscribe" method="POST" aria-label="Newsletter signup">
+    <label for="newsletter-email-{{ .id }}">{{ .heading | default "Stay in the loop" }}</label>
+    <p class="newsletter-desc">{{ .description | default "Get patch notes, new cards, and tournament announcements. No spam — unsubscribe any time." }}</p>
+    <div class="newsletter-input-group">
+        <input
+            type="email"
+            id="newsletter-email-{{ .id }}"
+            name="email"
+            placeholder="you@example.com"
+            required
+            autocomplete="email"
+        />
+        <button type="submit">Subscribe</button>
+    </div>
+    <p class="newsletter-status" role="status" aria-live="polite" hidden></p>
+</form>
