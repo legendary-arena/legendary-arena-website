@@ -23,6 +23,7 @@ Thumbs.db
 # Environment files
 .env
 .env.local
+.dev.vars
 
 # Build artifacts from theme tooling
 .cache/

@@ -40,6 +40,10 @@
             {{- end }}
         </ul>
     </nav>
+    {{- /* Newsletter signup (WP-015) — between nav and copyright. */ -}}
+    <div class="footer-newsletter">
+        {{- partial "newsletter-form.html" (dict "id" "footer" "heading" "Newsletter" "description" "Patch notes and new cards, straight to your inbox.") }}
+    </div>
     {{- /* EXISTING upstream content (unchanged below this line). */ -}}
     {{- if not site.Params.footer.hideCopyright }}
         {{- if site.Copyright }}

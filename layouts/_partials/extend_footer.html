@@ -1,0 +1,2 @@
+{{ $newsletter := resources.Get "js/newsletter.js" | minify | fingerprint }}
+<script src="{{ $newsletter.RelPermalink }}" defer></script>
