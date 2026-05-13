@@ -64,6 +64,8 @@ WP-001 → WP-002 → WP-003 → WP-004 → WP-005 → WP-006 ┬→ WP-007a ─
 
 WP-015 → WP-016 → WP-017
 WP-015 → WP-018 (parallel with WP-016/017)
+
+WP-019 (standalone — no upstream WP dependency)
 ```
 
 WP-007a, WP-007b, WP-008, WP-010, and WP-011 can run in parallel
@@ -87,6 +89,15 @@ before content is produced against them). WP-018 (Brevo automation)
 depends on WP-015 only and can run in parallel with WP-016/017 —
 it configures the Brevo-side engagement workflow, not the Hugo
 content layer.
+
+WP-019 (Snipcart commerce) has no upstream WP dependency — it
+touches `extend_head.html`, `extend_footer.html`, `header.html`,
+and `hugo.toml` (all locked by prior WPs) plus new files under
+`layouts/shop/`, `content/shop/`, and `archetypes/`. It can run
+in parallel with WP-017 and WP-018 since it has no shared write
+paths with either. The vision doc amendment for the e-commerce
+scope expansion landed 2026-05-12 (see `01-VISION.md` Decisions
+log).
 
 ---
 
@@ -113,6 +124,7 @@ content layer.
 | WP-016 | Newsletter & blog templates | ✅ Done (2026-05-12) | WP-015 | ~1 day |
 | WP-017 | Content pipeline + weeks 1–4 | ⏸️ Pending | WP-016 | ~1–2 days |
 | WP-018 | Email engagement workflow (Brevo automation) | ⏸️ Pending | WP-015 | ~half-day |
+| WP-019 | Snipcart shopping cart with Stripe checkout | ⏭️ Up next | — | ~1 day |
 
 **Total realistic effort:** ~9–14 days of focused work.
 
@@ -2668,6 +2680,64 @@ marketing collateral.
   (`docs/newsletter-template.md`)
 - Weekly cadence configured (ready for WP-017 content)
 - Conversion design rules documented
+
+---
+
+## WP-019 — Snipcart shopping cart with Stripe checkout ⏭️
+
+**Status:** ⏭️ Up next
+**Depends on:** — (no upstream WP dependency; vision doc amendment landed 2026-05-12)
+**Spec:** [`docs/ai/work-packets/WP-019-snipcart-commerce.md`](ai/work-packets/WP-019-snipcart-commerce.md)
+
+Add a bolt-on shopping cart to the Hugo marketing site using Snipcart
+(cart/checkout layer) and Stripe (payment gateway). Product data lives
+in Hugo content files; Snipcart reads it from HTML `data-item-*`
+attributes at build time. No backend, no database, no platform
+migration. Aligns with "no margin, no mission" — fastest path to
+revenue capture without disrupting the static-site architecture.
+
+### Scope
+
+- Embed Snipcart CSS/JS in `extend_head.html` and `extend_footer.html`
+- Cart button in header (between nav menu and Pagefind search)
+- Product archetype, list template, and single template under
+  `layouts/shop/` and `archetypes/shop.md`
+- Sample product content in `content/shop/` (draft)
+- "Shop" nav entry in `hugo.toml` (weight 25, between Blog and Brand)
+- Brand-consistent CSS for product pages and cart UI
+- Snipcart theming overrides for brand alignment
+- Configure Stripe as payment gateway in Snipcart dashboard
+- Validate checkout end-to-end in Snipcart test mode on a CF Pages
+  preview deploy
+
+### Not in scope
+
+- Custom tax/shipping webhooks
+- ACD catalog ingestion or distributor automation
+- Home page featured products section
+- Cart abandonment analytics
+- Snipcart Live mode activation (config change, not code)
+
+### Prerequisites (manual)
+
+- Snipcart account created
+- Stripe connected as payment gateway in Snipcart dashboard
+- Snipcart set to Test mode
+- Public API key stored in `hugo.toml` or CF Pages env var
+- Allowed domains configured in Snipcart dashboard
+
+### Definition of Done
+
+- Snipcart JS/CSS load on every page without console errors
+- Cart button renders in header on every page
+- `/shop/` renders product grid; individual product pages render
+- Checkout completes end-to-end in test mode (Stripe test card)
+- Order appears in Snipcart merchant dashboard
+- At least one shipping method configured
+- All styling uses `var(--la-*)` tokens — no raw hex
+- Light + dark mode correct
+- `npm run build` byte-identical across two runs
+- Lighthouse ≥ 90 (Performance, Accessibility, Best Practices, SEO)
 
 ---
 
