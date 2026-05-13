@@ -99,8 +99,9 @@ pre-baseline becomes load-bearing rather than brittle.
 | WP-012 | SessionStart hook + prune script — INFRA, ported from engine repo (no section body; see `docs/ai/REFERENCE/01.8-claude-code-hooks.md`) | ✅ Done (2026-05-11) | — | ~1 hour |
 | WP-013 | Marketing-repo hygiene follow-up — .gitignore + 01.8 cross-refs (no section body; see commit history) | ✅ Done (2026-05-11) | — | ~15 min |
 | WP-014 | Public `/brand/` page + mood-board brief | ✅ Done (2026-05-12) | WP-007b, WP-010 | ~half-day |
+| WP-015 | Newsletter signup with Brevo | ✅ Done (2026-05-12) | WP-004, WP-010 | ~half-day |
 
-**Total realistic effort:** ~7–9.5 days of focused work.
+**Total realistic effort:** ~7–10 days of focused work.
 
 ---
 
@@ -2468,6 +2469,71 @@ canonical-doc / header-byte-identical / submodule checks pass.
   §What's NOT in scope. When commissioned, it lands at
   `static/brand/mood-board.{pdf,svg}` and is referenced from
   Section 8 via download link or inline embed — a follow-up WP.
+
+---
+
+## WP-015 — Newsletter signup with Brevo ✅
+
+**Status:** Done (2026-05-12)
+**Depends on:** WP-004 (home page layout, `.button` CTA styling),
+WP-010 (footer partial override)
+**Spec:** [`docs/ai/work-packets/WP-015-newsletter-brevo.md`](ai/work-packets/WP-015-newsletter-brevo.md)
+**Commits:**
+- `7862b43` WP-015: add newsletter signup with Brevo integration
+  (#18, squash-merged)
+
+### What shipped
+
+- **CF Pages Function** (`functions/api/subscribe.js`) — server-side
+  proxy to Brevo's `POST /v3/contacts` API. CORS allowlist covers
+  production, `localhost:8788`, and `127.0.0.1:8788`. Handles
+  duplicate contacts as success. Content-type guard, email validation,
+  structured error responses.
+- **Newsletter form partial** (`layouts/_partials/newsletter-form.html`)
+  — reusable with `{{ .id }}` for unique DOM IDs. Progressive
+  enhancement: works without JS (POST returns JSON), intended UX is
+  fetch-based with inline status messages.
+- **Home page integration** — `<section class="newsletter-section">`
+  after feature cards in `layouts/index.html`.
+- **Footer integration** — `<div class="footer-newsletter">` between
+  nav and copyright in `layouts/_partials/footer.html`. Renders on
+  every page.
+- **Client-side JS** (`assets/js/newsletter.js`) — fetch handler with
+  button disable during submission, success/error status display,
+  status clear on re-submit. Loaded via Hugo asset pipeline
+  (`extend_footer.html`, minified + fingerprinted).
+- **CSS** (`custom.css` §10) — all values via `var(--la-*)` tokens.
+  Subscribe button mirrors `.button` CTA styling (§5.2). One
+  `#ffffff` exception with `/* why: */` justification (white on CTA,
+  10.4:1 AAA). Footer variant uses smaller heading/description type.
+  Stacks to column on ≤480px.
+- `.dev.vars` added to `.gitignore`.
+
+### Verification
+
+- [x] Two consecutive `npm run build` produce byte-identical `public/`
+- [x] Both form instances render (unique IDs: `newsletter-email-home`,
+      `newsletter-email-footer`)
+- [x] Footer newsletter confirmed on non-home pages (`/about/`)
+- [x] Accessibility: `aria-label`, `aria-live="polite"`,
+      `role="status"`, label `for`/`id` pairing
+- [x] Fingerprinted `newsletter.min.*.js` loaded via `defer`
+- [x] No raw hex violations beyond documented `#ffffff` exception
+- [x] Commit hooks passed (`pre-commit` + `commit-msg`)
+- [x] Submodule clean
+
+### Manual prerequisites (outside PR scope)
+
+1. Brevo account + API key + contact list creation
+2. Double opt-in enabled in Brevo settings
+3. `BREVO_API_KEY` and `BREVO_LIST_ID` set as CF Pages env vars
+4. `.dev.vars` created locally for local function testing
+
+### Rollback
+
+- `git revert 7862b43` removes all newsletter UI and the CF Pages
+  Function. The `functions/` directory is deleted. No data loss —
+  Brevo is the sole system of record for subscriber data.
 
 ---
 
