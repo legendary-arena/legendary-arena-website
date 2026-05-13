@@ -1386,11 +1386,8 @@ ul#menu li a span.active {
 
 /* =========================================================
    §10. NEWSLETTER SIGNUP (WP-015)
-   Email-capture form rendered on the home page (below feature
-   cards) and in the site-wide footer (above copyright). Both
-   instances share the same partial + JS; styling adapts via
-   context wrappers (.newsletter-section for home,
-   .footer-newsletter for footer).
+   Email-capture form rendered in the site-wide footer
+   (above copyright).
    ========================================================= */
 
 /* §10.1 Shared form styling */
@@ -1501,21 +1498,7 @@ ul#menu li a span.active {
   color: var(--la-color-error);
 }
 
-/* §10.3 Home page newsletter section */
-
-.newsletter-section {
-  padding-top: var(--la-space-7);
-  padding-bottom: var(--la-space-7);
-}
-
-@media (max-width: 768px) {
-  .newsletter-section {
-    padding-top: var(--la-space-6);
-    padding-bottom: var(--la-space-6);
-  }
-}
-
-/* §10.4 Footer newsletter */
+/* §10.3 Footer newsletter */
 
 .footer-newsletter {
   max-width: 420px;
