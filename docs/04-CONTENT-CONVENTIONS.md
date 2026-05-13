@@ -384,3 +384,114 @@ following in shipped output is a bug, not a stylistic preference:
 
 If you find one, treat it the same as a broken link or a console
 error: fix before merge.
+
+---
+
+## Internal linking
+
+**Status:** Added under WP-016 (2026-05-12)
+
+### Blog ↔ newsletter cross-reference
+
+Each weekly blog post links to the newsletter signup (via the CTA
+block's `"newsletter"` variant or an inline reference). Each
+newsletter links to its companion blog post using the canonical URL
+(`/posts/<slug>/`). The `newsletter_slug` front-matter field ties the
+two together — it must match between the blog post and the
+newsletter's "Read more" link.
+
+### Series linking
+
+Posts in the same `series` should link to the previous and next post
+in the series. Hugo's `.PrevInSection` / `.NextInSection` handles
+this if posts are ordered by date. PaperMod's `ShowPostNavLinks =
+true` (set in `hugo.toml`) renders prev/next navigation automatically.
+
+### CTA consistency
+
+The `cta` front-matter field determines the end-of-post action.
+Default is `"play"`. Newsletter-heavy posts should use
+`"newsletter"`. Tournament announcements use `"tournament"`. See
+the CTA contract table in `archetypes/posts.md` and
+`layouts/_partials/cta-block.html` for the authoritative mapping.
+
+### External links
+
+Links to `play.*`, `cards.*`, and `ewiki.*` open in the same tab
+(they're part of the Legendary Arena ecosystem). Links to
+third-party sites open in a new tab
+(`target="_blank" rel="noopener"`).
+
+---
+
+## Image storage and referencing
+
+**Status:** Added under WP-016 (2026-05-12)
+
+### Canonical storage location
+
+All blog and newsletter images MUST be stored in:
+
+```
+static/images/posts/<slug>/
+```
+
+The image directory name MUST match the post slug exactly. Mismatch
+between slug and image directory is a contract violation.
+
+Example:
+
+```
+static/images/posts/hello-arena/
+  hero.webp
+static/images/posts/week-01-deck-checklist/
+  hero.webp
+  curve-example.webp
+  deck-flow-diagram.webp
+```
+
+### Naming conventions
+
+- Lowercase, kebab-case only
+- No spaces, no underscores
+- Use semantic names (`hero.webp`, `curve-example.webp`,
+  `deck-flow-diagram.webp`) — not `img1.webp` or `screenshot.webp`
+
+### Allowed formats
+
+- `.webp` — preferred (best size/quality ratio)
+- `.png` — when transparency is required
+- `.jpg` — acceptable for photography or stock imagery where WebP
+  conversion is impractical
+
+### Size budget
+
+- Max 200KB per image (prevents repo bloat at 52-post scale)
+- Hero images should target 80–120KB
+- Diagrams and illustrations typically compress well under 50KB
+
+### Referencing in Hugo content
+
+Images are referenced via absolute paths from `static/`:
+
+```markdown
+![Deck curve example](/images/posts/week-01-deck-checklist/curve-example.webp)
+```
+
+### Newsletter usage
+
+Newsletter images reuse the same production URLs:
+
+```
+https://www.legendary-arena.com/images/posts/<slug>/hero.webp
+```
+
+No separate email asset storage system. Images resolve only after
+deploy — local Brevo preview requires the production URL or a
+deployed preview branch.
+
+### Determinism invariant
+
+All images required to render blog content MUST exist in-repo.
+External image hosting (R2, third-party CDN) is prohibited in
+WP-016 scope.

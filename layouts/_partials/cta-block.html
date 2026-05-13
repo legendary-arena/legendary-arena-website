@@ -1,0 +1,20 @@
+{{- $cta := .Params.cta | default "play" -}}
+{{- if not (in (slice "play" "newsletter" "tournament") $cta) }}
+  {{- $cta = "play" -}}
+{{- end -}}
+{{- if eq $cta "play" }}
+<div class="cta-block" data-cta="{{ $cta }}">
+    <p class="cta-block-text">Ready to play?</p>
+    <a href="https://play.legendary-arena.com/" class="button cta-block-button">Play now</a>
+</div>
+{{- else if eq $cta "newsletter" }}
+<div class="cta-block" data-cta="{{ $cta }}">
+    <p class="cta-block-text">Get strategy tips and patch notes in your inbox.</p>
+    {{- partial "newsletter-form.html" (dict "id" "cta" "heading" "Subscribe" "description" "Weekly tips, new cards, and tournament news. No spam.") }}
+</div>
+{{- else if eq $cta "tournament" }}
+<div class="cta-block" data-cta="{{ $cta }}">
+    <p class="cta-block-text">Think you've got what it takes?</p>
+    <a href="https://play.legendary-arena.com/" class="button cta-block-button">Enter a tournament</a>
+</div>
+{{- end }}

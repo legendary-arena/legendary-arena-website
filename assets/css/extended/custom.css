@@ -1544,3 +1544,56 @@ ul#menu li a span.active {
     width: 100%;
   }
 }
+
+
+/* =========================================================
+   §11. CTA BLOCK (WP-016)
+   End-of-post call-to-action rendered by
+   layouts/_partials/cta-block.html. Three variants: play
+   (default), newsletter, tournament. data-cta attribute on
+   .cta-block identifies the active variant.
+   ========================================================= */
+
+/* §11.1 Shared CTA block layout */
+
+.cta-block {
+  max-width: 720px;
+  margin: var(--la-space-6) auto 0;
+  padding: var(--la-space-6) var(--la-space-5);
+  border-top: 1px solid var(--la-color-border-subtle);
+  text-align: center;
+}
+
+.cta-block-text {
+  font-family: var(--la-font-display);
+  font-size: var(--la-font-size-h3);
+  font-weight: var(--la-font-weight-h3);
+  line-height: var(--la-line-height-h3);
+  letter-spacing: var(--la-letter-spacing-display);
+  text-transform: uppercase;
+  color: var(--la-color-text-primary);
+  margin-top: 0;
+  margin-bottom: var(--la-space-4);
+}
+
+.cta-block-button {
+  display: inline-block;
+}
+
+/* §11.2 Newsletter variant — suppress form's own label
+   When the CTA block contains a newsletter form, the
+   .cta-block-text replaces the form's heading. */
+
+.cta-block[data-cta="newsletter"] .newsletter-form {
+  max-width: 100%;
+}
+
+.cta-block[data-cta="newsletter"] .newsletter-form label {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .cta-block {
+    padding: var(--la-space-5) var(--la-space-4);
+  }
+}
