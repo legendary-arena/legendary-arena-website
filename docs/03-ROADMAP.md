@@ -125,6 +125,7 @@ log).
 | WP-017 | Content pipeline + weeks 1–4 | ✅ Done (2026-05-13) | WP-016 | ~1–2 days |
 | WP-018 | Email engagement workflow (Brevo automation) | ⏸️ Pending | WP-015 | ~half-day |
 | WP-019 | Snipcart shopping cart with Stripe checkout | ✅ Done | — | ~1 day |
+| WP-020 | Newsletter & blog funnel enrichment | ✅ Done (2026-05-13) | WP-016, WP-019 | ~half-day |
 
 **Total realistic effort:** ~9–14 days of focused work.
 
@@ -2741,6 +2742,41 @@ revenue capture without disrupting the static-site architecture.
 - Light + dark mode correct
 - `npm run build` byte-identical across two runs
 - Lighthouse ≥ 90 (Performance, Accessibility, Best Practices, SEO)
+
+---
+
+## WP-020 — Newsletter & blog funnel enrichment ✅
+
+**Status:** ✅ Done (2026-05-13)
+**Depends on:** WP-016 (newsletter template spec), WP-019 (Snipcart — `/shop/` exists)
+**Spec:** [`docs/ai/work-packets/WP-020-funnel-enrichment.md`](ai/work-packets/WP-020-funnel-enrichment.md)
+
+Governance-only WP. Enriches the newsletter template and WP-017
+content pipeline spec with secondary conversion modules (Shop,
+Share/Forward) and a documented funnel hierarchy. No layouts, no
+archetypes, no CSS, no config, no content files.
+
+### Changes
+
+- Newsletter template v1 → v2: fixed §6 CTA options to match archetype
+  contract (play/newsletter/tournament), added §8 Featured from the
+  Shop and §9 Share/Forward secondary modules, formalized 4-link body
+  limit, added UTM tracking contract
+- WP-017 spec amended: funnel hierarchy, blog "Gear up" shop section,
+  newsletter shop + share draft requirements, expanded funnel integrity
+  check with QA log, updated DoD and failure conditions
+
+### Definition of Done
+
+- Newsletter template at v2 with 10-section structure
+- §6 CTA options match archetype contract
+- §8 "Featured from the Shop" with UTM link format
+- §9 "Share / Forward" with canonical blog URL
+- Linking requirements: 4-link body cap documented
+- UTM parameter conventions documented
+- WP-017 amended with funnel hierarchy, blog shop section, newsletter
+  secondary modules, funnel integrity check, scope/DoD/failure updates
+- No infrastructure files modified
 
 ---
 
