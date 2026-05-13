@@ -124,7 +124,7 @@ log).
 | WP-016 | Newsletter & blog templates | ✅ Done (2026-05-12) | WP-015 | ~1 day |
 | WP-017 | Content pipeline + weeks 1–4 | ⏸️ Pending | WP-016 | ~1–2 days |
 | WP-018 | Email engagement workflow (Brevo automation) | ⏸️ Pending | WP-015 | ~half-day |
-| WP-019 | Snipcart shopping cart with Stripe checkout | ⏭️ Up next | — | ~1 day |
+| WP-019 | Snipcart shopping cart with Stripe checkout | ✅ Done | — | ~1 day |
 
 **Total realistic effort:** ~9–14 days of focused work.
 
@@ -2683,9 +2683,9 @@ marketing collateral.
 
 ---
 
-## WP-019 — Snipcart shopping cart with Stripe checkout ⏭️
+## WP-019 — Snipcart shopping cart with Stripe checkout ✅
 
-**Status:** ⏭️ Up next
+**Status:** ✅ Done (2026-05-12)
 **Depends on:** — (no upstream WP dependency; vision doc amendment landed 2026-05-12)
 **Spec:** [`docs/ai/work-packets/WP-019-snipcart-commerce.md`](ai/work-packets/WP-019-snipcart-commerce.md)
 
