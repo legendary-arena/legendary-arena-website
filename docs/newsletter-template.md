@@ -1,7 +1,14 @@
 # Newsletter Email Template Specification
 
-**Status:** v1 (WP-016, 2026-05-12)
-**Last updated:** 2026-05-12
+**Status:** v2 (WP-020, 2026-05-13)
+**Last updated:** 2026-05-13
+
+**Change summary (WP-020):**
+- Removed "Share" as a primary CTA option (§6)
+- Introduced "Featured from the Shop" as secondary module (§8)
+- Introduced "Share / Forward" as secondary module (§9)
+- Formalized CTA hierarchy and 4-link body limit
+- Introduced UTM tracking contract for shop links
 
 > **Authority:** This document defines the structural specification for
 > Legendary Arena's weekly newsletter emails. It is subordinate to
@@ -17,7 +24,7 @@ contract.
 
 ## Email structure
 
-Every newsletter follows this seven-section structure in order:
+Every newsletter follows this ten-section structure in order:
 
 ### 1. Header
 
@@ -52,13 +59,54 @@ front-matter.
 
 Primary action button. One of:
 - **Play** — links to `https://play.legendary-arena.com/`
+- **Newsletter** — drives newsletter signups (subscribe prompt)
 - **Tournament** — links to tournament entry at `play.*`
-- **Share** — social sharing prompt
 
-One CTA per email. Follow the CTA contract in
-`docs/brand/strategy.md §2` (≤ 2 words, single verb).
+One primary CTA per email, matching the blog post's `cta` front-matter
+value. Follow the CTA contract in `docs/brand/strategy.md §2`
+(≤ 2 words, single verb).
 
-### 7. Footer
+### 8. Featured from the Shop (secondary)
+
+A single product spotlight linking to the shop. One product per issue,
+maximum one link. This is a secondary module — it must not compete
+with or visually dominate the primary CTA (§6).
+
+Link format:
+
+    https://www.legendary-arena.com/shop/?utm_source=newsletter&utm_medium=email&utm_campaign=<newsletter_slug>&utm_content=featured-product
+
+Replace `<newsletter_slug>` with the edition's `newsletter_slug` value.
+
+Layout: compact block below the primary CTA. Product name + one-line
+description + link. No images required (keeps email weight low and
+avoids rendering issues in restrictive clients).
+
+**Placement constraint:**
+
+"Featured from the Shop" must always appear:
+- below the primary CTA in the email
+- above the Share/Forward module
+- above the footer
+
+Any deviation is a layout violation.
+
+### 9. Share / Forward (secondary)
+
+A low-friction prompt encouraging recipients to forward the email or
+share the companion blog post. One line, no images.
+
+Suggested copy: "Know someone who'd find this useful? Forward this
+email or share the post: <canonical blog URL>"
+
+The share link points to the companion blog post's canonical URL
+(`/posts/<slug>/`) — not a separate sharing service. Blog posts are
+easier to share than emails and carry the full CTA stack.
+
+This module is consistent across all editions. It appears after the
+Shop module and before the footer.
+
+### 10. Footer
 
 - Unsubscribe link (Brevo-native `{{ unsubscribe }}` placeholder)
 - Social links (when available)
@@ -74,9 +122,57 @@ One CTA per email. Follow the CTA contract in
   (`/posts/<slug>/`) and use the same `newsletter_slug` value as the
   corresponding post's front-matter.
 - The primary **CTA** and **"Read more"** link are the two intentional
-  deep-links per email.
-- Additional links (social, unsubscribe) belong in the footer only.
+  deep-links in the email body.
+- Secondary modules add exactly two more links: one Shop link (§8)
+  and one share/blog link (§9).
+- Maximum deep-links per email body: 4 (Read more + CTA + Shop +
+  Share). No additional promotional links in the body.
+- Footer links (social, unsubscribe) are not counted toward this limit.
 - All links MUST point to production URLs, never preview/localhost.
+
+**Hidden CTA prohibition:**
+
+No additional promotional links may appear:
+- inside paragraph text
+- inside image links
+- inside headings
+
+Only the defined 4 links (Read more, CTA, Shop, Share) are allowed
+in the email body. Any link beyond these four is a contract violation.
+
+## UTM parameter conventions
+
+All links to `/shop/` in newsletters and blog posts must include UTM
+parameters for attribution tracking.
+
+**Newsletter shop link:**
+
+    https://www.legendary-arena.com/shop/?utm_source=newsletter&utm_medium=email&utm_campaign=<newsletter_slug>&utm_content=featured-product
+
+**Blog post shop link:**
+
+    /shop/?utm_source=blog&utm_medium=post&utm_campaign=<newsletter_slug>&utm_content=featured-product
+
+Parameter definitions:
+- `utm_source` — origin surface: `newsletter` or `blog`
+- `utm_medium` — delivery channel: `email` or `post`
+- `utm_campaign` — edition identifier: the `newsletter_slug` value
+- `utm_content` — link purpose: `featured-product` (fixed)
+
+**Slug coupling invariant:**
+
+`newsletter_slug`, blog post slug, and UTM `utm_campaign` value
+must be identical strings. Any mismatch is a hard failure condition.
+
+**UTM determinism invariant:**
+
+All UTM parameters must be:
+- Lowercase only
+- Static keys (`utm_source`, `utm_medium`, `utm_campaign`, `utm_content`)
+- No additional query parameters allowed on shop links
+- No variation in parameter names or ordering
+
+Any deviation is a tracking failure.
 
 ## Image requirements
 
