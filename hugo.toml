@@ -11,6 +11,7 @@ enableRobotsTXT = true
 
 [params]
   env = "production"
+  snipcartApiKey = "MGJjY2E4MGEtYjI4Ni00YmNkLThmOGItYmJiMzNiNGY3N2VkNjM5MTQyMzYwMzA0NTM3MjE4"
   description = "Legendary Arena is a skill-first, web-based deck-building system. Assemble your heroes, face the scenario, and earn your standing."
   author = "Jeffery Jensen"
   defaultTheme = "auto"            # respects user's system light/dark preference
@@ -100,6 +101,12 @@ enableRobotsTXT = true
   weight = 20
 
 [[menu.main]]
+  identifier = "shop"
+  name = "Shop"
+  url = "/shop/"
+  weight = 25
+
+[[menu.main]]
   identifier = "brand"
   name = "Brand"
   url = "/brand/"
@@ -119,6 +126,12 @@ enableRobotsTXT = true
   name = "Blog"
   url = "/posts/"
   weight = 20
+
+[[menu.footer]]
+  identifier = "footer-shop"
+  name = "Shop"
+  url = "/shop/"
+  weight = 22
 
 [[menu.footer]]
   identifier = "footer-brand"

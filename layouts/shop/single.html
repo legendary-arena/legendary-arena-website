@@ -1,0 +1,30 @@
+{{- define "main" }}
+<article class="product-detail">
+    <div class="product-detail-layout">
+        {{- with .Params.image }}
+        <div class="product-detail-image">
+            <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy">
+        </div>
+        {{- end }}
+        <div class="product-detail-info">
+            <h1>{{ .Title }}</h1>
+            <p class="product-detail-price">${{ printf "%.2f" .Params.price }}</p>
+            <div class="product-detail-body">
+                {{ .Content }}
+            </div>
+            <button
+                class="snipcart-add-item button"
+                data-item-id="{{ with .Params.sku }}{{ . }}{{ else }}{{ .File.Path }}{{ end }}"
+                data-item-name="{{ .Title }}"
+                data-item-price="{{ .Params.price }}"
+                data-item-url="{{ .Permalink }}"
+                data-item-description="{{ with .Description }}{{ . }}{{ else }}{{ .Params.description }}{{ end }}"
+                {{- with .Params.image }}
+                data-item-image="{{ . }}"
+                {{- end }}>
+                Add to cart
+            </button>
+        </div>
+    </div>
+</article>
+{{- end }}

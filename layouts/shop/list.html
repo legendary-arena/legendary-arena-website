@@ -1,0 +1,38 @@
+{{- define "main" }}
+<header class="page-header">
+    <h1>{{ .Title | default "Shop" }}</h1>
+    {{- with .Description }}
+    <p class="page-description">{{ . }}</p>
+    {{- end }}
+</header>
+
+<div class="product-grid">
+    {{- range where .Pages "Params.draft" "ne" true }}
+    {{- $product := . }}
+    <article class="product-card">
+        {{- with .Params.image }}
+        <a href="{{ $product.RelPermalink }}">
+            <img src="{{ . }}" alt="{{ $product.Title }}" class="product-card-image" loading="lazy">
+        </a>
+        {{- end }}
+        <div class="product-card-body">
+            <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+            <p class="product-card-price">${{ printf "%.2f" .Params.price }}</p>
+            <p class="product-card-desc">{{ with .Description }}{{ . }}{{ else }}{{ .Params.description }}{{ end }}</p>
+            <button
+                class="snipcart-add-item button"
+                data-item-id="{{ with .Params.sku }}{{ . }}{{ else }}{{ .File.Path }}{{ end }}"
+                data-item-name="{{ .Title }}"
+                data-item-price="{{ .Params.price }}"
+                data-item-url="{{ .Permalink }}"
+                data-item-description="{{ with .Description }}{{ . }}{{ else }}{{ .Params.description }}{{ end }}"
+                {{- with .Params.image }}
+                data-item-image="{{ . }}"
+                {{- end }}>
+                Add to cart
+            </button>
+        </div>
+    </article>
+    {{- end }}
+</div>
+{{- end }}

@@ -1,2 +1,9 @@
 {{ $newsletter := resources.Get "js/newsletter.js" | minify | fingerprint }}
 <script src="{{ $newsletter.RelPermalink }}" defer></script>
+
+{{- /* Snipcart cart container + SDK (WP-019).
+       The hidden div is Snipcart's mount point — it injects the
+       cart UI here. data-api-key is the PUBLIC key (not a secret).
+       Snipcart docs: https://docs.snipcart.com/v3/setup/installation */ -}}
+<div hidden id="snipcart" data-api-key="{{ site.Params.snipcartApiKey }}"></div>
+<script async src="https://cdn.snipcart.com/themes/v3.7.1/default/snipcart.js"></script>
