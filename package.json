@@ -3,9 +3,11 @@
   "private": true,
   "description": "Marketing site source for www.legendary-arena.com (Hugo + Pagefind).",
   "scripts": {
-    "build": "hugo --minify && npx pagefind --site public"
+    "build": "hugo --minify && npx pagefind --site public",
+    "test": "vitest run"
   },
   "devDependencies": {
-    "pagefind": "1.5.2"
+    "pagefind": "1.5.2",
+    "vitest": "3.2.1"
   }
 }

@@ -61,6 +61,9 @@ WP-001 → WP-002 → WP-003 → WP-004 → WP-005 → WP-006 ┬→ WP-007a ─
                                                     └→ WP-011    │
                                                                  │
                                                     (WP-008 + WP-011 do not feed WP-009)
+
+WP-015 → WP-016 → WP-017
+WP-015 → WP-018 (parallel with WP-016/017)
 ```
 
 WP-007a, WP-007b, WP-008, WP-010, and WP-011 can run in parallel
@@ -77,6 +80,13 @@ prophylactic (eliminates a class of font-swap CLS regression) and
 doesn't unblock specific downstream WPs; it's recommended before
 WP-008 or any future text-rendering UI work so the Lighthouse
 pre-baseline becomes load-bearing rather than brittle.
+
+WP-016 (templates) depends on WP-015 (newsletter infrastructure).
+WP-017 (content pipeline) depends on WP-016 (templates must exist
+before content is produced against them). WP-018 (Brevo automation)
+depends on WP-015 only and can run in parallel with WP-016/017 —
+it configures the Brevo-side engagement workflow, not the Hugo
+content layer.
 
 ---
 
@@ -100,8 +110,11 @@ pre-baseline becomes load-bearing rather than brittle.
 | WP-013 | Marketing-repo hygiene follow-up — .gitignore + 01.8 cross-refs (no section body; see commit history) | ✅ Done (2026-05-11) | — | ~15 min |
 | WP-014 | Public `/brand/` page + mood-board brief | ✅ Done (2026-05-12) | WP-007b, WP-010 | ~half-day |
 | WP-015 | Newsletter signup with Brevo | ✅ Done (2026-05-12) | WP-004, WP-010 | ~half-day |
+| WP-016 | Newsletter & blog templates | ✅ Done (2026-05-12) | WP-015 | ~1 day |
+| WP-017 | Content pipeline + weeks 1–4 | ⏸️ Pending | WP-016 | ~1–2 days |
+| WP-018 | Email engagement workflow (Brevo automation) | ⏸️ Pending | WP-015 | ~half-day |
 
-**Total realistic effort:** ~7–10 days of focused work.
+**Total realistic effort:** ~9–14 days of focused work.
 
 ---
 
@@ -2537,6 +2550,127 @@ WP-010 (footer partial override)
 
 ---
 
+## WP-016 — Newsletter & blog templates ✅
+
+**Status:** Done (2026-05-12)
+**Depends on:** WP-015 (newsletter form + CF Function)
+**Spec:** [`docs/ai/work-packets/WP-016-newsletter-blog-templates.md`](ai/work-packets/WP-016-newsletter-blog-templates.md)
+
+### Goal
+
+Establish reusable system primitives for the newsletter + blog content
+pipeline: blog section scaffolding (Hugo list/single/RSS), Brevo email
+template, extended blog archetype, CTA block partial, and internal linking
+conventions. Also introduces a test runner and subscribe function tests
+(gap from WP-015).
+
+### Key deliverables
+
+- Blog section: list page, single page layout, RSS feed
+- Extended `archetypes/posts.md` with newsletter-aligned frontmatter
+- Brevo email template (HTML structure spec)
+- CTA block partial (`layouts/_partials/cta-block.html`)
+- Internal linking conventions documented
+- Subscribe function unit tests (vitest)
+
+### Definition of Done
+
+- [x] Blog list page renders at `/posts/`
+- [x] Blog single page renders with CTA block
+- [x] RSS feed includes posts with title/description/permalink
+- [x] CTA partial renders all three variants (play, newsletter, tournament)
+- [x] `archetypes/posts.md` includes series, cta, newsletter_week, newsletter_slug
+- [x] Subscribe function tests pass (12 tests)
+- [x] `npm run build` deterministic (two runs, byte-identical)
+- [x] Newsletter template spec documented (`docs/newsletter-template.md`)
+- [x] Internal linking + image conventions added to `04-CONTENT-CONVENTIONS.md`
+- [x] CTA block CSS uses `var(--la-*)` tokens only — no raw hex
+- [x] Pagefind indexes blog content
+
+---
+
+## WP-017 — Content pipeline + weeks 1–4 ⏸️
+
+**Status:** Pending
+**Depends on:** WP-016 (templates must exist first)
+
+### Goal
+
+Define the topic taxonomy, production workflow, and cadence for the
+newsletter + blog pipeline. Produce weeks 1–4 as proof the pipeline
+works. Weeks 5+ are follow-on WPs.
+
+### Key deliverables
+
+- Topic taxonomy (12-week framework, batched: foundations → mid-game →
+  advanced intro)
+- Production workflow checklist (generate → review → cross-link → preview
+  → publish)
+- 4 blog posts (`content/blog/week-01.md` … `week-04.md`)
+- 4 corresponding newsletter editions (Brevo campaigns or markdown export)
+- Internal cross-links validated
+- CTA alignment per week
+
+### Definition of Done
+
+- 4 blog posts live at `/blog/week-NN/`
+- 4 newsletter editions drafted and preview-tested in Brevo
+- Cross-links between blog ↔ newsletter verified
+- Each post uses the WP-016 archetype and CTA partial
+- Topic taxonomy documented for weeks 5–12
+
+---
+
+## WP-018 — Email engagement workflow (Brevo automation) ⏸️
+
+**Status:** Pending
+**Depends on:** WP-015 (newsletter infrastructure)
+
+### Goal
+
+Configure the Brevo-side automation workflow and document the full
+visitor engagement pipeline: signup → confirm → welcome → weekly
+cadence → play.* conversion. This is system architecture, not
+marketing collateral.
+
+### Key deliverables
+
+- Brevo automation workflow configured:
+  - Trigger: contact added to list
+  - Welcome email (immediate)
+  - Weekly cadence (broadcast or automated segment)
+- Funnel stage definitions with metrics:
+  - Capture (signup form → conversion rate)
+  - Confirm (double opt-in → confirmation rate)
+  - Activate (welcome email → open rate)
+  - Engage (weekly newsletter → click-through rate)
+  - Convert (CTA → play.* → conversion rate)
+  - Retain (continued engagement → churn rate)
+- Conversion design rules documented (1 CTA per email, CTA matches
+  content theme, blog = deep value, email = hook + action)
+- Compliance confirmation (double opt-in: WP-015 prerequisite,
+  unsubscribe: Brevo-native)
+
+### Prerequisites (manual — not automatable)
+
+1. **Brevo domain authentication** — configure SPF, DKIM, and DMARC
+   for `legendary-arena.com` in Brevo > Settings > Senders & IPs >
+   Domains. This is a one-time setup that ensures deliverability
+   and inbox placement.
+
+### Definition of Done
+
+- Brevo domain authentication (SPF/DKIM/DMARC) verified
+- Brevo automation workflow active and tested with a test contact
+- Funnel architecture documented in `docs/`
+- Welcome email sends on new contact signup
+- Welcome email passes WP-016 pre-send QA checklist
+  (`docs/newsletter-template.md`)
+- Weekly cadence configured (ready for WP-017 content)
+- Conversion design rules documented
+
+---
+
 ## Beyond the current WPs — future work without WPs yet
 
 Future work without WPs yet:
@@ -2573,8 +2707,8 @@ Future work without WPs yet:
   Independent Saturday effort.
 - **Analytics** — Cloudflare Web Analytics, Plausible, or none. Decide
   post-launch.
-- **Additional content** — beyond the first three pages, content cadence
-  is "as inspired."
+- **Additional content (weeks 5+)** — beyond WP-017's weeks 1–4, content
+  cadence batches as follow-on WPs (4 weeks per batch).
 - **Comments on blog** — explicitly out-of-scope per vision.md; revisit
   if there's appetite.
 - **Brand tokens v2** — only if v1 proves limiting. Major version bump
