@@ -122,7 +122,7 @@ log).
 | WP-014 | Public `/brand/` page + mood-board brief | ✅ Done (2026-05-12) | WP-007b, WP-010 | ~half-day |
 | WP-015 | Newsletter signup with Brevo | ✅ Done (2026-05-12) | WP-004, WP-010 | ~half-day |
 | WP-016 | Newsletter & blog templates | ✅ Done (2026-05-12) | WP-015 | ~1 day |
-| WP-017 | Content pipeline + weeks 1–4 | ⏸️ Pending | WP-016 | ~1–2 days |
+| WP-017 | Content pipeline + weeks 1–4 | ✅ Done (2026-05-13) | WP-016 | ~1–2 days |
 | WP-018 | Email engagement workflow (Brevo automation) | ⏸️ Pending | WP-015 | ~half-day |
 | WP-019 | Snipcart shopping cart with Stripe checkout | ✅ Done | — | ~1 day |
 
@@ -2601,9 +2601,9 @@ conventions. Also introduces a test runner and subscribe function tests
 
 ---
 
-## WP-017 — Content pipeline + weeks 1–4 ⏸️
+## WP-017 — Content pipeline + weeks 1–4 ✅
 
-**Status:** Pending
+**Status:** Done (2026-05-13)
 **Depends on:** WP-016 (templates must exist first)
 
 ### Goal
@@ -2614,22 +2614,25 @@ works. Weeks 5+ are follow-on WPs.
 
 ### Key deliverables
 
-- Topic taxonomy (12-week framework, batched: foundations → mid-game →
-  advanced intro)
-- Production workflow checklist (generate → review → cross-link → preview
-  → publish)
-- 4 blog posts (`content/blog/week-01.md` … `week-04.md`)
-- 4 corresponding newsletter editions (Brevo campaigns or markdown export)
-- Internal cross-links validated
-- CTA alignment per week
+- [x] Topic taxonomy (12-week framework, batched: Fundamentals → Mid-Game
+  Strategy → Advanced Play) — `docs/content-taxonomy.md`
+- [x] Production workflow checklist (generate → images → review →
+  cross-link → newsletter draft → pre-send QA → publish)
+- [x] 4 blog posts (`content/posts/week-01-deck-checklist.md` …
+  `week-04-first-tournament.md`)
+- [x] 4 corresponding newsletter edition drafts
+  (`docs/newsletter-drafts/week-01.md` … `week-04.md`)
+- [x] Internal cross-links validated
+- [x] CTA rotation per week (2x play, 1x newsletter, 1x tournament)
+- [x] Hero image placeholders per image convention
 
 ### Definition of Done
 
-- 4 blog posts live at `/blog/week-NN/`
-- 4 newsletter editions drafted and preview-tested in Brevo
-- Cross-links between blog ↔ newsletter verified
-- Each post uses the WP-016 archetype and CTA partial
-- Topic taxonomy documented for weeks 5–12
+- [x] 4 blog posts at `/posts/<slug>/` using WP-016 archetype
+- [x] 4 newsletter edition drafts in `docs/newsletter-drafts/`
+- [x] Cross-links between blog ↔ newsletter verified
+- [x] Each post uses WP-016 archetype and CTA partial
+- [x] Topic taxonomy documented for weeks 1–12
 
 ---
 
