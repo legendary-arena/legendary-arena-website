@@ -64,6 +64,8 @@ WP-001 → WP-002 → WP-003 → WP-004 → WP-005 → WP-006 ┬→ WP-007a ─
 
 WP-015 → WP-016 → WP-017
 WP-015 → WP-018 (parallel with WP-016/017)
+WP-016 + WP-019 → WP-020 (amends WP-017 spec + newsletter template)
+WP-018 + WP-020 → WP-021 (funnel analytics baseline)
 
 WP-019 (standalone — no upstream WP dependency)
 ```
@@ -99,6 +101,14 @@ paths with either. The vision doc amendment for the e-commerce
 scope expansion landed 2026-05-12 (see `01-VISION.md` Decisions
 log).
 
+WP-020 (funnel enrichment) depends on WP-016 (newsletter template
+spec to amend) and WP-019 (Snipcart `/shop/` as the UTM link
+destination). It is governance-only — modifies `docs/**` files, no
+site-affecting paths. It amends the WP-017 spec and newsletter
+template so that content produced under WP-017 picks up the new
+funnel requirements (shop module, share module, CTA hierarchy,
+funnel integrity check) without retrofit.
+
 ---
 
 ## Summary
@@ -123,9 +133,10 @@ log).
 | WP-015 | Newsletter signup with Brevo | ✅ Done (2026-05-12) | WP-004, WP-010 | ~half-day |
 | WP-016 | Newsletter & blog templates | ✅ Done (2026-05-12) | WP-015 | ~1 day |
 | WP-017 | Content pipeline + weeks 1–4 | ✅ Done (2026-05-13) | WP-016 | ~1–2 days |
-| WP-018 | Email engagement workflow (Brevo automation) | ⏸️ Pending | WP-015 | ~half-day |
+| WP-018 | Email engagement workflow (Brevo automation) | ✅ Done (2026-05-13) | WP-015 | ~half-day |
 | WP-019 | Snipcart shopping cart with Stripe checkout | ✅ Done | — | ~1 day |
 | WP-020 | Newsletter & blog funnel enrichment | ✅ Done (2026-05-13) | WP-016, WP-019 | ~half-day |
+| WP-021 | Funnel analytics baseline | ⏸️ Pending | WP-018, WP-020 | ~1 hour |
 
 **Total realistic effort:** ~9–14 days of focused work.
 
@@ -2637,9 +2648,9 @@ works. Weeks 5+ are follow-on WPs.
 
 ---
 
-## WP-018 — Email engagement workflow (Brevo automation) ⏸️
+## WP-018 — Email engagement workflow (Brevo automation) ✅
 
-**Status:** Pending
+**Status:** Done (2026-05-13)
 **Depends on:** WP-015 (newsletter infrastructure)
 
 ### Goal
@@ -2776,6 +2787,46 @@ archetypes, no CSS, no config, no content files.
 - UTM parameter conventions documented
 - WP-017 amended with funnel hierarchy, blog shop section, newsletter
   secondary modules, funnel integrity check, scope/DoD/failure updates
+- No infrastructure files modified
+
+---
+
+## WP-021 — Funnel analytics baseline ⏸️
+
+**Status:** ⏸️ Pending
+**Depends on:** WP-018 (email pipeline + `docs/email-automation.md`), WP-020 (UTM conventions)
+**Spec:** [`docs/ai/work-packets/WP-021-funnel-analytics-baseline.md`](ai/work-packets/WP-021-funnel-analytics-baseline.md)
+
+Governance-only WP. Defines the measurement contract for the email
+funnel: which metrics are tracked, how they are calculated, baseline
+thresholds for detecting failure, and a per-send reporting artifact.
+All metrics are Brevo-native — site-side conversion tracking is
+deferred to a future analytics platform WP.
+
+### Scope
+
+- MODIFY `docs/email-automation.md` — add funnel measurement
+  contract, metric definitions, baseline thresholds, UTM attribution
+  validation, reporting cadence, analytics failure conditions, and
+  analytics invariants
+- NEW `docs/email-metrics-log.md` — append-only per-send metrics log
+
+### Not in scope
+
+- No analytics platform selection (deferred — roadmap "Beyond" item)
+- No site-side conversion tracking
+- No Brevo configuration changes
+- No Hugo site file changes
+
+### Definition of Done
+
+- Funnel measurement contract with all six stages defined
+- Metric formulas using Brevo-reported values only
+- Conversion rate marked as not yet measurable
+- Baseline thresholds for failure detection
+- Append-only metrics log with per-send template
+- UTM validation procedure referencing WP-020
+- Analytics invariants and failure conditions documented
 - No infrastructure files modified
 
 ---
