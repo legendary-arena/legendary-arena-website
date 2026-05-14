@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="1210" viewBox="0 0 720 1210" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <title>Legendary Arena — YouTube Graphics Size Reference</title>
+  <desc>Visual reference for YouTube image dimensions: profile, banner, thumbnail, watermark, shorts, community posts, and end screens. All rectangles maintain correct aspect ratios.</desc>
+
+  <defs>
+    <pattern id="yt-safe-hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#d4af37" stroke-width="0.5" stroke-opacity="0.25"/>
+    </pattern>
+  </defs>
+
+  <rect width="720" height="1210" fill="#0b0f19"/>
+
+  <!-- Title -->
+  <text x="360" y="36" font-size="20" font-weight="700" fill="#f5f7fb" text-anchor="middle">YouTube Graphics — Size Reference</text>
+  <text x="360" y="56" font-size="12" fill="#a7b0c5" text-anchor="middle">Legendary Arena · All rectangles drawn at correct aspect ratios</text>
+
+  <!-- ================================================================= -->
+  <!-- SECTION 1: CHANNEL IDENTITY -->
+  <!-- ================================================================= -->
+  <rect x="16" y="72" width="688" height="22" rx="4" fill="#d4af37" opacity="0.15"/>
+  <rect x="16" y="72" width="688" height="22" rx="4" fill="none" stroke="#d4af37" stroke-width="0.8" opacity="0.5"/>
+  <text x="360" y="87" font-size="11" font-weight="700" fill="#d4af37" text-anchor="middle" letter-spacing="2">CHANNEL IDENTITY — REQUIRED AT LAUNCH</text>
+
+  <!-- Profile Picture -->
+  <g transform="translate(30, 110)">
+    <text x="50" y="0" font-size="13" font-weight="600" fill="#f5f7fb" text-anchor="middle">Profile Picture</text>
+    <rect x="0" y="12" width="100" height="100" rx="4" fill="#1a2035" stroke="#3a4565" stroke-width="1"/>
+    <circle cx="50" cy="62" r="48" fill="none" stroke="#d4af37" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <line x1="50" y1="52" x2="50" y2="72" stroke="#d4af37" stroke-width="0.5" opacity="0.5"/>
+    <line x1="40" y1="62" x2="60" y2="62" stroke="#d4af37" stroke-width="0.5" opacity="0.5"/>
+    <text x="50" y="66" font-size="9" fill="#6e7893" text-anchor="middle">LOGO</text>
+    <!-- Corner crop indicators -->
+    <path d="M4,16 L4,28" stroke="#7a1d1f" stroke-width="1.5" opacity="0.6"/>
+    <path d="M0,20 L8,20" stroke="#7a1d1f" stroke-width="1.5" opacity="0.6"/>
+    <path d="M96,16 L96,28" stroke="#7a1d1f" stroke-width="1.5" opacity="0.6"/>
+    <path d="M92,20 L100,20" stroke="#7a1d1f" stroke-width="1.5" opacity="0.6"/>
+    <path d="M4,96 L4,108" stroke="#7a1d1f" stroke-width="1.5" opacity="0.6"/>
+    <path d="M0,104 L8,104" stroke="#7a1d1f" stroke-width="1.5" opacity="0.6"/>
+    <path d="M96,96 L96,108" stroke="#7a1d1f" stroke-width="1.5" opacity="0.6"/>
+    <path d="M92,104 L100,104" stroke="#7a1d1f" stroke-width="1.5" opacity="0.6"/>
+
+    <text x="50" y="130" font-size="12" font-weight="600" fill="#d4af37" text-anchor="middle" font-family="ui-monospace, Consolas, monospace">800 × 800 px</text>
+    <text x="50" y="144" font-size="10" fill="#a7b0c5" text-anchor="middle">1:1 (displays as circle)</text>
+    <text x="50" y="158" font-size="10" fill="#6e7893" text-anchor="middle">~98 × 98 in UI</text>
+    <text x="50" y="172" font-size="10" fill="#6e7893" text-anchor="middle">PNG preferred</text>
+  </g>
+
+  <!-- Channel Banner -->
+  <g transform="translate(170, 110)">
+    <text x="260" y="0" font-size="13" font-weight="600" fill="#f5f7fb" text-anchor="middle">Channel Banner</text>
+    <!-- Full upload area 2560:1440 = 16:9 → at 520 wide = 520 × 293 -->
+    <rect x="0" y="12" width="520" height="293" rx="4" fill="#1a2035" stroke="#3a4565" stroke-width="1"/>
+
+    <!-- Safe zone: 1546 × 423 → scaled 302 × 86, centered -->
+    <rect x="109" y="116" width="302" height="86" rx="2" fill="url(#yt-safe-hatch)"/>
+    <rect x="109" y="116" width="302" height="86" rx="2" fill="none" stroke="#d4af37" stroke-width="1" stroke-dasharray="4,3"/>
+
+    <!-- Safe zone label -->
+    <text x="260" y="155" font-size="10" font-weight="600" fill="#d4af37" text-anchor="middle" letter-spacing="1">SAFE ZONE</text>
+    <text x="260" y="169" font-size="9" fill="#a7b0c5" text-anchor="middle">1546 × 423 px center</text>
+
+    <!-- Content guidance -->
+    <text x="260" y="188" font-size="10" fill="#6e7893" text-anchor="middle">Logo + tagline + hero art</text>
+
+    <!-- Crop warning zones -->
+    <text x="48" y="159" font-size="8" fill="#7a1d1f" text-anchor="middle" transform="rotate(-90, 48, 159)">CROPS ON ALL</text>
+    <text x="472" y="159" font-size="8" fill="#7a1d1f" text-anchor="middle" transform="rotate(90, 472, 159)">CROPS ON ALL</text>
+
+    <!-- Top/bottom crop labels -->
+    <text x="260" y="58" font-size="8" fill="#7a1d1f" text-anchor="middle">TV ONLY — cropped on desktop + mobile</text>
+    <text x="260" y="278" font-size="8" fill="#7a1d1f" text-anchor="middle">TV ONLY — cropped on desktop + mobile</text>
+
+    <!-- Dimension lines -->
+    <line x1="0" y1="315" x2="520" y2="315" stroke="#6e7893" stroke-width="0.5"/>
+    <line x1="0" y1="311" x2="0" y2="319" stroke="#6e7893" stroke-width="0.5"/>
+    <line x1="520" y1="311" x2="520" y2="319" stroke="#6e7893" stroke-width="0.5"/>
+
+    <!-- Specs -->
+    <text x="260" y="333" font-size="12" font-weight="600" fill="#d4af37" text-anchor="middle" font-family="ui-monospace, Consolas, monospace">2560 × 1440 px</text>
+    <text x="260" y="347" font-size="10" fill="#a7b0c5" text-anchor="middle">16:9 · TV: full canvas · Desktop: center strip · Mobile: safe zone only</text>
+    <text x="260" y="361" font-size="10" fill="#6e7893" text-anchor="middle">JPG for photos · PNG if text-heavy · max 6 MB</text>
+  </g>
+
+  <!-- ================================================================= -->
+  <!-- SECTION 2: VIDEO CONTENT -->
+  <!-- ================================================================= -->
+  <rect x="16" y="490" width="688" height="22" rx="4" fill="#d4af37" opacity="0.15"/>
+  <rect x="16" y="490" width="688" height="22" rx="4" fill="none" stroke="#d4af37" stroke-width="0.8" opacity="0.5"/>
+  <text x="360" y="505" font-size="11" font-weight="700" fill="#d4af37" text-anchor="middle" letter-spacing="2">VIDEO CONTENT — THUMBNAILS + BRANDING</text>
+
+  <!-- Thumbnail -->
+  <g transform="translate(30, 528)">
+    <text x="150" y="0" font-size="13" font-weight="600" fill="#f5f7fb" text-anchor="middle">Video Thumbnail</text>
+    <!-- 1280:720 = 16:9 → at 300 wide = 300 × 169 -->
+    <rect x="0" y="12" width="300" height="169" rx="4" fill="#1a2035" stroke="#d4af37" stroke-width="1.5"/>
+
+    <!-- Timestamp overlay zone (bottom-right) -->
+    <rect x="238" y="155" width="58" height="22" rx="3" fill="#7a1d1f" opacity="0.35"/>
+    <text x="267" y="170" font-size="8" fill="#7a1d1f" text-anchor="middle">12:34</text>
+
+    <!-- Content guidance -->
+    <text x="150" y="75" font-size="10" font-weight="600" fill="#d4af37" text-anchor="middle">HIGHEST-ROI YOUTUBE ASSET</text>
+    <text x="150" y="92" font-size="9" fill="#6e7893" text-anchor="middle">Bold visuals, minimal text</text>
+    <text x="150" y="105" font-size="9" fill="#6e7893" text-anchor="middle">Keep key content in center 80%</text>
+    <text x="150" y="118" font-size="9" fill="#6e7893" text-anchor="middle">Avoid bottom-right (timestamp)</text>
+
+    <!-- Specs -->
+    <text x="150" y="200" font-size="12" font-weight="600" fill="#d4af37" text-anchor="middle" font-family="ui-monospace, Consolas, monospace">1280 × 720 px</text>
+    <text x="150" y="214" font-size="10" fill="#a7b0c5" text-anchor="middle">16:9 · min 640 wide · max 2 MB</text>
+    <text x="150" y="228" font-size="10" fill="#6e7893" text-anchor="middle">JPG or PNG</text>
+  </g>
+
+  <!-- Branding Watermark -->
+  <g transform="translate(440, 528)">
+    <text x="75" y="0" font-size="13" font-weight="600" fill="#f5f7fb" text-anchor="middle">Watermark</text>
+    <rect x="0" y="12" width="150" height="150" rx="4" fill="#1a2035" stroke="#3a4565" stroke-width="1"/>
+
+    <!-- Inner watermark area -->
+    <rect x="45" y="42" width="60" height="60" rx="2" fill="none" stroke="#d4af37" stroke-width="1" stroke-dasharray="3,2"/>
+    <text x="75" y="76" font-size="9" fill="#d4af37" text-anchor="middle">LOGO</text>
+
+    <!-- Subscribe button mockup -->
+    <rect x="30" y="120" width="90" height="18" rx="9" fill="#7a1d1f" opacity="0.3"/>
+    <text x="75" y="133" font-size="8" fill="#a7b0c5" text-anchor="middle">SUBSCRIBE</text>
+
+    <!-- Placement note -->
+    <text x="75" y="182" font-size="9" fill="#6e7893" text-anchor="middle">Bottom-right · clickable</text>
+    <text x="75" y="195" font-size="9" fill="#6e7893" text-anchor="middle">YouTube-controlled position</text>
+
+    <!-- Specs -->
+    <text x="75" y="214" font-size="12" font-weight="600" fill="#d4af37" text-anchor="middle" font-family="ui-monospace, Consolas, monospace">150 × 150 px</text>
+    <text x="75" y="228" font-size="10" fill="#a7b0c5" text-anchor="middle">1:1 · transparent PNG · ≤ 1 MB</text>
+  </g>
+
+  <!-- ================================================================= -->
+  <!-- SECTION 3: VERTICAL + COMMUNITY -->
+  <!-- ================================================================= -->
+  <rect x="16" y="775" width="688" height="22" rx="4" fill="#d4af37" opacity="0.15"/>
+  <rect x="16" y="775" width="688" height="22" rx="4" fill="none" stroke="#d4af37" stroke-width="0.8" opacity="0.5"/>
+  <text x="360" y="790" font-size="11" font-weight="700" fill="#d4af37" text-anchor="middle" letter-spacing="2">VERTICAL + COMMUNITY — SHORTS, POSTS, END SCREENS</text>
+
+  <!-- Shorts -->
+  <g transform="translate(30, 813)">
+    <text x="42" y="0" font-size="13" font-weight="600" fill="#f5f7fb" text-anchor="middle">Shorts</text>
+    <!-- 1080:1920 = 9:16 → at 84 wide = 84 × 150 -->
+    <rect x="0" y="12" width="84" height="150" rx="4" fill="#1a2035" stroke="#3a4565" stroke-width="1"/>
+    <!-- Top/bottom UI overlay zones -->
+    <rect x="1" y="13" width="82" height="20" rx="2" fill="#7a1d1f" opacity="0.25"/>
+    <rect x="1" y="141" width="82" height="20" rx="2" fill="#7a1d1f" opacity="0.25"/>
+    <text x="42" y="27" font-size="7" fill="#7a1d1f" text-anchor="middle">UI OVERLAY</text>
+    <text x="42" y="155" font-size="7" fill="#7a1d1f" text-anchor="middle">UI OVERLAY</text>
+    <text x="42" y="85" font-size="9" fill="#6e7893" text-anchor="middle">Full screen</text>
+    <text x="42" y="97" font-size="9" fill="#6e7893" text-anchor="middle">vertical</text>
+
+    <text x="42" y="182" font-size="12" font-weight="600" fill="#d4af37" text-anchor="middle" font-family="ui-monospace, Consolas, monospace">1080 × 1920</text>
+    <text x="42" y="196" font-size="10" fill="#a7b0c5" text-anchor="middle">9:16</text>
+  </g>
+
+  <!-- Community Post -->
+  <g transform="translate(180, 813)">
+    <text x="60" y="0" font-size="13" font-weight="600" fill="#f5f7fb" text-anchor="middle">Community Post</text>
+    <rect x="0" y="12" width="120" height="120" rx="4" fill="#1a2035" stroke="#3a4565" stroke-width="1"/>
+    <text x="60" y="68" font-size="9" fill="#6e7893" text-anchor="middle">Polls, updates</text>
+    <text x="60" y="80" font-size="9" fill="#6e7893" text-anchor="middle">Announcements</text>
+
+    <text x="60" y="152" font-size="12" font-weight="600" fill="#d4af37" text-anchor="middle" font-family="ui-monospace, Consolas, monospace">1080 × 1080</text>
+    <text x="60" y="166" font-size="10" fill="#a7b0c5" text-anchor="middle">1:1 · Square</text>
+  </g>
+
+  <!-- End Screen -->
+  <g transform="translate(400, 813)">
+    <text x="110" y="0" font-size="13" font-weight="600" fill="#f5f7fb" text-anchor="middle">End Screen</text>
+    <!-- 1280:720 = 16:9 → at 220 wide = 220 × 124 -->
+    <rect x="0" y="12" width="220" height="124" rx="4" fill="#1a2035" stroke="#3a4565" stroke-width="1"/>
+
+    <!-- Clickable element zones -->
+    <rect x="12" y="50" width="56" height="32" rx="3" fill="none" stroke="#d4af37" stroke-width="0.8" stroke-dasharray="3,2"/>
+    <text x="40" y="70" font-size="7" fill="#d4af37" text-anchor="middle">VIDEO</text>
+
+    <rect x="152" y="50" width="56" height="32" rx="3" fill="none" stroke="#d4af37" stroke-width="0.8" stroke-dasharray="3,2"/>
+    <text x="180" y="70" font-size="7" fill="#d4af37" text-anchor="middle">SUBSCRIBE</text>
+
+    <text x="110" y="108" font-size="9" fill="#6e7893" text-anchor="middle">Leave space for clickable elements</text>
+
+    <text x="110" y="156" font-size="12" font-weight="600" fill="#d4af37" text-anchor="middle" font-family="ui-monospace, Consolas, monospace">1280 × 720</text>
+    <text x="110" y="170" font-size="10" fill="#a7b0c5" text-anchor="middle">16:9 · Last 5–20 seconds of video</text>
+  </g>
+
+  <!-- ================================================================= -->
+  <!-- SECTION 4: QUICK REFERENCE TABLE -->
+  <!-- ================================================================= -->
+  <rect x="16" y="1028" width="688" height="22" rx="4" fill="#d4af37" opacity="0.15"/>
+  <rect x="16" y="1028" width="688" height="22" rx="4" fill="none" stroke="#d4af37" stroke-width="0.8" opacity="0.5"/>
+  <text x="360" y="1043" font-size="11" font-weight="700" fill="#d4af37" text-anchor="middle" letter-spacing="2">QUICK REFERENCE — ALL SIZES</text>
+
+  <!-- Table header -->
+  <text x="30" y="1068" font-size="10" font-weight="700" fill="#a7b0c5" letter-spacing="1">ASSET</text>
+  <text x="200" y="1068" font-size="10" font-weight="700" fill="#a7b0c5" letter-spacing="1">DIMENSIONS</text>
+  <text x="350" y="1068" font-size="10" font-weight="700" fill="#a7b0c5" letter-spacing="1">RATIO</text>
+  <text x="440" y="1068" font-size="10" font-weight="700" fill="#a7b0c5" letter-spacing="1">FORMAT</text>
+  <text x="560" y="1068" font-size="10" font-weight="700" fill="#a7b0c5" letter-spacing="1">PRIORITY</text>
+  <line x1="30" y1="1074" x2="690" y2="1074" stroke="#3a4565" stroke-width="0.5"/>
+
+  <!-- Table rows -->
+  <text x="30" y="1090" font-size="10" fill="#f5f7fb">Profile</text>
+  <text x="200" y="1090" font-size="10" fill="#f5f7fb" font-family="ui-monospace, Consolas, monospace">800 × 800</text>
+  <text x="350" y="1090" font-size="10" fill="#a7b0c5">1:1</text>
+  <text x="440" y="1090" font-size="10" fill="#a7b0c5">PNG</text>
+  <text x="560" y="1090" font-size="10" font-weight="700" fill="#d4af37">Launch</text>
+
+  <text x="30" y="1106" font-size="10" fill="#f5f7fb">Banner</text>
+  <text x="200" y="1106" font-size="10" fill="#f5f7fb" font-family="ui-monospace, Consolas, monospace">2560 × 1440</text>
+  <text x="350" y="1106" font-size="10" fill="#a7b0c5">16:9</text>
+  <text x="440" y="1106" font-size="10" fill="#a7b0c5">JPG/PNG</text>
+  <text x="560" y="1106" font-size="10" font-weight="700" fill="#d4af37">Launch</text>
+
+  <text x="30" y="1122" font-size="10" fill="#f5f7fb">Thumbnail</text>
+  <text x="200" y="1122" font-size="10" fill="#f5f7fb" font-family="ui-monospace, Consolas, monospace">1280 × 720</text>
+  <text x="350" y="1122" font-size="10" fill="#a7b0c5">16:9</text>
+  <text x="440" y="1122" font-size="10" fill="#a7b0c5">JPG/PNG</text>
+  <text x="560" y="1122" font-size="10" font-weight="700" fill="#d4af37">Launch</text>
+
+  <text x="30" y="1138" font-size="10" fill="#f5f7fb">Watermark</text>
+  <text x="200" y="1138" font-size="10" fill="#f5f7fb" font-family="ui-monospace, Consolas, monospace">150 × 150</text>
+  <text x="350" y="1138" font-size="10" fill="#a7b0c5">1:1</text>
+  <text x="440" y="1138" font-size="10" fill="#a7b0c5">PNG</text>
+  <text x="560" y="1138" font-size="10" font-weight="700" fill="#d4af37">Launch</text>
+
+  <text x="30" y="1154" font-size="10" fill="#f5f7fb">Shorts</text>
+  <text x="200" y="1154" font-size="10" fill="#f5f7fb" font-family="ui-monospace, Consolas, monospace">1080 × 1920</text>
+  <text x="350" y="1154" font-size="10" fill="#a7b0c5">9:16</text>
+  <text x="440" y="1154" font-size="10" fill="#a7b0c5">JPG/PNG/MP4</text>
+  <text x="560" y="1154" font-size="10" fill="#f5f7fb">Content</text>
+
+  <text x="30" y="1170" font-size="10" fill="#f5f7fb">Community</text>
+  <text x="200" y="1170" font-size="10" fill="#f5f7fb" font-family="ui-monospace, Consolas, monospace">1080 × 1080</text>
+  <text x="350" y="1170" font-size="10" fill="#a7b0c5">1:1</text>
+  <text x="440" y="1170" font-size="10" fill="#a7b0c5">JPG/PNG</text>
+  <text x="560" y="1170" font-size="10" fill="#f5f7fb">Content</text>
+
+  <text x="30" y="1186" font-size="10" fill="#f5f7fb">End Screen</text>
+  <text x="200" y="1186" font-size="10" fill="#f5f7fb" font-family="ui-monospace, Consolas, monospace">1280 × 720</text>
+  <text x="350" y="1186" font-size="10" fill="#a7b0c5">16:9</text>
+  <text x="440" y="1186" font-size="10" fill="#a7b0c5">PNG</text>
+  <text x="560" y="1186" font-size="10" fill="#f5f7fb">Content</text>
+
+</svg>
