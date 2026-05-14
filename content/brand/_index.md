@@ -1343,6 +1343,197 @@ Facebook recompresses all uploads. Exporting at high quality (JPG
 90-95%, PNG-24) gives the recompressor the best source material
 without inflating file size past the ~1 MB practical ceiling.
 
+## YouTube Graphics {#youtube-graphics}
+
+Visual reference for every YouTube image format Legendary Arena needs —
+from channel setup through video content and community engagement.
+
+<p>
+  <img src="/images/brand/youtube-sizes.svg"
+       alt="YouTube graphics size reference — all formats with dimensions and aspect ratios"
+       width="720" />
+</p>
+
+### Channel identity (required at launch)
+
+These two assets define how the channel appears across YouTube.
+
+**Profile picture** — the logo, everywhere.
+
+| Property | Value |
+|----------|-------|
+| Upload size | 800 x 800 px |
+| Aspect ratio | 1:1 — displays as a circle (~98 x 98 in UI) |
+| Format | PNG (transparency-safe for the logo) |
+| Max file size | ~4 MB |
+| Safe rule | Center the logo — edges crop into a circle on every surface |
+
+Use the existing icon from `/brand/logo/legendary-arena-icon.svg`,
+exported as PNG at 800 x 800. Identical asset as Facebook — one
+export covers both platforms.
+
+**Channel banner** — the most crop-hostile asset on YouTube.
+
+| Property | Value |
+|----------|-------|
+| Upload size | 2560 x 1440 px |
+| Aspect ratio | 16:9 |
+| Safe area | 1546 x 423 px (center strip only) |
+| Max file size | ~6 MB |
+| Formats | JPG, PNG, GIF, BMP |
+
+**Device-specific crop behavior (this matters a lot):**
+
+| Device | What displays | Effective size |
+|--------|---------------|----------------|
+| TV | Full 2560 x 1440 canvas | 2560 x 1440 |
+| Desktop | Center horizontal strip | ~2560 x 423 |
+| Tablet | Narrower center strip | ~1855 x 423 |
+| Mobile | Safe zone only | 1546 x 423 |
+
+Everything outside the safe zone gets cropped on every device except
+TV. For Legendary Arena: logo wordmark + tagline inside the safe
+zone, hero card art filling the background. The edges are expendable
+— design them to look good but carry no critical information.
+
+### Video thumbnail (highest-ROI asset)
+
+The thumbnail is the single most important image on YouTube. It
+determines whether someone clicks — more than the title, more than
+the description. Every video needs a custom thumbnail.
+
+| Property | Value |
+|----------|-------|
+| Size | 1280 x 720 px |
+| Aspect ratio | 16:9 |
+| Min width | 640 px |
+| Max file size | ~2 MB |
+| Formats | JPG, PNG, GIF |
+
+**Overlay constraint:** the bottom-right corner is covered by the
+video timestamp badge (~10-15% of the frame). Keep logos, text, and
+CTAs out of that zone.
+
+**Design rules for Legendary Arena thumbnails:**
+
+- Bold, high-contrast visuals — thumbnails render at ~320 x 180 in
+  most feeds
+- One focal point per thumbnail (a hero card, a mastermind, a score)
+- Minimal text — if text is needed, large enough to read at thumbnail
+  scale
+- Keep key content in the center ~80% of the frame
+- Consistent template so viewers recognize the channel at a glance
+
+### Branding watermark (subscribe overlay)
+
+The watermark appears as a clickable subscribe button in the
+bottom-right corner of every video. Set it once in YouTube Studio
+under Customization > Branding.
+
+| Property | Value |
+|----------|-------|
+| Size | 150 x 150 px |
+| Format | PNG (transparent background recommended) |
+| Max file size | ~1 MB |
+| Placement | Bottom-right corner (YouTube-controlled) |
+
+**Display timing options:**
+
+- Entire video (recommended for new channels)
+- Custom start time
+- End of video only
+
+Use the LA icon on a transparent background. Keep it simple — it
+renders at roughly 40 x 40 px in the player, so fine detail is
+invisible.
+
+### Shorts (vertical video)
+
+| Property | Value |
+|----------|-------|
+| Size | 1080 x 1920 px |
+| Aspect ratio | 9:16 (full-screen vertical) |
+| Format | MP4 (video), JPG/PNG (cover image) |
+
+Leave ~200 px margin at top and bottom for YouTube's UI overlays
+(channel name, like/comment buttons, description). The content-safe
+area is roughly 1080 x 1520 centered vertically.
+
+For Legendary Arena: card-of-the-day reveals, 15-second gameplay
+clips, set announcement teasers, quick strategy tips. Vertical
+format rewards bold visuals and minimal text — same as Facebook/
+Instagram Stories.
+
+### Community posts
+
+| Property | Value |
+|----------|-------|
+| Size | 1080 x 1080 px (square recommended) |
+| Aspect ratio | 1:1 |
+| Formats | JPG, PNG |
+
+YouTube also supports landscape images in community posts, but
+square gives the most consistent display across devices. Use for
+polls, announcements, card spotlights, and engagement content.
+
+### End screen canvas
+
+| Property | Value |
+|----------|-------|
+| Base size | 1280 x 720 px (matches video resolution) |
+| Duration | Last 5-20 seconds of the video |
+| Format | Designed into the video itself |
+
+**Critical constraint:** end screen elements (subscribe button,
+video suggestions, playlist links) are interactive overlays placed
+by YouTube. The video's final frames need to leave space for these
+clickable zones — typically two rectangular regions in the lower
+two-thirds of the frame.
+
+Design the last segment of each video with a clean background or
+branded end card that accommodates the overlay elements without
+visual collision.
+
+### Launch checklist
+
+The minimum asset set to launch a complete YouTube channel:
+
+1. **Profile picture** — icon at 800 x 800 PNG
+2. **Channel banner** — brand billboard at 2560 x 1440 (safe zone
+   tested on mobile)
+3. **Branding watermark** — icon at 150 x 150 transparent PNG
+4. **Thumbnail template** — reusable 1280 x 720 template with
+   consistent brand treatment
+5. **End screen template** — branded end card with space for
+   YouTube's clickable elements
+
+Everything else (Shorts covers, community post templates) can follow
+once the channel is live and the content cadence is established.
+
+### File type decision guide
+
+| Content type | Recommended | Why |
+|--------------|-------------|-----|
+| Logo / icon / watermark | PNG | Preserves sharp edges, supports transparency |
+| Thumbnail (card art / gameplay) | JPG | Smaller file size, no visible quality loss at 1280 px |
+| Thumbnail (text-heavy / UI) | PNG | Crisper text rendering |
+| Shorts / video | MP4 | H.264 codec, AAC audio |
+
+YouTube recompresses all uploads. Export thumbnails at high quality
+(JPG 90-95%, PNG-24) to give the recompressor the best source
+material. The banner's 6 MB ceiling is generous — a well-compressed
+2560 x 1440 JPG typically lands around 1-2 MB.
+
+### Key risks (worth enforcing in tooling)
+
+| Risk | Failure mode | Prevention |
+|------|-------------|------------|
+| Banner crop | Text/logo outside safe zone gets cut on mobile | Template with 1546 x 423 safe zone overlay |
+| Thumbnail timestamp collision | Video duration badge hides CTA/logo | Keep bottom-right 15% clear |
+| Profile icon illegibility | Too much detail at ~98 px display | Use icon only, no wordmark |
+| Watermark invisibility | Too complex at ~40 px render size | Simple icon, high contrast |
+| File size rejection | Thumbnails > 2 MB or banners > 6 MB | Validate in export pipeline |
+
 ## Governance {#governance}
 
 **Token changes are API changes.** Breaking changes to
