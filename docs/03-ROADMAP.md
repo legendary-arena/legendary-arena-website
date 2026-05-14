@@ -136,7 +136,7 @@ funnel integrity check) without retrofit.
 | WP-018 | Email engagement workflow (Brevo automation) | ✅ Done (2026-05-13) | WP-015 | ~half-day |
 | WP-019 | Snipcart shopping cart with Stripe checkout | ✅ Done | — | ~1 day |
 | WP-020 | Newsletter & blog funnel enrichment | ✅ Done (2026-05-13) | WP-016, WP-019 | ~half-day |
-| WP-021 | Funnel analytics baseline | ⏸️ Pending | WP-018, WP-020 | ~1 hour |
+| WP-021 | Funnel analytics baseline | ✅ Done (2026-05-14) | WP-018, WP-020 | ~1 hour |
 
 **Total realistic effort:** ~9–14 days of focused work.
 
@@ -2791,9 +2791,9 @@ archetypes, no CSS, no config, no content files.
 
 ---
 
-## WP-021 — Funnel analytics baseline ⏸️
+## WP-021 — Funnel analytics baseline ✅ Done (2026-05-14)
 
-**Status:** ⏸️ Pending
+**Status:** ✅ Done (2026-05-14)
 **Depends on:** WP-018 (email pipeline + `docs/email-automation.md`), WP-020 (UTM conventions)
 **Spec:** [`docs/ai/work-packets/WP-021-funnel-analytics-baseline.md`](ai/work-packets/WP-021-funnel-analytics-baseline.md)
 
