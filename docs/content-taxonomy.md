@@ -96,13 +96,13 @@ newsletter draft's "Read more" URL. Confirm series links render
 ### 5. Newsletter draft
 
 Create the Brevo edition draft per the template spec
-(`docs/newsletter-template.md`). All seven sections required: Header,
+(`docs/brevo/newsletter-template.md`). All seven sections required: Header,
 Hook, Tip/Strategy, Challenge, Read more, CTA, Footer. Use production
 URLs only.
 
 ### 6. Pre-send QA
 
-Execute the full checklist from `docs/newsletter-template.md` §Pre-send
+Execute the full checklist from `docs/brevo/newsletter-template.md` §Pre-send
 QA checklist: test send, link validation, image validation, rendering
 check (desktop + mobile), personalization check, funnel validation
 (email → blog → CTA → play.*), deliverability, subject line alignment.
