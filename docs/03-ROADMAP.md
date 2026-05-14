@@ -2595,7 +2595,7 @@ conventions. Also introduces a test runner and subscribe function tests
 - [x] `archetypes/posts.md` includes series, cta, newsletter_week, newsletter_slug
 - [x] Subscribe function tests pass (12 tests)
 - [x] `npm run build` deterministic (two runs, byte-identical)
-- [x] Newsletter template spec documented (`docs/newsletter-template.md`)
+- [x] Newsletter template spec documented (`docs/brevo/newsletter-template.md`)
 - [x] Internal linking + image conventions added to `04-CONTENT-CONVENTIONS.md`
 - [x] CTA block CSS uses `var(--la-*)` tokens only — no raw hex
 - [x] Pagefind indexes blog content
@@ -2622,7 +2622,7 @@ works. Weeks 5+ are follow-on WPs.
 - [x] 4 blog posts (`content/posts/week-01-deck-checklist.md` …
   `week-04-first-tournament.md`)
 - [x] 4 corresponding newsletter edition drafts
-  (`docs/newsletter-drafts/week-01.md` … `week-04.md`)
+  (`docs/brevo/newsletter-drafts/week-01.md` … `week-04.md`)
 - [x] Internal cross-links validated
 - [x] CTA rotation per week (2x play, 1x newsletter, 1x tournament)
 - [x] Hero image placeholders per image convention
@@ -2630,7 +2630,7 @@ works. Weeks 5+ are follow-on WPs.
 ### Definition of Done
 
 - [x] 4 blog posts at `/posts/<slug>/` using WP-016 archetype
-- [x] 4 newsletter edition drafts in `docs/newsletter-drafts/`
+- [x] 4 newsletter edition drafts in `docs/brevo/newsletter-drafts/`
 - [x] Cross-links between blog ↔ newsletter verified
 - [x] Each post uses WP-016 archetype and CTA partial
 - [x] Topic taxonomy documented for weeks 1–12
@@ -2681,7 +2681,7 @@ marketing collateral.
 - Funnel architecture documented in `docs/`
 - Welcome email sends on new contact signup
 - Welcome email passes WP-016 pre-send QA checklist
-  (`docs/newsletter-template.md`)
+  (`docs/brevo/newsletter-template.md`)
 - Weekly cadence configured (ready for WP-017 content)
 - Conversion design rules documented
 
