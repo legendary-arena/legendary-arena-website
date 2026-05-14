@@ -1196,6 +1196,153 @@ propagates.
 
 </details>
 
+## Facebook Graphics {#facebook-graphics}
+
+Visual reference for every Facebook image format Legendary Arena needs —
+from page setup through content and campaigns.
+
+<p>
+  <img src="/images/brand/facebook-sizes.svg"
+       alt="Facebook graphics size reference — all formats with dimensions and aspect ratios"
+       width="720" />
+</p>
+
+### Page identity (required at launch)
+
+These two assets define how the page appears everywhere on Facebook.
+
+**Profile picture** — the logo, everywhere.
+
+| Property | Value |
+|----------|-------|
+| Upload size | 800 x 800 px (minimum 320 x 320) |
+| Aspect ratio | 1:1 — displays as a circle |
+| Format | PNG (transparency-safe for the logo) |
+| Safe rule | Center the logo — corners crop into a circle on every surface |
+
+Use the existing icon from `/brand/logo/legendary-arena-icon.svg`,
+exported as PNG at 800 x 800. The gold-on-dark variant reads best
+against Facebook's white and dark-mode chrome.
+
+**Cover photo** — the brand billboard.
+
+| Property | Value |
+|----------|-------|
+| Upload size | 851 x 315 px |
+| Aspect ratio | ~2.7:1 |
+| Desktop display | ~820 x 312 |
+| Mobile display | ~640 x 360 (crops left and right edges) |
+| Safe zone | Center 640 x 312 px — keep all critical content here |
+| Format | JPG for photo-heavy; PNG if text-heavy |
+
+For Legendary Arena: logo wordmark + tagline in the safe zone, hero
+card art filling the background, optional CTA text ("Play Online" or
+"Join the Arena"). Keep the edges expendable — mobile crops ~100 px
+from each side.
+
+### Open Graph image (critical for sharing)
+
+This is what appears when anyone shares a legendary-arena.com link
+on Facebook (or any platform that reads Open Graph tags). Set it
+site-wide via `<meta property="og:image">`.
+
+| Property | Value |
+|----------|-------|
+| Size | 1200 x 630 px |
+| Aspect ratio | 1.91:1 |
+| Format | JPG or PNG |
+
+The OG image should be a standalone brand card — recognizable without
+context. Logo, tagline, and one piece of hero art. No small text —
+it renders as a thumbnail in most feeds.
+
+### Feed content templates
+
+Three standard formats cover every feed post type. Design templates
+for each so posts stay on-brand without per-post design work.
+
+| Format | Size | Ratio | Use case |
+|--------|------|-------|----------|
+| Square | 1080 x 1080 px | 1:1 | Card previews, hero spotlights, set reveals |
+| Portrait | 1080 x 1350 px | 4:5 | Dev updates, announcements, patch notes — takes more screen space in feed |
+| Landscape | 1200 x 630 px | 1.91:1 | Blog links, feature launches, site shares (OG-compatible) |
+
+**File guidance:** JPG or PNG, keep under 1 MB. Facebook recompresses
+everything — oversized files gain nothing and load slower on upload.
+PNG is better for UI screenshots and text-heavy graphics; JPG for
+card art and photos.
+
+**Portrait gets the most feed real estate.** At 4:5 it fills more of
+the mobile viewport than square or landscape — use it for
+announcements and content where visibility matters most.
+
+### Stories and Reels
+
+| Property | Value |
+|----------|-------|
+| Size | 1080 x 1920 px |
+| Aspect ratio | 9:16 (full-screen vertical) |
+| Format | JPG / PNG (image), MP4 (video) |
+
+Leave ~250 px margin at top and bottom for Facebook's UI overlays
+(profile icon, reply bar, progress indicator). The content-safe area
+is roughly 1080 x 1420 centered vertically.
+
+For Legendary Arena: card-of-the-day reveals, 15-second gameplay
+clips, set announcement teasers. Vertical format rewards bold
+visuals and minimal text.
+
+### Event and group covers
+
+| Asset | Size | Ratio |
+|-------|------|-------|
+| Event cover | 1920 x 1005 px | ~1.91:1 |
+| Group cover | 1640 x 856 px | ~1.91:1 |
+
+Both share the 1.91:1 family — a single wide template scales to
+either. Use for game launches, online tournaments, feature releases,
+and community group headers.
+
+### Advertising formats
+
+If running paid campaigns later, these are the three ad canvas sizes:
+
+| Format | Size | Ratio | Placement |
+|--------|------|-------|-----------|
+| Feed ad | 1200 x 628 px | 1.91:1 | News feed, right column |
+| Square ad | 1080 x 1080 px | 1:1 | Feed, Marketplace, search |
+| Story ad | 1080 x 1920 px | 9:16 | Stories, Reels interstitial |
+
+These overlap with the content templates above — square and story ads
+reuse the same canvases. The feed ad is 2 px shorter than the
+standard 1200 x 630 link preview; in practice the same template
+works for both.
+
+### Launch checklist
+
+The minimum asset set to launch a complete Facebook page:
+
+1. **Profile image** — icon at 800 x 800 PNG
+2. **Cover photo** — brand billboard at 851 x 315
+3. **Open Graph image** — 1200 x 630 (set in site `<head>`)
+4. **3-5 starter posts** — one square (card spotlight), one portrait
+   (announcement), one landscape (site link)
+
+Everything else (stories, event covers, ads) can follow once the
+page is live and the content cadence is established.
+
+### File type decision guide
+
+| Content type | Recommended | Why |
+|--------------|-------------|-----|
+| Logo / icon / text-heavy | PNG | Preserves sharp edges, supports transparency |
+| Card art / photos / hero images | JPG | Smaller file size, no visible quality loss at 1080+ px |
+| Vertical video (stories, reels) | MP4 | Native format; H.264 codec, under 4 GB |
+
+Facebook recompresses all uploads. Exporting at high quality (JPG
+90-95%, PNG-24) gives the recompressor the best source material
+without inflating file size past the ~1 MB practical ceiling.
+
 ## Governance {#governance}
 
 **Token changes are API changes.** Breaking changes to
