@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="1080" viewBox="0 0 720 1080" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <title>Legendary Arena — Facebook Graphics Size Reference</title>
+  <desc>Visual reference for Facebook image dimensions: profile, cover, feed posts, link preview, stories, and event covers. All rectangles maintain correct aspect ratios.</desc>
+
+  <defs>
+    <pattern id="safe-zone-hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#d4af37" stroke-width="0.5" stroke-opacity="0.25"/>
+    </pattern>
+    <clipPath id="circle-clip">
+      <circle cx="50" cy="50" r="50"/>
+    </clipPath>
+  </defs>
+
+  <rect width="720" height="1080" fill="#0b0f19"/>
+
+  <!-- Title -->
+  <text x="360" y="36" font-size="20" font-weight="700" fill="#f5f7fb" text-anchor="middle">Facebook Graphics — Size Reference</text>
+  <text x="360" y="56" font-size="12" fill="#a7b0c5" text-anchor="middle">Legendary Arena · All rectangles drawn at correct aspect ratios</text>
+
+  <!-- ================================================================= -->
+  <!-- SECTION 1: PAGE IDENTITY -->
+  <!-- ================================================================= -->
+  <rect x="16" y="72" width="688" height="22" rx="4" fill="#d4af37" opacity="0.15"/>
+  <rect x="16" y="72" width="688" height="22" rx="4" fill="none" stroke="#d4af37" stroke-width="0.8" opacity="0.5"/>
+  <text x="360" y="87" font-size="11" font-weight="700" fill="#d4af37" text-anchor="middle" letter-spacing="2">PAGE IDENTITY — REQUIRED AT LAUNCH</text>
+
+  <!-- Profile Picture -->
+  <g transform="translate(30, 110)">
+    <!-- Label -->
+    <text x="50" y="0" font-size="13" font-weight="600" fill="#f5f7fb" text-anchor="middle">Profile Picture</text>
+    <!-- Square upload area -->
+    <rect x="0" y="12" width="100" height="100" rx="4" fill="#1a2035" stroke="#3a4565" stroke-width="1"/>
+    <!-- Circle crop overlay -->
+    <circle cx="50" cy="62" r="48" fill="none" stroke="#d4af37" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <!-- Center crosshair -->
+    <line x1="50" y1="52" x2="50" y2="72" stroke="#d4af37" stroke-width="0.5" opacity="0.5"/>
+    <line x1="40" y1="62" x2="60" y2="62" stroke="#d4af37" stroke-width="0.5" opacity="0.5"/>
+    <!-- Logo placeholder -->
+    <text x="50" y="66" font-size="9" fill="#6e7893" text-anchor="middle">LOGO</text>
+    <!-- Corner crop indicators -->
+    <path d="M4,16 L4,28" stroke="#7a1d1f" stroke-width="1.5" opacity="0.6"/>
+    <path d="M0,20 L8,20" stroke="#7a1d1f" stroke-width="1.5" opacity="0.6"/>
+    <path d="M96,16 L96,28" stroke="#7a1d1f" stroke-width="1.5" opacity="0.6"/>
+    <path d="M92,20 L100,20" stroke="#7a1d1f" stroke-width="1.5" opacity="0.6"/>
+    <path d="M4,96 L4,108" stroke="#7a1d1f" stroke-width="1.5" opacity="0.6"/>
+    <path d="M0,104 L8,104" stroke="#7a1d1f" stroke-width="1.5" opacity="0.6"/>
+    <path d="M96,96 L96,108" stroke="#7a1d1f" stroke-width="1.5" opacity="0.6"/>
+    <path d="M92,104 L100,104" stroke="#7a1d1f" stroke-width="1.5" opacity="0.6"/>
+
+    <!-- Specs -->
+    <text x="50" y="130" font-size="12" font-weight="600" fill="#d4af37" text-anchor="middle" font-family="ui-monospace, Consolas, monospace">800 x 800 px</text>
+    <text x="50" y="144" font-size="10" fill="#a7b0c5" text-anchor="middle">1:1 (displays as circle)</text>
+    <text x="50" y="158" font-size="10" fill="#6e7893" text-anchor="middle">min 320 x 320</text>
+    <text x="50" y="172" font-size="10" fill="#6e7893" text-anchor="middle">PNG preferred</text>
+  </g>
+
+  <!-- Cover Photo -->
+  <g transform="translate(170, 110)">
+    <text x="260" y="0" font-size="13" font-weight="600" fill="#f5f7fb" text-anchor="middle">Cover Photo</text>
+    <!-- Full upload area 851:315 ≈ 520:192 at this scale -->
+    <rect x="0" y="12" width="520" height="192" rx="4" fill="#1a2035" stroke="#3a4565" stroke-width="1"/>
+
+    <!-- Mobile crop zone (center 640:360 → scaled 391:110 but capped to height) -->
+    <!-- Desktop display: full width, ~820x312 → 500x190 at scale -->
+    <!-- Safe zone: center 640x312 → 391x190 -->
+    <rect x="65" y="13" width="390" height="190" rx="2" fill="url(#safe-zone-hatch)"/>
+    <rect x="65" y="13" width="390" height="190" rx="2" fill="none" stroke="#d4af37" stroke-width="1" stroke-dasharray="4,3"/>
+
+    <!-- Safe zone label -->
+    <text x="260" y="70" font-size="10" font-weight="600" fill="#d4af37" text-anchor="middle" letter-spacing="1">SAFE ZONE</text>
+    <text x="260" y="84" font-size="9" fill="#a7b0c5" text-anchor="middle">~640 x 312 px center</text>
+
+    <!-- Content guidance -->
+    <text x="260" y="110" font-size="10" fill="#6e7893" text-anchor="middle">Logo + tagline + hero art</text>
+    <text x="260" y="124" font-size="10" fill="#6e7893" text-anchor="middle">CTA: "Play Online" / "Join"</text>
+
+    <!-- Crop warning zones (left/right edges) -->
+    <text x="32" y="108" font-size="8" fill="#7a1d1f" text-anchor="middle" transform="rotate(-90, 32, 108)">CROPS ON MOBILE</text>
+    <text x="488" y="108" font-size="8" fill="#7a1d1f" text-anchor="middle" transform="rotate(90, 488, 108)">CROPS ON MOBILE</text>
+
+    <!-- Dimension lines -->
+    <!-- Width -->
+    <line x1="0" y1="214" x2="520" y2="214" stroke="#6e7893" stroke-width="0.5"/>
+    <line x1="0" y1="210" x2="0" y2="218" stroke="#6e7893" stroke-width="0.5"/>
+    <line x1="520" y1="210" x2="520" y2="218" stroke="#6e7893" stroke-width="0.5"/>
+
+    <!-- Specs -->
+    <text x="260" y="230" font-size="12" font-weight="600" fill="#d4af37" text-anchor="middle" font-family="ui-monospace, Consolas, monospace">851 x 315 px</text>
+    <text x="260" y="244" font-size="10" fill="#a7b0c5" text-anchor="middle">~2.7:1 · Desktop: 820 x 312 · Mobile: 640 x 360 crop</text>
+    <text x="260" y="258" font-size="10" fill="#6e7893" text-anchor="middle">JPG for photos · PNG if text-heavy</text>
+  </g>
+
+  <!-- ================================================================= -->
+  <!-- SECTION 2: FEED CONTENT -->
+  <!-- ================================================================= -->
+  <rect x="16" y="390" width="688" height="22" rx="4" fill="#d4af37" opacity="0.15"/>
+  <rect x="16" y="390" width="688" height="22" rx="4" fill="none" stroke="#d4af37" stroke-width="0.8" opacity="0.5"/>
+  <text x="360" y="405" font-size="11" font-weight="700" fill="#d4af37" text-anchor="middle" letter-spacing="2">FEED CONTENT — POST TEMPLATES</text>
+
+  <!-- Square Post 1:1 -->
+  <g transform="translate(30, 430)">
+    <text x="60" y="0" font-size="13" font-weight="600" fill="#f5f7fb" text-anchor="middle">Square</text>
+    <rect x="0" y="12" width="120" height="120" rx="4" fill="#1a2035" stroke="#3a4565" stroke-width="1"/>
+    <text x="60" y="68" font-size="9" fill="#6e7893" text-anchor="middle">Card previews</text>
+    <text x="60" y="80" font-size="9" fill="#6e7893" text-anchor="middle">Hero spotlights</text>
+    <text x="60" y="150" font-size="12" font-weight="600" fill="#d4af37" text-anchor="middle" font-family="ui-monospace, Consolas, monospace">1080 x 1080</text>
+    <text x="60" y="164" font-size="10" fill="#a7b0c5" text-anchor="middle">1:1</text>
+  </g>
+
+  <!-- Portrait Post 4:5 -->
+  <g transform="translate(190, 430)">
+    <text x="48" y="0" font-size="13" font-weight="600" fill="#f5f7fb" text-anchor="middle">Portrait</text>
+    <rect x="0" y="12" width="96" height="120" rx="4" fill="#1a2035" stroke="#3a4565" stroke-width="1"/>
+    <text x="48" y="68" font-size="9" fill="#6e7893" text-anchor="middle">Dev updates</text>
+    <text x="48" y="80" font-size="9" fill="#6e7893" text-anchor="middle">Announcements</text>
+    <text x="48" y="150" font-size="12" font-weight="600" fill="#d4af37" text-anchor="middle" font-family="ui-monospace, Consolas, monospace">1080 x 1350</text>
+    <text x="48" y="164" font-size="10" fill="#a7b0c5" text-anchor="middle">4:5</text>
+  </g>
+
+  <!-- Landscape Post 1.91:1 -->
+  <g transform="translate(330, 430)">
+    <text x="115" y="0" font-size="13" font-weight="600" fill="#f5f7fb" text-anchor="middle">Landscape / Link</text>
+    <rect x="0" y="12" width="230" height="120" rx="4" fill="#1a2035" stroke="#3a4565" stroke-width="1"/>
+    <text x="115" y="68" font-size="9" fill="#6e7893" text-anchor="middle">Blog / site links</text>
+    <text x="115" y="80" font-size="9" fill="#6e7893" text-anchor="middle">Feature launches</text>
+    <text x="115" y="150" font-size="12" font-weight="600" fill="#d4af37" text-anchor="middle" font-family="ui-monospace, Consolas, monospace">1200 x 630</text>
+    <text x="115" y="164" font-size="10" fill="#a7b0c5" text-anchor="middle">1.91:1 (OG-compatible)</text>
+  </g>
+
+  <!-- Feed note -->
+  <text x="360" y="620" font-size="10" fill="#6e7893" text-anchor="middle">All feed images: JPG or PNG · Keep under 1 MB · Facebook recompresses everything</text>
+
+  <!-- ================================================================= -->
+  <!-- SECTION 3: SHARING + VERTICAL -->
+  <!-- ================================================================= -->
+  <rect x="16" y="642" width="688" height="22" rx="4" fill="#d4af37" opacity="0.15"/>
+  <rect x="16" y="642" width="688" height="22" rx="4" fill="none" stroke="#d4af37" stroke-width="0.8" opacity="0.5"/>
+  <text x="360" y="657" font-size="11" font-weight="700" fill="#d4af37" text-anchor="middle" letter-spacing="2">SHARING + VERTICAL — LINK PREVIEWS, STORIES, EVENTS</text>
+
+  <!-- Open Graph / Link Preview -->
+  <g transform="translate(30, 682)">
+    <text x="130" y="0" font-size="13" font-weight="600" fill="#f5f7fb" text-anchor="middle">Open Graph (og:image)</text>
+    <rect x="0" y="12" width="260" height="136" rx="4" fill="#1a2035" stroke="#d4af37" stroke-width="1.5"/>
+    <!-- Star indicator — this one is critical -->
+    <text x="130" y="60" font-size="10" font-weight="600" fill="#d4af37" text-anchor="middle">CRITICAL FOR SITE SHARES</text>
+    <text x="130" y="76" font-size="9" fill="#6e7893" text-anchor="middle">Shows when anyone shares</text>
+    <text x="130" y="88" font-size="9" fill="#6e7893" text-anchor="middle">legendary-arena.com on Facebook</text>
+    <text x="130" y="100" font-size="9" fill="#6e7893" text-anchor="middle">Set via &lt;meta og:image&gt;</text>
+
+    <text x="130" y="168" font-size="12" font-weight="600" fill="#d4af37" text-anchor="middle" font-family="ui-monospace, Consolas, monospace">1200 x 630 px</text>
+    <text x="130" y="182" font-size="10" fill="#a7b0c5" text-anchor="middle">1.91:1 · JPG or PNG</text>
+  </g>
+
+  <!-- Story / Reel -->
+  <g transform="translate(340, 682)">
+    <text x="42" y="0" font-size="13" font-weight="600" fill="#f5f7fb" text-anchor="middle">Story / Reel</text>
+    <rect x="0" y="12" width="84" height="150" rx="4" fill="#1a2035" stroke="#3a4565" stroke-width="1"/>
+    <!-- Top/bottom UI overlay zones -->
+    <rect x="1" y="13" width="82" height="20" rx="2" fill="#7a1d1f" opacity="0.25"/>
+    <rect x="1" y="141" width="82" height="20" rx="2" fill="#7a1d1f" opacity="0.25"/>
+    <text x="42" y="27" font-size="7" fill="#7a1d1f" text-anchor="middle">UI OVERLAY</text>
+    <text x="42" y="155" font-size="7" fill="#7a1d1f" text-anchor="middle">UI OVERLAY</text>
+    <text x="42" y="85" font-size="9" fill="#6e7893" text-anchor="middle">Full screen</text>
+    <text x="42" y="97" font-size="9" fill="#6e7893" text-anchor="middle">vertical</text>
+
+    <text x="42" y="182" font-size="12" font-weight="600" fill="#d4af37" text-anchor="middle" font-family="ui-monospace, Consolas, monospace">1080 x 1920</text>
+    <text x="42" y="196" font-size="10" fill="#a7b0c5" text-anchor="middle">9:16</text>
+  </g>
+
+  <!-- Event Cover -->
+  <g transform="translate(480, 682)">
+    <text x="110" y="0" font-size="13" font-weight="600" fill="#f5f7fb" text-anchor="middle">Event Cover</text>
+    <rect x="0" y="12" width="220" height="115" rx="4" fill="#1a2035" stroke="#3a4565" stroke-width="1"/>
+    <text x="110" y="66" font-size="9" fill="#6e7893" text-anchor="middle">Launches</text>
+    <text x="110" y="78" font-size="9" fill="#6e7893" text-anchor="middle">Tournaments</text>
+    <text x="110" y="90" font-size="9" fill="#6e7893" text-anchor="middle">Feature releases</text>
+
+    <text x="110" y="147" font-size="12" font-weight="600" fill="#d4af37" text-anchor="middle" font-family="ui-monospace, Consolas, monospace">1920 x 1005</text>
+    <text x="110" y="161" font-size="10" fill="#a7b0c5" text-anchor="middle">~1.91:1</text>
+  </g>
+
+  <!-- ================================================================= -->
+  <!-- SECTION 4: QUICK REFERENCE TABLE -->
+  <!-- ================================================================= -->
+  <rect x="16" y="900" width="688" height="22" rx="4" fill="#d4af37" opacity="0.15"/>
+  <rect x="16" y="900" width="688" height="22" rx="4" fill="none" stroke="#d4af37" stroke-width="0.8" opacity="0.5"/>
+  <text x="360" y="915" font-size="11" font-weight="700" fill="#d4af37" text-anchor="middle" letter-spacing="2">QUICK REFERENCE — ALL SIZES</text>
+
+  <!-- Table header -->
+  <text x="30" y="940" font-size="10" font-weight="700" fill="#a7b0c5" letter-spacing="1">ASSET</text>
+  <text x="220" y="940" font-size="10" font-weight="700" fill="#a7b0c5" letter-spacing="1">DIMENSIONS</text>
+  <text x="370" y="940" font-size="10" font-weight="700" fill="#a7b0c5" letter-spacing="1">RATIO</text>
+  <text x="470" y="940" font-size="10" font-weight="700" fill="#a7b0c5" letter-spacing="1">FORMAT</text>
+  <text x="570" y="940" font-size="10" font-weight="700" fill="#a7b0c5" letter-spacing="1">PRIORITY</text>
+  <line x1="30" y1="946" x2="690" y2="946" stroke="#3a4565" stroke-width="0.5"/>
+
+  <!-- Table rows -->
+  <text x="30" y="962" font-size="10" fill="#f5f7fb">Profile</text>
+  <text x="220" y="962" font-size="10" fill="#f5f7fb" font-family="ui-monospace, Consolas, monospace">800 x 800</text>
+  <text x="370" y="962" font-size="10" fill="#a7b0c5">1:1</text>
+  <text x="470" y="962" font-size="10" fill="#a7b0c5">PNG</text>
+  <text x="570" y="962" font-size="10" font-weight="700" fill="#d4af37">Launch</text>
+
+  <text x="30" y="978" font-size="10" fill="#f5f7fb">Cover</text>
+  <text x="220" y="978" font-size="10" fill="#f5f7fb" font-family="ui-monospace, Consolas, monospace">851 x 315</text>
+  <text x="370" y="978" font-size="10" fill="#a7b0c5">~2.7:1</text>
+  <text x="470" y="978" font-size="10" fill="#a7b0c5">JPG/PNG</text>
+  <text x="570" y="978" font-size="10" font-weight="700" fill="#d4af37">Launch</text>
+
+  <text x="30" y="994" font-size="10" fill="#f5f7fb">Open Graph</text>
+  <text x="220" y="994" font-size="10" fill="#f5f7fb" font-family="ui-monospace, Consolas, monospace">1200 x 630</text>
+  <text x="370" y="994" font-size="10" fill="#a7b0c5">1.91:1</text>
+  <text x="470" y="994" font-size="10" fill="#a7b0c5">JPG/PNG</text>
+  <text x="570" y="994" font-size="10" font-weight="700" fill="#d4af37">Launch</text>
+
+  <text x="30" y="1010" font-size="10" fill="#f5f7fb">Feed — Square</text>
+  <text x="220" y="1010" font-size="10" fill="#f5f7fb" font-family="ui-monospace, Consolas, monospace">1080 x 1080</text>
+  <text x="370" y="1010" font-size="10" fill="#a7b0c5">1:1</text>
+  <text x="470" y="1010" font-size="10" fill="#a7b0c5">JPG/PNG</text>
+  <text x="570" y="1010" font-size="10" fill="#f5f7fb">Content</text>
+
+  <text x="30" y="1026" font-size="10" fill="#f5f7fb">Feed — Portrait</text>
+  <text x="220" y="1026" font-size="10" fill="#f5f7fb" font-family="ui-monospace, Consolas, monospace">1080 x 1350</text>
+  <text x="370" y="1026" font-size="10" fill="#a7b0c5">4:5</text>
+  <text x="470" y="1026" font-size="10" fill="#a7b0c5">JPG/PNG</text>
+  <text x="570" y="1026" font-size="10" fill="#f5f7fb">Content</text>
+
+  <text x="30" y="1042" font-size="10" fill="#f5f7fb">Feed — Landscape</text>
+  <text x="220" y="1042" font-size="10" fill="#f5f7fb" font-family="ui-monospace, Consolas, monospace">1200 x 630</text>
+  <text x="370" y="1042" font-size="10" fill="#a7b0c5">1.91:1</text>
+  <text x="470" y="1042" font-size="10" fill="#a7b0c5">JPG/PNG</text>
+  <text x="570" y="1042" font-size="10" fill="#f5f7fb">Content</text>
+
+  <text x="30" y="1058" font-size="10" fill="#f5f7fb">Story / Reel</text>
+  <text x="220" y="1058" font-size="10" fill="#f5f7fb" font-family="ui-monospace, Consolas, monospace">1080 x 1920</text>
+  <text x="370" y="1058" font-size="10" fill="#a7b0c5">9:16</text>
+  <text x="470" y="1058" font-size="10" fill="#a7b0c5">JPG/PNG/MP4</text>
+  <text x="570" y="1058" font-size="10" fill="#f5f7fb">Growth</text>
+
+  <text x="30" y="1074" font-size="10" fill="#f5f7fb">Event Cover</text>
+  <text x="220" y="1074" font-size="10" fill="#f5f7fb" font-family="ui-monospace, Consolas, monospace">1920 x 1005</text>
+  <text x="370" y="1074" font-size="10" fill="#a7b0c5">~1.91:1</text>
+  <text x="470" y="1074" font-size="10" fill="#a7b0c5">JPG/PNG</text>
+  <text x="570" y="1074" font-size="10" fill="#f5f7fb">Events</text>
+
+</svg>
