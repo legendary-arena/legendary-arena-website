@@ -1,0 +1,42 @@
+{{- /* Legendary Arena — /leaderboard/ section layout override (WP-149).
+
+       Overrides themes/PaperMod/layouts/list.html for the /leaderboard/
+       section only (Hugo's section-scoped layout lookup —
+       layouts/<section>/list.html resolves ahead of _default/list.html
+       and the theme's copy).
+
+       The page is a read-only consumer of the public leaderboard API.
+       All data arrives via client-side fetch; the template provides
+       the DOM contract elements and loads the script.
+*/ -}}
+{{- define "main" }}
+
+<div id="leaderboard-root" data-pagefind-ignore>
+
+  <header class="page-header">
+    <h1>{{ .Title }}</h1>
+    {{- if .Description }}
+    <div class="post-description">
+      {{ .Description | markdownify }}
+    </div>
+    {{- end }}
+  </header>
+
+  <nav id="leaderboard-view-tabs" aria-label="Leaderboard views">
+    <button type="button" class="leaderboard-tab active" data-view="global" aria-pressed="true">Global</button>
+    <button type="button" class="leaderboard-tab" data-view="theme" aria-pressed="false">Theme</button>
+    <button type="button" class="leaderboard-tab" data-view="scheme-mastermind" aria-pressed="false">Scheme-Mastermind</button>
+  </nav>
+
+  <div id="leaderboard-status" role="status">Loading leaderboard&hellip;</div>
+
+  <div id="leaderboard-table"></div>
+
+  <div id="leaderboard-pagination"></div>
+
+</div>
+
+{{ $leaderboard := resources.Get "js/leaderboard.js" | minify | fingerprint }}
+<script src="{{ $leaderboard.RelPermalink }}" defer></script>
+
+{{- end }}
