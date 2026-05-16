@@ -1,0 +1,18 @@
+{{- define "main" }}
+<article class="tournament-detail">
+  <h1>{{ .Title }}</h1>
+  <ul class="tournament-meta">
+    {{- with .Params.eventDate }}<li><strong>Date:</strong> {{ . }}</li>{{ end }}
+    {{- with .Params.eventTime }}<li><strong>Time:</strong> {{ . }}</li>{{ end }}
+    {{- with .Params.format }}<li><strong>Format:</strong> {{ . }}</li>{{ end }}
+    {{- with .Params.entryFee }}<li><strong>Entry:</strong> {{ . }}</li>{{ end }}
+    {{- with .Params.prizePool }}<li><strong>Prizes:</strong> {{ . }}</li>{{ end }}
+  </ul>
+  <div class="tournament-body">
+    {{ .Content }}
+  </div>
+  {{- with .Params.registrationUrl }}
+  <p><a class="button" href="{{ . }}">Register</a></p>
+  {{- end }}
+</article>
+{{- end }}

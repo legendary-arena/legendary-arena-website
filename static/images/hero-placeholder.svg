@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" fill="none">
+  <rect width="1200" height="480" fill="#0b0f19"/>
+  <rect x="1" y="1" width="1198" height="478" rx="7" stroke="#1e2a3a" stroke-width="2" fill="none"/>
+  <text x="600" y="220" text-anchor="middle" font-family="system-ui, sans-serif" font-size="32" font-weight="700" fill="#8b9cc0" letter-spacing="0.1em">HERO IMAGE</text>
+  <text x="600" y="270" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" fill="#5a6a8a">1200 × 480 — replace with your hero image</text>
+</svg>

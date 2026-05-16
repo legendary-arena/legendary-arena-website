@@ -1,0 +1,28 @@
+{{- define "main" }}
+<div class="section">
+  <h1>{{ .Title }}</h1>
+  {{- with .Content }}
+  <div class="section-desc">{{ . }}</div>
+  {{- end }}
+  <div class="tournament-grid">
+    {{- range .Pages.ByParam "eventDate" }}
+    <div class="card tournament-card">
+      <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+      <ul class="tournament-meta">
+        <li><strong>Date:</strong> {{ .Params.eventDate }}</li>
+        <li><strong>Time:</strong> {{ .Params.eventTime }}</li>
+        <li><strong>Format:</strong> {{ .Params.format }}</li>
+        <li><strong>Entry:</strong> {{ .Params.entryFee }}</li>
+        {{- with .Params.prizePool }}
+        <li><strong>Prizes:</strong> {{ . }}</li>
+        {{- end }}
+      </ul>
+      <p class="tournament-desc">{{ .Description }}</p>
+      {{- with .Params.registrationUrl }}
+      <a class="button" href="{{ . }}">Register</a>
+      {{- end }}
+    </div>
+    {{- end }}
+  </div>
+</div>
+{{- end }}

@@ -7,6 +7,7 @@ price: 19.99
 sku: "LA-SAMPLE-001"
 image: "/images/shop/sample-product.jpg"
 weight: 10
+featured: true
 description: "A sample product for testing the checkout flow."
 ---
 

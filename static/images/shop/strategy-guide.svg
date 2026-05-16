@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <rect width="400" height="300" fill="#111827"/>
+  <rect x="1" y="1" width="398" height="298" rx="7" stroke="#1e2a3a" stroke-width="2" fill="none"/>
+  <text x="200" y="140" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#8b9cc0" letter-spacing="0.05em">STRATEGY GUIDE</text>
+  <text x="200" y="170" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#5a6a8a">400 × 300 placeholder</text>
+</svg>

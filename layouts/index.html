@@ -20,9 +20,11 @@
 {{- define "main" }}
 
 <section class="hero">
-  {{- /* Hero copy lives in content/_index.md so authors can edit it
-         without touching layout. The page's Title (front-matter) is
-         the hero h1; the page's Content is the supporting prose. */ -}}
+  {{- with .Params.heroImage }}
+  <div class="hero-image-wrap">
+    <img class="hero-image" src="{{ . }}" alt="{{ $.Params.heroAlt | default $.Title }}" loading="eager">
+  </div>
+  {{- end }}
   <h1>{{ .Title }}</h1>
   {{- with .Content }}
   <div class="hero-prose">
@@ -44,6 +46,73 @@
     <p>{{ .body | markdownify }}</p>
   </div>
   {{- end }}
+</div>
+{{- end }}
+
+{{- /* Upcoming tournaments — pulls from content/tournaments/, sorted by
+       eventDate, limited to the next 3 future events. */ -}}
+{{- $tPage := site.GetPage "/tournaments" }}
+{{- $tournaments := slice }}
+{{- with $tPage }}
+  {{- $tournaments = where .Pages "Params.eventDate" ">=" (now.Format "2006-01-02") }}
+  {{- $tournaments = sort $tournaments "Params.eventDate" "asc" }}
+  {{- $tournaments = first 3 $tournaments }}
+{{- end }}
+{{- with $tournaments }}
+<div class="section home-tournaments">
+  <h2>Upcoming Tournaments</h2>
+  <div class="tournament-grid">
+    {{- range . }}
+    <div class="card tournament-card">
+      <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+      <ul class="tournament-meta">
+        <li><strong>Date:</strong> {{ .Params.eventDate }}</li>
+        <li><strong>Time:</strong> {{ .Params.eventTime }}</li>
+        <li><strong>Format:</strong> {{ .Params.format }}</li>
+        <li><strong>Entry:</strong> {{ .Params.entryFee }}</li>
+        {{- with .Params.prizePool }}
+        <li><strong>Prizes:</strong> {{ . }}</li>
+        {{- end }}
+      </ul>
+      <p class="tournament-desc">{{ .Description }}</p>
+      {{- with .Params.registrationUrl }}
+      <a class="button" href="{{ . }}">Register</a>
+      {{- end }}
+    </div>
+    {{- end }}
+  </div>
+</div>
+{{- end }}
+
+{{- /* Featured products — pulls non-draft shop items with featured: true,
+       limited to 3, ordered by weight (front-matter). */ -}}
+{{- $sPage := site.GetPage "/shop" }}
+{{- $featured := slice }}
+{{- with $sPage }}
+  {{- $featured = where .Pages "Params.featured" true }}
+  {{- $featured = first 3 $featured }}
+{{- end }}
+{{- with $featured }}
+<div class="section home-products">
+  <h2>Featured Gear</h2>
+  <div class="product-grid">
+    {{- range . }}
+    <div class="product-card">
+      {{- with .Params.image }}
+      <img class="product-card-image" src="{{ . }}" alt="{{ $.Title }}" loading="lazy">
+      {{- end }}
+      <div class="product-card-body">
+        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        <div class="product-card-price">${{ .Params.price }}</div>
+        <p class="product-card-desc">{{ .Description }}</p>
+        <a class="button" href="{{ .RelPermalink }}">View</a>
+      </div>
+    </div>
+    {{- end }}
+  </div>
+  <p class="home-products-cta">
+    <a href="/shop/">Browse all gear</a>
+  </p>
 </div>
 {{- end }}
 
