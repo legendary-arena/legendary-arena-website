@@ -1,5 +1,21 @@
 # Homepage Marketing Review Template
 
+> **Editing this file**
+>
+> 1. Edit directly at `C:\www\legendary-arena-com\docs\marketing\homepage-review-template.md`
+> 2. Commit with `SPEC:` prefix (e.g., `SPEC: update problem catalog in review template`).
+>    `FIX:` is limited to the content lane (`content/**`, `static/images/**`) — `docs/` requires `SPEC:`.
+> 3. Push to `main`, or branch + PR if you want review.
+> 4. If edits change scope or structure, also update the ewiki page at
+>    `C:\pcloud\BB\DEV\legendary-arena\wiki\homepage-review-template.md`
+>    and push the `legendary-arena` repo separately.
+> 5. If edits change what the homepage actually implements, re-grade the
+>    scorecard at `C:\pcloud\BB\DEV\legendary-arena\wiki\homepage-marketing-scorecard.md`.
+>
+> **Related files:**
+> - `C:\www\legendary-arena-com\docs\marketing\homepage-spec.md` — build document (split from this template)
+> - `C:\www\legendary-arena-com\docs\marketing\homepage-appendix.md` — strategy reference (split from this template)
+
 **Site:** legendary-arena.com
 **Framework:** StoryBrand SB7 (Donald Miller) + Business Made Simple website template
 **Reference model:** drjjpeterson.com
