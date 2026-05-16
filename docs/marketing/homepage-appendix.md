@@ -335,7 +335,7 @@ before higher ones:
 
 ## Problems Legendary Arena Solves (Full Catalog)
 
-The 20 problems below are derived from the Vision & Direction document,
+The 25 problems below are derived from the Vision & Direction document,
 work packets, and engine architecture. They are written in customer-facing
 language and organized under three dominant themes. Each problem maps to
 one of the SB7 problem levels (external, internal, or philosophical) and
@@ -555,19 +555,85 @@ IDs. Swapping auth providers loses no player data.
 SB7 level: Internal ("I don't own my own gaming identity") +
 Philosophical ("players should own their history")
 
+### Theme 4: Scalability (The Barrier: The Physical Game Doesn't Scale)
+
+The umbrella villain for this theme: *the game you love becomes harder
+to use the more you invest in it.* These problems hit players who are
+deeply committed to the physical game — and feel the friction growing
+with every expansion they buy.
+
+**21. You can't access the full game — older sets are out of print.**
+New players are locked out of older sets that are no longer available.
+The "complete experience" depends on what you managed to buy, not what
+exists. The game's depth becomes a function of supply, not interest.
+Solved by: Every card, hero, and expansion is available digitally from
+day one. Content-as-data architecture means nothing goes "out of print."
+The full game is always accessible to every player.
+(Vision §5, §10)
+SB7 level: External + Internal ("I'm missing part of the game, and
+it's not my fault") + Philosophical ("a game shouldn't disappear just
+because products go out of print")
+
+**22. The game takes over your space.**
+Dozens of expansions mean shelves of boxes, playmats, tokens, and
+binders. Playing the full game requires dedicating real physical space.
+The more you invest, the more impractical it becomes — especially in
+small apartments, dorms, or shared spaces.
+Solved by: The entire game lives in your browser. No boxes, no storage,
+no physical footprint. Every expansion, every card, zero shelf space.
+SB7 level: External + Internal ("I love this game, but it's becoming
+impractical")
+
+**23. Taking the game anywhere is a chore.**
+Want to play at a friend's house or a family gathering? Now you're
+carrying boxes, organizing decks, and hoping nothing gets lost or
+damaged. The friction kills spontaneous play — you don't play because
+it's too much effort to set up.
+Solved by: Play instantly in your browser, anywhere, on any device. No
+cards to carry, no setup, no teardown. Spontaneous play is the default.
+SB7 level: External + Internal ("this is too much effort just to play")
+
+**24. There's no way to prove what actually happened in a physical game.**
+Tracking results manually is slow, inconsistent, and error-prone. When
+someone claims a high score or a perfect run, you just have to trust
+them. Competition without verification isn't real competition.
+Solved by: Every game is automatically recorded, replay-verified, and
+publishable. Results are deterministic and independently verifiable.
+No manual tracking, no trust required.
+(Vision §3, §18, §24)
+SB7 level: External + Internal ("does this even mean anything?") +
+Philosophical ("competition without verification isn't real competition")
+
+**25. Everything you learn disappears when the game ends.**
+There's no shared system for strategies, results, or analysis. No place
+to contribute knowledge. No way to build on others' discoveries. Every
+insight stays locked in the player's head or scattered across forums
+with no structure.
+Solved by: Replay analysis, structured JSON export, PAR benchmarks, and
+a public leaderboard create a shared knowledge layer. Players can
+review their own games, compare against baselines, and learn from the
+community's collective performance.
+(Vision §18-19, §22, WP-149)
+SB7 level: External + Internal ("I want to get better, but there's
+nowhere to grow") + Philosophical ("mastery requires a system for
+sharing knowledge")
+
 ### Strategic Summary
 
-The 20 problems collapse into three dominant themes:
+The 25 problems collapse into four dominant themes for homepage messaging:
 
 | Theme | Villain | Core Emotion | Key Problems |
 |-------|---------|-------------|--------------|
 | **Fairness** | The pay-to-win model | "It's rigged" | 1, 2, 3, 4, 5, 6 |
 | **Skill Measurement** | Opaque/unverifiable systems | "I can't prove I'm good" | 7, 8, 9, 10 |
-| **Authenticity** | Unfaithful digital adaptations | "This isn't the real game" | 11-20 |
+| **Authenticity** | Unfaithful digital adaptations | "This isn't the real game" | 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 |
+| **Scalability** | The physical game doesn't scale | "The more I invest, the harder it gets" | 21, 22, 23, 24, 25 |
 
 The strongest anchoring villain for the homepage is **the pay-to-win
 system** — it's universally understood, emotionally resonant, and
-immediately positions Legendary Arena as the alternative.
+immediately positions Legendary Arena as the alternative. The
+scalability theme (#21-25) is a powerful secondary hook for players
+who already love the physical game and feel the friction growing.
 
 ---
 
