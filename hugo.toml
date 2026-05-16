@@ -9,6 +9,10 @@ canonifyURLs = true
 # RSS, sitemap, etc.
 enableRobotsTXT = true
 
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
 [params]
   env = "production"
   snipcartApiKey = "MGJjY2E4MGEtYjI4Ni00YmNkLThmOGItYmJiMzNiNGY3N2VkNjM5MTQyMzYwMzA0NTM3MjE4"
@@ -99,6 +103,12 @@ enableRobotsTXT = true
   # slashes in [[menu.main]] / [[menu.footer]] URL fields.
   url = "/posts/"
   weight = 20
+
+[[menu.main]]
+  identifier = "tags"
+  name = "Tags"
+  url = "/tags/"
+  weight = 22
 
 [[menu.main]]
   identifier = "shop"
