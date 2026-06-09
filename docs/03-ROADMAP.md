@@ -137,6 +137,7 @@ funnel integrity check) without retrofit.
 | WP-019 | Snipcart shopping cart with Stripe checkout | ✅ Done | — | ~1 day |
 | WP-020 | Newsletter & blog funnel enrichment | ✅ Done (2026-05-13) | WP-016, WP-019 | ~half-day |
 | WP-021 | Funnel analytics baseline | ✅ Done (2026-05-14) | WP-018, WP-020 | ~1 hour |
+| WP-023 | Diorama product-line landing page (`/diorama/`) | ⏭️ Up next | WP-010, WP-014, WP-015 | ~half-day–1 day |
 
 **Total realistic effort:** ~9–14 days of focused work.
 
@@ -2831,6 +2832,64 @@ deferred to a future analytics platform WP.
 
 ---
 
+## WP-023 — Diorama product-line landing page (`/diorama/`) ⏭️ Up next
+
+**Goal:** First website surface for the diorama / STEM-kit product
+line — a dedicated `/diorama/` landing page that tells the story and
+captures demand. It is the marketing front door for the line whose
+placement boundary was set in `01-VISION.md` Decisions log
+(2026-06-08).
+
+**Design source:** `docs/product/diorama-master-plan.md` (canonical —
+product, components, tiers, STEM curriculum, BOM) and
+`docs/product/diorama-gtm-and-resourcing.md` (ICP, positioning,
+time-phased roadmap, break-even). **Execution prompt:**
+`docs/ai/work-packets/WP-023-diorama-landing-page.md`.
+
+**Key design decisions (locked at design level):**
+
+- **Demand capture, not commerce.** Per the GTM roadmap the Starter
+  Kit doesn't ship until ~May 2027 and no prototype exists until
+  ~Nov 2026, so the primary CTA is a waitlist through the existing
+  WP-015 newsletter mechanism — no buy button, no Snipcart path,
+  indicative "coming" pricing only, and no fabricated product
+  photography.
+- **Mirror the `/brand/` mechanism (WP-014).** Section page
+  (`content/diorama/_index.md`) plus a section-scoped
+  `layouts/diorama/list.html` override that wraps content in
+  `.diorama-page`. No new pattern; `themes/PaperMod/` untouched; new
+  CSS is one numbered section scoped under `.diorama-page`, tokens
+  only.
+- **No required Marvel familiarity; no implied license.** The brand
+  failure-mode rule (`04-CONTENT-CONVENTIONS.md §Brand failure modes`)
+  forbids copy that depends on Marvel knowledge. The page leads with
+  the transformation (build-together, a bookshelf world, STEM);
+  Marvel Legends figures are one customer-supplied option, never a
+  prerequisite, and the page claims no Marvel/Hasbro/Disney
+  affiliation (Hasbro licensing is an open question in master-plan
+  §13).
+
+**Scope boundary:** the landing page only. Diorama shop products, ICP
+email segmentation/automation (extends WP-018/020), the build-story
+content lane, and real product photography are separate follow-on
+slices. The physical/firmware/curriculum build is out of this repo
+entirely (tracked in `diorama-master-plan.md §13`; any Pi control
+software lives in the engine repo).
+
+**Dependencies:** WP-010 (nav/chrome), WP-014 (section-override
+pattern), WP-015 (newsletter capture). **Est. effort:** ~half-day–1 day.
+
+**DoD (design level):** `/diorama/` renders with the story and waitlist
+CTA above the fold; the layout override is isolated to the section; new
+CSS is scoped under `.diorama-page` with tokens only (no raw hex);
+copy clears the §Brand/voice constraints (reads correctly for a
+non-Marvel visitor, claims no license); front-matter and the Schema
+partial validate; `npm ci && npm run build` is clean with mechanical
+reproducibility preserved. Full DoD / exit / failure-condition detail
+lives in the work-packet.
+
+---
+
 ## Beyond the current WPs — future work without WPs yet
 
 Future work without WPs yet:
@@ -2881,8 +2940,9 @@ Future work without WPs yet:
   canonical; `diorama-gtm-and-resourcing.md` for ICP, positioning, and
   break-even economics). The **marketing-repo** work it generates — and
   only this — belongs here as future WPs: a `/diorama/` product/landing
-  page, shop wiring for kits (extends WP-019 Snipcart), a STEM/build
-  content lane, and a diorama-ICP email funnel (extends WP-018/020).
+  page (**now WP-023** — first slice promoted), shop wiring for kits
+  (extends WP-019 Snipcart), a STEM/build content lane, and a
+  diorama-ICP email funnel (extends WP-018/020).
   Each becomes a roadmap-designed WP + a `docs/ai/work-packets/`
   execution prompt + a commit-hook stub when picked up. **Not**
   marketing-repo work: prototyping the magnetic-LED contact system,
