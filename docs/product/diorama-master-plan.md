@@ -911,9 +911,9 @@ Consider how the kit works for people with different abilities:
 
 ## 13. Work Tasks & Priorities
 
-Tasks are weighted by **impact** (how much they move the project forward) and **urgency** (how time-sensitive they are). Weight scale: Critical (do first) → High → Medium → Low (can wait).
+Tasks are weighted by **impact** (how much they move the project forward) and **urgency** (how time-sensitive they are). Weight scale: 🔴 Critical (do first) → 🟠 High → 🟡 Medium → 🟢 Low (can wait).
 
-### Critical — Foundation (Do First)
+### 🔴 Critical — Foundation (Do First)
 
 | # | Task | Why It's Critical |
 |---|------|-------------------|
@@ -922,7 +922,7 @@ Tasks are weighted by **impact** (how much they move the project forward) and **
 | 3 | **Source and price key components** | Get real wholesale pricing on Raspberry Pi Zero 2W, LEDs, servos, magnets, and steel sheet. Can't set kit pricing without real costs. |
 | 4 | **Define the Starter Kit bill of materials (BOM)** | Exact parts list, exact quantities, exact cost per kit. This determines the $100 price point viability. |
 
-### High — Product & Revenue (Do Next)
+### 🟠 High — Product & Revenue (Do Next)
 
 | # | Task | Why It's Important |
 |---|------|-------------------|
@@ -932,7 +932,7 @@ Tasks are weighted by **impact** (how much they move the project forward) and **
 | 8 | **Set up legendary-arena.com marketplace** | Product pages, cart, checkout. Could start with Shopify or WooCommerce. |
 | 9 | **Film the first build video** | Document the prototype build from unboxing to finished display. This becomes your flagship marketing content and proof of concept. |
 
-### Medium — Growth & Education (Build Momentum)
+### 🟡 Medium — Growth & Education (Build Momentum)
 
 | # | Task | Notes |
 |---|------|-------|
@@ -942,7 +942,7 @@ Tasks are weighted by **impact** (how much they move the project forward) and **
 | 13 | **Develop the YouTube channel** | Build tutorials, unboxings, customer showcases, and science fair walk-throughs. |
 | 14 | **Research Hasbro licensing / reseller requirements** | Determine if you can resell figures or if affiliate/dropship is the safer path. |
 
-### Low — Future Expansion (Can Wait)
+### 🟢 Low — Future Expansion (Can Wait)
 
 | # | Task | Notes |
 |---|------|-------|

@@ -2876,6 +2876,21 @@ Future work without WPs yet:
   CHANGELOG.md entry and consumer-side updates.
 - **Custom Hugo theme** — only if PaperMod proves limiting. Not on the
   roadmap.
+- **Diorama product line (website surfaces)** — the physical diorama /
+  STEM-kit line is spec'd in `docs/product/` (`diorama-master-plan.md`
+  canonical; `diorama-gtm-and-resourcing.md` for ICP, positioning, and
+  break-even economics). The **marketing-repo** work it generates — and
+  only this — belongs here as future WPs: a `/diorama/` product/landing
+  page, shop wiring for kits (extends WP-019 Snipcart), a STEM/build
+  content lane, and a diorama-ICP email funnel (extends WP-018/020).
+  Each becomes a roadmap-designed WP + a `docs/ai/work-packets/`
+  execution prompt + a commit-hook stub when picked up. **Not**
+  marketing-repo work: prototyping the magnetic-LED contact system,
+  finalizing the bill of materials, the Raspberry Pi control software,
+  and authoring the STEM curriculum — those are physical/firmware
+  efforts tracked in the product plan's §13 "Work Tasks & Priorities"
+  (and any Pi firmware lives in the engine repo, not here). Placement
+  recorded in `01-VISION.md` Decisions log (2026-06-08).
 
 ---
 
