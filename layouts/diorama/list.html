@@ -8,30 +8,33 @@
        untouched; the child-page iteration block is dropped because the
        section has no child pages.
 
-       Hero copy lives in front-matter (title + heroSubhead) per the
-       home-page convention (04-CONTENT-CONVENTIONS §Home page markup:
-       copy in content, markup in layout). The waitlist CTA reuses the
-       WP-015 `newsletter-form.html` partial (no second capture path).
-       The button label is fixed to "Subscribe" by that shared partial
-       and assets/js/newsletter.js, both of which are outside this WP's
-       allowlist (WP-023 decision A). The two mounts (hero + closing)
-       render that one control, so distinct CTA phrases = 1. */ -}}
+       Hero copy lives in front-matter (title + heroSubhead + heroImage)
+       per the home-page convention (04-CONTENT-CONVENTIONS §Home page
+       markup: copy in content, markup in layout).
+
+       WP-024: the hero leads with the product image + a primary "Buy
+       now" button (placeholder — links to #waitlist; real Snipcart
+       checkout deferred pending price/SKU). The newsletter capture
+       remains only at the closing block below, reusing the WP-015
+       `newsletter-form.html` partial. */ -}}
 {{- define "main" }}
 
 <div class="diorama-page">
 
   <header class="diorama-hero">
     {{- partial "breadcrumbs.html" . }}
+    {{- with .Params.heroImage }}
+    <div class="diorama-hero-image-wrap">
+      <img class="diorama-hero-image" src="{{ . }}" alt="{{ $.Params.heroImageAlt }}" width="800" height="525">
+    </div>
+    {{- end }}
     <h1>{{ .Title }}</h1>
     {{- with .Params.heroSubhead }}
     <p class="diorama-hero-sub">{{ . }}</p>
     {{- end }}
-    <div class="diorama-cta diorama-cta-hero">
-      {{- partial "newsletter-form.html" (dict
-        "id" "diorama-hero"
-        "heading" "Be first to build one"
-        "description" "Leave your email and you'll be first to hear when the first kits are ready. Joins our newsletter — unsubscribe any time.") }}
-    </div>
+    <p class="diorama-hero-actions">
+      <a class="button" href="#waitlist">Buy now</a>
+    </p>
   </header>
 
   {{- if .Content }}

@@ -137,7 +137,8 @@ funnel integrity check) without retrofit.
 | WP-019 | Snipcart shopping cart with Stripe checkout | ✅ Done | — | ~1 day |
 | WP-020 | Newsletter & blog funnel enrichment | ✅ Done (2026-05-13) | WP-016, WP-019 | ~half-day |
 | WP-021 | Funnel analytics baseline | ✅ Done (2026-05-14) | WP-018, WP-020 | ~1 hour |
-| WP-023 | Diorama product-line landing page (`/diorama/`) | ⏭️ Up next | WP-010, WP-014, WP-015 | ~half-day–1 day |
+| WP-023 | Diorama product-line landing page (`/diorama/`) | ✅ Done (2026-06-08) | WP-010, WP-014, WP-015 | ~half-day–1 day |
+| WP-024 | Diorama page — product image + placeholder buy button | 🔄 In progress | WP-023, WP-019 | ~1 hour |
 
 **Total realistic effort:** ~9–14 days of focused work.
 
@@ -2832,7 +2833,7 @@ deferred to a future analytics platform WP.
 
 ---
 
-## WP-023 — Diorama product-line landing page (`/diorama/`) ⏭️ Up next
+## WP-023 — Diorama product-line landing page (`/diorama/`) ✅ Done (2026-06-08)
 
 **Goal:** First website surface for the diorama / STEM-kit product
 line — a dedicated `/diorama/` landing page that tells the story and
@@ -2887,6 +2888,31 @@ non-Marvel visitor, claims no license); front-matter and the Schema
 partial validate; `npm ci && npm run build` is clean with mechanical
 reproducibility preserved. Full DoD / exit / failure-condition detail
 lives in the work-packet.
+
+---
+
+## WP-024 — Diorama page: product image + placeholder buy button 🔄 In progress
+
+**Goal:** First step on the *sell* side of the diorama line (the
+`01-VISION.md` 2026-06-08 boundary scopes the site to "market and sell").
+Operator-directed evolution of the `/diorama/` page (2026-06-09).
+
+**Changes:** (1) add the operator-supplied product render to the hero
+(`static/images/products/diorama/diorama-high-tech-800px.jpg`, 800×525,
+no IP) via a `heroImage` front-matter field; (2) drop the duplicate hero
+newsletter widget, keeping the closing waitlist signup; (3) add a primary
+**"Buy now"** button (reusing the §5.2 `.button`), a **placeholder**
+linking to `#waitlist` — no Snipcart/checkout, no price/SKU yet.
+
+**Supersedes** WP-023's "demand capture, not commerce" decision and its
+SB7 single-CTA rule: the page now carries a primary Buy now + a secondary
+newsletter (the normal commerce pattern). Other WP-023 constraints
+(no required Marvel familiarity, tokens-only CSS, scope discipline) hold.
+
+**Deferred to a future WP:** the real Snipcart checkout — a diorama
+product with price, SKU, page-validated price, and pre-order framing
+("ships ~2027" per the GTM roadmap). Full detail in the work-packet
+`docs/ai/work-packets/WP-024-diorama-commerce.md`.
 
 ---
 

@@ -1891,7 +1891,26 @@ ul#menu li a span.active {
   margin: 0 auto var(--la-space-6);
 }
 
-/* §12.2 CTA blocks — reused newsletter-form (hero + closing) */
+.diorama-hero-image-wrap {
+  margin-bottom: var(--la-space-5);
+}
+
+.diorama-hero-image {
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: var(--la-radius-md);
+  border: 1px solid var(--la-color-border-subtle);
+}
+
+.diorama-hero-actions {
+  margin-top: var(--la-space-5);
+}
+
+/* §12.2 CTA block — reused newsletter-form (closing waitlist) */
 
 .diorama-cta {
   max-width: 480px;
