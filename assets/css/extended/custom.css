@@ -1851,3 +1851,122 @@ ul#menu li a span.active {
     padding: var(--la-space-5) var(--la-space-4);
   }
 }
+
+
+/* =========================================================
+   §12. DIORAMA LANDING PAGE (WP-023)
+   Scoped entirely under .diorama-page — the demand-capture surface
+   for the diorama product line. All color / spacing / type / radius
+   via --la-* tokens (no raw hex, no ad-hoc spacing). The only px are
+   hairline borders, px max-widths, and media breakpoints, matching
+   the §5.1 / §10.3 conventions.
+   ========================================================= */
+
+/* §12.1 Hero */
+
+.diorama-hero {
+  padding-top: var(--la-space-7);
+  padding-bottom: var(--la-space-7);
+  text-align: center;
+}
+
+.diorama-hero h1 {
+  font-family: var(--la-font-display);
+  font-size: var(--la-font-size-h1);
+  line-height: var(--la-line-height-h1);
+  font-weight: var(--la-font-weight-h1);
+  letter-spacing: var(--la-letter-spacing-tight);
+  /* why: sentence case (not the §5.1 uppercase hero). The diorama
+     line's register is warm/family and the two-sentence headline
+     reads wrong shouted in caps — still the brand display face + tokens. */
+  margin-top: 0;
+  margin-bottom: var(--la-space-4);
+}
+
+.diorama-hero-sub {
+  font-size: var(--la-font-size-h4);
+  line-height: var(--la-line-height-h4);
+  color: var(--la-color-text-secondary);
+  max-width: 640px;
+  margin: 0 auto var(--la-space-6);
+}
+
+/* §12.2 CTA blocks — reused newsletter-form (hero + closing) */
+
+.diorama-cta {
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.diorama-cta-closing {
+  margin-top: var(--la-space-7);
+  padding-top: var(--la-space-6);
+  border-top: 1px solid var(--la-color-border-subtle);
+  text-align: center;
+}
+
+/* §12.3 Body section rhythm */
+
+.diorama-page .post-content h2 {
+  margin-top: var(--la-space-8);
+  margin-bottom: var(--la-space-4);
+}
+
+.diorama-page .post-content h2:first-of-type {
+  margin-top: var(--la-space-5);
+}
+
+.diorama-page .post-content p,
+.diorama-page .post-content li {
+  line-height: var(--la-line-height-relaxed);
+  color: var(--la-color-text-secondary);
+}
+
+/* §12.4 Tiers (preview cards) */
+
+.diorama-tiers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--la-space-4);
+  margin-top: var(--la-space-5);
+  margin-bottom: var(--la-space-5);
+}
+
+.diorama-tier {
+  background-color: var(--la-color-bg-secondary);
+  border: 1px solid var(--la-color-border-subtle);
+  border-radius: var(--la-radius-md);
+  padding: var(--la-space-5);
+}
+
+.diorama-tier h3 {
+  font-family: var(--la-font-display);
+  font-size: var(--la-font-size-h4);
+  line-height: var(--la-line-height-h4);
+  margin-top: 0;
+  margin-bottom: var(--la-space-2);
+}
+
+.diorama-tier-price {
+  color: var(--la-color-text-primary);
+  font-weight: var(--la-font-weight-semibold);
+  margin-top: 0;
+  margin-bottom: var(--la-space-3);
+}
+
+.diorama-tier p:last-child {
+  margin-bottom: 0;
+}
+
+/* §12.5 Mobile */
+
+@media (max-width: 768px) {
+  .diorama-tiers {
+    grid-template-columns: 1fr;
+  }
+  .diorama-hero {
+    padding-top: var(--la-space-6);
+    padding-bottom: var(--la-space-6);
+  }
+}

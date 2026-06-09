@@ -1,0 +1,54 @@
+{{- /* Legendary Arena — /diorama/ section layout override (WP-023).
+
+       Mirrors layouts/brand/list.html (the WP-014 section-override
+       pattern): overrides themes/PaperMod/layouts/list.html for the
+       /diorama/ section only and wraps the rendered content in
+       `<div class="diorama-page">` so the §12 CSS scoped under
+       `.diorama-page` applies on this page only. themes/PaperMod/ is
+       untouched; the child-page iteration block is dropped because the
+       section has no child pages.
+
+       Hero copy lives in front-matter (title + heroSubhead) per the
+       home-page convention (04-CONTENT-CONVENTIONS §Home page markup:
+       copy in content, markup in layout). The waitlist CTA reuses the
+       WP-015 `newsletter-form.html` partial (no second capture path).
+       The button label is fixed to "Subscribe" by that shared partial
+       and assets/js/newsletter.js, both of which are outside this WP's
+       allowlist (WP-023 decision A). The two mounts (hero + closing)
+       render that one control, so distinct CTA phrases = 1. */ -}}
+{{- define "main" }}
+
+<div class="diorama-page">
+
+  <header class="diorama-hero">
+    {{- partial "breadcrumbs.html" . }}
+    <h1>{{ .Title }}</h1>
+    {{- with .Params.heroSubhead }}
+    <p class="diorama-hero-sub">{{ . }}</p>
+    {{- end }}
+    <div class="diorama-cta diorama-cta-hero">
+      {{- partial "newsletter-form.html" (dict
+        "id" "diorama-hero"
+        "heading" "Be first to build one"
+        "description" "Leave your email and you'll be first to hear when the first kits are ready. Joins our newsletter — unsubscribe any time.") }}
+    </div>
+  </header>
+
+  {{- if .Content }}
+  <div class="post-content md-content">
+    {{- if not (.Param "disableAnchoredHeadings") }}
+    {{- partial "anchored_headings.html" .Content -}}
+    {{- else }}{{ .Content }}{{ end }}
+  </div>
+  {{- end }}
+
+  <div class="diorama-cta diorama-cta-closing">
+    {{- partial "newsletter-form.html" (dict
+      "id" "diorama-waitlist"
+      "heading" "Be first to build one"
+      "description" "It joins our newsletter — we'll tell you the moment kits are available. No spam; unsubscribe any time.") }}
+  </div>
+
+</div>
+
+{{- end }}
