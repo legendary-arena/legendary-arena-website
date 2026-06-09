@@ -125,6 +125,90 @@ then the ask. Sections (each an anchored `##`):
    (`master-plan §9 Product Tiers`.)
 7. **Waitlist** — restate the primary CTA; capture the ICP.
 
+## StoryBrand (SB7) alignment
+
+The page follows the StoryBrand (SB7) framework: the **customer is the
+hero**, Legendary Arena is the **guide**. This is a hard contract so the
+copy cannot drift into feature-dump or hobby-speak. It binds the seven
+sections above to SB7 roles and defines the conversion tests the DoD
+checks. Where this section and §Brand/voice constraints overlap, both
+apply; neither relaxes the other.
+
+### SB7 → section mapping (no drift)
+
+| SB7 element | Lives in | Contract |
+|---|---|---|
+| Character (hero) | Hero | The hero is a cold reader with no Marvel/hobby familiarity |
+| Problem | §2 | External + internal + philosophical — never technical |
+| Guide | §3–§5 | Legendary Arena is the enabler, never the hero |
+| Plan | §3–§4 | The Saturday Project + the kit structure |
+| Call to action | Hero + §7 | One CTA, repeated verbatim |
+| Success | Hero + §3 | A memory / relationship outcome, not a product outcome |
+| Failure (implicit) | §2 | Lost time; unfinished projects; the hobby you gave up |
+
+**Rule:** every paragraph maps to exactly one SB7 element. A paragraph
+that maps to none is out of scope — cut it. No section introduces
+product features before the Plan (§4).
+
+### Per-section copy contracts
+
+1. **Hero (Character + Success + CTA).** Transformation outcome (a
+   memory, not an object); zero jargon; no kit components; CTA visible
+   immediately. **Forbidden:** feature words (LED, frame, magnetic),
+   hobby words (miniatures, terrain). Test: a non-hobby parent gets it
+   in three seconds.
+2. **Problem.** All three layers — external ("you want a miniature
+   world"), internal ("but no space or time"), philosophical ("you
+   shouldn't need a dedicated room"). One sentence must name
+   **frustration**; one must name **abandonment / the unfinished
+   attempt**. Fails if it reads like a product-category description, or
+   offers a solution before the empathy lands.
+3. **The Saturday Project (Guide + Success) — the differentiator.**
+   Reframe product → experience; use a time boundary ("an afternoon",
+   "a Saturday"); anchor to a relationship (grandson / family). The
+   shift is "spend time together building something real," not "build a
+   diorama." Fails if it reads like a DIY guide or lists steps instead
+   of an outcome.
+4. **What's in the kit (Plan) — a confidence layer, NOT a feature
+   dump.** Each element is Outcome → Mechanism → Simplicity ("everything
+   stays aligned" → magnetic rigging; "it comes alive" → LEDs). Max 4–6
+   elements. The Pi is optional, not core; no acronyms to decode. Fails
+   if it reads like a BOM or introduces complexity-fear.
+5. **STEM (Guide credibility) — justification, not the pitch.**
+   "Learning happens while they build," not "an educational product."
+   The parent buys the memory; STEM removes the guilt. Fails if it
+   reads like a curriculum or a school pitch.
+6. **Tiers (Plan clarity) — remove uncertainty, don't sell.** Clearly
+   labeled *coming*; show progression (Starter → Complete → Premium).
+   **Forbidden:** persuasive pricing, urgency signals. Fails if it
+   feels transactional or implies availability.
+7. **Waitlist (CTA).** CTA text identical to the hero; one action only;
+   no alternative paths. Reinforce "be first" / "we'll tell you when
+   it's ready." Fails if it adds friction (multiple options,
+   disclaimers) or changes the CTA wording.
+
+### SB7 compliance tests (DoD gates)
+
+1. **Caveman test** — Hero + section headers alone still convey who,
+   the problem, the outcome, and the action.
+2. **Delete-the-kit test** — remove §4 entirely and the page still
+   converts. If it can't, the copy is feature-dependent → fail.
+3. **No-Marvel test** — delete every Marvel reference and the page
+   stays fully coherent (the §Brand/voice "no required Marvel
+   familiarity" rule, made mechanical).
+4. **One-sentence test** — the page reduces to: "This page is about
+   ___ for people who ___ so they can ___." If that sentence is not
+   obvious from the copy, SB7 is broken.
+5. **CTA-consistency test** — distinct CTA phrases in the rendered page
+   MUST equal exactly 1.
+
+### Highest drift risks
+
+- **§4** drifting to a feature/maker dump → enforce Outcome → Mechanism.
+- **STEM** becoming the primary value prop → demote to justification.
+- **Tiers** sliding into selling → "preview only," no urgency.
+- **CTA** varying via subtle wording → one locked string everywhere.
+
 ## CTA / funnel behavior
 
 - **Primary CTA → newsletter waitlist.** Reuse the WP-015 signup
@@ -195,6 +279,11 @@ modes` and `docs/brand/strategy.md`. Violations are bugs, not taste:
 - [ ] Copy passes the §Brand/voice constraints — in particular the
       page reads correctly for a non-Marvel reader, and claims no
       license/affiliation.
+- [ ] SB7 mapping holds (per §StoryBrand alignment): every section maps
+      to exactly one SB7 role, and no section introduces features before
+      the Plan (§4).
+- [ ] All five SB7 compliance tests pass (caveman, delete-the-kit,
+      no-Marvel, one-sentence, CTA-consistency).
 - [ ] Front-matter complete; `description` ≤ 160 chars; Schema
       partial validates.
 - [ ] Production build is clean: `npm ci && npm run build` succeeds and
@@ -222,6 +311,9 @@ modes` and `docs/brand/strategy.md`. Violations are bugs, not taste:
 - A "buy"/Snipcart path is wired (that's the shop-wiring WP, not this).
 - Raw color/spacing values appear in the new CSS.
 - A second newsletter capture path is introduced.
+- A section maps to no SB7 role, or features appear before the Plan (§4).
+- The page fails the delete-the-kit test (cannot convert without §4).
+- The CTA wording varies anywhere on the page.
 
 ## Out of scope (explicit follow-on WPs)
 
