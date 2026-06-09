@@ -8,6 +8,7 @@ draft: false
 heroSubhead: "Set aside one afternoon. Sit down side by side. Build a small world that lives on their shelf for years — and a Saturday they'll still talk about when they're thirty."
 heroImage: "/images/products/diorama/diorama-high-tech-800px.jpg"
 heroImageAlt: "Legendary Arena shelf-ready diorama — a high-tech sci-fi display room with blue LED lighting, sized 14 by 10 by 12 inches, holding one to four 6-inch figures, shown with side and top views."
+hideFooterNewsletter: true
 ---
 
 ## You used to build things. Then life needed the room back. {#problem}
