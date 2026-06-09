@@ -329,3 +329,127 @@ modes` and `docs/brand/strategy.md`. Violations are bugs, not taste:
 - **Physical / firmware / curriculum build** — not this repo. Tracked
   in `diorama-master-plan.md §13`; any Pi control software lives in the
   engine repo.
+
+## Appendix — Approved reference copy (gold reference)
+
+These drafts are the **bar** for the seven sections, written against the
+§StoryBrand (SB7) alignment contracts. The execution session **may
+tighten wording** against `docs/brand/strategy.md §2` voice, but must
+**preserve each section's SB7 role and required hooks** (e.g. the
+Problem's frustration + abandonment lines; the Saturday Project's time
+boundary + relationship; the kit's Outcome → Mechanism framing; the
+single CTA string) and **must not regress** on the five SB7 compliance
+tests. Copy that scores below this reference is not done. The CTA string
+shown (`Get notified`) is the working lock; if changed, it changes in
+every section (distinct CTA phrases = 1).
+
+### 1. Hero — *(Character + Success + CTA)*
+
+> # Build a world together. Keep the memory for life.
+>
+> Set aside one afternoon. Sit down side by side. Build a small world
+> that lives on their shelf for years — and a Saturday they'll still
+> talk about when they're thirty.
+>
+> **[ Get notified ]** — We'll tell you the moment the first kits are
+> ready.
+
+### 2. The Problem — *(Problem: external + internal + philosophical)*
+
+> ## You used to build things. Then life needed the room back.
+>
+> There was a time when a dad and a kid would spend a winter building a
+> whole miniature town — mountains, tunnels, tiny streetlights — and run
+> trains through it for hours. People still want that. The urge to build
+> a small world with your hands, something detailed and alive, never
+> really goes away.
+>
+> What goes away is the space. A real layout eats an entire room — a
+> four-by-eight table you never get back. So the train set stays in its
+> box. The project that took over the basement never gets finished. The
+> thing you meant to build with your kid keeps sliding to "someday."
+>
+> And that's the quiet unfairness of it: wanting to build something real
+> with your kid shouldn't cost you a room you don't have, or a season of
+> weekends you can't spare. The desire is still there. The room just
+> isn't.
+
+### 3. The Saturday Project — *(Guide + Success)*
+
+> ## A whole world, in one afternoon, on one shelf.
+>
+> Here's what we make: everything you need to build that small world
+> together, sized for a bookshelf instead of a basement. No spare room.
+> No months of work. One kit, one afternoon, one spot on the shelf.
+>
+> You bring the kid and the kitchen table. We bring the rest. By dinner
+> there's a little world sitting where the homework usually piles up —
+> and the two of you made it.
+>
+> That's the whole idea. Not "buy a thing." Spend an afternoon building
+> something real with someone you love, and keep it where you'll both
+> see it every day.
+
+### 4. What's in the Kit — *(Plan: confidence layer, not a feature dump)*
+
+> ## Everything's in the box. Nothing's complicated.
+>
+> The kit is built so a kid can do the hard parts and feel like a
+> genius.
+>
+> - **Pieces snap where they belong.** Figures and parts hold their
+>   place with hidden magnets — no glue, no clamps, nothing to dry
+>   overnight.
+> - **It comes alive.** Tiny lights bring the scene up at the flip of a
+>   switch — no wiring to figure out.
+> - **It bolts together like flat-pack furniture.** The frame goes up
+>   with a screwdriver in a few minutes, sized for a shelf you already
+>   own.
+> - **Optional: motion and sound.** When you're ready for more, a small
+>   add-on brings movement and audio. Skip it and the kit still shines.
+>
+> No soldering. No software degree. If you can follow a furniture
+> manual, you can build this with your kid.
+
+### 5. Learn by Building (STEM) — *(Guide credibility: justification, not pitch)*
+
+> ## They'll learn more than they realize.
+>
+> While they're building, they're picking up real engineering — how
+> magnets hold, how a circuit closes, how a small motor turns. It's the
+> hands-on kind of learning the old build-it-yourself kits used to
+> teach, before everything came pre-assembled.
+>
+> You don't have to sell them on it. They think they're building a cool
+> scene. They're also learning the things that make a kid lean toward
+> making things for life.
+>
+> So if part of you wants the afternoon to count for something beyond
+> the afternoon — it does.
+
+### 6. Tiers — *(Plan clarity: remove uncertainty, don't sell)*
+
+> ## Three ways to start — when they're ready.
+>
+> We're putting the finishing touches on the first kits. Here's how
+> they'll come, simplest to fullest:
+>
+> - **Starter** *(around $100)* — the build itself: frame, rigging,
+>   lights. Everything you need for the first Saturday.
+> - **Complete** *(around $175–200)* — the Starter build plus the
+>   bring-it-to-life extras, pre-loaded and ready to run.
+> - **Premium** *(around $250–300)* — the full experience: motion,
+>   sound, and the upgrades for families who want to keep going.
+>
+> Prices are indicative while we finalize the kits. When they're ready,
+> we'll lay it out plainly — what's in each and which one we'd point
+> your family to.
+
+### 7. Waitlist — *(CTA)*
+
+> ## Be first to build one.
+>
+> The first kits are almost ready. Leave your email and you'll be first
+> to know the day they're available — and first to plan that Saturday.
+>
+> **[ Get notified ]**
