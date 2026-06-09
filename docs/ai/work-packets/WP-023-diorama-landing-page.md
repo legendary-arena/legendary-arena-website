@@ -1,10 +1,12 @@
 # WP-023 — Diorama product-line landing page (`/diorama/`)
 
 **Type:** Site change (new marketing section page)
-**Status:** DRAFT — pending review
+**Status:** ⏭️ Up next — catalogued in `03-ROADMAP.md` (WP-023)
 **Depends on:** WP-010 (site nav/chrome), WP-014 (section-override
 pattern precedent), WP-015 (newsletter capture mechanism)
 **Est. effort:** ~half-day–1 day
+**Pre-flight:** **Required** before execution — this WP adds a new
+top-level section (a `01.4` gate). See §Governance & references.
 
 ---
 
@@ -29,6 +31,46 @@ doesn't exist until ~Nov 2026. The page therefore **captures demand**
 (waitlist via the existing newsletter mechanism) rather than selling.
 It must not imply a finished, purchasable product, and must not use
 fabricated product photography.
+
+## Governance & references
+
+Execution is bound by the reusable governance templates in
+`docs/ai/REFERENCE/`. Pertinent docs and the obligation each imposes on
+this WP:
+
+- **`01.4-pre-flight-invocation.md` — pre-flight is MANDATORY.** This WP
+  introduces a **new top-level section/page** (`/diorama/`,
+  `content/diorama/_index.md`) and may touch `hugo.toml` (the optional
+  nav entry) — both are §"When Pre-Flight Is Required" gates. Pre-flight
+  is **step 1**: author it from the doc's template and reach a
+  `READY` / PASS verdict **before** the execution session starts; a
+  `NOT READY` verdict blocks execution. Per its §Workflow Position, the
+  execution session is a **new** Claude Code session — not the one that
+  authors the pre-flight. The artifact lands in `docs/ai/pre-flights/`.
+- **`01.0-pre-drafting-hygiene.md` — run the gate before drafting.**
+  Confirm cwd is the marketing repo, you are inside its git tree, origin
+  points at `legendary-arena/legendary-arena-website`, and the
+  no-parallel-draft-starts rule holds. STOP at the first FAIL.
+- **`01.3-commit-hygiene.md` — `WP-023:` prefix; no content lane.** The
+  page is **site-affecting and out-of-content-lane** (it adds
+  `layouts/diorama/`, edits `assets/css/extended/custom.css`, and adds
+  non-image `static/images/diorama/` assets alongside `content/`), so
+  every commit MUST use the `WP-023:` prefix — `FIX:` / `POST:` are
+  hook-rejected for these paths. Commit at logical milestones; subjects
+  are present-tense and specific (no forbidden patterns).
+- **`01.8-claude-code-hooks.md` — the enforcing harness.** The
+  `commit-msg` + `pre-commit` hooks that enforce `01.3`, and the
+  SessionStart branch-prune ritual, are wired per this doc. Do not
+  bypass hooks; if one fails, fix the cause rather than skipping it.
+- **`01.2-bug-handling.md` — conditional.** If a pre-existing defect
+  surfaces mid-build (an already-shipped brand failure mode, a broken
+  link, a console error), follow its diagnosis-before-fix protocol
+  rather than patching blindly. Not otherwise in play for a greenfield
+  feature.
+
+Authority order (highest first): `01-VISION.md` → `03-ROADMAP.md` →
+`04-CONTENT-CONVENTIONS.md` → the REFERENCE docs above. On any conflict,
+higher authority wins.
 
 ## Working directory
 
@@ -140,6 +182,8 @@ modes` and `docs/brand/strategy.md`. Violations are bugs, not taste:
 
 ## Definition of Done
 
+- [ ] Pre-flight (`01.4`) authored and `READY` / PASS **before** the
+      execution session starts (mandatory — new top-level section).
 - [ ] `/diorama/` renders locally (`hugo server`) with all seven
       sections, hero CTA above the fold.
 - [ ] Layout override is isolated to the section (mirrors
@@ -157,6 +201,9 @@ modes` and `docs/brand/strategy.md`. Violations are bugs, not taste:
       `/diorama/` is emitted in `public/`.
 - [ ] Mechanical reproducibility preserved (two `npm run build` runs
       byte-identical, per `04-CONTENT-CONVENTIONS.md §Build pipeline`).
+- [ ] Commits use the `WP-023:` prefix per `01.3` (the page is
+      out-of-content-lane, so `FIX:` / `POST:` are rejected); hooks
+      pass without bypass.
 
 ## Exit / verification
 
