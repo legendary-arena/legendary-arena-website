@@ -44,8 +44,9 @@ docs/brand/logo-figma/package-lock.json
 docs/brand/logo-figma/*.zip
 
 # WP invocation scratchpads
-# why: preflight / context / session prompt files under docs/ai/invocations/
-# behave like REPL transcripts — they help the executor that day but rarely
+# why: preflight / context / session prompt files (under docs/ai/invocations/
+# and docs/ai/pre-flights/) behave like REPL transcripts — they help the
+# executor that day but rarely
 # carry information future WPs depend on. The reconciled session-context
 # file (docs/ai/session-context/...) is the artifact future WPs read.
 # Mirrors the engine repo's convention. Override with `git add -f <path>`
@@ -53,3 +54,5 @@ docs/brand/logo-figma/*.zip
 docs/ai/invocations/preflight-wp*.md
 docs/ai/invocations/context-wp*.md
 docs/ai/invocations/session-wp*.md
+docs/ai/pre-flights/pre-flight-*.md
+docs/ai/pre-flights/preflight-*.md
