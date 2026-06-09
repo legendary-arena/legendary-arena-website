@@ -57,3 +57,21 @@ sale model (pre-order framing) are finalized.
 - No formal pre-flight: this modifies an existing page (no new top-level
   section, no `hugo.toml` / theme / brand-token change), so the `01.4`
   mandatory gates don't apply.
+
+## Follow-up (2026-06-09) — duplicate opt-in fix
+
+The closing diorama waitlist form and the global footer newsletter
+rendered back-to-back (two opt-ins at the page bottom). Fixed by keeping
+the page's tailored waitlist form (the `#waitlist` target) and
+suppressing the *footer* newsletter on this page only:
+
+- `layouts/_partials/footer.html` — the footer newsletter is now gated
+  by a `hideFooterNewsletter` front-matter flag (defaults to shown,
+  mirroring the existing `hideFooter` pattern).
+- `layouts/baseof.html` — added `(.Param "hideFooterNewsletter")` to the
+  `partialCached "footer.html"` cache key. Without it, `partialCached`
+  reused the shared section-page footer across pages and silently
+  ignored the flag.
+- `content/diorama/_index.md` — `hideFooterNewsletter: true`.
+
+Every other page is unchanged (footer newsletter still shown).
