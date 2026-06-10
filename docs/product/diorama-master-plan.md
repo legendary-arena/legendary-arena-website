@@ -2,7 +2,7 @@
 
 **Project:** Legendary Arena Diorama Platform
 **Site:** legendary-arena.com
-**Last Updated:** June 6, 2026
+**Last Updated:** June 9, 2026
 
 ---
 
@@ -437,6 +437,22 @@ These mechanisms build naturally into the STEM curriculum as hands-on modules:
 
 This is the core innovation of the entire project. If this works reliably, everything else follows. Here's how it actually works electrically, and what's needed to prototype it.
 
+#### Engineering Review Verdict: GO (with modifications)
+
+The concept is sound and the prototype BOM is appropriate for a low-cost build. Before committing to a frame design, three systemic risks need to be engineered out — each one is the difference between "works on the bench once" and "works every time a kid drops a figure on it":
+
+1. **Uncontrolled ground path through the magnet** — neodymium has measurable, *variable* resistance. Relying on the magnet bulk as the sole ground conductor causes flicker and dimming that changes from one placement to the next.
+2. **Short-circuit exposure (pin to plate)** — if the positive pin can touch bare steel, that's an uncontrolled failure mode. It needs to be made physically unlikely, with a current limit as backstop.
+3. **Contact repeatability** — a contact that needs wiggling or precise alignment is a bad user experience and useless for iterative testing. Contact force has to be deterministic, not a matter of how the unit happened to land.
+
+Everything below is built to eliminate those three. The five changes that move this from "working bench demo" to "production-grade prototype":
+
+1. Replace the rigid center pin (nail/rivet) with a spring-loaded **pogo pin** — deterministic contact force and alignment tolerance.
+2. Add a resettable **polyfuse** (~500 mA hold) on the positive rail — turns a short into a recoverable event, not a dead supply.
+3. Upgrade the shared positive rail to **18–20 AWG** bus wire — cuts voltage drop so brightness is uniform across positions.
+4. Add a dedicated **copper ground lead** bonded to the magnet face — current flows through copper, not magnet bulk, which kills the dimming variability.
+5. **Raise the copper pad on a Kapton layer** so the pogo pin can only reach raised copper — a direct short to steel becomes physically unlikely.
+
 #### The Problem to Solve
 
 An LED needs TWO conductors to light up — positive (+) and negative (−). A single metal plate is only ONE conductor. So the challenge is: how do you create two electrically isolated contact points on the diorama surface so that when a magnetic LED unit snaps onto it, both connections are made simultaneously?
@@ -459,6 +475,20 @@ Each LED unit has two contacts on its bottom face:
 2. The center pin lands on the copper pad → POSITIVE connection made
 3. Circuit is complete → LED lights up
 4. Pull the unit off → circuit breaks → LED turns off
+
+#### The Contact Contract (Pass/Fail)
+
+This is the locked electrical contract for every contact unit and every board surface. Each rigging accessory built later must satisfy it exactly — it's what keeps a Spider-Man boot and a Galactus belt electrically interchangeable on the same board.
+
+| Element | Role | Requirement |
+|---------|------|-------------|
+| Steel plate | Ground (−) | Continuous conductive surface, cleaned of oxide |
+| Copper pad | +5 V | Electrically isolated from the plate (Kapton underneath), sitting slightly proud |
+| Center pin (pogo) | + contact | Spring-loaded, 1–2 mm protrusion, lands only on raised copper |
+| Magnet face | Ground (−) contact | Flat, full-face contact to steel, bonded to a copper ground lead |
+
+**Pass condition:** the LED illuminates regardless of rotation or placement force — drop it on, it lights.
+**Fail condition:** it requires wiggling or precise alignment to light.
 
 #### Alternative Approach: Parallel Strip Method
 
@@ -503,7 +533,7 @@ This is closer to how the original Lite-Brite worked, where any peg position com
 A ring (donut) magnet leaves a hole in the center for the positive contact pin to pass through. The magnet body touches the steel plate for the negative connection, and the center pin passes through the hole to touch the copper pad. Clean separation, no chance of shorting.
 
 **Why neodymium?**
-Neodymium magnets are conductive (they're a metal alloy). This matters because the magnet itself IS the electrical contact — no extra wiring needed for the negative connection. They're also extremely strong for their size, so a 6mm disc holds a figure securely.
+Neodymium magnets are conductive (they're a metal alloy). This matters because the magnet itself IS the electrical contact — no extra wiring needed for the negative connection. They're also extremely strong for their size, so a 6mm disc holds a figure securely. The referenced ring (UMAGNETS N35, 10mm OD × 5mm ID × 2mm) is axially magnetized — poles on the flat faces, exactly what a flat board mount needs — and Ni-Cu-Ni plated, so its face stays conductive for the ground contact even though the hardened design routes the actual current through a bonded copper lead rather than the magnet bulk.
 
 **Why a current-limiting resistor?**
 LEDs burn out instantly without one. At 5V with a standard LED (2V forward voltage), a 150Ω resistor limits current to ~20mA — safe operating range. The resistor goes inside the LED unit, between the positive contact and the LED anode.
@@ -520,7 +550,11 @@ If someone places the unit backwards (center pin on steel, magnet on copper), th
 | Steel sheet (mild steel) | 6" × 6" × 22 gauge | 1 | ~$5 | Home Depot / hardware store |
 | Copper tape (adhesive-backed) | 6mm wide, conductive adhesive | 1 roll | ~$7 | Amazon |
 | Kapton tape (insulating layer) | 10mm wide, heat-resistant | 1 roll | ~$6 | Amazon |
-| Hook-up wire (22 AWG) | Red and black, stranded | 1 spool | ~$6 | Amazon |
+| Bus wire (18–20 AWG) | Main positive rail — low voltage drop | 1 spool | ~$7 | Amazon |
+| Hook-up wire (22 AWG) | Red and black, stranded — short branch leads | 1 spool | ~$6 | Amazon |
+| Resettable polyfuse (PTC) | ~500 mA hold, on the positive rail | 5 | ~$4 | Amazon / electronics supplier |
+| Screw terminal block / ring lug | Reliable plate-to-ground bond | 1 | ~$4 | Hardware store |
+| Adhesive rubber feet | Board underside — isolates from the table | 1 pack | ~$4 | Hardware store |
 | 5V USB power supply | 5V 2A, USB-A or USB-C | 1 | ~$8 | Amazon |
 | USB breakout board | Exposes 5V and GND wires | 1 | ~$3 | Amazon |
 
@@ -528,9 +562,10 @@ If someone places the unit backwards (center pin on steel, magnet on copper), th
 
 | Item | Spec | Qty | Est. Cost | Source |
 |------|------|-----|-----------|--------|
-| Neodymium ring magnets | 10mm OD × 5mm ID × 3mm thick | 6 | ~$8 | Amazon / K&J Magnetics |
+| Neodymium ring magnets (N35, Ni-plated, axial) | 10mm OD × 5mm ID × 2mm thick, ~1.84 lb pull — [UMAGNETS](https://www.umagnets.com/p/ring-magnet-n50-10mm-od-x-5mm-id-x-2mm-thick-nickel-plated/) | 10-pack | ~$6 | UMAGNETS / Amazon / K&J Magnetics |
 | Pre-wired LEDs (5mm, assorted colors) | 5V pre-wired with resistor built in | 10 | ~$6 | Amazon |
-| Small brass nails or copper rivets | 2–3mm diameter (center contact pin) | 10 | ~$3 | Hardware store |
+| Pogo pins (spring-loaded, P75-style) | ~1.5mm tip, 1–2mm travel (center contact) | 10 | ~$7 | Amazon / electronics supplier |
+| Copper foil or thin strip | Magnet-face ground lead | 1 | ~$4 | Amazon |
 | Epoxy putty or hot glue | For assembling LED units | 1 | ~$5 | Hardware store |
 | Heat-shrink tubing | Assorted small sizes | 1 pack | ~$5 | Amazon |
 
@@ -545,7 +580,15 @@ If someone places the unit backwards (center pin on steel, magnet on copper), th
 | Scissors / utility knife | For cutting tape and wire |
 | Sandpaper (fine grit) | For cleaning steel surface to ensure good contact |
 
-**Total estimated prototype cost: ~$55–65**
+**Optional but high-value upgrades:**
+
+| Item | Why |
+|------|-----|
+| Thin FR4 sheet under the steel | Insulating base — eliminates unintended grounding paths through whatever the board sits on |
+| Stainless steel plate (vs mild steel) | Removes corrosion as a variable entirely — no clear-coat, no re-sanding over time |
+| Signal diode (1N4148) per LED unit | Enforces polarity and hardens against reverse-contact errors (see *Optional Upgrade: Polarity Locking* below) |
+
+**Total estimated prototype cost: ~$75–90** (with the reliability upgrades — pogo pins, polyfuse, distributed bus, terminal block, rubber feet — included).
 
 #### Step-by-Step Prototype Build
 
@@ -553,23 +596,36 @@ If someone places the unit backwards (center pin on steel, magnet on copper), th
 Sand the steel plate lightly to remove any coating or oxidation. Clean with rubbing alcohol. This ensures good electrical contact with the magnets.
 
 **Step 2: Lay out the contact points**
-Option A (fixed points): Place a small square of Kapton tape at each desired mounting point. Stick a copper tape pad on top of each Kapton square. Run a positive bus wire connecting all copper pads together.
+Option A (fixed points): Place a small square of Kapton tape at each desired mounting point. Stick a copper tape pad on top of each Kapton square so the pad sits slightly proud of the surrounding steel — that height difference is what guarantees the pogo pin lands on copper and not on the plate. Run a positive bus wire connecting all copper pads together.
 
 Option B (strip method): Run parallel strips of Kapton tape across the plate, then copper tape on top of the Kapton. Space strips ~8mm apart (matching the ring magnet outer diameter). Connect all copper strips to a positive bus wire.
 
 **Step 3: Wire the board**
-Connect the steel plate to the NEGATIVE terminal of the 5V supply (solder or bolt a wire to the plate edge). Connect the copper pad bus wire to the POSITIVE terminal.
+Bond the steel plate to the NEGATIVE terminal using a screw terminal block or ring lug on the plate edge — don't rely on solder-to-steel, which is unreliable and cracks loose over time. Run the POSITIVE rail as 18–20 AWG bus wire and branch short 22 AWG leads to each copper pad (distributed bus, not one long daisy chain) so voltage stays uniform across every position. Insert a resettable polyfuse (~500 mA) in line between the 5V supply and the positive bus: `5V → polyfuse → copper bus → pads`. Stick rubber feet on the underside so the live board never sits directly on a conductive surface.
 
 **Step 4: Build an LED unit**
-Take a ring magnet. Thread a small brass nail or copper rivet through the center hole — this is the positive contact pin. Glue it in place with epoxy, ensuring the pin protrudes ~1mm below the magnet face (it needs to touch the copper pad). Solder the LED's positive wire to the pin. Solder the LED's negative wire to the magnet body (or to a small wire touching the magnet). Encase the wiring in hot glue or heat-shrink tubing for protection.
+Take a ring magnet. Mount a spring-loaded pogo pin in the center hole with epoxy — this is the positive contact, and the spring is what makes contact deterministic across uneven surfaces. Set it so the pin tip protrudes ~1–2mm below the magnet face and only reaches raised copper, never the bare steel around it. Solder the LED's positive wire to the pin. For the ground side, don't rely on the magnet bulk: bond a small strip of copper foil flat across the magnet face and solder the LED's negative wire to that — current then flows through copper, not through the magnet's higher, variable resistance. Encase the wiring in hot glue or heat-shrink tubing for protection.
 
 **Step 5: Test**
 Power on the 5V supply. Place the LED unit on the board with the pin aligned over a copper pad. The magnet snaps to the steel, the pin contacts the copper, the LED lights up. Pull it off — LED goes dark. Move it to another pad — lights up again.
 
 **Step 6: Iterate**
-If contact is unreliable, try a stronger magnet, a larger copper pad, or a spring-loaded center pin (like a pogo pin). If the LED is dim, check voltage drop across the magnet (neodymium has some resistance — may need thicker contact area).
+If contact is still unreliable even with the pogo pin, try a stronger magnet or a larger copper pad. If the LED is dim, you're almost certainly routing ground through the magnet bulk — confirm the copper ground lead is bonded flat to the magnet face and carrying the negative connection, not the magnet alone. Run the four acceptance tests below to confirm before calling it done.
 
 #### Potential Issues & Solutions
+
+Every known failure mode, its root cause, and the enforceable fix:
+
+| Risk | Root cause | Fix |
+|------|-----------|-----|
+| Flicker / intermittent contact | Inconsistent contact pressure | Spring-loaded pogo pin |
+| Dim LED | Current routed through magnet-bulk resistance | Copper ground lead bonded to the magnet face |
+| Short circuit (pin to steel) | Pin misalignment onto bare plate | Raised copper pad + short/recessed pin geometry; polyfuse as backstop |
+| Uneven brightness across positions | Voltage drop on a thin daisy-chained rail | 18–20 AWG distributed bus with short branch leads |
+| Corrosion / rising contact resistance | Bare mild steel oxidizing | Stainless plate, or galvanized + scheduled cleaning |
+| Live board shorting to the desk | Conductive surface under the plate | Rubber feet (and optional FR4 insulating base) |
+
+The detail behind each:
 
 **Contact resistance through the magnet:** Neodymium magnets have higher electrical resistance than copper wire. For a single LED this is fine, but if the LED seems dim, solder a short copper wire from the magnet face to the LED's ground wire instead of relying on the magnet body alone.
 
@@ -577,9 +633,39 @@ If contact is unreliable, try a stronger magnet, a larger copper pad, or a sprin
 
 **Steel plate rusting over time:** Mild steel will rust. Options: use stainless steel (more expensive but permanent), galvanized steel (zinc coating, conductive), or clear-coat the plate with a thin conductive coating. Avoid thick paint — it insulates.
 
-**Magnet strength vs. figure weight:** A 10mm neodymium disc holds ~2–3 lbs against steel. A 6-inch Marvel Legends figure weighs ~4–6 oz. Plenty of margin. For wall mounting (vertical surface), the magnet needs to hold against gravity — still fine for a single figure.
+**Magnet strength vs. figure weight:** The referenced N35 ring (10mm OD × 5mm ID × 2mm) has a direct pull force of ~1.84 lb against thick steel; a 6-inch Marvel Legends figure weighs ~4–6 oz, so on the floor plate there's comfortable margin. Wall mounting is the tighter case: a figure cantilevered off a vertical surface applies a *peel/torque* load, not a clean pull, and peel strength is only a fraction of the rated pull. A single 2mm ring still holds a light figure on the wall, but for heavier figures or longer lever arms, step up to a 3mm ring or N52 grade, or use two magnets spaced apart to resist the prying moment. Test wall poses specifically — don't assume floor margin carries over.
 
 **Short circuit risk:** If the center pin touches the steel plate directly (misalignment), it shorts positive to negative. Mitigation: use a slightly recessed pin that only makes contact with the raised copper pad, or add a small fuse (resettable polyfuse) on the positive bus wire.
+
+#### Acceptance Test Plan (Pass/Fail)
+
+The prototype isn't "validated" because it lit up once. It's validated when it passes these four tests — deterministic, repeatable, and the same criteria a future engineering spec or Work Packet would inherit when this moves from product plan to build.
+
+**Test 1 — Contact reliability.** Place a unit on 10 different pads; rotate it 360° at each.
+- PASS: stays continuously lit at every position and rotation.
+- FAIL: any flicker or dead spot.
+
+**Test 2 — Repeatability.** Place and remove the same unit 20 times on the same pad.
+- PASS: 100% activation rate.
+- FAIL: any missed activation.
+
+**Test 3 — Short protection.** Deliberately bridge the pin to bare steel.
+- PASS: the polyfuse trips or current limits, and the system recovers on its own once the short is removed.
+- FAIL: sparks, supply shutdown, or anything getting hot.
+
+**Test 4 — Load stability.** Place 4–6 lit units simultaneously.
+- PASS: uniform brightness across all of them.
+- FAIL: noticeable dimming or uneven intensity as units are added.
+
+Anything short of all four passing means the contact system isn't ready to design a frame around.
+
+#### Future Scalability Hook (Don't Paint Yourself Into a Corner)
+
+The diorama is heading toward physical-plus-digital hybrid play — the same direction as the Legendary Arena platform. Even in the prototype, lay the contact pads out as an **indexed grid** (row/column positions) rather than scattered points. It costs nothing now and leaves the door open later for **position-aware board state**: reed switches, Hall-effect sensors, or a resistive grid that lets the Pi *know* which figure is where. That's the bridge from a passive lit display to a board the software can read — worth reserving the option even though the first kit won't use it.
+
+#### Optional Upgrade: Polarity Locking
+
+Today a backwards unit simply doesn't light — harmless, but it's a silent failure the builder has to diagnose. One high-leverage robustness add: put a small signal diode (e.g., 1N4148) in series inside each LED unit and standardize the magnet's polarity orientation. The diode enforces current direction, and consistent magnet polarity makes a correctly-built unit physically "key" to the board. Result: reverse-contact errors are prevented by design rather than discovered by trial and error. Optional for the first prototype; valuable once units are produced at volume.
 
 ---
 
@@ -918,7 +1004,7 @@ Tasks are weighted by **impact** (how much they move the project forward) and **
 | # | Task | Why It's Critical |
 |---|------|-------------------|
 | 1 | **Build one working prototype (Street Scene)** | Nothing else matters until a physical diorama exists. Proves the concept, generates photos/video for marketing, reveals problems you can't find on paper. |
-| 2 | **Validate the magnetic LED contact system** | This is the core innovation. If magnets-as-electrical-contacts doesn't work reliably, the entire product concept changes. Test with neodymium magnets, steel sheet, and a simple LED circuit. |
+| 2 | **Validate the magnetic LED contact system** | This is the core innovation. If magnets-as-electrical-contacts doesn't work reliably, the entire product concept changes. "Validated" = passing all four acceptance tests in §4.3 (contact reliability, repeatability, short protection, load stability), not just lighting up once. |
 | 3 | **Source and price key components** | Get real wholesale pricing on Raspberry Pi Zero 2W, LEDs, servos, magnets, and steel sheet. Can't set kit pricing without real costs. |
 | 4 | **Define the Starter Kit bill of materials (BOM)** | Exact parts list, exact quantities, exact cost per kit. This determines the $100 price point viability. |
 
@@ -960,7 +1046,7 @@ Tasks are weighted by **impact** (how much they move the project forward) and **
 ### Technical
 - What voltage/power source is safest and simplest? (e.g., 5V USB, 12V adapter)
 - What magnet size and strength balances secure hold with easy repositioning?
-- How to insulate positive and negative contacts to prevent short circuits?
+- How to insulate positive and negative contacts to prevent short circuits? *(Resolved in §4.3: Kapton under a raised copper pad + a short/recessed pogo pin, with a polyfuse as backstop.)*
 - What type of LED (SMD, pre-wired) fits best inside or behind the figures?
 - Frame material — steel sheet, perforated metal, or custom welded frame?
 - Should the magnetic accessories be 3D printed, hand-sculpted, or a mix of both?
