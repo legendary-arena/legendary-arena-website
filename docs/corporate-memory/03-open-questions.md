@@ -1,0 +1,65 @@
+# Open Questions & Gap Tracker — Legendary Arena
+
+**Last updated:** 2026-06-12
+**Purpose:** the honest list of what's undefined, unverified, or pending a
+decision. Resolved items move to the decision log
+([`01-decision-log.md`](01-decision-log.md)) and get struck here with a date.
+
+Priority: 🔴 blocks revenue/strategy · 🟡 efficiency/clarity · 🟢 nice-to-have
+
+---
+
+## 🔴 Critical
+
+- **Game monetization model is undocumented.** The site funnels to play.*,
+  but there's no written subscription / tournament / IAP / cosmetics model.
+  The diorama line is the only documented near-term revenue. *Needed:* a
+  one-page model (free vs. paid boundary, if any) so KPIs track outcomes,
+  not just activity. *Do not invent one — this is a Jeff decision.*
+
+- **What does BarefootBetters sell?** Confirmed: it's a separate business
+  identity from LA and the umbrella GitHub org (`barefootbetters`). Its
+  actual product/offer is **unrecorded anywhere in this repo.** *Needed:*
+  BB's own corporate-memory entry (its own repo), referenced from
+  `C:\www\jefferyjjensen-corporate-memory\portfolio.md`. The previous AI draft's claim that
+  BB = "natural home & personal care products" was an unverified guess —
+  **do not enshrine it** until confirmed.
+
+- **Diorama cost & margin model.** ~$100 starter-kit price is set, but no
+  per-unit cost model or margin target is documented. "No margin, no
+  mission" needs an actual margin number to be operational.
+
+## 🟡 Structural
+
+- **Plausible account not yet provisioned.** Platform is selected (WP-025)
+  but the account/`data-domain` is an open operator prereq. Until it's live,
+  site-side conversion + search demand are unmeasurable.
+
+- **Social handles unverified.** The previous AI draft listed conflicting
+  handles (`@playlegendarena` vs `@playlegendaryarena`, FB
+  `playlegendaryarena`). *Needed:* confirm the real FB / X / YouTube /
+  Discord handles and record them in
+  [`00-business-brief.md`](00-business-brief.md) Channels.
+
+- **Registry domain migration deferred.** `cards.barefootbetters.com` →
+  `registry.legendary-arena.com` is planned but unscheduled (its own future
+  WP). Tracked in `01-VISION.md`.
+
+- **Unverified personal facts.** Full legal name (middle initial),
+  location, and job title from the previous AI draft are **not** in any
+  repo. Resolve in `C:\www\jefferyjjensen-corporate-memory\owner-profile.md`, not here.
+
+## 🟢 Backlog / watch
+
+- **Lead-magnet asset.** "The Deck-Builder's Primer" is specified as the
+  `/get-started` lead magnet but the PDF/guide itself — built? `[CONFIRM]`.
+- **Email segmentation (Phase 2).** Theme-specific lead magnets deferred
+  until 20+ videos + signup data (per youtube plan).
+- **Rules corpus / rules assistant.** Engine WP-237 is gated on the WP-025
+  search demand signal + a canonical rules corpus. Both downstream.
+
+---
+
+> Reviewed every weekly maintenance pass. An item sitting here >4 weeks with
+> no movement either gets promoted to a WP/decision or consciously parked
+> with a note saying why.
