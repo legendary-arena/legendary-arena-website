@@ -3,8 +3,8 @@ title: "The arena awaits."
 date: 2026-05-08T00:00:00-05:00
 description: "Legendary Arena is a skill-first, web-based deck-building system. Assemble your heroes, face the scenario, and earn your standing."
 draft: false
-heroImage: "/images/hero-placeholder.svg"
-heroAlt: "Legendary Arena — assemble your heroes"
+heroImage: "/images/home/banner-la-medusa-dr-oct.jpg"
+heroAlt: "Legendary Arena — face the scenario"
 ctaLabel: "Play now"
 ctaHref: "https://play.legendary-arena.com/"
 sections:
