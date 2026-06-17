@@ -4,6 +4,7 @@
 **Framework:** StoryBrand SB7 (Donald Miller) + Business Made Simple website template
 **Date:** 2026-05-15
 **Companion:** [homepage-appendix.md](homepage-appendix.md) — full strategy reference (Maslow, 28-problem catalog, badge architecture, WP details)
+**Launch sequencing:** [go-to-market-plan.md](go-to-market-plan.md) — this homepage is gate **G1**; promotion ramps only after it clears GO/NO-GO
 
 ---
 

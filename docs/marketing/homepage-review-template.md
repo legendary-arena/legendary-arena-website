@@ -15,6 +15,7 @@
 > **Related files:**
 > - `C:\www\legendary-arena-com\docs\marketing\homepage-spec.md` — build document (split from this template)
 > - `C:\www\legendary-arena-com\docs\marketing\homepage-appendix.md` — strategy reference (split from this template)
+> - `C:\www\legendary-arena-com\docs\marketing\go-to-market-plan.md` — launch sequencing; this audit's GO/NO-GO is launch gate **G1**
 
 **Site:** legendary-arena.com
 **Framework:** StoryBrand SB7 (Donald Miller) + Business Made Simple website template
