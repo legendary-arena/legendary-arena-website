@@ -25,7 +25,7 @@ Copy this block for each send:
 #### Calculation requirement
 
 All rates must be calculated using the formulas defined in
-`docs/email-automation.md`. Values must be recorded as percentages
+`docs/brevo/email-automation.md`. Values must be recorded as percentages
 with one decimal place (e.g., 23.4%). Calculations must be
 reproducible from the raw counts in this entry.
 
