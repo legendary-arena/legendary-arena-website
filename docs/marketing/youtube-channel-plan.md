@@ -3,7 +3,7 @@
 **Site:** legendary-arena.com
 **Channel Name:** Legendary Arena
 **Framework:** StoryBrand SB7 (Donald Miller)
-**Companion:** [homepage-spec.md](homepage-spec.md), [homepage-appendix.md](homepage-appendix.md)
+**Companion:** [homepage-spec.md](homepage-spec.md), [homepage-appendix.md](homepage-appendix.md), [go-to-market-plan.md](go-to-market-plan.md)
 **Date:** 2026-06-04
 
 ---
@@ -832,6 +832,13 @@ rules — follow the workflow doc.
 After 8 weeks: ~8 long-form videos + 25-40 Shorts across all series.
 Enough to populate playlists, feed the algorithm, and give the homepage
 a real "Watch gameplay" destination.
+
+This calendar is the channel's view of the first 8 weeks. The full 90-day
+launch arc — phased milestones, the cross-channel weekly rhythm
+(production *plus* distribution, community, and email), and the
+list-growth + traffic targets — lives in
+[go-to-market-plan.md](go-to-market-plan.md). Weeks 9–12 continue this
+calendar there.
 
 **SB7 sequencing rationale:** The calendar follows the Messaging
 Priority Rule. Week 1 opens with the villain and establishes trust
