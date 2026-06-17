@@ -765,6 +765,38 @@ immediately positions Legendary Arena as the alternative. The
 scalability theme (#21-28) is a powerful secondary hook for players
 who already love the physical game and feel the friction growing.
 
+**Player Needs Pyramid coverage:**
+
+| Problem | Pyramid Level |
+|---------|--------------|
+| #21 Access to content (out of print) | L1 (Access) |
+| #22 Storage burden | L1 (Access) |
+| #23 Transport friction | L1 (Access) |
+| #24 No verification | L2 (Trust) |
+| #25 Knowledge isolation | L3 → L5 (Community → Mastery) |
+| #26 Complexity friction (rule lookup) | L2 (Trust) |
+| #27 Multiplayer access (location constraint) | L1 (Access) + L3 (Community) |
+| #28 Physical wear & tear (asset degradation) | L1 (Access) |
+
+**Recommended homepage selection (3-5 problems to surface):**
+
+- Problem 1 (pay-to-win) — the villain headline
+- Problem 4 (hidden mechanics) — trust/transparency hook
+- Problem 7 (skill measurement) — competitive identity hook
+- Problem 11 (rules authenticity) — tabletop-fidelity hook
+- Problem 21 (out-of-print access) — physical-game-player hook
+
+**Tight marketing copy (scalability problems):**
+
+> - You can't access the full game — older sets are out of print
+> - The game takes over your space — shelves of boxes just to play
+> - Taking it anywhere is a hassle — setup kills spontaneity
+> - Results aren't verifiable — rankings don't mean anything
+> - Everything you learn disappears — no shared knowledge or growth
+> - Complex interactions force you to stop and look up rules mid-game
+> - Playing with others requires being in the same room
+> - Your cards wear out the more you use them
+
 ---
 
 ## Objection Library

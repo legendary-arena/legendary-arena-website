@@ -3,7 +3,7 @@
 **Site:** legendary-arena.com
 **Framework:** StoryBrand SB7 (Donald Miller) + Business Made Simple website template
 **Date:** 2026-05-15
-**Companion:** [homepage-appendix.md](homepage-appendix.md) — full strategy reference (Maslow, 20-problem catalog, badge architecture, WP details)
+**Companion:** [homepage-appendix.md](homepage-appendix.md) — full strategy reference (Maslow, 28-problem catalog, badge architecture, WP details)
 
 ---
 
@@ -138,15 +138,8 @@ CTA.
 Screenshot, gameplay video, or illustrated scene showing the product
 in action. Not a placeholder SVG. Not a logo. Not abstract art.
 
-### Current State
-
-| Element | Required | Present? |
-|---------|----------|----------|
-| Category + benefit headline | Yes | No — "The arena awaits" tells a cold visitor nothing |
-| Pain-driven subhead | Yes | No — "Assemble your heroes..." assumes deck-building vocabulary |
-| Direct CTA above fold | Yes | Partial — "Play now" exists but visitor has no context yet |
-| Transitional CTA | Yes | No |
-| Hero visual | Yes | No — placeholder SVG |
+> Current-state audit of the live hero against this spec lives in
+> [homepage-review-template.md](homepage-review-template.md#current-state-audit-last-recorded-2026-05-15).
 
 ---
 
@@ -184,10 +177,10 @@ before they'll care about a solution.
 A story doesn't pick up until the hero wants something. The homepage must
 define a single, clear desire:
 
-| Criterion | Target | Current State |
-|-----------|--------|---------------|
-| **Single customer desire** | "A card game that rewards your brain, not your wallet." | Not defined. Homepage speaks in product-voice. |
-| **Story gap** | Gap between where the customer is and where they want to be — keeps them scrolling. | No story gap opened. |
+| Criterion | Target |
+|-----------|--------|
+| **Single customer desire** | "A card game that rewards your brain, not your wallet." |
+| **Story gap** | Gap between where the customer is and where they want to be — keeps them scrolling. |
 
 #### The Villain + Three Levels
 
@@ -200,13 +193,13 @@ to. The villain causes problems on three levels:
 - **Philosophical problem:** Why it's simply *wrong* that people have to
   deal with this.
 
-| Criterion | Target | Current State |
-|-----------|--------|---------------|
-| **The villain** | The pay-to-win model — sells power instead of rewarding skill. Relatable, singular, real, dastardly. | Not named. |
-| **External problem** | "Card games lock the best cards behind paywalls and time-gates." | Not present. |
-| **Internal problem** | "It makes you feel like the game is rigged — like no amount of skill matters if someone else spent more." | Not present. |
-| **Philosophical problem** | "Games *should* be won by the smartest player, not the biggest spender." | Not present. |
-| **Empathy statement** | Copy that mirrors the customer's frustration — proving the guide understands. | Not present. |
+| Criterion | Target |
+|-----------|--------|
+| **The villain** | The pay-to-win model — sells power instead of rewarding skill. Relatable, singular, real, dastardly. |
+| **External problem** | "Card games lock the best cards behind paywalls and time-gates." |
+| **Internal problem** | "It makes you feel like the game is rigged — like no amount of skill matters if someone else spent more." |
+| **Philosophical problem** | "Games *should* be won by the smartest player, not the biggest spender." |
+| **Empathy statement** | Copy that mirrors the customer's frustration — proving the guide understands. |
 
 ### Core Problems Legendary Arena Solves
 
@@ -216,7 +209,7 @@ to. The villain causes problems on three levels:
 4. Digital versions don't match the real game
 5. Players can't learn from their mistakes
 
-Full 20-problem catalog with SB7 mappings and source references: [homepage-appendix.md § Problems Catalog](homepage-appendix.md#problems-legendary-arena-solves-full-catalog)
+Full 28-problem catalog with SB7 mappings and source references: [homepage-appendix.md § Problems Catalog](homepage-appendix.md#problems-legendary-arena-solves-full-catalog)
 
 ### Problem Section (Homepage Copy)
 
@@ -237,14 +230,6 @@ Full 20-problem catalog with SB7 mappings and source references: [homepage-appen
 **Empathy**
 
 > We've played those games too. It's frustrating.
-
-### Current State
-
-The homepage skips the problem entirely. It opens with product-voice
-("The arena awaits") and moves straight into feature pillars. No villain,
-no named frustration, no empathy statement.
-
-**Grade: F** — problem is not stated at any level.
 
 ---
 
@@ -332,23 +317,6 @@ volume-based. Achievements are provable and deterministic.
 
 Full recognition architecture (L2→L4 dependency, WP-149 leaderboard, badge system): [homepage-appendix.md § Recognition](homepage-appendix.md#level-4--recognition-esteem--status-equivalent)
 
-### Current State
-
-| Criterion | Required | Present? |
-|-----------|----------|----------|
-| Plain-English category label | Yes | No — buried in meta description |
-| Benefit statement | Yes | No — pillars imply benefits but don't state one |
-| Pillar-to-problem mapping | Yes | Partial — pillars exist but appear before problem |
-| Process plan | Yes | Partial — subhead reads as tagline, not a plan |
-| Agreement plan | Yes | No |
-| Visual proof (screenshot/video) | Yes | No |
-| Direct CTA (repeated) | Yes | Partial — one placement, hero only |
-| Transitional CTA | Yes | No |
-
-**Grade: C+** — good differentiating copy exists but is poorly sequenced,
-has no plan, no transitional CTA, no visual support, and only one CTA
-placement.
-
 ---
 
 ## 3. What are the results?
@@ -404,24 +372,6 @@ The homepage should define an aspirational identity — who the customer
 - 2-3 player testimonials showing transformation
 - Player count OR engagement metric
 - Discord member count OR active tournament participation
-
-### Current State
-
-| Criterion | Required | Present? |
-|-----------|----------|----------|
-| Failure stakes | Yes | No |
-| Success vision (external) | Yes | No |
-| Success vision (internal) | Yes | No |
-| Success vision (philosophical) | Yes | No |
-| Identity transformation | Yes | No |
-| Player testimonials | Yes | No |
-| Traction metrics | Yes | No |
-| Community signal | Yes | No (footer only) |
-
-The homepage provides zero evidence that anyone has used the product and
-gotten a result. The visitor is asked to "Play now" on faith alone.
-
-**Grade: F** — no stakes, no results, no proof, no transformation.
 
 ---
 
@@ -578,20 +528,6 @@ the spec above for rationale and audit criteria.
 | 17 | **Featured products** | Ends in Success — ecosystem depth | Results | Exists |
 | 18 | **Lead generator / email capture** | Call to Action (transitional) | Results | Exists in footer, needs promotion |
 | 19 | **Community links** | Guide (authority) | Results | Exists in footer, needs promotion |
-
----
-
-## Scoring Summary
-
-| Question | SB7 Elements | Answered? | Grade |
-|----------|-------------|-----------|-------|
-| **What is the problem?** | Character, Problem (villain + 3 levels), Guide (empathy) | Not stated at any level | F |
-| **What is the product?** | Guide (authority), Plan (process + agreement), Call to Action (direct + transitional) | Partially — good pillars, poor sequencing, no plan, single CTA | C+ |
-| **What are the results?** | Avoid Failure, Ends in Success (3 resolutions), Identity Transformation | Not stated | F |
-
-**Overall:** The homepage has strong product-differentiation copy and
-solid infrastructure but communicates none of the three questions
-effectively to a cold visitor.
 
 ---
 
