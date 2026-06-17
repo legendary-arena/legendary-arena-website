@@ -311,3 +311,285 @@ in `docs/brand/strategy.md`:
 - Plain-text fallback: required, includes CTA link + unsubscribe link
 - All images: alt text required, email comprehensible with images blocked
 - Logo: PNG (not SVG), max 200px wide
+
+## Funnel measurement contract
+
+Metrics by funnel stage. All metrics must be calculable from Brevo
+dashboard data only — no inferred metrics, no external tools.
+
+### Capture (signup)
+
+- **Signup count** — total form submissions (Brevo contact creates)
+
+### Confirm (double opt-in)
+
+- **Confirmation rate** — confirmed contacts / total signups
+
+### Activate (welcome email)
+
+- **Open rate** — opens / delivered
+- **Click-through rate (CTR)** — clicks / delivered
+
+### Engage (weekly newsletters)
+
+- **Delivery rate** — delivered / sent
+- **Open rate** — opens / delivered
+- **Click-through rate (CTR)** — clicks / delivered
+- **Click-to-open rate (CTOR)** — clicks / opens
+
+### Convert (downstream actions)
+
+- **CTA click rate** — primary CTA clicks / delivered. **Primary
+  CTA** is the single in-body CTA button as defined in
+  `docs/brevo/newsletter-template.md` §6 (WP-020 authority). Only this
+  link is counted for CTA click rate.
+- **Conversion rate** — NOT YET MEASURABLE. Requires a site-side
+  analytics platform (Cloudflare Web Analytics, Plausible, or
+  equivalent). UTM parameters are present in links; ingestion is
+  deferred to a future WP.
+
+### Retain
+
+- **Unsubscribe rate** — unsubscribes / delivered
+- **List growth rate** — (new subscribers - unsubscribes) / list size
+
+## Metric definitions
+
+Explicit formulas. All inputs are Brevo-reported values.
+
+### Measurement conventions
+
+- All metrics use **unique counts** as reported by Brevo unless
+  explicitly stated otherwise
+- "Opens" = unique opens
+- "Clicks" = unique clicks
+- "Delivered" = sent - bounces (as reported by Brevo)
+- No total (non-unique) metrics are used in any calculation
+
+| Metric | Formula | Source |
+|---|---|---|
+| Delivery rate | delivered / sent | Brevo campaign report |
+| Open rate | opens / delivered | Brevo campaign report |
+| CTR | clicks / delivered | Brevo campaign report |
+| CTOR | clicks / opens | Brevo campaign report |
+| Unsubscribe rate | unsubscribes / delivered | Brevo campaign report |
+| Confirmation rate | confirmed contacts / signups | Brevo contact list |
+| List growth rate | (new - unsubscribes) / list size | Brevo contact list |
+
+Only the metrics defined in this table are permitted. Any new
+metric requires an explicit addition to this table before use.
+No external normalization. No custom calculations.
+
+## Baseline thresholds (initial)
+
+These are validation ranges for detecting failure, not success
+targets. Values outside these ranges trigger investigation and
+must be documented in the Notes section of the metrics log entry.
+
+| Metric | Expected range | Failure threshold | Notes |
+|---|---|---|---|
+| Delivery rate | >95% | <90% | Low delivery suggests auth or reputation issue |
+| Open rate | 20–50% | <15% | Wide range due to Apple MPP and privacy proxies |
+| CTR | 2–5% | 0% | Zero clicks = non-functional funnel |
+| CTOR | 5–15% | <3% | Low CTOR suggests content/CTA mismatch |
+| Unsubscribe rate | <1% | >2% | High unsub suggests content or frequency issue |
+| Confirmation rate | >70% | <50% | Low confirm suggests form UX or spam signup issue |
+
+Ranges are conservative starting points based on B2C newsletter
+benchmarks. Adjust after 4+ weeks of data.
+
+## UTM attribution validation
+
+### Required parameters (per WP-020)
+
+All shop links in emails must include:
+
+| Parameter | Newsletter value | Welcome value |
+|---|---|---|
+| `utm_source` | `newsletter` | `newsletter` |
+| `utm_medium` | `email` | `email` |
+| `utm_campaign` | `<newsletter_slug>` | `welcome` |
+| `utm_content` | `featured-product` | `featured-product` |
+
+### Validation procedure (per send)
+
+1. Open the email in an inbox (not Brevo preview)
+2. Click the shop link
+3. Copy the final URL from the browser address bar
+4. Verify the URL contains exactly the following query parameters:
+   `utm_source`, `utm_medium`, `utm_campaign`, `utm_content`
+5. Verify parameter values match WP-020 exactly (case-sensitive)
+6. Verify no additional `utm_*` or tracking parameters exist
+
+UTM parameter validation must be based on URL string inspection,
+not visual rendering or redirect assumptions.
+
+### UTM consistency rules
+
+- Parameters must match WP-020 conventions exactly (case-sensitive)
+- `utm_campaign` must equal the blog post slug (slug coupling
+  invariant from WP-020)
+- No ad-hoc UTM values permitted
+- UTM structure must not change between sends
+
+## Reporting cadence
+
+- Metrics recorded 48 hours after send time to allow for delayed
+  opens (record timestamp must be ≥48 hours post-send)
+- Append-only log — no retroactive edits
+- Welcome email metrics recorded once at WP-018 completion, then
+  monthly spot-checks
+- Monthly review of aggregate trends is optional (future WP)
+- Threshold failures require investigation before next send
+
+### Snapshot semantics
+
+- Metrics represent a point-in-time snapshot taken ≥48 hours
+  post-send
+- Metrics must not be updated after recording, even if Brevo
+  values change later
+- Changes in Brevo reporting after snapshot are ignored
+
+## Failure conditions (analytics)
+
+Any of the following is an analytics failure:
+
+- Missing metrics entry for any production send
+- CTR = 0% (funnel is non-functional regardless of opens)
+- Missing UTM parameters on any shop link
+- `utm_campaign` does not match newsletter slug
+- No QA log entry for the corresponding send
+- Metrics calculated using a formula not in the metric definitions
+  table
+- Metrics derived from a source other than Brevo dashboard
+- Any metric recorded without corresponding raw counts
+  (sent, delivered, opens, clicks, unsubscribes, bounces)
+- Any percentage recorded that cannot be reproduced from the
+  raw counts in the same log entry
+
+## Analytics invariants
+
+- Metrics must be recorded for every production send — no exceptions
+- UTM parameter structure must not change between sends (WP-020
+  contract)
+- All metrics must be calculated using the formulas in the metric
+  definitions table — no custom calculations
+- The metrics log is append-only — corrections are new entries, not
+  edits to prior entries
+- Baseline thresholds apply to all sends equally — no per-send
+  overrides without a documented reason
+
+## Planned enhancements (deferred until volume)
+
+The pipeline overview commits to a deliberately linear v1: no
+branching, no segmentation, no drip. The enhancements below are
+recorded so the design thinking is not lost — they are **not approved
+work**. Each names a concrete *build trigger* (the condition that
+justifies the added complexity), and each requires its own governing
+WP before implementation, per the automation invariants above.
+Building any of them ahead of its trigger is premature optimization
+and is out of scope until the trigger is met.
+
+Volume context: as of this writing the Brevo IDs are still placeholders
+(`<BREVO_LIST_ID>`, `<TEMPLATE_ID>`, `<WORKFLOW_ID>`) and the dashboard
+setup is incomplete. The first priority is launching v1 and capturing
+confirmed subscribers — not stacking automation on an empty list.
+
+### 1. Welcome drip (v2 of the welcome email)
+
+Replace the single immediate welcome email with a short 3–4 email
+onboarding sequence over 10–14 days, bridging "signed up" to "first
+game played":
+
+- **Email 1 (immediate)** — current welcome. Set expectations,
+  "Play now" CTA. (Already live in v1.)
+- **Email 2 (day 2–3)** — first-game onboarding: a strong starter
+  scenario plus a direct play link. Companion to the how-to-play
+  content.
+- **Email 3 (day 5–7)** — one strategy tip from the deck-building
+  content plus a specific challenge. Reinforce "every result is
+  provable."
+- **Email 4 (day 10–14)** — social proof / community teaser plus a
+  return hook.
+
+The trigger stays "contact added to list" (post-confirmation);
+subsequent emails use Brevo workflow delays. This replaces the
+1-trigger/1-action automation invariant with a documented multi-step
+workflow — which is exactly why it needs its own WP, not a silent
+template edit.
+
+**Build trigger:** the v1 welcome email has a stable open/click
+baseline (≥4 weeks of sends, per Baseline thresholds) AND the confirmed
+list is large enough that drip tuning is measurable (≥ ~200 confirmed
+contacts). Until then, a single deterministic welcome email is the
+correct design.
+
+### 2. Source / topic segmentation
+
+v1 sends one list, one generic weekly broadcast. Future segmentation
+would route signups by origin (homepage vs. footer vs. a specific
+video) and by interest, so e.g. fairness-driven signups receive more of
+that content.
+
+**Forward hedge (drafted, pending a WP):** a change to capture signup
+source at submission time is drafted (see "Signup source capture"
+below) so the provenance data will exist when segmentation is built —
+but it is **not acted upon** in v1, and the code is parked rather than
+committed (the site-file edit needs a governing WP). No segmented
+sends, no conditional logic.
+
+**Build trigger:** ≥2 meaningfully distinct, sufficiently large source
+cohorts exist in the captured data, AND weekly send volume is high
+enough that a generic broadcast is measurably underperforming a
+segmented one. Segmentation on a small undifferentiated list adds
+operational cost with no return.
+
+### 3. Re-engagement / win-back
+
+A flow for subscribers who go inactive (no opens or clicks for ~30
+days): a re-engagement campaign with a strong hook and a direct play
+link, then a sunset step for non-responders to protect deliverability.
+
+**Build trigger:** a 30-day-inactive cohort exists at a size worth
+recovering — you cannot win back subscribers you do not yet have. Also
+requires the Funnel measurement contract metrics to be flowing.
+
+### 4. Closed-loop conversion metrics
+
+The Funnel measurement contract above already defines every Brevo-side
+metric and explicitly flags **conversion rate as NOT YET MEASURABLE**
+(it needs a site-side analytics platform; UTM params are present,
+ingestion is deferred). Closing the loop:
+
+- Stand up the deferred site-analytics ingestion (Cloudflare Web
+  Analytics / Plausible) so UTM-tagged email clicks resolve to play
+  starts. This is the already-scoped follow-up WP.
+- Add Brevo conversion-tracking goals for key URLs
+  (`https://play.legendary-arena.com/`) once analytics is live.
+- Primary KPI to watch: **email-driven first-game starts**.
+
+**Build trigger:** the site-analytics ingestion WP lands. The Brevo
+goals are a thin add on top of it.
+
+### Signup source capture (forward hedge — drafted, pending a WP)
+
+To keep the segmentation option open without acting on it, a change to
+capture where each contact came from is drafted. The code is written
+and parked, but **not yet committed**: the marketing site-file commit
+hook requires a `WP-NNN:` prefix for `assets/` and `layouts/` edits, so
+the hedge ships under its own lightweight WP. The drafted change:
+
+- The newsletter form (`layouts/_partials/newsletter-form.html`) emits
+  a `source` value — its render location (`cta`, `footer`,
+  `diorama-waitlist`, …).
+- `assets/js/newsletter.js` forwards `source` in the subscribe request.
+- `functions/api/subscribe.js` stores it on the Brevo contact as the
+  `SIGNUP_SOURCE` attribute — **best-effort**: if the attribute is not
+  yet provisioned in Brevo, the create is retried without it so the
+  subscription still succeeds. Source capture is best-effort; lead
+  capture never breaks.
+
+**Brevo prerequisite (for when the hedge ships):** create a text
+contact attribute named `SIGNUP_SOURCE` in the Brevo dashboard. Until
+it exists, source values are silently dropped (by design) and only the
+email is stored.

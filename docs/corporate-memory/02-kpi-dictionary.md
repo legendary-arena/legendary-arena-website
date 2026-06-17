@@ -14,7 +14,7 @@ with no agreed definition does not belong in a report until it's added here.
 ## Email funnel (Brevo)
 
 Authoritative formulas + baseline thresholds:
-[`docs/email-automation.md`](../email-automation.md) "Funnel measurement
+[`docs/brevo/email-automation.md`](../brevo/email-automation.md) "Funnel measurement
 contract" / "Metric definitions" (defined under WP-021). Per-send numbers
 are recorded append-only in
 [`docs/email-metrics-log.md`](../email-metrics-log.md).

@@ -2796,7 +2796,7 @@ archetypes, no CSS, no config, no content files.
 ## WP-021 — Funnel analytics baseline ✅ Done (2026-05-14)
 
 **Status:** ✅ Done (2026-05-14)
-**Depends on:** WP-018 (email pipeline + `docs/email-automation.md`), WP-020 (UTM conventions)
+**Depends on:** WP-018 (email pipeline + `docs/brevo/email-automation.md`), WP-020 (UTM conventions)
 **Spec:** [`docs/ai/work-packets/WP-021-funnel-analytics-baseline.md`](ai/work-packets/WP-021-funnel-analytics-baseline.md)
 
 Governance-only WP. Defines the measurement contract for the email
@@ -2807,7 +2807,7 @@ deferred to a future analytics platform WP.
 
 ### Scope
 
-- MODIFY `docs/email-automation.md` — add funnel measurement
+- MODIFY `docs/brevo/email-automation.md` — add funnel measurement
   contract, metric definitions, baseline thresholds, UTM attribution
   validation, reporting cadence, analytics failure conditions, and
   analytics invariants
