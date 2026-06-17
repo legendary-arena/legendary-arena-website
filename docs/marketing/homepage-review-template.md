@@ -1593,3 +1593,55 @@ before earning the right to.
 Impact: The story arc breaks. Each section depends on the one before
 it — skipping or reordering any step means the visitor lacks the
 context to process what comes next.
+
+---
+
+## Sales Conversion Audit
+
+A conversion-layer overlay on the SB7 readiness checklist above. The
+readiness checklist confirms the *story elements* are present; this audit
+confirms the page actually *moves a visitor from problem recognition to a
+decision*. A page passes only if every box is checked.
+
+### 1. Outcome, Not Product
+
+- [ ] The page sells the desired outcome before explaining the product
+- [ ] The hero communicates transformation, not internal features
+- [ ] Feature language is translated into customer-feeling language
+
+### 2. Reality Gap
+
+- [ ] Current reality is clearly stated
+- [ ] Desired future reality is clearly stated
+- [ ] Legendary Arena is positioned as the bridge between them
+
+### 3. Diagnosis Before Prescription
+
+- [ ] Pain is diagnosed before product features are introduced
+- [ ] The villain (pay-to-win) is named
+- [ ] External, internal, and philosophical pain are all present
+
+### 4. Objection Prevention
+
+- [ ] Pay-to-win objection answered
+- [ ] Install / friction objection answered
+- [ ] Trust / proof objection answered
+- [ ] Complexity / learning-curve objection answered
+- [ ] "Is anyone else playing?" objection answered
+
+### 5. Direct Ask
+
+- [ ] Every major section has a next action
+- [ ] CTAs use strong verbs (no "Learn More" / "Explore" / "Check it out")
+- [ ] The page asks the visitor to make a clear decision
+
+### 6. Follow-Up Path
+
+- [ ] Email capture is present in the body (not only the footer)
+- [ ] The lead magnet is specific and valuable
+- [ ] A transitional path exists for visitors not ready to play (Watch gameplay)
+
+Source: conversion principles cross-checked against the build spec
+([homepage-spec.md](homepage-spec.md)) and strategy reference
+([homepage-appendix.md](homepage-appendix.md) — Reality Gap model,
+Objection Library).

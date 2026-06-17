@@ -45,6 +45,57 @@ Legendary Arena is the only card game where:
 
 This is the foundation of all messaging.
 
+### Outcome-First Messaging Rule
+
+Legendary Arena does not sell "a web-based deck-building game" as the
+primary promise. It sells the shift from:
+
+- "My skill doesn't matter" → "My choices decide the match"
+- "The game feels rigged" → "Every result is provable"
+- "Rankings are meaningless" → "My rank means something real"
+
+Feature language (deterministic engine, PAR scoring, replay verification,
+content-as-data) may *support* the promise, but it must never *lead* a
+page. Translate it into internal-feeling language first — see
+[homepage-appendix.md § Copy Direction](homepage-appendix.md#copy-direction-anchor-to-internal-feelings).
+The visitor is the hero; Legendary Arena is the guide and the bridge, not
+the subject.
+
+---
+
+## Approved CTA Language
+
+CTAs ask for a decision. They use strong verbs and never default to weak,
+passive language. Pull from this bank; if a CTA isn't here or in the same
+spirit, it doesn't ship.
+
+**Direct (primary):**
+
+- Play Free
+- Play One Fair Game
+- Start a Match
+- Prove Your Rank
+
+**Transitional (lower-commitment):**
+
+- Watch Gameplay
+- Watch a Verified Replay
+- Get the Free Primer
+- See How Fair Play Works
+
+**Disallowed (no exceptions):**
+
+- Learn More
+- Explore
+- Check It Out
+- Click Here
+- Read More
+
+Suggested placement by context: hero primary → *Play Free*; hero
+secondary → *Watch Gameplay*; problem-section repeat → *Play One Fair
+Game*; proof section → *Watch a Verified Replay*; email capture → *Get
+the Free Primer*; bottom repeat → *Play Free*.
+
 ---
 
 ## Hero Section Specification (Grunt Test)
@@ -374,6 +425,45 @@ gotten a result. The visitor is asked to "Play now" on faith alone.
 
 ---
 
+## Objection Handling (Removes Doubt)
+
+The agreement plan removes *fear* ("what if this is another rigged
+game?"). Objection handling removes *doubt* — the specific, last-mile
+hesitations that make an otherwise-convinced visitor bounce instead of
+clicking. Preempt them in one or two short lines each, near the decision
+point (after proof, before the final CTA). No long FAQ paragraphs.
+
+The homepage must answer the five highest-friction objections:
+
+1. **Install friction** — "Do I have to install anything?"
+2. **Pay-to-win fear** — "Can someone just buy a better deck?"
+3. **Trust / manipulated outcome** — "How do I know the result was fair?"
+4. **Complexity / learning curve** — "Is this too hard to pick up?"
+5. **"Is anyone else playing?"** — social proof / activity.
+
+Each maps to an answer in the full
+[homepage-appendix.md § Objection Library](homepage-appendix.md#objection-library),
+which also carries the *commitment cost, not budget* framing: for a free
+game the real cost is time, trust, and cognitive load — so the answer is
+usually to lower that cost, not to argue. Answers must stay tied to claims
+the product can actually back.
+
+### Objection Section (Homepage Copy)
+
+**Headline**
+
+> Questions before you play?
+
+**Q&A (short)**
+
+> **Do I need to install anything?** No — play in your browser.
+> **Can someone buy a better deck?** No. No purchasable power.
+> **How do I know a result is fair?** Every score links to a replay you can verify.
+> **Is it hard to learn?** Watch one game first, then play. Most learn it in 10 minutes.
+> **Is anyone else playing?** See the leaderboard, Discord, and live tournaments.
+
+---
+
 ## Final Homepage Output (Reference Build)
 
 This is the assembled page as it should ship. Each section references
@@ -447,6 +537,18 @@ the spec above for rationale and audit criteria.
 
 ---
 
+**Objections**
+
+> Questions before you play?
+>
+> - **Install anything?** No — play in your browser.
+> - **Buy a better deck?** No. No purchasable power.
+> - **How do I know it's fair?** Every score links to a replay you can verify.
+> - **Hard to learn?** Watch one game first. Most learn it in 10 minutes.
+> - **Anyone else playing?** See the leaderboard, Discord, and live tournaments.
+
+---
+
 **CTA**
 
 > Play Free
@@ -470,11 +572,12 @@ the spec above for rationale and audit criteria.
 | 11 | **Identity transformation** | Transformation — from/to | Results | Needs creation |
 | 12 | **Testimonials / player quotes** | Guide (authority) | Results | Needs creation |
 | 13 | **Traction metrics** | Guide (authority) | Results | Needs creation |
-| 14 | **CTA (third repeat)** | Call to Action (direct) | — | Needs creation |
-| 15 | **Upcoming tournaments** | Ends in Success — active community | Results | Exists |
-| 16 | **Featured products** | Ends in Success — ecosystem depth | Results | Exists |
-| 17 | **Lead generator / email capture** | Call to Action (transitional) | Results | Exists in footer, needs promotion |
-| 18 | **Community links** | Guide (authority) | Results | Exists in footer, needs promotion |
+| 14 | **Objection handling (FAQ)** | The Plan (agreement) — removes doubt | Results | Needs creation |
+| 15 | **CTA (third repeat)** | Call to Action (direct) | — | Needs creation |
+| 16 | **Upcoming tournaments** | Ends in Success — active community | Results | Exists |
+| 17 | **Featured products** | Ends in Success — ecosystem depth | Results | Exists |
+| 18 | **Lead generator / email capture** | Call to Action (transitional) | Results | Exists in footer, needs promotion |
+| 19 | **Community links** | Guide (authority) | Results | Exists in footer, needs promotion |
 
 ---
 
@@ -593,6 +696,13 @@ If any answer requires interpretation or scrolling, the hero fails.
 - [ ] Addresses customer fears (risk, fairness, effort)
 - [ ] Commitments are specific (no vague promises)
 
+**Objection Handling**
+
+- [ ] Top 5 objections preempted (install, pay-to-win, trust, complexity, "anyone playing?")
+- [ ] Each answered in one or two short lines (no FAQ paragraphs)
+- [ ] Placed near the decision point (after proof, before final CTA)
+- [ ] Answers tied to real product claims (no invented capabilities)
+
 ---
 
 ### 5. CTA System (Enforced)
@@ -694,6 +804,7 @@ BLOCKER (must fix before ship):
 MAJOR (must fix before marketing spend):
 
 - No plan section (section 4)
+- No objection handling (section 4)
 - No proof or authority signals (section 7)
 - No results or transformation (section 6)
 - Pillars not mapped to problem levels (section 3)

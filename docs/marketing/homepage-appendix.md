@@ -333,6 +333,40 @@ before higher ones:
 
 ---
 
+## Reality Gap Messaging Model
+
+A complementary lens on the SB7 story arc, useful as a fast sanity check
+for any marketing surface (homepage, video, email, ad). Every surface
+should make three things explicit:
+
+1. **Current Reality** — what the player is dealing with now.
+2. **Future Reality** — what the player wants instead.
+3. **Bridge** — how Legendary Arena moves them from one to the other.
+
+This is the same machinery SB7 already supplies — Current Reality is the
+**problem + story gap**, Future Reality is the **success vision +
+identity transformation**, and the Bridge is the **product + plan**. The
+reason to name it separately is the failure mode it catches: a surface
+that states a current reality and a future reality but never makes
+Legendary Arena the *explicit* bridge between them has described a
+problem without selling the resolution.
+
+### Legendary Arena Default Gap
+
+**Current Reality:** Players are stuck in systems where money, grind,
+hidden mechanics, or unverifiable scoring make skill feel irrelevant.
+
+**Future Reality:** Players want a fair game where their decisions
+matter, their results can be proven, and their rank means something.
+
+**Bridge:** Legendary Arena removes purchasable power, exposes verifiable
+outcomes, and ties recognition to replay-confirmed performance.
+
+This maps directly to the core positioning: every game is fair, every
+result is provable, every rank means something.
+
+---
+
 ## Problems Legendary Arena Solves (Full Catalog)
 
 The 28 problems below are derived from the Vision & Direction document,
@@ -728,8 +762,45 @@ The 28 problems collapse into four dominant themes for homepage messaging:
 The strongest anchoring villain for the homepage is **the pay-to-win
 system** — it's universally understood, emotionally resonant, and
 immediately positions Legendary Arena as the alternative. The
-scalability theme (#21-25) is a powerful secondary hook for players
+scalability theme (#21-28) is a powerful secondary hook for players
 who already love the physical game and feel the friction growing.
+
+---
+
+## Objection Library
+
+The agreement plan (the Fair Play Promise) removes *fear*; this library
+removes *doubt*. These are the specific objections a visitor or viewer
+raises silently before they bounce — and the one-line answer that
+defuses each. Group them the way buyers actually hesitate: circumstance,
+other people, self-doubt, and (the one unique to this product) trust.
+
+**Commitment cost, not budget.** For a free, browser-based game, the
+conversion equivalent of "can they afford it?" is not money — it's
+*commitment cost*: the time, trust, and cognitive load required to try.
+Most objections below are commitment-cost objections in disguise, and the
+answer is almost always to *lower that cost* (play instantly, no install,
+watch first) rather than to argue.
+
+| Type | Objection (player's silent thought) | Pre-emptive answer | Catalog tie |
+|------|-------------------------------------|--------------------|-------------|
+| Circumstance | "I don't want to install anything." | Play instantly in your browser. | #22, #23 |
+| Circumstance | "I don't want another grind." | No time-gates, no energy timers — the full surface from day one. | #2 |
+| Circumstance | "I don't want to pay to compete." | No purchasable power. Nothing that affects a match is for sale. | #1 |
+| Other people | "Will my friends get it?" | Watch gameplay first, or send them a replay link. | #17, #18 |
+| Other people | "Is anyone else even playing?" | Point to live signals — Discord, tournaments, the public leaderboard. *(Honest gap today: these need to surface on the homepage body, not just the footer.)* | #14, #27 |
+| Self-doubt | "I'm not sure I'm good enough." | Start with the How-to-Play walkthrough — learn the board before you commit. | #8 |
+| Self-doubt | "Digital versions always get the rules wrong." | Rules are enforced exactly — every timing window and edge case matches the official errata. | #11, #12, #13 |
+| Trust | "How do I know the result was fair?" | Every score is tied to a replay you can re-run and verify yourself. | #4, #5, #10, #24 |
+
+**Usage:** The homepage surfaces the five highest-friction objections as
+a short objection-handling block (see
+[homepage-spec.md](homepage-spec.md)). Videos address the single
+objection most relevant to their topic in-script (see
+[video-production-workflow.md](video-production-workflow.md) Step 4).
+Email and ads pull from the full list as needed. Answers must stay tied
+to claims the product can actually back — never invent a capability to
+win an objection.
 
 ---
 
