@@ -5,7 +5,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const input = form.querySelector('input[type="email"]');
       const btn = form.querySelector('button[type="submit"]');
       const status = form.querySelector(".newsletter-status");
+      const sourceInput = form.querySelector('input[name="source"]');
       const email = input.value.trim();
+      const source = sourceInput ? sourceInput.value : "";
 
       if (!email) return;
 
@@ -19,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const res = await fetch("/api/subscribe", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ email }),
+          body: JSON.stringify(source ? { email, source } : { email }),
         });
         const data = await res.json();
 

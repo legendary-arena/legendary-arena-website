@@ -531,12 +531,10 @@ would route signups by origin (homepage vs. footer vs. a specific
 video) and by interest, so e.g. fairness-driven signups receive more of
 that content.
 
-**Forward hedge (drafted, pending a WP):** a change to capture signup
-source at submission time is drafted (see "Signup source capture"
-below) so the provenance data will exist when segmentation is built —
-but it is **not acted upon** in v1, and the code is parked rather than
-committed (the site-file edit needs a governing WP). No segmented
-sends, no conditional logic.
+**Forward hedge (shipped, WP-245):** signup source is captured at
+submission time (see "Signup source capture" below) so the provenance
+data exists when segmentation is built — but it is **not acted upon** in
+v1. No segmented sends, no conditional logic.
 
 **Build trigger:** ≥2 meaningfully distinct, sufficiently large source
 cohorts exist in the captured data, AND weekly send volume is high
@@ -571,13 +569,10 @@ ingestion is deferred). Closing the loop:
 **Build trigger:** the site-analytics ingestion WP lands. The Brevo
 goals are a thin add on top of it.
 
-### Signup source capture (forward hedge — drafted, pending a WP)
+### Signup source capture (forward hedge — shipped, WP-245)
 
-To keep the segmentation option open without acting on it, a change to
-capture where each contact came from is drafted. The code is written
-and parked, but **not yet committed**: the marketing site-file commit
-hook requires a `WP-NNN:` prefix for `assets/` and `layouts/` edits, so
-the hedge ships under its own lightweight WP. The drafted change:
+To keep the segmentation option open without acting on it, the signup
+path captures where each contact came from (shipped under WP-245):
 
 - The newsletter form (`layouts/_partials/newsletter-form.html`) emits
   a `source` value — its render location (`cta`, `footer`,
@@ -589,7 +584,7 @@ the hedge ships under its own lightweight WP. The drafted change:
   subscription still succeeds. Source capture is best-effort; lead
   capture never breaks.
 
-**Brevo prerequisite (for when the hedge ships):** create a text
+**Brevo prerequisite:** create a text
 contact attribute named `SIGNUP_SOURCE` in the Brevo dashboard. Until
 it exists, source values are silently dropped (by design) and only the
 email is stored.
