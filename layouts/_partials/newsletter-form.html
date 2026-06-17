@@ -7,6 +7,10 @@
        success/error messaging and no page reload.
 */ -}}
 <form class="newsletter-form" action="/api/subscribe" method="POST" aria-label="Newsletter signup">
+    {{- /* Best-effort signup provenance for future segmentation. Defaults
+           to the form's render location (.id); callers may override with
+           an explicit .source param. Captured now, acted on later. */ -}}
+    <input type="hidden" name="source" value="{{ .source | default .id }}" />
     <label for="newsletter-email-{{ .id }}">{{ .heading | default "Stay in the loop" }}</label>
     <p class="newsletter-desc">{{ .description | default "Get patch notes, new cards, and tournament announcements. No spam — unsubscribe any time." }}</p>
     <div class="newsletter-input-group">
