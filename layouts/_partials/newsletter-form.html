@@ -11,6 +11,19 @@
            to the form's render location (.id); callers may override with
            an explicit .source param. Captured now, acted on later. */ -}}
     <input type="hidden" name="source" value="{{ .source | default .id }}" />
+    {{- /* Honeypot spam trap. A real user never sees or fills this field;
+           a form-scraping bot that auto-fills every input will. The server
+           (functions/api/subscribe.js) silently drops any submission with a
+           non-empty `company`. Off-screen (not type=hidden / display:none)
+           so naive bots still fill it; aria-hidden + tabindex=-1 keep it out
+           of the a11y tree and tab order; autocomplete=off keeps browsers
+           from autofilling it for a legitimate user. `company` is not a
+           standard autofill token, which further reduces false positives. */ -}}
+    <div class="newsletter-hp" aria-hidden="true" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden">
+        <label for="newsletter-company-{{ .id }}">Company (leave this blank)</label>
+        <input type="text" id="newsletter-company-{{ .id }}" name="company"
+               tabindex="-1" autocomplete="off" />
+    </div>
     <label for="newsletter-email-{{ .id }}">{{ .heading | default "Stay in the loop" }}</label>
     <p class="newsletter-desc">{{ .description | default "Get patch notes, new cards, and tournament announcements. No spam — unsubscribe any time." }}</p>
     <div class="newsletter-input-group">
