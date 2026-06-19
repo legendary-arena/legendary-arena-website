@@ -137,18 +137,20 @@ funnel integrity check) without retrofit.
 | WP-019 | Snipcart shopping cart with Stripe checkout | ✅ Done | — | ~1 day |
 | WP-020 | Newsletter & blog funnel enrichment | ✅ Done (2026-05-13) | WP-016, WP-019 | ~half-day |
 | WP-021 | Funnel analytics baseline | ✅ Done (2026-05-14) | WP-018, WP-020 | ~1 hour |
+| WP-022 | Home page sections (hero image, upcoming tournaments, featured products) | ✅ Done (2026-05-15) | WP-004 | ~half-day |
 | WP-023 | Diorama product-line landing page (`/diorama/`) | ✅ Done (2026-06-08) | WP-010, WP-014, WP-015 | ~half-day–1 day |
 | WP-024 | Diorama page — product image + placeholder buy button | 🔄 In progress | WP-023, WP-019 | ~1 hour |
-| WP-027 | Header conversion links (Play + Cards in `menu.main`) | 🔄 In review (2026-06-18, PR #50) | WP-010 | ~15 min |
-| WP-028 | Newsletter honeypot spam trap | 🔄 In review (2026-06-18, PR #51) | WP-015 | ~30 min |
+| WP-025 | Search demand-signal instrumentation (Plausible) | ⏸️ Pending (drafted 2026-06-11) | WP-005 | ~1–2 hours |
+| WP-026 | Site favicon | ✅ Done (2026-06-12) | — | ~15 min |
+| WP-027 | Header conversion links (Play + Cards in `menu.main`) | ✅ Done (2026-06-18) | WP-010 | ~15 min |
+| WP-028 | Newsletter honeypot spam trap | ✅ Done (2026-06-18) | WP-015 | ~30 min |
 
 **Total realistic effort:** ~9–14 days of focused work.
 
-> **Catalog note (2026-06-18):** this summary table is loosely maintained
-> and froze around WP-024 — WP-022, WP-025, and WP-026 were shipped/drafted
-> without rows here; `docs/ai/WORK_INDEX.md` is the live registry. WP-027 and
-> WP-028 are added above for traceability; backfilling 022/025/026 is a
-> separate cleanup if desired.
+> **Catalog note (2026-06-18):** this summary table is now caught up through
+> WP-028 — WP-022, WP-025, and WP-026 (previously tracked only in
+> `docs/ai/WORK_INDEX.md`) have been backfilled above. `docs/ai/WORK_INDEX.md`
+> remains the live registry for phase grouping and status detail.
 
 ---
 
