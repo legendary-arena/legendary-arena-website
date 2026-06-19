@@ -139,8 +139,16 @@ funnel integrity check) without retrofit.
 | WP-021 | Funnel analytics baseline | ✅ Done (2026-05-14) | WP-018, WP-020 | ~1 hour |
 | WP-023 | Diorama product-line landing page (`/diorama/`) | ✅ Done (2026-06-08) | WP-010, WP-014, WP-015 | ~half-day–1 day |
 | WP-024 | Diorama page — product image + placeholder buy button | 🔄 In progress | WP-023, WP-019 | ~1 hour |
+| WP-027 | Header conversion links (Play + Cards in `menu.main`) | 🔄 In review (2026-06-18, PR #50) | WP-010 | ~15 min |
+| WP-028 | Newsletter honeypot spam trap | 🔄 In review (2026-06-18, PR #51) | WP-015 | ~30 min |
 
 **Total realistic effort:** ~9–14 days of focused work.
+
+> **Catalog note (2026-06-18):** this summary table is loosely maintained
+> and froze around WP-024 — WP-022, WP-025, and WP-026 were shipped/drafted
+> without rows here; `docs/ai/WORK_INDEX.md` is the live registry. WP-027 and
+> WP-028 are added above for traceability; backfilling 022/025/026 is a
+> separate cleanup if desired.
 
 ---
 
