@@ -122,6 +122,28 @@ enableRobotsTXT = true
   url = "/brand/"
   weight = 30
 
+# Play / Cards — primary conversion paths surfaced in the header
+# (previously footer-only; see [[menu.footer]] below). These are the
+# first EXTERNAL items in menu.main. The header partial
+# (layouts/_partials/header.html lines 117-124) detects external links
+# via `findRE "://" .URL` and renders the outbound-link SVG icon. Note:
+# unlike footer.html, the header partial does NOT add
+# target="_blank" rel="noopener" — external header links open in the
+# same tab. That is intentional for Play (a destination, not a reference
+# link); if same-tab is ever wrong for these, the fix is in header.html,
+# not here.
+[[menu.main]]
+  identifier = "play"
+  name = "Play"
+  url = "https://play.legendary-arena.com/"
+  weight = 40
+
+[[menu.main]]
+  identifier = "cards"
+  name = "Cards"
+  url = "https://cards.barefootbetters.com/"
+  weight = 50
+
 # Footer menu — iterated by layouts/_partials/footer.html
 # (introduced by WP-010). PaperMod does not iterate
 # site.Menus.footer natively, so the override is the only consumer.
