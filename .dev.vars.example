@@ -1,0 +1,22 @@
+# Local-dev secrets for the Cloudflare Pages Functions runtime.
+#
+# Copy this file to `.dev.vars` (which is gitignored — never commit it)
+# and fill in real values, then run:
+#
+#     npx wrangler pages dev public
+#
+# `.dev.vars` provides the same environment variables that are set in the
+# Cloudflare Pages dashboard for production. They back the /api/subscribe
+# function (functions/api/subscribe.js), which creates the newsletter
+# contact in Brevo.
+#
+# Where to get the values: the Brevo dashboard
+#   - API key:  Settings → SMTP & API → API Keys (v3 key)
+#   - List ID:  Contacts → Lists → (your newsletter list) → the numeric ID
+# See the "Brevo Email Pipeline" wiki page for the full account map.
+
+# Brevo API v3 key (secret — do not share or commit).
+BREVO_API_KEY=
+
+# Numeric ID of the Brevo contact list new subscribers are added to.
+BREVO_LIST_ID=
