@@ -83,6 +83,20 @@ describe("onRequestPost", () => {
     expect(data.error).toBe("Invalid email address.");
   });
 
+  it("silently accepts and skips Brevo when the honeypot is filled", async () => {
+    global.fetch = vi.fn();
+
+    const ctx = makeContext({
+      body: { email: "bot@example.com", company: "Acme Spam Co" },
+    });
+    const res = await onRequestPost(ctx);
+    const data = await res.json();
+
+    expect(res.status).toBe(200);
+    expect(data).toEqual({ ok: true });
+    expect(fetch).not.toHaveBeenCalled();
+  });
+
   it("returns 415 for wrong content type", async () => {
     const reqHeaders = new Headers({ "Content-Type": "text/plain" });
     const request = new Request("https://www.legendary-arena.com/api/subscribe", {

@@ -72,7 +72,21 @@ export async function onRequestPost(context) {
       );
     }
 
-    const { email, source } = await context.request.json();
+    const { email, source, company } = await context.request.json();
+
+    // Honeypot: `company` is an off-screen field in newsletter-form.html
+    // that real users never see or fill. A non-empty value means a
+    // form-scraping bot. Return a fake success so the bot gets no signal
+    // to adapt, and never touch Brevo. This catches naive form-scrapers;
+    // it does NOT stop a bot that POSTs straight to this endpoint without
+    // the field — the Origin allowlist and email validation below are the
+    // other layers.
+    if (typeof company === "string" && company.trim() !== "") {
+      return new Response(
+        JSON.stringify({ ok: true }),
+        { status: 200, headers: { "Content-Type": "application/json", ...corsHeaders } }
+      );
+    }
 
     if (!email || typeof email !== "string") {
       return new Response(
