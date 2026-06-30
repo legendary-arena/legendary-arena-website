@@ -144,6 +144,27 @@ enableRobotsTXT = true
   url = "https://cards.barefootbetters.com/"
   weight = 50
 
+# Sign in / My account — link to the game's existing Hanko sign-in and
+# profile on play.legendary-arena.com. Decided by engine-repo DECISIONS
+# D-24084 (2026-06-30): www stays a static marketing surface and does NOT
+# own an auth surface; it links to play. This finally adds the "Log In"
+# entry WP-027 deferred ("no marketing-site login URL exists yet"). Same
+# external-link treatment as Play/Cards (outbound icon via header.html's
+# findRE "://"). Passwordless model — copy is "Sign in" / "My account",
+# never "Log in / Log out" (the static site cannot know auth state) and
+# never "change password".
+[[menu.main]]
+  identifier = "signin"
+  name = "Sign in"
+  url = "https://play.legendary-arena.com/?route=login"
+  weight = 60
+
+[[menu.main]]
+  identifier = "account"
+  name = "My account"
+  url = "https://play.legendary-arena.com/?route=me"
+  weight = 70
+
 # Footer menu — iterated by layouts/_partials/footer.html
 # (introduced by WP-010). PaperMod does not iterate
 # site.Menus.footer natively, so the override is the only consumer.
