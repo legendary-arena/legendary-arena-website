@@ -32,6 +32,23 @@ packs available through **Legendary Supporter Subscriptions**.
 | Premium sound & theme packs | Digital asset | One-Time / Subscription (rotating) |
 | Limited card-back designs | Digital cosmetic | One-Time / Subscription |
 
+### Forge-synergistic media products (higher-margin, harder to copy)
+
+Built from the player's own history (same data, presentation tooling only — not
+enhanced results). These are the differentiators a software-only competitor
+can't match, because they bridge to the physical Forge line:
+
+| Product | Format | Notes |
+|---------|--------|-------|
+| "Print my season" collectible poster | Print-ready / print-on-demand | Career/season history as wall art |
+| Campaign-history diorama card | Digital + Forge tie-in | A Forge-style card showing the player's campaign |
+| Season recap book | Digital PDF (optional print) | Statement-quality year-in-review |
+| Career highlight reel | Rendered video | Personal-bests montage |
+| Printable certificates | Print-ready PDF | Scenario/tournament milestones |
+
+Fairness note: all of these package *the player's own data* more beautifully —
+never better statistics, hidden information, or competitive intelligence.
+
 ## The gate before launch (do not skip)
 
 **IP / royalty routing.** Printables and card-backs are derived from

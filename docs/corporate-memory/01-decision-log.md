@@ -143,6 +143,25 @@ descriptive surface notes added to the ewiki `Monetization Model` page;
 prioritization/sequencing stays in `docs/product/`, not the citing ewiki page.
 Fairness guardrails unchanged.
 
+### 2026-07-04 — Keep the four-stream model; add a "no randomness" guardrail
+
+Reviewed three further monetization proposals (creator/community publishing,
+collectible identity, premium data/media). Decision: **keep the four canonical
+VISION streams — do not add a fifth.** Creator/community publishing already lives
+under Enterprise & Organized-Play Licensing (whose scope explicitly names
+"content creators") and overlaps the committed Tournament OS surface; the other
+two are expansions of existing cosmetics/convenience. A fifth stream would be a
+VISION amendment for no real gain. Two genuine adopts extracted: (1) an explicit
+**"no randomness" guardrail** — all purchases deterministic, fully disclosed,
+purchase-known; no loot boxes/gacha/mystery goods (mirrors VISION's cosmetics
+language, forecloses predatory drift); (2) **Forge-synergistic media SKUs**
+("print my season" poster, campaign-history diorama card, recap book, highlight
+reel, certificates) added as candidates to the store rollout.
+**Impact:** no-randomness guardrail added to `docs/product/profile-features-free-
+vs-paid.md` + ewiki `Monetization Model` page; media SKUs added to
+`docs/product/digital-goods-store-rollout.md`. No VISION change; stream count
+stays at four.
+
 <!-- Append new entries below this line. Copy the heading format:
 ### YYYY-MM-DD — <decision>
 <one paragraph: what + why>
