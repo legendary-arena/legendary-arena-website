@@ -1,6 +1,6 @@
 # Profile Features — Free vs. Paid
 
-**Status: adopted policy (locked 2026-07-03).** This does **not** invent a
+**Status: adopted policy (locked 2026-07-03; amended 2026-07-04 — history depth gated + scoreboard surface added).** This does **not** invent a
 monetization model — the canonical revenue model already exists in engine
 `docs/01-VISION.md` §Financial Sustainability ("No Margin, No Mission"), which
 authorizes Supporter Subscriptions, one-time cosmetic purchases, premium
@@ -82,11 +82,47 @@ free profile sabotages the acquisition flywheel that the profile exists to feed.
 | **Badges & achievements** | All earned badges visible | More showcase slots, custom ordering, "Featured Highlights" | Badges are *earned through mastery* — keep them prominent on free. Paid = better presentation only. |
 | **Teams / affiliations** | Basic team display | Custom team flair, verified team badge, priority team-page features | Core social feature stays accessible. |
 | **Replay / scenario gallery** | Basic recent activity; replay verification | Larger "Highlights" gallery, custom ordering, embeddable public replays | Core verification free; polish paid. |
-| **Stats / history** | Personal history visible (scenarios cleared, best PAR delta, etc.) | Nicer visualizations, comparison tools, export | **Never** dress this up so it reads as "better stats because I paid." Same data; paid only changes presentation. |
+| **Stats / history** | **Recent** personal history + basic stats (scenarios cleared, best PAR delta — enough to feel like a real player) | **Full lifetime depth** + search/filters, advanced visualizations, dashboards, export (same data) | Depth + tooling are fair to gate (no gameplay advantage). The only hard line: paid must never make identical results *look better* or rank higher. |
 | **Privacy controls** | Basic (public / friends / private) | Granular per-section controls, "appear offline" | Good paid convenience. |
 | **Profile theme / flair** | None | Dark/gold prestige themes, animated elements, profile effects | Pure prestige; on-brand for "legendary." |
 
 ---
+
+## Scoreboard & performance surfaces
+
+The paid convenience/cosmetic layer extends to the player-facing scoreboard and
+stats surfaces in **arena-client** (`play.legendary-arena.com` — the WP-054 /
+WP-149 public-leaderboard and personal-stats work). This is *not* the internal
+`ewiki.legendary-arena.com/scoring/` engineering doc; that's a wiki page behind
+Cloudflare Access, not a product surface.
+
+Same filter as everywhere else: **anything that doesn't confer a gameplay
+advantage (NG‑1…NG‑7) defaults to paid** — leaving fair convenience free just
+gives away revenue for no fairness reason (no margin, no mission).
+
+| Feature | Free | Paid (Legendary Pass) |
+|---------|------|------------------------|
+| **History depth** | Recent runs (rolling window / capped count) | Full lifetime history + search & filters |
+| **Visualizations** | Basic charts | Rich interactive charts, trend lines, PAR-delta breakdowns, consistency views (same data) |
+| **Dashboards / views** | One default view | Multiple saved custom dashboards + advanced filters |
+| **Export / sharing** | Basic copy / simple image | High-quality branded image / PDF exports of personal bests |
+| **Highlights / pinning** | Basic | Pin/feature runs that surface into profile showcase slots |
+| **Priority loading** | Standard | Handles very large histories without degrading |
+| **Supporter mark** | None | Small, clearly-labeled "Legendary Supporter" badge on public views (recognition, never rank) |
+
+**Comparison tooling is the one item to watch on fairness.** Comparing against
+public examples is part of how a player *learns to optimize*, so free users keep
+a fair baseline — view and compare against public examples plus a modest number
+of comparison slots. Paid expands the slot count and adds the better side-by-side
+replay viewer. Gate the *tooling and quantity*, never the ability to learn from
+public examples, so extra slots stay convenience and never become an optimization
+advantage.
+
+Always free on this surface: your own best PAR delta per scenario, replay
+verification and access to your own replays, and the quality-normalized public
+scenario views. Never paid: anything that improves actual performance, hidden or
+boosted leaderboard positions, or making a paid player's identical results look
+better than a free player's.
 
 ## What changed from the first draft, and why
 

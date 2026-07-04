@@ -2,7 +2,7 @@
 
 **Append-only.** Never edit a past entry. Corrections are new entries that
 supersede, with a pointer back. Newest at the bottom.
-**Last updated:** 2026-07-03
+**Last updated:** 2026-07-04
 
 ---
 
@@ -92,6 +92,30 @@ Brand page (`wiki/monetization-model.md`).
 **Impact:** closes the 🔴 "monetization model undocumented" open question; the
 profile paid layer can be built against a locked boundary (timed post-population
 per the doc). Amendments to the split go through a new decision-log entry.
+
+### 2026-07-04 — Amend profile boundary: gate history depth + extend paid layer to the scoreboard surface
+
+Amends the 2026-07-03 profile free/paid boundary. The prior boundary listed
+"personal stats/history — always free," which over-protected a fair, proven
+revenue surface. Corrected filter: the non-negotiables are **no margin, no
+mission** (the business must monetize) and **fairness / no pay-to-win** — "free"
+is a lever, not a principle. Anything that confers no gameplay advantage
+(NG‑1…NG‑7) therefore defaults to **paid**. Decisions: (1) **history depth is
+gated** — free gets recent personal history + basic stats; paid gets full
+lifetime depth, search/filters, advanced visualizations, dashboards, and export
+(same data, no advantage); (2) the paid convenience/cosmetic layer **extends to
+the arena-client scoreboard/stats surface** (`play.legendary-arena.com`, the
+WP-054/149 work — *not* the internal `ewiki/scoring/` doc); (3) **comparison
+tooling** is the one fairness-sensitive item — free keeps a fair baseline (view +
+compare against public examples + modest slots), paid expands slot count and the
+side-by-side viewer, gating quantity/tooling only, never the ability to learn
+from public examples. Priority-matchmaking queues remain monetizable per VISION
+(an earlier proposal's "never paid" claim was wrong).
+**Impact:** `docs/product/profile-features-free-vs-paid.md` updated (stats/history
+row + new "Scoreboard & performance surfaces" section); ewiki `Monetization
+Model` page gets a matching scoreboard note. Reverses the 2026-07-03 "stats/
+history always free" call for depth/tooling; own-data *access* and fairness stay
+intact.
 
 <!-- Append new entries below this line. Copy the heading format:
 ### YYYY-MM-DD — <decision>
