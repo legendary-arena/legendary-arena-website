@@ -186,6 +186,10 @@ that isn't there yet. Ship free now; time the paid layer to the audience.
    absolutely.
 2. **Basic identity is always free.** Unique handle + public URL from day one.
 3. **Free must feel complete, never like a trial.**
-4. **Test perception before shipping.** Show playtesters / Discord mockups of
+4. **No randomness.** Every purchase is deterministic, fully disclosed, and
+   purchase-known — no loot boxes, gacha, or randomized/mystery goods. (Mirrors
+   VISION's "deterministic, fully disclosed" cosmetics language; forecloses
+   predatory-monetization drift.)
+5. **Test perception before shipping.** Show playtesters / Discord mockups of
    free vs. paid and ask: *"Does the free version still feel like a real player in
    this game?"* If not, move the line.
