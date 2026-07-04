@@ -117,6 +117,32 @@ Model` page gets a matching scoreboard note. Reverses the 2026-07-03 "stats/
 history always free" call for depth/tooling; own-data *access* and fairness stay
 intact.
 
+### 2026-07-04 — Commit two new revenue surfaces: Digital Goods Store + Tournament OS
+
+Commits two applications of existing VISION revenue streams to new surfaces —
+neither is a new stream, both fairness-safe (no gameplay advantage).
+
+- **Premium Digital Goods & Printables Store** (priority: **first**). Printable
+  playmats, art books, premium sound/theme packs, limited card-back tools sold on
+  `legendary-arena.com`. Maps to **One-Time Cosmetic & Presentation Purchases**
+  (+ rotating packs via Subscriptions). Rides the existing Snipcart/Stripe
+  commerce layer (WP-019); strong synergy with the physical Forge line.
+  **Caveat:** printables derive from Marvel/Upper Deck IP — royalty routing
+  (VISION: royalties on *all* revenue) and licensing scope are launch
+  prerequisites, heavier than a UI cosmetic.
+- **Tournament OS add-ons** (priority: **high**, larger build). Branded
+  dashboards, automated reporting, private scenario libraries, priority support
+  for stores/leagues/organizers. Maps to **Enterprise & Organized-Play
+  Licensing**. **Boundary:** platform→organizer billing only; must never become a
+  vehicle for organizers billing players for profit (WP-097 /
+  `docs/TOURNAMENT-FUNDING.md`).
+- **Creator Tools & Embeds:** noted as a future direction, **not** committed.
+
+**Impact:** rollout one-pager at `docs/product/digital-goods-store-rollout.md`;
+descriptive surface notes added to the ewiki `Monetization Model` page;
+prioritization/sequencing stays in `docs/product/`, not the citing ewiki page.
+Fairness guardrails unchanged.
+
 <!-- Append new entries below this line. Copy the heading format:
 ### YYYY-MM-DD — <decision>
 <one paragraph: what + why>
