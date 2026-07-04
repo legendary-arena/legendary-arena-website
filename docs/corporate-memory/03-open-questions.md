@@ -11,11 +11,16 @@ Priority: 🔴 blocks revenue/strategy · 🟡 efficiency/clarity · 🟢 nice-t
 
 ## 🔴 Critical
 
-- **Game monetization model is undocumented.** The site funnels to play.*,
-  but there's no written subscription / tournament / IAP / cosmetics model.
-  The diorama line is the only documented near-term revenue. *Needed:* a
-  one-page model (free vs. paid boundary, if any) so KPIs track outcomes,
-  not just activity. *Do not invent one — this is a Jeff decision.*
+- ~~**Game monetization model is undocumented.**~~ **RESOLVED 2026-07-03.**
+  This bullet conflated two gaps, both now closed. (1) The model was never
+  undocumented — it's canonical in engine [`docs/01-VISION.md`](../01-VISION.md)
+  §Financial Sustainability (four fairness-safe streams, Upper Deck/Marvel
+  royalties, NG‑1…NG‑7); this bullet was simply wrong to say otherwise.
+  (2) The profile-page free/paid boundary — the one thing genuinely missing —
+  is now **locked** ([`docs/product/profile-features-free-vs-paid.md`](../product/profile-features-free-vs-paid.md),
+  published as the engine ewiki `Monetization Model` Brand page). Logged in
+  [`01-decision-log.md`](01-decision-log.md) (2026-07-03). *Diorama margin
+  model remains separately open — see below.*
 
 - **What does BarefootBetters sell?** Confirmed: it's a separate business
   identity from LA and the umbrella GitHub org (`barefootbetters`). Its

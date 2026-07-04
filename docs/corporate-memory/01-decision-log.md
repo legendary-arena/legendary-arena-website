@@ -2,7 +2,7 @@
 
 **Append-only.** Never edit a past entry. Corrections are new entries that
 supersede, with a pointer back. Newest at the bottom.
-**Last updated:** 2026-06-12
+**Last updated:** 2026-07-03
 
 ---
 
@@ -72,6 +72,26 @@ Unblocks site-side conversion measurement that WP-021 had to defer.
 Plausible account) still pending — see
 [`03-open-questions.md`](03-open-questions.md).
 **Impact:** funnel/conversion KPIs become measurable once the account is live.
+
+### 2026-07-03 — Monetization model confirmed (VISION) + profile free/paid boundary locked
+
+Corrects the record and closes an open question. The revenue model was never
+undocumented: engine [`docs/01-VISION.md`](../01-VISION.md) §Financial
+Sustainability ("No Margin, No Mission") is canonical — four fairness-safe
+streams (Supporter Subscriptions, one-time cosmetics, Premium Recognition Tiers,
+organized-play licensing), mandatory Upper Deck/Marvel royalties, and the hard
+rule that revenue never confers gameplay advantage (NG‑1…NG‑7). Newly decided:
+the **profile-page free/paid boundary is locked as proposed** — basic identity
+(unique handle + public URL) always free; the paid layer is prestige / cosmetic /
+convenience mapped onto VISION's streams; first handle change free, repeats paid;
+bio length is not a tier lever; supporter/recognition flair is allowed but must
+read as patronage, never rank; owning a Forge diorama unlocks cosmetic profile
+items. Full split: [`docs/product/profile-features-free-vs-paid.md`](../product/profile-features-free-vs-paid.md)
+(now adopted policy). Published reference: engine ewiki `Monetization Model`
+Brand page (`wiki/monetization-model.md`).
+**Impact:** closes the 🔴 "monetization model undocumented" open question; the
+profile paid layer can be built against a locked boundary (timed post-population
+per the doc). Amendments to the split go through a new decision-log entry.
 
 <!-- Append new entries below this line. Copy the heading format:
 ### YYYY-MM-DD — <decision>
