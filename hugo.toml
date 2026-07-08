@@ -144,26 +144,30 @@ enableRobotsTXT = true
   url = "https://cards.barefootbetters.com/"
   weight = 50
 
-# Sign in / My account — link to the game's existing Hanko sign-in and
-# profile on play.legendary-arena.com. Decided by engine-repo DECISIONS
-# D-24084 (2026-06-30): www stays a static marketing surface and does NOT
-# own an auth surface; it links to play. This finally adds the "Log In"
-# entry WP-027 deferred ("no marketing-site login URL exists yet"). Same
+# Account — single entry point to the game's Hanko auth + profile on
+# play.legendary-arena.com. Decided by engine-repo DECISIONS D-24084
+# (2026-06-30): www stays a static marketing surface and does NOT own an
+# auth surface; it links to play. This finally adds the "Log In" entry
+# WP-027 deferred ("no marketing-site login URL exists yet"). Same
 # external-link treatment as Play/Cards (outbound icon via header.html's
-# findRE "://"). Passwordless model — copy is "Sign in" / "My account",
-# never "Log in / Log out" (the static site cannot know auth state) and
-# never "change password".
-[[menu.main]]
-  identifier = "signin"
-  name = "Sign in"
-  url = "https://play.legendary-arena.com/?route=login"
-  weight = 60
-
+# findRE "://").
+#
+# One link, not two. Because the static site cannot know auth state
+# (D-24084), an earlier revision shipped BOTH "Sign in" (?route=login)
+# and "My account" (?route=me) side by side and let play resolve which
+# applied. That was redundant: in the play app `me` is a *guarded* route
+# (apps/arena-client routeAuthPolicy.isGuardedRoute) — a signed-out
+# visitor who lands on ?route=me is auto-redirected to ?route=login. So a
+# lone ?route=me link already covers both states (signed out → bounced to
+# login; signed in → profile), and the separate "Sign in" link did
+# nothing the account link didn't. Copy is the state-neutral "Account"
+# (never "Log in / Log out" — the static site still cannot know auth
+# state), and never "change password". Passwordless model.
 [[menu.main]]
   identifier = "account"
-  name = "My account"
+  name = "Account"
   url = "https://play.legendary-arena.com/?route=me"
-  weight = 70
+  weight = 60
 
 # Footer menu — iterated by layouts/_partials/footer.html
 # (introduced by WP-010). PaperMod does not iterate
