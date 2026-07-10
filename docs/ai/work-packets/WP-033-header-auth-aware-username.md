@@ -10,19 +10,27 @@ This file is the **session-ready execution pack**. The design source of truth is
 [`docs/03-ROADMAP.md`](../../03-ROADMAP.md). If this file and the roadmap
 conflict, the roadmap wins.
 
-## ⛔ STATUS: PARKED — do not execute until the prerequisite below is cleared
+## ✅ STATUS: EXECUTED 2026-07-09 (prerequisites cleared)
 
-**Blocking prerequisite (operator, Hanko Cloud — not a repo change):**
-Add `https://www.legendary-arena.com` to the Hanko tenant's **allowed origins**
-(Hanko Cloud dashboard for `HANKO_TENANT_BASE_URL`). Until then the Hanko SDK on
-`www` cannot obtain a session token and this WP renders nothing new. Per
-[engine-repo `docs/ops/DOMAINS.md` §Hanko](../../../../pcloud/BB/DEV/legendary-arena/docs/ops/DOMAINS.md),
-a new client origin must be allow-listed before its SDK works. This is testable
-in minutes once added: on `www`, `hanko.getSessionToken()` returns a JWT for a
-user who signed in on `play`.
+Both prerequisites are met and this WP is executed:
+- **Prereq 1 — Hanko allowed origins.** ✅ `https://www.legendary-arena.com` added
+  to the tenant's Allowed origins (operator, 2026-07-09).
+- **Prereq 2 — cross-subdomain session cookie.** ✅ engine **WP-347 / D-24137**
+  (PR #645) merged + deployed; the `hanko` cookie `Domain` is now
+  `.legendary-arena.com` (operator-confirmed), so `www` can read a `play.` login.
 
-**Do not open the execution PR until Jeff confirms the origin is added and a
-manual cross-origin session read succeeds.**
+**Amendment 2 (2026-07-09) — cookie-read design, NO Hanko SDK on www.** The
+original plan loaded the Hanko frontend SDK on `www` to call `getSessionToken()`.
+That is unnecessary: the `hanko` session cookie is JS-accessible (D-16002) and now
+parent-scoped (WP-347), and its value IS the bearer JWT — so `www` reads the
+cookie directly and calls `GET /api/me/profile`. No SDK bundle is loaded, which
+keeps the Lighthouse baseline untouched and removes all CSP/bundle risk. The Task
+below reflects this simpler design; Steps 1/3 supersede the SDK-load approach.
+
+**Live verification is operator-side.** A static-site auth integration cannot be
+unit-tested end to end (there is no real session in CI/jsdom). The DoD's live
+check — sign in on `play`, load `www`, see your name in the header — is confirmed
+in the operator's browser post-deploy.
 
 ## Working directory
 
@@ -71,77 +79,79 @@ intent; the decision is not final until that entry lands.
 
 ## Task
 
-### Step 1 — Auth-enhancement script (`assets/js/header-auth.js`, new)
+### Step 1 — Auth-enhancement script (`assets/js/header-auth.js`, new) — DONE
 
-A small, dependency-light progressive-enhancement module, loaded **deferred /
-on idle** so it never blocks first paint:
+A small vanilla-JS IIFE, loaded **deferred** so it never blocks first paint. NO
+Hanko SDK (Amendment 2):
 
-1. Lazy-import the Hanko **frontend SDK** (`@teamhanko/hanko-frontend-sdk` —
-   session read only; NOT `hanko-elements`) from the tenant configured for
-   `www`. The tenant base URL is injected as a build-time param (see Step 3);
-   no secret is involved (the frontend SDK uses only the public tenant origin).
-2. `const token = await hanko.getSessionToken()`. If falsy → **do nothing**
-   (the static "Account" label stays). This is the signed-out path.
-3. If a token exists, `fetch('https://api.legendary-arena.com/api/me/profile',
-   { headers: { Authorization: 'Bearer ' + token } })`. On non-200 → do nothing
-   (silent fallback, exactly like `play`'s `useAuthNav`).
-4. On 200, read `{ displayName, handleCanonical }` and resolve the label via a
-   copy of the `play` chain: `displayName.trim()` → `@handleCanonical` →
-   leave "Account". Swap the header entry's visible text to the resolved name;
-   keep its `href` pointing at `?route=me`.
+1. `readHankoToken()` — read the JS-accessible `hanko` cookie from
+   `document.cookie` (parent-scoped to `.legendary-arena.com` by WP-347; the
+   value IS the bearer JWT per D-16002). Absent/empty → return null (signed-out;
+   the static "Account" stays).
+2. `findAccountLabelElement()` — `document.querySelector('a[href*="?route=me"]')`
+   then its inner `<span>` (the Account entry is the only header link to
+   `?route=me`, WP-032; targeting by href needs no template hook, and the span
+   preserves the outbound-link icon on the anchor).
+3. If a token exists, `fetch(API_BASE + '/api/me/profile', { headers:
+   { Authorization: 'Bearer ' + token } })`. On non-200 / throw → silent no-op.
+4. On 200, `resolveLabel({ displayName, handleCanonical })` mirrors `play`'s
+   chain: `displayName.trim()` → `@handleCanonical` → null (leave "Account").
+   Set the span's `textContent` to the resolved name.
 
-Never throw; every failure path leaves the server-rendered "Account" intact.
-The API origin (`https://api.legendary-arena.com`) is a build-time param, not
-hard-coded, mirroring how the SPA uses `VITE_API_BASE_URL`.
+`API_BASE = 'https://api.legendary-arena.com'` is a documented constant (the www
+static site is single-environment, unlike the SPA's `VITE_API_BASE_URL`), and is
+already in the server CORS allowlist for the www origin. The Bearer token is
+sent as a header (not a cross-origin cookie), so no `credentials: 'include'` and
+no server credentials-CORS change is needed — same call shape as the SPA.
 
-### Step 2 — Header hook (`layouts/_partials/header.html`)
+### Step 2 — Load the script (`layouts/_partials/extend_footer.html`) — DONE
 
-Give the Account menu entry a stable hook the script can target (e.g. a
-`data-la-auth-label` attribute or a known id on the `<a>`/`<span>`). Minimal
-markup change; the static text stays "Account" so the no-JS render is unchanged.
-Load `header-auth.js` with `defer` (or via the existing `extend_head.html`
-lazy-load pattern) so it is off the critical path.
+`resources.Get "js/header-auth.js" | minify | fingerprint` + `<script defer>`,
+mirroring the `newsletter.js` load. **No `header.html` change** — the script
+targets the Account link by href, so the static markup is byte-unchanged and the
+no-JS render is untouched. (Supersedes the original Step 2's `data-*` hook.)
 
-### Step 3 — Config wiring (`hugo.toml` params + `extend_head.html`)
+### Step 3 — Config wiring — NOT NEEDED (Amendment 2)
 
-Add two `params` (Hanko tenant base URL for `www`, API base URL) and surface
-them to the script (data attributes or a tiny inline `window.__LA_*` block).
-No secrets — both are public origins.
+No `hugo.toml` param and no Hanko tenant URL: the cookie-read design needs
+neither the SDK nor a tenant origin, and the API origin is the documented
+constant in Step 1.
 
-### Step 4 — Verify (post-Hanko-origin)
+### Step 4 — Verify — DONE (build) + operator live-verify
 
-- `hugo --minify` builds clean.
-- Lighthouse Performance still ≥ 90 on `/` (the SDK is lazy/deferred; confirm it
-  is not in the critical path — compare against `lighthouse-home-*.json`).
-- Signed-out: header shows "Account" (no network calls block render).
-- Signed-in (session created on `play`): header shows the player's name; the
-  link still targets `?route=me`.
+- ✅ `hugo --minify` builds clean; `header-auth.min.js` is deferred in
+  `public/index.html`; the built JS reads the `hanko` cookie; the Account link
+  renders as `<a href="…?route=me"><span>Account</span>`.
+- **Operator live-verify (post-deploy):** signed-out header shows "Account";
+  signed-in (session on `play`) header shows the player's name, link still
+  `?route=me`; Lighthouse Performance still ≥ 90 on `/` (the script is deferred,
+  off the critical path, and adds no bundle).
 
-## Cross-repo (engine repo — execution-time)
+## Cross-repo (engine repo)
 
-- **DECISIONS amendment:** add a new `D-241xx` to
-  `C:\pcloud\BB\DEV\legendary-arena\docs\ai\DECISIONS.md` amending D-24084 per
-  §Authority above (www auth-AWARE, still not auth-OWNING). Cite it from the
-  `hugo.toml` header comment (currently cites D-24084) at execution.
-- **No engine code change expected:** CORS already lists `www`; `/api/me/profile`
-  already returns the fields. If a preflight (`OPTIONS`) or `Access-Control`
-  header gap surfaces for the Bearer call from `www`, that is an engine-repo
-  fix under its own EC — surface it, do not patch `www` around it.
+- **DECISIONS amendment (D-24138):** a new engine-repo `docs/ai/DECISIONS.md`
+  entry amends D-24084 — `www` may become auth-AWARE (read the existing session
+  to personalize the header) while still NOT owning an auth surface (login /
+  profile stay on `play`). Landed as its own engine-repo `SPEC:` PR (not code).
+- **No engine code change:** CORS already lists `www`; `/api/me/profile` already
+  returns the fields; the Bearer call sends the token as a header (not a
+  cross-origin cookie), so no preflight/credentials-CORS gap arises — same call
+  shape the SPA already uses successfully.
 
 ## Definition of Done
 
-- [ ] Blocking prerequisite cleared: `www` origin added to Hanko allowed origins;
-      a manual `getSessionToken()` on `www` returns a JWT for a play-login.
-- [ ] `assets/js/header-auth.js` + header hook + config wiring landed.
-- [ ] `hugo --minify` clean; Lighthouse Performance ≥ 90 on `/` (SDK off the
-      critical path).
-- [ ] Signed-out header = "Account"; signed-in header = the player's name → still
-      links to `?route=me`.
-- [ ] Engine-repo `D-241xx` amendment to D-24084 landed and cited from
-      `hugo.toml`.
-- [ ] Commit on a `claude/*` branch → PR → `origin/main` (marketing repo);
-      the engine-repo amendment lands as its own commit in that repo.
-- [ ] Post-deploy: the live `www` header greets a signed-in player by name.
+- [x] Prereq 1 cleared — `www` in Hanko allowed origins (operator).
+- [x] Prereq 2 cleared — WP-347 / D-24137 (parent-scoped `hanko` cookie) deployed;
+      `Domain = .legendary-arena.com` operator-confirmed.
+- [x] `assets/js/header-auth.js` (cookie-read, no SDK) + deferred load in
+      `extend_footer.html` landed. No `header.html` / `hugo.toml` change needed.
+- [x] `hugo --minify` clean; `header-auth.min.js` deferred in the built output;
+      no bundle added (Lighthouse baseline untouched).
+- [x] Engine-repo **D-24138** amendment to D-24084 landed (its own `SPEC:` PR).
+- [x] Commit on a `claude/*` branch → PR → `origin/main` (marketing repo).
+- [ ] **Operator live-verify (post-deploy):** signed-out header = "Account";
+      signed-in (session on `play`) header = the player's name, link still
+      `?route=me`; Lighthouse Performance ≥ 90 on `/`.
 
 ## What's NOT in scope
 
