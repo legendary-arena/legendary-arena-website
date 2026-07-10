@@ -10,19 +10,37 @@ This file is the **session-ready execution pack**. The design source of truth is
 [`docs/03-ROADMAP.md`](../../03-ROADMAP.md). If this file and the roadmap
 conflict, the roadmap wins.
 
-## ⛔ STATUS: PARKED — do not execute until the prerequisite below is cleared
+## ⛔ STATUS: PARKED — do not execute until Prerequisite 2 (deploy) is cleared
 
-**Blocking prerequisite (operator, Hanko Cloud — not a repo change):**
-Add `https://www.legendary-arena.com` to the Hanko tenant's **allowed origins**
-(Hanko Cloud dashboard for `HANKO_TENANT_BASE_URL`). Until then the Hanko SDK on
-`www` cannot obtain a session token and this WP renders nothing new. Per
-[engine-repo `docs/ops/DOMAINS.md` §Hanko](../../../../pcloud/BB/DEV/legendary-arena/docs/ops/DOMAINS.md),
-a new client origin must be allow-listed before its SDK works. This is testable
-in minutes once added: on `www`, `hanko.getSessionToken()` returns a JWT for a
-user who signed in on `play`.
+**Amendment 1 (2026-07-09):** the original single "add the allowed origin"
+prerequisite was **incomplete** — allowed origins alone does not let `www` READ a
+`play.` login, because the `hanko` session cookie was host-scoped. There are two
+prerequisites; the second is a code+deploy step, not just a dashboard toggle.
 
-**Do not open the execution PR until Jeff confirms the origin is added and a
-manual cross-origin session read succeeds.**
+**Prerequisite 1 — Hanko allowed origins (operator). ✅ DONE 2026-07-09.**
+`https://www.legendary-arena.com` was added to the Hanko tenant's **Allowed
+origins** list (CORS + WebAuthn origins). This lets the Hanko SDK on `www` *talk*
+to the tenant.
+
+**Prerequisite 2 — cross-subdomain session cookie (engine WP-347). ⏳ PENDING
+DEPLOY.** The `hanko` session cookie was host-scoped, so `www` could not *read* a
+`play.` login even with the origin allow-listed. Engine **WP-347 / D-24137**
+(PR #645 in `legendary-arena`) sets `cookieDomain: '.legendary-arena.com'` on
+production hosts so the cookie is shared across subdomains. This WP is blocked
+until WP-347 is **merged + deployed** to play (and dashboard) AND the operator
+**re-signs-in once** (to replace the old host-scoped cookie). Verify: on `play`,
+DevTools → Application → Cookies → the `hanko` cookie `Domain` reads
+`.legendary-arena.com`; then on `www`, `hanko.getSessionToken()` returns a JWT.
+
+**Do not open the execution PR until WP-347 is deployed and a manual `www`
+cross-origin session read succeeds.** A static-site auth integration (Hanko SDK
+loaded on a Hugo page) cannot be unit-tested end to end, so the live session read
+is the only real verification — hence the hard deploy gate.
+
+**Not a blocker — the Hanko App URL.** The tenant's App URL is currently the
+`legendary-arena-play.pages.dev` preview URL (not `play.legendary-arena.com`),
+which binds passkeys to `.pages.dev`. That is tracked as a SEPARATE task; session
+sharing is independent of the passkey rpID, so it does not block this WP.
 
 ## Working directory
 
@@ -56,9 +74,14 @@ intent; the decision is not final until that entry lands.
 - `www` ships **no auth JS** and no Hanko SDK. It is deliberately static
   (D-24084) and Lighthouse-tuned (Performance ≥ 90; search assets are
   lazy-loaded for exactly this reason — see `extend_head.html`).
-- **Engine side is already ready** (verified 2026-07-08):
+- **Engine side** (CORS + fields ready; cross-subdomain cookie added by WP-347):
   - Server CORS allowlist already includes `https://www.legendary-arena.com`
     (`apps/server/src/server.mjs` `origins:` array).
+  - **Cross-subdomain session cookie — engine WP-347 / D-24137 (PR #645).** Sets
+    `cookieDomain: '.legendary-arena.com'` in the Hanko wrappers on production
+    hosts so `www`'s Hanko SDK can READ a `play.` login. **This WP hard-depends on
+    WP-347 being deployed** (see Prerequisite 2). Without it, `getSessionToken()`
+    on `www` returns null and the header never changes.
   - `GET /api/me/profile` authenticates by **Bearer JWT** (Hanko
     `getSessionToken()` → `Authorization: Bearer`, verified server-side via
     JWKS). It already returns `displayName` + `handleCanonical` (WP-305 /
