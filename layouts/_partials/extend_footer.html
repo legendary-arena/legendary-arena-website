@@ -1,6 +1,14 @@
 {{ $newsletter := resources.Get "js/newsletter.js" | minify | fingerprint }}
 <script src="{{ $newsletter.RelPermalink }}" defer></script>
 
+{{- /* Header auth-awareness (WP-033): deferred, off the critical path, so the
+       static "Account" header renders first and this only OPTIONALLY swaps in
+       the signed-in player's name. Reads the cross-subdomain `hanko` session
+       cookie directly (no Hanko SDK) per WP-347 / D-16002; www stays
+       auth-aware, not auth-owning (D-24084 as amended). */ -}}
+{{ $headerAuth := resources.Get "js/header-auth.js" | minify | fingerprint }}
+<script src="{{ $headerAuth.RelPermalink }}" defer></script>
+
 {{- /* Snipcart cart container + SDK (WP-019).
        The hidden div is Snipcart's mount point — it injects the
        cart UI here. data-api-key is the PUBLIC key (not a secret).
