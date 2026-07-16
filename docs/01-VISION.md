@@ -81,9 +81,10 @@ The registry migrated to `cards.legendary-arena.com` on 2026-07-16,
 aligning it with the LA brand (Decisions log; supersedes the 2026-05-07
 "stays at `cards.barefootbetters.com` for v1" entry). The migration
 landed on `cards.legendary-arena.com` rather than the originally
-projected `registry.legendary-arena.com`. The old domain still serves
-the registry with **no redirect** — 301 posture is an open item owned
-on the CF/engine side (`docs/corporate-memory/03-open-questions.md`).
+projected `registry.legendary-arena.com`. The old domain 301-redirects
+to the new one via a zone-level Redirect Rule on the
+`barefootbetters.com` CF zone (deployed + verified 2026-07-16; path and
+query string preserved — same mechanism as WP-006's apex→www rule).
 
 A future `api.legendary-arena.com` (Render-hosted Node server) will serve
 the game backend; this site does not interact with it directly.
@@ -95,8 +96,8 @@ The three sites share exactly one runtime artifact: brand tokens.
 - **Shared asset:** `https://www.legendary-arena.com/brand-tokens.css`
 - **Versioned and backward-compatible** within a major version
 - **Consumers:** `play.legendary-arena.com` and the registry viewer
-  (`cards.legendary-arena.com`; formerly `cards.barefootbetters.com`,
-  which still answers) must not assume internal structure
+  (`cards.legendary-arena.com`; the former `cards.barefootbetters.com`
+  301-redirects to it) must not assume internal structure
   beyond the documented CSS custom properties (`--la-color-*`,
   `--la-font-*`, `--la-space-*`)
 - **Local fallback:** consumers SHOULD bundle a local copy of the tokens
@@ -277,6 +278,7 @@ and what doesn't.
 | 2026-05-14 | **WP-021 — Funnel analytics baseline (2026-05-14)** Defined measurement contract for the email funnel: six stages (Capture, Confirm, Activate, Engage, Convert, Retain) with explicit metric formulas using Brevo-native unique counts. Conversion rate marked NOT YET MEASURABLE pending analytics platform selection. Baseline failure thresholds established for all measurable metrics (validation ranges, not success targets). Created append-only metrics log (`docs/email-metrics-log.md`) with per-send template including raw counts, reproducible derived metrics, UTM validation, threshold checks, and PASS/FAIL result. Snapshot semantics: metrics recorded ≥48h post-send and immutable after recording. | Governance-only WP converting the WP-018 engagement pipeline into a measurable, auditable system. All metrics are Brevo-native — no external tools, no inferred metrics. The measurement conventions enforce unique counts throughout (not totals) to prevent silent metric inflation. Baseline thresholds are framed as failure-detection ranges, not success targets — the distinction matters because early-stage data will be noisy and treating ranges as targets would generate false optimization pressure. The append-only metrics log with raw counts + reproducible derived metrics ensures every recorded percentage can be independently verified. UTM attribution validation uses URL string inspection (not visual rendering or redirect assumptions) per WP-020's contract. Site-side conversion tracking is deferred to a future analytics platform WP; the UTM params are already flowing so attribution data will be available when a platform is chosen. |
 | 2026-06-08 | **Diorama product line placed.** Canonical spec lives in `docs/product/` (`diorama-master-plan.md` authoritative; `diorama-gtm-and-resourcing.md` holds ICP / positioning / break-even). The website's role is to **market and sell** the line — diorama product/landing pages, shop via WP-019 Snipcart, a STEM/build content lane, and a diorama-ICP email funnel (extends WP-018/020) — **not** to build the physical kits, firmware, or curriculum. Website-facing slices enter `03-ROADMAP.md` as roadmap-designed WPs; the physical/firmware/curriculum build is tracked in the product plan's §13 and (for any Pi software) the engine repo. | A whole revenue line was absent from the site vision, leaving its boundary undefined. This fixes it: the marketing repo owns the *selling* surface, while the 73 KB hardware/STEM spec and the physical/firmware build stay out of website governance. Commerce is already in-scope (see 2026-05-12 e-commerce expansion / WP-019), so selling the line needs no further scope change — only the website WPs that ROADMAP will carry. |
 | 2026-07-16 | **Registry domain migrated: `cards.barefootbetters.com` → `cards.legendary-arena.com`.** Supersedes the 2026-05-07 "Registry remains at `cards.barefootbetters.com` for v1" entry. The migration landed on `cards.legendary-arena.com`, not the originally projected `registry.legendary-arena.com`. Nav links repointed under WP-034; current-state docs swept under WP-035 (historical records untouched). `https://cards.legendary-arena.com/` verified live (HTTP 200) 2026-07-16. **Old domain still serves 200 with no redirect** — 301 posture is an open item owned on the CF/engine side, tracked in `docs/corporate-memory/03-open-questions.md`. **`static/brand-tokens.css` header comment deliberately NOT updated:** the served file is SHA-256 hash-parity-checked against bundled consumer fallbacks (WP-007a contract, hash `70C11CEB…13FF`); a comment-only edit would trip the parity trip-wire and force a coordinated engine-repo refresh for zero functional gain. The comment rides along with the next real token change. | Aligns the registry with the LA brand — the reason the migration was planned all along. Documenting the `registry.*` → `cards.*` naming change prevents future readers from treating `registry.legendary-arena.com` as still-planned. Recording the missing redirect keeps the duplicate-content/SEO exposure visible until closed. |
+| 2026-07-16 | **Redirect closed (same day):** 301 Redirect Rule deployed on the `barefootbetters.com` CF zone — rule "Redirect cards.barefootbetters.com to cards.legendary-arena.com", filter `http.host eq "cards.barefootbetters.com"`, dynamic target `concat("https://cards.legendary-arena.com", http.request.uri.path)`, 301 permanent, preserve query string. Verified live: `/` and `/sets/?q=test` both return 301 with path + query preserved. Same mechanism as WP-006's apex→www rule and recorded here for the same reason: zone-level CF dashboard state lives outside the repo and would silently regress if a future operator reset zone rules. The Pages custom-domain binding for `cards.barefootbetters.com` remains in place (the Redirect Rule fires at the edge before Pages routing; the binding keeps DNS/cert posture intact). | Closes the duplicate-content/SEO exposure recorded in the entry above. The old domain is now a permanent alias, not a second canonical. |
 
 ## What's locked vs. TBD
 
@@ -296,7 +298,7 @@ and what doesn't.
 **TBD (with owning effort):**
 - Logo design — design contract written (`docs/brand/logo-brief.md`); two AI exploration rounds archived (`docs/brand/logo-explorations/`). Next step: Figma session or contractor pass starting from the "D done with B's discipline" merge thesis (`docs/brand/logo-ai-workflow.md §7`). Wordmark placeholder remains active on `www.legendary-arena.com` until a candidate passes `logo-brief.md §9` acceptance.
 - Site copy and content beyond home/about/first blog post (WP-004)
-- ~~Migration of registry from `cards.barefootbetters.com` to `registry.legendary-arena.com` (deferred future effort; not blocking v1)~~ **DONE 2026-07-16** — landed on `cards.legendary-arena.com`; old domain still answers, redirect posture pending (see Decisions log)
+- ~~Migration of registry from `cards.barefootbetters.com` to `registry.legendary-arena.com` (deferred future effort; not blocking v1)~~ **DONE 2026-07-16** — landed on `cards.legendary-arena.com`; old domain 301-redirects (zone Redirect Rule, same day; see Decisions log)
 - Class-color UI integration on `play.*` and `registry.*` (post-WP-007 — usage patterns from `palette.md §4.4` provide the visual grammar; no engine changes for branding alone)
 - Launch date
 

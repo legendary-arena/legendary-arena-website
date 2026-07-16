@@ -50,10 +50,14 @@ Priority: 🔴 blocks revenue/strategy · 🟡 efficiency/clarity · 🟢 nice-t
   registry migrated to `cards.legendary-arena.com` (not
   `registry.legendary-arena.com` as originally planned). Nav repointed
   (WP-034), docs swept (WP-035), logged in
-  [`01-decision-log.md`](01-decision-log.md). *Remaining open:*
-  `cards.barefootbetters.com` still serves 200 with **no redirect** —
-  duplicate-content/SEO exposure until a 301 is deployed (CF/engine-side,
-  outside this repo).
+  [`01-decision-log.md`](01-decision-log.md). ~~*Remaining open:*
+  `cards.barefootbetters.com` still serves 200 with **no redirect**.~~
+  **CLOSED 2026-07-16 (same day):** 301 Redirect Rule deployed on the
+  `barefootbetters.com` CF zone ("Redirect cards.barefootbetters.com to
+  cards.legendary-arena.com" — `http.host eq "cards.barefootbetters.com"`
+  → `concat("https://cards.legendary-arena.com", http.request.uri.path)`,
+  301, preserve query string). Verified live: `/` and `/sets/?q=test`
+  both 301 with path + query preserved. Fully resolved.
 
 - **Unverified personal facts.** Full legal name (middle initial),
   location, and job title from the previous AI draft are **not** in any

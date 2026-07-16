@@ -177,6 +177,16 @@ append-only rule). The old domain still serves 200 with no redirect —
 `cards.legendary-arena.com`; `registry.legendary-arena.com` no longer
 appears in any forward-looking doc.
 
+### 2026-07-16 — Old registry domain now 301-redirects (closes same-day entry)
+
+The open item in the entry above is closed: a zone-level Redirect Rule on
+the `barefootbetters.com` CF zone 301-redirects
+`cards.barefootbetters.com/*` → `cards.legendary-arena.com/*` (path +
+query preserved; verified live same day). Rule details in `01-VISION.md`
+Decisions log (2026-07-16), per this log's granular-vs-strategic split.
+**Impact:** the old domain is a permanent alias; duplicate-content/SEO
+exposure closed. Nothing remains open on the registry domain migration.
+
 <!-- Append new entries below this line. Copy the heading format:
 ### YYYY-MM-DD — <decision>
 <one paragraph: what + why>
