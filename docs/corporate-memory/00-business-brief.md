@@ -31,15 +31,15 @@ progression-by-spending.
 |---|---|---|---|
 | `www.legendary-arena.com` | Marketing landing (**this repo**) | Hugo, static | `legendary-arena/legendary-arena-website` |
 | `play.legendary-arena.com` | Live game client | Vue (`arena-client`), static | engine monorepo |
-| `cards.barefootbetters.com` | Card registry browser | Vue (`registry-viewer`), static | engine monorepo |
+| `cards.legendary-arena.com` | Card registry browser | Vue (`registry-viewer`), static | engine monorepo |
 
 - The three share exactly one runtime artifact: **brand tokens**
   (`https://www.legendary-arena.com/brand-tokens.css`), a versioned
   cross-origin API contract. Details: [`docs/01-VISION.md`](../01-VISION.md)
   "Cross-site contract".
-- Registry currently lives at `cards.barefootbetters.com`; migration to
-  `registry.legendary-arena.com` is deferred (see
-  [`03-open-questions.md`](03-open-questions.md)).
+- Registry migrated to `cards.legendary-arena.com` on 2026-07-16 (from
+  `cards.barefootbetters.com`; the old domain still answers, redirect
+  pending — see [`03-open-questions.md`](03-open-questions.md)).
 - A future `api.legendary-arena.com` (Render-hosted Node server) will serve
   the game backend; the marketing site never touches it.
 
@@ -113,7 +113,8 @@ invariants".
 BarefootBetters is a **separate business identity** from Legendary Arena
 (explicit in [`youtube-channel-plan.md`](../marketing/youtube-channel-plan.md))
 *and* the umbrella under which some LA infrastructure sits (GitHub org
-`barefootbetters`; the registry runs at `cards.barefootbetters.com`). What
+`barefootbetters`; the registry ran at `cards.barefootbetters.com` until
+its 2026-07-16 move to `cards.legendary-arena.com`). What
 BarefootBetters itself sells is **[CONFIRM]** and belongs in its own repo's
 memory, not here. Portfolio-level view:
 `C:\www\jefferyjjensen-corporate-memory\portfolio.md`.

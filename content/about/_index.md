@@ -84,9 +84,7 @@ This site — **[www.legendary-arena.com](https://www.legendary-arena.com/)**
 — is live.
 
 The card registry runs at
-**[cards.barefootbetters.com](https://cards.barefootbetters.com/)**.
-That URL is transitional for v1; the registry will eventually move to
-`registry.legendary-arena.com` under its own scheduled effort.
+**[cards.legendary-arena.com](https://cards.legendary-arena.com/)**.
 
 The game client launches at
 **[play.legendary-arena.com](https://play.legendary-arena.com/)** and

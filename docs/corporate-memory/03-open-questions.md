@@ -1,6 +1,6 @@
 # Open Questions & Gap Tracker — Legendary Arena
 
-**Last updated:** 2026-06-12
+**Last updated:** 2026-07-16
 **Purpose:** the honest list of what's undefined, unverified, or pending a
 decision. Resolved items move to the decision log
 ([`01-decision-log.md`](01-decision-log.md)) and get struck here with a date.
@@ -46,9 +46,14 @@ Priority: 🔴 blocks revenue/strategy · 🟡 efficiency/clarity · 🟢 nice-t
   Discord handles and record them in
   [`00-business-brief.md`](00-business-brief.md) Channels.
 
-- **Registry domain migration deferred.** `cards.barefootbetters.com` →
-  `registry.legendary-arena.com` is planned but unscheduled (its own future
-  WP). Tracked in `01-VISION.md`.
+- ~~**Registry domain migration deferred.**~~ **RESOLVED 2026-07-16.** The
+  registry migrated to `cards.legendary-arena.com` (not
+  `registry.legendary-arena.com` as originally planned). Nav repointed
+  (WP-034), docs swept (WP-035), logged in
+  [`01-decision-log.md`](01-decision-log.md). *Remaining open:*
+  `cards.barefootbetters.com` still serves 200 with **no redirect** —
+  duplicate-content/SEO exposure until a 301 is deployed (CF/engine-side,
+  outside this repo).
 
 - **Unverified personal facts.** Full legal name (middle initial),
   location, and job title from the previous AI draft are **not** in any

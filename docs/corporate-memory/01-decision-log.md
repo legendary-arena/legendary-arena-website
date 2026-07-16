@@ -2,7 +2,7 @@
 
 **Append-only.** Never edit a past entry. Corrections are new entries that
 supersede, with a pointer back. Newest at the bottom.
-**Last updated:** 2026-07-04
+**Last updated:** 2026-07-16
 
 ---
 
@@ -161,6 +161,21 @@ reel, certificates) added as candidates to the store rollout.
 vs-paid.md` + ewiki `Monetization Model` page; media SKUs added to
 `docs/product/digital-goods-store-rollout.md`. No VISION change; stream count
 stays at four.
+
+### 2026-07-16 — Registry domain migrated to `cards.legendary-arena.com`
+
+Supersedes the 2026-05-07 "Registry stays at `cards.barefootbetters.com`
+for v1" entry. The registry now answers at `cards.legendary-arena.com`
+(verified live 2026-07-16), aligning it with the LA brand. It landed on
+`cards.*`, not the originally projected `registry.legendary-arena.com` —
+that name is retired. Nav links repointed under WP-034; current-state docs
+swept under WP-035 (historical records untouched, per this log's
+append-only rule). The old domain still serves 200 with no redirect —
+301 posture is the remaining open item
+([`03-open-questions.md`](03-open-questions.md)), owned CF/engine-side.
+**Impact:** all current cross-site references use
+`cards.legendary-arena.com`; `registry.legendary-arena.com` no longer
+appears in any forward-looking doc.
 
 <!-- Append new entries below this line. Copy the heading format:
 ### YYYY-MM-DD — <decision>

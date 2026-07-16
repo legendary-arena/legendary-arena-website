@@ -214,7 +214,7 @@ without the JSON index (no `/search/` page is emitted).
 `data-pagefind-body` on the `<main>` element (in the project's
 `baseof.html` override) and `data-pagefind-ignore` on header and
 footer (in their respective overrides). Card data is out of scope —
-that lives at `cards.barefootbetters.com` (registry).
+that lives at `cards.legendary-arena.com` (registry).
 
 Verification: searching a card name unlikely to appear in marketing
 copy ("Iron Fist", "Doctor Strange") MUST return zero results. This

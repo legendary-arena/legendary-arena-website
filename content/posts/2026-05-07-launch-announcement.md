@@ -16,7 +16,7 @@ This is the project's first public word.
 
 The marketing site you're reading is the front door. The card registry
 runs at
-[cards.barefootbetters.com](https://cards.barefootbetters.com/). The
+[cards.legendary-arena.com](https://cards.legendary-arena.com/). The
 game client opens at
 [play.legendary-arena.com](https://play.legendary-arena.com/) when
 development is ready for it. The three properties run independently so

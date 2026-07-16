@@ -3,7 +3,7 @@
 This file records every published version of `static/brand-tokens.css`.
 
 Cross-origin consumers (`play.legendary-arena.com`,
-`cards.barefootbetters.com`) depend on this contract. Per
+`cards.legendary-arena.com`) depend on this contract. Per
 `01-VISION.md` Global invariants, breaking changes require a major
 version bump (v1 → v2) AND coordinated consumer updates BEFORE the
 new version publishes.
