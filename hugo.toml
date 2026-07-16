@@ -116,11 +116,8 @@ enableRobotsTXT = true
   url = "/shop/"
   weight = 25
 
-[[menu.main]]
-  identifier = "brand"
-  name = "Brand"
-  url = "/brand/"
-  weight = 30
+# Brand intentionally NOT in the header (removed 2026-07-16 to reduce
+# header choices; it remains in [[menu.footer]] below).
 
 # Play / Cards — primary conversion paths surfaced in the header
 # (previously footer-only; see [[menu.footer]] below). These are the
@@ -141,7 +138,7 @@ enableRobotsTXT = true
 [[menu.main]]
   identifier = "cards"
   name = "Cards"
-  url = "https://cards.barefootbetters.com/"
+  url = "https://cards.legendary-arena.com/"
   weight = 50
 
 # Account — single entry point to the game's Hanko auth + profile on
@@ -205,5 +202,5 @@ enableRobotsTXT = true
 [[menu.footer]]
   identifier = "footer-cards"
   name = "Cards"
-  url = "https://cards.barefootbetters.com/"
+  url = "https://cards.legendary-arena.com/"
   weight = 40
