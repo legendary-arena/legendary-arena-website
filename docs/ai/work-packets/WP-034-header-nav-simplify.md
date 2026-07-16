@@ -16,6 +16,10 @@ the operator on 2026-07-16:
    **Legends** to match the destination's own name and the one-word nav style.
    Weight 55: grouped with the external destinations, after Cards, before
    Account.
+4. **Move Tags from header to footer** (operator request 2026-07-16, third
+   pass). WP-017's `/tags/` taxonomy pages are unchanged; the link moves to
+   `[[menu.footer]]` (weight 21, next to Blog) to keep the header focused on
+   destinations.
 
 ## Authority
 
@@ -47,6 +51,8 @@ Brand 30, Play 40, Cards 50 (`cards.barefootbetters.com`), Account 60.
 - Change `menu.footer` `footer-cards` URL to `https://cards.legendary-arena.com/`.
 - Add `[[menu.main]]` `legends` entry — name "Legends",
   `https://legends.legendary-arena.com/`, weight 55.
+- Delete the `[[menu.main]]` `tags` entry; add `[[menu.footer]]` `footer-tags`
+  (`/tags/`, weight 21).
 - No template change: `layouts/_partials/header.html` already renders external
   links via `findRE "://" .URL`.
 
@@ -56,8 +62,8 @@ Brand 30, Play 40, Cards 50 (`cards.barefootbetters.com`), Account 60.
 hugo build
 ```
 
-Rendered header `<ul id=menu>` in `public/index.html` shows About, Blog, Tags,
-Shop, Play, Cards, Legends, Account — no Brand; Cards href is
+Rendered header `<ul id=menu>` in `public/index.html` shows About, Blog, Shop,
+Play, Cards, Legends, Account — no Brand, no Tags; Cards href is
 `https://cards.legendary-arena.com/`; `cards.barefootbetters.com` absent from
 the homepage; footer still contains `/brand/`.
 
@@ -68,6 +74,7 @@ the homepage; footer still contains `/brand/`.
 - [x] Brand removed from `[[menu.main]]`; still present in `[[menu.footer]]`
 - [x] Legends added to `[[menu.main]]` (`https://legends.legendary-arena.com/`,
       weight 55)
+- [x] Tags moved from `[[menu.main]]` to `[[menu.footer]]` (weight 21)
 - [x] `hugo build` clean; rendered header/footer verified as above
 - [ ] Commit on a `claude/*` branch → PR → `origin/main`
 - [ ] Post-deploy: live `www` header shows no Brand link and Cards lands on
@@ -81,8 +88,8 @@ the homepage; footer still contains `/brand/`.
   `cards.barefootbetters.com`. Historical WPs/roadmap entries are records and
   should not be rewritten; live content pages and VISION deserve their own
   scoped pass once the old domain's redirect posture is confirmed.
-- **The Tags header entry** — deliberate per WP-017 (post discovery across 55
-  tagged posts); untouched here.
+- **The `/tags/` taxonomy pages themselves** — WP-017's `[taxonomies]` config
+  and generated pages are untouched; only the nav placement moved.
 - **Removing Brand from the footer** — it stays discoverable there by design.
 - **DNS / deploy config for `cards.legendary-arena.com`** — already live;
   owned by the engine-repo side.

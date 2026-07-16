@@ -104,11 +104,9 @@ enableRobotsTXT = true
   url = "/posts/"
   weight = 20
 
-[[menu.main]]
-  identifier = "tags"
-  name = "Tags"
-  url = "/tags/"
-  weight = 22
+# Tags intentionally NOT in the header (demoted to [[menu.footer]]
+# 2026-07-16 to reduce header choices; WP-017's /tags/ taxonomy pages
+# are unchanged and stay discoverable from the footer).
 
 [[menu.main]]
   identifier = "shop"
@@ -189,6 +187,14 @@ enableRobotsTXT = true
   name = "Blog"
   url = "/posts/"
   weight = 20
+
+# Tags — demoted from the header 2026-07-16 (WP-034). Sits next to
+# Blog, the content it indexes (WP-017 taxonomy pages).
+[[menu.footer]]
+  identifier = "footer-tags"
+  name = "Tags"
+  url = "/tags/"
+  weight = 21
 
 [[menu.footer]]
   identifier = "footer-shop"
