@@ -141,6 +141,15 @@ enableRobotsTXT = true
   url = "https://cards.legendary-arena.com/"
   weight = 50
 
+# Legends — the public scoreboard ("Hall of Legends" at
+# legends.legendary-arena.com). Same external-link treatment as
+# Play/Cards (outbound icon via header.html's findRE "://").
+[[menu.main]]
+  identifier = "legends"
+  name = "Legends"
+  url = "https://legends.legendary-arena.com/"
+  weight = 55
+
 # Account — single entry point to the game's Hanko auth + profile on
 # play.legendary-arena.com. Decided by engine-repo DECISIONS D-24084
 # (2026-06-30): www stays a static marketing surface and does NOT own an

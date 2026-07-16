@@ -10,6 +10,12 @@ the operator on 2026-07-16:
    leaving the two surfaces on different domains would be inconsistent.
 2. **Remove Brand from the header.** Fewer header choices; **Brand** remains in
    the footer menu, which already carries it.
+3. **Add Legends to the header** (operator request 2026-07-16, second pass).
+   Links the public scoreboard — "Hall of Legends" at
+   `https://legends.legendary-arena.com/` (verified live, HTTP 200) — labelled
+   **Legends** to match the destination's own name and the one-word nav style.
+   Weight 55: grouped with the external destinations, after Cards, before
+   Account.
 
 ## Authority
 
@@ -39,6 +45,8 @@ Brand 30, Play 40, Cards 50 (`cards.barefootbetters.com`), Account 60.
   Brand is footer-only by intent.
 - Change `menu.main` `cards` URL to `https://cards.legendary-arena.com/`.
 - Change `menu.footer` `footer-cards` URL to `https://cards.legendary-arena.com/`.
+- Add `[[menu.main]]` `legends` entry — name "Legends",
+  `https://legends.legendary-arena.com/`, weight 55.
 - No template change: `layouts/_partials/header.html` already renders external
   links via `findRE "://" .URL`.
 
@@ -49,7 +57,7 @@ hugo build
 ```
 
 Rendered header `<ul id=menu>` in `public/index.html` shows About, Blog, Tags,
-Shop, Play, Cards, Account — no Brand; Cards href is
+Shop, Play, Cards, Legends, Account — no Brand; Cards href is
 `https://cards.legendary-arena.com/`; `cards.barefootbetters.com` absent from
 the homepage; footer still contains `/brand/`.
 
@@ -58,6 +66,8 @@ the homepage; footer still contains `/brand/`.
 - [x] Header Cards → `https://cards.legendary-arena.com/` (weight 50 unchanged)
 - [x] Footer Cards → `https://cards.legendary-arena.com/`
 - [x] Brand removed from `[[menu.main]]`; still present in `[[menu.footer]]`
+- [x] Legends added to `[[menu.main]]` (`https://legends.legendary-arena.com/`,
+      weight 55)
 - [x] `hugo build` clean; rendered header/footer verified as above
 - [ ] Commit on a `claude/*` branch → PR → `origin/main`
 - [ ] Post-deploy: live `www` header shows no Brand link and Cards lands on
