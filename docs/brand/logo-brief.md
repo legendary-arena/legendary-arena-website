@@ -22,8 +22,7 @@ where players assemble decks, face deterministic scenarios, and earn
 standing through demonstrated mastery. The logo will identify this
 product across three properties — `www.legendary-arena.com`
 (marketing), `play.legendary-arena.com` (live game), and the registry
-site (`cards.barefootbetters.com` → future
-`registry.legendary-arena.com`).
+site (`cards.legendary-arena.com`).
 
 ## 2. Audience
 

@@ -235,8 +235,8 @@ properties:
 
 - `www.legendary-arena.com` — marketing
 - `play.legendary-arena.com` — game client
-- `cards.barefootbetters.com` — registry (current; future
-  `registry.legendary-arena.com`)
+- `cards.legendary-arena.com` — registry (migrated from
+  `cards.barefootbetters.com` 2026-07-16)
 
 **No site may redefine terms independently.** If a term proves
 inadequate on one surface, the canonical term in this document
@@ -328,11 +328,12 @@ Explicit, equal-weight cross-links between www, play, and the
 registry. The user should always know there are three sites and
 where each one lives.
 
-> **Note on registry URL:** the registry is currently at
-> `cards.barefootbetters.com`. This is **transitional for v1**. The
-> future canonical domain is `registry.legendary-arena.com`. When
-> the migration happens, all cross-site references update together
-> (per §3 cross-site consistency rule).
+> **Note on registry URL:** the registry migrated to its canonical
+> domain `cards.legendary-arena.com` on 2026-07-16 (it landed there
+> rather than the originally projected `registry.legendary-arena.com`).
+> Cross-site references were updated together per the §3 cross-site
+> consistency rule (WP-034 nav, WP-035 docs). The old
+> `cards.barefootbetters.com` still answers; redirect posture pending.
 
 ---
 

@@ -6,7 +6,7 @@ search index).
 
 This site is the marketing landing for Legendary Arena. The game
 client lives at `play.legendary-arena.com`; the card registry lives
-at `cards.barefootbetters.com`. See
+at `cards.legendary-arena.com`. See
 [`docs/01-VISION.md`](docs/01-VISION.md) for the three-site
 architecture.
 
@@ -133,5 +133,5 @@ single-command contract still holds.
 | [`docs/brand/`](docs/brand/) | Brand strategy, palette, typography, spacing — the API contract for visual tokens. |
 
 Brand tokens are a versioned cross-origin API consumed by
-`play.legendary-arena.com` and `cards.barefootbetters.com`; see
+`play.legendary-arena.com` and `cards.legendary-arena.com`; see
 `docs/brand/CHANGELOG.md` for the contract version history.

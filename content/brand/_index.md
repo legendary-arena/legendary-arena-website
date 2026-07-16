@@ -135,7 +135,7 @@ over randomness.
 
 - **[`www.legendary-arena.com`](https://www.legendary-arena.com)** — marketing, brand page, blog
 - **[`play.legendary-arena.com`](https://play.legendary-arena.com)** — live game client
-- **[`cards.barefootbetters.com`](https://cards.barefootbetters.com)** — card registry and browsing
+- **[`cards.legendary-arena.com`](https://cards.legendary-arena.com)** — card registry and browsing
 - **[`ewiki.legendary-arena.com`](https://ewiki.legendary-arena.com)** — engineering wiki (architecture,
   decisions, inventory)
 
