@@ -104,11 +104,9 @@ enableRobotsTXT = true
   url = "/posts/"
   weight = 20
 
-[[menu.main]]
-  identifier = "tags"
-  name = "Tags"
-  url = "/tags/"
-  weight = 22
+# Tags intentionally NOT in the header (demoted to [[menu.footer]]
+# 2026-07-16 to reduce header choices; WP-017's /tags/ taxonomy pages
+# are unchanged and stay discoverable from the footer).
 
 [[menu.main]]
   identifier = "shop"
@@ -116,11 +114,8 @@ enableRobotsTXT = true
   url = "/shop/"
   weight = 25
 
-[[menu.main]]
-  identifier = "brand"
-  name = "Brand"
-  url = "/brand/"
-  weight = 30
+# Brand intentionally NOT in the header (removed 2026-07-16 to reduce
+# header choices; it remains in [[menu.footer]] below).
 
 # Play / Cards — primary conversion paths surfaced in the header
 # (previously footer-only; see [[menu.footer]] below). These are the
@@ -141,8 +136,17 @@ enableRobotsTXT = true
 [[menu.main]]
   identifier = "cards"
   name = "Cards"
-  url = "https://cards.barefootbetters.com/"
+  url = "https://cards.legendary-arena.com/"
   weight = 50
+
+# Legends — the public scoreboard ("Hall of Legends" at
+# legends.legendary-arena.com). Same external-link treatment as
+# Play/Cards (outbound icon via header.html's findRE "://").
+[[menu.main]]
+  identifier = "legends"
+  name = "Legends"
+  url = "https://legends.legendary-arena.com/"
+  weight = 55
 
 # Account — single entry point to the game's Hanko auth + profile on
 # play.legendary-arena.com. Decided by engine-repo DECISIONS D-24084
@@ -184,6 +188,14 @@ enableRobotsTXT = true
   url = "/posts/"
   weight = 20
 
+# Tags — demoted from the header 2026-07-16 (WP-034). Sits next to
+# Blog, the content it indexes (WP-017 taxonomy pages).
+[[menu.footer]]
+  identifier = "footer-tags"
+  name = "Tags"
+  url = "/tags/"
+  weight = 21
+
 [[menu.footer]]
   identifier = "footer-shop"
   name = "Shop"
@@ -205,5 +217,5 @@ enableRobotsTXT = true
 [[menu.footer]]
   identifier = "footer-cards"
   name = "Cards"
-  url = "https://cards.barefootbetters.com/"
+  url = "https://cards.legendary-arena.com/"
   weight = 40
