@@ -2,14 +2,14 @@
 title: "The Fixed-Pool Problem: Magneto, Core Set"
 date: 2026-07-18
 description: "Eight schemes, one hero pool, no substitutions to spare. How the Fixed-Pool Championship actually works — and why it is a different game from the Open division."
-draft: true
+draft: false
 tags: ["gauntlet", "strategy", "fixed-pool", "magneto", "core-set"]
 categories: ["gauntlet-guides"]
 series: "Gauntlet Guides"
 gauntlet_set: "core"
 gauntlet_mastermind: "magneto"
 gauntlet_board: "gauntlet-core-magneto"
-cta: "leaderboard"
+cta: "play"
 ---
 
 The Open division asks whether you can beat Magneto eight different ways. The Fixed-Pool Championship asks a harder question: **can you beat him eight different ways with nearly the same heroes every time?**

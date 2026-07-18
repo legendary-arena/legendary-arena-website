@@ -2,14 +2,14 @@
 title: "Gauntlet Guide: Hydra High Council, S.H.I.E.L.D."
 date: 2026-07-18
 description: "Four legs, one mastermind — the shortest way onto the Hall of Legends. Why the S.H.I.E.L.D. gauntlet is the one to claim first."
-draft: true
+draft: false
 tags: ["gauntlet", "strategy", "hydra-high-council", "shield"]
 categories: ["gauntlet-guides"]
 series: "Gauntlet Guides"
 gauntlet_set: "shld"
 gauntlet_mastermind: "hydra-high-council"
 gauntlet_board: "gauntlet-shld-hydra-high-council"
-cta: "leaderboard"
+cta: "play"
 ---
 
 If you want your name on the Hall of Legends and you want it this week, this is the gauntlet to pick.

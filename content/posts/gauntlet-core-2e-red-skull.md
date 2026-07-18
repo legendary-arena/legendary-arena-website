@@ -2,14 +2,14 @@
 title: "Gauntlet Guide: Red Skull, Core Set (2nd Edition)"
 date: 2026-07-18
 description: "All nine schemes, one mastermind. What the Red Skull gauntlet asks of you, how the Fixed-Pool division changes the problem, and where to start."
-draft: true
+draft: false
 tags: ["gauntlet", "strategy", "red-skull", "core-set-2e"]
 categories: ["gauntlet-guides"]
 series: "Gauntlet Guides"
 gauntlet_set: "co2e"
 gauntlet_mastermind: "red-skull"
 gauntlet_board: "gauntlet-co2e-red-skull"
-cta: "leaderboard"
+cta: "play"
 ---
 
 A single win proves you had a good night. A gauntlet proves you understood the set.
