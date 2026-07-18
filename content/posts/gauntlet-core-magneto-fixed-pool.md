@@ -129,7 +129,7 @@ Each leg links straight into the builder with the scheme and Magneto pre-pinned.
 
 - The threat compounds: every Twist has a Villain capture 2 Bystanders *and* plays another Villain card
 - Kill loaded Villains before they escape — a Villain carrying two Bystanders is both harder to fight and closer to the loss condition
-- This is the leg where the moral hierarchy bites hardest: Bystanders lost to escapes are the worst scoring outcome there is
+- This is the leg where rescues are worth the most: 12 Bystanders in the deck is the largest pool of score-positive material in the gauntlet, and every one a Villain carries off is one you cannot bank
 - [Challenge this leg →](https://cards.legendary-arena.com/?schemeId=core%2Fmidtown-bank-robbery&mastermindId=core%2Fmagneto)
 
 **2. Secret Invasion of the Skrull Shapeshifters**

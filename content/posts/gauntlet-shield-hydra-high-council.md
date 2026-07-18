@@ -62,7 +62,7 @@ As always: the gauntlet fixes the **mastermind and the four schemes**, nothing e
 
 ## Why four legs matters more than it sounds
 
-A gauntlet entry requires a winning score on **every** leg. That completeness rule is what makes the format meaningful, and it is also what stops most people — not difficulty, attrition. Nine legs means nine separate evenings where nothing can go wrong permanently.
+A gauntlet entry requires a winning score on **every** leg. That completeness rule is what makes the format meaningful, and it is also what stops most people — not difficulty, attrition. A nine-leg gauntlet means nine separate evenings where nothing can go wrong permanently.
 
 Four legs changes the arithmetic. It is a realistic single-sitting project at solo, or one session with a regular group. If you have been looking at the leaderboard thinking "someday," this is the one where someday is a Saturday.
 
