@@ -189,8 +189,10 @@ than *the* lever, and stop there.
 
 TWO CAVEATS WORTH A SENTENCE WHEN RELEVANT:
 
-  - `bystanderLost` — the heaviest weight in the model — has no engine
-    producer today; `deriveScoringInputs` hardcodes it to 0 (D-4801
+  - `bystanderLost` — which invariants 2 and 3 rank above `villainEscaped`
+    and above the rescue reward, though nothing ranks it against the other
+    three penalties — has no engine producer today;
+    `deriveScoringInputs` hardcodes it to 0 (D-4801
     safe-skip), as it does `schemeTwistNegative`,
     `mastermindTacticUntaken`, and `scenarioSpecificPenalty`. Only
     `villainEscaped` currently fires. So the penalty is specified and
