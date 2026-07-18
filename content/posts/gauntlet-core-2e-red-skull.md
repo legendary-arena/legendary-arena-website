@@ -122,6 +122,10 @@ I want to be straight about the limits of the advice above: **the boards are new
 
 That will change. Every score on these boards is replay-verified, which means once entries accumulate we can publish what genuinely wins this gauntlet — real hero frequencies among ranked entries, real Fixed-Pool compositions, per-leg score distributions. This section will be replaced with that data rather than more opinion.
 
-Until then, the fastest way to find out what works is to go take the board. It is unclaimed.
+Until then, the fastest way to find out what works is to go play it.
+
+> **One honest caveat before you start.** The gauntlet boards are not accepting entries yet. Competitive scoring is gated on **PAR calibration** — the per-scenario baseline every score is measured against — and PAR is deliberately unpublished until the engine implements each scenario's card abilities faithfully. Publishing baselines against a partly-implemented engine would bake wrong numbers into permanently version-pinned scores, so the gate stays closed on purpose.
+>
+> Practically: you can play these matches today, but a finished run will not yet post to the board. When calibration publishes, the boards open. Nothing here is wasted — the strategy holds either way, and the format is worth learning before the field arrives.
 
 **[View the Red Skull gauntlet →](https://legends.legendary-arena.com/#/gauntlet/gauntlet-co2e-red-skull)**
