@@ -154,13 +154,51 @@ Say what beats it and what you would swap toward.
 
 ## What actually moves your score
 
-<!-- DERIVED-ish: the model is documented, the numbers are not -->
-Final Score = Raw Score − PAR; negative is better. Raw Score is driven by
-efficiency (rounds), VP, Bystanders rescued, and failures (escapes,
-casualties). The moral hierarchy is explicit and is NOT a speed race:
-rescuing Bystanders beats preventing escapes, and losing Bystanders is
-worst. Do not restate this as "maximise VP first, minimise turns second" —
-that ordering is not what the model implements.
+<!-- DERIVED-ish: the formula and its invariants are code; the numbers are not -->
+Final Score = Raw Score − PAR; negative is better. The formula, verified
+against `packages/game-engine/src/scoring/parScoring.logic.ts`:
+
+    RawScore = (rounds × roundCost)
+             + sum(penaltyEvent × its weight)
+             − (Bystanders rescued × bystanderReward)
+             − (VP × victoryPointReward)
+
+WHAT YOU MAY ASSERT — three invariants are hard-enforced by
+`validateScoringConfig`; a scenario config violating any of them fails
+validation, so these hold for every gauntlet that ever publishes:
+
+  1. bystanderReward  >  villainEscaped weight
+  2. bystanderLost weight  >  villainEscaped weight
+  3. bystanderLost weight  >  bystanderReward
+
+In words: rescuing a Bystander is always worth more than a Villain escape
+costs, losing a Bystander is always worse than letting a Villain escape, and
+losing one always outweighs the credit for saving one. That is a design
+commitment in code, not editorial framing.
+
+WHAT YOU MAY NOT ASSERT — **no invariant relates `victoryPointReward` to
+`bystanderReward`.** The engine deliberately does not rank VP against
+Bystanders; that is per-scenario config, and no scenario config has
+published. So BOTH of these are unbacked and must not be written:
+
+  ✗ "Maximise VP first, minimise turns second" (VP-forward ordering)
+  ✗ "Bystanders matter more than VP" (the mirror claim)
+
+State the three invariants, note that speed is one term among four rather
+than *the* lever, and stop there.
+
+TWO CAVEATS WORTH A SENTENCE WHEN RELEVANT:
+
+  - `bystanderLost` — the heaviest weight in the model — has no engine
+    producer today; `deriveScoringInputs` hardcodes it to 0 (D-4801
+    safe-skip), as it does `schemeTwistNegative`,
+    `mastermindTacticUntaken`, and `scenarioSpecificPenalty`. Only
+    `villainEscaped` currently fires. So the penalty is specified and
+    validated but not yet observable. Do not describe civilian casualties
+    as something a run is currently scored on.
+  - `bystanderCap` and `victoryPointCap` clamp their reward terms, so
+    rescues or VP past a cap are worth zero. Per-scenario and unpublished —
+    mention the mechanism, never a number.
 
 Tie it to THIS gauntlet — does a tactic hand out Bystanders? Does a leg make
 Bystanders into enemies? Do NOT state expected scores.

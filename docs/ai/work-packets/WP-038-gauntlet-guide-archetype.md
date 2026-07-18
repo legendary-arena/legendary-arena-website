@@ -188,3 +188,58 @@ updating together.
 
 **Out:** revising the three live guides against the new template; any
 `layouts/**` change, including rendering `guide_version`.
+
+### Scoring order — settled against the engine
+
+The VP-vs-Bystanders question was resolved by reading
+`packages/game-engine/src/scoring/parScoring.logic.ts` in the engine repo
+(`C:\pcloud\BB\DEV\legendary-arena\`) rather than by argument. Result: both
+sides of the disagreement were partly wrong, and the archetype now states
+only what the code guarantees.
+
+**The formula** (`computeRawScore`, lower is better):
+
+    RawScore = (rounds × roundCost)
+             + sum(penaltyEvent × its weight)
+             − (Bystanders rescued × bystanderReward)
+             − (VP × victoryPointReward)
+
+**Code-enforced.** `validateScoringConfig` hard-fails any scenario config
+violating three structural invariants:
+
+1. `bystanderReward > villainEscaped`
+2. `bystanderLost > villainEscaped`
+3. `bystanderLost > bystanderReward`
+
+The moral hierarchy is therefore a design commitment in code, not editorial
+framing, and holds for every gauntlet that ever publishes. The proposal's
+VP-first ordering is not what the engine implements.
+
+**Not enforced.** No invariant relates `victoryPointReward` to
+`bystanderReward`. The engine deliberately does not rank VP against
+Bystanders — that is per-scenario config, and no scenario config has
+published. So the archetype's previous "the hierarchy is not a speed race"
+phrasing was itself over-claimed in the VP direction. The template now bars
+*both* "maximise VP first" and its mirror "Bystanders matter more than VP",
+and instructs authors to state the three invariants and stop.
+
+**Two caveats added.** `deriveScoringInputs` hardcodes `bystanderLost` to 0
+— no engine producer today (D-4801 safe-skip), along with
+`schemeTwistNegative`, `mastermindTacticUntaken`, and
+`scenarioSpecificPenalty`. Only `villainEscaped` currently fires, so the
+heaviest weight in the model is specified and validated but not yet
+observable; guides must not describe civilian casualties as something a run
+is scored on today. Separately, `bystanderCap` / `victoryPointCap` clamp
+their reward terms — mention the mechanism, never a number.
+
+**Corroboration that PAR is unpublished:** the only file in
+`data/scoring-configs/` is the test fixture
+`test-scheme-par--test-mastermind-par--test-villain-group-par.json`. No real
+scenario baselines exist, which is exactly what the BLOCKED list assumes.
+
+**Follow-up, not in this PR:**
+`content/posts/gauntlet-core-magneto-fixed-pool.md` lists "Failures —
+Villain escapes, and civilian casualties" among what drives Raw Score. The
+ordering claim in that post is correct and code-backed, but casualties are
+not currently produced by the engine. Worth a one-line accuracy fix in the
+content lane.
