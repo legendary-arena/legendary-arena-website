@@ -9,6 +9,7 @@ series: "Gauntlet Guides"
 gauntlet_set: "core"
 gauntlet_mastermind: "magneto"
 gauntlet_board: "gauntlet-core-magneto"
+guide_version: "v1.0"
 cta: "leaderboard"
 ---
 
