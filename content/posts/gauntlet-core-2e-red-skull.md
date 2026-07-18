@@ -9,6 +9,7 @@ series: "Gauntlet Guides"
 gauntlet_set: "co2e"
 gauntlet_mastermind: "red-skull"
 gauntlet_board: "gauntlet-co2e-red-skull"
+guide_version: "v1.0"
 cta: "leaderboard"
 ---
 

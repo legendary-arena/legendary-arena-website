@@ -9,6 +9,7 @@ series: "Gauntlet Guides"
 gauntlet_set: "shld"
 gauntlet_mastermind: "hydra-high-council"
 gauntlet_board: "gauntlet-shld-hydra-high-council"
+guide_version: "v1.0"
 cta: "leaderboard"
 ---
 
