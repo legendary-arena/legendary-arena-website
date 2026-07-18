@@ -108,6 +108,10 @@ Being straight about it: **the boards are new, so the guidance above is informed
 
 Every score here is replay-verified, which means once entries accumulate we can publish the real thing — hero frequencies among ranked entries, actual Fixed-Pool compositions, per-leg score distributions. This section gets replaced with data rather than more opinion.
 
-Four legs. Nobody has claimed it. Go take it.
+Four legs. The shortest way in once the board opens.
+
+> **One honest caveat before you start.** The gauntlet boards are not accepting entries yet. Competitive scoring is gated on **PAR calibration** — the per-scenario baseline every score is measured against — and PAR is deliberately unpublished until the engine implements each scenario's card abilities faithfully. Publishing baselines against a partly-implemented engine would bake wrong numbers into permanently version-pinned scores, so the gate stays closed on purpose.
+>
+> Practically: you can play these matches today, but a finished run will not yet post to the board. When calibration publishes, the boards open. Four legs is still the cheapest gauntlet to learn, and learning it now is a head start rather than wasted effort.
 
 **[View the Hydra High Council gauntlet →](https://legends.legendary-arena.com/#/gauntlet/gauntlet-shld-hydra-high-council)**

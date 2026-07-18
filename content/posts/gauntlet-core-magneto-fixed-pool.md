@@ -124,6 +124,10 @@ Straight about the limits: **no Fixed-Pool board has been claimed yet, so everyt
 
 That is exactly what replay verification is for. Once entries land, this section becomes real data — the actual pool compositions of ranked Fixed-Pool entries, per-leg score spreads, and which cores survive all eight schemes. Until then, treat the above as a framework, not an answer.
 
-Every Fixed-Pool board is currently unclaimed. The first person to solve this one gets their pool published next to their name.
+Every Fixed-Pool board is currently unclaimed. When the boards open, the first person to solve this one gets their pool published next to their name.
+
+> **One honest caveat before you start.** The gauntlet boards are not accepting entries yet. Competitive scoring is gated on **PAR calibration** — the per-scenario baseline every score is measured against — and PAR is deliberately unpublished until the engine implements each scenario's card abilities faithfully. Publishing baselines against a partly-implemented engine would bake wrong numbers into permanently version-pinned scores, so the gate stays closed on purpose.
+>
+> Practically: you can play these matches today, but a finished run will not yet post to the board. When calibration publishes, the boards open. The pool-construction problem above is unchanged either way — it comes from the cards, not the scoring.
 
 **[View the Magneto gauntlet →](https://legends.legendary-arena.com/#/gauntlet/gauntlet-core-magneto)**
