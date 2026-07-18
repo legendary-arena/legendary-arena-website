@@ -9,7 +9,7 @@ series: "Gauntlet Guides"
 gauntlet_set: "shld"
 gauntlet_mastermind: "hydra-high-council"
 gauntlet_board: "gauntlet-shld-hydra-high-council"
-cta: "play"
+cta: "leaderboard"
 ---
 
 ![Hydra High Council](https://images.legendary-arena.com/shld/shld-mt-hydra-high-council-red-skull.webp)
@@ -114,4 +114,3 @@ Four legs. The shortest way in once the board opens.
 >
 > Practically: you can play these matches today, but a finished run will not yet post to the board. When calibration publishes, the boards open. Four legs is still the cheapest gauntlet to learn, and learning it now is a head start rather than wasted effort.
 
-**[View the Hydra High Council gauntlet →](https://legends.legendary-arena.com/#/gauntlet/gauntlet-shld-hydra-high-council)**
