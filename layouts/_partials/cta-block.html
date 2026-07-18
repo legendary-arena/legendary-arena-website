@@ -41,5 +41,12 @@
 <div class="cta-block" data-cta="{{ $cta }}">
     <p class="cta-block-text">Every score on this board is replay-verified.</p>
     <a href="{{ $href }}" class="button cta-block-button">{{ if $board }}View the gauntlet{{ else }}View the leaderboard{{ end }}</a>
+    {{- /* why: the boards do not accept entries yet. Competitive submission
+           fail-closes on PAR publication, and PAR is deliberately unpublished
+           until hero-effect coverage is faithful, so a finished run currently
+           rejects with par_not_published. Without this line the CTA reads as
+           an invitation to post a score the system will refuse. DELETE this
+           note once PAR publishes and boards accept entries. */ -}}
+    <p class="cta-block-note">Boards open when PAR calibration publishes — runs don&rsquo;t post yet.</p>
 </div>
 {{- end }}
