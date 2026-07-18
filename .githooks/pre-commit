@@ -94,7 +94,21 @@ delete it until PAR publishes and boards accept entries."
   # 9c. BLOCKED claims — no competitive score data exists to support these.
   # legendary.competitive_scores is empty and PAR is deliberately
   # unpublished, so every one of these would be invented authority.
-  BLOCKED_HIT=$(grep -nEi 'PAR -[0-9]|estimated competitive|expected results|clear rate|score risk[[:space:]]*:|difficulty[[:space:]]*:.*(easy|medium|hard)|[0-9]+/10|⭐' "$POST" | head -n 3 || true)
+  # why: scan only PUBLISHED prose. The archetype's own BLOCKED list quotes
+  # the forbidden phrases as examples ("Estimated competitive range: PAR -X",
+  # "clear rates"), and those examples live inside the instructional HTML
+  # comment a generated post carries. Scanning raw would fail every post on
+  # its first commit for containing the very warning telling the author not
+  # to write them. sed strips <!-- ... --> blocks (including multi-line) so
+  # the rule judges what readers actually see.
+  # why: the newline goes BEFORE `-->` so a single-line comment splits across
+  # two lines. With it after, `<!-- X -->` opens a sed range whose end pattern
+  # is only sought on LATER lines, so the range runs to EOF and silently
+  # deletes the rest of the post — enforcement passes because nothing is left
+  # to scan. Verified both ways: a generated post produces no hits, and a
+  # fabricated PAR range appended after the last comment is still caught.
+  POST_PROSE=$(sed 's/<!--/\n<!--/g; s/-->/\n-->\n/g' "$POST" | sed '/<!--/,/-->/d')
+  BLOCKED_HIT=$(printf '%s\n' "$POST_PROSE" | grep -nEi 'PAR -[0-9]|estimated competitive|expected results|clear rate|score risk[[:space:]]*:|difficulty[[:space:]]*:.*(easy|medium|hard)|[0-9]+/10|⭐' | head -n 3 || true)
   if [ -n "$BLOCKED_HIT" ]; then
     fail "$POST contains claims the archetype BLOCKS — no competitive score data exists.
 $BLOCKED_HIT
