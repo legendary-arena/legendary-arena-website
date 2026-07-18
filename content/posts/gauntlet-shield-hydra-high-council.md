@@ -1,7 +1,7 @@
 ---
 title: "Gauntlet Guide: Hydra High Council, S.H.I.E.L.D."
 date: 2026-07-18
-description: "Four legs, one mastermind — the shortest way onto the Hall of Legends. Why the S.H.I.E.L.D. gauntlet is the one to claim first."
+description: "Four legs, one mastermind — the shortest championship on the board. What the S.H.I.E.L.D. gauntlet asks, and the engine defect to know about before you start."
 draft: false
 tags: ["gauntlet", "strategy", "hydra-high-council", "shield"]
 categories: ["gauntlet-guides"]
@@ -15,9 +15,13 @@ cta: "leaderboard"
 
 ![Hydra High Council](https://images.legendary-arena.com/shld/shld-mt-hydra-high-council-red-skull.webp)
 
-If you want your name on the Hall of Legends and you want it this week, this is the gauntlet to pick.
-
 Most gauntlets are eight or nine legs. The S.H.I.E.L.D. set has **four schemes**, which makes the Hydra High Council gauntlet the shortest complete championship on the board — and completeness is the only thing standing between you and a ranked entry. There is no partial credit, but there is also not much to finish.
+
+> **Read this before you pick this gauntlet.** An earlier version of this guide called it the one to claim first. That recommendation is withdrawn, because the reason it plays easily is a defect rather than a design.
+>
+> The Hydra High Council is a **council** mastermind — four members (Red Skull, Viper, Arnim Zola, Baron Helmut Zemo), each with its own Master Strike. The engine models a mastermind as one primary card plus its tactics, and a council does not fit that shape, so it currently resolves to an empty placeholder: **no Master Strike, no tactics, no abilities.** Both S.H.I.E.L.D. masterminds are affected.
+>
+> So the schemes below are real and worth learning, but the mastermind opposing you presently does nothing. Treat this as a scheme-practice gauntlet, not a test of your build against Hydra — and expect it to get considerably harder when the fix lands. Tracked as WP-390.
 
 ## The board
 
@@ -69,7 +73,9 @@ Four legs changes the arithmetic. It is a realistic single-sitting project at so
 
 The other quiet advantage: **best-per-leg scoring means retries only ever help you.** A bad run at Hail Hydra costs you nothing but time — your best score stands. With four legs, the cost of experimenting is low enough that you can afford to learn the set properly rather than playing it safe.
 
-## What the Hydra High Council asks
+## What the schemes ask
+
+Note the section title. This is deliberately about the **schemes**, not the mastermind — per the note above, the Council currently contributes nothing to the match, so all four legs' pressure comes from the scheme and the villains you chose to face.
 
 The S.H.I.E.L.D. set is built around infiltration and betrayal as themes, and the schemes lean that way — *Secret Empire of Betrayal* and *Hail Hydra* both trade on the idea that your own side is compromised.
 
@@ -89,7 +95,7 @@ Every board carries two divisions. **Open** is the normal one — any heroes, le
 
 Four legs is also the friendliest place to attempt Fixed-Pool, and it's worth understanding why the budget is generous here rather than assuming it's tight. At solo you get five heroes across four schemes — three per match, so two substitutions total. At two-to-four players, seven heroes across four schemes is genuinely comfortable.
 
-Which makes this the natural first Fixed-Pool attempt. The constraint is real enough to be interesting and loose enough to be survivable, unlike the nine-leg sets where a single mis-chosen core hero follows you for the whole championship.
+That makes it a forgiving place to *practise* the Fixed-Pool constraint — the budget is real enough to be interesting and loose enough to survive, unlike the nine-leg sets where one mis-chosen core hero follows you all championship. Just be clear about what it does and doesn't prove: with the Council inert, clearing this gauntlet tests your pool against four schemes, not against a mastermind. For a genuine Fixed-Pool test today, the Core Set Magneto gauntlet is the honest one.
 
 ## Heroes
 
@@ -109,7 +115,7 @@ Being straight about it: **the boards are new, so the guidance above is informed
 
 Every score here is replay-verified, which means once entries accumulate we can publish the real thing — hero frequencies among ranked entries, actual Fixed-Pool compositions, per-leg score distributions. This section gets replaced with data rather than more opinion.
 
-Four legs. The shortest way in once the board opens.
+Four legs, and the schemes are worth learning on their own terms. Just go in knowing the Council is not yet fighting back.
 
 > **One honest caveat before you start.** The gauntlet boards are not accepting entries yet. Competitive scoring is gated on **PAR calibration** — the per-scenario baseline every score is measured against — and PAR is deliberately unpublished until the engine implements each scenario's card abilities faithfully. Publishing baselines against a partly-implemented engine would bake wrong numbers into permanently version-pinned scores, so the gate stays closed on purpose.
 >
