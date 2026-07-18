@@ -111,7 +111,9 @@ Raw Score is driven by:
 - **Heroism** — Bystanders rescued
 - **Failures** — Villain escapes, and civilian casualties
 
-The ordering matters and it is explicit in the model: **rescuing Bystanders beats preventing escapes, and losing Bystanders is the worst outcome of the three.** So a run that clears fast but bleeds civilians can score worse than a slower, cleaner one. Speed is a lever, not *the* lever.
+The ordering is not editorial framing — it is enforced in the scoring config validator, which rejects any scenario whose weights break it: **rescuing a Bystander is worth more than a Villain escape costs, and losing a Bystander is worse than letting a Villain escape.** Speed is a lever, not *the* lever.
+
+One thing to know about the current build: casualties are specified in the model but **not yet produced by the engine** — the bystander-lost counter has no producer, so today only escapes actually register among the failure terms. The rescue side is live. Treat Bystanders as points you can gain rather than points you can currently bleed, and expect that to tighten when the counter lands.
 
 Practical consequence for this gauntlet: Magneto's **Xavier's Nemesis** hands you a free Bystander per X-Men Hero. On an X-Men-heavy pool that tactic is a scoring opportunity, not a threat — one more reason the pool above earns its slots.
 
@@ -127,7 +129,7 @@ Each leg links straight into the builder with the scheme and Magneto pre-pinned.
 
 - The threat compounds: every Twist has a Villain capture 2 Bystanders *and* plays another Villain card
 - Kill loaded Villains before they escape — a Villain carrying two Bystanders is both harder to fight and closer to the loss condition
-- This is the leg where the moral hierarchy bites hardest: Bystanders lost to escapes are the worst scoring outcome there is
+- This is the leg where rescues are worth the most: 12 Bystanders in the deck is the largest pool of score-positive material in the gauntlet, and every one a Villain carries off is one you cannot bank
 - [Challenge this leg →](https://cards.legendary-arena.com/?schemeId=core%2Fmidtown-bank-robbery&mastermindId=core%2Fmagneto)
 
 **2. Secret Invasion of the Skrull Shapeshifters**
