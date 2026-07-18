@@ -12,6 +12,8 @@ gauntlet_board: "gauntlet-core-magneto"
 cta: "play"
 ---
 
+![Magneto](https://images.legendary-arena.com/core/core-mm-magneto.webp)
+
 The Open division asks whether you can beat Magneto eight different ways. The Fixed-Pool Championship asks a harder question: **can you beat him eight different ways with nearly the same heroes every time?**
 
 This is the guide for the second question.
@@ -30,14 +32,37 @@ This is the guide for the second question.
 
 **The eight legs:**
 
-1. Midtown Bank Robbery
-2. Secret Invasion of the Skrull Shapeshifters
-3. The Legacy Virus
-4. Negative Zone Prison Breakout
-5. Portals to the Dark Dimension
-6. Replace Earth's Leaders with Killbots
-7. Super Hero Civil War
-8. Unleash the Power of the Cosmic Cube
+**1. Midtown Bank Robbery**
+
+![Midtown Bank Robbery](https://images.legendary-arena.com/core/core-sc-midtown-bank-robbery.webp)
+
+**2. Secret Invasion of the Skrull Shapeshifters**
+
+![Secret Invasion of the Skrull Shapeshifters](https://images.legendary-arena.com/core/core-sc-secret-invasion-of-the-skrull-shapeshifters.webp)
+
+**3. The Legacy Virus**
+
+![The Legacy Virus](https://images.legendary-arena.com/core/core-sc-legacy-virus-the.webp)
+
+**4. Negative Zone Prison Breakout**
+
+![Negative Zone Prison Breakout](https://images.legendary-arena.com/core/core-sc-negative-zone-prison-breakout.webp)
+
+**5. Portals to the Dark Dimension**
+
+![Portals to the Dark Dimension](https://images.legendary-arena.com/core/core-sc-portals-to-the-dark-dimension.webp)
+
+**6. Replace Earth's Leaders with Killbots**
+
+![Replace Earth's Leaders with Killbots](https://images.legendary-arena.com/core/core-sc-replace-earths-leaders-with-killbots.webp)
+
+**7. Super Hero Civil War**
+
+![Super Hero Civil War](https://images.legendary-arena.com/core/core-sc-super-hero-civil-war.webp)
+
+**8. Unleash the Power of the Cosmic Cube**
+
+![Unleash the Power of the Cosmic Cube](https://images.legendary-arena.com/core/core-sc-unleash-the-power-of-the-cosmic-cube.webp)
 
 ## How Fixed-Pool actually works
 

@@ -12,6 +12,8 @@ gauntlet_board: "gauntlet-co2e-red-skull"
 cta: "play"
 ---
 
+![Red Skull](https://images.legendary-arena.com/co2e/co2e-mm-red-skull.webp)
+
 A single win proves you had a good night. A gauntlet proves you understood the set.
 
 The Red Skull gauntlet asks you to beat one mastermind under **every scheme in the Core Set (2nd Edition)** — nine of them — and it ranks you on the total of your best run against each. There is no submission step. Finish a qualifying match and the publisher picks it up on the next cycle.
@@ -30,15 +32,41 @@ The Red Skull gauntlet asks you to beat one mastermind under **every scheme in t
 
 **The nine legs:**
 
-1. Bank Robbery Hostage Crisis
-2. Secret Invasion of the Skrull Shapeshifters
-3. The Legacy Virus
-4. Negative Zone Prison Breakout
-5. Portals to the Dark Dimension
-6. Replace Earth's Leaders with Killbots
-7. Super Hero Civil War
-8. Unleash the Power of the Cosmic Cube
-9. Enshrouded Identity
+**1. Bank Robbery Hostage Crisis**
+
+![Bank Robbery Hostage Crisis](https://images.legendary-arena.com/co2e/co2e-sc-bank-robbery-hostage-crisis.webp)
+
+**2. Secret Invasion of the Skrull Shapeshifters**
+
+![Secret Invasion of the Skrull Shapeshifters](https://images.legendary-arena.com/co2e/co2e-sc-secret-invasion-of-the-skrull-shapeshifters.webp)
+
+**3. The Legacy Virus**
+
+![The Legacy Virus](https://images.legendary-arena.com/co2e/co2e-sc-the-legacy-virus.webp)
+
+**4. Negative Zone Prison Breakout**
+
+![Negative Zone Prison Breakout](https://images.legendary-arena.com/co2e/co2e-sc-negative-zone-prison-outbreak.webp)
+
+**5. Portals to the Dark Dimension**
+
+![Portals to the Dark Dimension](https://images.legendary-arena.com/co2e/co2e-sc-portals-to-the-dark-dimension.webp)
+
+**6. Replace Earth's Leaders with Killbots**
+
+![Replace Earth's Leaders with Killbots](https://images.legendary-arena.com/co2e/co2e-sc-replace-earths-leaders-with-killbots.webp)
+
+**7. Super Hero Civil War**
+
+![Super Hero Civil War](https://images.legendary-arena.com/co2e/co2e-sc-super-hero-civil-war.webp)
+
+**8. Unleash the Power of the Cosmic Cube**
+
+![Unleash the Power of the Cosmic Cube](https://images.legendary-arena.com/co2e/co2e-sc-unleash-the-power-of-the-cosmic-cube.webp)
+
+**9. Enshrouded Identity**
+
+![Enshrouded Identity](https://images.legendary-arena.com/co2e/co2e-sc-enshrouded-identity.webp)
 
 **Setup scales with player count**, and scores never compare across counts — a solo run and a four-player run sit on different boards:
 

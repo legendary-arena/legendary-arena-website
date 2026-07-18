@@ -12,6 +12,8 @@ gauntlet_board: "gauntlet-shld-hydra-high-council"
 cta: "play"
 ---
 
+![Hydra High Council](https://images.legendary-arena.com/shld/shld-mt-hydra-high-council-red-skull.webp)
+
 If you want your name on the Hall of Legends and you want it this week, this is the gauntlet to pick.
 
 Most gauntlets are eight or nine legs. The S.H.I.E.L.D. set has **four schemes**, which makes the Hydra High Council gauntlet the shortest complete championship on the board — and completeness is the only thing standing between you and a ranked entry. There is no partial credit, but there is also not much to finish.
@@ -30,10 +32,21 @@ Most gauntlets are eight or nine legs. The S.H.I.E.L.D. set has **four schemes**
 
 **The four legs:**
 
-1. S.H.I.E.L.D. vs. HYDRA War
-2. Hail Hydra
-3. Hydra Helicarriers Hunt Heroes
-4. Secret Empire of Betrayal
+**1. S.H.I.E.L.D. vs. HYDRA War**
+
+![S.H.I.E.L.D. vs. HYDRA War](https://images.legendary-arena.com/shld/shld-sc-shield-vs-hydra-war.webp)
+
+**2. Hail Hydra**
+
+![Hail Hydra](https://images.legendary-arena.com/shld/shld-sc-hail-hydra.webp)
+
+**3. Hydra Helicarriers Hunt Heroes**
+
+![Hydra Helicarriers Hunt Heroes](https://images.legendary-arena.com/shld/shld-sc-hydra-helicarriers-hunt-heroes.webp)
+
+**4. Secret Empire of Betrayal**
+
+![Secret Empire of Betrayal](https://images.legendary-arena.com/shld/shld-sc-secret-empire-of-betrayal.webp)
 
 **Setup by player count** — scores never compare across counts, so a solo run and a three-player run sit on separate boards:
 
