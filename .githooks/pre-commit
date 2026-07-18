@@ -62,4 +62,48 @@ echo "$STAGED" | grep -qE '^lighthouse-.*\.json$' && \
 echo "$STAGED" | grep -qE '^build[0-9]+\.txt$' && \
   fail "Staged build*.txt detected. These are WP-005 reproducibility scratch files. Run: git reset HEAD build*.txt"
 
+# Rule 9: Gauntlet Guide posts must come from the gauntlet-guide archetype
+# why: the archetype at archetypes/gauntlet-guide.md is not a front-matter
+# stub — it carries the DERIVED/JUDGMENT/BLOCKED editorial rules the series
+# is held to (WP-038). A guide hand-written from a previous post silently
+# loses them. Documentation alone did not hold: the ewiki carried a stale
+# "add the fields by hand" instruction for a month. So this is enforced.
+#
+# Detection is by series/category, not filename, so a differently-named
+# gauntlet post is still caught.
+GAUNTLET_POSTS=$(echo "$STAGED" | grep -E '^content/posts/.*\.md$' || true)
+for POST in $GAUNTLET_POSTS; do
+  [ -f "$POST" ] || continue
+  grep -qE '^series:[[:space:]]*"Gauntlet Guides"|gauntlet-guides' "$POST" || continue
+
+  # 9a. Archetype front matter must be present.
+  for FIELD in gauntlet_set gauntlet_mastermind gauntlet_board guide_version; do
+    grep -qE "^${FIELD}:" "$POST" || fail "$POST looks like a Gauntlet Guide but is missing '${FIELD}:'.
+Generate it from the archetype instead of copying a previous post:
+  hugo new content posts/<slug>.md --kind gauntlet-guide
+The archetype (archetypes/gauntlet-guide.md) carries the editorial rules
+for this series, not just the fields. See wiki/blog-post-authoring.md."
+  done
+
+  # 9b. The honesty section is required while PAR is unpublished.
+  grep -qE '^## What this section will say later' "$POST" || fail "$POST is a Gauntlet Guide with no 'What this section will say later' section.
+That section is REQUIRED by the archetype: it states that the guidance comes
+from card text and the scoring model rather than observed results. Do not
+delete it until PAR publishes and boards accept entries."
+
+  # 9c. BLOCKED claims — no competitive score data exists to support these.
+  # legendary.competitive_scores is empty and PAR is deliberately
+  # unpublished, so every one of these would be invented authority.
+  BLOCKED_HIT=$(grep -nEi 'PAR -[0-9]|estimated competitive|expected results|clear rate|score risk[[:space:]]*:|difficulty[[:space:]]*:.*(easy|medium|hard)|[0-9]+/10|⭐' "$POST" | head -n 3 || true)
+  if [ -n "$BLOCKED_HIT" ]; then
+    fail "$POST contains claims the archetype BLOCKS — no competitive score data exists.
+$BLOCKED_HIT
+
+PAR is unpublished and legendary.competitive_scores is empty, so PAR ranges,
+difficulty/score-risk ratings, expected-results tables and clear rates would
+be fabricated authority on a public page. Leave the gap visible.
+See the BLOCKED list in archetypes/gauntlet-guide.md."
+  fi
+done
+
 exit 0
