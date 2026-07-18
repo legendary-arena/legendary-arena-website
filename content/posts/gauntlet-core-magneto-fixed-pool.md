@@ -32,7 +32,7 @@ This is the guide for the second question.
 
 1. Midtown Bank Robbery
 2. Secret Invasion of the Skrull Shapeshifters
-3. Legacy Virus, The
+3. The Legacy Virus
 4. Negative Zone Prison Breakout
 5. Portals to the Dark Dimension
 6. Replace Earth's Leaders with Killbots
