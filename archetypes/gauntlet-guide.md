@@ -82,6 +82,51 @@ BLOCKED — DO NOT WRITE THESE. No competitive score exists yet:
   Bystander loss is the live pressure. That is description, not a rating.
 
 --------------------------------------------------------------------------------
+FIRST: CHECK THE MASTERMIND ACTUALLY PLAYS
+--------------------------------------------------------------------------------
+
+Do this BEFORE reading card text. Two known engine defects mean the mastermind
+in the data is not always the mastermind in the match, and a guide written
+against the wrong one is wrong in every section that matters.
+
+Run:
+
+    node -e "
+    const fs=require('fs');
+    const j=JSON.parse(fs.readFileSync('data/cards/<setAbbr>.json','utf8'));
+    const mm=j.masterminds.find(m=>m.slug==='<mastermindSlug>');
+    const base=(mm.cards||[]).filter(c=>c.tactic!==true);
+    console.log(mm.name+': '+base.length+' base face(s) -> '+
+      (base.length===0 ? 'INERT (WP-390) - do not write this guide yet'
+       : base.length===1 ? 'OK - single face, safe'
+       : 'AMBIGUOUS (WP-389) - engine plays the LAST: \"'+base[base.length-1].name+'\"'));"
+
+(in the legendary-arena engine repo)
+
+  - **1 base face** — safe. Write the guide. `core` masterminds are all
+    single-face, which is why the Magneto guide holds up.
+
+  - **2+ base faces (WP-389)** — the engine's classifier has no early exit, so
+    the LAST non-tactic face wins and the match plays the **Epic** variant
+    nobody chose. 65 masterminds across 24 sets. The base and Epic Strikes
+    often demand opposite play (co2e Red Skull: "KO a Hero from your hand"
+    vs Epic's "discard a Tech Hero or discard to 3"). WAIT for WP-389 — it
+    makes the first face win, and a guide written to today's behaviour
+    inverts the moment it lands.
+
+  - **0 base faces (WP-390)** — council masterminds (`shld/hydra-high-council`,
+    `shld/hydra-super-adaptoid`, `2099/sinister-six-2099`,
+    `2099/alchemax-executives`). Setup falls through to an empty placeholder:
+    no Master Strike, no tactics, no game text. There is no spine to find
+    because the mastermind does nothing. Do not write a mastermind-centred
+    guide; if you write anything, make it explicitly scheme-centred and say
+    why (see the Hydra High Council guide).
+
+Why this is step one: two of the first three guides in this series were
+blocked here, and it was only caught by reading engine source rather than card
+data. The card data looks completely normal in both failure modes.
+
+--------------------------------------------------------------------------------
 FINDING THE SPINE
 --------------------------------------------------------------------------------
 
