@@ -74,11 +74,15 @@ So at solo you get three heroes per match and five total across all nine schemes
 
 That reframes hero selection completely. In Open, you counter-pick each scheme. In Fixed-Pool you are choosing a **core that never leaves** plus a small flex slot, and the winning question stops being "what is best against Legacy Virus" and becomes "what is *acceptable* against all nine." Specialists get expensive fast. Generalists that are never the best answer but are never a dead card either tend to survive the budget.
 
+And because heroes are not restricted to the set (see below), that budget is spent against your *entire* collection, not a fifteen-card shelf. Five slots chosen from everything you own is a much harder question than five chosen from fifteen.
+
 ## Where to start
 
-The Core Set (2nd Edition) hero pool is fifteen: Black Widow, Captain America, Cyclops, Emma Frost, Gambit, Hawkeye, Hulk, Iron Man, Nick Fury, Rogue, Spider-Man, Spider-Man (Miles Morales), Storm, Thor, and Wolverine.
+One rule people assume and shouldn't: **your heroes are not restricted to this set.** The gauntlet pins the mastermind and its nine schemes — that's the whole constraint. Heroes may come from anywhere in your collection, on every leg.
 
-Some honest guidance on how to use that list:
+The set's own fifteen are the thematic default and a perfectly good starting point: Black Widow, Captain America, Cyclops, Emma Frost, Gambit, Hawkeye, Hulk, Iron Man, Nick Fury, Rogue, Spider-Man, Spider-Man (Miles Morales), Storm, Thor, and Wolverine. But treat that as a shelf, not a fence.
+
+Some honest guidance on how to use it:
 
 - **Open division — run the schemes in the order above.** Bank Robbery Hostage Crisis is the gentlest introduction to Red Skull's Strike cadence and the cheapest place to learn it. Save Super Hero Civil War and Unleash the Power of the Cosmic Cube until you know how your build handles pressure, because they punish a stalled engine hardest.
 - **Fixed-Pool — pick your core from reliability, not power.** Heroes whose value does not depend on a specific villain type or a fully assembled board are worth more here than they look in isolation. Your two flex slots should cover your core's single worst matchup, not chase upside.
