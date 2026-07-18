@@ -1,5 +1,16 @@
+{{- /* Legendary Arena — end-of-post CTA block.
+
+       The `cta` front-matter value is a CLOSED SET. An unrecognized
+       value is silently rewritten to "play" below — it does not error
+       and does not render nothing, it renders the WRONG CTA. That bit
+       real once: the three Gauntlet Guides shipped `cta: "leaderboard"`
+       before this partial understood the value (commits be2751e /
+       fbbbb83) and quietly rendered "Play now" instead. WP-037 added
+       the branch. If you need an action this set doesn't cover, extend
+       this partial — don't invent a value in front matter.
+*/ -}}
 {{- $cta := .Params.cta | default "play" -}}
-{{- if not (in (slice "play" "newsletter" "tournament") $cta) }}
+{{- if not (in (slice "play" "newsletter" "tournament" "leaderboard") $cta) }}
   {{- $cta = "play" -}}
 {{- end -}}
 {{- if eq $cta "play" }}
@@ -16,5 +27,19 @@
 <div class="cta-block" data-cta="{{ $cta }}">
     <p class="cta-block-text">Think you've got what it takes?</p>
     <a href="https://play.legendary-arena.com/" class="button cta-block-button">Enter a tournament</a>
+</div>
+{{- else if eq $cta "leaderboard" }}
+{{- /* Deep-links the post's own board when `gauntlet_board` is set,
+       falling back to the leaderboard root when it isn't. The board id
+       must match the live gauntlet catalog — a wrong id yields a valid
+       URL to a board that doesn't exist, which Hugo cannot catch. */ -}}
+{{- $board := .Params.gauntlet_board -}}
+{{- $href := "https://legends.legendary-arena.com/" -}}
+{{- if $board }}
+  {{- $href = printf "https://legends.legendary-arena.com/#/gauntlet/%s" $board -}}
+{{- end }}
+<div class="cta-block" data-cta="{{ $cta }}">
+    <p class="cta-block-text">Every score on this board is replay-verified.</p>
+    <a href="{{ $href }}" class="button cta-block-button">{{ if $board }}View the gauntlet{{ else }}View the leaderboard{{ end }}</a>
 </div>
 {{- end }}

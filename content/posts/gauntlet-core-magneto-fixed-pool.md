@@ -9,7 +9,7 @@ series: "Gauntlet Guides"
 gauntlet_set: "core"
 gauntlet_mastermind: "magneto"
 gauntlet_board: "gauntlet-core-magneto"
-cta: "play"
+cta: "leaderboard"
 ---
 
 ![Magneto](https://images.legendary-arena.com/core/core-mm-magneto.webp)
@@ -229,4 +229,3 @@ Every Fixed-Pool board is currently unclaimed. When the boards open, the first p
 >
 > Practically: you can play these matches today, but a finished run will not yet post to the board. When calibration publishes, the boards open. The pool-construction problem above is unchanged either way — it comes from the cards, not the scoring.
 
-**[View the Magneto gauntlet →](https://legends.legendary-arena.com/#/gauntlet/gauntlet-core-magneto)**

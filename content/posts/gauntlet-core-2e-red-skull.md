@@ -9,7 +9,7 @@ series: "Gauntlet Guides"
 gauntlet_set: "co2e"
 gauntlet_mastermind: "red-skull"
 gauntlet_board: "gauntlet-co2e-red-skull"
-cta: "play"
+cta: "leaderboard"
 ---
 
 ![Red Skull](https://images.legendary-arena.com/co2e/co2e-mm-red-skull.webp)
@@ -128,4 +128,3 @@ Until then, the fastest way to find out what works is to go play it.
 >
 > Practically: you can play these matches today, but a finished run will not yet post to the board. When calibration publishes, the boards open. Nothing here is wasted — the strategy holds either way, and the format is worth learning before the field arrives.
 
-**[View the Red Skull gauntlet →](https://legends.legendary-arena.com/#/gauntlet/gauntlet-co2e-red-skull)**
