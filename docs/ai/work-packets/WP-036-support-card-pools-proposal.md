@@ -1,9 +1,11 @@
 # WP-036 — Support card pools: select bystanders, officers, wounds & sidekicks by card, by set, or all
 
-**Status:** 📝 Proposal — decisions locked 2026-07-18, awaiting build authorization
-**Drafted:** 2026-07-18 · **Revised:** 2026-07-18 (operator review pass 1)
+**Status:** 📝 Proposal — Phase A shipped; **Phase B blocked on a governance
+decision** (see §8). Decisions locked 2026-07-18.
+**Drafted:** 2026-07-18 · **Revised:** 2026-07-18 (pass 2 — Phase B survey)
 **Implementation repo:** engine monorepo (`C:\pcloud\BB\DEV\legendary-arena\`),
-`apps/registry-viewer/` + `packages/registry/` + `packages/lagn/`.
+`apps/registry-viewer/` + `packages/registry/` + `packages/lagn-spec/`
+(directory is `lagn-spec`; published package name is `@legendary-arena/lagn`).
 Only the LAGN JSON Schema at
 `C:\www\legendary-arena-com\static\schemas\lagn\v1\lagn-v1.json` lives in this repo.
 
@@ -116,12 +118,30 @@ Rules:
    primitive: "all" is `mode: "sets"` with every set abbr listed, written by a
    *Select all sets* button. Three modes, one control, no third code path.
 
-**LAGN impact.** This is additive to v1: `bystanders_count` etc. stay required.
-Add optional `bystanders_pool` / `wounds_pool` / `shield_officers_pool` /
-`sidekicks_pool` objects. That keeps `lagn_version: "1.0.0"` valid, but I'd
-still bump to **1.1.0** and publish both schema files so a reader can tell
-whether pools were expressible when the record was written. WP-244 owns the
-spec-publication pipeline; this rides that path.
+**LAGN impact — the draft was wrong about this; corrected 2026-07-18.**
+The intent stands (`*_count` stays required, add optional `*_pool` objects,
+publish 1.1.0), but "additive, so 1.0.0 files stay valid" understated the work
+in both directions:
+
+- `packages/lagn-spec/src/validator.ts:230` pins `lagn_version: z.literal('1.0.0')`.
+  A 1.1.0 document is **rejected outright** by every current consumer. There is
+  no migration seam on the LAGN side to extend — it would have to be built.
+- The LAGN Zod schema declares no `.strict()`, so Zod **strips** unknown keys.
+  A `*_pool` field written into a 1.0.0 document is silently dropped rather than
+  rejected — the worst failure mode, since a preset would appear to save and
+  come back empty.
+- `generateSchema()` (`validator.ts:325–464`) is a **hand-written duplicate** of
+  the Zod schema living in the same file, and CI (`.github/workflows/ci.yml:247–278`)
+  only checks that the committed JSON matches the generator — not that the
+  generator matches Zod. Every field must be added in both places, by hand, or
+  the two silently diverge with CI green.
+
+**Correction:** `docs/ai/work-packets/WP-244-lagn-spec-publication.md` in this
+repo is an **empty file**. The draft claimed WP-244 "owns the spec-publication
+pipeline"; that was inferred from the filename. The engine monorepo's copy of
+WP-244 is real and does describe publication steps. Nothing in this repo
+automates the sync — `static/schemas/lagn/v1/lagn-v1.json` is served by Hugo
+static passthrough and is referenced by no config or content page here.
 
 ### 3.2 UI — one picker pattern, reused four times
 
@@ -222,8 +242,8 @@ These are pre-existing, and they undercut the goal until fixed:
 
 | Phase | Scope | Rough size |
 |---|---|---|
-| **A** | Set filter in the loadout picker (shared with hero/villain slots). Ships alone, useful alone. | ~half-day |
-| **B** | Contract + LAGN 1.1 pool shape, validators, round-trip tests. No UI. | ~1 day |
+| **A** | ✅ **Shipped** — set filter in the loadout picker (engine PR #819). | ~half-day |
+| **B** | 🚫 **Blocked** (§8). Contract + LAGN 1.1 pool shape, validators, round-trip tests. No UI. Revised estimate **~3–4 days**, not 1. | see §8 |
 | **C** | Pool picker UI for all four kinds; `default` / `sets` / `explicit` modes + *Select all sets*; copies stepper. | ~1–2 days |
 | **D** | Support Presets: download, upload, lock. File-only (§3.3) — no storage blocker. | ~1 day |
 | **E** | Carry pools through `?lagn=` share links; optional outbound deep link to play/legends. | ~half-day |
@@ -261,3 +281,54 @@ the word if you want any of them flipped before the build starts.
   setup definition only; the engine consumes what it's given.
 - The `legends` leaderboard's own display of presets (WP-149 territory).
 - Retroactive migration of existing LAGN records — they stay valid untouched.
+
+---
+
+## 8. Phase B is blocked on a locked contract — operator decision needed
+
+Added 2026-07-18 after surveying the engine monorepo. The §3.1 design is sound
+but it cannot be built without first amending a governance lock. This is the
+repo's own required order of operations, not an optional gate.
+
+### The blocker
+
+The four count fields sit inside the **9-field composition lock (D-1244)**:
+
+- `.claude/rules/code-style.md:188–197` — lists the nine fields and says
+  plainly: **"Do not rename, abbreviate, or add fields."**
+- `docs/03.1-DATA-SOURCES.md:161` (D-1244) — *"JSON schema must match TypeScript
+  contract exactly; `additionalProperties: false` enforced (D-1244 through
+  D-1248)."*
+
+`additionalProperties: false` is the hard part. A `pool` object on the
+composition block is not merely discouraged — it is **actively rejected** by the
+match-setup schema. Two drift-detection tests exist specifically to catch this
+and will fail by design:
+`packages/registry/src/setupContract/setupContract.test.ts` (registry ↔
+game-engine mirror) and `packages/game-engine/src/ui/uiState.types.drift.test.ts`.
+
+Per `.claude/rules/code-style.md`, a locked contract requires a
+`docs/ai/DECISIONS.md` entry **amending the decision first, then extending** —
+`setupContract.types.ts:67–74` spells this out verbatim.
+
+### Three ways forward
+
+| | Approach | Trade |
+|---|---|---|
+| **1** | **Amend D-1244** to a 9-field core + optional pool block. Honest, permanent, unblocks C/D/E cleanly. | Touches a lock deliberately set; needs a DECISIONS entry and a careful sweep of ~20 consumer sites the survey enumerated. |
+| **2** | **Put pools in the envelope, not the composition.** `code-style.md:198–200` states the envelope *is* extensible by design and the lock applies "specifically to the composition block." Pools ride alongside rather than inside. **No lock amendment needed.** | Splits the support definition from the counts it must stay consistent with; §3.1's "count must equal sum(copies)" becomes a cross-block invariant. |
+| **3** | **Keep pools entirely client-side.** Support Presets are a registry-viewer concept; the exported MATCH-SETUP/LAGN carries only the resolved counts, as today. | Zero contract change, ships fastest, and satisfies the stated goal (a fixed harness across runs). But the preset can't travel with a game record, so `legends` can never *show* which harness a run used. |
+
+**My recommendation: option 2**, with option 3 as the fallback if you want Phase
+C/D sooner. Option 2 gets identity into the exported document — which is what
+makes a `legends` comparison auditable — without touching a lock that exists for
+good reason. The cross-block invariant is a validator's job and is cheap to
+write. Option 1 is the "right" long-run shape but is a bigger governance move
+than this feature justifies on its own.
+
+**Independent of the choice**, Phase B should also introduce an exported
+`LAGN_VERSION` constant. The literal `'1.0.0'` is currently duplicated across 5
+production sites and ~30 fixtures with no single source, and
+`packages/game-engine/src/versioning/versioning.check.ts:22–30` already
+establishes the convention (version constants live in TS, deliberately not read
+from `package.json`). Any bump without that cleanup means editing 35 places.
