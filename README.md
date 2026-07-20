@@ -10,6 +10,31 @@ at `cards.legendary-arena.com`. See
 [`docs/01-VISION.md`](docs/01-VISION.md) for the three-site
 architecture.
 
+## Where things live
+
+This repo holds the marketing site's **text**: post markdown, layouts,
+brand tokens, and the images small enough to commit. It does not hold
+working files.
+
+- **Source images before export, design comps, product photography
+  originals, and video** live in pCloud, not here. Only the optimized
+  derivative is committed.
+- **Finished video** lives on YouTube; a post embeds it. No video file
+  enters this repo.
+- **Secrets** live in `.dev.vars` locally (gitignored) and in the
+  Cloudflare Pages dashboard in production — never in a commit.
+
+The full map of which storage surface owns which kind of work is the
+[Workspace Map](https://ewiki.legendary-arena.com/workspace-map/) on the
+engineering wiki. Authoring conventions for this repo are on
+[Blog Post Authoring](https://ewiki.legendary-arena.com/blog-post-authoring/)
+and [Hugo Onboarding](https://ewiki.legendary-arena.com/hugo-onboarding/).
+
+> Note the checkout location: this repo lives at `C:\www\`, off the
+> pCloud sync drive. That is deliberate — syncing a `.git` directory
+> causes refs to shift under a running session. Durability comes from
+> pushing, not from file sync.
+
 ---
 
 ## Prerequisites
