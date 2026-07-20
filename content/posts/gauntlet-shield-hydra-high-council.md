@@ -1,7 +1,7 @@
 ---
 title: "Gauntlet Guide: Hydra High Council, S.H.I.E.L.D."
 date: 2026-07-18
-description: "Four legs, one mastermind — the shortest championship on the board. What the S.H.I.E.L.D. gauntlet asks, and the engine defect to know about before you start."
+description: "Four legs, one mastermind — but this gauntlet cannot currently be started. What the S.H.I.E.L.D. schemes ask, and the engine defect that blocks the board."
 draft: false
 tags: ["gauntlet", "strategy", "hydra-high-council", "shield"]
 categories: ["gauntlet-guides"]
@@ -17,11 +17,15 @@ cta: "leaderboard"
 
 Most gauntlets are eight or nine legs. The S.H.I.E.L.D. set has **four schemes**, which makes the Hydra High Council gauntlet the shortest complete championship on the board — and completeness is the only thing standing between you and a ranked entry. There is no partial credit, but there is also not much to finish.
 
-> **Read this before you pick this gauntlet.** An earlier version of this guide called it the one to claim first. That recommendation is withdrawn, because the reason it plays easily is a defect rather than a design.
+> **This gauntlet cannot currently be played.** Starting a match against the Hydra High Council now fails immediately with an error naming the mastermind. That is deliberate, and it is an improvement on what came before.
 >
-> The Hydra High Council is a **council** mastermind — four members (Red Skull, Viper, Arnim Zola, Baron Helmut Zemo), each with its own Master Strike. The engine models a mastermind as one primary card plus its tactics, and a council does not fit that shape, so it currently resolves to an empty placeholder: **no Master Strike, no tactics, no abilities.** Both S.H.I.E.L.D. masterminds are affected.
+> The Hydra High Council is a **council** mastermind — four members (Red Skull, Viper, Arnim Zola, Baron Helmut Zemo), each carrying its own Master Strike. The engine models a mastermind as one primary card plus its tactics, and a council does not fit that shape. Until recently it resolved to an empty placeholder — **no Master Strike, no tactics, no abilities** — so the match ran, looked normal, and had no opponent. Both S.H.I.E.L.D. masterminds were affected.
 >
-> So the schemes below are real and worth learning, but the mastermind opposing you presently does nothing. Treat this as a scheme-practice gauntlet, not a test of your build against Hydra — and expect it to get considerably harder when the fix lands. Tracked as WP-390.
+> Rather than leave that silently broken, match setup now rejects it outright. A match that refuses to start is better than one that starts and means nothing.
+>
+> **What that means for you.** The four schemes below are real, and they are still worth reading — they are ordinary S.H.I.E.L.D. schemes and you can play every one of them against a different mastermind today. What you cannot do is run them as *this* gauntlet, or post to this board, until councils are properly modelled. Tracked as WP-390 / D-24206.
+>
+> If you want a gauntlet you can actually start right now, the Core Set Magneto gauntlet is the one to read next — it is a genuine test and it works.
 
 ## The board
 
@@ -75,7 +79,7 @@ The other quiet advantage: **best-per-leg scoring means retries only ever help y
 
 ## What the schemes ask
 
-Note the section title. This is deliberately about the **schemes**, not the mastermind — per the note above, the Council currently contributes nothing to the match, so all four legs' pressure comes from the scheme and the villains you chose to face.
+Note the section title. This is deliberately about the **schemes**, not the mastermind — per the note above, the Council cannot currently be fielded at all, so everything below is about the schemes themselves and the villains you choose to face. It stays useful for playing these schemes under another mastermind.
 
 The S.H.I.E.L.D. set is built around infiltration and betrayal as themes, and the schemes lean that way — *Secret Empire of Betrayal* and *Hail Hydra* both trade on the idea that your own side is compromised.
 
@@ -115,7 +119,7 @@ Being straight about it: **the boards are new, so the guidance above is informed
 
 Every score here is replay-verified, which means once entries accumulate we can publish the real thing — hero frequencies among ranked entries, actual Fixed-Pool compositions, per-leg score distributions. This section gets replaced with data rather than more opinion.
 
-Four legs, and the schemes are worth learning on their own terms. Just go in knowing the Council is not yet fighting back.
+Four legs, and the schemes are worth learning on their own terms — under a mastermind you can actually field. Come back to this board when the Council is modelled.
 
 > **One honest caveat before you start.** The gauntlet boards are not accepting entries yet. Competitive scoring is gated on **PAR calibration** — the per-scenario baseline every score is measured against — and PAR is deliberately unpublished until the engine implements each scenario's card abilities faithfully. Publishing baselines against a partly-implemented engine would bake wrong numbers into permanently version-pinned scores, so the gate stays closed on purpose.
 >
