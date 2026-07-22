@@ -7,14 +7,55 @@
 // FROM the glossary labels (keyword-<slug(label)> / rule-<slug(label)>) so every
 // cross-reference the viewer generates resolves to a real element on the page.
 import fs from "node:fs";
+import { fileURLToPath } from "node:url";
+import path from "node:path";
 
 // Usage: node build.mjs <pages.json> <engine-repo-root> <out-index.md>
 const PAGES_JSON = process.argv[2];
 const ENGINE = process.argv[3];
 const OUT_INDEX = process.argv[4] || "content/rules/index.md";
+const SCRIPT_DIR = path.dirname(fileURLToPath(import.meta.url));
 const pages = JSON.parse(fs.readFileSync(PAGES_JSON, "utf8"));
 const keywordsJson = JSON.parse(fs.readFileSync(`${ENGINE}/data/metadata/keywords-full.json`, "utf8"));
 const rulesJson = JSON.parse(fs.readFileSync(`${ENGINE}/data/metadata/rules-full.json`, "utf8"));
+// Icon shape data (per-cluster fallback SVG paths) sits beside pages.json;
+// icon-map.json (cluster id → asset) is committed beside this script.
+const iconShapes = JSON.parse(fs.readFileSync(PAGES_JSON.replace(/\.json$/, "-icons.json"), "utf8"));
+const iconMap = JSON.parse(fs.readFileSync(`${SCRIPT_DIR}/icon-map.json`, "utf8"));
+const shapeById = new Map(iconShapes.map((s) => [s.id, s]));
+
+// Render an inline icon token {{icon:N}} to HTML: the mapped asset <img> (with
+// derived alt text), the literal "*" for the asterisk symbol, or — for
+// unidentified clusters — a faithful monochrome inline SVG from the PDF paths.
+function iconAlt(assetPath) {
+  const base = assetPath.split("/").pop().replace(/^(info|class|team)-/, "");
+  return base.split("-").map((w) => (w === "vp" ? "VP" : w[0].toUpperCase() + w.slice(1))).join(" ");
+}
+const EXTRACTED_DIR = "static/img/icons/rules-extracted";
+const usedFallbacks = new Set();
+function renderIcon(id) {
+  const asset = iconMap[String(id)];
+  if (asset === "*") return "\\*";
+  if (asset) return `<img src="/img/icons/${asset}.svg" alt="${iconAlt(asset)}" class="rules-icon">`;
+  const s = shapeById.get(id);
+  if (!s) return "";
+  // Unidentified icon: reference a generated monochrome SVG file (kept out of the
+  // page so it stays small — 900+ icons would bloat it as inline SVG).
+  usedFallbacks.add(id);
+  return `<img src="/img/icons/rules-extracted/icon-${id}.svg" alt="game symbol" class="rules-icon">`;
+}
+function writeFallbackSvgs() {
+  fs.mkdirSync(EXTRACTED_DIR, { recursive: true });
+  for (const id of usedFallbacks) {
+    const s = shapeById.get(id);
+    fs.writeFileSync(
+      `${EXTRACTED_DIR}/icon-${id}.svg`,
+      `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${s.w} ${s.h}"><path d="${s.d}" fill="#6a6a72" fill-rule="evenodd"/></svg>`,
+    );
+  }
+}
+const renderIcons = (str) =>
+  str.replace(/[ \t]*\{\{icon:(\d+)\}\}[ \t]*/g, (_, n) => ` ${renderIcon(+n)} `).replace(/[ \t]{2,}/g, " ");
 
 const slug = (s) =>
   s.toLowerCase().replace(/[’'“”"]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
@@ -202,9 +243,16 @@ for (let i = 0; i < stream.length; i++) {
     continue;
   }
 
-  // Body: continuation of previous list item, or paragraph text
+  // Body text. Merge wrapped continuation lines into the current paragraph (or
+  // the current list item) — the rulebook wraps sentences across many lines, and
+  // each is otherwise emitted as its own one-line paragraph. A real paragraph
+  // break (para flag) or an intervening heading/bullet/block-break starts fresh.
   const prev = blocks[blocks.length - 1];
   if (prev && prev.type === "li" && !l.para) {
+    prev.text += " " + text;
+    continue;
+  }
+  if (prev && prev.type === "p" && !l.para) {
     prev.text += " " + text;
     continue;
   }
@@ -216,10 +264,22 @@ for (let i = 0; i < stream.length; i++) {
 // label, attach an alias id (keyword-/rule-<slug(label)>) to its best-matching
 // heading so the registry viewer's links always resolve.
 const headings = blocks.filter((b) => b.type === "h2" || b.type === "h3" || b.type === "h4");
+const usedIds = new Set();
+const uniqueId = (base) => {
+  let id = base || "section";
+  let n = 1;
+  while (usedIds.has(id)) id = `${base}-${n++}`;
+  usedIds.add(id);
+  return id;
+};
 for (const h of headings) {
-  if (h.type === "h2") h.primaryId = h.id;
-  else if (h.keyword) h.primaryId = `keyword-${slug(h.text)}`;
-  else if (h.section && h.section.kind === "rules") h.primaryId = `rule-${slug(h.text)}`;
+  // Every heading gets a stable explicit id so the on-page Contents links and the
+  // registry-viewer deep-links all resolve (Hugo's auto-slugging would append
+  // -1/-2 to the many duplicate names like "Locations", breaking anchors).
+  if (h.type === "h2") h.primaryId = uniqueId(h.id);
+  else if (h.keyword) h.primaryId = uniqueId(`keyword-${slug(h.text)}`);
+  else if (h.section && h.section.kind === "rules") h.primaryId = uniqueId(`rule-${slug(h.text)}`);
+  else h.primaryId = uniqueId(slug(h.text));
   h.aliases = new Set();
 }
 // A few glossary rule labels map to a differently-worded rulebook heading (or to
@@ -293,7 +353,34 @@ for (const b of blocks) {
 
 let body = out.join("\n");
 body = body.replace(/([a-z])-\s+([a-z])/g, "$1$2"); // rejoin soft hyphenation
+body = renderIcons(body); // replace {{icon:N}} tokens with asset <img> / inline SVG
 body = body.replace(/\n{3,}/g, "\n\n").trim() + "\n";
+
+// ── On-page Table of Contents ────────────────────────────────────────────────
+// The source PDF's only hyperlinks are its Table of Contents (every entry links
+// to its section/keyword). Those TOC pages are dropped, so reconstruct the
+// contents on-page: each section is a collapsible group linking to every heading
+// under it. This restores the PDF's link navigation and is fully clickable.
+const esc = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+function buildContents() {
+  const groups = [];
+  let g = null;
+  for (const h of headings) {
+    if (h.type === "h2") { g = { h, children: [] }; groups.push(g); }
+    else if (g) g.children.push(h);
+  }
+  const parts = ['<nav class="rules-toc">', "<h2 id=\"contents\">Contents</h2>"];
+  for (const { h, children } of groups) {
+    const link = `<a href="#${h.primaryId}">${esc(h.text)}</a>`;
+    if (!children.length) { parts.push(`<p class="rules-toc-section">${link}</p>`); continue; }
+    parts.push(`<details class="rules-toc-group"><summary>${link} <span class="rules-toc-count">(${children.length})</span></summary>`);
+    parts.push('<ul>' + children.map((c) => `<li><a href="#${c.primaryId}">${esc(c.text)}</a></li>`).join("") + "</ul>");
+    parts.push("</details>");
+  }
+  parts.push("</nav>");
+  return parts.join("\n");
+}
+const contents = buildContents();
 
 const PDF_URL = "https://images.legendary-arena.com/docs/legendary-universal-rules-v23.pdf";
 const frontMatter = [
@@ -301,13 +388,26 @@ const frontMatter = [
   'title: "Marvel Legendary Universal Rulebook (v23)"',
   "date: 2026-07-22T00:00:00-05:00",
   'description: "The complete Marvel Legendary Deck-Building Game universal rules (version 23, updated through Weapon X) — setup, turn structure, every keyword ability, card and location clarifications, additional rules, expansion card lists, and errata. A single searchable reference page."',
-  "ShowToc: true",
-  "TocOpen: false",
+  "ShowToc: false",
   "draft: false",
   "---",
   "",
 ].join("\n");
-const lead = `This page reproduces the **Marvel Legendary Universal Rulebook, version 23**
+const lead = `<style>
+.rules-icon{height:1em;width:auto;vertical-align:-0.15em;display:inline-block;margin:0 0.06em}
+svg.rules-icon{fill:currentColor}
+.rules-toc{margin:1.5rem 0;font-size:0.95em}
+.rules-toc h2{margin:0 0 .5rem}
+.rules-toc-section{margin:.15rem 0;font-weight:600}
+.rules-toc-group{margin:.15rem 0}
+.rules-toc-group>summary{cursor:pointer;font-weight:600;padding:.15rem 0}
+.rules-toc-count{opacity:.6;font-weight:400}
+.rules-toc-group ul{margin:.25rem 0 .5rem 1.25rem;columns:2;column-gap:2rem;padding-left:1rem}
+.rules-toc-group li{break-inside:avoid}
+@media (max-width:640px){.rules-toc-group ul{columns:1}}
+</style>
+
+This page reproduces the **Marvel Legendary Universal Rulebook, version 23**
 (updated through Weapon X), compiled by **Randall Worley** — the rules
 reference behind Legendary Arena's [card registry](https://cards.legendary-arena.com/)
 and [play client](https://play.legendary-arena.com/). The full rulebook is
@@ -315,11 +415,10 @@ laid out below as one searchable page: general setup, the turn sequence,
 every keyword ability, card and location clarifications, additional rules,
 expansion card lists, and errata.
 
-> **About the ◈ symbol.** The printed rulebook renders Attack, Recruit,
-> Victory Points, and card cost as picture icons (and lays a few tables out
-> with icon dividers). Those are images in the source file and cannot be shown
-> as text, so each appears here as **◈**. For the exact symbol in any passage,
-> open the [original illustrated PDF](${PDF_URL}).
+> **Icons and navigation.** The game's symbols — Attack <img src="/img/icons/card-info/info-attack.svg" alt="Attack" class="rules-icon">, Recruit <img src="/img/icons/card-info/info-recruit.svg" alt="Recruit" class="rules-icon">, hero classes, and team badges — are
+> rendered inline from the rulebook's own artwork. The linked table of contents
+> below jumps to any section, keyword, or rule, and every heading has a stable
+> anchor. For the fully illustrated original, open the [source PDF](${PDF_URL}).
 >
 > *Marvel* and *Legendary* are trademarks of their respective owners; this is a
 > freely-distributed community rulebook, reproduced here for reference.
@@ -327,7 +426,8 @@ expansion card lists, and errata.
 ---
 `;
 
-fs.writeFileSync(OUT_INDEX, frontMatter + lead + "\n" + body, "utf8");
+fs.writeFileSync(OUT_INDEX, frontMatter + lead + "\n" + contents + "\n\n" + body, "utf8");
+writeFallbackSvgs();
 
 // ── Cross-reference coverage report ──────────────────────────────────────────
 const allIds = new Set();

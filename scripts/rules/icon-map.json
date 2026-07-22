@@ -1,0 +1,18 @@
+{
+  "_comment": "Maps icon cluster id (from extract.mjs, see pages-icons.json) to an asset under /img/icons/, or the literal '*' for the asterisk symbol. Unmapped clusters render as a faithful monochrome inline SVG reconstructed from the PDF paths. Cluster ids are stable as long as the source PDF is unchanged; re-verify after re-extraction. Identified via shape-match to the asset icons + surrounding-text context.",
+  "0": "card-info/info-attack",
+  "1": "card-info/info-recruit",
+  "3": "hero-classes/class-tech",
+  "9": "hero-classes/class-strength",
+  "16": "*",
+  "37": "card-info/info-focus",
+  "2": "hero-teams/team-avengers",
+  "7": "hero-teams/team-guardians-of-the-galaxy",
+  "8": "hero-teams/team-marvel-knights",
+  "12": "hero-teams/team-spider-friends",
+  "17": "hero-teams/team-hydra",
+  "18": "hero-teams/team-fantastic-four",
+  "36": "hero-teams/team-illuminati",
+  "38": "hero-teams/team-heroes-of-wakanda",
+  "40": "hero-teams/team-inhumans"
+}

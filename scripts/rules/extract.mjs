@@ -2,7 +2,7 @@
 // Reconstructs reading order by detecting a vertical gutter (single-level XY-cut)
 // per page, so 2-column reference pages read left-column-then-right-column
 // instead of interleaving. Emits page markers for section mapping.
-import { getDocument } from "pdfjs-dist/legacy/build/pdf.mjs";
+import { getDocument, OPS } from "pdfjs-dist/legacy/build/pdf.mjs";
 import fs from "node:fs";
 
 const PDF = process.argv[2];
@@ -160,14 +160,9 @@ function emitBlock(col) {
     for (const w of ln.words) {
       if (px1 !== null) {
         const gap = w.x0 - px1;
-        // A gap ~a full character wide with no text is a lost inline icon image
-        // (Attack/Recruit/VP/cost symbols are images, not glyphs, in this PDF).
-        if (gap > w.h * 0.85) {
-          if (!s.endsWith(" ")) s += " ";
-          s += "◈ "; // ◈ icon placeholder
-        } else if (gap > w.h * 0.18 && !s.endsWith(" ") && !w.str.startsWith(" ")) {
-          s += " ";
-        }
+        // Inline icons are injected as pseudo-words (str = "{{icon:N}}"), so a
+        // wide gap no longer needs a placeholder — just normal word spacing.
+        if (gap > w.h * 0.18 && !s.endsWith(" ") && !w.str.startsWith(" ")) s += " ";
       }
       s += w.str;
       px1 = w.x1;
@@ -206,8 +201,85 @@ function reconstructPage(items) {
   return lines;
 }
 
+// ── Inline icon extraction ───────────────────────────────────────────────────
+// The rulebook's game symbols (Attack/Recruit/class/team icons) are drawn as
+// small filled vector paths, not glyphs or images. Extract each icon glyph, its
+// device-space position, a shape signature (rasterized grid) for clustering, and
+// a normalized path `d` for a faithful inline-SVG fallback. iconMap.json (built
+// once, committed) maps a stable cluster id → asset name.
+const IG = 20; // signature grid resolution
+const matMul = (a, b) => [
+  a[0] * b[0] + a[2] * b[1], a[1] * b[0] + a[3] * b[1],
+  a[0] * b[2] + a[2] * b[3], a[1] * b[2] + a[3] * b[3],
+  a[0] * b[4] + a[2] * b[5] + a[4], a[1] * b[4] + a[3] * b[5] + a[5],
+];
+const matApply = (m, x, y) => [m[0] * x + m[2] * y + m[4], m[1] * x + m[3] * y + m[5]];
+function gridSig(fills) {
+  const all = fills.flatMap((f) => f.pts);
+  const xs = all.map((p) => p[0]), ys = all.map((p) => p[1]);
+  const x0 = Math.min(...xs), y0 = Math.min(...ys);
+  const w = Math.max(...xs) - x0 || 1, h = Math.max(...ys) - y0 || 1;
+  const g = new Uint8Array(IG * IG);
+  for (const f of fills)
+    for (let i = 0; i < f.pts.length; i++) {
+      const a = f.pts[i], b = f.pts[(i + 1) % f.pts.length];
+      for (let s = 0; s <= 10; s++) {
+        const t = s / 10, px = a[0] + (b[0] - a[0]) * t, py = a[1] + (b[1] - a[1]) * t;
+        g[Math.min(IG - 1, Math.floor((py - y0) / h * IG)) * IG + Math.min(IG - 1, Math.floor((px - x0) / w * IG))] = 1;
+      }
+    }
+  return g;
+}
+const hamming = (a, b) => { let d = 0; for (let i = 0; i < a.length; i++) if (a[i] !== b[i]) d++; return d; };
+
+function extractIconGlyphs(ops, vpHeight) {
+  let ctm = [1, 0, 0, 1, 0, 0];
+  const stack = [];
+  let cur = null;
+  const fills = [];
+  for (let i = 0; i < ops.fnArray.length; i++) {
+    const fn = ops.fnArray[i], a = ops.argsArray[i];
+    if (fn === OPS.save) stack.push(ctm.slice());
+    else if (fn === OPS.restore) ctm = stack.pop() || [1, 0, 0, 1, 0, 0];
+    else if (fn === OPS.transform) ctm = matMul(ctm, a);
+    else if (fn === OPS.constructPath) {
+      const c = a[1];
+      cur = cur || [];
+      for (let k = 0; k + 1 < c.length; k += 2) {
+        const [dx, dy] = matApply(ctm, c[k], c[k + 1]);
+        cur.push([dx, vpHeight - dy]);
+      }
+    } else if (fn === OPS.fill || fn === OPS.eoFill) {
+      if (cur && cur.length) {
+        const xs = cur.map((q) => q[0]), ys = cur.map((q) => q[1]);
+        const w = Math.max(...xs) - Math.min(...xs), h = Math.max(...ys) - Math.min(...ys);
+        if (w > 3 && w < 18 && h > 3 && h < 18)
+          fills.push({ pts: cur, cx: (Math.min(...xs) + Math.max(...xs)) / 2, cy: (Math.min(...ys) + Math.max(...ys)) / 2 });
+      }
+      cur = null;
+    } else if (fn === OPS.endPath) cur = null;
+  }
+  fills.sort((a, b) => a.cy - b.cy || a.cx - b.cx);
+  const glyphs = [];
+  for (const f of fills) {
+    let g = glyphs.find((g) => Math.abs(g.cx - f.cx) < 8 && Math.abs(g.cy - f.cy) < 8);
+    if (!g) { g = { cx: f.cx, cy: f.cy, fills: [f] }; glyphs.push(g); }
+    else g.fills.push(f);
+  }
+  return glyphs.map((g) => {
+    const all = g.fills.flatMap((f) => f.pts);
+    const xs = all.map((p) => p[0]), ys = all.map((p) => p[1]);
+    const x0 = Math.min(...xs), y0 = Math.min(...ys), w = Math.max(...xs) - x0, h = Math.max(...ys) - y0;
+    const d = g.fills.map((f) => "M" + f.pts.map((p) => `${(p[0] - x0).toFixed(1)},${(p[1] - y0).toFixed(1)}`).join("L") + "Z").join("");
+    return { cx: g.cx, cy: g.cy, w, h, grid: gridSig(g.fills), d };
+  });
+}
+
 const doc = await getDocument({ url: PDF, useSystemFonts: true }).promise;
-const parts = [];
+
+// ── Phase A: collect text items + icon glyphs per page ───────────────────────
+const pageData = [];
+const allGlyphs = []; // {page, cx, cy, w, h, grid, d}
 for (let p = 1; p <= doc.numPages; p++) {
   const page = await doc.getPage(p);
   const vp = page.getViewport({ scale: 1 });
@@ -215,14 +287,41 @@ for (let p = 1; p <= doc.numPages; p++) {
   const items = tc.items
     .filter((it) => "str" in it)
     .map((it) => {
-      const tr = it.transform; // [a,b,c,d,e,f]
+      const tr = it.transform;
       const x0 = tr[4];
-      const yBaseline = tr[5];
-      const h = Math.abs(tr[0]) || it.height || 8; // font size from transform scale
+      const h = Math.abs(tr[0]) || it.height || 8;
       const w = it.width || 0;
-      return { str: it.str, x0, x1: x0 + w, yTop: vp.height - yBaseline - h, h, font: it.fontName };
+      return { str: it.str, x0, x1: x0 + w, yTop: vp.height - tr[5] - h, h, font: it.fontName };
     });
-  parts.push({ page: p, lines: reconstructPage(items) });
+  const ops = await page.getOperatorList();
+  const glyphs = extractIconGlyphs(ops, vp.height);
+  for (const g of glyphs) allGlyphs.push({ page: p, ...g });
+  pageData.push({ page: p, items });
+}
+
+// ── Cluster icon glyphs (Hamming merge), order deterministically, assign ids ──
+const clusters = []; // {grid, count, d, w, h}
+const TH = Math.round(IG * IG * 0.1);
+for (const g of allGlyphs) {
+  let best = null, bd = Infinity;
+  for (const c of clusters) { const dd = hamming(c.grid, g.grid); if (dd < bd) { bd = dd; best = c; } }
+  if (best && bd <= TH) { best.count++; g.cluster = best; }
+  else { const c = { grid: g.grid, count: 1, d: g.d, w: g.w, h: g.h }; clusters.push(c); g.cluster = c; }
+}
+// deterministic order: by count desc, then by signature bytes
+clusters.sort((a, b) => b.count - a.count || Buffer.from(a.grid).compare(Buffer.from(b.grid)));
+clusters.forEach((c, i) => (c.id = i));
+// icon-shapes.json: id → normalized path + viewBox (for inline-SVG fallback)
+const shapes = clusters.map((c) => ({ id: c.id, count: c.count, w: +c.w.toFixed(1), h: +c.h.toFixed(1), d: c.d }));
+fs.writeFileSync(OUT.replace(/\.json$/, "-icons.json"), JSON.stringify(shapes), "utf8");
+
+// ── Phase B: reconstruct each page with icons injected as pseudo-words ────────
+const parts = [];
+for (const pd of pageData) {
+  const iconWords = allGlyphs
+    .filter((g) => g.page === pd.page)
+    .map((g) => ({ str: `{{icon:${g.cluster.id}}}`, x0: g.cx - g.w / 2, x1: g.cx + g.w / 2, yTop: g.cy - g.h / 2, h: g.h, font: "icon" }));
+  parts.push({ page: pd.page, lines: reconstructPage([...pd.items, ...iconWords]) });
 }
 fs.writeFileSync(OUT, JSON.stringify(parts), "utf8");
 // readable text dump alongside, for eyeballing
