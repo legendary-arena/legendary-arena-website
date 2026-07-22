@@ -7,17 +7,19 @@ from the source PDF. Run this whenever the rulebook is updated; do not hand-edit
 
 ## Sources (cross-repo)
 
-Both inputs live in the **engine monorepo** (`C:\pcloud\BB\DEV\legendary-arena\`),
-not in this repo:
+Inputs live in two sibling repos, not in this one:
 
-- `docs/Marvel Legendary Universal Rules v23 (hyperlinks).pdf` — the rulebook PDF
-  (~43 MB; too large to vendor here). The hosted copy the registry viewer and
-  this page link to is
-  `https://images.legendary-arena.com/docs/legendary-universal-rules-v23.pdf`.
-- `data/metadata/keywords-full.json` — used only for the keyword-name dictionary
-  (which lines in the extracted text are keyword headings) and to size the
-  cross-reference coverage report. The prose itself is the verbatim rulebook,
-  **not** the curated glossary text.
+- **Engine monorepo** (`C:\pcloud\BB\DEV\legendary-arena\`):
+  - `docs/Marvel Legendary Universal Rules v23 (hyperlinks).pdf` — the rulebook PDF
+    (~43 MB; too large to vendor here). Hosted copy the page links to:
+    `https://images.legendary-arena.com/docs/legendary-universal-rules-v23.pdf`.
+  - `data/metadata/keywords-full.json` — used only as the keyword-name dictionary
+    (which extracted lines are keyword headings) and to size the cross-reference
+    coverage report. The prose is the verbatim rulebook, **not** the glossary text.
+- **legendary-setup repo** (`C:\pcloud\BB\DEV\barefootbetters-legendary-setup\`):
+  the icon SVG assets (`src/assets/svg/icons/card-info`, `public/img/icons/hero-classes`,
+  `public/img/icons/hero-teams`). The ones referenced by `icon-map.json` are
+  vendored into this repo under `static/img/icons/`. Re-copy if the map grows.
 
 ## Prerequisites
 
@@ -49,12 +51,25 @@ keyword/rule anchors resolve to a heading on the page).
    low-density gutter valley). This de-interleaves the rulebook's 2- and
    3-column reference pages, which `pdftotext` cannot. Emits one JSON object per
    page: lines tagged with height (for heading detection) and paragraph breaks.
-   The game's Attack/Recruit/VP/cost icons are **images**, not glyphs, so they
-   are unrecoverable from the text layer — each is emitted as a `◈` placeholder.
+   - **Icons.** The game's symbols (Attack/Recruit/class/team) are drawn as small
+     filled **vector paths**, not glyphs or images. The extractor walks the
+     operator list, groups fills into icon glyphs, computes a rasterized shape
+     signature, and clusters identical shapes doc-wide (Hamming merge). Each icon
+     is injected inline into the text flow as a `{{icon:N}}` token (N = stable
+     cluster id) so it lands in the right reading position. `pages-icons.json`
+     carries each cluster's fallback SVG path.
 2. **`build.mjs`** — assembles the page: section `H2`s (hoisted so a section
    whose title mis-orders within its page still renders first), keyword/rule/
-   clarification entry headings, bullet lists, and card-list structure. Adds the
-   front matter and attributed lead.
+   clarification entry headings, bullet lists, card-list structure, front matter,
+   attributed lead, and a rebuilt on-page **Table of Contents** (the PDF's only
+   hyperlinks are its TOC; those pages are dropped, so the contents — one
+   collapsible group per section, linking every heading — are regenerated here).
+   - **Icon rendering.** `{{icon:N}}` → the mapped asset `<img>` (per
+     `icon-map.json`, with derived `alt`), the literal `*` for the asterisk
+     symbol, or — for unidentified clusters — a generated monochrome SVG written
+     to `static/img/icons/rules-extracted/icon-N.svg`. Cluster ids are stable as
+     long as the source PDF is unchanged; re-verify `icon-map.json` after
+     re-extraction (identify by rendering the clusters and matching the assets).
 
 ## Cross-reference anchor contract
 
@@ -74,11 +89,15 @@ top of the page — acceptable, because the viewer keeps its precise
 
 ## Known limitations
 
-- **Icons** render as `◈` (see above). The lead paragraph explains this and
-  links the illustrated PDF.
+- **Icon identification.** The high-frequency icons (Attack, Recruit, Focus,
+  Strength, Tech, the asterisk symbol, and major team badges) are mapped to
+  named assets with `alt` text. Less-common clusters fall back to an accurate
+  monochrome reconstruction (correct shape, no semantic name). Cost/VP are
+  written as words in this rulebook and rarely appear as icons. To improve
+  coverage, add cluster ids to `icon-map.json`.
 - A few **numeric tables** (per-player setup counts, Challenge Modes) render as
-  `◈`-delimited run-on text rather than markdown tables. Reconstructing them
-  automatically risks column misalignment — i.e. *wrong* data on a rules
-  reference — so they are left as faithful-but-unformatted text.
+  run-on text rather than markdown tables. Reconstructing them automatically
+  risks column misalignment — i.e. *wrong* data on a rules reference — so they
+  are left as faithful-but-unformatted text.
 - **Source typos** in the rulebook (e.g. "Alechmax", "Fatastic Four") are
   preserved verbatim.

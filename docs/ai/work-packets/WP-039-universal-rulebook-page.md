@@ -24,9 +24,11 @@ This file is the self-contained record. There is no separate ROADMAP entry.
 | Path | What |
 |---|---|
 | `content/rules/index.md` | The generated page (front matter + attributed lead + full rulebook). **Generated — do not hand-edit.** |
-| `scripts/rules/extract.mjs` | PDF → per-page line JSON via `pdfjs-dist`, recursive XY-cut for column reading order. |
-| `scripts/rules/build.mjs` | line JSON → the Hugo page (headings, anchors, lists, front matter). |
-| `scripts/rules/README.md` | Sources (cross-repo), prerequisites, regeneration steps, the anchor contract, known limits. |
+| `scripts/rules/extract.mjs` | PDF → per-page line JSON via `pdfjs-dist`, recursive XY-cut for column reading order, inline icon extraction. |
+| `scripts/rules/build.mjs` | line JSON → the Hugo page (headings, anchors, lists, front matter, icons, on-page Contents). |
+| `scripts/rules/icon-map.json` | Icon cluster id → asset SVG (identified clusters). Editable. |
+| `scripts/rules/README.md` | Sources (cross-repo), prerequisites, regeneration steps, anchor contract, known limits. |
+| `static/img/icons/**` | Vendored icon SVGs (card-info, hero-classes, mapped teams) + generated `rules-extracted/` fallbacks. |
 | `hugo.toml` | `[[menu.footer]]` entry "Rules" → `/rules/` (weight 26). |
 
 ## Source & method
@@ -68,14 +70,29 @@ absent-config-safe, mirroring how `rulebookPdfUrl` is handled today. Build the
 target as `` `${rulesPageUrl}#keyword-${slug(entry.label)}` `` /
 `` `#rule-${slug(entry.label)}` `` using the same `slug` above.
 
+## Icons and navigation (added after first review)
+
+- **Icons.** The game symbols are drawn as small filled **vector paths** (not
+  images or glyphs). `extract.mjs` groups the fills into icon glyphs, clusters
+  identical shapes doc-wide, and injects each inline as a `{{icon:N}}` token in
+  reading order. `build.mjs` renders them from the **legendary-setup icon SVGs**
+  (`icon-map.json` maps identified clusters → assets, with `alt` text);
+  unidentified clusters fall back to an accurate monochrome reconstruction.
+  ~928 icons render on the page; no `◈` placeholders remain.
+- **Hyperlinks.** The source PDF's only hyperlinks are its Table of Contents
+  (verified: 382 link annotations, all on the TOC pages, zero in-body cross-
+  references). Those pages are dropped, so the contents are **rebuilt on-page** —
+  one collapsible group per section, linking every heading — and every heading
+  carries a stable anchor.
+
 ## Known limitations
 
-- Game icons (Attack/Recruit/VP/cost) are **images** in the source PDF, not
-  glyphs — unrecoverable from the text layer. Each renders as `◈`; the lead
-  paragraph explains this and links the illustrated PDF.
+- Less-common icon clusters (rare teams, etc.) fall back to a monochrome
+  reconstruction (correct shape, no semantic `alt`). Extend `icon-map.json` to
+  name more. Cost/VP appear as words, not icons, in this rulebook.
 - A few numeric tables (per-player setup counts, Challenge Modes) render as
-  `◈`-delimited text rather than markdown tables (auto-reconstruction risks
-  column misalignment = wrong data on a rules reference).
+  run-on text rather than markdown tables (auto-reconstruction risks column
+  misalignment = wrong data on a rules reference).
 - Source typos are preserved verbatim.
 
 ## Observation (out of scope; flag only)
