@@ -394,7 +394,11 @@ const frontMatter = [
   "",
 ].join("\n");
 const lead = `<style>
-.rules-icon{height:1em;width:auto;vertical-align:-0.15em;display:inline-block;margin:0 0.06em}
+/* why: outrank PaperMod's \`.md-content img { margin: 1rem 0 }\` (specificity
+   0,1,1) — as a bare .rules-icon class (0,1,0) it lost, so every inline icon got
+   a 1rem top/bottom margin that double-spaced the paragraph. Scoping to
+   .md-content img.rules-icon (0,2,1) wins and keeps icons truly inline. */
+.md-content img.rules-icon,.md-content svg.rules-icon{display:inline-block;height:1em;width:auto;margin:0 .08em;vertical-align:-.12em;border-radius:0}
 svg.rules-icon{fill:currentColor}
 .rules-toc{margin:1.5rem 0;font-size:0.95em}
 .rules-toc h2{margin:0 0 .5rem}
