@@ -208,6 +208,17 @@ enableRobotsTXT = true
   url = "/brand/"
   weight = 25
 
+# Rules — the full Marvel Legendary Universal Rulebook (v23) reproduced as a
+# single searchable page at /rules/. Reference material (footer, not header,
+# to keep header choices lean); also the cross-reference target the
+# registry-viewer glossary deep-links to (see scripts/rules/README.md). Trailing
+# slash REQUIRED per the footer active-state note above.
+[[menu.footer]]
+  identifier = "footer-rules"
+  name = "Rules"
+  url = "/rules/"
+  weight = 26
+
 [[menu.footer]]
   identifier = "footer-play"
   name = "Play"
