@@ -4,10 +4,10 @@
     date-prefixed filename and open it for editing.
 
 .DESCRIPTION
-    Wrapper around `hugo new posts/...` that enforces the slug
+    Wrapper around `hugo new blog/...` that enforces the slug
     convention from `docs/04-CONTENT-CONVENTIONS.md` §Slugs:
     `YYYY-MM-DD-<kebab-case-slug>.md`. Front-matter is populated from
-    `archetypes/posts.md`.
+    `archetypes/blog.md`.
 
     Pairs with the `POST:` commit lane defined in
     `docs/ai/REFERENCE/01.3-commit-hygiene.md` §New blog post.
@@ -25,12 +25,12 @@
 
 .EXAMPLE
     pwsh scripts/git/new-post.ps1 -Slug "trail-running-shoes"
-    # Creates content/posts/<today>-trail-running-shoes.md
+    # Creates content/blog/<today>-trail-running-shoes.md
     # Opens it in your editor.
 
 .EXAMPLE
     pwsh scripts/git/new-post.ps1 -Slug "summer-sale" -Date 2026-06-01 -NoEdit
-    # Creates content/posts/2026-06-01-summer-sale.md without opening.
+    # Creates content/blog/2026-06-01-summer-sale.md without opening.
 #>
 param(
     [Parameter(Mandatory)][string]$Slug,
@@ -67,7 +67,7 @@ if ($Date -notmatch '^\d{4}-\d{2}-\d{2}$') {
     exit 1
 }
 
-$relPath = "posts/$Date-$normalized.md"
+$relPath = "blog/$Date-$normalized.md"
 $absPath = Join-Path $repoRoot "content/$relPath"
 
 if (Test-Path $absPath) {

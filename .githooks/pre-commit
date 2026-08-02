@@ -71,7 +71,7 @@ echo "$STAGED" | grep -qE '^build[0-9]+\.txt$' && \
 #
 # Detection is by series/category, not filename, so a differently-named
 # gauntlet post is still caught.
-GAUNTLET_POSTS=$(echo "$STAGED" | grep -E '^content/posts/.*\.md$' || true)
+GAUNTLET_POSTS=$(echo "$STAGED" | grep -E '^content/blog/.*\.md$' || true)
 for POST in $GAUNTLET_POSTS; do
   [ -f "$POST" ] || continue
   grep -qE '^series:[[:space:]]*"Gauntlet Guides"|gauntlet-guides' "$POST" || continue
@@ -80,7 +80,7 @@ for POST in $GAUNTLET_POSTS; do
   for FIELD in gauntlet_set gauntlet_mastermind gauntlet_board guide_version; do
     grep -qE "^${FIELD}:" "$POST" || fail "$POST looks like a Gauntlet Guide but is missing '${FIELD}:'.
 Generate it from the archetype instead of copying a previous post:
-  hugo new content posts/<slug>.md --kind gauntlet-guide
+  hugo new content blog/<slug>.md --kind gauntlet-guide
 The archetype (archetypes/gauntlet-guide.md) carries the editorial rules
 for this series, not just the fields. See wiki/blog-post-authoring.md."
   done
