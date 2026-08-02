@@ -11,7 +11,7 @@ newsletter_week: 44
 newsletter_slug: "week-44-teach-a-friend"
 ---
 
-![Teach a Friend](/images/posts/week-44-teach-a-friend/hero.webp)
+![Teach a Friend](/images/blog/week-44-teach-a-friend/hero.webp)
 
 The best way to grow the deckbuilding community is to teach one person at a time. But most teaching goes wrong because the teacher tries to explain everything before the new player has touched a card. Rules without context are noise. The ten-minute path gets a new player from zero to "playing and having fun" before their attention runs out.
 

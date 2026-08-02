@@ -11,7 +11,7 @@ newsletter_week: 45
 newsletter_slug: "week-45-holiday-ladder"
 ---
 
-![Holiday Ladder](/images/posts/week-45-holiday-ladder/hero.webp)
+![Holiday Ladder](/images/blog/week-45-holiday-ladder/hero.webp)
 
 The holiday season is about community, competition, and proving what you have built over the year. The Holiday Ladder is a six-week series of escalating challenges that test your skills, reward consistency, and give you something to aim for heading into the year-end championship.
 

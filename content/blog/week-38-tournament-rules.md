@@ -11,7 +11,7 @@ newsletter_week: 38
 newsletter_slug: "week-38-tournament-rules"
 ---
 
-![Tournament Rules](/images/posts/week-38-tournament-rules/hero.webp)
+![Tournament Rules](/images/blog/week-38-tournament-rules/hero.webp)
 
 Ten rules. Each one is concise, actionable, and tested under tournament pressure. Pick one to enforce this week. Add another next week. By tournament day, they should be automatic.
 

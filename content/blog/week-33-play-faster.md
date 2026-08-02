@@ -11,7 +11,7 @@ newsletter_week: 33
 newsletter_slug: "week-33-play-faster"
 ---
 
-![Play Faster](/images/posts/week-33-play-faster/hero.webp)
+![Play Faster](/images/blog/week-33-play-faster/hero.webp)
 
 Speed and quality are not opposites. The fastest players in competitive deckbuilding are often the most accurate, because speed comes from preparation and pattern recognition, not from rushing. A player who agonizes over every decision is not being thorough — they are processing in real time what should have been processed in advance.
 

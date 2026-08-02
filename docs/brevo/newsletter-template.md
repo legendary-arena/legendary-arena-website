@@ -177,8 +177,8 @@ Any deviation is a tracking failure.
 ## Image requirements
 
 - Newsletter images reuse production URLs:
-  `https://www.legendary-arena.com/images/posts/<slug>/hero.webp`
-- Images must exist in-repo at `static/images/posts/<slug>/` and be
+  `https://www.legendary-arena.com/images/blog/<slug>/hero.webp`
+- Images must exist in-repo at `static/images/blog/<slug>/` and be
   deployed before the newsletter send.
 - Alt text required on all images.
 - Email must remain comprehensible with images blocked.
@@ -207,7 +207,7 @@ checklist.**
   (`/posts/<slug>/`), CTA target (`play.*`), unsubscribe. Verify links
   point to production, not preview/localhost
 - [ ] **Image validation** — all images load from
-  `/images/posts/<slug>/`, alt text present, email still makes sense
+  `/images/blog/<slug>/`, alt text present, email still makes sense
   with images blocked
 - [ ] **Rendering check** — verify layout on desktop and mobile. Use
   Brevo's preview mode and "view in inbox" multi-client simulation

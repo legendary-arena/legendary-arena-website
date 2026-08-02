@@ -11,7 +11,7 @@ newsletter_week: 43
 newsletter_slug: "week-43-plan-b"
 ---
 
-![Plan B](/images/posts/week-43-plan-b/hero.webp)
+![Plan B](/images/blog/week-43-plan-b/hero.webp)
 
 A Plan B is not a hybrid deck. A hybrid splits resources between two strategies. A Plan B is an insurance policy — two cards that provide a fallback win condition at minimum cost, so your primary strategy gets nearly full investment while you still have an escape hatch if it fails.
 

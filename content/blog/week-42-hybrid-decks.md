@@ -11,7 +11,7 @@ newsletter_week: 42
 newsletter_slug: "week-42-hybrid-decks"
 ---
 
-![Hybrid Decks](/images/posts/week-42-hybrid-decks/hero.webp)
+![Hybrid Decks](/images/blog/week-42-hybrid-decks/hero.webp)
 
 A pure strategy is powerful but predictable. When the Scenario directly counters your one strategy, you lose. A hybrid deck maintains two viable lines — a primary strategy and a backup — sharing a common engine but capable of delivering different outputs depending on what the game demands.
 

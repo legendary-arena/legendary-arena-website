@@ -11,7 +11,7 @@ newsletter_week: 19
 newsletter_slug: "week-19-stabilization"
 ---
 
-![Stabilize First, Win Later: The Comeback Blueprint](/images/posts/week-19-stabilization/hero.webp)
+![Stabilize First, Win Later: The Comeback Blueprint](/images/blog/week-19-stabilization/hero.webp)
 
 You are behind. The Scheme is advancing, Villains are stacking up, and your deck cannot keep pace. The instinct is to fight harder — throw everything at the biggest threat and hope it turns the game around. That instinct is wrong. Fighting harder when you are losing accelerates the loss because you are spending resources on offense when your position is collapsing.
 

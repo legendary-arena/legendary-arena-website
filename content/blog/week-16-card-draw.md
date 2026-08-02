@@ -11,7 +11,7 @@ newsletter_week: 16
 newsletter_slug: "week-16-card-draw"
 ---
 
-![Seeing More Cards Is the Real Damage](/images/posts/week-16-card-draw/hero.webp)
+![Seeing More Cards Is the Real Damage](/images/blog/week-16-card-draw/hero.webp)
 
 If you could add one ability to every card in your deck, the correct choice is "draw a card." Not extra attack. Not extra recruit. Draw. Because a card that draws another card does not just give you one more option — it gives you access to whatever is on top of your deck, which might be the exact card you need to turn a mediocre hand into a devastating one.
 

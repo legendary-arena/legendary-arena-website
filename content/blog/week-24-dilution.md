@@ -11,7 +11,7 @@ newsletter_week: 24
 newsletter_slug: "week-24-dilution"
 ---
 
-![Dilution: The Silent Deck Killer](/images/posts/week-24-dilution/hero.webp)
+![Dilution: The Silent Deck Killer](/images/blog/week-24-dilution/hero.webp)
 
 Your deck has twenty-five cards. Fifteen of them are excellent — exactly what you need. The other ten are "pretty good." They contribute something, but they are not core to your strategy. Every time you draw one of those ten, you are not drawing one of the fifteen that actually matters.
 

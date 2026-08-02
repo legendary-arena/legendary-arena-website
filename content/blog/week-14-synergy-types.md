@@ -11,7 +11,7 @@ newsletter_week: 14
 newsletter_slug: "week-14-synergy-types"
 ---
 
-![5 Synergy Types](/images/posts/week-14-synergy-types/hero.webp)
+![5 Synergy Types](/images/blog/week-14-synergy-types/hero.webp)
 
 Synergy is the word every deckbuilder uses and few define precisely. It means cards working together to produce more value than they would individually. But not all synergy is created equal. There are five distinct types, and in most games, only two of them reliably determine outcomes.
 

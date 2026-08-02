@@ -11,7 +11,7 @@ newsletter_week: 17
 newsletter_slug: "week-17-tempo"
 ---
 
-![Tempo Wins: Play to Deny Options](/images/posts/week-17-tempo/hero.webp)
+![Tempo Wins: Play to Deny Options](/images/blog/week-17-tempo/hero.webp)
 
 Power is how hard you hit. Tempo is when you hit. A player with less raw power but better tempo often wins because they act before the Scenario's threats can escalate. Tempo is the art of staying ahead of the clock — not just accumulating resources, but deploying them at the moment they have maximum impact.
 

@@ -11,7 +11,7 @@ newsletter_week: 35
 newsletter_slug: "week-35-archetypes"
 ---
 
-![Archetypes](/images/posts/week-35-archetypes/hero.webp)
+![Archetypes](/images/blog/week-35-archetypes/hero.webp)
 
 Every competitive deck falls into one of four macro archetypes. These are not rigid categories — most decks blend elements — but understanding the pure forms gives you a framework for recognizing what you are building, what your opponents are building, and which archetype best matches the Scenario in front of you.
 

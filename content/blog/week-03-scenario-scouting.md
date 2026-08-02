@@ -11,7 +11,7 @@ newsletter_week: 3
 newsletter_slug: "week-03-scenario-scouting"
 ---
 
-![Scenario Scouting: Know Before You Build](/images/posts/week-03-scenario-scouting/hero.webp)
+![Scenario Scouting: Know Before You Build](/images/blog/week-03-scenario-scouting/hero.webp)
 
 In weeks one and two, you learned to [build a focused deck](/blog/week-01-deck-checklist/) and [shape its resource curve](/blog/week-02-resource-curve/). Both of those skills share a quiet dependency: they assume you know what you are building against. Scenario scouting is where that knowledge comes from.
 

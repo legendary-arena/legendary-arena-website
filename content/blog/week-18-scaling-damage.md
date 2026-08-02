@@ -11,7 +11,7 @@ newsletter_week: 18
 newsletter_slug: "week-18-scaling-damage"
 ---
 
-![Multipliers Beat Adders: How to Scale](/images/posts/week-18-scaling-damage/hero.webp)
+![Multipliers Beat Adders: How to Scale](/images/blog/week-18-scaling-damage/hero.webp)
 
 There are two ways to increase your deck's damage output. You can add more cards that deal damage — stacking flat bonuses one on top of another. Or you can add cards that multiply the damage you already have. Both increase your numbers. Only one of them scales.
 

@@ -11,7 +11,7 @@ newsletter_week: 26
 newsletter_slug: "week-26-synergy-trial"
 ---
 
-![Synergy Trial](/images/posts/week-26-synergy-trial/hero.webp)
+![Synergy Trial](/images/blog/week-26-synergy-trial/hero.webp)
 
 The Foundations Trial tested whether your basics were sound. The Synergy Trial tests whether you can build something powerful under pressure. This challenge adds constraints that force you to apply every concept from Q2: synergy identification, engine construction, scaling, consistency, and the discipline to avoid dilution.
 

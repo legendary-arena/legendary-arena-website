@@ -11,7 +11,7 @@ newsletter_week: 31
 newsletter_slug: "week-31-reading-opponents"
 ---
 
-![Reading Opponents](/images/posts/week-31-reading-opponents/hero.webp)
+![Reading Opponents](/images/blog/week-31-reading-opponents/hero.webp)
 
 In multiplayer deckbuilding, every card in the shared recruitment row is contested. What your opponent buys changes what is available to you. What they build determines the threats they can handle — and the ones they leave for you. Reading your opponent's intentions is not about mind games. It is about information that is already visible if you know where to look.
 

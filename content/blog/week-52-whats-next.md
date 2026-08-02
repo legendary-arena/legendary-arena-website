@@ -11,7 +11,7 @@ newsletter_week: 52
 newsletter_slug: "week-52-whats-next"
 ---
 
-![What's Next](/images/posts/week-52-whats-next/hero.webp)
+![What's Next](/images/blog/week-52-whats-next/hero.webp)
 
 Fifty-two weeks. Four series. One journey from "how do I build a deck" to "how do I win a championship." This final post of the year looks back at what the community accomplished, looks forward at what is coming next, and gives you a clear path into the next twelve months.
 

@@ -11,7 +11,7 @@ newsletter_week: 11
 newsletter_slug: "week-11-beginner-traps"
 ---
 
-![10 Traps That Make Your Deck Worse](/images/posts/week-11-beginner-traps/hero.webp)
+![10 Traps That Make Your Deck Worse](/images/blog/week-11-beginner-traps/hero.webp)
 
 Every deckbuilder has a collection of habits that feel right and play wrong. These traps are persistent because they are intuitive — buying powerful cards feels productive, keeping options open feels safe, and spending all your resources feels efficient. But intuition optimizes for comfort, not performance. Here are the ten traps, what makes each one seductive, and how to break free.
 

@@ -11,7 +11,7 @@ newsletter_week: 12
 newsletter_slug: "week-12-coop-roles"
 ---
 
-![Co-op Roles: Builder, Cleaner, Finisher, Stabilizer](/images/posts/week-12-coop-roles/hero.webp)
+![Co-op Roles: Builder, Cleaner, Finisher, Stabilizer](/images/blog/week-12-coop-roles/hero.webp)
 
 Solo deckbuilding is a puzzle. Cooperative deckbuilding is a team sport. And team sports require roles. When every player builds independently — optimizing their own deck without considering what the team needs — you end up with three economy engines and no one who can fight the Mastermind.
 

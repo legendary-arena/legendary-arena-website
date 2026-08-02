@@ -11,7 +11,7 @@ newsletter_week: 49
 newsletter_slug: "week-49-start-here"
 ---
 
-![Start Here](/images/posts/week-49-start-here/hero.webp)
+![Start Here](/images/blog/week-49-start-here/hero.webp)
 
 Welcome to Legendary Arena. Whether you received a gift, joined a friend's game, or downloaded the app on a whim — this is your fast track. Three weeks. Three skills. By the end, you will be building focused decks, playing with intention, and ready for your first competitive challenge.
 

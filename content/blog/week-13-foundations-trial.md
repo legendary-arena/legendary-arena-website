@@ -11,7 +11,7 @@ newsletter_week: 13
 newsletter_slug: "week-13-foundations-trial"
 ---
 
-![Foundations Trial: Can You Pass the 5-Scenario Benchmark?](/images/posts/week-13-foundations-trial/hero.webp)
+![Foundations Trial: Can You Pass the 5-Scenario Benchmark?](/images/blog/week-13-foundations-trial/hero.webp)
 
 Thirteen weeks of fundamentals. Deck construction, resource curves, Scenario scouting, turn sequencing, hand evaluation, threat assessment, early-game priorities, mid-game pivots, endgame closing, trap avoidance, and co-op coordination. Each skill was presented individually. Now they combine.
 

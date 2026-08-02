@@ -11,7 +11,7 @@ newsletter_week: 36
 newsletter_slug: "week-36-post-game-review"
 ---
 
-![Post-Game Review](/images/posts/week-36-post-game-review/hero.webp)
+![Post-Game Review](/images/blog/week-36-post-game-review/hero.webp)
 
 Most post-game reviews fail because they try to review everything. You replay the entire game in your head, note a dozen things that went right or wrong, and leave with a vague sense that you should "play better." That is not a review. That is a memory exercise.
 

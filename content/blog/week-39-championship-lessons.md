@@ -11,7 +11,7 @@ newsletter_week: 39
 newsletter_slug: "week-39-championship-lessons"
 ---
 
-![Championship Lessons](/images/posts/week-39-championship-lessons/hero.webp)
+![Championship Lessons](/images/blog/week-39-championship-lessons/hero.webp)
 
 The Competitive Season is complete. Whether you placed first or finished at the bottom of the bracket, the championship taught you something about where your skills stand and where they need to go. This post is not about celebrating results — it is about extracting the lessons that make next season's results better.
 

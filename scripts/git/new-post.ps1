@@ -100,7 +100,7 @@ Write-Host ""
 Write-Host "Next steps:" -ForegroundColor Cyan
 Write-Host "  1. Fill in title, description, tags, categories in front-matter."
 Write-Host "  2. Write the post body."
-Write-Host "  3. Place any images under static/images/posts/$normalized/ (see 04-CONTENT-CONVENTIONS.md §Images)."
+Write-Host "  3. Place any images under static/images/blog/$normalized/ (see 04-CONTENT-CONVENTIONS.md §Images)."
 Write-Host "  4. Commit with the POST: lane:"
 Write-Host "       pwsh scripts/git/wp-commit.ps1 -Files `"content/$relPath`" -Message `"POST: $Date — <summary>`"" -ForegroundColor Gray
 Write-Host ""
