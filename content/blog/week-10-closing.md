@@ -11,7 +11,7 @@ newsletter_week: 10
 newsletter_slug: "week-10-closing"
 ---
 
-![Closing the Game: Convert Advantage into a Win](/images/posts/week-10-closing/hero.webp)
+![Closing the Game: Convert Advantage into a Win](/images/blog/week-10-closing/hero.webp)
 
 You have the lead. Your engine is running, your deck is lean, your damage output is high. You are winning. And then, somehow, you do not win. The Scheme advances. A Villain escapes. The board flips. The lead evaporates because you kept building instead of finishing.
 

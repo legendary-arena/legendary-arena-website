@@ -11,7 +11,7 @@ newsletter_week: 50
 newsletter_slug: "week-50-best-tips"
 ---
 
-![Best Tips](/images/posts/week-50-best-tips/hero.webp)
+![Best Tips](/images/blog/week-50-best-tips/hero.webp)
 
 Fifty weeks of strategy distilled into twelve tips — one from each month. These are the insights that produced the largest improvements for the most players. Each one links back to the full post if you want the deep dive.
 

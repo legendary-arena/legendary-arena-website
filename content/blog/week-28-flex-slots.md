@@ -11,7 +11,7 @@ newsletter_week: 28
 newsletter_slug: "week-28-flex-slots"
 ---
 
-![Flex Slots](/images/posts/week-28-flex-slots/hero.webp)
+![Flex Slots](/images/blog/week-28-flex-slots/hero.webp)
 
 A rigid deck performs well in its ideal matchup and poorly in every other one. A flexible deck performs well across a range of matchups because it adapts. The tool that enables adaptation without sacrificing identity is the flex slot — a designated position in your deck that changes based on the game in front of you.
 

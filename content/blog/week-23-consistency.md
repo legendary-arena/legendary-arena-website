@@ -11,7 +11,7 @@ newsletter_week: 23
 newsletter_slug: "week-23-consistency"
 ---
 
-![Consistency Over Power](/images/posts/week-23-consistency/hero.webp)
+![Consistency Over Power](/images/blog/week-23-consistency/hero.webp)
 
 A deck that averages seven attack per turn and never drops below five will beat a deck that averages seven but swings between two and twelve. Same average. Different outcomes. The consistent deck wins because deckbuilding games do not reward average performance — they punish bad turns. One turn at two attack when you needed five means a Villain escapes, a Scheme advances, or a crisis goes unanswered. The three turns at twelve cannot undo that damage.
 

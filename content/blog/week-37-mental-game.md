@@ -11,7 +11,7 @@ newsletter_week: 37
 newsletter_slug: "week-37-mental-game"
 ---
 
-![Mental Game](/images/posts/week-37-mental-game/hero.webp)
+![Mental Game](/images/blog/week-37-mental-game/hero.webp)
 
 Tilt is the state where emotional response degrades decision quality. It happens after a bad beat, an unfair loss, a frustrating misplay, or even a lucky win that feeds overconfidence. Tilt does not announce itself — it infiltrates your decision-making through shortened patience, increased risk-taking, and the inability to evaluate calmly.
 

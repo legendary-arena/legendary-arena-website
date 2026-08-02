@@ -11,7 +11,7 @@ newsletter_week: 41
 newsletter_slug: "week-41-economy-endgame"
 ---
 
-![Economy Endgame](/images/posts/week-41-economy-endgame/hero.webp)
+![Economy Endgame](/images/blog/week-41-economy-endgame/hero.webp)
 
 Economy is the foundation of every deckbuilding strategy. Without recruit generation, you cannot acquire the cards that win the game. But economy has a ceiling, and most players hit that ceiling without recognizing it. They keep recruiting economy cards past the point of diminishing returns, building a money machine that generates resources it cannot spend fast enough — while the Scenario escalates past what their underpowered attack can handle.
 

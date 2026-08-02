@@ -11,7 +11,7 @@ newsletter_week: 40
 newsletter_slug: "week-40-advanced-sequencing"
 ---
 
-![Advanced Sequencing](/images/posts/week-40-advanced-sequencing/hero.webp)
+![Advanced Sequencing](/images/blog/week-40-advanced-sequencing/hero.webp)
 
 In [Week 5](/blog/week-05-turn-sequencing/), you learned the five-step turn: draw first, evaluate second, commit last. That sequence handles ninety percent of turns. This week is about the other ten percent — the turns where expert-level sequencing means the difference between a good play and the best play.
 

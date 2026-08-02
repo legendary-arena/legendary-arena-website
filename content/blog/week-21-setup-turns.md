@@ -11,7 +11,7 @@ newsletter_week: 21
 newsletter_slug: "week-21-setup-turns"
 ---
 
-![Setup Turns](/images/posts/week-21-setup-turns/hero.webp)
+![Setup Turns](/images/blog/week-21-setup-turns/hero.webp)
 
 A setup turn is a turn where you deliberately underperform now to overperform later. Instead of spending all your resources on immediate value, you arrange your deck, your board, or your position so that the next turn — or the turn after — produces dramatically more than two normal turns combined.
 

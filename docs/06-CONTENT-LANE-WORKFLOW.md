@@ -128,5 +128,5 @@ git commit -m "POST: 2026-05-12 — <summary>"
 ```
 
 Permitted files: `content/blog/YYYY-MM-DD-<slug>.md` and
-`static/images/posts/<slug>/**`. See `01.3-commit-hygiene.md`
+`static/images/blog/<slug>/**`. See `01.3-commit-hygiene.md`
 for full rules.

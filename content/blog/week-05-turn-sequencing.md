@@ -11,7 +11,7 @@ newsletter_week: 5
 newsletter_slug: "week-05-turn-sequencing"
 ---
 
-![Play Order: The 5-Step Turn That Avoids Mistakes](/images/posts/week-05-turn-sequencing/hero.webp)
+![Play Order: The 5-Step Turn That Avoids Mistakes](/images/blog/week-05-turn-sequencing/hero.webp)
 
 Most deckbuilding mistakes do not happen during recruitment. They happen during the turn itself, in the order you play your cards. A hand with ten points of potential becomes seven because you committed an attack before playing the card that would have drawn you two more. Sequencing is the skill that separates a player who builds good decks from a player who actually wins with them.
 

@@ -11,7 +11,7 @@ newsletter_week: 7
 newsletter_slug: "week-07-threat-assessment"
 ---
 
-![The Danger Ladder: What You Must Stop First](/images/posts/week-07-threat-assessment/hero.webp)
+![The Danger Ladder: What You Must Stop First](/images/blog/week-07-threat-assessment/hero.webp)
 
 The board is full of threats. Villains are stacking up, the Scheme is advancing, and your hand has enough attack to deal with maybe one of them. Which one do you hit?
 

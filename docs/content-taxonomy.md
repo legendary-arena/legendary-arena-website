@@ -77,7 +77,7 @@ archetype: `title`, `date`, `description`, `draft`, `tags`,
 
 ### 2. Images
 
-Create `static/images/posts/<slug>/` with at minimum `hero.webp`.
+Create `static/images/blog/<slug>/` with at minimum `hero.webp`.
 Directory name must match the post slug exactly. All images ≤ 200KB,
 `.webp` preferred.
 

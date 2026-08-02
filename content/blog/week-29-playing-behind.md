@@ -11,7 +11,7 @@ newsletter_week: 29
 newsletter_slug: "week-29-playing-behind"
 ---
 
-![Playing from Behind](/images/posts/week-29-playing-behind/hero.webp)
+![Playing from Behind](/images/blog/week-29-playing-behind/hero.webp)
 
 You are behind. The Scheme is advancing faster than you can respond. Villains are accumulating. Your deck is not producing enough output to match the Scenario's tempo. The instinct is to do more — recruit harder, attack more aggressively, take risks. That instinct accelerates the loss.
 

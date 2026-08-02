@@ -11,7 +11,7 @@ newsletter_week: 27
 newsletter_slug: "week-27-matchups"
 ---
 
-![Matchups](/images/posts/week-27-matchups/hero.webp)
+![Matchups](/images/blog/week-27-matchups/hero.webp)
 
 Until now, you have been learning to build good decks. That was the right focus — a weak deck loses regardless of how well you play it. But a good deck played without regard to the specific game in front of you is still leaving value on the table. Matchup thinking is the shift from "my deck does X" to "this game needs Y, and here is how I deliver it."
 

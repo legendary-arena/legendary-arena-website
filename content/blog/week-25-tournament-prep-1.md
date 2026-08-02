@@ -11,7 +11,7 @@ newsletter_week: 25
 newsletter_slug: "week-25-tournament-prep-1"
 ---
 
-![Tournament Prep: Your 3-Deck Training Plan](/images/posts/week-25-tournament-prep-1/hero.webp)
+![Tournament Prep: Your 3-Deck Training Plan](/images/blog/week-25-tournament-prep-1/hero.webp)
 
 Casual play rewards having one good deck. Tournament play rewards having three. Tournaments present diverse Scenarios, and a player who can only execute one strategy will eventually face a Scenario that counters it. Three practiced archetypes give you coverage — the ability to match your approach to the challenge in front of you.
 

@@ -11,7 +11,7 @@ newsletter_week: 32
 newsletter_slug: "week-32-risk-management"
 ---
 
-![Risk Management](/images/posts/week-32-risk-management/hero.webp)
+![Risk Management](/images/blog/week-32-risk-management/hero.webp)
 
 Variance is a fact of deckbuilding. You shuffle a deck, you draw randomly, and sometimes the cards come in the wrong order. You cannot eliminate variance. But you can manage it — reducing its impact on your results so that skill, not luck, determines who wins.
 

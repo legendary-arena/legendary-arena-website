@@ -324,8 +324,8 @@ for `hugo new posts/whatever.md` so new posts don't drift.
 
 - Location: `static/images/<section>/<slug>/<image>.<ext>`. The
   `static/` root is served from `/`, so a file at
-  `static/images/posts/launch/hero.webp` is available at
-  `/images/posts/launch/hero.webp`.
+  `static/images/blog/launch/hero.webp` is available at
+  `/images/blog/launch/hero.webp`.
 - Naming: kebab-case. Match the post or page slug as the parent
   folder so images travel with the content they belong to.
 - Format: prefer **WebP** for photographs; **SVG** for logos and
@@ -433,7 +433,7 @@ third-party sites open in a new tab
 All blog and newsletter images MUST be stored in:
 
 ```
-static/images/posts/<slug>/
+static/images/blog/<slug>/
 ```
 
 The image directory name MUST match the post slug exactly. Mismatch
@@ -442,9 +442,9 @@ between slug and image directory is a contract violation.
 Example:
 
 ```
-static/images/posts/hello-arena/
+static/images/blog/hello-arena/
   hero.webp
-static/images/posts/week-01-deck-checklist/
+static/images/blog/week-01-deck-checklist/
   hero.webp
   curve-example.webp
   deck-flow-diagram.webp
@@ -475,7 +475,7 @@ static/images/posts/week-01-deck-checklist/
 Images are referenced via absolute paths from `static/`:
 
 ```markdown
-![Deck curve example](/images/posts/week-01-deck-checklist/curve-example.webp)
+![Deck curve example](/images/blog/week-01-deck-checklist/curve-example.webp)
 ```
 
 ### Newsletter usage
@@ -483,7 +483,7 @@ Images are referenced via absolute paths from `static/`:
 Newsletter images reuse the same production URLs:
 
 ```
-https://www.legendary-arena.com/images/posts/<slug>/hero.webp
+https://www.legendary-arena.com/images/blog/<slug>/hero.webp
 ```
 
 No separate email asset storage system. Images resolve only after

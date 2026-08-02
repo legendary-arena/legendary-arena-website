@@ -11,7 +11,7 @@ newsletter_week: 48
 newsletter_slug: "week-48-meta-trends"
 ---
 
-![Meta Trends](/images/posts/week-48-meta-trends/hero.webp)
+![Meta Trends](/images/blog/week-48-meta-trends/hero.webp)
 
 The meta is the aggregate strategy landscape — what most players are doing, what is working, and how the competitive ecosystem evolves over time. Understanding meta trends does not mean blindly copying the most popular strategy. It means knowing the terrain so you can choose where to position yourself.
 

@@ -11,7 +11,7 @@ newsletter_week: 6
 newsletter_slug: "week-06-hand-evaluation"
 ---
 
-![Keep, Buy, Skip: Making Decisions with Partial Information](/images/posts/week-06-hand-evaluation/hero.webp)
+![Keep, Buy, Skip: Making Decisions with Partial Information](/images/blog/week-06-hand-evaluation/hero.webp)
 
 Every turn presents the same question: what do you do with what you have? Your hand gives you a pool of recruit points and attack. The recruitment row offers cards you could add to your deck. The board presents threats you could fight. The decision feels open-ended, and open-ended decisions are where mistakes hide.
 

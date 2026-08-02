@@ -11,7 +11,7 @@ newsletter_week: 4
 newsletter_slug: "week-04-first-tournament"
 ---
 
-![Your First Tournament](/images/posts/week-04-first-tournament/hero.webp)
+![Your First Tournament](/images/blog/week-04-first-tournament/hero.webp)
 
 Over the past three weeks, you have built the foundation. You learned to [assemble a focused deck](/blog/week-01-deck-checklist/), [read and shape your resource curve](/blog/week-02-resource-curve/), and [scout Scenarios before you build](/blog/week-03-scenario-scouting/). Those three skills are not theory exercises. They are the tools you carry into your first tournament.
 

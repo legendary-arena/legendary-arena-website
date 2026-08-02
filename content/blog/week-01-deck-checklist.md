@@ -11,7 +11,7 @@ newsletter_week: 1
 newsletter_slug: "week-01-deck-checklist"
 ---
 
-![Your First Deck: A Checklist](/images/posts/week-01-deck-checklist/hero.webp)
+![Your First Deck: A Checklist](/images/blog/week-01-deck-checklist/hero.webp)
 
 Every arena match begins long before the first card hits the table. It begins with the deck you assemble. A scattered collection of powerful cards loses to a focused deck built with intention. This checklist walks you through the decisions that separate a pile of cards from a weapon.
 

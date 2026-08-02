@@ -11,7 +11,7 @@ newsletter_week: 34
 newsletter_slug: "week-34-practice"
 ---
 
-![Practice](/images/posts/week-34-practice/hero.webp)
+![Practice](/images/blog/week-34-practice/hero.webp)
 
 Playing games is not the same as practicing. Playing is performing — you use the skills you have to win the game in front of you. Practicing is developing — you isolate a skill and work on it deliberately, even if it means making suboptimal plays in the short term.
 

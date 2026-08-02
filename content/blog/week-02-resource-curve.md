@@ -11,7 +11,7 @@ newsletter_week: 2
 newsletter_slug: "week-02-resource-curve"
 ---
 
-![Reading the Resource Curve](/images/posts/week-02-resource-curve/hero.webp)
+![Reading the Resource Curve](/images/blog/week-02-resource-curve/hero.webp)
 
 In [Your First Deck: A Checklist](/blog/week-01-deck-checklist/), step two asked you to map your resource curve. That single bullet point carries more weight than any other item on the list. The resource curve is the heartbeat of your deck. Read it wrong, and even the strongest cards in the arena cannot save you.
 

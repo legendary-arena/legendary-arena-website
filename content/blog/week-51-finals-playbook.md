@@ -11,7 +11,7 @@ newsletter_week: 51
 newsletter_slug: "week-51-finals-playbook"
 ---
 
-![Finals Playbook](/images/posts/week-51-finals-playbook/hero.webp)
+![Finals Playbook](/images/blog/week-51-finals-playbook/hero.webp)
 
 The finals are different. Not because the rules change — they do not. Not because the strategies change — the same skills apply. They are different because the stakes compress every decision into a higher-pressure version of itself. What felt automatic in practice becomes deliberate under championship pressure. The finals playbook is about maintaining execution quality when everything is amplified.
 

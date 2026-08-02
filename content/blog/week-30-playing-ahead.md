@@ -11,7 +11,7 @@ newsletter_week: 30
 newsletter_slug: "week-30-playing-ahead"
 ---
 
-![Playing Ahead](/images/posts/week-30-playing-ahead/hero.webp)
+![Playing Ahead](/images/blog/week-30-playing-ahead/hero.webp)
 
 Players practice playing from behind far more than playing from ahead, because being behind feels urgent and being ahead feels comfortable. But more games are lost from winning positions than most players realize. The lead creates a false sense of security that invites risk-taking, lazy execution, and the slow erosion of advantage until the game slips away.
 

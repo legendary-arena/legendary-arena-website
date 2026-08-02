@@ -11,7 +11,7 @@ newsletter_week: 15
 newsletter_slug: "week-15-engine-building"
 ---
 
-![Engine Decks: Build, Protect, Then Explode](/images/posts/week-15-engine-building/hero.webp)
+![Engine Decks: Build, Protect, Then Explode](/images/blog/week-15-engine-building/hero.webp)
 
 An engine deck is a slow investment that produces overwhelming returns. While aggressive decks start dealing damage immediately, an engine deck spends its early turns assembling components — draw cards, synergy pieces, economy generators — that individually do little but collectively produce turns so powerful that they close the game in two or three massive swings.
 

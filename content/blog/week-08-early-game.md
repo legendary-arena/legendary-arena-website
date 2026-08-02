@@ -11,7 +11,7 @@ newsletter_week: 8
 newsletter_slug: "week-08-early-game"
 ---
 
-![First 3 Turns: Your Whole Game Starts Here](/images/posts/week-08-early-game/hero.webp)
+![First 3 Turns: Your Whole Game Starts Here](/images/blog/week-08-early-game/hero.webp)
 
 The first three turns of a deckbuilding game feel low-stakes. Your hand is weak, the threats are manageable, and the recruitment row looks like a buffet of possibilities. But these turns are the highest-leverage moments in the entire game. The cards you recruit in turns one through three define the engine you will play with for the rest of the session. Get them right and your deck compounds into something powerful. Get them wrong and you spend the next ten turns trying to fix a foundation that was never solid.
 

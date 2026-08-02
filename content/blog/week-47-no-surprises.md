@@ -11,7 +11,7 @@ newsletter_week: 47
 newsletter_slug: "week-47-no-surprises"
 ---
 
-![No-Surprises Checklist](/images/posts/week-47-no-surprises/hero.webp)
+![No-Surprises Checklist](/images/blog/week-47-no-surprises/hero.webp)
 
 The "no surprises" philosophy: prepare for everything within your control so that the only surprises come from the game itself. Tournament day should be about execution, not logistics. Every hour spent worrying about format rules, timing, or preparation gaps is an hour not spent playing your best.
 

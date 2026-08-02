@@ -11,7 +11,7 @@ newsletter_week: 20
 newsletter_slug: "week-20-soft-combos"
 ---
 
-![The Two-Card Combo Library](/images/posts/week-20-soft-combos/hero.webp)
+![The Two-Card Combo Library](/images/blog/week-20-soft-combos/hero.webp)
 
 A soft combo is two cards that produce extra value when played together but do not require each other to function. Each card is useful on its own. Together, they are better. This is different from a hard combo where neither card does much without the other — soft combos reward you for building your deck with natural pairings rather than fragile dependencies.
 

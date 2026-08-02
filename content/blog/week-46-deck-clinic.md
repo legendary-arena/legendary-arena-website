@@ -11,7 +11,7 @@ newsletter_week: 46
 newsletter_slug: "week-46-deck-clinic"
 ---
 
-![Deck Clinic](/images/posts/week-46-deck-clinic/hero.webp)
+![Deck Clinic](/images/blog/week-46-deck-clinic/hero.webp)
 
 The deck clinic format: community members submit their builds, and we analyze three representative examples. For each deck, we identify what is working, what is not, and the single change that would improve it most. The goal is not to rebuild from scratch — it is to show that one targeted adjustment often transforms a struggling deck into a competitive one.
 

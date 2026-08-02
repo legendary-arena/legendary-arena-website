@@ -11,7 +11,7 @@ newsletter_week: 22
 newsletter_slug: "week-22-contested-drafting"
 ---
 
-![When Two Players Want the Same Strategy](/images/posts/week-22-contested-drafting/hero.webp)
+![When Two Players Want the Same Strategy](/images/blog/week-22-contested-drafting/hero.webp)
 
 In multiplayer deckbuilding, the recruitment row is shared. Every card you buy is a card someone else cannot. When two players want the same strategy — the same keyword, the same synergy axis, the same key cards — both decks suffer. Neither reaches critical mass. Both play underpowered versions of the strategy that one player could have executed alone.
 

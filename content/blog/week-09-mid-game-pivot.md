@@ -11,7 +11,7 @@ newsletter_week: 9
 newsletter_slug: "week-09-mid-game-pivot"
 ---
 
-![When to Pivot (and When to Stay the Course)](/images/posts/week-09-mid-game-pivot/hero.webp)
+![When to Pivot (and When to Stay the Course)](/images/blog/week-09-mid-game-pivot/hero.webp)
 
 You built an economy engine. You planned for a big mid-game power spike. And then the Scenario threw something at you that made your plan irrelevant. The recruitment row shifted. A key card got snatched by another player. The threat you prepared for was replaced by something your deck cannot handle.
 
