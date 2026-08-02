@@ -90,4 +90,4 @@ The game client launches at
 **[play.legendary-arena.com](https://play.legendary-arena.com/)** and
 is in active development. This site updates when it goes live.
 
-For development progress, see the [blog](/posts/).
+For development progress, see the [blog](/blog/).

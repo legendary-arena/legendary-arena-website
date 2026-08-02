@@ -10,8 +10,8 @@
        -------------------------|-----------------------------|----------------------------
        / (home)                 | Organization, WebSite       | (suppressed — see note below)
        /about/                  | AboutPage                   | BreadcrumbList
-       /posts/                  | Blog                        | BreadcrumbList
-       /posts/<slug>/           | (nothing)                   | BreadcrumbList, BlogPosting
+       /blog/                   | Blog                        | BreadcrumbList
+       /blog/<slug>/            | (nothing)                   | BreadcrumbList, BlogPosting
 
        Suppression of PaperMod's home-page Organization: PaperMod's
        head.html unconditionally loads templates/schema_json.html
@@ -83,7 +83,7 @@
 </script>
 {{- end -}}
 
-{{- if eq .RelPermalink "/posts/" }}
+{{- if eq .RelPermalink "/blog/" }}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",

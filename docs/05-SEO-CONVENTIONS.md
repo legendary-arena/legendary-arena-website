@@ -32,7 +32,7 @@ that table are:
 - **`description`** — required on every committed page; 1–2
   sentences; ≤ 160 characters. This string is the site's meta
   description, OG description, Twitter Card description, and (on
-  `/about/` and `/posts/`) the AboutPage / Blog Schema description.
+  `/about/` and `/blog/`) the AboutPage / Blog Schema description.
   When in doubt, write for a human reader; SEO follows from
   honesty, not from keyword density.
 - **`title`** — required on every committed page; sentence-case
@@ -103,8 +103,8 @@ production builds (`npm run build`) emit it.
 |---|---|---|
 | `/` (home) | `Organization`, `WebSite` | *(suppressed — see "PaperMod override" below)* |
 | `/about/` | `AboutPage` | `BreadcrumbList` |
-| `/posts/` | `Blog` | `BreadcrumbList` |
-| `/posts/<slug>/` | *(nothing)* | `BreadcrumbList`, `BlogPosting` |
+| `/blog/` | `Blog` | `BreadcrumbList` |
+| `/blog/<slug>/` | *(nothing)* | `BreadcrumbList`, `BlogPosting` |
 
 No page emits more than one JSON-LD block of the same top-level
 `@type`. The two-entity combinations on home (`Organization` +
@@ -115,13 +115,13 @@ duplicates of either.
 ### Per-page gating uses `.RelPermalink` equality
 
 The partial branches on `.RelPermalink == "/about/"` and
-`.RelPermalink == "/posts/"` — **not** on `.IsSection`,
+`.RelPermalink == "/blog/"` — **not** on `.IsSection`,
 `.Section`, or `.Type`. This is intentional:
 
-- `.Section` returns `"posts"` for both `/posts/` AND
-  `/posts/<slug>/`, so a `.Section == "posts"` check would
+- `.Section` returns `"blog"` for both `/blog/` AND
+  `/blog/<slug>/`, so a `.Section == "blog"` check would
   emit `Blog` on every individual post page (Schema leakage).
-- `.IsSection` is true for `/posts/` but the same trap exists for
+- `.IsSection` is true for `/blog/` but the same trap exists for
   any future section that adds slug pages.
 - `.RelPermalink` equality is strict — it matches exactly the two
   index pages WP-008 cares about and excludes individual posts.

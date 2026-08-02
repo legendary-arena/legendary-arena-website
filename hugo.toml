@@ -64,7 +64,7 @@ enableRobotsTXT = true
   # wrappers around the brand-swatch shortcode emissions. Goldmark's
   # default `unsafe = false` silently strips raw HTML and prints a
   # "Raw HTML omitted" warning. This is additive: existing pages
-  # (/, /about/, /posts/, posts) author no raw HTML and are
+  # (/, /about/, /blog/, blog) author no raw HTML and are
   # unaffected. Scope lock: this block is a sibling to
   # [markup.highlight], not a modification to [params] or to any
   # WP-004 / WP-005 / WP-006 / WP-010 commentary block.
@@ -101,7 +101,7 @@ enableRobotsTXT = true
   # lands. Hugo's canonifyURLs = true is a complementary guard at
   # render time but does NOT compensate for missing trailing
   # slashes in [[menu.main]] / [[menu.footer]] URL fields.
-  url = "/posts/"
+  url = "/blog/"
   weight = 20
 
 # Tags intentionally NOT in the header (demoted to [[menu.footer]]
@@ -185,7 +185,7 @@ enableRobotsTXT = true
 [[menu.footer]]
   identifier = "footer-blog"
   name = "Blog"
-  url = "/posts/"
+  url = "/blog/"
   weight = 20
 
 # Tags — demoted from the header 2026-07-16 (WP-034). Sits next to

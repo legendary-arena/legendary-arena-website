@@ -311,7 +311,7 @@ for `hugo new posts/whatever.md` so new posts don't drift.
 ## Slugs
 
 - Posts: date-prefix + kebab-case — `2026-05-07-launch-announcement.md`
-  yields `/posts/2026-05-07-launch-announcement/`. The date prefix
+  yields `/blog/2026-05-07-launch-announcement/`. The date prefix
   keeps file listings chronological and disambiguates posts that
   reuse a topic word.
 - Pages: kebab-case section name (`about`, `posts`); page bodies
@@ -396,7 +396,7 @@ error: fix before merge.
 Each weekly blog post links to the newsletter signup (via the CTA
 block's `"newsletter"` variant or an inline reference). Each
 newsletter links to its companion blog post using the canonical URL
-(`/posts/<slug>/`). The `newsletter_slug` front-matter field ties the
+(`/blog/<slug>/`). The `newsletter_slug` front-matter field ties the
 two together — it must match between the blog post and the
 newsletter's "Read more" link.
 

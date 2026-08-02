@@ -27,7 +27,7 @@ Here is a tip you can use in your very next game:
 
 That is it. One sentence. Sixty seconds. It eliminates the most common deckbuilding mistake: buying good cards that do not belong together.
 
-Want the full breakdown? Read the [7-Point Deck Health Check](/posts/week-01-deck-checklist/).
+Want the full breakdown? Read the [7-Point Deck Health Check](/blog/week-01-deck-checklist/).
 
 ---
 
@@ -35,9 +35,9 @@ Want the full breakdown? Read the [7-Point Deck Health Check](/posts/week-01-dec
 
 What best describes you? (Click one)
 
-- **I play solo/co-op** → [Start with the Fundamentals series](/posts/week-01-deck-checklist/)
-- **I play competitive** → [Jump to Your First Tournament](/posts/week-04-first-tournament/)
-- **I am brand new** → [Start the 3-Week Beginner Path](/posts/week-49-start-here/)
+- **I play solo/co-op** → [Start with the Fundamentals series](/blog/week-01-deck-checklist/)
+- **I play competitive** → [Jump to Your First Tournament](/blog/week-04-first-tournament/)
+- **I am brand new** → [Start the 3-Week Beginner Path](/blog/week-49-start-here/)
 
 ---
 
@@ -53,7 +53,7 @@ The Play Pass unlocks training modes, event access, and the full strategy archiv
 
 Every weekly tip is published as a full blog post. Fifty-two weeks of strategy, from fundamentals through championship-level play.
 
-[**See the full archive →**](/posts/)
+[**See the full archive →**](/blog/)
 
 ---
 

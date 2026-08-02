@@ -1142,7 +1142,7 @@ ul#menu li a span.active {
    .post-content) tight against the preceding block. The brand page
    needs more breathing room between its eight sections than the
    site's blog-style cadence provides. Scoped to .brand-page so
-   /posts/ and /about/ keep their existing rhythm. */
+   /blog/ and /about/ keep their existing rhythm. */
 
 .brand-page .post-content > h2 {
   margin-top: var(--la-space-8);
