@@ -219,6 +219,16 @@ enableRobotsTXT = true
   url = "/rules/"
   weight = 26
 
+# Art — artist gallery (WP-041). Page-bundle-per-artist section at /art/;
+# the landing is a directory of artists, each with a portfolio grid. Footer,
+# not header, to keep header choices lean (mirrors Brand / Rules). Trailing
+# slash REQUIRED per the footer active-state note above.
+[[menu.footer]]
+  identifier = "footer-art"
+  name = "Art"
+  url = "/art/"
+  weight = 27
+
 [[menu.footer]]
   identifier = "footer-play"
   name = "Play"
