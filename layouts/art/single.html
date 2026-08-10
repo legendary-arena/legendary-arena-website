@@ -1,0 +1,73 @@
+{{- /* Legendary Arena — Artist portfolio page. WP-041.
+       Renders one artist bundle: header (name/role/bio/links) + a
+       masonry gallery of their works. Order and captions come from the
+       front-matter `gallery` list (source of truth); a bundle image not
+       listed there is intentionally not rendered.
+
+       Thumbnails and lightbox renders are PROCESSED resources
+       (.Resize, aspect preserved so art is never cropped). The lightbox
+       is dependency-free (assets/js/art-lightbox.js) — no npm dep. */ -}}
+{{- define "main" }}
+<article class="section art-artist">
+
+  <header class="art-artist-head">
+    <p class="art-artist-back"><a href="{{ (.Parent).RelPermalink }}">&larr; All artists</a></p>
+    <h1>{{ .Title }}</h1>
+    {{- with .Params.role }}<p class="art-artist-role">{{ . }}</p>{{ end }}
+    {{- with .Content }}<div class="art-artist-bio">{{ . }}</div>{{ end }}
+    {{- with .Params.links }}
+    <ul class="art-artist-links">
+      {{- range . }}
+      <li>
+        <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .label }}
+          <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
+            stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12" aria-hidden="true">
+            <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+            <path d="M15 3h6v6"></path>
+            <path d="M10 14L21 3"></path>
+          </svg>
+        </a>
+      </li>
+      {{- end }}
+    </ul>
+    {{- end }}
+  </header>
+
+  <div class="art-gallery">
+    {{- range .Params.gallery }}
+    {{- $item := . }}
+    {{- with $.Resources.GetMatch $item.src }}
+    {{- $thumb := .Resize "800x webp q80" }}
+    {{- $full := .Resize "1600x webp q82" }}
+    {{- $alt := $item.title | default $item.src }}
+    <a class="art-tile" href="{{ $full.RelPermalink }}"
+       data-title="{{ $item.title }}"
+       data-caption="{{ $item.caption }}">
+      <figure>
+        <img src="{{ $thumb.RelPermalink }}" width="{{ $thumb.Width }}" height="{{ $thumb.Height }}"
+             loading="lazy" decoding="async" alt="{{ $alt }}">
+      </figure>
+    </a>
+    {{- end }}
+    {{- end }}
+  </div>
+
+  {{- with .Params.rights }}
+  <p class="art-artist-rights">{{ . }}</p>
+  {{- end }}
+</article>
+
+{{- /* Lightbox overlay: single reusable node, driven by art-lightbox.js */ -}}
+<div class="art-lightbox" id="art-lightbox" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-label="Artwork viewer">
+  <button class="art-lightbox-close" type="button" aria-label="Close">&times;</button>
+  <button class="art-lightbox-nav art-lightbox-prev" type="button" aria-label="Previous">&#8249;</button>
+  <figure class="art-lightbox-figure">
+    <img class="art-lightbox-img" src="" alt="">
+    <figcaption class="art-lightbox-caption"></figcaption>
+  </figure>
+  <button class="art-lightbox-nav art-lightbox-next" type="button" aria-label="Next">&#8250;</button>
+</div>
+
+{{ $lightbox := resources.Get "js/art-lightbox.js" | minify | fingerprint }}
+<script src="{{ $lightbox.RelPermalink }}" defer></script>
+{{- end }}

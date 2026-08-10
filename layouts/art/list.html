@@ -1,0 +1,44 @@
+{{- /* Legendary Arena — Art section landing (artist directory).
+       WP-041. Renders one card per artist bundle under /art/. Each card
+       links to that artist's portfolio page (layouts/art/single.html).
+
+       Content model: page-bundle-per-artist. The hero thumbnail is a
+       PROCESSED resource (never a static/ file — Hugo cannot process
+       those). Thumbnails are square-filled webp for a uniform grid; the
+       full grid of a given artist lives one level down on their page. */ -}}
+{{- define "main" }}
+<div class="section art-directory">
+  <h1>{{ .Title }}</h1>
+  {{- with .Content }}
+  <div class="section-desc">{{ . }}</div>
+  {{- end }}
+
+  <div class="art-grid">
+    {{- range .Pages.ByWeight }}
+    {{- $artist := . }}
+    {{- /* hero resource: front-matter `hero`, else first gallery src, else first image */ -}}
+    {{- $hero := "" }}
+    {{- with $artist.Params.hero }}{{ $hero = $artist.Resources.GetMatch . }}{{ end }}
+    {{- if not $hero }}
+      {{- with $artist.Params.gallery }}{{ $hero = $artist.Resources.GetMatch (index . 0).src }}{{ end }}
+    {{- end }}
+    {{- if not $hero }}{{ $hero = $artist.Resources.GetMatch "*" }}{{ end }}
+    {{- $count := len $artist.Params.gallery }}
+    <a class="card art-card" href="{{ $artist.RelPermalink }}">
+      {{- with $hero }}
+      {{- $thumb := .Fill "600x600 Center webp q80" }}
+      <div class="art-card-thumb">
+        <img src="{{ $thumb.RelPermalink }}" width="{{ $thumb.Width }}" height="{{ $thumb.Height }}"
+             loading="lazy" decoding="async" alt="Artwork by {{ $artist.Title }}">
+      </div>
+      {{- end }}
+      <div class="art-card-body">
+        <h3 class="art-card-name">{{ $artist.Title }}</h3>
+        {{- with $artist.Params.role }}<p class="art-card-role">{{ . }}</p>{{ end }}
+        {{- if $count }}<p class="art-card-count">{{ $count }} {{ cond (eq $count 1) "piece" "pieces" }}</p>{{ end }}
+      </div>
+    </a>
+    {{- end }}
+  </div>
+</div>
+{{- end }}

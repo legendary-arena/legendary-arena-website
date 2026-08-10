@@ -2000,3 +2000,222 @@ ul#menu li a span.active {
     padding-bottom: var(--la-space-6);
   }
 }
+
+/* =========================================================================
+   §13 Art gallery (WP-041) — /art/ artist directory + portfolio pages
+   ========================================================================= */
+
+/* §13.1 Artist directory (layouts/art/list.html) */
+
+.art-directory .section-desc {
+  max-width: 60ch;
+  margin-bottom: var(--la-space-6);
+  color: var(--la-color-text-secondary);
+}
+
+.art-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: var(--la-space-5);
+}
+
+.art-card {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+}
+
+.art-card-thumb {
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background-color: var(--la-color-bg-tertiary);
+}
+
+.art-card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--la-transition-base);
+}
+
+.art-card:hover .art-card-thumb img {
+  transform: scale(1.04);
+}
+
+.art-card-body {
+  padding: var(--la-space-4) var(--la-space-5) var(--la-space-5);
+}
+
+.art-card-name {
+  font-family: var(--la-font-display);
+  letter-spacing: var(--la-letter-spacing-display);
+  text-transform: uppercase;
+  margin: 0 0 var(--la-space-1);
+}
+
+.art-card-role {
+  color: var(--la-color-text-secondary);
+  margin: 0 0 var(--la-space-2);
+}
+
+.art-card-count {
+  color: var(--la-color-text-muted);
+  font-size: var(--la-font-size-small);
+  margin: 0;
+}
+
+/* §13.2 Artist portfolio page (layouts/art/single.html) */
+
+.art-artist-head {
+  max-width: 65ch;
+  margin-bottom: var(--la-space-6);
+}
+
+.art-artist-back {
+  margin-bottom: var(--la-space-3);
+  font-size: var(--la-font-size-small);
+}
+
+.art-artist-role {
+  color: var(--la-color-text-secondary);
+  font-size: var(--la-font-size-h5);
+  margin-top: calc(-1 * var(--la-space-2));
+}
+
+.art-artist-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--la-space-3);
+  padding: 0;
+  margin: var(--la-space-4) 0 0;
+}
+
+.art-artist-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Masonry via CSS columns so mixed aspect ratios flow without cropping. */
+.art-gallery {
+  column-width: 260px;
+  column-gap: var(--la-space-4);
+}
+
+.art-tile {
+  display: block;
+  margin: 0 0 var(--la-space-4);
+  break-inside: avoid;
+  border-radius: var(--la-radius-md);
+  overflow: hidden;
+  border: 1px solid var(--la-color-border-subtle);
+  transition: box-shadow var(--la-transition-fast), transform var(--la-transition-fast);
+}
+
+.art-tile:hover {
+  box-shadow: var(--la-shadow-strong);
+  transform: translateY(-2px);
+}
+
+.art-tile figure {
+  margin: 0;
+}
+
+.art-tile img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.art-artist-rights {
+  margin-top: var(--la-space-6);
+  color: var(--la-color-text-muted);
+  font-size: var(--la-font-size-small);
+  font-style: italic;
+}
+
+/* §13.3 Lightbox overlay (assets/js/art-lightbox.js) */
+
+.art-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: var(--la-z-modal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--la-space-3);
+  padding: var(--la-space-5);
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.art-lightbox[hidden] {
+  display: none;
+}
+
+.art-lightbox-figure {
+  margin: 0;
+  max-width: min(1200px, 90vw);
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.art-lightbox-img {
+  max-width: 100%;
+  max-height: 82vh;
+  object-fit: contain;
+  border-radius: var(--la-radius-sm);
+}
+
+.art-lightbox-caption {
+  color: #fff;
+  text-align: center;
+  margin-top: var(--la-space-3);
+  font-size: var(--la-font-size-small);
+}
+
+.art-lightbox-close,
+.art-lightbox-nav {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: var(--la-radius-pill);
+  cursor: pointer;
+  line-height: 1;
+  transition: background-color var(--la-transition-fast);
+}
+
+.art-lightbox-close:hover,
+.art-lightbox-nav:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.art-lightbox-nav {
+  width: 48px;
+  height: 48px;
+  font-size: 28px;
+  flex-shrink: 0;
+}
+
+.art-lightbox-close {
+  position: absolute;
+  top: var(--la-space-4);
+  right: var(--la-space-4);
+  width: 44px;
+  height: 44px;
+  font-size: 26px;
+}
+
+@media (max-width: 768px) {
+  .art-lightbox-nav {
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+  }
+}
