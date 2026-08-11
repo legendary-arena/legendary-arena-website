@@ -39,10 +39,14 @@ it.
   stack *two* royalty cuts. A ~$10k *advance* is plausible; the total commitment is
   materially larger. Disney/Marvel grants go to well-capitalized, established
   partners; timelines run **6–18 months**. See §4.
-- **Recommended path:** **Upper Deck first as the warm entry point and potential
-  broker/partner**, ideally toward a **joint / tri-party deal** (Marvel + UD +
-  you) — but with a distinct Marvel digital negotiation that cannot be assumed to
-  come free with UD. See §5.
+- **Recommended path (sharpened):** the strongest sequence for an independent /
+  small team is **(1) prove the product with a license-clean build first** — a
+  polished non-Marvel (fantasy) digital Legendary with real player metrics — then
+  **(2) approach Upper Deck** as the warm entry point with a partnership/royalty
+  proposal, then **(3) go to Marvel jointly** (UD as broker), ideally a **joint /
+  tri-party deal** (Marvel + UD + you). A high-probability alternative to going
+  solo is **partnering with an established digital board-game studio** that already
+  holds IP-holder relationships (e.g. Dire Wolf Digital, Asmodee Digital). See §5.
 
 ---
 
@@ -90,6 +94,15 @@ So "Upper Deck first" survives — not because Marvel is downstream, but because
 is the **warmest entry point** and the party with the most to gain from a digital
 Marvel Legendary they could never build themselves. The fallback, if UD won't
 partner, is a Marvel-direct de-branded original (§6).
+
+**Why UD is a plausible partner (verified track record).** UD routinely extends
+the *Legendary* / *Legendary Encounters* system to new licensed IPs — beyond
+Marvel it has published **Alien, Predator, Big Trouble in Little China, Firefly,
+and Buffy the Vampire Slayer**. And for *digital*, UD already partnered a
+third-party studio (SkyReacher) to build **Legendary DXP** (§3). So "a new IP on
+the Legendary system" and "an outside developer builds a digital Legendary under
+UD" are both patterns UD has done before, not novelties — which makes a UD
+partnership proposal a warm, on-pattern ask rather than a cold one.
 
 ---
 
@@ -167,7 +180,14 @@ or reviewed by counsel. Cheap insurance against a six/seven-figure mistake.
   `[CONFIRM]`).
 - Study **Legendary DXP** as both a system precedent and a fairness contrast.
 
-**Phase 2 — Build the pitch package.**
+**Phase 2 — Build the pitch package (around a license-clean build).**
+- **The build you show must be license-clean.** Do **not** put actual Marvel
+  names, art, or trademarks in the public/demo version you take to UD or Marvel —
+  present a non-Marvel (fantasy) build, DXP-style, or hold the Marvel version
+  private. A polished, working prototype with real player metrics is far more
+  persuasive than slides, and it removes the "you're already infringing" reaction.
+  (This has a real product implication for the *currently public* Marvel build —
+  see §7 risk 7.)
 - **Company + product one-pager:** what Legendary Arena is, live at
   play.legendary-arena.com, the tech, the polish.
 - **Traction:** real metrics (players, matches, retention, traffic). Data de-risks
@@ -186,8 +206,22 @@ or reviewed by counsel. Cheap insurance against a six/seven-figure mistake.
   potential Marvel broker.
 - **Marvel/Disney** interactive licensing — via UD's introduction where possible,
   or a licensing agent with Disney relationships; cold-solo is the hardest path.
+- **Established digital board-game studio (high-probability alternative).** Rather
+  than go solo, partner with a studio that already ships licensed digital board
+  games and holds IP-holder relationships — **Dire Wolf Digital** (Clank!, Root,
+  Ark Nova, Everdell, Pokémon TCG Online) or **Asmodee Digital** are the archetypes.
+  They bring credibility, legal teams, and existing deal relationships; the cost is
+  giving up meaningful equity/control. For a solo operator this is realistically one
+  of the *highest-probability* routes to an actual license.
 - Consider a **licensing agent/broker** with UD/Disney relationships (retainer or
   commission, but opens doors and normalizes terms).
+
+> **Reality check.** Unsolicited pitches from individuals or small teams rarely
+> land major IP like Marvel directly — the rights-holders prefer established
+> partners with distribution, financial backing, and live-ops experience. That is
+> exactly why the sequence leads with a proven product (Phase 2) and why the
+> studio-partner and agent routes above exist: they convert a cold solo ask into a
+> warm, backed one.
 
 **Phase 4 — NDA → term sheet(s).** Mutual NDA first, then term sheet(s) covering
 the §4 terms for each licensor (or one joint sheet). Nothing signed without
@@ -201,6 +235,14 @@ counsel.
 
 **Timeline:** realistically **6–18 months** from Phase 1 to signed deal(s); a
 two-licensor / tri-party structure trends toward the longer end.
+
+**Most practical sequence (independent / small team).**
+1. Build a clean, high-quality **non-Marvel** (fantasy) digital Legendary with real
+   player metrics — proof of product and demand, zero Marvel exposure.
+2. Approach **Upper Deck** with a partnership / royalty proposal for the Legendary
+   system ("expand your digital presence"), or bring in a studio partner (Phase 3).
+3. If UD engages, work **with them or through them** toward the Marvel digital
+   conversation — never a cold solo pitch to Disney.
 
 ---
 
@@ -234,6 +276,14 @@ genuinely simpler on the rights side (one licensor instead of two).
 5. **Cost reality.** True commitment (MG + rate, per licensor, + legal/agent)
    materially exceeds $10k for anything Marvel-branded.
 6. **Timeline.** 6–18 months; do not build launch/revenue plans on a fast yes.
+7. **The *currently public* build shows Marvel IP.** legendary-arena.com is live
+   today with actual Marvel names and art — so the "show a license-clean build"
+   guidance (§5 Phase 2) is not just about the demo; it's a decision about the
+   already-public product. Options: **reskin the public-facing build to fantasy**
+   (DXP-style) and keep a Marvel version private for the eventual licensed release,
+   or accept the standing exposure. This is a product + legal call, and the outreach
+   itself points the rights-holders at whatever is public — so counsel (Phase 0)
+   should weigh in on the public build *before* any approach.
 
 *(Note: an earlier draft listed "DXP competition" as a risk. That was based on the
 mistaken belief DXP was a Marvel product. DXP is fantasy and does not compete on
@@ -275,3 +325,10 @@ this plan plus VISION.
   Island Games; Harris Beach Murtha.
 - Marvel/Disney licensing bar — Variety VIP ("Disney as licensor, not player");
   Hasbro–Disney Star Wars/Marvel extension release.
+- UD *Legendary* non-Marvel roster (Alien, Predator, Big Trouble in Little China,
+  Firefly, Buffy the Vampire Slayer) — BoardGameGeek "Game: Legendary (Upper Deck
+  Entertainment)" family; ComicBook.com / The Game Steward listings. *(X-Files and
+  a "DC" title were checked and not confirmed — deliberately omitted.)*
+- Digital board-game studio partners (Dire Wolf Digital — Clank!, Root, Ark Nova,
+  Everdell, Pokémon TCG Online; Asmodee Digital) — direwolfdigital.com, Steam
+  publisher pages, Wargamer coverage.
