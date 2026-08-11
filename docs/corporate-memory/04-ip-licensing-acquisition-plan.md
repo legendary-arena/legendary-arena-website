@@ -183,11 +183,21 @@ or reviewed by counsel. Cheap insurance against a six/seven-figure mistake.
 **Phase 2 — Build the pitch package (around a license-clean build).**
 - **The build you show must be license-clean.** Do **not** put actual Marvel
   names, art, or trademarks in the public/demo version you take to UD or Marvel —
-  present a non-Marvel (fantasy) build, DXP-style, or hold the Marvel version
-  private. A polished, working prototype with real player metrics is far more
-  persuasive than slides, and it removes the "you're already infringing" reaction.
-  (This has a real product implication for the *currently public* Marvel build —
-  see §7 risk 7.)
+  present a non-Marvel build, DXP-style, or hold the Marvel version private. A
+  polished, working prototype with real player metrics is far more persuasive than
+  slides, and it removes the "you're already infringing" reaction. (This has a real
+  product implication for the *currently public* Marvel build — see §7 risk 7.)
+  - **What to skin it with — three license-clean options:** (a) **original
+    characters** of your own design; (b) a **fantasy** set, as DXP did; or (c)
+    **verified public-domain Golden Age heroes** — which keeps the *superhero*
+    genre (a stronger, more on-brand UD pitch than generic fantasy) while needing
+    only the Upper Deck system license, not Marvel. **`[CONFIRM]` the public-domain
+    route is a per-character *and per-issue* legal question, not a free pass:**
+    some Golden Age titles were renewed (e.g. *Fighting Yank* #2 by Popular
+    Library) and later publishers (e.g. AC Comics) created *copyrighted* modern
+    versions of otherwise-PD heroes like Black Terror. Counsel must clear each
+    character/issue before use; treat named examples as candidates, not cleared
+    assets.
 - **Company + product one-pager:** what Legendary Arena is, live at
   play.legendary-arena.com, the tech, the polish.
 - **Traction:** real metrics (players, matches, retention, traffic). Data de-risks
@@ -237,8 +247,9 @@ counsel.
 two-licensor / tri-party structure trends toward the longer end.
 
 **Most practical sequence (independent / small team).**
-1. Build a clean, high-quality **non-Marvel** (fantasy) digital Legendary with real
-   player metrics — proof of product and demand, zero Marvel exposure.
+1. Build a clean, high-quality **non-Marvel** digital Legendary — original,
+   fantasy, or verified public-domain-hero content (Phase 2) — with real player
+   metrics; proof of product and demand, zero Marvel exposure.
 2. Approach **Upper Deck** with a partnership / royalty proposal for the Legendary
    system ("expand your digital presence"), or bring in a studio partner (Phase 3).
 3. If UD engages, work **with them or through them** toward the Marvel digital
@@ -332,3 +343,9 @@ this plan plus VISION.
 - Digital board-game studio partners (Dire Wolf Digital — Clank!, Root, Ark Nova,
   Everdell, Pokémon TCG Online; Asmodee Digital) — direwolfdigital.com, Steam
   publisher pages, Wargamer coverage.
+- Public-domain Golden Age heroes as a license-clean content option, and the
+  per-character/per-issue caveat (renewed titles like *Fighting Yank* #2; AC Comics'
+  copyrighted Nedor versions) — Public Domain Super Heroes references; Diocletian's
+  Comics Corner (Black Terror / Amazing-Man histories); herogoggles.com copyright
+  notes; *Fighting Yank* (Wikipedia). **Legal status is per-character — confirm with
+  counsel before use.**
