@@ -55,6 +55,13 @@ it.
   accept unsolicited submissions — approaches must come through Upper Deck, a studio
   partner, or counsel/an agent with a Disney relationship. See §5 Phase 3 and
   [`05-counsel-and-agent-selection.md`](05-counsel-and-agent-selection.md).
+- **Earn a partnership; don't request a license.** Optimize to become a partner
+  Upper Deck *wants* — the transaction comes later. UD doesn't need software; it
+  needs more Legendary sales, players, engagement, and organized play. So the ask
+  is a **partnership program** (companion platform / limited pilot / revenue share)
+  framed around *their* business, not "grant me a digital license." Sequence the
+  roadmap by **credibility milestones**, and treat **acquisition / exclusive
+  partnership** as a real endgame, not just licensing. See §5 and §6.
 
 ---
 
@@ -229,9 +236,15 @@ and verified candidate counsel are in
   guardrails** — for Marvel, "we will never sell gameplay advantage with your
   characters, and unlike the existing digital Legendary we gate nothing behind
   energy or currency" is a *selling point*.
-- **Ask:** a specific, scoped proposal — ideally a **joint/tri-party structure**
-  (UD system license + Marvel digital license, or one blended deal), not "please
-  bless what we built."
+- **Ask — a partnership program, not "a license."** Frame the request around
+  *Upper Deck's* business (more Legendary sales, players, engagement, organized
+  play), not your need for rights. Offer options a UD decision-maker can say yes to:
+  **(A) official companion/community platform**, **(B) a limited-scope digital
+  pilot**, or **(C) a revenue share** on platform revenue. The full Marvel
+  digital-character grant is a *later* conversation once UD is a partner — see §5
+  "Earn the partnership first" and §6 endgames. "How do you want to participate in
+  what we've already built and proven?" is a far easier yes than "grant us a
+  digital license."
 
 **Phase 3 — Reach the right desks.** Note the hard constraint: **Disney does not
 accept unsolicited submissions** — a legal shield against "you stole my idea"
@@ -240,7 +253,9 @@ low-odds; it must arrive through a recognized channel (Upper Deck, a studio
 partner, or counsel/an agent with a Disney relationship). That is why every route
 below is a *warm* one.
 - **Upper Deck** business development / licensing first — the warm entry point and
-  potential Marvel broker.
+  potential Marvel broker. Lead with *their* upside (grows Legendary sales,
+  players, engagement, organized play), and open with a **partnership program**
+  (companion / pilot / rev-share), not "a license" — see Phase 2 "Ask" and §6.
 - **Marvel/Disney** interactive licensing — via UD's introduction where possible,
   or a licensing agent with Disney relationships; a cold solo pitch is not just the
   hardest path, it is one Disney's policy declines to read.
@@ -287,17 +302,70 @@ two-licensor / tri-party structure trends toward the longer end.
 3. If UD engages, work **with them or through them** toward the Marvel digital
    conversation — never a cold solo pitch to Disney.
 
+### Earn the partnership first (credibility milestones, not legal milestones)
+
+Sequence the roadmap by **credibility milestones** — the strongest position at the
+table is "we already built and proved this; how do you want to participate?", not
+"may we build it?" Much of the credibility asset already exists in Legendary Arena
+(PAR scoring, gauntlets + public leaderboards, replay/LAGN verification, the card
+registry, the ops dashboard). The remaining *delta* to a credible UD partnership
+pitch is therefore small and concrete: (a) the **license-clean content set**
+(Phase 2), (b) a **companion/community layer** (below), (c) **production
+hardening + a metrics dashboard** that reads as a business, and (d) the **UD
+partnership deck + counsel briefing** (Phase 2 / [`05`](05-counsel-and-agent-selection.md)).
+Frame these as milestones, and update the pitch as each lands. *(Do not commit to a
+fixed "90-day" gate for this delta solo — it is quarters of work, not weeks; the
+value is the sequencing, not the calendar.)*
+
+### The companion-platform wedge (low-IP relationship builder)
+
+A non-gameplay **companion platform** — collection tracking, organized-play /
+league tooling, statistics over user-entered data, and *original* strategy content
+— is a way to become useful to Upper Deck's ecosystem and player base with the
+*least* IP exposure, no digital gameplay license required. It is a relationship
+builder, run **alongside** the license-clean game (which stays the differentiated
+asset), not a replacement for it.
+
+> **`[CONFIRM]` — "community platform" is *lower* IP exposure, not *zero*.** A
+> commercial platform that reproduces Marvel Legendary **card text or art** is
+> copyright exposure (card rules/flavor text and art are copyrightable), and
+> **card/character names + "Legendary®"** are trademark exposure — only the bare
+> **game mechanics** and your *own* original descriptions/statistics are clearly
+> free. Publishers have taken down fan card databases before (e.g. Netrunner). So
+> the genuinely low-risk version is **statistics + organized-play tooling over
+> user-entered data + original writing**, not a wholesale reproduction of the
+> Marvel Legendary card database. Counsel scopes what card data/names/marks the
+> platform may reproduce commercially before it ships.
+
 ---
 
-## 6. Fallback — Marvel-direct, de-branded original (one license, not two)
+## 6. Endgames & fallback
 
-If Upper Deck won't partner or license, the fallback is to **drop the *Legendary*
-name and its specific system** and license **only Marvel characters** for an
-*original* deck-builder of your own design. That collapses the deal to a **single
-Marvel license** (no Upper Deck dependency), but still requires clearing the
-Marvel/Disney bar (§3–§4) and means real product rework (rename, re-theme,
-re-mechanic). A strategic pivot, not a cheaper version of the same plan — but
-genuinely simpler on the rights side (one licensor instead of two).
+This does not have to end in an independent license. Ranked roughly easiest →
+hardest, the plausible resolutions:
+
+- **Endgame B — Upper Deck partnership** (companion platform / pilot / revenue
+  share). The most probable good outcome; the whole plan is engineered to earn it.
+- **Endgame C — Digital-studio partnership** (Dire Wolf Digital, Asmodee Digital,
+  §5 Phase 3) — trades equity/control for their relationships and credibility.
+- **Endgame D — Acquisition / exclusive partnership.** If Legendary Arena becomes
+  the largest Legendary community + organized-play + analytics platform, UD (or a
+  studio) acquiring or exclusively partnering becomes plausible. `[CONFIRM]` the
+  caveats: UD is a physical-collectibles company that *outsourced* its one digital
+  effort (DXP → SkyReacher) and just lost the Marvel card license to Topps — not a
+  historical acquirer of digital studios — and an acquisition still **does not
+  conjure Marvel digital rights UD never held**. List it as an option, not a
+  short-cut around the Marvel problem.
+- **Endgame A — Independent licensee** (you hold both licenses). The hardest and
+  the original framing of this plan; genuine, but the least probable for a small
+  team.
+- **Endgame E — Marvel-direct, de-branded original (fallback).** If Upper Deck
+  won't partner or license, **drop the *Legendary* name and system** and license
+  **only Marvel characters** for an *original* deck-builder. Collapses the deal to a
+  **single Marvel license** (no UD dependency) but still clears the Marvel/Disney
+  bar (§3–§4) and means real product rework (rename, re-theme, re-mechanic). A
+  strategic pivot, not a cheaper version of the same plan — simpler on the rights
+  side (one licensor), harder on the product side.
 
 ---
 
@@ -384,3 +452,9 @@ this plan plus VISION.
   Comics Corner (Black Terror / Amazing-Man histories); herogoggles.com copyright
   notes; *Fighting Yank* (Wikipedia). **Legal status is per-character — confirm with
   counsel before use.**
+- Companion-platform exposure (card **text**/art copyrightable; card/character
+  **names** + "Legendary®" are trademark; **mechanics** not copyrightable; fan card
+  databases have been taken down, e.g. Netrunner) — Marquette Law "Games and Other
+  Uncopyrightable Systems"; ABA "Board Games and IP Law"; Ask MetaFilter / trading-
+  card-copyright guides. **A commercial community platform is lower-not-zero
+  exposure — confirm scope with counsel.**
