@@ -47,6 +47,14 @@ it.
   tri-party deal** (Marvel + UD + you). A high-probability alternative to going
   solo is **partnering with an established digital board-game studio** that already
   holds IP-holder relationships (e.g. Dire Wolf Digital, Asmodee Digital). See §5.
+- **Single highest near-term priority:** decide what to do about the **currently
+  public Marvel-branded build** *before* any outreach — reskin it license-clean or
+  knowingly accept the exposure. Outreach points the rights-holders straight at
+  whatever is live. See §5 (Immediate action) and §7 risk 7.
+- **Cold Marvel outreach is policy-blocked, not just unlikely.** Disney does not
+  accept unsolicited submissions — approaches must come through Upper Deck, a studio
+  partner, or counsel/an agent with a Disney relationship. See §5 Phase 3 and
+  [`05-counsel-and-agent-selection.md`](05-counsel-and-agent-selection.md).
 
 ---
 
@@ -166,9 +174,22 @@ licensors, not one.
 
 ## 5. The approach plan
 
-**Phase 0 — Counsel (before any outreach).** Retain an IP/licensing attorney
-(entertainment/game-licensing experience). Everything below is negotiated through
-or reviewed by counsel. Cheap insurance against a six/seven-figure mistake.
+> **Immediate action (before Phase 1 outreach): resolve the public Marvel-branded
+> build.** legendary-arena.com is live today with actual Marvel names and art.
+> Continuing to display it publicly while preparing outreach **increases legal
+> exposure and weakens negotiating position** — and outreach itself points the
+> rights-holders straight at it. Decide, with counsel: **reskin the public site to
+> a license-clean build** (`§5 Phase 2`) *before* approaching anyone, or knowingly
+> accept the standing exposure. This is the highest-priority near-term item; see §7
+> risk 7.
+
+**Phase 0 — Counsel (before any outreach).** Retain an IP/licensing attorney with
+**dual** experience — major-studio/character licensing **and** games/interactive
+digital rights (pure film/TV licensing, or pure tabletop, each covers only half the
+deal). Everything below is negotiated through or reviewed by counsel; cheap
+insurance against a six/seven-figure mistake. Selection criteria, questions to ask,
+and verified candidate counsel are in
+[`05-counsel-and-agent-selection.md`](05-counsel-and-agent-selection.md).
 
 **Phase 1 — Diligence (facts before pitch).**
 - Confirm **who holds the *Legendary* digital game rights** and whether Upper Deck
@@ -187,17 +208,18 @@ or reviewed by counsel. Cheap insurance against a six/seven-figure mistake.
   polished, working prototype with real player metrics is far more persuasive than
   slides, and it removes the "you're already infringing" reaction. (This has a real
   product implication for the *currently public* Marvel build — see §7 risk 7.)
-  - **What to skin it with — three license-clean options:** (a) **original
-    characters** of your own design; (b) a **fantasy** set, as DXP did; or (c)
-    **verified public-domain Golden Age heroes** — which keeps the *superhero*
-    genre (a stronger, more on-brand UD pitch than generic fantasy) while needing
-    only the Upper Deck system license, not Marvel. **`[CONFIRM]` the public-domain
-    route is a per-character *and per-issue* legal question, not a free pass:**
-    some Golden Age titles were renewed (e.g. *Fighting Yank* #2 by Popular
-    Library) and later publishers (e.g. AC Comics) created *copyrighted* modern
-    versions of otherwise-PD heroes like Black Terror. Counsel must clear each
-    character/issue before use; treat named examples as candidates, not cleared
-    assets.
+  - **What to skin it with — three license-clean options:**
+    - **(a) Original characters** of your own design.
+    - **(b) A fantasy set**, as DXP did.
+    - **(c) Verified public-domain Golden Age heroes** — keeps the *superhero*
+      genre (a stronger, more on-brand UD pitch than generic fantasy) while needing
+      only the Upper Deck system license, not Marvel.
+    - **`[CONFIRM]` — the public-domain route is a per-character *and per-issue*
+      legal question, not a free pass:** some Golden Age titles were renewed (e.g.
+      *Fighting Yank* #2 by Popular Library) and later publishers (e.g. AC Comics)
+      created *copyrighted* modern versions of otherwise-PD heroes like Black
+      Terror. Counsel must clear each character/issue before use; treat named
+      examples as candidates, not cleared assets.
 - **Company + product one-pager:** what Legendary Arena is, live at
   play.legendary-arena.com, the tech, the polish.
 - **Traction:** real metrics (players, matches, retention, traffic). Data de-risks
@@ -211,20 +233,30 @@ or reviewed by counsel. Cheap insurance against a six/seven-figure mistake.
   (UD system license + Marvel digital license, or one blended deal), not "please
   bless what we built."
 
-**Phase 3 — Reach the right desks.**
+**Phase 3 — Reach the right desks.** Note the hard constraint: **Disney does not
+accept unsolicited submissions** — a legal shield against "you stole my idea"
+claims. A cold solo approach to Marvel is therefore *policy-blocked*, not just
+low-odds; it must arrive through a recognized channel (Upper Deck, a studio
+partner, or counsel/an agent with a Disney relationship). That is why every route
+below is a *warm* one.
 - **Upper Deck** business development / licensing first — the warm entry point and
   potential Marvel broker.
 - **Marvel/Disney** interactive licensing — via UD's introduction where possible,
-  or a licensing agent with Disney relationships; cold-solo is the hardest path.
+  or a licensing agent with Disney relationships; a cold solo pitch is not just the
+  hardest path, it is one Disney's policy declines to read.
 - **Established digital board-game studio (high-probability alternative).** Rather
   than go solo, partner with a studio that already ships licensed digital board
   games and holds IP-holder relationships — **Dire Wolf Digital** (Clank!, Root,
   Ark Nova, Everdell, Pokémon TCG Online) or **Asmodee Digital** are the archetypes.
   They bring credibility, legal teams, and existing deal relationships; the cost is
-  giving up meaningful equity/control. For a solo operator this is realistically one
+  giving up meaningful equity/control, so treat it as a **genuine partnership
+  decision, not a pure accelerator**. For a solo operator this is realistically one
   of the *highest-probability* routes to an actual license.
-- Consider a **licensing agent/broker** with UD/Disney relationships (retainer or
-  commission, but opens doors and normalizes terms).
+- Consider a **licensing agent/broker** with *genuine, current* UD/Disney
+  relationships — an accelerator, not a magic key. Selection criteria, questions to
+  ask, verified candidate counsel and agents, and the Disney no-unsolicited-policy
+  detail are in
+  [`05-counsel-and-agent-selection.md`](05-counsel-and-agent-selection.md).
 
 > **Reality check.** Unsolicited pitches from individuals or small teams rarely
 > land major IP like Marvel directly — the rights-holders prefer established
@@ -309,6 +341,9 @@ the Marvel axis — the corrected framing is the market-gap opportunity in §3.)
 - [`01-decision-log.md`](01-decision-log.md) 2026-07-04 — printables-store royalty
   routing + licensing scope flagged as launch prerequisites; same dependency,
   downstream of this plan.
+- [`05-counsel-and-agent-selection.md`](05-counsel-and-agent-selection.md) — the
+  Phase 0 / Phase 3 companion: Disney's no-unsolicited-submissions policy, counsel &
+  agent selection criteria, and **verified** candidate counsel/agents with citations.
 - [`03-open-questions.md`](03-open-questions.md) — the 🔴 "IP license not yet
   secured" gap tracks execution of this plan.
 - Engine ewiki `IP Licensing` Brand page (`wiki/ip-licensing.md`) — the descriptive

@@ -39,6 +39,7 @@ The portfolio index that ties these together lives in
 | [`02-kpi-dictionary.md`](02-kpi-dictionary.md) | Strict KPI definitions, owners, and sources across email, search, YouTube, and commerce |
 | [`03-open-questions.md`](03-open-questions.md) | Gap tracker — what's undefined, unverified, or pending a decision |
 | [`04-ip-licensing-acquisition-plan.md`](04-ip-licensing-acquisition-plan.md) | Research-backed plan to secure Marvel + Upper Deck rights (the royalty covenant this makes true). Draft, pre-outreach; points down to VISION |
+| [`05-counsel-and-agent-selection.md`](05-counsel-and-agent-selection.md) | Phase 0/3 companion to the plan: Disney's no-unsolicited-submissions policy, counsel & agent selection criteria, and verified candidate counsel/agents (citations). Draft, pre-engagement |
 
 ## Update rules (treat this like code)
 
