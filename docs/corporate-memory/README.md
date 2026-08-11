@@ -40,6 +40,7 @@ The portfolio index that ties these together lives in
 | [`03-open-questions.md`](03-open-questions.md) | Gap tracker — what's undefined, unverified, or pending a decision |
 | [`04-ip-licensing-acquisition-plan.md`](04-ip-licensing-acquisition-plan.md) | Research-backed plan to secure Marvel + Upper Deck rights (the royalty covenant this makes true). Draft, pre-outreach; points down to VISION |
 | [`05-counsel-and-agent-selection.md`](05-counsel-and-agent-selection.md) | Phase 0/3 companion to the plan: Disney's no-unsolicited-submissions policy, counsel & agent selection criteria, and verified candidate counsel/agents (citations). Draft, pre-engagement |
+| [`06-community-advertising-and-sponsorship-plan.md`](06-community-advertising-and-sponsorship-plan.md) | How to reach the online Legendary player base via the community sites/leagues (Bageltop Games ecosystem) — sponsorship/partnership, not media buy. Gated on the license-clean-build decision. Draft, pre-outreach |
 
 ## Update rules (treat this like code)
 

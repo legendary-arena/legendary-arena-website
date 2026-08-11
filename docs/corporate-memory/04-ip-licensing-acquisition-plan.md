@@ -1,7 +1,12 @@
 # IP Licensing Acquisition Plan — Marvel + Upper Deck
 
-**Scope:** how Legendary Arena secures the rights it needs to legally operate a
-digital *Marvel Legendary* deck-builder.
+**Scope:** how Legendary Arena — a digital deck-builder **built on the Legendary
+system that currently uses Marvel characters it does not license** — secures the
+rights it would need to operate that legally. *(Precision matters here: it is an
+unlicensed derivative that uses the IP, not officially "a Marvel Legendary"
+product — the accurate framing is also the more legally careful one, and it
+mirrors the [`00-business-brief.md`](00-business-brief.md) guardrail that the
+Marvel/Legendary lineage is internal-only context.)*
 **Status:** Draft plan (pre-outreach). No approach has been made.
 **Last updated:** 2026-08-11
 **Authoritative sources:** engine [`docs/01-VISION.md`](../01-VISION.md)
@@ -181,6 +186,11 @@ licensors, not one.
 
 ## 5. The approach plan
 
+> **Fact vs. strategy.** §1–§4 above are **rights & licensing facts** (with
+> `[CONFIRM]` on anything inferred rather than verified). §5–§6 below are
+> **strategic recommendations** — reasoned options, not established facts. Read
+> them as "how we'd play it," not "what is true."
+
 > **Immediate action (before Phase 1 outreach): resolve the public Marvel-branded
 > build.** legendary-arena.com is live today with actual Marvel names and art.
 > Continuing to display it publicly while preparing outreach **increases legal
@@ -230,7 +240,9 @@ and verified candidate counsel are in
 - **Company + product one-pager:** what Legendary Arena is, live at
   play.legendary-arena.com, the tech, the polish.
 - **Traction:** real metrics (players, matches, retention, traffic). Data de-risks
-  you to a brand steward.
+  you to a brand steward. **Every traction metric this plan cites must use the
+  canonical definitions in [`02-kpi-dictionary.md`](02-kpi-dictionary.md)** — one
+  set of numbers, defined once, so the pitch deck and the governance layer agree.
 - **Revenue model:** the four fairness-safe streams (point to VISION §Financial
   Sustainability). **Lead with the royalty-first covenant and no-pay-to-win
   guardrails** — for Marvel, "we will never sell gameplay advantage with your
@@ -412,6 +424,13 @@ the Marvel axis — the corrected framing is the market-gap opportunity in §3.)
 - [`05-counsel-and-agent-selection.md`](05-counsel-and-agent-selection.md) — the
   Phase 0 / Phase 3 companion: Disney's no-unsolicited-submissions policy, counsel &
   agent selection criteria, and **verified** candidate counsel/agents with citations.
+- [`06-community-advertising-and-sponsorship-plan.md`](06-community-advertising-and-sponsorship-plan.md)
+  — the community-acquisition companion: how to reach the online Legendary player
+  base via the community sites/leagues (Bageltop Games ecosystem), gated on the
+  license-clean-build decision. Executes the §5 companion-platform / credibility
+  wedge.
+- [`02-kpi-dictionary.md`](02-kpi-dictionary.md) — canonical definitions for every
+  traction metric this plan and the ad plan reference.
 - [`03-open-questions.md`](03-open-questions.md) — the 🔴 "IP license not yet
   secured" gap tracks execution of this plan.
 - Engine ewiki `IP Licensing` Brand page (`wiki/ip-licensing.md`) — the descriptive
