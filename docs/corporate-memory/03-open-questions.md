@@ -34,6 +34,25 @@ Priority: 🔴 blocks revenue/strategy · 🟡 efficiency/clarity · 🟢 nice-t
   per-unit cost model or margin target is documented. "No margin, no
   mission" needs an actual margin number to be operational.
 
+- **IP license not yet secured (Marvel + Upper Deck).** VISION mandates
+  royalties on all revenue, and the printables store already flags royalty
+  routing + licensing scope as launch prerequisites
+  ([`01-decision-log.md`](01-decision-log.md), 2026-07-04) — but **no license
+  exists.** An official digital *Marvel Legendary* needs **two** licenses:
+  Upper Deck (the *Legendary* system/brand) **and** Marvel/Disney (**digital**
+  character rights, which UD never held — the reason *Legendary DXP* is a
+  fantasy reskin, not Marvel). Legendary Arena currently operates as an
+  unlicensed derivative of both. Upside: no official digital Marvel Legendary
+  exists anywhere, so this is a market gap, not a crowded space. A
+  research-backed acquisition plan is drafted
+  ([`04-ip-licensing-acquisition-plan.md`](04-ip-licensing-acquisition-plan.md)):
+  Upper Deck first as warm entry/broker toward a joint or tri-party deal;
+  expect 15–30% royalties per licensor + a non-refundable minimum guarantee
+  (not the assumed $10k/10%), 6–18 month timeline. *Needed:* Phase 0 (retain
+  IP counsel) and Phase 1 diligence (does UD still hold the physical Marvel
+  Legendary license, and what is the digital-rights boundary). Execution
+  pending; moves to the decision log when pursued.
+
 ## 🟡 Structural
 
 - **Plausible account not yet provisioned.** Platform is selected (WP-025)
