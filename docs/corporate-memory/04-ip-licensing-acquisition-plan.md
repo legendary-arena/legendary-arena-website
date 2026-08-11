@@ -429,6 +429,10 @@ the Marvel axis — the corrected framing is the market-gap opportunity in §3.)
   base via the community sites/leagues (Bageltop Games ecosystem), gated on the
   license-clean-build decision. Executes the §5 companion-platform / credibility
   wedge.
+- [`07-ud-partnership-readiness-program.md`](07-ud-partnership-readiness-program.md)
+  — the **execution arm** of this plan: a WP-formatted readiness program (PASS/FAIL
+  success criteria, workstreams, exit gate) that produces the credibility asset §5
+  assumes. Business program; its code items become separately-scoped engine WPs.
 - [`02-kpi-dictionary.md`](02-kpi-dictionary.md) — canonical definitions for every
   traction metric this plan and the ad plan reference.
 - [`03-open-questions.md`](03-open-questions.md) — the 🔴 "IP license not yet
