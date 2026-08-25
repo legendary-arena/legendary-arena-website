@@ -56,3 +56,6 @@ docs/ai/invocations/context-wp*.md
 docs/ai/invocations/session-wp*.md
 docs/ai/pre-flights/pre-flight-*.md
 docs/ai/pre-flights/preflight-*.md
+# why: brand logo drafts are large binary scratch (dupes) + third-party reference art;
+# masters/drafts live in pCloud per the workspace-map convention, only final assets ship.
+static/images/brand/logo-drafts/
