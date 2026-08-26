@@ -2219,3 +2219,128 @@ ul#menu li a span.active {
     font-size: 22px;
   }
 }
+
+/* =========================================================================
+   §14 Roadmap board (WP-043) — /roadmap/ read-only Planned / In-progress /
+   Shipped columns fed by the guest feedback API (assets/js/roadmap.js).
+   Tokens only (var(--la-*)); no raw hex.
+   ========================================================================= */
+
+#roadmap-status {
+  color: var(--la-color-text-secondary);
+  margin-bottom: var(--la-space-5);
+}
+
+/* §14.1 Board grid — three status columns, single column on narrow viewports */
+.roadmap-board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--la-space-5);
+  align-items: start;
+}
+
+.roadmap-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.roadmap-column-heading {
+  font-family: var(--la-font-display);
+  letter-spacing: var(--la-letter-spacing-display);
+  text-transform: uppercase;
+  font-size: var(--la-font-size-h5);
+  margin: 0 0 var(--la-space-4);
+  padding-bottom: var(--la-space-2);
+  /* why: status-derived accent under each column heading — blue (planned),
+     gold (in progress), green (shipped). Role colors per palette.md. */
+  border-bottom: 2px solid var(--la-color-border-subtle);
+}
+
+.roadmap-column-heading--planned {
+  border-bottom-color: var(--la-color-blue);
+}
+
+.roadmap-column-heading--in-progress {
+  border-bottom-color: var(--la-color-gold);
+}
+
+.roadmap-column-heading--shipped {
+  border-bottom-color: var(--la-color-success);
+}
+
+.roadmap-column-items {
+  display: flex;
+  flex-direction: column;
+  gap: var(--la-space-4);
+}
+
+/* §14.2 Cards */
+.roadmap-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--la-space-2);
+  padding: var(--la-space-4);
+  background-color: var(--la-color-surface);
+  border: 1px solid var(--la-color-border-subtle);
+  border-left: 3px solid var(--la-color-border-strong);
+  border-radius: var(--la-radius-md);
+  transition: box-shadow var(--la-transition-fast),
+    transform var(--la-transition-fast);
+}
+
+.roadmap-card:hover {
+  box-shadow: var(--la-shadow-soft);
+  transform: translateY(-2px);
+}
+
+.roadmap-card--planned {
+  border-left-color: var(--la-color-blue);
+}
+
+.roadmap-card--in_progress {
+  border-left-color: var(--la-color-gold);
+}
+
+.roadmap-card--shipped {
+  border-left-color: var(--la-color-success);
+}
+
+.roadmap-card-title {
+  font-family: var(--la-font-display);
+  font-size: var(--la-font-size-h5);
+  margin: 0;
+}
+
+.roadmap-card-description {
+  color: var(--la-color-text-secondary);
+  font-size: var(--la-font-size-small);
+  line-height: var(--la-line-height-small);
+  margin: 0;
+}
+
+/* §14.3 Vote-count badge (read-only display signal) */
+.roadmap-card-votes {
+  align-self: flex-start;
+  margin-top: var(--la-space-1);
+  padding: var(--la-space-1) var(--la-space-3);
+  background-color: var(--la-color-bg-tertiary);
+  color: var(--la-color-text-secondary);
+  font-size: var(--la-font-size-small);
+  font-weight: var(--la-font-weight-medium);
+  border-radius: var(--la-radius-pill);
+}
+
+/* §14.4 Quiet empty-state line (empty column) */
+.roadmap-empty {
+  color: var(--la-color-text-muted);
+  font-size: var(--la-font-size-small);
+  font-style: italic;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .roadmap-board {
+    grid-template-columns: 1fr;
+    gap: var(--la-space-6);
+  }
+}

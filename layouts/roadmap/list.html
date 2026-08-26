@@ -1,0 +1,55 @@
+{{- /* Legendary Arena — /roadmap/ section layout override (WP-043).
+
+       Overrides themes/PaperMod/layouts/list.html for the /roadmap/
+       section only (Hugo's section-scoped layout lookup —
+       layouts/<section>/list.html resolves ahead of _default/list.html
+       and the theme's copy).
+
+       The page is a read-only projection of the public, guest-readable
+       feedback/roadmap API (engine WP-604 / D-24414). All data arrives
+       via client-side fetch; the template provides the DOM contract
+       elements (status region + three status columns) and loads the
+       script. The engine owns the data and status; this page authors
+       nothing and hardcodes no roadmap — an unreachable API shows a
+       full-sentence error, never a stale board.
+*/ -}}
+{{- define "main" }}
+
+<div id="roadmap-root" data-pagefind-ignore>
+
+  <header class="page-header">
+    <h1>{{ .Title }}</h1>
+    {{- if .Description }}
+    <div class="post-description">
+      {{ .Description | markdownify }}
+    </div>
+    {{- end }}
+  </header>
+
+  <div id="roadmap-status" role="status">Loading the roadmap&hellip;</div>
+
+  <div id="roadmap-board" class="roadmap-board">
+
+    <section class="roadmap-column" aria-labelledby="roadmap-heading-planned">
+      <h2 id="roadmap-heading-planned" class="roadmap-column-heading roadmap-column-heading--planned">Planned</h2>
+      <div id="roadmap-col-planned" class="roadmap-column-items"></div>
+    </section>
+
+    <section class="roadmap-column" aria-labelledby="roadmap-heading-in_progress">
+      <h2 id="roadmap-heading-in_progress" class="roadmap-column-heading roadmap-column-heading--in-progress">In progress</h2>
+      <div id="roadmap-col-in_progress" class="roadmap-column-items"></div>
+    </section>
+
+    <section class="roadmap-column" aria-labelledby="roadmap-heading-shipped">
+      <h2 id="roadmap-heading-shipped" class="roadmap-column-heading roadmap-column-heading--shipped">Shipped</h2>
+      <div id="roadmap-col-shipped" class="roadmap-column-items"></div>
+    </section>
+
+  </div>
+
+</div>
+
+{{ $roadmap := resources.Get "js/roadmap.js" | minify | fingerprint }}
+<script src="{{ $roadmap.RelPermalink }}" defer></script>
+
+{{- end }}
