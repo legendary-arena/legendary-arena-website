@@ -118,7 +118,7 @@
 | WP-039 | Universal Rulebook page (`/rules`) + registry-viewer cross-reference | 🔄 In progress (site page ✅ Done; engine-repo cross-ref ⏸️ pending) | ~1 day | [WP-039](work-packets/WP-039-universal-rulebook-page.md) |
 | WP-040 | Rename blog section URL `/posts/` → `/blog/` | 🔄 Repo change ✅ Done; CF zone Redirect Rule ⏸️ pending (manual) | ~half-day | [WP-040](work-packets/WP-040-blog-url-rename.md) |
 | WP-043 | Public roadmap board (`/roadmap/`) — read-only Planned/In-progress/Shipped columns + vote counts, from the engine feedback API (`GET /api/feedback`, guest); the marketing surface of the engine feedback/roadmap system (engine D-24414) | ✅ Done (2026-08-25) — live at `/roadmap/`; A11y/BP/SEO ≥ 90, Perf carved out (pre-existing site-wide, see VISION lock) | ~1 day | [WP-043](work-packets/WP-043-public-roadmap-board.md) |
-| WP-044 | Site-wide Lighthouse Performance recovery — closes the WP-043/WP-007b Perf carve-out for `www`. Investigate + fix the three site-wide root causes (render-blocking Google Fonts blocking the LCP text, ~212 KiB unused Snipcart/theme JS on every page, ~1.0 s render-blocking shared stylesheet); re-baseline ≥ 90 across the pages it touches | ⏸️ Pending (drafted 2026-08-25) | ~1 day | [WP-044](work-packets/WP-044-site-performance-recovery.md) |
+| WP-044 | Site-wide Lighthouse Performance recovery — closed the WP-043/WP-007b Perf carve-out for `www`. Removed the render-blocking Google Fonts `<link>` (inlined `@font-face`), the render-blocking `/brand-tokens.css` (inlined), and ~212 KiB Snipcart JS from non-commerce pages (lazy on intent); optimized the home hero (310 KB→57 KB WebP) and shop image CLS | ✅ Done (2026-08-25) — production Lighthouse mobile ≥ 90 on every touched page (clean-machine peak 98–99; A11y/BP/SEO 100), up from the 76–79 baseline; PaperMod + brand-tokens contract untouched | ~1 day | [WP-044](work-packets/WP-044-site-performance-recovery.md) |
 | WP-045 | Interactive voting on the roadmap board (`/roadmap/`) — one-click upvote/un-vote per enhancement for signed-in visitors, via the engine's authenticated `POST`/`DELETE /api/feedback/:id/vote` (engine WP-604 / D-24414). Reuses the proven `hanko` Bearer-token auth from `header-auth.js` (no cookies/`credentials`). Marketing-only; hard-dep = verify server CORS allows POST+Authorization from `www` (else a small engine CORS companion WP) | 📝 Drafted — ready to build | ~half-day | [WP-045](work-packets/WP-045-interactive-voting.md) |
 
 ### Subagent Tasks (ready to run)
@@ -244,7 +244,7 @@
 | WP-027 | WP | Header conversion links (Play + Cards) | ✅ Done | P0 | ~15 min | Claude | WP-010 |
 | WP-028 | WP | Newsletter honeypot spam trap | ✅ Done | P1 | ~30 min | Claude | WP-015 |
 | WP-043 | WP | Public roadmap board (`/roadmap/`) | ✅ Done | P2 | ~1 day | Claude | WP-149 |
-| WP-044 | WP | Site-wide Lighthouse Performance recovery | ⏸️ Pending | P2 | ~1 day | Jeff | WP-008 (baseline); surfaced by WP-043 |
+| WP-044 | WP | Site-wide Lighthouse Performance recovery | ✅ Done | P2 | ~1 day | Claude | WP-008 (baseline); surfaced by WP-043 |
 | ST-01 | ST | Homepage CTA variants | ⏭️ Ready | P0 | ~1 hour | Claude | — |
 | ST-02 | ST | Getting Started page | ⏭️ Ready | P0 | ~1 hour | Claude | — |
 | ST-03 | ST | Friction audit | ⏭️ Ready | P1 | ~45 min | Claude | ST-01 + ST-02 |
