@@ -118,6 +118,7 @@
 | WP-039 | Universal Rulebook page (`/rules`) + registry-viewer cross-reference | 🔄 In progress (site page ✅ Done; engine-repo cross-ref ⏸️ pending) | ~1 day | [WP-039](work-packets/WP-039-universal-rulebook-page.md) |
 | WP-040 | Rename blog section URL `/posts/` → `/blog/` | 🔄 Repo change ✅ Done; CF zone Redirect Rule ⏸️ pending (manual) | ~half-day | [WP-040](work-packets/WP-040-blog-url-rename.md) |
 | WP-043 | Public roadmap board (`/roadmap/`) — read-only Planned/In-progress/Shipped columns + vote counts, from the engine feedback API (`GET /api/feedback`, guest); the marketing surface of the engine feedback/roadmap system (engine D-24414) | ✅ Done (2026-08-25) — live at `/roadmap/`; A11y/BP/SEO ≥ 90, Perf carved out (pre-existing site-wide, see VISION lock) | ~1 day | [WP-043](work-packets/WP-043-public-roadmap-board.md) |
+| WP-044 | Site-wide Lighthouse Performance recovery — closes the WP-043/WP-007b Perf carve-out for `www`. Investigate + fix the three site-wide root causes (render-blocking Google Fonts blocking the LCP text, ~212 KiB unused Snipcart/theme JS on every page, ~1.0 s render-blocking shared stylesheet); re-baseline ≥ 90 across the pages it touches | ⏸️ Pending (drafted 2026-08-25) | ~1 day | [WP-044](work-packets/WP-044-site-performance-recovery.md) |
 
 ### Subagent Tasks (ready to run)
 
@@ -241,6 +242,8 @@
 | WP-025 | WP | Search demand-signal instrumentation | ⏸️ Pending | P1 | ~1–2 hours | Jeff | WP-005 |
 | WP-027 | WP | Header conversion links (Play + Cards) | ✅ Done | P0 | ~15 min | Claude | WP-010 |
 | WP-028 | WP | Newsletter honeypot spam trap | ✅ Done | P1 | ~30 min | Claude | WP-015 |
+| WP-043 | WP | Public roadmap board (`/roadmap/`) | ✅ Done | P2 | ~1 day | Claude | WP-149 |
+| WP-044 | WP | Site-wide Lighthouse Performance recovery | ⏸️ Pending | P2 | ~1 day | Jeff | WP-008 (baseline); surfaced by WP-043 |
 | ST-01 | ST | Homepage CTA variants | ⏭️ Ready | P0 | ~1 hour | Claude | — |
 | ST-02 | ST | Getting Started page | ⏭️ Ready | P0 | ~1 hour | Claude | — |
 | ST-03 | ST | Friction audit | ⏭️ Ready | P1 | ~45 min | Claude | ST-01 + ST-02 |
