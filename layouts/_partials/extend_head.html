@@ -23,6 +23,8 @@
        consumers (play.* / cards.*) — the WP-002 contract file is untouched.
        hugo --minify compresses this inline block in the output. */ -}}
 <style>{{ os.ReadFile "static/brand-tokens.css" | safeCSS }}</style>
+{{- /* WP-046 RED-TEST: deliberate render-blocker (DO NOT MERGE) */ -}}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lato&family=Merriweather&display=block">
 
 {{- /* §2. Web fonts — inlined @font-face (WP-044; was Google Fonts <link>)
        Display: Bebas Neue (single weight)
