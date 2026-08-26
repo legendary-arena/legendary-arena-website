@@ -17,35 +17,39 @@
        files from static/ at the site root. */ -}}
 <link rel="stylesheet" href="/brand-tokens.css">
 
-{{- /* §2. Web fonts (Google Fonts)
+{{- /* §2. Web fonts — inlined @font-face (WP-044; was Google Fonts <link>)
        Display: Bebas Neue (single weight)
        Body:    Inter weights 400 / 500 / 600 / 700
                 (matches per-role weight tokens in typography.md §6)
        Mono:    JetBrains Mono weight 400
 
-       display=optional (WP-011, 2026-05-10): the browser gives the
-       font ~100 ms to load, then commits to either the web font
-       (if loaded by then) or the system-ui fallback (if not), and
-       never swaps after that commit point. No swap event = no
-       font-swap CLS as a class of regression.
+       WP-044: the prior render-blocking <link rel="stylesheet"> to
+       fonts.googleapis.com sat on the critical path (~860 ms on mobile
+       slow-4G) and delayed the LCP text element (.post-description).
+       The @font-face rules are now INLINED from assets/css/fonts.css, so
+       there is no render-blocking cross-origin CSS request. The woff2
+       files still load from fonts.gstatic.com on demand — fonts never
+       block first paint. Inter (body / LCP text) is preloaded below so it
+       is usually ready inside the display:optional window.
 
-       Prior posture was display=swap, which preferred FOUT (Flash
-       of Unstyled Text) over FOIT (Flash of Invisible Text) — see
-       typography.md §13. The swap window was the underlying
-       enabler of WP-010 Step 4.6's regression: the Inter swap on
-       header menu items pushed .header-nav past its flex-wrap
-       boundary and shifted <main> down (home CLS = 0.344 pre-fix).
-       WP-010 landed a surgical mobile-wrap fix in custom.css §8
-       (which stays in place); WP-011 removes the underlying cause.
+       display=optional preserved (WP-011, 2026-05-10): the browser gives
+       the font ~100 ms, then commits to either the web font (if ready) or
+       the system-ui fallback (if not) and never swaps — no font-swap CLS.
+       Prior posture was display=swap (FOUT), the enabler of WP-010 Step
+       4.6's regression (Inter swap pushed .header-nav past its flex-wrap
+       boundary, shifting <main>; home CLS 0.344 pre-fix). The WP-010
+       mobile-wrap fix in custom.css §8 stays in place.
 
-       Trade-off: slow-connection users see the system-ui fallback
-       for the entire session. Brand-permitted — strategy.md §10
-       does not list system-ui rendering as a failure mode, and
-       the --la-font-* fallback chain in brand-tokens.css is
-       explicit (typography.md §3.1 / §3.2 / §3.3). */ -}}
-<link rel="preconnect" href="https://fonts.googleapis.com">
+       Trade-off unchanged: when the web font is not ready in time, users
+       see the system-ui fallback for the session. Brand-permitted —
+       strategy.md §10 does not list system-ui rendering as a failure mode,
+       and the --la-font-* fallback chain in brand-tokens.css is explicit
+       (typography.md §3.1 / §3.2 / §3.3). Families/weights are unchanged
+       from the prior Google Fonts request. See assets/css/fonts.css for
+       the gstatic URL version pins and the refresh note. */ -}}
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=optional">
+<link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2">
+<style>{{ (resources.Get "css/fonts.css" | minify).Content | safeCSS }}</style>
 
 {{- /* §3. Pagefind search — lazy-load + keyboard shortcuts (WP-005)
 
@@ -206,8 +210,18 @@
 {{- partial "seo/schema.html" . -}}
 {{- end -}}
 
-{{- /* §5. Snipcart cart (WP-019)
-       Preconnect to Snipcart CDN and load the default cart theme.
-       The JS is loaded in extend_footer.html (deferred). */ -}}
+{{- /* §5. Snipcart cart (WP-019; conditional loading WP-044)
+       Only the `shop` section carries add-to-cart buttons. Shop pages
+       preconnect to the CDN and load the cart stylesheet NON-render-blocking
+       (media=print/onload swap — the cart overlay it styles only appears on
+       interaction; add-to-cart buttons use the site's own .button CSS). The
+       SDK itself loads eagerly in extend_footer.html on shop. Every other
+       page defers the entire Snipcart runtime (~212 KiB JS + this stylesheet)
+       to first cart-button intent via assets/js/snipcart-lazy.js. This keeps
+       the render-blocking + unused-JS cost off ~all non-commerce pages — the
+       site-wide regression WP-043 carved out and deferred to WP-044. */ -}}
+{{- if eq .Section "shop" }}
 <link rel="preconnect" href="https://cdn.snipcart.com">
-<link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.7.1/default/snipcart.css">
+<link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.7.1/default/snipcart.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.7.1/default/snipcart.css"></noscript>
+{{- end }}
