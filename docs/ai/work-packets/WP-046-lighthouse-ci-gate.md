@@ -1,5 +1,9 @@
 # WP-046 — Lighthouse-on-CI performance gate
 
+> **✅ LOCKED 2026-08-26** (gate live + green-verified on CI; red-path live
+> confirmation pending a GitHub Actions queue stall — see `## Execution
+> outcome` at the foot of this file and the `docs/01-VISION.md` lock entry).
+
 **Infra / governance WP.** Add a CI check that runs Lighthouse against the
 site on every PR and **fails the PR if Performance (or A11y / BP / SEO)
 drops below the ≥ 90 invariant** on a representative page matrix. The
@@ -268,3 +272,51 @@ on conflict is:
 2. `docs/03-ROADMAP.md` / `docs/ai/WORK_INDEX.md` (WP registry)
 3. This WP file
 4. Active session context
+
+---
+
+## Execution outcome (2026-08-26 lock)
+
+**Shipped:** `.github/workflows/lighthouse.yml`, `lighthouserc.json`,
+`scripts/lighthouse-serve.mjs` (compressed static server), `docs/06-PERFORMANCE.md`,
+and `@lhci/cli` + two npm scripts (`build:lighthouse`, `lint:perf`).
+`scripts/lighthouse-serve.mjs` is a **scope amendment** — the WP body's Step 1
+requires "serve `public/` **compressed**" but the draft scope table didn't list
+a serve script; it is small, CI-only, and directly implements that requirement.
+
+**Decisions (as drafted):** Option A (build-in-CI, compressed server, LHCI) as
+the blocking gate; Cloudflare-preview measurement deferred as a future
+informational add. `numberOfRuns: 3` + `aggregationMethod: median-run`,
+`minScore: 0.9`. Static pages gate all four categories; the API-backed pages
+(`/leaderboard/`, `/roadmap/`) gate **Performance only** (their live-API fetch is
+CORS-blocked from the CI localhost origin, dinging Best Practices). Advisory by
+default (a red run is visible but non-blocking until marked required in branch
+protection — see `docs/06-PERFORMANCE.md`).
+
+**Verification:**
+- **Green path — PROVEN on CI** ([PR #113](https://github.com/legendary-arena/legendary-arena-website/pull/113)):
+  the job installed Hugo 0.161.1 + Node 22, built with a localhost baseURL,
+  started the compressed server, ran **21 total runs** (median of 3 over 7
+  URLs), asserted, and **passed** on the WP-044 baseline (~4m44s). The
+  `assertMatrix` regexes were independently verified to partition all 7 URLs
+  into their correct buckets (5 static → all-4, 2 API → perf-only; no overlap,
+  no gap), so the green pass is **non-vacuous** — the gate genuinely evaluated
+  ≥ 90 on every page.
+- **Red path — pending an external blocker.** A throwaway
+  [PR #114](https://github.com/legendary-arena/legendary-arena-website/pull/114)
+  reintroduces the render-blocking Google Fonts `<link>` WP-044 removed, to
+  demonstrate the gate reds. Its CI run was **stuck in a GitHub Actions
+  scheduling stall** at execution time (the green run had run fine ~45 min
+  earlier; new runs stopped being scheduled) and had not executed at lock. The
+  failure behavior is deterministic — LHCI `error`-level `minScore: 0.9` exits
+  non-zero when a median category score drops below 0.9 — and the config is
+  verified non-vacuous, so the red is expected to fire once the run executes.
+  **#114 is left open to auto-confirm when the Actions queue recovers; re-run
+  it (or push any site-file change to it) to force the confirmation, then close
+  it.** This is the one DoD step not live-confirmed at lock.
+
+**Note (local Windows):** `npx lhci autorun` runs the audits locally but
+chrome-launcher throws `EPERM` during its temp cleanup *after* each run (a
+Windows-only environment bug); the Linux CI runner is unaffected and is the
+source of truth. The compressed server and config were validated locally up to
+that crash point.
