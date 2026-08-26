@@ -236,7 +236,7 @@
 {{- with .Params.heroImage }}
 {{- $heroSrc := resources.Get (strings.TrimPrefix "/" .) }}
 {{- if $heroSrc }}
-{{- $hero := $heroSrc.Resize "851x webp q80" }}
+{{- $hero := $heroSrc.Resize "851x webp q65" }}
 <link rel="preload" as="image" fetchpriority="high" href="{{ $hero.RelPermalink }}">
 {{- end }}
 {{- end }}

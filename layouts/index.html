@@ -29,7 +29,10 @@
            static path if the asset is not found under assets/. */ -}}
     {{- $heroSrc := resources.Get (strings.TrimPrefix "/" .) -}}
     {{- if $heroSrc }}
-    {{- $hero := $heroSrc.Resize "851x webp q80" -}}
+    {{- /* Resize spec MUST match the preload in extend_head.html §6 exactly
+           (Hugo caches by source+spec, so identical strings => identical URL
+           => the preload matches this src and the image is not fetched twice). */ -}}
+    {{- $hero := $heroSrc.Resize "851x webp q65" -}}
     <img class="hero-image" src="{{ $hero.RelPermalink }}" alt="{{ $.Params.heroAlt | default $.Title }}" width="{{ $hero.Width }}" height="{{ $hero.Height }}" fetchpriority="high" loading="eager">
     {{- else }}
     <img class="hero-image" src="{{ . }}" alt="{{ $.Params.heroAlt | default $.Title }}" width="851" height="315" fetchpriority="high" loading="eager">
