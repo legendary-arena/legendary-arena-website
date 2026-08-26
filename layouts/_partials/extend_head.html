@@ -218,20 +218,13 @@
 {{- end -}}
 
 {{- /* §5. Snipcart cart (WP-019; conditional loading WP-044)
-       Only the `shop` section carries add-to-cart buttons. Shop pages
-       preconnect to the CDN and load the cart stylesheet NON-render-blocking
-       (media=print/onload swap — the cart overlay it styles only appears on
-       interaction; add-to-cart buttons use the site's own .button CSS). The
-       SDK itself loads eagerly in extend_footer.html on shop. Every other
-       page defers the entire Snipcart runtime (~212 KiB JS + this stylesheet)
-       to first cart-button intent via assets/js/snipcart-lazy.js. This keeps
-       the render-blocking + unused-JS cost off ~all non-commerce pages — the
-       site-wide regression WP-043 carved out and deferred to WP-044. */ -}}
-{{- if eq .Section "shop" }}
-<link rel="preconnect" href="https://cdn.snipcart.com">
-<link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.7.1/default/snipcart.css" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.7.1/default/snipcart.css"></noscript>
-{{- end }}
+       Snipcart's stylesheet + SDK are loaded entirely by assets/js/snipcart-lazy.js
+       (the loader injects both, non-render-blocking, and decides eager-on-commerce
+       vs lazy-on-intent from the DOM — see extend_footer.html). Nothing is emitted
+       into <head> here: keeping the whole runtime out of the head is what removed
+       the site-wide render-blocking + unused-JS cost WP-043 carved out. A shop-only
+       preconnect used to live here, but the eager load happens right after parse on
+       commerce pages, so the marginal head-start isn't worth a .Section branch. */ -}}
 
 {{- /* §6. Home hero LCP preload (WP-044)
        The home hero is the LCP element. Preloading it here (head) starts the
