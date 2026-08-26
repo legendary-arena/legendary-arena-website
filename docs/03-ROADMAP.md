@@ -144,13 +144,20 @@ funnel integrity check) without retrofit.
 | WP-026 | Site favicon | ✅ Done (2026-06-12) | — | ~15 min |
 | WP-027 | Header conversion links (Play + Cards in `menu.main`) | ✅ Done (2026-06-18) | WP-010 | ~15 min |
 | WP-028 | Newsletter honeypot spam trap | ✅ Done (2026-06-18) | WP-015 | ~30 min |
+| WP-043 | Public roadmap board (`/roadmap/`) — read-only Planned / In-progress / Shipped columns + vote counts, from the guest engine feedback API | ✅ Done (2026-08-25) | WP-149 (leaderboard precedent); engine WP-604 | ~1 day |
+| WP-044 | Site-wide Lighthouse Performance recovery — inlined `@font-face` + `brand-tokens.css`, lazy Snipcart off non-commerce pages, hero WebP; ≥ 90 restored site-wide | ✅ Done (2026-08-25) | WP-008 baseline; surfaced by WP-043 | ~1 day |
+| WP-045 | Interactive voting on the roadmap board — optimistic upvote/un-vote for signed-in visitors via the engine vote API (`hanko` Bearer auth) | ✅ Done (2026-08-26) | WP-043; engine WP-604 | ~half-day |
+| WP-046 | Lighthouse-on-CI performance gate — median-of-3 ≥ 90 check on every site-affecting PR (advisory); guards the WP-044 recovery | ✅ Done (2026-08-26) | WP-044 | ~half-day |
 
 **Total realistic effort:** ~9–14 days of focused work.
 
-> **Catalog note (2026-06-18):** this summary table is now caught up through
-> WP-028 — WP-022, WP-025, and WP-026 (previously tracked only in
-> `docs/ai/WORK_INDEX.md`) have been backfilled above. `docs/ai/WORK_INDEX.md`
-> remains the live registry for phase grouping and status detail.
+> **Catalog note (updated 2026-08-26):** this summary table is caught up
+> through WP-028 (backfilled 2026-06-18) plus the recent Phase-P2 arc
+> **WP-043 → WP-046** (roadmap board → performance recovery → interactive
+> voting → CI perf gate). The intervening **WP-029 – WP-042** are tracked in
+> `docs/ai/WORK_INDEX.md`, which remains the live registry for phase grouping
+> and per-WP status detail; the `docs/01-VISION.md` Decisions log holds the
+> full lock record for each.
 
 ---
 
