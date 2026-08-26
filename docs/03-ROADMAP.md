@@ -144,6 +144,18 @@ funnel integrity check) without retrofit.
 | WP-026 | Site favicon | ✅ Done (2026-06-12) | — | ~15 min |
 | WP-027 | Header conversion links (Play + Cards in `menu.main`) | ✅ Done (2026-06-18) | WP-010 | ~15 min |
 | WP-028 | Newsletter honeypot spam trap | ✅ Done (2026-06-18) | WP-015 | ~30 min |
+| WP-031 | Header auth links — surface Sign in + My account in the nav | ✅ Done (2026-06-30) | WP-010 | ~30 min |
+| WP-032 | Header auth link dedupe — collapse to a single "Account" | ✅ Done (2026-07-07) | WP-031 | ~15 min |
+| WP-033 | Auth-aware header — greet the signed-in player by name | ✅ Done (2026-07-09) | WP-032; engine Hanko session | ~half-day |
+| WP-034 | Header nav simplify — Cards domain, drop Brand from header | ✅ Done (2026-07-16) | WP-010 | ~30 min |
+| WP-035 | Docs sweep: registry domain `cards.barefootbetters.com` → `cards.legendary-arena.com` | ✅ Done (2026-07-16) | — | ~30 min |
+| WP-036 | Support card pools (bystanders / officers / wounds / sidekicks) — proposal | 📝 Proposal — Phase A shipped; **Phase B blocked** on engine decision D-1244 (implementation in the engine repo) | engine monorepo | ~1 day |
+| WP-037 | Leaderboard CTA for gauntlet posts (deep-link a post's board) | ✅ Done (2026-07-18) | WP-149 | ~30 min |
+| WP-038 | Gauntlet Guide archetype — post template + commit-time enforcement | ✅ Done (2026-07-18) | — | ~half-day |
+| WP-039 | Universal Rulebook page (`/rules`) + registry-viewer cross-reference | 🔄 In progress — site page ✅ Done (live); engine-repo cross-ref ⏸️ pending | — | ~1 day |
+| WP-040 | Rename blog section URL `/posts/` → `/blog/` | 🔄 Repo change ✅ Done (live); CF zone Redirect Rule ⏸️ pending (manual) | — | ~half-day |
+| WP-041 | Art gallery section (`/art/`) + per-artist portfolios (seed art; real artist art a follow-on) | ✅ Done (2026-08-10) | WP-010 | ~1 day |
+| WP-042 | Cloudflare Pages preview deploys resolve their own assets (baseURL fix) | ✅ Done (2026-08-09) | WP-006 | ~half-day |
 | WP-043 | Public roadmap board (`/roadmap/`) — read-only Planned / In-progress / Shipped columns + vote counts, from the guest engine feedback API | ✅ Done (2026-08-25) | WP-149 (leaderboard precedent); engine WP-604 | ~1 day |
 | WP-044 | Site-wide Lighthouse Performance recovery — inlined `@font-face` + `brand-tokens.css`, lazy Snipcart off non-commerce pages, hero WebP; ≥ 90 restored site-wide | ✅ Done (2026-08-25) | WP-008 baseline; surfaced by WP-043 | ~1 day |
 | WP-045 | Interactive voting on the roadmap board — optimistic upvote/un-vote for signed-in visitors via the engine vote API (`hanko` Bearer auth) | ✅ Done (2026-08-26) | WP-043; engine WP-604 | ~half-day |
@@ -151,13 +163,16 @@ funnel integrity check) without retrofit.
 
 **Total realistic effort:** ~9–14 days of focused work.
 
-> **Catalog note (updated 2026-08-26):** this summary table is caught up
-> through WP-028 (backfilled 2026-06-18) plus the recent Phase-P2 arc
-> **WP-043 → WP-046** (roadmap board → performance recovery → interactive
-> voting → CI perf gate). The intervening **WP-029 – WP-042** are tracked in
-> `docs/ai/WORK_INDEX.md`, which remains the live registry for phase grouping
-> and per-WP status detail; the `docs/01-VISION.md` Decisions log holds the
-> full lock record for each.
+> **Catalog note (updated 2026-08-26):** this summary table now covers the
+> full WP sequence through **WP-046** — WP-031 – WP-042 were backfilled from
+> the WP files + git history on 2026-08-26. **WP-029 and WP-030 were never
+> realized** (candidate numbers with no WP file and nothing shipped; the odd
+> stray reference elsewhere is vestigial). `docs/ai/WORK_INDEX.md` remains the
+> live registry for phase grouping and richer per-WP status; the
+> `docs/01-VISION.md` Decisions log holds the full lock record for each.
+> Detailed `## WP-NNN` sections below exist only through the early WPs; recent
+> WPs are tracked via this table + WORK_INDEX + the VISION log rather than
+> full section bodies.
 
 ---
 
