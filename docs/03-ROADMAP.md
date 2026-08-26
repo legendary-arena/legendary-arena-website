@@ -153,7 +153,7 @@ funnel integrity check) without retrofit.
 | WP-037 | Leaderboard CTA for gauntlet posts (deep-link a post's board) | ✅ Done (2026-07-18) | WP-149 | ~30 min |
 | WP-038 | Gauntlet Guide archetype — post template + commit-time enforcement | ✅ Done (2026-07-18) | — | ~half-day |
 | WP-039 | Universal Rulebook page (`/rules`) + registry-viewer cross-reference | ✅ Done (marketing) — `/rules` live + anchor contract published; registry-viewer glossary cross-link is an optional engine-repo follow-on (not a blocker) | — | ~1 day |
-| WP-040 | Rename blog section URL `/posts/` → `/blog/` | 🔄 Repo change ✅ Done (live); CF zone Redirect Rule ⏸️ pending (manual) | — | ~half-day |
+| WP-040 | Rename blog section URL `/posts/` → `/blog/` | ✅ Done — renamed and live; CF zone Redirect Rule consciously skipped (no inbound `/posts/` links, per Jeff 2026-08-26) | — | ~half-day |
 | WP-041 | Art gallery section (`/art/`) + per-artist portfolios (seed art; real artist art a follow-on) | ✅ Done (2026-08-10) | WP-010 | ~1 day |
 | WP-042 | Cloudflare Pages preview deploys resolve their own assets (baseURL fix) | ✅ Done (2026-08-09) | WP-006 | ~half-day |
 | WP-043 | Public roadmap board (`/roadmap/`) — read-only Planned / In-progress / Shipped columns + vote counts, from the guest engine feedback API | ✅ Done (2026-08-25) | WP-149 (leaderboard precedent); engine WP-604 | ~1 day |
