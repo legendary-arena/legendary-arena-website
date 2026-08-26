@@ -2330,6 +2330,63 @@ ul#menu li a span.active {
   border-radius: var(--la-radius-pill);
 }
 
+/* §14.3b Interactive vote control (WP-045)
+   Signed-in: a one-click upvote/un-vote button (▲ N votes). Signed-out: the
+   read-only count badge (above) plus a "Sign in to vote" link. Tokens only. */
+.roadmap-vote {
+  align-self: flex-start;
+  margin-top: var(--la-space-1);
+  padding: var(--la-space-1) var(--la-space-3);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--la-space-1);
+  background-color: var(--la-color-bg-tertiary);
+  color: var(--la-color-text-secondary);
+  font-family: inherit;
+  font-size: var(--la-font-size-small);
+  font-weight: var(--la-font-weight-medium);
+  line-height: 1;
+  border: 1px solid var(--la-color-border-subtle);
+  border-radius: var(--la-radius-pill);
+  cursor: pointer;
+  transition: background-color var(--la-transition-fast),
+    color var(--la-transition-fast), border-color var(--la-transition-fast);
+}
+
+.roadmap-vote:hover {
+  border-color: var(--la-color-gold);
+  color: var(--la-color-text-primary);
+}
+
+.roadmap-vote:focus-visible {
+  outline: 2px solid var(--la-color-gold);
+  outline-offset: 2px;
+}
+
+/* Voted state — a gold border + stronger, bolder text signals "your vote is
+   counted". why: no gold *fill* — there is no mode-stable dark-ink token, so
+   text on a gold fill fails WCAG AA in dark mode (the bright-gold + light-text
+   trap WP-043 hit). text-primary on the resting bg-tertiary is ~14:1 in both
+   themes, so this stays comfortably AA while reading clearly as active. */
+.roadmap-vote[aria-pressed="true"] {
+  border-color: var(--la-color-gold);
+  color: var(--la-color-text-primary);
+  font-weight: var(--la-font-weight-bold);
+}
+
+/* In-flight — locked while the vote request is pending. */
+.roadmap-vote:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+.roadmap-vote-signin {
+  align-self: flex-start;
+  margin-top: var(--la-space-1);
+  font-size: var(--la-font-size-small);
+  font-weight: var(--la-font-weight-medium);
+}
+
 /* §14.4 Quiet empty-state line (empty column) */
 .roadmap-empty {
   /* why: text-secondary (not text-muted) — muted (#767e94) on the page
