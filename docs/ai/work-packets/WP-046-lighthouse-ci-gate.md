@@ -1,8 +1,8 @@
 # WP-046 — Lighthouse-on-CI performance gate
 
-> **✅ LOCKED 2026-08-26** (gate live + green-verified on CI; red-path live
-> confirmation pending a GitHub Actions queue stall — see `## Execution
-> outcome` at the foot of this file and the `docs/01-VISION.md` lock entry).
+> **✅ LOCKED 2026-08-26** (gate live; **both green and red paths proven on
+> CI** — see `## Execution outcome` at the foot of this file and the
+> `docs/01-VISION.md` lock entry).
 
 **Infra / governance WP.** Add a CI check that runs Lighthouse against the
 site on every PR and **fails the PR if Performance (or A11y / BP / SEO)
@@ -302,18 +302,25 @@ protection — see `docs/06-PERFORMANCE.md`).
   into their correct buckets (5 static → all-4, 2 API → perf-only; no overlap,
   no gap), so the green pass is **non-vacuous** — the gate genuinely evaluated
   ≥ 90 on every page.
-- **Red path — pending an external blocker.** A throwaway
-  [PR #114](https://github.com/legendary-arena/legendary-arena-website/pull/114)
-  reintroduces the render-blocking Google Fonts `<link>` WP-044 removed, to
-  demonstrate the gate reds. Its CI run was **stuck in a GitHub Actions
-  scheduling stall** at execution time (the green run had run fine ~45 min
-  earlier; new runs stopped being scheduled) and had not executed at lock. The
-  failure behavior is deterministic — LHCI `error`-level `minScore: 0.9` exits
-  non-zero when a median category score drops below 0.9 — and the config is
-  verified non-vacuous, so the red is expected to fire once the run executes.
-  **#114 is left open to auto-confirm when the Actions queue recovers; re-run
-  it (or push any site-file change to it) to force the confirmation, then close
-  it.** This is the one DoD step not live-confirmed at lock.
+- **Red path — PROVEN on CI** (throwaway
+  [PR #114](https://github.com/legendary-arena/legendary-arena-website/pull/114),
+  closed unmerged). After an initial ~45-min GitHub Actions scheduling stall,
+  the queue recovered. A first regression — re-adding the render-blocking
+  Google Fonts `<link>` WP-044 removed — **passed** the gate: on the recovered
+  baseline (fast runner + compressed server = 95–99 headroom) that single
+  render-blocker only dropped scores to **90–97** (shop hit exactly 90), so the
+  pages genuinely stayed ≥ 90 and the gate correctly allowed them. Strengthening
+  it to a **severe** regression (a synchronous ~4 s main-thread block) then
+  **failed** the gate as designed: `✘ categories.performance failure for
+  minScore assertion, expected: >=0.9` on **all 7 pages**, "Assertion failed.
+  Exiting with status code 1" (run `32990694520`). Both DoD paths are confirmed.
+- **Finding (recorded in the VISION lock):** the Option-A CI measurement scores
+  several points **higher** than production/PSI (fast runner, compressed local
+  server, ~0 server latency), so a page near 90 in CI can be < 90 in production.
+  The gate enforces the floor as a lower bound on the CI number, not a
+  production guarantee — the deferred Option-B (Cloudflare-preview) run is the
+  follow-on that closes that gap. A single mild render-blocker won't red the
+  gate on the current headroom; a real ≥90-breaching regression will.
 
 **Note (local Windows):** `npx lhci autorun` runs the audits locally but
 chrome-launcher throws `EPERM` during its temp cleanup *after* each run (a
