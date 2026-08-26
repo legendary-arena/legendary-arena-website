@@ -2332,7 +2332,11 @@ ul#menu li a span.active {
 
 /* §14.4 Quiet empty-state line (empty column) */
 .roadmap-empty {
-  color: var(--la-color-text-muted);
+  /* why: text-secondary (not text-muted) — muted (#767e94) on the page
+     background is only 3.95:1, below WCAG AA (4.5:1); secondary clears it at
+     7.67:1 light / 8.81:1 dark. Italic keeps the line visually quiet without
+     sacrificing contrast. */
+  color: var(--la-color-text-secondary);
   font-size: var(--la-font-size-small);
   font-style: italic;
   margin: 0;

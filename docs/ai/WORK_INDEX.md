@@ -117,7 +117,7 @@
 |---|---|---|---|---|
 | WP-039 | Universal Rulebook page (`/rules`) + registry-viewer cross-reference | 🔄 In progress (site page ✅ Done; engine-repo cross-ref ⏸️ pending) | ~1 day | [WP-039](work-packets/WP-039-universal-rulebook-page.md) |
 | WP-040 | Rename blog section URL `/posts/` → `/blog/` | 🔄 Repo change ✅ Done; CF zone Redirect Rule ⏸️ pending (manual) | ~half-day | [WP-040](work-packets/WP-040-blog-url-rename.md) |
-| WP-043 | Public roadmap board (`/roadmap/`) — read-only Planned/In-progress/Shipped columns + vote counts, from the engine feedback API (`GET /api/feedback`, guest); the marketing surface of the engine feedback/roadmap system (engine D-24414) | 📝 Drafted — ready to build | ~1 day | [WP-043](work-packets/WP-043-public-roadmap-board.md) |
+| WP-043 | Public roadmap board (`/roadmap/`) — read-only Planned/In-progress/Shipped columns + vote counts, from the engine feedback API (`GET /api/feedback`, guest); the marketing surface of the engine feedback/roadmap system (engine D-24414) | ✅ Done (2026-08-25) — live at `/roadmap/`; A11y/BP/SEO ≥ 90, Perf carved out (pre-existing site-wide, see VISION lock) | ~1 day | [WP-043](work-packets/WP-043-public-roadmap-board.md) |
 
 ### Subagent Tasks (ready to run)
 
