@@ -1,0 +1,50 @@
+{
+  "//": "Lighthouse CI performance gate (WP-046). Protects the ≥90 P/A/BP/SEO invariant recovered by WP-044. Run: npx lhci autorun. The workflow builds the site with a localhost baseURL, then LHCI starts the compressed static server and measures the matrix.",
+  "ci": {
+    "collect": {
+      "startServerCommand": "node scripts/lighthouse-serve.mjs public 4173",
+      "startServerReadyPattern": "lighthouse-serve listening",
+      "startServerReadyTimeout": 20000,
+      "url": [
+        "http://127.0.0.1:4173/",
+        "http://127.0.0.1:4173/blog/2026-05-07-launch-announcement/",
+        "http://127.0.0.1:4173/shop/",
+        "http://127.0.0.1:4173/shop/arena-playmat/",
+        "http://127.0.0.1:4173/diorama/",
+        "http://127.0.0.1:4173/leaderboard/",
+        "http://127.0.0.1:4173/roadmap/"
+      ],
+      "numberOfRuns": 3,
+      "settings": {
+        "//": "Lighthouse defaults are the mobile preset (Moto-G-class emulation + slow-4G throttle) — matches WP-044's measurement.",
+        "onlyCategories": ["performance", "accessibility", "best-practices", "seo"]
+      }
+    },
+    "assert": {
+      "//": "median-run over 3 runs is the anti-flakiness mechanism (WP-044 documented +/-10pt runner variance). API-backed pages (/leaderboard/, /roadmap/) fetch the live feedback API, which is CORS-blocked from a localhost origin in CI -> a console error that dings Best Practices only; their Perf/A11y/SEO are unaffected, so they are gated on Performance alone. Every other page gates all four categories at >=90.",
+      "assertMatrix": [
+        {
+          "matchingUrlPattern": ".*/(leaderboard|roadmap)/$",
+          "aggregationMethod": "median-run",
+          "assertions": {
+            "categories:performance": ["error", { "minScore": 0.9 }]
+          }
+        },
+        {
+          "matchingUrlPattern": "^(?!.*/(leaderboard|roadmap)/).*$",
+          "aggregationMethod": "median-run",
+          "assertions": {
+            "categories:performance": ["error", { "minScore": 0.9 }],
+            "categories:accessibility": ["error", { "minScore": 0.9 }],
+            "categories:best-practices": ["error", { "minScore": 0.9 }],
+            "categories:seo": ["error", { "minScore": 0.9 }]
+          }
+        }
+      ]
+    },
+    "upload": {
+      "//": "Reports go to LHCI temporary public storage (shareable URLs printed in the CI log); nothing is committed (WP-005: lighthouse JSON is local-only).",
+      "target": "temporary-public-storage"
+    }
+  }
+}
