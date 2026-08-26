@@ -9,28 +9,21 @@
 {{ $headerAuth := resources.Get "js/header-auth.js" | minify | fingerprint }}
 <script src="{{ $headerAuth.RelPermalink }}" defer></script>
 
-{{- /* Snipcart cart container + SDK (WP-019; conditional loading WP-044).
-       The hidden div is Snipcart's mount point — it injects the cart UI
-       here and auto-initializes when the SDK runs. data-api-key is the
-       PUBLIC key (not a secret). The mount stays site-wide (near-zero
-       cost) so the lazy loader has a target on every page.
-       Snipcart docs: https://docs.snipcart.com/v3/setup/installation
+{{- /* Snipcart cart container + loader (WP-019; conditional loading WP-044).
+       The hidden div is Snipcart's mount point — the SDK injects the cart UI
+       here and auto-initializes when it runs. data-api-key is the PUBLIC key
+       (not a secret). Snipcart docs: https://docs.snipcart.com/v3/setup/installation
 
-       Loading split (WP-044): only the `shop` section loads the SDK
-       eagerly (its add-to-cart buttons must work at first paint). Every
-       other page defers the SDK to first cart-button intent via
-       assets/js/snipcart-lazy.js, keeping ~212 KiB of JS off the critical
-       path. See extend_head.html §5 for the matching stylesheet split. */ -}}
+       IMPORTANT (cache-safety): this footer partial is rendered with
+       `partialCached` keyed on .Kind/.Layout, NOT .Section (see theme
+       baseof.html), so its markup is shared across pages of the same kind. The
+       eager-vs-lazy Snipcart decision therefore MUST NOT depend on .Section
+       here — it is made at runtime from the DOM inside snipcart-lazy.js
+       (presence of `.snipcart-add-item` => commerce => eager load; otherwise
+       load only on cart-button intent). So this block is identical on every
+       page: mount + the one deferred loader. Do not reintroduce a .Section
+       branch here — it silently breaks commerce (the shop pages get whichever
+       page rendered first into the cache). */ -}}
 <div hidden id="snipcart" data-api-key="{{ site.Params.snipcartApiKey }}"></div>
-{{- if eq .Section "shop" }}
-{{- /* Commerce (`shop`) loads the SDK eagerly so add-to-cart is armed at first
-       paint — commerce reliability over ~2 Lighthouse points on the SDK parse.
-       The cart stylesheet is loaded non-render-blocking in extend_head.html. */ -}}
-<script async src="https://cdn.snipcart.com/themes/v3.7.1/default/snipcart.js"></script>
-{{- else }}
-{{- /* Everywhere else the SDK (~212 KiB) is deferred entirely off the render
-       path and loaded only on cart-button intent — see assets/js/snipcart-lazy.js.
-       Most sessions never touch the cart, so most pages never pay for it. */ -}}
 {{ $snipcartLazy := resources.Get "js/snipcart-lazy.js" | minify | fingerprint }}
 <script src="{{ $snipcartLazy.RelPermalink }}" defer></script>
-{{- end }}

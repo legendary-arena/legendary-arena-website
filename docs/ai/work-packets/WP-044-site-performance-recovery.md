@@ -454,3 +454,24 @@ is the authoritative re-confirmation and is recommended for the record.
 commerce/media WP silently re-introducing a render-blocker (named in the
 Follow-on section above; the recovery is structural, so the residual risk
 is regression, not the current state).
+
+### Post-lock commerce fix (`partialCached` gotcha)
+
+Final production sanity-check caught that **Snipcart's SDK was not loading
+on `/shop/`** — add-to-cart was dead. Root cause: the theme renders the
+footer via `partialCached "footer.html" . .Layout .Kind …` (see
+`themes/PaperMod/baseof.html`), whose cache key is `.Kind`/`.Layout` but
+**not `.Section`**. The initial implementation's `{{ if eq .Section "shop" }}`
+eager-vs-lazy branch in `extend_footer.html` was therefore frozen to
+whichever page rendered first (a non-shop page → the lazy loader) and
+served to shop too. (The head §5 CSS was fine — `extend_head` uses plain
+`partial`, not cached.)
+
+**Fix:** the eager-vs-lazy decision is made at **runtime from the DOM**,
+never from `.Section`: `extend_footer.html` emits the same markup on every
+page (mount + one deferred `snipcart-lazy.js`), and the loader loads the
+SDK eagerly when it sees `.snipcart-add-item` on the page (commerce),
+otherwise on cart-button intent. Verified in-browser: `/shop/<product>/`
+boots `window.Snipcart` and injects the SDK+CSS; home does not until cart
+intent; no console errors. **Lesson: never branch a `partialCached` partial
+on a key that isn't in its cache signature.**
