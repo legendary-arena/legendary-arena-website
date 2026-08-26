@@ -4,9 +4,12 @@
   "description": "Marketing site source for www.legendary-arena.com (Hugo + Pagefind).",
   "scripts": {
     "build": "node scripts/build.mjs",
-    "test": "vitest run"
+    "test": "vitest run",
+    "build:lighthouse": "hugo --minify --baseURL \"http://127.0.0.1:4173\" && pagefind --site public",
+    "lint:perf": "lhci autorun --config=lighthouserc.json"
   },
   "devDependencies": {
+    "@lhci/cli": "^0.15.1",
     "pagefind": "1.5.2",
     "vitest": "3.2.1"
   }

@@ -1,0 +1,76 @@
+name: Lighthouse
+
+# Performance gate (WP-046). Runs Lighthouse on every site-affecting PR and
+# fails if the >=90 P/A/BP/SEO invariant regresses on the page matrix. This
+# makes the floor (docs/01-VISION.md) an automated check instead of a manual
+# discipline — the marketing site silently drifted to 76-79 with green CI once
+# (WP-043 discovery), recovered by WP-044; this keeps it recovered.
+#
+# Anti-flakiness: median of 3 runs (lighthouserc.json). API-backed pages
+# (/leaderboard/, /roadmap/) are gated on Performance only (their live-API
+# fetch is CORS-blocked from a localhost origin in CI, dinging Best Practices).
+#
+# Advisory by default: a red run shows on the PR but does not block merge until
+# this check is marked "required" in branch protection. See docs/06-PERFORMANCE.md.
+
+on:
+  pull_request:
+    branches: [main]
+    # Only run when something that can affect the rendered site changed.
+    paths:
+      - "content/**"
+      - "layouts/**"
+      - "assets/**"
+      - "static/**"
+      - "archetypes/**"
+      - "data/**"
+      - "i18n/**"
+      - "themes/**"
+      - "hugo.toml"
+      - "package.json"
+      - "package-lock.json"
+      - "scripts/**"
+      - "lighthouserc.json"
+      - ".github/workflows/lighthouse.yml"
+
+# Cancel an in-progress run when the PR is updated (saves CI minutes).
+concurrency:
+  group: lighthouse-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lighthouse:
+    name: Lighthouse performance gate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive # themes/PaperMod is a submodule
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22 # matches CF Pages NODE_VERSION (WP-006)
+          cache: npm
+
+      - name: Install Hugo Extended
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: "0.161.1" # matches CF Pages HUGO_VERSION (WP-006)
+          extended: true
+
+      - run: npm ci
+
+      - name: Build (localhost baseURL so assets resolve for Lighthouse)
+        # Not `npm run build` — that bakes the production absolute baseURL, which
+        # would make the browser fetch assets from www instead of the local
+        # server. Same minified output otherwise; the render-critical structure
+        # (fonts, CSS, render-blocking) is identical to production.
+        run: |
+          hugo --minify --baseURL "http://127.0.0.1:4173"
+          npx pagefind --site public
+
+      - name: Run Lighthouse CI (median of 3; >=90 gate)
+        # lhci starts the compressed static server, collects the matrix, asserts
+        # the median, and uploads reports to temporary public storage (URLs in
+        # the log). A failed assertion exits non-zero and reds this check.
+        run: npx lhci autorun --config=lighthouserc.json
