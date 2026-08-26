@@ -1,0 +1,76 @@
+/*
+ * Web-font @font-face rules — inlined into <head> §2 (WP-044).
+ *
+ * Previously the site loaded a render-blocking <link rel="stylesheet"> to
+ * fonts.googleapis.com, which sat on the critical path (~860 ms on mobile
+ * slow-4G) and delayed the LCP text element (.post-description). These rules
+ * are the latin-subset @font-face output of that same Google Fonts request,
+ * inlined so there is NO render-blocking cross-origin CSS request. The woff2
+ * files still come from fonts.gstatic.com and are fetched on demand — fonts
+ * never block first paint; font-display governs which face renders.
+ *
+ * font-display: optional is preserved (WP-011): the browser commits to the web
+ * font if it is ready within ~100 ms, else the system-ui fallback for the whole
+ * session — no swap, so no font-swap CLS. Inter (body / LCP text) is preloaded
+ * in extend_head.html §2 so it is usually ready inside that window.
+ *
+ * Families / weights are unchanged from the prior Google Fonts request
+ * (Bebas Neue; Inter 400/500/600/700; JetBrains Mono 400 — typography.md §3/§6).
+ * latin subset only (English content); rare latin-ext glyphs degrade to the
+ * --la-font-* fallback chain in brand-tokens.css, which is brand-permitted
+ * (strategy.md §10 / typography.md §3). The gstatic URLs are version-pinned
+ * (Bebas v16, Inter v20, JetBrains Mono v24); if Google revises a face and a
+ * URL 404s, display:optional falls back gracefully — refresh these rules from
+ * the Google Fonts CSS in a future WP if that happens.
+ *
+ * Inter's four weights share one variable-font woff2 (downloaded once).
+ */
+
+@font-face {
+  font-family: 'Bebas Neue';
+  font-style: normal;
+  font-weight: 400;
+  font-display: optional;
+  src: url(https://fonts.gstatic.com/s/bebasneue/v16/JTUSjIg69CK48gW7PXoo9Wlhyw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: optional;
+  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: optional;
+  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: optional;
+  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: optional;
+  src: url(https://fonts.gstatic.com/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: optional;
+  src: url(https://fonts.gstatic.com/s/jetbrainsmono/v24/tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxTOlOV.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}

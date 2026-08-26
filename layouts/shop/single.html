@@ -3,7 +3,7 @@
     <div class="product-detail-layout">
         {{- with .Params.image }}
         <div class="product-detail-image">
-            <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy">
+            <img src="{{ . }}" alt="{{ $.Title }}" width="400" height="300" fetchpriority="high">
         </div>
         {{- end }}
         <div class="product-detail-info">
