@@ -23,8 +23,13 @@
        consumers (play.* / cards.*) — the WP-002 contract file is untouched.
        hugo --minify compresses this inline block in the output. */ -}}
 <style>{{ os.ReadFile "static/brand-tokens.css" | safeCSS }}</style>
-{{- /* WP-046 RED-TEST: deliberate render-blocker (DO NOT MERGE) */ -}}
+{{- /* WP-046 RED-TEST: deliberate SEVERE regression (DO NOT MERGE) — a
+       render-blocking synchronous script that blocks the main thread ~4s,
+       tanking TBT/LCP so Performance drops well below 90 on every page.
+       Proves the gate reds on a real breach (the earlier mild font-link
+       regression only dropped to 90-97 and correctly passed). */ -}}
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lato&family=Merriweather&display=block">
+<script>/*RED-TEST*/var __t=Date.now();while(Date.now()-__t<4000){}</script>
 
 {{- /* §2. Web fonts — inlined @font-face (WP-044; was Google Fonts <link>)
        Display: Bebas Neue (single weight)
