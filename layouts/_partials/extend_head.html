@@ -225,3 +225,19 @@
 <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.7.1/default/snipcart.css" media="print" onload="this.media='all'">
 <noscript><link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.7.1/default/snipcart.css"></noscript>
 {{- end }}
+
+{{- /* §6. Home hero LCP preload (WP-044)
+       The home hero is the LCP element. Preloading it here (head) starts the
+       fetch before the <body> <img> is parsed, shaving LCP. The Resize spec
+       MUST stay byte-identical to layouts/index.html so Hugo returns the same
+       processed resource (it caches by source+spec) and the preload matches
+       the rendered <img> src exactly — otherwise the image downloads twice. */ -}}
+{{- if .IsHome }}
+{{- with .Params.heroImage }}
+{{- $heroSrc := resources.Get (strings.TrimPrefix "/" .) }}
+{{- if $heroSrc }}
+{{- $hero := $heroSrc.Resize "851x webp q80" }}
+<link rel="preload" as="image" fetchpriority="high" href="{{ $hero.RelPermalink }}">
+{{- end }}
+{{- end }}
+{{- end }}
