@@ -12,10 +12,17 @@
 */ -}}
 
 {{- /* §1. Brand tokens
-       MUST load before assets/css/extended/custom.css for the
-       var(--la-*) references in custom.css to resolve. Hugo serves
-       files from static/ at the site root. */ -}}
-<link rel="stylesheet" href="/brand-tokens.css">
+       Defines the var(--la-*) tokens custom.css (in the theme's bundled
+       stylesheet) resolves. INLINED (WP-044) from the same static file at
+       build time — this was the last render-blocking cross-origin-shaped
+       request on every page (~470 ms on mobile slow-4G, the sole remaining
+       render-blocker holding home + post below 90 once fonts/Snipcart were
+       off the path). Inlining removes that round-trip with no drift (read
+       straight from static/brand-tokens.css). The canonical file is still
+       emitted at /brand-tokens.css (Hugo copies static/) for cross-origin
+       consumers (play.* / cards.*) — the WP-002 contract file is untouched.
+       hugo --minify compresses this inline block in the output. */ -}}
+<style>{{ os.ReadFile "static/brand-tokens.css" | safeCSS }}</style>
 
 {{- /* §2. Web fonts — inlined @font-face (WP-044; was Google Fonts <link>)
        Display: Bebas Neue (single weight)
