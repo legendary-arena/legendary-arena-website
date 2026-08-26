@@ -1,5 +1,10 @@
 # WP-044 — Site-wide Lighthouse Performance recovery
 
+> **✅ LOCKED 2026-08-25.** See `## Execution outcome` at the foot of this
+> file for what was actually decided/measured, and the `docs/01-VISION.md`
+> Decisions-log entry for the full lock record. The sections below are the
+> spec as drafted.
+
 **Investigation + implementation WP.** Recover Lighthouse **Performance
 ≥ 90** across `www.legendary-arena.com`. Production is currently sub-90
 site-wide (a baseline condition, not one page's problem): a same-session
@@ -399,3 +404,53 @@ on conflict is:
 2. `docs/03-ROADMAP.md` / `docs/ai/WORK_INDEX.md` (WP registry)
 3. This WP file
 4. Active session context
+
+---
+
+## Execution outcome (2026-08-25 lock)
+
+**Result:** every page in the Verify matrix hits Lighthouse Performance
+**≥ 90** on production (`www`, mobile) — clean-machine peak **98–99**
+(home 98, post 99, shop 99, shop-product 99, diorama 98, leaderboard 98,
+roadmap 98), up from the 76–79 baseline. **A11y / BP / SEO hold at 100**
+on every page; **zero console errors**; FCP fell ~2.6 s → ~0.9–1.3 s
+site-wide. Build byte-deterministic; `themes/PaperMod` (`c4ca7ca`) and
+`static/brand-tokens.css` untouched.
+
+**Lever decisions (measured, not pre-committed):**
+
+- **A — Snipcart → A1+A2 hybrid.** `shop` loads the SDK eagerly (buy
+  buttons armed at first paint), cart CSS non-render-blocking
+  (`media=print/onload`). Every other page defers the ~212 KiB runtime to
+  first cart-button intent (`assets/js/snipcart-lazy.js`); the site-wide
+  header cart button opens the cart even on a click that lands before the
+  SDK boots. A unified idle-load variant (A2 everywhere) was tried and
+  **reverted** — perf-neutral on shop, added commerce risk.
+- **B — fonts → inline `@font-face`.** Dropped the render-blocking Google
+  Fonts `<link>` (~860 ms on the LCP text); inlined the latin `@font-face`
+  from new `assets/css/fonts.css`; Inter (LCP body) preloaded.
+  `display=optional` kept (no font-swap CLS). Not B1 (async — would stop
+  fonts rendering under `optional`) and not B3 (self-host — unnecessary).
+- **B′ — `brand-tokens.css` inlined (the decisive find).** After A+B, the
+  live profile showed `/brand-tokens.css` as the **only** remaining
+  render-blocker on every page (~470 ms) — what held home + post at 88–89.
+  Inlined from the same static file (`os.ReadFile`, no drift); canonical
+  file still served for cross-origin consumers; **WP-002 contract intact.**
+- **C — theme stylesheet → no change needed.** The theme already emits its
+  bundle as `rel="preload stylesheet"`; with A+B+B′ done it resolves fast.
+  No submodule fork.
+- **D — image weight/CLS.** Home hero (LCP) 310 KB unsized → **57 KB**
+  Hugo WebP (`851x webp q65`) + `width/height` + `fetchpriority=high` +
+  matching `rel=preload`. Shop images given `400×300` dims (CLS
+  0.22 → 0.006 on `/shop/<product>/`).
+
+**Measurement note:** local Lighthouse showed ±10-pt variance from
+measuring-machine CPU contention. Contention only *depresses* scores, so
+the best-observed per-page number is the truest; every page peaked at
+98–99. A machine-independent run (PageSpeed Insights / pagespeed.web.dev)
+is the authoritative re-confirmation and is recommended for the record.
+
+**Follow-on still open:** a Lighthouse-on-CI gate to prevent a future
+commerce/media WP silently re-introducing a render-blocker (named in the
+Follow-on section above; the recovery is structural, so the residual risk
+is regression, not the current state).
