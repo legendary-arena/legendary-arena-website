@@ -229,6 +229,17 @@ enableRobotsTXT = true
   url = "/art/"
   weight = 27
 
+# Roadmap — public, read-only Planned / In-progress / Shipped board (WP-043),
+# a client-side projection of the engine feedback API (GET /api/feedback,
+# guest). Footer, not header, per WP-034 (header choices kept lean); mirrors
+# Brand / Rules / Art. Trailing slash REQUIRED per the footer active-state note
+# above.
+[[menu.footer]]
+  identifier = "footer-roadmap"
+  name = "Roadmap"
+  url = "/roadmap/"
+  weight = 28
+
 [[menu.footer]]
   identifier = "footer-play"
   name = "Play"
