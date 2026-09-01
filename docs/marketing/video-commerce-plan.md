@@ -295,7 +295,7 @@ the catalog and brand voice already fit it.
 | [youtube-channel-plan.md](youtube-channel-plan.md) | Owns content and the first three conversion goals. This file adds the fourth (gear) and its precedence + tagging discipline. |
 | [go-to-market-plan.md](go-to-market-plan.md) | Owns launch and distribution. The commerce gates C1–C4 parallel its launch gates G1–G5 and share its analytics dependency (G3/C4). |
 | [homepage-spec.md](homepage-spec.md) | Owns the homepage "Featured Gear" section this plan drives toward; product names, prices, and phrases must match it, not drift in lower-thirds. |
-| [video-production-workflow.md](video-production-workflow.md) | Owns the shot list where gear B-roll, table setup, and the spoken CTA are scheduled. A "Gear CTA" note there is the natural next sibling edit. |
+| [video-production-workflow.md](video-production-workflow.md) | Owns the shot list where gear B-roll, table setup, and the spoken CTA are scheduled. Its [Gear CTA subsection](video-production-workflow.md#gear-cta-commerce-videos-only) puts this plan's precedence rule and copy patterns on the shot list. |
 | [01-VISION.md](../01-VISION.md) | Owns the fairness boundary and the 2026-05-12 e-commerce-is-additive decision this plan executes on. |
 
 The awareness engine (the channel) and the launch machine (the go-to-market
