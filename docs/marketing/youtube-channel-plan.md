@@ -3,7 +3,7 @@
 **Site:** legendary-arena.com
 **Channel Name:** Legendary Arena
 **Framework:** StoryBrand SB7 (Donald Miller)
-**Companion:** [homepage-spec.md](homepage-spec.md), [homepage-appendix.md](homepage-appendix.md), [go-to-market-plan.md](go-to-market-plan.md)
+**Companion:** [homepage-spec.md](homepage-spec.md), [homepage-appendix.md](homepage-appendix.md), [go-to-market-plan.md](go-to-market-plan.md), [video-commerce-plan.md](video-commerce-plan.md)
 **Date:** 2026-06-04
 
 ---
@@ -276,6 +276,11 @@ CTAs create decision fatigue and reduce action rates.
 
 Declare the primary goal in the Series Assignment (Step 2 of the
 production workflow) before scripting begins.
+
+A fourth primary goal — **gear purchase** (selling the physical deckbox,
+playmat, and strategy guide through in-video product tags) — is governed
+by [video-commerce-plan.md](video-commerce-plan.md), which applies this same
+single-goal rule to the shop side.
 
 ### Mid-Video Conversion Moment
 

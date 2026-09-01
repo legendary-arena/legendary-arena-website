@@ -2,7 +2,7 @@
 
 **Site:** legendary-arena.com
 **Framework:** StoryBrand SB7 (Donald Miller) + Player Needs Pyramid
-**Companion:** [homepage-spec.md](homepage-spec.md), [homepage-appendix.md](homepage-appendix.md), [youtube-channel-plan.md](youtube-channel-plan.md), [video-production-workflow.md](video-production-workflow.md), [homepage-review-template.md](homepage-review-template.md)
+**Companion:** [homepage-spec.md](homepage-spec.md), [homepage-appendix.md](homepage-appendix.md), [youtube-channel-plan.md](youtube-channel-plan.md), [video-production-workflow.md](video-production-workflow.md), [homepage-review-template.md](homepage-review-template.md), [video-commerce-plan.md](video-commerce-plan.md)
 **Date:** 2026-06-16
 
 ---
@@ -40,6 +40,7 @@ into a week-by-week operating plan.
 | Email funnel, subscriber-state model, nurture sequence | [WP-018](../ai/work-packets/WP-018-brevo-automation.md) + `docs/email-automation.md` |
 | Email metric formulas, thresholds, per-send log | [WP-021](../ai/work-packets/WP-021-funnel-analytics-baseline.md) + `docs/email-metrics-log.md` |
 | Site-build work packets, phases, enhancement requests | [WORK_INDEX.md](../ai/WORK_INDEX.md) |
+| Selling the physical gear through in-video product tags (the commerce layer) | [video-commerce-plan.md](video-commerce-plan.md) |
 
 If a section here starts to restate build copy or strategy theory, it has
 drifted — cut it and link instead. This is the same anti-drift discipline
