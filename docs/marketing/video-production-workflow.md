@@ -38,7 +38,7 @@ check here before checking the details.
 
 | # | Principle | Rule | Implication |
 |---|-----------|------|-------------|
-| P1 | **One Video = One Goal** | Each video declares exactly one primary goal: play-conversion, email-signup, or subscriber-growth. All CTAs align to it. | No mixed CTAs. Pinned comment must not contradict the spoken CTA. |
+| P1 | **One Video = One Goal** | Each video declares exactly one primary goal: play-conversion, email-signup, subscriber-growth, or gear-purchase (the fourth goal, governed by [video-commerce-plan.md](video-commerce-plan.md)). All CTAs align to it. | No mixed CTAs. Pinned comment must not contradict the spoken CTA. Gear is primary only when the video meets the [video-commerce precedence rule](video-commerce-plan.md#the-fourth-conversion-goal-gear-purchase-and-its-precedence). |
 | P2 | **Packaging Before Production** | Title, thumbnail, and topic demand are validated before recording begins (Step 4b). | Never record a video that hasn't cleared the Title + Thumbnail Gate. CTR determines distribution — if packaging is weak, the content never gets seen. |
 | P3 | **Retention Before Volume** | Do not increase output cadence while retention is declining. Fix retention first, then scale production. | If avg view duration drops across 3+ consecutive videos, pause new production and re-cut or re-approach before adding more videos. |
 | P4 | **Shorts = Testing Engine** | Shorts test hooks, topics, angles, and emotional reactions — not just clip existing content. Top-performing Shorts become long-form candidates. | Every Short is a low-cost experiment. Use performance data to decide what earns a full video. |
@@ -382,7 +382,7 @@ or name an alternate villain for this problem]
 **Content Mode:** [A / B / C]
 **Discovery Title:** [curiosity-driven — controversy, challenge,
 or curiosity gap]
-**Primary Goal:** [Play conversion / Email signup / Subscriber growth]
+**Primary Goal:** [Play conversion / Email signup / Subscriber growth / Gear purchase]
 **Target Funnel Transition:** [which viewer state this video moves —
 e.g., Visitor → Video viewer, Video viewer → Site visitor, Site visitor
 → Email subscriber, Site visitor → First game started. Reviewed in
@@ -558,7 +558,7 @@ level]
 
 ## MID-VIDEO CTA (placed at peak value delivery)
 
-**Primary goal:** [Play conversion / Email signup / Subscriber growth]
+**Primary goal:** [Play conversion / Email signup / Subscriber growth / Gear purchase]
 **On screen:** [CTA card or overlay]
 **Voiceover:** "[exact words — must match primary goal]"
 
@@ -651,6 +651,38 @@ this is a launch or anchor video.
 | 1 | [description] | [game client / card browser / replay / screen capture] | [what to prepare] | [est. seconds] |
 | ... | ... | ... | ... | ... |
 ```
+
+### Gear CTA (commerce videos only)
+
+Run this only when the video's declared primary goal is **gear purchase**, or
+when a soft gear appearance is allowed. Which is which is decided by the
+[video-commerce decision table](video-commerce-plan.md#video-job-decision-table)
+— check the video's job (setup / how-to-play / deck-building = gear-primary;
+trust / fairness / onboarding = gear forbidden or soft only). This subsection
+schedules the tag on the shot list; it does not re-decide eligibility.
+
+When gear is in play, add these to the deliverables above:
+
+1. **A gear B-roll shot row on the shot list** — the object doing its job on the
+   table (mat with zones legible, box open with cards/rulebook, guide beside the
+   session), not a static product glamour shot. Source: `physical capture`.
+2. **The spoken gear CTA in the OUTRO (or a mid-video slot)** placed *after* the
+   system has been demonstrated — never the cold open. Use the honest patterns
+   from [video-commerce-plan.md § Copy rules](video-commerce-plan.md#copy-rules)
+   verbatim in spirit (describe the object and the session, never power):
+   - Box: "This is the starter box the session used — cards, rulebook, deckbox."
+   - Mat: "Zones and the turn tracker are on the mat — the same layout as this video."
+   - Guide: "Volume 1 is the 52-week path from first draft to championship play."
+3. **The canonical product URL** on the end screen and in the description with a
+   UTM (`utm_campaign=[slug]`), plus the platform product tag once C1–C4 pass for
+   that SKU. One tagged SKU per video unless it is a catalog/setup tour.
+
+**Guardrails carried from the commerce plan:** never a forbidden phrase ("the
+edge you need," "the deck that wins"); never tag a SKU whose
+[readiness gates](video-commerce-plan.md#commerce-readiness-gates) have not all
+passed; and on any video whose primary goal is play or email, the gear stays a
+description link — it does not get a spoken CTA that competes with the
+audience-building goal.
 
 ---
 
@@ -1367,7 +1399,7 @@ at the start of production.
 ### Step 2: Select Series
 - [ ] Series assigned
 - [ ] Content mode selected
-- [ ] Primary goal declared (play / email / subscriber)
+- [ ] Primary goal declared (play / email / subscriber / gear)
 - [ ] Discovery title drafted
 - [ ] SB7 elements checklist completed
 
