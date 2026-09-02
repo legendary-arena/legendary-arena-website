@@ -1,7 +1,7 @@
 ---
 title: "Founders Cup"
 date: 2026-05-15T00:00:00-05:00
-draft: true
+draft: false
 eventDate: "2026-07-19"
 eventTime: "2:00 PM CT"
 format: "Co-op pairs — 4 rounds"
