@@ -240,6 +240,16 @@ enableRobotsTXT = true
   url = "/roadmap/"
   weight = 28
 
+# Tournaments — the organized-play Tournament Calendar placeholder
+# (/tournaments/). Footer, not header, per WP-034 (header choices kept lean);
+# mirrors Brand / Rules / Art / Roadmap. Trailing slash REQUIRED per the footer
+# active-state note above.
+[[menu.footer]]
+  identifier = "footer-tournaments"
+  name = "Tournaments"
+  url = "/tournaments/"
+  weight = 29
+
 [[menu.footer]]
   identifier = "footer-play"
   name = "Play"
