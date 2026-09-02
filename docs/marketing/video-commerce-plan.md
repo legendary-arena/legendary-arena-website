@@ -111,6 +111,48 @@ they touch no digital rules, scoring, PAR, matchmaking, or standing.
 
 ---
 
+## The platform bridge (an approved shop partner is required)
+
+A raw `/shop/` URL is a **description link**, not a native product tag. YouTube's
+Store tab and on-video product tagging are unlocked only through an **approved
+YouTube Shopping partner integration** — and Snipcart, which powers `/shop/`, is
+not one. The additive mirror of the operating rules therefore needs a **bridge**:
+an approved partner that surfaces the same three SKUs on the platform while
+`/shop/` stays the cart of record. Without it, gear reaches YouTube as
+description and pinned-comment links only, and gate C3 cannot pass.
+
+**Fourthwall is the named bridge for YouTube.** It is an approved YouTube
+Shopping partner (Store tab + product tagging) and, unlike Shopify, does not
+force the business onto a new platform of record. Its role is strictly the
+**platform-facing mirror of the existing three SKUs**, bound by these invariants:
+
+- **`/shop/` (Snipcart + Stripe) stays the single source of truth** and the cart
+  of record. Fourthwall never becomes the main-site cart.
+- **Fourthwall mirrors `LA-DECK-001` / `LA-MAT-001` / `LA-GUIDE-001`** onto the
+  Store tab so they can be natively tagged. It carries **no SKU** that has not
+  already cleared C1–C2 on `/shop/` — the partner shelf is downstream of the
+  shop, never ahead of it.
+- **Checkout completes on the connected store.** The platform is the surface,
+  never the checkout — the same rule that already governs `/shop/`.
+- **Partner-mirror drift is a defect.** A SKU tagged on the platform must exist
+  and clear C1–C2 on `/shop/`, and must not drift on price or name from the
+  homepage. The shop is upstream of the shelf, never the reverse.
+
+**API boundary.** The YouTube Data API manages videos, playlists, descriptions,
+and comments — so description links and their UTM tags *can* be automated. The
+Store tab and product tagging are **not** exposed through the public API; they
+are configured through the Fourthwall integration and YouTube Studio, not
+scripted. Automate the description links; treat the Store tab as configured, not
+coded.
+
+This is the platform-neutral pattern below made concrete: each native-commerce
+platform reaches the shop only through its own approved partner (Fourthwall for
+YouTube; TikTok Shop's native integration later), while the two invariants —
+`/shop/` stays source of truth, and no new SKU or advertised advantage — hold on
+every one.
+
+---
+
 ## The fourth conversion goal: gear purchase, and its precedence
 
 The channel plan's [Single Goal Per Video](youtube-channel-plan.md#single-goal-per-video)
@@ -158,7 +200,7 @@ Failure of any gate blocks tagging; each gate is met or it is not.
 |------|-------------|---------------------------|
 | **C1 — Fulfillment real** | The unit can be picked, packed, shipped, and refunded | Supplier + ship-from + shipping SLA + returns path exist, **and a test order has completed end to end** |
 | **C2 — Real imagery** | The shop and the tag show the manufactured object, not a stand-in | A photograph of the shipped unit is published to `/shop/`; SVG placeholders and any `draft` sample product are gone |
-| **C3 — Platform shop live** | Eligibility and catalog are confirmed on the platform being tagged | The platform's shop (YouTube Shopping / TikTok Shop) lists the three SKUs and they are purchasable; **current eligibility confirmed the week of first tag** — never relied on from a podcast threshold |
+| **C3 — Platform shop live** | An approved-partner integration, eligibility, and catalog are confirmed on the platform being tagged | An **approved YouTube Shopping partner (Fourthwall, per § The platform bridge)** is connected and mirrors the three SKUs to the Store tab — a raw `/shop/` URL is a description link, not a native tag; the SKUs are purchasable through the connected store; **current eligibility confirmed the week of first tag** — never relied on from a podcast threshold |
 | **C4 — Attribution on** | A sale can be traced to a video | UTM on every tagged destination + Snipcart/Stripe metadata or landing param, pulling weekly into the [Launch Scorecard](go-to-market-plan.md#launch-scorecard-weekly-read) |
 
 **C2 is the current hard block.** Tagging a product with placeholder art and no
@@ -170,7 +212,9 @@ untag it — never leave a dead tag live.
 ## Operating rules
 
 1. `/shop/` (Snipcart + Stripe) remains the **source of truth**; platform shelves
-   are additive mirrors onto it, never a migration.
+   are additive mirrors onto it, surfaced through an approved partner (Fourthwall
+   for YouTube — see § The platform bridge), never a migration and never a raw
+   Snipcart link.
 2. One tagged SKU per video, unless the video is a catalog/setup tour. Prefer the
    SKU the footage already uses.
 3. The spoken CTA comes **after** the system has been demonstrated, never as the
@@ -236,7 +280,10 @@ Reels, and future platforms not yet adopted. Two invariants hold on every one of
 them: `/shop/` stays the source of truth, and no platform integration may require
 a change to gameplay rules, progression, or the fairness commitments above. A
 platform is a new checkout path onto the same three products — never a reason to
-create a new SKU or a new advantage.
+create a new SKU or a new advantage. Each such platform reaches the shop only
+through its own **approved commerce partner** (Fourthwall for YouTube; TikTok
+Shop's native integration later; see § The platform bridge) — a raw `/shop/` link
+is never a native product tag.
 
 ---
 
