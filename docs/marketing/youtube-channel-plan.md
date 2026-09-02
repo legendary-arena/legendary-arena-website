@@ -3,7 +3,7 @@
 **Site:** legendary-arena.com
 **Channel Name:** Legendary Arena
 **Framework:** StoryBrand SB7 (Donald Miller)
-**Companion:** [homepage-spec.md](homepage-spec.md), [homepage-appendix.md](homepage-appendix.md), [go-to-market-plan.md](go-to-market-plan.md), [video-commerce-plan.md](video-commerce-plan.md)
+**Companion:** [homepage-spec.md](homepage-spec.md), [homepage-appendix.md](homepage-appendix.md), [go-to-market-plan.md](go-to-market-plan.md), [video-commerce-plan.md](video-commerce-plan.md), [revenue-operating-spec.md](revenue-operating-spec.md)
 **Date:** 2026-06-04
 
 ---

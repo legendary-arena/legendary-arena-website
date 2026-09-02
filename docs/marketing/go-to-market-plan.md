@@ -2,7 +2,7 @@
 
 **Site:** legendary-arena.com
 **Framework:** StoryBrand SB7 (Donald Miller) + Player Needs Pyramid
-**Companion:** [homepage-spec.md](homepage-spec.md), [homepage-appendix.md](homepage-appendix.md), [youtube-channel-plan.md](youtube-channel-plan.md), [video-production-workflow.md](video-production-workflow.md), [homepage-review-template.md](homepage-review-template.md), [video-commerce-plan.md](video-commerce-plan.md)
+**Companion:** [homepage-spec.md](homepage-spec.md), [homepage-appendix.md](homepage-appendix.md), [youtube-channel-plan.md](youtube-channel-plan.md), [video-production-workflow.md](video-production-workflow.md), [homepage-review-template.md](homepage-review-template.md), [video-commerce-plan.md](video-commerce-plan.md), [revenue-operating-spec.md](revenue-operating-spec.md)
 **Date:** 2026-06-16
 
 ---
