@@ -28,6 +28,17 @@ When a WP in this repo references `apps/registry-viewer/src/...` or
 (`C:\pcloud\BB\DEV\legendary-arena\`), not here. Do not attempt to edit
 engine monorepo files from this working directory.
 
+## Marketing asset generation
+
+Before generating **any** public-facing copy or image — homepage/blog copy,
+thumbnails, OG/social images, video descriptions, ad variants — read
+`docs/marketing/brand-asset-generation.md` and the context pack it names
+(`docs/brand/strategy.md` §2–3 for voice/verb-palette/terminology, its
+brand-failure list, and `docs/marketing/video-commerce-plan.md` for SKU facts and
+CTA legality). Do **not** invent SKUs, prices, canonical terms, or player
+testimonials, and do not batch-generate product imagery before real photography
+exists (the C2 gate). AI-UGC player testimonials are refused outright.
+
 ## Preview
 
 Do not start dev servers or attempt browser previews automatically.
