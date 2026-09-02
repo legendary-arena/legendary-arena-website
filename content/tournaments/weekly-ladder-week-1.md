@@ -1,7 +1,7 @@
 ---
 title: "Weekly Ladder — Week 1"
 date: 2026-05-15T00:00:00-05:00
-draft: false
+draft: true
 eventDate: "2026-05-24"
 eventTime: "10:00 AM CT"
 format: "Solo — open ladder"
