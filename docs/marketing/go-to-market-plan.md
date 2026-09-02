@@ -41,6 +41,7 @@ into a week-by-week operating plan.
 | Email metric formulas, thresholds, per-send log | [WP-021](../ai/work-packets/WP-021-funnel-analytics-baseline.md) + `docs/email-metrics-log.md` |
 | Site-build work packets, phases, enhancement requests | [WORK_INDEX.md](../ai/WORK_INDEX.md) |
 | Selling the physical gear through in-video product tags (the commerce layer) | [video-commerce-plan.md](video-commerce-plan.md) |
+| Generating on-brand marketing assets (copy/images) without slop | [brand-asset-generation.md](brand-asset-generation.md) |
 
 If a section here starts to restate build copy or strategy theory, it has
 drifted — cut it and link instead. This is the same anti-drift discipline
