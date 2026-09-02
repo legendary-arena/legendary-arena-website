@@ -81,18 +81,17 @@ Clock A, and Clock B has to run in parallel, not after.
 The go-to-market plan's binary gates G1–G5 are correct and unchanged. Two gates
 sit **in front of** them for the revenue path:
 
-- **G0 — Offer is legal and shippable.** A written IP posture must exist before
-  any public SKU tag, any "Marvel-Champions-style" SEO target, or any paid test.
-  Pass = each public SKU is confirmed **either** original-identity (presentation
-  / accessory / education) **or** covered by the Upper Deck / Marvel license
-  under which royalties are already mandatory (`docs/01-VISION.md` §Financial
-  Sustainability). The physical **60-card Starter Deck Box** (`LA-DECK-001`)
-  specifically must be confirmed license-covered **or reframed** before public
-  promotion, because a 60-card Marvel-Legendary-adjacent deck is the single
-  highest-exposure item on the board. **Owner: Jeff (likely counsel).** This spec
-  does not presume the answer; it makes "confirm it" a gate rather than an
-  assumption. Until G0 is written, lead the shop with the **mat + guide**
-  (presentation + education), which sit on the safe side by construction.
+- **G0 — Offer is legal and shippable.** The physical **60-card Starter Deck
+  Box** (`LA-DECK-001`) is **gated / held from public promotion** until a written
+  IP posture (counsel sign-off) confirms it is license-covered — decision by Jeff,
+  2026-09-02. A 60-card Marvel-Legendary-adjacent deck is the single
+  highest-exposure item on the board, and paying royalties on the *digital*
+  adaptation (`docs/01-VISION.md` §Financial Sustainability) does not by itself
+  establish that the license covers a *physical* card product. Until that posture
+  is written, **do not tag, SEO-target, or paid-promote the deck** — lead the shop
+  with the **mat + guide** (presentation / accessory / education —
+  original-identity, safe by construction). G0 blocks a SKU's first public tag /
+  paid test until its license scope is confirmed in writing.
 - **G1b — First game is one click.** Homepage "Play now" may not point at the
   loadout-JSON lobby (its current target) until a new player can finish a game
   without pasting JSON — or, as an interim, until it points at a bot-replay
@@ -188,7 +187,8 @@ handled before any promotion:
 
 Runs **alongside** the channel plan's content weeks, not after them.
 
-- **Week 0 — Stop the leaks.** Write the G0 IP posture (or lead with mat + guide).
+- **Week 0 — Stop the leaks.** Start the G0 IP posture (counsel sign-off on
+  license scope); until it lands, **hold the deck** and lead with mat + guide.
   Place one real test order; pack, ship, refund it (C1). Photograph the shipped
   units on a real table; replace every placeholder (C2). Re-point "Play now"
   (G1b).
@@ -236,14 +236,16 @@ Not 1,000 emails and a full series bible — this:
 This spec took conservative defaults where a call is genuinely yours. Confirm or
 redirect:
 
-1. **G0 / IP posture** — is `LA-DECK-001` license-covered, or does it get reframed
-   / held? Default here: gate it; lead with mat + guide until written.
-2. **Offer pricing** — the Session Kit price and the free-shipping floor are
+1. **Offer pricing** — the Session Kit price and the free-shipping floor are
    placeholders pending unit economics.
-3. **"Play now" re-point** — a UX change to the live homepage (bot-replay vs.
+2. **"Play now" re-point** — a UX change to the live homepage (bot-replay vs.
    primer vs. one-click first game). Default: flagged as G1b, not yet executed.
-4. **Unpublish `sample-product` now** — a live shop change. Default: flagged as a
+3. **Unpublish `sample-product` now** — a live shop change. Default: flagged as a
    Week-0 leak, not yet executed.
+
+**Resolved:** G0 / IP posture — `LA-DECK-001` is **gated / held** from public
+promotion pending a written IP posture (counsel sign-off on license scope);
+decision by Jeff, 2026-09-02. Lead with mat + guide until it lands.
 
 ## Relationship to the other marketing docs
 
