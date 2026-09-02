@@ -82,15 +82,16 @@ The go-to-market plan's binary gates G1–G5 are correct and unchanged. Two gate
 sit **in front of** them for the revenue path:
 
 - **G0 — Offer is legal and shippable.** The physical **60-card Starter Deck
-  Box** (`LA-DECK-001`) is **covered under the Upper Deck / Marvel license** — the
-  same license under which royalties are already mandatory (`docs/01-VISION.md`
-  §Financial Sustainability) — and so ships and is promoted as a licensed product
-  (confirmed by Jeff, 2026-09-02). G0 is therefore a **confirm-scope gate, not a
-  block**: before a SKU's first public tag or paid test, confirm the license
-  terms cover that specific SKU and surface. Public copy still keeps "Marvel" out
-  of headline SEO per the WP-008 brand-failure-mode decision — a deliberate brand
-  posture, not a licensing limit. The mat and guide are original-identity
-  (presentation / accessory / education) and clear G0 trivially.
+  Box** (`LA-DECK-001`) is **gated / held from public promotion** until a written
+  IP posture (counsel sign-off) confirms it is license-covered — decision by Jeff,
+  2026-09-02. A 60-card Marvel-Legendary-adjacent deck is the single
+  highest-exposure item on the board, and paying royalties on the *digital*
+  adaptation (`docs/01-VISION.md` §Financial Sustainability) does not by itself
+  establish that the license covers a *physical* card product. Until that posture
+  is written, **do not tag, SEO-target, or paid-promote the deck** — lead the shop
+  with the **mat + guide** (presentation / accessory / education —
+  original-identity, safe by construction). G0 blocks a SKU's first public tag /
+  paid test until its license scope is confirmed in writing.
 - **G1b — First game is one click.** Homepage "Play now" may not point at the
   loadout-JSON lobby (its current target) until a new player can finish a game
   without pasting JSON — or, as an interim, until it points at a bot-replay
@@ -186,8 +187,8 @@ handled before any promotion:
 
 Runs **alongside** the channel plan's content weeks, not after them.
 
-- **Week 0 — Stop the leaks.** Record the G0 license-scope confirmation for each
-  public SKU (the deck is license-covered; the mat + guide are original-identity).
+- **Week 0 — Stop the leaks.** Start the G0 IP posture (counsel sign-off on
+  license scope); until it lands, **hold the deck** and lead with mat + guide.
   Place one real test order; pack, ship, refund it (C1). Photograph the shipped
   units on a real table; replace every placeholder (C2). Re-point "Play now"
   (G1b).
@@ -242,9 +243,9 @@ redirect:
 3. **Unpublish `sample-product` now** — a live shop change. Default: flagged as a
    Week-0 leak, not yet executed.
 
-**Resolved:** G0 / IP posture — `LA-DECK-001` is license-covered under the
-existing Upper Deck / Marvel license (confirmed by Jeff, 2026-09-02); G0 is a
-confirm-scope gate, not a block, and the deck stays in the shop.
+**Resolved:** G0 / IP posture — `LA-DECK-001` is **gated / held** from public
+promotion pending a written IP posture (counsel sign-off on license scope);
+decision by Jeff, 2026-09-02. Lead with mat + guide until it lands.
 
 ## Relationship to the other marketing docs
 
