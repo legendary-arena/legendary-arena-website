@@ -2,6 +2,7 @@
 
 **Site:** legendary-arena.com
 **Channel Name:** Legendary Arena
+**Channel:** https://www.youtube.com/@playlegendaryarena (`@playlegendaryarena`) — where all videos and Community posts publish
 **Framework:** StoryBrand SB7 (Donald Miller)
 **Companion:** [homepage-spec.md](homepage-spec.md), [homepage-appendix.md](homepage-appendix.md), [go-to-market-plan.md](go-to-market-plan.md), [video-commerce-plan.md](video-commerce-plan.md), [revenue-operating-spec.md](revenue-operating-spec.md)
 **Date:** 2026-06-04
@@ -708,18 +709,41 @@ what they're getting at a glance:
 
 ### Community Posts
 
-Unlocked at 500 subscribers. Free top-of-funnel impressions that cost
-almost nothing to produce. Post 2-3 times per week once available.
+**Now enabled on the channel** ([@playlegendaryarena](https://www.youtube.com/@playlegendaryarena)) —
+the composer offers **Image, Image poll, Text poll, Quiz, and Video**
+posts. Free top-of-funnel impressions that cost almost nothing to
+produce. Post 2-3 times per week.
 
-**Content types:**
+**The five composer post types → how each serves the channel:**
 
-| Post Type | Frequency | Purpose |
-|-----------|-----------|---------|
+| Post type | Best for | Example |
+|-----------|----------|---------|
+| **Text poll** | Surfacing villain language from the audience; content-calendar research | "What frustrates you most about card games?" |
+| **Quiz** | Playful authority — pose a rules/strategy question, reward the right answer | "Which of these four plays is the fair-game optimal line?" |
+| **Image** | Behind-the-scenes presence; seeding curiosity before a video ships | A dev-log screenshot; an "early look" still from the next episode |
+| **Image poll** | Engagement on a visual A/B | "Which thumbnail should we run?" |
+| **Video** | Re-surface a Short or teaser clip into the community feed | A 15-sec tease from the upcoming episode |
+
+**What to post (independent of type):**
+
+| Content | Frequency | Purpose |
+|---------|-----------|---------|
 | Poll: "What frustrates you most about card games?" | Weekly | Surfaces villain language from your own audience; use responses in future scripts |
 | Behind-the-scenes screenshot from Step 3 research | Weekly | Builds parasocial guide identity before the video ships |
 | "Early look" — one screenshot or 15-sec clip from upcoming video | Per video | Seeds curiosity before publish day |
 | Newsletter teaser — one tip from the lead magnet | Monthly | Drives email signups from existing subscribers |
 | Question card: "What do you want us to cover next?" | Monthly | Free content calendar research |
+
+**IP note — a community post is public the moment it publishes.** Unlike a
+video, which can sit **Unlisted** while the license-clean decision is
+pending, a community post goes straight to the public feed — there is no
+unlisted community post. An **Image**, **Image poll**, or **Video** post
+that shows Marvel / *Legendary* card names or art is therefore immediate
+public exposure of unlicensed IP, the same exposure the
+[IP acquisition plan](../corporate-memory/04-ip-licensing-acquisition-plan.md)
+restricts. Keep Marvel/Legendary card imagery out of public community posts
+until license-clean; **Text poll**, **Quiz**, and text/behind-the-scenes
+posts that don't show licensed card art are unaffected.
 
 **Rule:** Community Posts are not production videos — they cost 5
 minutes, not 5 hours. A blurry behind-the-scenes photo is fine. The
