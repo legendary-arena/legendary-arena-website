@@ -82,7 +82,7 @@ personal/faith dimension is captured in the owner profile
 
 | Channel | Notes | Source |
 |---|---|---|
-| **YouTube** "Legendary Arena" | StoryBrand SB7 framework; 4 series (Building the Arena / How to Play / Across the Table / Arena Clips). Deliberately **not** branded "BarefootBetters." | [`youtube-channel-plan.md`](../marketing/youtube-channel-plan.md) |
+| **YouTube** "Legendary Arena" — [`@playlegendaryarena`](https://www.youtube.com/@playlegendaryarena) (confirmed 2026-09-03) | StoryBrand SB7 framework; 4 series (Building the Arena / How to Play / Across the Table / Arena Clips). Deliberately **not** branded "BarefootBetters." | [`youtube-channel-plan.md`](../marketing/youtube-channel-plan.md) |
 | **Email newsletter** | Brevo, double opt-in, sender `newsletter@legendary-arena.com`; weekly manual campaigns + welcome automation. Lead magnet "The Deck-Builder's Primer" at `/get-started`. | [`docs/brevo/email-automation.md`](../brevo/email-automation.md) |
 | **Discord** | Community hub; the site links out (community is a permanent non-goal for the site itself). | `01-VISION.md` |
 | Social (FB / X) | Handles **[CONFIRM: actual handles]** — see [`03-open-questions.md`](03-open-questions.md). | — |
