@@ -1,0 +1,44 @@
+{{- /* Legendary Arena — project override of PaperMod's templates/twitter_cards.html
+       (pinned submodule). Copied faithfully; the ONLY change is the no-cover
+       branch: instead of a small "summary" card with no image, emit a
+       "summary_large_image" card with the site-wide brand card
+       (/brand/social/og-image.png). WP-249. Keep in sync with the theme if
+       PaperMod is ever updated. */ -}}
+{{- if .Params.cover.image -}}
+<meta name="twitter:card" content="summary_large_image">
+{{- if (ne $.Params.cover.relative true) }}
+<meta name="twitter:image" content="{{ .Params.cover.image | absURL }}">
+{{- else }}
+<meta name="twitter:image" content="{{ (path.Join .RelPermalink .Params.cover.image ) | absURL }}">
+{{- end}}
+{{- else }}
+{{- with index (partial "templates/_funcs/get-page-images" .) 0 }}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{{ .Permalink }}">
+{{- else }}
+{{- /* WP-249 site-wide default — only when the page has no image of its own */ -}}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{{ "brand/social/og-image.png" | absURL }}">
+{{- end }}
+{{- end }}
+
+{{- with or .Title site.Title site.Params.title | plainify }}
+  <meta name="twitter:title" content="{{ . }}">
+{{- end }}
+
+{{- with or .Description .Summary site.Params.description | plainify | htmlUnescape }}
+  <meta name="twitter:description" content="{{ trim . "\n\r\t " }}">
+{{- end }}
+
+{{- $twitterSite := "" }}
+{{- with site.Params.social }}
+  {{- if reflect.IsMap . }}
+    {{- with .twitter }}
+      {{- $content := . }}
+      {{- if not (strings.HasPrefix . "@") }}
+        {{- $content = printf "@%v" . }}
+      {{- end }}
+      <meta name="twitter:site" content="{{ $content }}">
+    {{- end }}
+  {{- end }}
+{{- end }}
