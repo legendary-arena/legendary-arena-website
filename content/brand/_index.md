@@ -234,6 +234,48 @@ Violation weakens brand recognition immediately.
 
 [palette]: https://github.com/legendary-arena/legendary-arena-website/blob/main/docs/brand/palette.md
 
+### Clear space & minimum size {#logo-usage}
+
+Keep a clear space of **X = half the mark's height** on every side, free of
+other logos, text, or busy imagery.
+
+<p style="display: inline-block;">
+  <img src="/brand/logo/guide-clearspace.png"
+       alt="Clear-space rule — the lockup inside a dashed exclusion zone set X (half the mark height) from every edge"
+       style="max-width: 100%; border-radius: var(--la-radius-md);" />
+</p>
+
+Below these minimums, step up a mark (use the emblem where the lockup would
+be too small): emblem **24 px**, lockup **120 px** wide, wordmark **100 px**
+wide.
+
+<p style="display: inline-block;">
+  <img src="/brand/logo/guide-minsize.png"
+       alt="Minimum sizes — the emblem at 24 px and the lockup at 120 px wide"
+       style="max-width: 100%; border-radius: var(--la-radius-md);" />
+</p>
+
+The full clear-space, minimum-size, light/dark pairing matrix, and do/don't
+list are in the [logo usage guidelines][logo-usage].
+
+[logo-usage]: https://github.com/legendary-arena/legendary-arena-website/blob/main/docs/brand/logo-usage.md
+
+### Launch & social kit {#social-kit}
+
+Ready-to-post graphics built from the approved lockup on the brand ground:
+
+<p style="display: inline-block; max-width: 520px;">
+  <img src="/brand/social/og-image.png"
+       alt="Open Graph share image — the Legendary Arena lockup and tagline on the brand navy ground"
+       style="max-width: 100%; border-radius: var(--la-radius-md);" />
+</p>
+
+- [Open Graph / share image — 1200×630](/brand/social/og-image.png)
+- [Facebook cover — 851×315](/brand/social/facebook-cover.png)
+- [YouTube banner — 2560×1440 (mark in the TV-safe center)](/brand/social/youtube-banner.png)
+- [YouTube watermark — 150×150 (transparent)](/brand/social/youtube-watermark.png)
+- [Square avatar — 800×800](/brand/social/avatar-800.png)
+
 ## Core Identity (Narrative) {#core-identity}
 
 Brand voice: **cinematic, mature, heroic**. Direct sentences, active
