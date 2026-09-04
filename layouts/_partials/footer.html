@@ -18,6 +18,16 @@
 */ -}}
 {{- if not (.Param "hideFooter") }}
 <footer class="footer">
+    {{- /* Brand mark — first child of <footer>. Links home. Uses the
+           theme-agnostic gold emblem (transparent PNG→webp); gold reads on
+           both the light and dark values of --la-color-bg-primary, so no
+           theme-swap is needed. The full wordmark lockup is NOT used here:
+           its white "ARENA" text / horn half would vanish on the light-theme
+           footer surface. */ -}}
+    <a class="footer-brand" href="{{ "" | absLangURL }}" aria-label="{{ site.Title }} — home">
+        <img src="{{ "brand/logo/legendary-arena-emblem.webp" | absURL }}"
+            alt="{{ site.Title }}" width="60" height="82" loading="lazy" decoding="async">
+    </a>
     {{- /* NEW (WP-010): footer nav region — first child of <footer>. */ -}}
     <nav class="footer-nav" aria-label="Footer">
         <ul>
