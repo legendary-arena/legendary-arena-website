@@ -352,6 +352,31 @@ a:hover {
   color: var(--la-color-blue);
 }
 
+/* Footer brand mark — centered gold emblem linking home, above the nav.
+   why: the emblem is theme-agnostic gold, so it needs no light/dark swap;
+   height (not width) is pinned so the portrait mark sits at a consistent
+   visual size regardless of the source asset's pixel dimensions. */
+.footer-brand {
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto var(--la-space-4);
+  border: 0;
+}
+
+.footer-brand img {
+  display: block;
+  height: 72px;
+  width: auto;
+  opacity: 0.9;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.footer-brand:hover img {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
 /* §4.7 Code blocks
    Inline code and code blocks need different treatment. */
 
