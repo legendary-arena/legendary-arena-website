@@ -7,7 +7,7 @@ summary: "Legendary Arena brand system — colors, typography, tokens, art direc
 
 <div class="brand-meta">
   <span>Token version: <strong>v1</strong></span>
-  <span>Last updated: <strong>2026-05-12</strong></span>
+  <span>Last updated: <strong>2026-09-04</strong></span>
   <span>Surfaces: <code>www</code> · <code>play</code> · <code>cards</code></span>
 </div>
 
@@ -147,41 +147,87 @@ consumer in v1.
 
 ## Logo + Identity {#logo-identity}
 
-### Primary — gold on dark
+The mark is a single emblem split down the centre: a **gold winged sword**
+(the hero, the light) mirrored against a **white bone-and-horn mark** (the
+villain, the dark). That good-versus-evil duality is the brand made visible —
+heroic, symmetric, gold-led. It replaces the v1 wordmark placeholder and the
+earlier geometric exploration.
+
+The emblem is built for **dark surfaces**; the white villain half is designed
+against the deep-navy ground. On a light surface, use the monochrome single-ink
+mark rather than the full-colour emblem.
+
+### Primary lockup — emblem + wordmark
+
+The default identity wherever there is horizontal room: site headers, press,
+marketing heroes.
 
 <p style="background: #0b0f19; padding: var(--la-space-4); border-radius: var(--la-radius-md); display: inline-block;">
-  <img src="/brand/logo/logo-la-dark-400x200.svg"
-       alt="Legendary Arena wordmark (gold on dark — primary)"
+  <img src="/brand/logo/logo-la-lockup.svg"
+       alt="Legendary Arena primary lockup — the hero/villain emblem beside the LEGENDARY ARENA wordmark"
        class="brand-logo"
-       width="400" height="200" />
+       style="height: 120px; width: auto;" />
 </p>
 
-### Inversion — white-only
+### The emblem — standalone mark
 
-<p style="background: var(--la-color-bg-tertiary); padding: var(--la-space-4); border-radius: var(--la-radius-md); display: inline-block;">
-  <img src="/brand/logo/logo-la-light-400x200.svg"
-       alt="Legendary Arena wordmark (white-only — inversion)"
+The mark on its own: favicon, social avatar, app icon, game HUD badge.
+
+<p style="background: #0b0f19; padding: var(--la-space-4); border-radius: var(--la-radius-md); display: inline-block;">
+  <img src="/brand/logo/logo-la-emblem.svg"
+       alt="Legendary Arena emblem — gold winged sword hero half mirrored by a white horned villain mark"
        class="brand-logo"
-       width="400" height="200" />
+       style="height: 200px; width: auto;" />
 </p>
 
-Use only when a light surface forces inversion.
+### Wordmark
 
-### Icon / favicon
+For text-only lockups, or where the emblem is shown separately.
 
-<p>
-  <img src="/brand/logo/legendary-arena-icon.svg"
-       alt="Legendary Arena icon (favicon)"
-       width="64" height="64" />
+<p style="background: #0b0f19; padding: var(--la-space-4); border-radius: var(--la-radius-md); display: inline-block;">
+  <img src="/brand/logo/logo-la-wordmark.svg"
+       alt="Legendary Arena wordmark — LEGENDARY in gold above ARENA in white"
+       class="brand-logo"
+       style="height: 90px; width: auto;" />
 </p>
+
+### Monochrome — single ink
+
+For merch, embossing, watermarks, and light surfaces. One ink, no gradient;
+shown here in black on light.
+
+<p style="background: var(--la-color-bg-primary); padding: var(--la-space-4); border-radius: var(--la-radius-md); display: inline-block;">
+  <img src="/brand/logo/logo-la-emblem-mono.svg"
+       alt="Legendary Arena monochrome emblem — single-ink silhouette"
+       class="brand-logo"
+       style="height: 180px; width: auto;" />
+</p>
+
+### Assets & downloads {#logo-downloads}
+
+Production-ready SVG masters (transparent; designed for dark surfaces):
+
+- [Primary lockup — `logo-la-lockup.svg`](/brand/logo/logo-la-lockup.svg)
+- [Emblem — `logo-la-emblem.svg`](/brand/logo/logo-la-emblem.svg)
+- [Wordmark — `logo-la-wordmark.svg`](/brand/logo/logo-la-wordmark.svg)
+- [Monochrome emblem — `logo-la-emblem-mono.svg`](/brand/logo/logo-la-emblem-mono.svg)
+- [Gold hero half — `logo-la-hero-gold.png`](/brand/logo/logo-la-hero-gold.png)
+- Favicon / app icon: [`favicon.svg`](/favicon.svg) · [`favicon.ico`](/favicon.ico) · [maskable `icon-maskable-512.png`](/brand/logo/icon-maskable-512.png)
+
+The editable master is `Legendary Arena-400x200.ai` (kept in the brand
+asset store, not in this repo); the SVGs are extracted/traced from it. Colour
+and type come from [`/brand-tokens.css`](/brand-tokens.css).
 
 ### Non-negotiable rules
 
-- Do not recolor the logo
-- Do not apply gradients or effects
-- Do not apply class colors (`--la-color-class-*`) — class colors
-  communicate gameplay role, not brand identity
-  (see [`palette.md` §4.4][palette])
+- Do not recolor the emblem or restyle its gold gradient — the only sanctioned
+  recolor is the **monochrome** master, which is a single ink by design
+- Do not add effects (drop shadows, outer glows, bevels) beyond what the master
+  already carries
+- Do not place the full-colour emblem on a light surface — use the monochrome
+  mark there
+- Do not apply class colors (`--la-color-class-*`) — class colors communicate
+  gameplay role, not brand identity (see [`palette.md` §4.4][palette])
 - Do not alter proportions
 
 Violation weakens brand recognition immediately.
