@@ -28,8 +28,17 @@ Every newsletter follows this ten-section structure in order:
 
 ### 1. Header
 
-Legendary Arena wordmark/logo linking to
+The Legendary Arena emblem lockup, linking to
 `https://www.legendary-arena.com/`. Consistent across all sends.
+
+Use the hosted header asset (the split-emblem lockup on a dark bar, which
+reads on any email background):
+`https://www.legendary-arena.com/brand/email/email-header-lockup-on-dark.png`
+(1085 px wide; display at ~200–300 px). For a template whose header area is
+already dark, the transparent variant is
+`/brand/email/email-header-lockup.png`. Set this once in the Brevo template's
+header block — see [Branding](https://ewiki.legendary-arena.com/branding/) and
+the brand page for the mark.
 
 ### 2. Hook
 

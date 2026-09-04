@@ -90,7 +90,7 @@ Slug coupling invariant: `newsletter_slug`, blog post slug, and UTM
 ### Content
 
 - **Subject:** Welcome to Legendary Arena
-- **Header:** LA logo linking to `https://www.legendary-arena.com/`
+- **Header:** the emblem lockup (`/brand/email/email-header-lockup-on-dark.png`) linking to `https://www.legendary-arena.com/`
 - **Welcome message:** 2-3 paragraphs acknowledging the subscription,
   setting expectations (weekly strategy tips, deck-building guides,
   tournament news), and linking to the week 1 blog post
@@ -310,7 +310,8 @@ in `docs/brand/strategy.md`:
 - HTML size: < 100KB (Gmail clips at ~102KB)
 - Plain-text fallback: required, includes CTA link + unsubscribe link
 - All images: alt text required, email comprehensible with images blocked
-- Logo: PNG (not SVG), max 200px wide
+- Logo: PNG (not SVG), max 200px wide — use the hosted emblem header
+  `/brand/email/email-header-lockup-on-dark.png` (retina; display at ~200px)
 
 ## Funnel measurement contract
 
