@@ -1240,9 +1240,13 @@ Bright lines from
 
 **Logo files** (SVG, production-ready):
 
-- [Primary wordmark (gold on dark)](/brand/logo/logo-la-dark-400x200.svg)
-- [Inversion wordmark (white-only)](/brand/logo/logo-la-light-400x200.svg)
-- [Icon / favicon](/brand/logo/legendary-arena-icon.svg)
+- [Primary lockup — emblem + wordmark](/brand/logo/logo-la-lockup.svg)
+- [Emblem — standalone mark](/brand/logo/logo-la-emblem.svg)
+- [Wordmark](/brand/logo/logo-la-wordmark.svg)
+- [Monochrome emblem — single ink](/brand/logo/logo-la-emblem-mono.svg)
+
+See the [Logo + Identity](#logo-identity) section for previews, clear-space
+and sizing rules, and the launch/social kit.
 
 **Documentation** (source of truth, in repo):
 
@@ -1308,9 +1312,9 @@ These two assets define how the page appears everywhere on Facebook.
 | Format | PNG (transparency-safe for the logo) |
 | Safe rule | Center the logo — corners crop into a circle on every surface |
 
-Use the existing icon from `/brand/logo/legendary-arena-icon.svg`,
-exported as PNG at 800 x 800. The gold-on-dark variant reads best
-against Facebook's white and dark-mode chrome.
+Use the square avatar [`/brand/social/avatar-800.png`](/brand/social/avatar-800.png) —
+the emblem on a dark rounded tile, already 800 x 800 and centered for the
+circular crop. It reads against Facebook's white and dark-mode chrome.
 
 **Cover photo** — the brand billboard.
 
@@ -1323,16 +1327,14 @@ against Facebook's white and dark-mode chrome.
 | Safe zone | Center 640 x 312 px — keep all critical content here |
 | Format | JPG for photo-heavy; PNG if text-heavy |
 
-For Legendary Arena: logo wordmark + tagline in the safe zone, hero
-card art filling the background, optional CTA text ("Play Online" or
-"Join the Arena"). Keep the edges expendable — mobile crops ~100 px
-from each side.
+Ready to upload: [`/brand/social/facebook-cover.png`](/brand/social/facebook-cover.png) —
+the lockup + tagline on the brand ground, composed inside the mobile-safe
+center. Keep the edges expendable — mobile crops ~100 px from each side.
 
 ### Open Graph image (critical for sharing)
 
 This is what appears when anyone shares a legendary-arena.com link
-on Facebook (or any platform that reads Open Graph tags). Set it
-site-wide via `<meta property="og:image">`.
+on Facebook (or any platform that reads Open Graph tags).
 
 | Property | Value |
 |----------|-------|
@@ -1340,9 +1342,11 @@ site-wide via `<meta property="og:image">`.
 | Aspect ratio | 1.91:1 |
 | Format | JPG or PNG |
 
-The OG image should be a standalone brand card — recognizable without
-context. Logo, tagline, and one piece of hero art. No small text —
-it renders as a thumbnail in most feeds.
+Shipped as [`/brand/social/og-image.png`](/brand/social/og-image.png) — a
+standalone brand card (lockup + tagline on the brand ground), recognizable
+as a feed thumbnail. **It is now the site-wide default** `og:image`: any page
+without its own cover image falls back to it automatically (WP-249), so every
+shared link carries the brand card.
 
 ### Feed content templates
 
@@ -1456,9 +1460,8 @@ These two assets define how the channel appears across YouTube.
 | Max file size | ~4 MB |
 | Safe rule | Center the logo — edges crop into a circle on every surface |
 
-Use the existing icon from `/brand/logo/legendary-arena-icon.svg`,
-exported as PNG at 800 x 800. Identical asset as Facebook — one
-export covers both platforms.
+Use the same square avatar [`/brand/social/avatar-800.png`](/brand/social/avatar-800.png) —
+one export covers both platforms.
 
 **Channel banner** — the most crop-hostile asset on YouTube.
 
@@ -1480,9 +1483,9 @@ export covers both platforms.
 | Mobile | Safe zone only | 1546 x 423 |
 
 Everything outside the safe zone gets cropped on every device except
-TV. For Legendary Arena: logo wordmark + tagline inside the safe
-zone, hero card art filling the background. The edges are expendable
-— design them to look good but carry no critical information.
+TV. Ready to upload: [`/brand/social/youtube-banner.png`](/brand/social/youtube-banner.png) —
+the lockup + tagline sit inside the 1546 x 423 safe zone on the brand
+ground, so the mark survives every device crop.
 
 ### Video thumbnail (highest-ROI asset)
 
@@ -1524,6 +1527,9 @@ under Customization > Branding.
 | Format | PNG (transparent background recommended) |
 | Max file size | ~1 MB |
 | Placement | Bottom-right corner (YouTube-controlled) |
+
+Ready to upload: [`/brand/social/youtube-watermark.png`](/brand/social/youtube-watermark.png) —
+the emblem on a transparent background, high-contrast at the ~40 px render size.
 
 **Display timing options:**
 
