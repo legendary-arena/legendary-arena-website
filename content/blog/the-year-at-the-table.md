@@ -3,6 +3,7 @@ title: "The Year at the Table"
 date: 2026-09-12
 description: "A man alone at the end of a marriage, a standing invitation to a Thursday night game, and the long year in between. The origin of Legendary Arena."
 draft: false
+featured: true
 tags: ["origin", "founder"]
 categories: ["story"]
 ---
