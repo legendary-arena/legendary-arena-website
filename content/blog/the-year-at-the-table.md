@@ -12,9 +12,13 @@ categories: ["story"]
 > Satan doesn't want us to *be* something. He wants us to *have* something.
 
 For thirty years I could have told you who I was in three words.
-Husband. Father. Engineer. It never occurred to me that all three were
-things someone else had handed me — and that anything handed to you can
-be handed back.
+Husband. Father. Engineer. It took me too long to notice that not one of
+those is an identity. They are titles, and titles change. Divorce ends
+the husband. Children grow and marry, and the father becomes a
+grandfather. A job ends, or a career does, and the engineer becomes
+whatever you are the morning after. I had built a whole self out of
+labels that were always going to move, and never once asked what was
+underneath them.
 
 I want to tell this the way I understand it now, not the way it felt
 then, because that is the only honest way I have it. The man who lived it
@@ -32,16 +36,10 @@ my hand had crossed into the light. She didn't look up. It wasn't
 cruelty. We were two people in the same room who had stopped meeting
 there, and were polite about it.
 
-I hadn't understood yet that every name I answered to could be taken
-back. Cindy would end the husband. The children had grown up and thinned
-out the father. Retirement was coming for the engineer. I had spent
-fifty years becoming a set of roles, and I had never once looked
-underneath them to see whether anyone was there.
-
-These were fish handed to me. Nobody had taught me to fish.
-
-When she left, I looked underneath the roles. And for a while, there was
-nothing there at all.
+When she finally left, the last of the titles went with her, and I did
+the thing I had managed to avoid for fifty years: I looked underneath
+them to see whether anyone was there. And for a while, there was nothing
+there at all.
 
 ## Two
 
@@ -233,13 +231,14 @@ wasn't fair. It was just the only move that got me anywhere. Blame would
 have felt better and cost me the year.
 
 And underneath all of it was the one thing I had been looking for in the
-spare room and could not find, because I was looking in the roles. What
-cannot be taken from a man is not that he is a husband, or a father, or
-an engineer, or even a friend. It is that he is a child of God. It was
-true of me on the worst night in that spare room, when I felt like
-nothing at all. I hadn't earned it and I couldn't lose it. That is the
-*be*, not the *have* — and everything I mistook for my identity had only
-ever been fruit hanging off it.
+spare room and could not find, because I had been looking in the titles.
+A title changes. Husband ends. Father becomes grandfather. Engineer
+becomes retiree. The single name that never changes — the only one that
+was ever actually my identity — is that I am a child of God. It was true
+of me on the worst night in that spare room, when I felt like nothing at
+all. I hadn't earned it and I couldn't lose it. That is the *be*, not the
+*have* — and every title I had mistaken for my identity was only ever
+fruit hanging off it.
 
 So here is the only thing worth carrying out of that year. I did not end
 up with friends because I got lucky. I *became* someone who could be one,
