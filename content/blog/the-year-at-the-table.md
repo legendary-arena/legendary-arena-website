@@ -161,7 +161,9 @@ Her identity was mother the way mine was father, and when the children
 left, she looked underneath and found the same nothing. Same crisis. We
 answered it differently, and the difference was patience. I waited in the
 dark until someone knocked, and then I grew something slowly. She wanted
-the harvest that season.
+the harvest that season — or that is how it looked from where I stood, and
+I have learned not to be too certain about a heart that stopped telling me
+things a long time before either of us left.
 
 That's the oldest counterfeit there is. Chop the tree down to get at the
 fruit now. Kill the goose for all the eggs at once. Ask the father for
@@ -175,8 +177,9 @@ wants the same thing: the fruit without the season.
 And here is what I can't stop thinking about — she found it, for a while.
 Real happiness with someone else. She wasn't lying about that. It simply
 had no roots, and a thing with no roots runs out, and by the time it ran
-out the thirty years were spent. She was never wired for the slow
-version. Almost nobody is. Present things beat future things every time.
+out the thirty years were spent. She didn't seem wired for the slow
+version — few of us are, and present things beat future things nearly
+every time.
 The only reason I'm the exception is that somebody kept knocking while I
 still couldn't see the far end of anything. I didn't have a twenty-year
 vision of who I'd become. I had Thursdays.
