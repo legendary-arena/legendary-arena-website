@@ -11,18 +11,13 @@ categories: ["story"]
 > God doesn't want us to *have* something. He wants us to *be* something.
 > Satan doesn't want us to *be* something. He wants us to *have* something.
 
-The first thing I remember is the light from her phone.
-
-Cindy on her side of the couch, earbuds in, her face lit blue by a
-screen I wasn't on. I reached over to say something — I don't remember
-what — and my hand crossed into the light before the words did. She
-didn't look up. It wasn't cruelty. We had simply stopped meeting in the
-same room, even when we were in it.
+For thirty years I could have told you who I was in three words.
+Husband. Father. Engineer. It never occurred to me that all three were
+things someone else had handed me — and that anything handed to you can
+be handed back.
 
 I want to tell this the way I understand it now, not the way it felt
-then. That's the only honest way I can tell it, because gratitude is
-retrospective — no one is grateful in the middle of the labor, and no one
-doubts it once the child is in their arms. The man living through this
+then, because that is the only honest way I have it. The man who lived it
 was frightened. The man telling it is grateful. Both of us are telling
 you the truth.
 
@@ -30,16 +25,18 @@ you the truth.
 
 You can be married and alone. I was, for a long time before anyone would
 have called it a marriage ending. We didn't fight. Fighting would have
-meant we were still trying to reach each other. We were two people who
-had stopped, and were polite about it.
+meant we were still trying to reach each other. Most evenings Cindy was
+on her side of the couch with her earbuds in, her face lit by a screen I
+wasn't on, and I'd say something and watch my words arrive a beat after
+my hand had crossed into the light. She didn't look up. It wasn't
+cruelty. We were two people in the same room who had stopped meeting
+there, and were polite about it.
 
-Here is the thing I didn't understand about myself yet. I had built my
-whole life out of things that could be taken away. Husband. Father.
-Engineer. Every one of them was handed to me, and everything handed to
-you can be taken back. Cindy would end the husband. The children had
-grown up and thinned out the father. Retirement was coming for the
-engineer. I had spent fifty years becoming a set of roles, and I had
-never once looked underneath them to see whether anyone was there.
+I hadn't understood yet that every name I answered to could be taken
+back. Cindy would end the husband. The children had grown up and thinned
+out the father. Retirement was coming for the engineer. I had spent
+fifty years becoming a set of roles, and I had never once looked
+underneath them to see whether anyone was there.
 
 These were fish handed to me. Nobody had taught me to fish.
 
