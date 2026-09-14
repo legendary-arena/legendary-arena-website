@@ -130,4 +130,27 @@
 </div>
 {{- end }}
 
+{{- /* Featured story — the blog post flagged featured: true (first 1).
+       Its own section, parallel to tournaments/gear — deliberately NOT a
+       fourth .Params.sections card, which would break the homepage-spec
+       "exactly 3 pillars" rule. See WP-251. */ -}}
+{{- $bPage := site.GetPage "/blog" }}
+{{- $story := slice }}
+{{- with $bPage }}
+  {{- $story = where .Pages "Params.featured" true }}
+  {{- $story = first 1 $story }}
+{{- end }}
+{{- with $story }}
+<div class="section home-story">
+  <h2>Why the Arena Exists</h2>
+  {{- range . }}
+  <div class="card story-card">
+    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    <p>{{ .Description }}</p>
+    <a class="button" href="{{ .RelPermalink }}">Read the story</a>
+  </div>
+  {{- end }}
+</div>
+{{- end }}
+
 {{- end }}
