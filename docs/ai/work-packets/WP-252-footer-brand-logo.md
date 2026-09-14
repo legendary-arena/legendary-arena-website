@@ -1,4 +1,13 @@
-# WP-247 — Add the Legendary Arena emblem to the site footer
+# WP-252 — Add the Legendary Arena emblem to the site footer
+
+> **Renumber note (2026-09-13):** originally filed as **WP-247** and shipped
+> under that number in commit `2efab8d` / PR #136. It collided with the
+> split-emblem-identity WP (also numbered WP-247, `docs/ai/work-packets/WP-247-adopt-split-emblem-identity.md`,
+> commit `9c5c120` / PR #140), which anchors the 247→250 brand-identity series
+> and is the target of every inbound `WP-247` reference in the repo. This
+> self-contained footer WP had no inbound references, so it was renumbered to
+> **WP-252** to resolve the duplicate. The `WP-247:` prefix on its original
+> commit remains in git history as the record of when it shipped.
 
 Add the Legendary Arena emblem as a home-linked brand mark at the top of the
 site footer, so the brand is present in the site chrome on every page
