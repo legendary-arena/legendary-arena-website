@@ -133,9 +133,9 @@ Mountain West investigated through the same law firm defending it in the
 players' lawsuit and found "insufficient evidence." The associate head coach
 who filed a complaint was pulled from the team four days later and not renewed;
 the head coach, who faced a complaint too, stayed. Five schools refused to play, and
-each refusal was booked as a loss in the standings. When the players went to
-court to keep the tournament fair, a judge denied them, and the tournament was
-played before any court heard the merits. Run question one: who chose
+each refusal was booked as a loss in the standings. When the players asked a
+court to keep Fleming out of the tournament, a judge denied them, and the
+tournament was played before any court heard the merits. Run question one: who chose
 the investigator? Then question four: nobody banned objecting, but the standings
 and the coach's job both charged for it.
 
