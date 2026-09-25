@@ -104,6 +104,12 @@ protecting children. Those are the handles a scheme grabs, because they are the
 ones you will not want to let go of. A vice can be refused. A virtue used as a
 lever is much harder to drop.
 
+**The subsidy is the lock.** A ban says *you may not*. A subsidy says *we will
+pay you not to*. The second is quieter and usually stronger, because no one has
+to guard the door if the money only arrives while you stay inside. The test: if
+an arrangement claims to reduce a condition, and eligibility requires that the
+condition continue, the payment is not a remedy. It is a retainer.
+
 **The seat stays; the occupant rotates.** The economist Vilfredo Pareto called
 history "a graveyard of aristocracies." Each new ruler arrives promising to end
 the last one's tyranny and keeps the machinery that made it possible:
@@ -146,9 +152,49 @@ does not need to. Question two does all the work.
 nobody guarding the door. A family on assistance works out, correctly, that the
 raise, the extra shift, or the marriage would cost them more in lost benefits
 than it pays. Nobody forbids them to leave. The arithmetic keeps them in. There
-is no oppressor to point at, which is exactly why it holds. The fix is a taper
-instead of a cliff. And the test is simple: watch who opposes the reform, not who
-says they care.
+is no oppressor to point at, which is exactly why it holds.
+
+The same lock can be built out of eligibility instead of earnings. For most of
+its history, the old federal welfare program, Aid to Families with Dependent
+Children, was built around a missing parent, and aid to two-parent families
+stayed optional for the states until 1990. Alabama went further and cut off the
+children of any mother who lived with an able-bodied man, until the Supreme
+Court struck that rule down in *King v. Smith* (1968). Marriage was never
+forbidden. It was simply the choice that turned the money off. A mother who did
+that arithmetic correctly was not being wicked. She was reading the price. When a
+check requires the problem to stay in place, whether that means no second adult
+in the house, no extra hours, or no raise, the program is not relieving the
+condition. It is renting it. (Today's rules are messier than that clean shape:
+some benefits penalize marriage and some don't. The lens uses the shape. The law
+can change and the seat remain.)
+
+The fix is a taper instead of a cliff, where benefits shrink gradually as
+earnings rise. It has been tried, and the record of who fought it is worth
+reading.
+
+In 1969 Richard Nixon proposed the Family Assistance Plan: a floor of $1,600 for
+a family of four, the first $720 of earnings kept in full, and benefits withdrawn
+at fifty cents for each dollar earned after that. It passed the House twice and
+died in the Senate Finance Committee both times. The opposition came from both
+sides at once. The National Welfare Rights Organization, led by George Wiley,
+called it too stingy and demanded $5,500 with no work requirement. Senate
+Finance chairman Russell Long and the committee's conservatives called it a
+drain on the treasury and swapped in a workfare plan. And by the account of
+Daniel Patrick Moynihan, who designed it, the welfare professionals who ran the
+old system resisted it as well.
+
+Britain built the taper anyway. Universal Credit, launched by Iain Duncan Smith
+in 2010, merged six benefits into one payment withdrawn at a single rate of 65%.
+In 2015 George Osborne's Treasury announced a £3.2 billion cut, much of it by
+shrinking the earnings a claimant keeps before the taper begins, which is the
+very part that makes work pay. Labour's 2019 manifesto promised to scrap the
+program entirely. The taper survived both, and was cut to 55% in 2021. (Most of
+the charity criticism, from groups like the Trussell Trust, was aimed at the
+five-week wait for a first payment, not at the taper.)
+
+So the test is simple: watch who opposes the reform, not who says they care.
+And when a rule that stops pricing work or marriage gets called cruel, watch who
+defends the old rule, and which virtue they hold up while doing it.
 
 ## How to use it
 
