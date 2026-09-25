@@ -125,10 +125,16 @@ transgender teammate did it anonymously, for fear of what it would cost them.
 Nobody banned speaking up. Run question four: what happens to the person who says
 no under their own name?
 
-**An investigation by the defense.** In 2024 the Mountain West looked into an
-allegation involving San José State's volleyball team, hired the same law firm
-defending it in the players' lawsuit, and found "insufficient evidence." Run
-question one: who chose the investigator?
+**An investigation by the defense.** At San José State, the university told its
+volleyball coaches not to tell the players that a teammate was transgender, and
+cited privacy law when asked, so the women sharing rooms on road trips were the
+last to know. In 2024, when an allegation surfaced involving the team, the
+Mountain West investigated through the same law firm defending it in the
+players' lawsuit and found "insufficient evidence." An assistant coach who filed
+a complaint was suspended three days later. Five schools refused to play, and
+each refusal was booked as a loss in the standings. Run question one: who chose
+the investigator? Then question four: nobody banned objecting, but the standings
+and the coach's job both charged for it.
 
 **A broadcast that picked the event.** In 2017 stadium crowds booed kneeling
 players while television made the kneel the national picture, then stopped
