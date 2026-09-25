@@ -221,6 +221,100 @@ So the test is simple: watch who opposes the reform, not who says they care.
 And when a rule that stops pricing work or marriage gets called cruel, watch who
 defends the old rule, and which virtue they hold up while doing it.
 
+## Recent cases
+
+The same five questions work on events you lived through. Read each one as
+architecture. None of them needs a verdict on who was right about the underlying
+fight.
+
+**Proximal Origin.** On 1 February 2020, Jeremy Farrar convened a call with
+Anthony Fauci, Francis Collins and a group of virologists. Six weeks later those
+virologists published
+[*The proximal origin of SARS-CoV-2*](https://www.nature.com/articles/s41591-020-0820-9)
+in *Nature Medicine*: "we do not believe that any type of laboratory-based
+scenario is plausible." Facebook removed claims that the virus was "man-made or
+manufactured" from February to May 2021. The authors' private Slack messages,
+released by a House subcommittee in 2023, show them taking a lab origin far more
+seriously than the paper did; one wrote that an "accidental escape is in fact
+highly likely." The lens does not pick an origin. It asks who defined the
+question in the first month, whose seal ended the argument, and what it cost to
+say the other sentence in 2020. Questions one, two and three.
+
+**The 51 officials.** On 14 October 2020 the *New York Post* ran the Hunter Biden
+laptop story, and Twitter blocked links to it. Five days later, fifty-one former
+intelligence officials
+[signed a letter](https://turner.house.gov/_cache/files/6/8/6865ec1a-7d72-4a25-af9d-dce2c7895b6c/3A3F0615B79651FAF05E434BB4F52AE2.10.19.20-public-statement-on-the-hunter-biden-emails.pdf)
+saying it had "all the classic earmarks of a Russian information operation,"
+while admitting they did not know whether the emails were genuine and had no
+evidence of Russian involvement. At the final debate the candidate cited "50
+former national intelligence folks." In 2023, Michael Morell, who organized the
+letter,
+[testified](https://judiciary.house.gov/media/press-releases/new-testimony-reveals-secretary-blinken-and-biden-campaign-behind-infamous)
+that a call from Antony Blinken of the Biden campaign "triggered" it. Asked why he
+wanted to help, he said: "Because I wanted him to win the election." Federal
+prosecutors later used the laptop as evidence. "Former intelligence officials"
+was the borrowed seal. Question two.
+
+**Canada's frozen accounts.** In February 2022, Ottawa invoked the Emergencies
+Act against the trucker convoy. Banks could freeze the accounts of people tied to
+the protest without a court order, and about 200 accounts holding some $7.8
+million were frozen within a week. The protest ended. In 2024 a federal court
+ruled the invocation unreasonable and a breach of the Charter, and in January
+2026 the
+[Federal Court of Appeal agreed](https://www.fca-caf.ca/en/pages/decisions/plain-language-decision-summaries/2026-fca-6),
+calling the freezing "ad hoc and fraught with confusion." You can still believe
+the occupation of downtown Ottawa was a real problem. The lens only needs the
+lock: leaving the protest was not argued, it was priced, and the door looked like
+a banking app. Questions four and five.
+
+**Penn women's swimming.** Lia Thomas swam three seasons on the University of
+Pennsylvania men's team, then joined the women's team for 2021–22 under the NCAA
+rules of the day and won a national title. Penn and the Ivy League issued
+statements of support first. The objections came afterward and came masked:
+sixteen teammates sent theirs anonymously, reportedly for fear of retaliation,
+and one later testified to Congress that swimmers were offered counseling and
+told they would regret talking to the media. Nobody banned objecting. It just had
+a price if you did it under your own name. Then the face moved. The NCAA changed
+its rules in 2025, and on 1 July 2025 Penn
+[agreed](https://www.thedp.com/article/2025/07/penn-federal-government-title-ix-settlement)
+to restore records to the female swimmers and apologize to each of them, after
+$175 million in federal funding was paused. The outcome had been legal under the
+rules as written, which is why the real question was always who wrote the rules.
+Questions one, two and four.
+
+**San José State volleyball.** The university told its coaches not to tell the
+players that a teammate, Blaire Fleming, was transgender, and cited
+privacy law when asked. Teammates who shared rooms and road trips were the last
+to know. When an allegation surfaced that Fleming had discussed a plan to get the
+co-captain hit, the conference investigated through the same law firm defending
+it in the players' lawsuit, found "insufficient evidence," and closed the matter.
+Fleming denied it, and the finding was insufficient evidence, not that the story
+was false. An assistant coach who filed a complaint was suspended three days
+later. Five schools refused to play, and each refusal went into the standings as
+a loss. In 2026 the Department of Education found a violation. San José State
+[sued](https://blogs.sjsu.edu/newsroom/2026/ocr-titleix-lawsuit/) rather than
+settle. It is the Penn funding lever again, this time resisted. Questions one,
+two and four.
+
+**The anthem protests.** After President Trump said in September 2017 that
+owners should fire players who knelt, more than 200 players knelt or sat that
+Sunday. In the stadiums much of the crowd booed. The country was split: an
+[ESPN poll](https://www.espn.com/nfl/story/_/id/20858557/espn-survey-shows-americans-interested-divided-nfl-protests-national-anthem)
+that week found 51% disapproving and 39% approving, with avid fans nearly even.
+So the stadium and the broadcast were two different events, and television chose
+which one became the event. CBS and Fox aired the anthem live that Sunday, which
+they normally didn't, and by 2018 the networks had stopped showing it at all. The
+kneel became the national picture, and then the picture, boos included, went
+away. Nike's 2018 ad, "Believe in something. Even if it means sacrificing
+everything," recast a quarterback who had opted out of his contract as a martyr.
+In December 2020 Ben & Jerry's launched a flavor in his honor, and his statement
+hoped it would "amplify calls to defund and abolish the police." Nike sold
+sacrifice. Ben & Jerry's sold a political program and called it ice cream. Watch
+the menu narrow: from "police shootings should be scrutinized," which many fans
+would agree with, to "abolish the police," which most would not. Kneel with us or
+you stand for brutality. The lens takes no side on policing. It asks who got to
+define the Sunday. Questions two and three.
+
 ## How to use it
 
 Ask the five questions in order, then read the answers together.
