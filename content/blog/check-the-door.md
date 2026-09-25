@@ -130,8 +130,9 @@ volleyball coaches not to tell the players that a teammate was transgender, and
 cited privacy law when asked, so the women sharing rooms on road trips were the
 last to know. In 2024, when an allegation surfaced involving the team, the
 Mountain West investigated through the same law firm defending it in the
-players' lawsuit and found "insufficient evidence." An assistant coach who filed
-a complaint was suspended three days later. Five schools refused to play, and
+players' lawsuit and found "insufficient evidence." The associate head coach
+who filed a complaint was pulled from the team four days later and not renewed;
+the head coach, who faced a complaint too, stayed. Five schools refused to play, and
 each refusal was booked as a loss in the standings. Run question one: who chose
 the investigator? Then question four: nobody banned objecting, but the standings
 and the coach's job both charged for it.

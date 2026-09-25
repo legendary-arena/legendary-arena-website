@@ -289,8 +289,12 @@ to know. When an allegation surfaced that Fleming had discussed a plan to get th
 co-captain hit, the conference investigated through the same law firm defending
 it in the players' lawsuit, found "insufficient evidence," and closed the matter.
 Fleming denied it, and the finding was insufficient evidence, not that the story
-was false. An assistant coach who filed a complaint was suspended three days
-later. Five schools refused to play, and each refusal went into the standings as
+was false. The associate head coach, Melissa Batie-Smoose, filed a Title IX
+complaint in late October 2024 and was pulled from the team four days later,
+just before a match, with only the word that she was "not with the team at this
+time." The reason later given was a student-privacy breach, which her lawyer
+denies. Her contract was not renewed, and she is suing. The head coach, who
+faced a complaint too, stayed. Five schools refused to play, and each refusal went into the standings as
 a loss. In 2026 the Department of Education found a violation. San José State
 [sued](https://blogs.sjsu.edu/newsroom/2026/ocr-titleix-lawsuit/) rather than
 settle. It is the Penn funding lever again, this time resisted. Questions one,
