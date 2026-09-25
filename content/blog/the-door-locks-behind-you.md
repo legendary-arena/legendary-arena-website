@@ -157,6 +157,22 @@ street and she strikes back. The facts are simple, and the outcome is decided
 entirely by whose testimony counts. Javert does not investigate, because he
 does not need to. Question two does all the work.
 
+**The Battle of the Sexes.** It wasn't the first match between a man and a
+woman, but it was the most famous, the most televised, and the most touted. In
+1973, before a commonly cited 90 million viewers, Billie Jean King, 29, beat
+Bobby Riggs, a 55-year-old former champion, in straight sets. King talked about
+respect and equal pay. The picture the broadcast left was bigger: no difference.
+Two results never became that picture. Four months earlier, Riggs had beaten
+Margaret Court, one of the top two women in the world, 6–2, 6–1. And in 1998 a
+German player ranked 203rd, Karsten Braasch, beat Venus and Serena Williams one
+set each, 6–1 and 6–2, after the teenage sisters said they could beat any man
+outside the top 200. Nothing was hidden. It just never made the national
+picture. That is question three working by selection instead of silence.
+
+{{< youtube id="-AptRn1YFks" start="580" loading="lazy" title="FOUR TIMES that Men and Women Faced Off in Tennis" >}}
+
+*CULT TENNIS, ["FOUR TIMES that Men and Women Faced Off in Tennis"](https://www.youtube.com/watch?v=-AptRn1YFks&t=580s), starting at 9:40.*
+
 **The benefits cliff.** This is the hardest case, because it is a soft lock with
 nobody guarding the door. A family on assistance works out, correctly, that the
 raise, the extra shift, or the marriage would cost them more in lost benefits
