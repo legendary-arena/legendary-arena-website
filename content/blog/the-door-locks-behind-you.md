@@ -179,6 +179,10 @@ picture. That is question three working by selection instead of silence.
 
 *CULT TENNIS, ["FOUR TIMES that Men and Women Faced Off in Tennis"](https://www.youtube.com/watch?v=-AptRn1YFks&t=580s), starting at 9:40.*
 
+{{< youtube id="jGRIf7e6fP0" loading="lazy" title="Martina Navratilova vs Jimmy Connors - Highlights" >}}
+
+*Connors vs. Navratilova, Las Vegas, 25 September 1992: [highlights](https://www.youtube.com/watch?v=jGRIf7e6fP0) (fan upload), or the [full match](https://www.youtube.com/watch?v=X-orrW1CDNQ).*
+
 **The benefits cliff.** This is the hardest case, because it is a soft lock with
 nobody guarding the door. A family on assistance works out, correctly, that the
 raise, the extra shift, or the marriage would cost them more in lost benefits
