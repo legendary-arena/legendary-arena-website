@@ -147,8 +147,30 @@ nobody guarding the door. A family on assistance works out, correctly, that the
 raise, the extra shift, or the marriage would cost them more in lost benefits
 than it pays. Nobody forbids them to leave. The arithmetic keeps them in. There
 is no oppressor to point at, which is exactly why it holds. The fix is a taper
-instead of a cliff. And the test is simple: watch who opposes the reform, not who
-says they care.
+instead of a cliff, where benefits shrink gradually as earnings rise. It has
+been tried, and the record of who fought it is worth reading.
+
+In 1969 Richard Nixon proposed the Family Assistance Plan: a floor of $1,600 for
+a family of four, the first $720 of earnings kept in full, and benefits withdrawn
+at fifty cents for each dollar earned after that. It passed the House twice and
+died in the Senate Finance Committee both times. The opposition came from both
+sides at once. The National Welfare Rights Organization, led by George Wiley,
+called it too stingy and demanded $5,500 with no work requirement. Senate
+Finance chairman Russell Long and the committee's conservatives called it a
+drain on the treasury and swapped in a workfare plan. And by the account of
+Daniel Patrick Moynihan, who designed it, the welfare professionals who ran the
+old system resisted it as well.
+
+Britain built the taper anyway. Universal Credit, launched by Iain Duncan Smith
+in 2010, merged six benefits into one payment withdrawn at a single rate of 65%.
+In 2015 George Osborne's Treasury announced a £3.2 billion cut, much of it by
+shrinking the earnings a claimant keeps before the taper begins, which is the
+very part that makes work pay. Labour's 2019 manifesto promised to scrap the
+program entirely. The taper survived both, and was cut to 55% in 2021. (Most of
+the charity criticism, from groups like the Trussell Trust, was aimed at the
+five-week wait for a first payment, not at the taper.)
+
+So the test is simple: watch who opposes the reform, not who says they care.
 
 ## How to use it
 
