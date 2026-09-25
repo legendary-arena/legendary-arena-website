@@ -95,9 +95,10 @@ each, with sources, is in
 **A match that became a picture.** In 1973, before a commonly cited 90 million
 viewers, Billie Jean King beat Bobby Riggs, a 55-year-old former champion. The
 broadcast left a picture: no difference between men and women. Riggs had beaten
-one of the world's top two women, Margaret Court, four months earlier, and in 1998 a
-man ranked 203rd beat both teenage Williams sisters in a set each. Neither result
-became the picture. Run question three: nothing was hidden, it just wasn't
+one of the world's top two women, Margaret Court, four months earlier. In 1992
+Jimmy Connors beat Martina Navratilova 7–5, 6–2 while playing with one serve
+against her wider court. And in 1998 a man ranked 203rd beat both teenage
+Williams sisters in a set each. None of those results became the picture. Run question three: nothing was hidden, it just wasn't
 chosen.
 
 {{< youtube id="-AptRn1YFks" start="580" loading="lazy" title="FOUR TIMES that Men and Women Faced Off in Tennis" >}}
