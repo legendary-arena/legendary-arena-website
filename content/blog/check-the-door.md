@@ -83,13 +83,26 @@ signing the note carries nearly all of it. The diagnostic from the last essay
 still applies: watch who resists proposals that would make schools share the
 loss when their loans go unpaid.
 
-## Six more, from the news
+## Seven more, from the news
 
 The five above are slow arrangements, built over decades. The lens works just as
-well on events that happened in a few weeks. Here are six from recent years, one
-short paragraph each, with the question that does the work. The full version of
+well on events that happened in a few weeks. Here are seven, one from 1973 and
+six from recent years, one short paragraph each, with the question that does the
+work. The full version of
 each, with sources, is in
 [The Door Locks Behind You](/blog/the-door-locks-behind-you/#recent-cases).
+
+**A match that became a picture.** In 1973, before a commonly cited 90 million
+viewers, Billie Jean King beat Bobby Riggs, a 55-year-old former champion. The
+broadcast left a picture: no difference between men and women. Riggs had beaten
+one of the world's top two women, Margaret Court, four months earlier, and in 1998 a
+man ranked 203rd beat both teenage Williams sisters in a set each. Neither result
+became the picture. Run question three: nothing was hidden, it just wasn't
+chosen.
+
+{{< youtube id="-AptRn1YFks" start="580" loading="lazy" title="FOUR TIMES that Men and Women Faced Off in Tennis" >}}
+
+*CULT TENNIS, ["FOUR TIMES that Men and Women Faced Off in Tennis"](https://www.youtube.com/watch?v=-AptRn1YFks&t=580s), starting at 9:40.*
 
 **A paper that closed a question.** In March 2020 a group of virologists
 published a paper in *Nature Medicine* saying no laboratory scenario was
@@ -124,7 +137,7 @@ and only one of them was allowed to be *the* event.
 
 ## Now run it on something you love
 
-Eleven arrangements, and not one of them needed a villain. Each is held in place
+Twelve arrangements, and not one of them needed a villain. Each is held in place
 by a seat, a scope, or a door that is expensive to walk back through.
 
 It would be easy to stop here, with five examples comfortably outside your own
