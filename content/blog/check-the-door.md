@@ -105,6 +105,10 @@ chosen.
 
 *CULT TENNIS, ["FOUR TIMES that Men and Women Faced Off in Tennis"](https://www.youtube.com/watch?v=-AptRn1YFks&t=580s), starting at 9:40.*
 
+{{< youtube id="jGRIf7e6fP0" loading="lazy" title="Martina Navratilova vs Jimmy Connors - Highlights" >}}
+
+*Connors vs. Navratilova, Las Vegas, 25 September 1992: [highlights](https://www.youtube.com/watch?v=jGRIf7e6fP0) (fan upload), or the [full match](https://www.youtube.com/watch?v=X-orrW1CDNQ).*
+
 **A paper that closed a question.** In March 2020 a group of virologists
 published a paper in *Nature Medicine* saying no laboratory scenario was
 "plausible." Their private messages, released in 2023, show they took a lab
