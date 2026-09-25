@@ -160,13 +160,19 @@ does not need to. Question two does all the work.
 **The Battle of the Sexes.** It wasn't the first match between a man and a
 woman, but it was the most famous, the most televised, and the most touted. In
 1973, before a commonly cited 90 million viewers, Billie Jean King, 29, beat
-Bobby Riggs, a 55-year-old former champion, in straight sets. King talked about
-respect and equal pay. The picture the broadcast left was bigger: no difference.
-Two results never became that picture. Four months earlier, Riggs had beaten
-Margaret Court, one of the top two women in the world, 6–2, 6–1. And in 1998 a
-German player ranked 203rd, Karsten Braasch, beat Venus and Serena Williams one
-set each, 6–1 and 6–2, after the teenage sisters said they could beat any man
-outside the top 200. Nothing was hidden. It just never made the national
+Bobby Riggs, a 55-year-old former champion, in straight sets, under standard
+rules with no handicap. Beforehand, an 18-year-old Chris Evert said she expected
+Riggs to win, on plain logic: he had just beaten the world No. 1. "Why would you
+lose to her when you beat the world no. 1?" She was criticized for saying it.
+King talked about respect and equal pay. The picture the broadcast left was
+bigger: no difference. Three results never became that picture. Four months
+earlier, Riggs had beaten Margaret Court, one of the top two women in the world,
+6–2, 6–1. In 1992, Jimmy Connors, 40, played Martina Navratilova under rules
+built to even it: he got one serve per point, and she could hit into half of
+each doubles alley. He won 7–5, 6–2. And in 1998 a German player ranked 203rd,
+Karsten Braasch, beat Venus and Serena Williams one set each, 6–1 and 6–2, after
+the teenage sisters said they could beat any man outside the top 200. Nothing was
+hidden. It just never made the national
 picture. That is question three working by selection instead of silence.
 
 {{< youtube id="-AptRn1YFks" start="580" loading="lazy" title="FOUR TIMES that Men and Women Faced Off in Tennis" >}}
