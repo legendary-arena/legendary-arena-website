@@ -133,6 +133,15 @@ later, which had subpoena power and its own staff, and found real abuses. The
 lens does not need a theory of who killed Kennedy. It only asks who set the
 scope.
 
+For the longer story, David Talbot's
+[*The Devil's Chessboard*](https://www.harpercollins.ca/9780062276179/the-devils-chessboard/)
+(2015) makes the case against Dulles at book length, and Robert F. Kennedy Jr.
+tells his family's version on
+[Glenn Beck's program](https://www.theblaze.com/shows/the-glenn-beck-program/jfk)
+(May 2024). Both go further than the lens does. They name the man and then load
+the seat with the crime. Read them for the structure, and sort every claim into
+two piles: what the record settles, and what the author infers.
+
 **The Reichstag fire.** Historians still argue about who set it. What nobody
 argues about is that the crisis, the culprit and the cure (an emergency decree
 suspending civil liberties the next day) arrived as one package from one hand.
