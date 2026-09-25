@@ -83,9 +83,48 @@ signing the note carries nearly all of it. The diagnostic from the last essay
 still applies: watch who resists proposals that would make schools share the
 loss when their loans go unpaid.
 
+## Six more, from the news
+
+The five above are slow arrangements, built over decades. The lens works just as
+well on events that happened in a few weeks. Here are six from recent years, one
+short paragraph each, with the question that does the work. The full version of
+each, with sources, is in
+[The Door Locks Behind You](/blog/the-door-locks-behind-you/#recent-cases).
+
+**A paper that closed a question.** In March 2020 a group of virologists
+published a paper in *Nature Medicine* saying no laboratory scenario was
+"plausible." Their private messages, released in 2023, show they took a lab
+origin far more seriously than the paper did. Run question two: whose seal ended
+the argument? A top journal's, which no blog could match.
+
+**A letter from former spies.** Days before the 2020 election, fifty-one former
+intelligence officials said the Hunter Biden laptop story looked like Russian
+disinformation, while admitting they had no evidence it was. The man who
+organized the letter later testified he wanted to help the campaign win. Run
+question two again: the title did the work, not the evidence.
+
+**A bank app as a door.** In 2022 Canada let banks freeze the accounts of
+convoy protesters without a court order. Two courts later ruled it unlawful.
+Run question five: leaving the protest was not argued, it was priced.
+
+**A price on objecting.** At Penn in 2022, swimmers who objected to a
+transgender teammate did it anonymously, for fear of what it would cost them.
+Nobody banned speaking up. Run question four: what happens to the person who says
+no under their own name?
+
+**An investigation by the defense.** In 2024 the Mountain West looked into an
+allegation involving San José State's volleyball team, hired the same law firm
+defending it in the players' lawsuit, and found "insufficient evidence." Run
+question one: who chose the investigator?
+
+**A broadcast that picked the event.** In 2017 stadium crowds booed kneeling
+players while television made the kneel the national picture, then stopped
+showing the anthem at all. Run question three: two events happened that Sunday,
+and only one of them was allowed to be *the* event.
+
 ## Now run it on something you love
 
-Five arrangements, and not one of them needed a villain. Each is held in place
+Eleven arrangements, and not one of them needed a villain. Each is held in place
 by a seat, a scope, or a door that is expensive to walk back through.
 
 It would be easy to stop here, with five examples comfortably outside your own
