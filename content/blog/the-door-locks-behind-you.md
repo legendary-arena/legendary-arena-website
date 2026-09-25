@@ -127,7 +127,7 @@ a search. It was an instrument, with questions one and two answered before it
 ever sat.
 
 **The Warren Commission.** Allen Dulles sat on it, the same CIA director Kennedy
-had fired after the Bay of Pigs, and the Commission depended for its evidence on
+had forced out after the Bay of Pigs, and the Commission depended for its evidence on
 the agencies it was supposed to examine. Compare the Church Committee a decade
 later, which had subpoena power and its own staff, and found real abuses. The
 lens does not need a theory of who killed Kennedy. It only asks who set the
