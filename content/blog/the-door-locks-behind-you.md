@@ -295,7 +295,14 @@ just before a match, with only the word that she was "not with the team at this
 time." The reason later given was a student-privacy breach, which her lawyer
 denies. Her contract was not renewed, and she is suing. The head coach, who
 faced a complaint too, stayed. Five schools refused to play, and each refusal went into the standings as
-a loss. In 2026 the Department of Education found a violation. San José State
+a loss. The co-captain, Brooke Slusser, went to court. In November 2024 she and
+eleven other players sued the conference and the university and asked a judge to
+keep Fleming out of the conference tournament. The judge said no on 25 November,
+an appeals court agreed the next day, and the tournament went ahead. In March
+2026 the court dismissed the claims against the conference and put the rest on
+hold until the Supreme Court ruled on a related case, which it did in June 2026,
+upholding state laws that limit women's teams to biological females. By then the
+season the players had asked the court to protect had long been played. In 2026 the Department of Education found a violation. San José State
 [sued](https://blogs.sjsu.edu/newsroom/2026/ocr-titleix-lawsuit/) rather than
 settle. It is the Penn funding lever again, this time resisted. Questions one,
 two and four.
