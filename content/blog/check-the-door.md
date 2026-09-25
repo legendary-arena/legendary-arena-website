@@ -101,6 +101,10 @@ against her wider court. And in 1998 a man ranked 203rd beat both teenage
 Williams sisters in a set each. None of those results became the picture. Run question three: nothing was hidden, it just wasn't
 chosen.
 
+{{< youtube id="7PsmoaPRAOk" start="1531" loading="lazy" title="Billie Jean King vs Bobby Riggs, 20 September 1973" >}}
+
+*King vs. Riggs, Houston Astrodome, 20 September 1973: the [restored KABC broadcast](https://www.youtube.com/watch?v=7PsmoaPRAOk&t=1531s) from the first serve (fan upload; this recording covers the first set), or the [complete ABC special](https://www.youtube.com/watch?v=qqB3yi8MVbQ).*
+
 {{< youtube id="-AptRn1YFks" start="580" loading="lazy" title="FOUR TIMES that Men and Women Faced Off in Tennis" >}}
 
 *CULT TENNIS, ["FOUR TIMES that Men and Women Faced Off in Tennis"](https://www.youtube.com/watch?v=-AptRn1YFks&t=580s), starting at 9:40.*

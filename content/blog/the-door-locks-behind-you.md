@@ -175,6 +175,10 @@ the teenage sisters said they could beat any man outside the top 200. Nothing wa
 hidden. It just never made the national
 picture. That is question three working by selection instead of silence.
 
+{{< youtube id="7PsmoaPRAOk" start="1531" loading="lazy" title="Billie Jean King vs Bobby Riggs, 20 September 1973" >}}
+
+*King vs. Riggs, Houston Astrodome, 20 September 1973: the [restored KABC broadcast](https://www.youtube.com/watch?v=7PsmoaPRAOk&t=1531s) from the first serve (fan upload; this recording covers the first set), or the [complete ABC special](https://www.youtube.com/watch?v=qqB3yi8MVbQ).*
+
 {{< youtube id="-AptRn1YFks" start="580" loading="lazy" title="FOUR TIMES that Men and Women Faced Off in Tennis" >}}
 
 *CULT TENNIS, ["FOUR TIMES that Men and Women Faced Off in Tennis"](https://www.youtube.com/watch?v=-AptRn1YFks&t=580s), starting at 9:40.*
