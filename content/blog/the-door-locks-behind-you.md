@@ -40,17 +40,28 @@ exploitation. Motive is invisible. It is also the easiest thing in the world to
 argue about forever. Effect is on the table. So don't ask what the people
 running an arrangement intend. Ask what the arrangement *does*.
 
+It also helps to stop picturing the Mastermind as a man. Think of it as a
+**seat**: a position in a structure that somebody occupies for a while. The
+questions below find the seat. They never need to name whoever is sitting in it.
+
 ## Five questions, upstream to downstream
 
-1. **Who decides what gets investigated?** Controlling the inquiry comes before
-   controlling the story. Whatever never gets examined can never be found.
-2. **Who is trusted to report it?** Credibility is a lever. The council that
-   brought Jesus before Pilate did not need a better argument. They needed to be
-   the ones speaking.
-3. **Who controls the story?** A Mastermind never wins by argument. He wins by
-   making the counter-argument unsayable.
-4. **What happens to the person who says no?** That is the enforcement layer.
-5. **What does it cost to leave?** That is the door lock.
+1. **Who decides what gets investigated?** Control of the question comes before
+   control of the answer. An inquiry that is not allowed to look in one
+   direction has already chosen what it will find.
+2. **Who is trusted to report it?** Credibility is a lever. The question is not
+   whether the reporter is truthful but who has the standing to define what
+   happened for everyone else. The council that brought Jesus before Pilate did
+   not need a better argument. They needed to be the ones speaking.
+3. **Who controls what may be said?** A Mastermind seldom wins by argument. He
+   wins by making the counter-argument unsayable. Not refuted: unsayable.
+4. **What happens to the person who says no?** That is the enforcement layer,
+   whether legal, economic, social, or only reputational. Watch the first person
+   who declines, not the official who explains.
+5. **What does it cost to leave?** That is the door lock. A healthy arrangement
+   can survive people walking out. An unhealthy one makes leaving steadily more
+   expensive. If exit is allowed on paper and ruinous in practice, the lock is
+   working.
 
 The order matters. The earlier a question sits in the list, the earlier its
 answer settles everything after it. Control who investigates, and you rarely
@@ -75,10 +86,13 @@ A few mechanisms keep showing up once you start looking.
 
 **The cost of checking is the lock.** No one forbids you to verify the claim.
 Checking it simply costs more time than anyone has. Making a claim takes a press
-release. Refuting it takes months in an archive.
+release. Refuting it takes months in an archive. That imbalance is censorship
+that never has to say "forbidden."
 
-**Authority laundering.** "The commission found" ends arguments. The endorsement
-does work that no argument could do.
+**Authority laundering.** "The commission found" ends arguments. Sometimes the
+finding is sound. The test is how much of the work is being done by the evidence
+and how much by the seal stamped on it. Once a finding is official, disagreeing
+with it gets treated as a character flaw instead of a reading of the evidence.
 
 **The manufactured choice.** "Whom will ye that I release unto you? Barabbas, or
 Jesus?" (Matthew 27:17). Two options, framed as if that were the whole menu. At
@@ -87,7 +101,8 @@ cardboard. The heroes win when they refuse the two boxes.
 
 **It runs on your virtues, not your vices.** Compassion, fairness, loyalty,
 protecting children. Those are the handles a scheme grabs, because they are the
-ones you will not want to let go of.
+ones you will not want to let go of. A vice can be refused. A virtue used as a
+lever is much harder to drop.
 
 **The seat stays; the occupant rotates.** The economist Vilfredo Pareto called
 history "a graveyard of aristocracies." Each new ruler arrives promising to end
@@ -98,30 +113,34 @@ Khomeini. The Mastermind slot is fixed. Only the name on the card changes.
 ## The lens at work
 
 History does this over and over. Run a few cases through the five questions and
-the pattern shows.
+the pattern shows. Read each one as architecture, not as a courtroom verdict.
 
 **Katyn.** The Soviet Union investigated its own massacre of Polish officers,
 staffed the commission itself, and blamed the Germans. The investigation was not
-a search. It was an instrument, and question one settled it.
+a search. It was an instrument, with questions one and two answered before it
+ever sat.
 
 **The Warren Commission.** Allen Dulles sat on it, the same CIA director Kennedy
 had fired after the Bay of Pigs, and the Commission depended for its evidence on
 the agencies it was supposed to examine. Compare the Church Committee a decade
 later, which had subpoena power and its own staff, and found real abuses. The
-difference between the two lay in who set the scope.
+lens does not need a theory of who killed Kennedy. It only asks who set the
+scope.
 
 **The Reichstag fire.** Historians still argue about who set it. What nobody
 argues about is that the crisis, the culprit and the cure (an emergency decree
 suspending civil liberties the next day) arrived as one package from one hand.
+Questions one and three, answered at once.
 
 **Pilate.** Pilate ran an honest inquiry and found no fault in Jesus. He still
 did not control the scope. "If thou let this man go, thou art not Caesar's
-friend" (John 19:12). That is the soft lock, closing on the judge himself.
+friend" (John 19:12). That is the soft lock, closing on the judge himself. The
+man with the power to acquit found out that acquittal had a price.
 
 **Fantine.** In *Les Misérables*, a gentleman torments a desperate woman in the
 street and she strikes back. The facts are simple, and the outcome is decided
 entirely by whose testimony counts. Javert does not investigate, because he
-does not need to.
+does not need to. Question two does all the work.
 
 **The benefits cliff.** This is the hardest case, because it is a soft lock with
 nobody guarding the door. A family on assistance works out, correctly, that the
@@ -130,6 +149,19 @@ than it pays. Nobody forbids them to leave. The arithmetic keeps them in. There
 is no oppressor to point at, which is exactly why it holds. The fix is a taper
 instead of a cliff. And the test is simple: watch who opposes the reform, not who
 says they care.
+
+## How to use it
+
+Ask the five questions in order, then read the answers together.
+
+If the first three answers point to the same seat, you are looking at design,
+not weather. If leaving is expensive and nobody ever seems to say no, the soft
+lock is already doing the hard lock's job. And if the arrangement can swap out
+its people without changing any of the five answers, you have found the seat,
+not the man.
+
+The lens is working when it can describe a prison camp and a benefits schedule
+with the same five questions, and does not have to raise its voice for either.
 
 ## What the lens will not do
 
