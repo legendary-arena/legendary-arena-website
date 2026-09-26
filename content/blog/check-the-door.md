@@ -83,11 +83,11 @@ signing the note carries nearly all of it. The diagnostic from the last essay
 still applies: watch who resists proposals that would make schools share the
 loss when their loans go unpaid.
 
-## Seven more, from the news
+## Eight more, from the news
 
 The five above are slow arrangements, built over decades. The lens works just as
-well on events that happened in a few weeks. Here are seven, one from 1973 and
-six from recent years, one short paragraph each, with the question that does the
+well on events that happened in a few weeks. Here are eight, one from 1973 and
+seven from recent years, one short paragraph each, with the question that does the
 work. The full version of
 each, with sources, is in
 [The Door Locks Behind You](/blog/the-door-locks-behind-you/#recent-cases).
@@ -148,6 +148,12 @@ tournament was played before any court heard the merits. Run question one: who c
 the investigator? Then question four: nobody banned objecting, but the standings
 and the coach's job both charged for it.
 
+**A trade with one box.** In 2022 the United States traded Viktor Bout, the
+arms dealer called the "Merchant of Death," for Brittney Griner, and left Paul
+Whelan, a Marine veteran held since 2018, in a Russian prison. The official
+explanation was that the choice was one American or none. Run question one: who
+set that menu? Whelan waited until 2024.
+
 **A broadcast that picked the event.** In 2017 stadium crowds booed kneeling
 players while television made the kneel the national picture, then stopped
 showing the anthem at all. Run question three: two events happened that Sunday,
@@ -155,7 +161,7 @@ and only one of them was allowed to be *the* event.
 
 ## Now run it on something you love
 
-Twelve arrangements, and not one of them needed a villain. Each is held in place
+Thirteen arrangements, and not one of them needed a villain. Each is held in place
 by a seat, a scope, or a door that is expensive to walk back through.
 
 It would be easy to stop here, with five examples comfortably outside your own
