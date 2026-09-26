@@ -321,6 +321,28 @@ season the players had asked the court to protect had long been played. In 2026 
 settle. It is the Penn funding lever again, this time resisted. Questions one,
 two and four.
 
+**The WNBA's undefined word.** The league's 2026 labor agreement says only that
+"only players who are women are eligible to play in the WNBA." It never defines
+"woman" and sets no process for deciding. In August 2026 two former NBA players
+tested that on purpose. Enes Kanter Freedom declared for the draft ("Rules are
+rules!"), and Royce White followed with a formal filing signed by his lawyer.
+Both were plainly protest stunts, but a stunt can still expose a real hole. The
+league sent the question to a task force of its own team executives, then
+announced there were "no immediate eligibility matters" and would not say how
+it reached that. There was no outside review and no published test. Instead of
+answering, it described the askers: "we strongly denounce the bad-faith efforts
+to use these topics to demean or marginalize others." That judges motive, not
+effect. The same gap cuts the other way. Brittney Griner has faced years of
+suspicion that she is not a woman, resting on her 6'9" height, her strength and
+her deep voice. No public record shows she is anything but female, and without a
+standard the suspicion can be neither confirmed nor put to rest. Whatever
+defines "woman" should be written down, applied to every player, and checked by
+someone outside the league. The league has run a Pride campaign since 2014 and
+says it has no eligibility question; those facts don't conflict. What's missing
+is the method. And the seat is turning over: Commissioner Cathy Engelbert
+announced in September 2026 that she will retire at year's end. Questions one,
+two and three.
+
 **The Bout swap.** In 2022 two Americans sat in Russian prisons. Paul Whelan,
 a former Marine who left the service with a bad-conduct discharge in 2008, had
 been held since 2018 on a 16-year espionage sentence. Brittney Griner had been
