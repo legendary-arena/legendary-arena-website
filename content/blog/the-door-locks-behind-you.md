@@ -382,7 +382,16 @@ games, and that same season named Griner Defensive Player of the Year for the
 second straight time. The marriage lasted 28 days. The day after Johnson
 announced a twin pregnancy through IVF, Griner filed to annul it; a judge
 refused, and it ended in divorce in 2016, with Griner ordered to pay child
-support. In July 2026 Griner filed for divorce again, from Cherelle Griner, who
+support. Read that by effect, not motive. A divorce ends a valid marriage and
+carries its obligations with it. An annulment says the marriage never legally
+existed. The twins were conceived with donor sperm, so they were neither
+biologically Griner's nor adopted; what tied Griner to them was the marriage,
+since a spouse is presumed the parent of a child born during it. Arizona's
+Supreme Court confirmed that presumption for same-sex spouses in 2017. An
+annulment filed the day after the pregnancy announcement would have cut that
+tie. The court refused it and imposed exactly the obligation it would have
+erased. Griner's stated grounds were fraud and duress, and the motive can't be
+known from outside. The effect can. In July 2026 Griner filed for divorce again, from Cherelle Griner, who
 had led the campaign to bring Griner home. In December 2022 Griner was traded for Viktor Bout, the arms dealer called the
 "Merchant of Death," and Whelan stayed behind. An administration official said
 the choice was between "one particular American" or "none." That is the
