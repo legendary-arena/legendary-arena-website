@@ -282,7 +282,10 @@ lock: leaving the protest was not argued, it was priced, and the door looked lik
 a banking app. Questions four and five.
 
 **Penn women's swimming.** Lia Thomas swam three seasons on the University of
-Pennsylvania men's team, then joined the women's team for 2021–22 under the NCAA
+Pennsylvania men's team as Will Thomas, the name on Penn's men's roster, and
+finished second in three distance events at the 2019 Ivy League championships.
+Thomas, born in May 1999, began hormone therapy in May 2019, at 19 or 20, then
+joined the women's team for 2021–22 under the NCAA
 rules of the day and won a national title. Penn and the Ivy League issued
 statements of support first. The objections came afterward and came masked:
 sixteen teammates sent theirs anonymously, reportedly for fear of retaliation,
@@ -296,8 +299,10 @@ $175 million in federal funding was paused. The outcome had been legal under the
 rules as written, which is why the real question was always who wrote the rules.
 Questions one, two and four.
 
-**San José State volleyball.** The university told its coaches not to tell the
-players that a teammate, Blaire Fleming, was transgender, and cited
+**San José State volleyball.** Blaire Fleming began socially transitioning at
+14; some outlets report a birth name of Brayden, which no primary record we
+found confirms. The university told its coaches not to tell the players that
+Fleming was transgender, and cited
 privacy law when asked. Teammates who shared rooms and road trips were the last
 to know. When an allegation surfaced that Fleming had discussed a plan to get the
 co-captain hit, the conference investigated through the same law firm defending
@@ -323,25 +328,23 @@ two and four.
 
 **The WNBA's undefined word.** The league's 2026 labor agreement says only that
 "only players who are women are eligible to play in the WNBA." It never defines
-"woman" and sets no process for deciding. In August 2026 two former NBA players
-tested that on purpose. Enes Kanter Freedom declared for the draft ("Rules are
-rules!"), and Royce White followed with a formal filing signed by his lawyer.
-Both were plainly protest stunts, but a stunt can still expose a real hole. The
-league sent the question to a task force of its own team executives, then
-announced there were "no immediate eligibility matters" and would not say how
-it reached that. There was no outside review and no published test. Instead of
-answering, it described the askers: "we strongly denounce the bad-faith efforts
-to use these topics to demean or marginalize others." That judges motive, not
-effect. The same gap cuts the other way. Brittney Griner has faced years of
-suspicion that she is not a woman, resting on her 6'9" height, her strength and
-her deep voice. No public record shows she is anything but female, and without a
-standard the suspicion can be neither confirmed nor put to rest. Whatever
-defines "woman" should be written down, applied to every player, and checked by
-someone outside the league. The league has run a Pride campaign since 2014 and
-says it has no eligibility question; those facts don't conflict. What's missing
-is the method. And the seat is turning over: Commissioner Cathy Engelbert
-announced in September 2026 that she will retire at year's end. Questions one,
-two and three.
+*woman* or says how eligibility is decided. In August 2026 two former NBA
+players, Enes Kanter Freedom and Royce White, tested that gap on purpose.
+Neither expected to play. The point was that the rule has no visible way of
+deciding who qualifies. The league sent the question to a task force of its own
+team executives, then announced there were "no immediate eligibility matters"
+and declined to say what standard it used. No independent review. No published
+test. The conclusion was public; the method was not. Instead of answering, the
+league condemned "bad-faith efforts to use these topics to demean or
+marginalize others." But the motives of the people asking are separate from the
+question. A rule can only be enforced consistently if the standard is known.
+The same gap shows up from the other direction. Brittney Griner has long faced
+public speculation about her sex, and the league has never stated a standard
+that could settle it either way, so neither her supporters nor her critics can
+point to an answer. One published standard, applied to every player, would
+resolve both cases at once. Commissioner Cathy Engelbert retires at the end of
+2026. The next commissioner should start there: state the standard, publish the
+procedure, and allow independent verification. Questions one, two and three.
 
 **The Bout swap.** In 2022 two Americans sat in Russian prisons. Paul Whelan,
 a former Marine who left the service with a bad-conduct discharge in 2008, had
