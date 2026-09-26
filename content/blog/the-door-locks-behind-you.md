@@ -340,13 +340,34 @@ marginalize others." But the motives of the people asking are separate from the
 question. A rule can only be enforced consistently if the standard is known.
 The same gap shows up from the other direction. Brittney Griner has long faced
 public speculation about Griner's sex. Part of it is height, 6'9", and part is
-the game itself: Griner holds the WNBA record with 27 of the roughly 38 dunks in
-league history, more than every other player combined. The league has never
+the game itself: Griner holds the WNBA record with 27 dunks, and no other player
+in league history has more than two. The league has never
 stated a standard that could settle the question either way, so neither
 Griner's supporters nor Griner's critics can point to an answer. One published standard, applied to every player, would
 resolve both cases at once. Commissioner Cathy Engelbert retires at the end of
 2026. The next commissioner should start there: state the standard, publish the
 procedure, and allow independent verification. Questions one, two and three.
+
+**Can Freedom and White follow the trail blazed by Griner?**
+
+| | Brittney Griner | Enes Kanter Freedom | Royce White |
+|---|---|---|---|
+| Listed height | 6'9" | 6'10" | 6'8" |
+| Draft | No. 1 overall, WNBA, 2013 | No. 3 overall, NBA, 2011 | No. 16, NBA, 2012 |
+| Pro career | WNBA since 2013 (Phoenix, Atlanta, Connecticut) | 11 NBA seasons, 2011–2022 | 3 NBA games, 2013–14; later NBL Canada, BIG3, MMA |
+| Titles | NCAA 2012 (Baylor); WNBA 2014 (Phoenix) | None | NBL Canada 2017 and 2018 (London) |
+| Olympic gold | 2016, 2020, 2024 | None | None |
+| All-Star selections | 10 (including an honorary 2022 selection while detained) | None | None |
+| Defensive Player of the Year | 2014, 2015 | None | None |
+| Blocks | WNBA career leader (since June 2026); 8 blocks titles | — | — |
+| Dunks | 27, the WNBA record; no other player has more than two | — | — |
+| Criminal record | 2015: pleaded guilty to disorderly conduct after a fight with fiancée Glory Johnson (diversion, 26 weeks of domestic-violence counseling). 2022: convicted in Russia of cannabis-oil possession, sentenced to nine years, freed in the Bout swap | Charged in absentia in Turkey (terrorism, insulting the president) after criticizing Erdoğan; Turkey sought an Interpol Red Notice. No U.S. arrests found | 2009: pleaded guilty to misdemeanor theft and disorderly conduct (Mall of America) |
+| Domestic-violence record | 2015 arrest; Johnson diagnosed with a concussion; seven-game league suspension | None found | 2026: civil protective order; a judge found abuse and threats against his ex-wife and teenage son (White denies it and is appealing) |
+| Support orders | Ordered in 2016 to pay child support for IVF twins | None found | Reported judgments of more than $100,000 in unpaid child support |
+| WNBA eligibility claim | Plays in the league | Declared for the 2027 draft as a protest, August 2026 | Declared for the 2027 draft with a formal filing, August 2026 |
+
+What the table cannot show is the one thing the league's rule requires: a
+definition.
 
 **The Bout swap.** In 2022 two Americans sat in Russian prisons. Paul Whelan,
 a former Marine who left the service with a bad-conduct discharge in 2008, had
