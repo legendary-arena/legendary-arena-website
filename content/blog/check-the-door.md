@@ -130,12 +130,14 @@ convoy protesters without a court order. Two courts later ruled it unlawful.
 Run question five: leaving the protest was not argued, it was priced.
 
 **A price on objecting.** At Penn in 2022, swimmers who objected to a
-transgender teammate did it anonymously, for fear of what it would cost them.
+transgender teammate, Lia Thomas, who had swum three seasons on the men's team
+as Will Thomas, did it anonymously, for fear of what it would cost them.
 Nobody banned speaking up. Run question four: what happens to the person who says
 no under their own name?
 
 **An investigation by the defense.** At San José State, the university told its
-volleyball coaches not to tell the players that a teammate was transgender, and
+volleyball coaches not to tell the players that a teammate, Blaire Fleming
+(reported by some outlets as born Brayden), was transgender, and
 cited privacy law when asked, so the women sharing rooms on road trips were the
 last to know. In 2024, when an allegation surfaced involving the team, the
 Mountain West investigated through the same law firm defending it in the
@@ -152,9 +154,10 @@ and the coach's job both charged for it.
 league to "players who are women" but never defines the word. When two former
 NBA players declared for the draft as a protest, the league had its own
 executives look into it, announced there was no eligibility question, and
-didn't say how it decided. Run question three: a rule too vague to argue with
-can't be tested, not by the protesters and not on behalf of a player like
-Brittney Griner, who has faced suspicion for years.
+didn't say what standard it used. Run question three: a rule that is never
+defined can't be tested by anyone, whether the protesters or the fans who have
+speculated for years about Brittney Griner. State the standard, publish the
+procedure, allow independent verification.
 
 **A trade with one box.** In 2022 the United States traded Viktor Bout, the
 arms dealer called the "Merchant of Death," for Brittney Griner, and left Paul
