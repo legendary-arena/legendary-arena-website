@@ -83,11 +83,11 @@ signing the note carries nearly all of it. The diagnostic from the last essay
 still applies: watch who resists proposals that would make schools share the
 loss when their loans go unpaid.
 
-## Eight more, from the news
+## Nine more, from the news
 
 The five above are slow arrangements, built over decades. The lens works just as
-well on events that happened in a few weeks. Here are eight, one from 1973 and
-seven from recent years, one short paragraph each, with the question that does the
+well on events that happened in a few weeks. Here are nine, one from 1973 and
+eight from recent years, one short paragraph each, with the question that does the
 work. The full version of
 each, with sources, is in
 [The Door Locks Behind You](/blog/the-door-locks-behind-you/#recent-cases).
@@ -148,6 +148,14 @@ tournament was played before any court heard the merits. Run question one: who c
 the investigator? Then question four: nobody banned objecting, but the standings
 and the coach's job both charged for it.
 
+**A rule with no definition.** The WNBA's 2026 labor agreement limits the
+league to "players who are women" but never defines the word. When two former
+NBA players declared for the draft as a protest, the league had its own
+executives look into it, announced there was no eligibility question, and
+didn't say how it decided. Run question three: a rule too vague to argue with
+can't be tested, not by the protesters and not on behalf of a player like
+Brittney Griner, who has faced suspicion for years.
+
 **A trade with one box.** In 2022 the United States traded Viktor Bout, the
 arms dealer called the "Merchant of Death," for Brittney Griner, and left Paul
 Whelan, a Marine veteran held since 2018, in a Russian prison. The official
@@ -161,7 +169,7 @@ and only one of them was allowed to be *the* event.
 
 ## Now run it on something you love
 
-Thirteen arrangements, and not one of them needed a villain. Each is held in place
+Fourteen arrangements, and not one of them needed a villain. Each is held in place
 by a seat, a scope, or a door that is expensive to walk back through.
 
 It would be easy to stop here, with five examples comfortably outside your own
