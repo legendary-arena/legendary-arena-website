@@ -321,6 +321,24 @@ season the players had asked the court to protect had long been played. In 2026 
 settle. It is the Penn funding lever again, this time resisted. Questions one,
 two and four.
 
+**The Bout swap.** In 2022 two Americans sat in Russian prisons. Paul Whelan,
+a former Marine who left the service with a bad-conduct discharge in 2008, had
+been held since 2018 on a 16-year espionage sentence. Brittney Griner had been
+caught with less than a gram of cannabis oil and sentenced to nine years. In
+December 2022 Griner was traded for Viktor Bout, the arms dealer called the
+"Merchant of Death," and Whelan stayed behind. An administration official said
+the choice was between "one particular American" or "none." That is the
+manufactured choice: one box or the empty box. Then each side read its own
+model American into the trade. Donald Trump called Griner "a basketball player
+who openly hates our Country"; she had said in 2020 she would not be on the
+court for the anthem. Kevin McCarthy called it "a gift to Vladimir Putin."
+Supporters saw a wrongfully held woman brought home. It wasn't a clean party
+split: the Democratic chairman of the Senate Foreign Relations Committee called
+freeing Bout "a deeply disturbing decision." The lens needs none of the
+symbolism. It asks who chose, what the price taught the seller, and why the
+other man waited. Whelan came home in August 2024, in a trade whose centerpiece
+for Moscow was a convicted assassin. Questions one, two and three.
+
 **The anthem protests.** After President Trump said in September 2017 that
 owners should fire players who knelt, more than 200 players knelt or sat that
 Sunday. In the stadiums much of the crowd booed. The country was split: an
