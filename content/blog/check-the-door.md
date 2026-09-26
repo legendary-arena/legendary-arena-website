@@ -162,9 +162,9 @@ procedure, allow independent verification.
 **A trade with one box.** In 2022 the United States traded Viktor Bout, the
 arms dealer called the "Merchant of Death," for Brittney Griner, a
 two-time Defensive Player of the Year with a 2015 disorderly-conduct plea after
-a fight with a fiancée, who had then tried to annul the 28-day marriage the day
-after a twin pregnancy was announced (a court refused, and ordered child
-support the annulment would have erased), and left Paul
+a fight with a fiancée, and a later attempt by Griner to annul the 28-day
+marriage the day after a twin pregnancy was announced (a court refused, and
+ordered child support the annulment would have erased), and left Paul
 Whelan, a Marine veteran held since 2018, in a Russian prison. The official
 explanation was that the choice was one American or none. Run question one: who
 set that menu? Whelan waited until 2024.
