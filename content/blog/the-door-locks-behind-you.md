@@ -97,7 +97,10 @@ with it gets treated as a character flaw instead of a reading of the evidence.
 **The manufactured choice.** "Whom will ye that I release unto you? Barabbas, or
 Jesus?" (Matthew 27:17). Two options, framed as if that were the whole menu. At
 the table it looks like "choose a class, KO the rest," a false dilemma printed on
-cardboard. The heroes win when they refuse the two boxes.
+cardboard. The heroes win when they refuse the two boxes. Its sharpest form is
+the straw man: the manufactured choice with the other box forged. The opponent
+is made to hold a claim she never made, usually the cruelest available, so that
+declining the official box looks like vice.
 
 **It runs on your virtues, not your vices.** Compassion, fairness, loyalty,
 protecting children. Those are the handles a scheme grabs, because they are the
@@ -369,6 +372,26 @@ procedure, and allow independent verification. Questions one, two and three.
 
 What the table cannot show is the one thing the league's rule requires: a
 definition.
+
+**The straw man in Minneapolis.** In July 2026, Indiana's Sophie Cunningham
+said she wanted "to protect young girls in a locker room, or young girls in
+sport who shouldn't have to go against biological men," and later, of the
+backlash: "I got a lot of negative feedback about me hating trans. And I'm like,
+'I never once said that.'" Minnesota coach Cheryl Reeve answered the phrasing on
+1 August: "It is not the case that we have, quote, biological men in girls'
+locker rooms, the way it's being phrased, the innuendo there that somehow
+transgender women are predators of some kind." The next day Reeve wore a "Trans
+Kids Belong" shirt, Cunningham was booed from her first touch, and rallies for
+and against her gathered outside. After the season finale on 24 September,
+Reeve said: "it's really an attack on all transgender community. They don't want
+transgender people to exist." She didn't name Cunningham. The frame did the work
+anyway. The dispute on the floor was a category: who competes in the women's
+game and who uses its locker room. The report from the podium was about
+existence. The claim actually made, that this category is for females, was never
+refuted. It was replaced with a claim nobody made, and a predator "innuendo" was
+read into a sentence that didn't contain one. The handle is a virtue, "life and
+death," which is why the swap works. The lens doesn't referee the category. It
+reads the swap. Questions two, three and four.
 
 **The Bout swap.** In 2022 two Americans sat in Russian prisons. Paul Whelan,
 a former Marine who left the service with a bad-conduct discharge in 2008, had
