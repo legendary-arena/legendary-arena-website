@@ -159,6 +159,28 @@ defined can't be tested by anyone, whether the protesters or the fans who have
 speculated for years about Brittney Griner. State the standard, publish the
 procedure, allow independent verification.
 
+**Can Freedom and White follow the trail blazed by Griner?**
+
+| | Brittney Griner | Enes Kanter Freedom | Royce White |
+|---|---|---|---|
+| Listed height | 6'9" | 6'10" | 6'8" |
+| Draft | No. 1 overall, WNBA, 2013 | No. 3 overall, NBA, 2011 | No. 16, NBA, 2012 |
+| Pro career | WNBA since 2013 (Phoenix, Atlanta, Connecticut) | 11 NBA seasons, 2011–2022 | 3 NBA games, 2013–14; later NBL Canada, BIG3, MMA |
+| Titles | NCAA 2012 (Baylor); WNBA 2014 (Phoenix) | None | NBL Canada 2017 and 2018 (London) |
+| Olympic gold | 2016, 2020, 2024 | None | None |
+| All-Star selections | 10 (including an honorary 2022 selection while detained) | None | None |
+| Defensive Player of the Year | 2014, 2015 | None | None |
+| Blocks | WNBA career leader (since June 2026); 8 blocks titles | — | — |
+| Dunks | 27, the WNBA record; no other player has more than two | — | — |
+| Criminal record | 2015: pleaded guilty to disorderly conduct after a fight with fiancée Glory Johnson (diversion, 26 weeks of domestic-violence counseling). 2022: convicted in Russia of cannabis-oil possession, sentenced to nine years, freed in the Bout swap | Charged in absentia in Turkey (terrorism, insulting the president) after criticizing Erdoğan; Turkey sought an Interpol Red Notice. No U.S. arrests found | 2009: pleaded guilty to misdemeanor theft and disorderly conduct (Mall of America) |
+| Domestic-violence record | 2015 arrest; Johnson diagnosed with a concussion; seven-game league suspension | None found | 2026: civil protective order; a judge found abuse and threats against his ex-wife and teenage son (White denies it and is appealing) |
+| Child support | Ordered in 2016 to pay $2,516.97 a month for IVF twins conceived during the marriage; no report of nonpayment | None found | A mother of one of his children claims he owes more than $100,000 (White denies it and says he is current); found in contempt in a second case, April 2024; court-added "purge" payments since 2018 in lieu of jail for nonpayment |
+| Spousal support | Johnson's request for $20,000 a month denied, 2015 (28-day marriage) | None found | None found |
+| WNBA eligibility claim | Plays in the league | Declared for the 2027 draft as a protest, August 2026 | Declared for the 2027 draft with a formal filing, August 2026 |
+
+What the table cannot show is the one thing the league's rule requires: a
+definition.
+
 **A trade with one box.** In 2022 the United States traded Viktor Bout, the
 arms dealer called the "Merchant of Death," for Brittney Griner, a
 two-time Defensive Player of the Year with a 2015 disorderly-conduct plea after
