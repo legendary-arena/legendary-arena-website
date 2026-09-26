@@ -59,13 +59,15 @@ Priority: 🔴 blocks revenue/strategy · 🟡 efficiency/clarity · 🟢 nice-t
   but the account/`data-domain` is an open operator prereq. Until it's live,
   site-side conversion + search demand are unmeasurable.
 
-- **Social handles — YouTube confirmed 2026-09-03; FB / X / Discord still
-  open.** The YouTube handle is **`@playlegendaryarena`**
-  (https://www.youtube.com/@playlegendaryarena), confirmed from the live
-  channel by the operator and recorded in
-  [`00-business-brief.md`](00-business-brief.md) Channels. The previous AI
-  draft's conflicting `@playlegendarena` spelling is wrong. *Still needed:*
-  confirm the FB / X / Discord handles and record them there too.
+- **Social handles — YouTube + Facebook confirmed; X / Discord still open.**
+  Confirmed by the operator and recorded in
+  [`00-business-brief.md`](00-business-brief.md) Channels: YouTube
+  **`@playlegendaryarena`** (https://www.youtube.com/@playlegendaryarena) and
+  Facebook **`facebook.com/playlegendaryarena`** (both 2026-09-03). The
+  previous AI draft's conflicting `@playlegendarena` spelling is wrong.
+  *Still needed:* the **X** handle (`playlegendaryarena` is 18 chars, over
+  X's 15-char cap, so it must differ) and the **Discord** invite link /
+  server name. Record both here when confirmed.
 
 - ~~**Registry domain migration deferred.**~~ **RESOLVED 2026-07-16.** The
   registry migrated to `cards.legendary-arena.com` (not
