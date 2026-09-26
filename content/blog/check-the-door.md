@@ -83,11 +83,11 @@ signing the note carries nearly all of it. The diagnostic from the last essay
 still applies: watch who resists proposals that would make schools share the
 loss when their loans go unpaid.
 
-## Nine more, from the news
+## Ten more, from the news
 
 The five above are slow arrangements, built over decades. The lens works just as
-well on events that happened in a few weeks. Here are nine, one from 1973 and
-eight from recent years, one short paragraph each, with the question that does the
+well on events that happened in a few weeks. Here are ten, one from 1973 and
+nine from recent years, one short paragraph each, with the question that does the
 work. The full version of
 each, with sources, is in
 [The Door Locks Behind You](/blog/the-door-locks-behind-you/#recent-cases).
@@ -181,6 +181,13 @@ procedure, allow independent verification.
 What the table cannot show is the one thing the league's rule requires: a
 definition.
 
+**A claim nobody made.** A player said she wanted to protect girls in the
+locker room from competing against biological men, and said she had never
+claimed to hate anyone. A coach answered that the phrasing carried an
+"innuendo" that transgender women are predators, and later said, "They don't
+want transgender people to exist." Run question three: the claim that was made
+never got answered. It got replaced.
+
 **A trade with one box.** In 2022 the United States traded Viktor Bout, the
 arms dealer called the "Merchant of Death," for Brittney Griner, a
 two-time Defensive Player of the Year with a 2015 disorderly-conduct plea after
@@ -198,7 +205,7 @@ and only one of them was allowed to be *the* event.
 
 ## Now run it on something you love
 
-Fourteen arrangements, and not one of them needed a villain. Each is held in place
+Fifteen arrangements, and not one of them needed a villain. Each is held in place
 by a seat, a scope, or a door that is expensive to walk back through.
 
 It would be easy to stop here, with five examples comfortably outside your own
