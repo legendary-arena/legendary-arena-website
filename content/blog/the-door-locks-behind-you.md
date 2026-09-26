@@ -339,9 +339,11 @@ league condemned "bad-faith efforts to use these topics to demean or
 marginalize others." But the motives of the people asking are separate from the
 question. A rule can only be enforced consistently if the standard is known.
 The same gap shows up from the other direction. Brittney Griner has long faced
-public speculation about her sex, and the league has never stated a standard
-that could settle it either way, so neither her supporters nor her critics can
-point to an answer. One published standard, applied to every player, would
+public speculation about Griner's sex. Part of it is height, 6'9", and part is
+the game itself: Griner holds the WNBA record with 27 of the roughly 38 dunks in
+league history, more than every other player combined. The league has never
+stated a standard that could settle the question either way, so neither
+Griner's supporters nor Griner's critics can point to an answer. One published standard, applied to every player, would
 resolve both cases at once. Commissioner Cathy Engelbert retires at the end of
 2026. The next commissioner should start there: state the standard, publish the
 procedure, and allow independent verification. Questions one, two and three.
@@ -349,14 +351,23 @@ procedure, and allow independent verification. Questions one, two and three.
 **The Bout swap.** In 2022 two Americans sat in Russian prisons. Paul Whelan,
 a former Marine who left the service with a bad-conduct discharge in 2008, had
 been held since 2018 on a 16-year espionage sentence. Brittney Griner had been
-caught with less than a gram of cannabis oil and sentenced to nine years. In
-December 2022 Griner was traded for Viktor Bout, the arms dealer called the
+caught with less than a gram of cannabis oil and sentenced to nine years. It
+wasn't Griner's first case. In 2015 Griner and fiancée Glory Johnson, a fellow
+WNBA player, were arrested after a fight at home; Johnson was diagnosed with a
+concussion. Griner pleaded guilty to disorderly conduct and was ordered into 26
+weeks of domestic-violence counseling, the league suspended both players seven
+games, and that same season named Griner Defensive Player of the Year for the
+second straight time. The marriage lasted 28 days. The day after Johnson
+announced a twin pregnancy through IVF, Griner filed to annul it; a judge
+refused, and it ended in divorce in 2016, with Griner ordered to pay child
+support. In July 2026 Griner filed for divorce again, from Cherelle Griner, who
+had led the campaign to bring Griner home. In December 2022 Griner was traded for Viktor Bout, the arms dealer called the
 "Merchant of Death," and Whelan stayed behind. An administration official said
 the choice was between "one particular American" or "none." That is the
 manufactured choice: one box or the empty box. Then each side read its own
 model American into the trade. Donald Trump called Griner "a basketball player
-who openly hates our Country"; she had said in 2020 she would not be on the
-court for the anthem. Kevin McCarthy called it "a gift to Vladimir Putin."
+who openly hates our Country"; in 2020 Griner had said, "I'm not going to be
+out there for the national anthem." Kevin McCarthy called it "a gift to Vladimir Putin."
 Supporters saw a wrongfully held woman brought home. It wasn't a clean party
 split: the Democratic chairman of the Senate Foreign Relations Committee called
 freeing Bout "a deeply disturbing decision." The lens needs none of the

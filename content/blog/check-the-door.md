@@ -160,7 +160,9 @@ speculated for years about Brittney Griner. State the standard, publish the
 procedure, allow independent verification.
 
 **A trade with one box.** In 2022 the United States traded Viktor Bout, the
-arms dealer called the "Merchant of Death," for Brittney Griner, and left Paul
+arms dealer called the "Merchant of Death," for Brittney Griner, a
+two-time Defensive Player of the Year with a 2015 disorderly-conduct plea after
+a fight with a fiancée, and left Paul
 Whelan, a Marine veteran held since 2018, in a Russian prison. The official
 explanation was that the choice was one American or none. Run question one: who
 set that menu? Whelan waited until 2024.
