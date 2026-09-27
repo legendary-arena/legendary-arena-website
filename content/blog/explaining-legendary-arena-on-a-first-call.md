@@ -270,13 +270,7 @@ One page. Want, veto, dictionary, secret. The script does the rest.
 
 ### Danny
 
-- **Character reference:** Alan (Zach Galifianakis) in *The Hangover*. Watch
-  the intervention scene from *Part III*:
-  <https://youtu.be/v4np7L0aJd0>. A grown man whose family still manages him,
-  who is completely sincere, and who has no idea the room is on his side of the
-  weirdness. Danny is that man on a phone call.
-- **Age:** late 20s to early 40s. The older he reads, the better Aunt Laura and
-  the pressed shirt land. Total confidence, no self-awareness. Not worldly.
+- **Age:** late 20s to late 30s. Competent mouth, bad situation. Not worldly.
 - **Wants:** her at his place Saturday, while nobody else is home, playing
   *his* card game. Failing that, don't lose the thread after she says no.
 - **Won't:** admit the wall is too much, explain the living situation, call it
@@ -285,18 +279,13 @@ One page. Want, veto, dictionary, secret. The script does the rest.
   Core sets and expansions. (He never says "Marvel Legendary" out loud.) He didn't misread a sentence. He misread a person.
 - **Secret:** the place is only his this weekend. The table is downstairs. She
   never finds out.
-- **Play him:** earnest, hopeful, oblivious. Like Alan, he isn't hiding
-  anything — he genuinely thinks forty-two boxes and a cleared coffee table is
-  a generous invitation. He isn't sad until a no lands, and then he invents the
-  next plan in the same breath, with the same sincerity. The comedy is him
-  staying in the sale, never narrating that he's pathetic, because he doesn't
-  know he is. The boxes are normal to him even after "Like Uno?" — he just
-  learns she doesn't know that yet. "No. No." is a real defense, not a cover.
-  The vegan order is a cost of doing business.
+- **Play him:** fast, hopeful, covering. He isn't sad until a no lands, and then
+  he invents the next plan in the same breath. The comedy is him staying in the
+  sale, not narrating that he's pathetic. The forty-two boxes are normal until
+  "Like Uno?" "No. No." is a real defense. The vegan order is a cost of doing
+  business.
 - **Don't:** wink at the camera, do a bit voice, apologize for the hobby, win
-  the argument about Captain Marvel, or explain boardgame.io. Don't play Alan's
-  strangeness as a character voice either. Alan works because he believes every
-  word. So does Danny.
+  the argument about Captain Marvel, or explain boardgame.io.
 - **Physical:** starts close on the phone. After Uno, the room gets bigger than
   he wanted. The delivery app is the only quiet he gets.
 
@@ -324,8 +313,7 @@ One page. Want, veto, dictionary, secret. The script does the rest.
 ### Aunt Laura
 
 - **One function:** family hands on the evening. Warm, brief, already knows too
-  much. She should sound like she has a key. She is the Alan intervention in
-  miniature: family that still has opinions about a grown man's belt.
+  much. She should sound like she has a key.
 - **Advice allowed:** one clothing note, one ironing note. Not hair, not
   flowers, not "be yourself." She is wardrobe, not a coach.
 - **Don't:** play her as comic relief that stays. She is a doorbell.
@@ -346,10 +334,9 @@ a link and an order, not a relationship.
   play it as a commercial read.
 - Nobody says the title of the video. Nobody says "basement," "parents," or the
   name of the app (no Hinge, no Tinder) unless it's added later on purpose.
-- **Tone references, Danny only:** Alan for who he is (sincere, managed,
-  oblivious). Danny Polishchuk's "explain it to a normal person" videos for the
-  rhythm of the pitch passages — repeating her answers back like a police
-  report. Don't ask her to match either. She's the normal person.
+- **Tone references, Danny only:** Danny Polishchuk for cadence, Zach
+  Galifianakis for texture. See *Reference and background* at the end. Don't
+  ask her to match either. She's the normal person.
 
 ### Keep out of the actor packet
 
@@ -474,3 +461,75 @@ Danny's sales job holds up. The heroes are real: Captain America, Winter
 Soldier, Falcon, and Captain Marvel are all in the card pool. Nothing is for
 sale that changes the session, and the rules don't drift. And you don't need
 the boxes — the game is online, and the coffee table is optional.
+
+## Reference and background
+
+Comic reference for the actor playing Danny. Two sources, two different jobs.
+Polishchuk is the engine: how Danny talks. Galifianakis is texture: a few
+moments where Danny goes still and strange. Danny is not Alan. He knows what
+he's doing on this call. He just misjudged the room.
+
+### Danny Polishchuk — cadence
+
+**Who:** New York comedian, writer, and actor. Known for viral sketches with
+more than a billion combined views online. Co-host of the *Boyscast* with Ryan
+Long and host of the weekly YouTube call-in show *Low Value Mail*. Nominated
+for two Canadian Comedy Awards in 2017 (writing in a comedy series; short
+film).
+
+**What Danny borrows:**
+
+- **Repeat her answer back like he's filing a police report.** "You hated
+  Captain America." "His friend. Brainwashed. By a cult." "The View." The laugh
+  is in the flat restatement, not in a joke on top of it.
+- **Keep rolling, then double back.** Don't stop for the Marvel corrections.
+  Let the wrong answer land, keep going, then return to it: "The View. Okay."
+- **Play it as a real call, not a bit that knows it's a bit.** He is trying to
+  get something, not performing for a camera.
+- **Explain it like you're talking to a normal person.** When he pitches the
+  game, he dumbs it down for a date, not for a rules page. One pass: team,
+  scenario, Mastermind, skill not money.
+- **No, no, okay fine, but.** Deny twice, concede the part that's true, then
+  separate it from the part that matters. That's the shape of the
+  overweight-guys answer.
+
+**Watch:** [YouTube — Danny Polishchuk Comedy](https://www.youtube.com/c/DannyPolishchuk)
+· [@dannyjokes on Instagram](https://www.instagram.com/dannyjokes/)
+· [@Dannyjokes on X](https://x.com/Dannyjokes)
+· [IMDb](https://www.imdb.com/name/nm5084851/)
+· [The Stand NYC](https://thestandnyc.com/comedians/danny-polishchuk)
+
+### Zach Galifianakis — texture
+
+**Who:** Comedian and actor. Came up as a bearded, piano-playing alt-comedy
+act in New York coffee houses and alternative rooms, mixing piano with surreal
+one-liners. Created *Between Two Ferns* for Funny or Die, a deliberately
+awkward anti-talk-show built on a flat, faintly hostile interview style with
+celebrity guests, later a Netflix movie. Played Alan in *The Hangover* films.
+
+**What Danny borrows, sparingly:**
+
+- **Total sincerity.** Galifianakis never signals that something is a joke.
+  When Danny says "I made lanes," he means it as a selling point.
+- **Comfort with dead air.** Let a silence sit longer than is polite. The
+  pause after "Like Uno?" and before "Eventually." are Galifianakis moments.
+- **Strange confidence.** Alan states odd things as settled fact. Danny gets
+  one or two of those: "That's overlap. We have overlap."
+- **Being managed.** Alan's intervention scene in *The Hangover Part III* is a
+  grown man's family deciding things for him in his own house. That's the
+  flavor of the Aunt Laura cold open, and it's where it stops.
+
+**Where it stops:** Alan doesn't know he's strange. Danny mostly does, and
+covers fast. Use Galifianakis for a beat, never for the whole performance. If
+the actor plays Alan start to finish, Danny stops selling and starts being
+looked at.
+
+**Watch:** [The Hangover Part III — Alan's intervention scene](https://youtu.be/v4np7L0aJd0)
+· *Between Two Ferns* (Funny or Die; *Between Two Ferns: The Movie*, Netflix)
+
+**Sources:**
+[Stand-Up Global — Danny Polishchuk](https://standupglobal.com/danny-polishchuk.php) ·
+[New York Comedy Club — Danny Polishchuk](https://newyorkcomedyclub.com/comedians/danny-polishchuk) ·
+[AltComedy — Zach Galifianakis](https://www.altcomedy.com/comedians/zach-galifianakis.html) ·
+[The Hollywood Reporter — *Between Two Ferns: The Movie*](https://www.hollywoodreporter.com/movies/movie-reviews/between-two-ferns-movie-review-1241347/) ·
+[MEL Magazine — *Between Two Ferns* movie](https://melmagazine.com/en-us/story/with-the-between-two-ferns-movie-zach-galifianakis-discovers-its-hard-to-make-success-funny)
