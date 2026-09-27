@@ -504,6 +504,18 @@ before/after story told live. The guest's reactions to the fairness, the
 replay verification, and the rules enforcement are organic proof that
 lands harder than any homepage bullet point.
 
+### The Soul Line
+
+When an episode's conversation turns from the game to life — a loss, a
+comeback, a second chance — this is the line the series stands on, from the
+*Soul of Legendary Arena* essays:
+
+> No Dad with a wayward son has ever said, "If only my boy would read that
+> award-winning book about the pigsty, *Lord of the Flies*." Every Dad wants his
+> son to know something else: that he can change, leave the pigsty, and start
+> down the road home — the road his Dad is already watching, ready to run and
+> meet him.
+
 ### The "Hot Ones" Parallel
 
 Hot Ones works because the wings are a shared experience that strips
