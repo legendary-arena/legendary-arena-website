@@ -65,7 +65,9 @@ cards. This weekend's perfect. Nobody's here. I already got it out.
 
 *Silence. The camera pulls back. Behind him, a wall of card boxes, enough that
 forty-two feels plausible. The coffee table is cleared. A playmat is down.
-Nobody counts. The belt is the only adult thing in the room.*
+Nobody counts. The belt is the only adult thing in the room. Between his
+shoulder blades, the shirt has a shiny, iron-shaped patch where the polyester
+melted.*
 
 **DANNY:** …Sure. Like Uno. Kind of. It's not a box. It's forty-two boxes.
 Core sets and expansions. The one with the heroes.
@@ -299,6 +301,10 @@ One page. Want, veto, dictionary, secret. The script does the rest.
   the argument about Captain Marvel, or explain boardgame.io.
 - **Physical:** starts close on the phone. After Uno, the room gets bigger than
   he wanted. The delivery app is the only quiet he gets.
+- **Wardrobe:** shiny polyester dress shirt he thinks reads as an event. On the
+  back, a glazed, iron-shaped mark from being pressed on the cotton setting —
+  hidden by the tight shot until the Uno pullback. Nobody mentions it, and he
+  never notices. It quietly contradicts "Mom already did it."
 
 ### Her
 
@@ -419,7 +425,8 @@ that proves tone, characters, and the pitch.
    playmat), Her (her place, rollers), and Aunt Laura. Treat the wall and the
    playmat as reusable props, not one-off prompts.
 2. **Approve a still storyboard before any video.** Twenty to thirty panels:
-   the suspenders, the TV dinner on the good china, the beep, tight on Danny, the pullback on "Like Uno?",
+   the suspenders, the TV dinner on the good china, the beep, tight on Danny, the pullback on "Like Uno?" (the wall, the belt, the
+   iron mark on his back),
    her in rollers, the Cap/Bucky banter as card cutaways, the hold on the wall
    for "Eventually," the pivot to online play, the vegan food, the hang-up,
    the cold TV dinner beside the delivery app.
