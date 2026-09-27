@@ -1,7 +1,7 @@
 ---
 title: "Explaining Legendary Arena to a Girl I'm Trying to Take Out"
 date: 2026-09-26
-description: "A comedy short. One phone call. Danny has forty-two boxes of cards and a cleared coffee table. She has her hair in rollers. Somewhere between the two, he explains Legendary Arena."
+description: "A comedy short. One phone call. Her profile said card games. So did his. She meant Uno. He has forty-two boxes and a cleared coffee table. Somewhere between the two, he explains Legendary Arena."
 draft: false
 tags: ["comedy", "video", "heroes"]
 categories: ["comedy"]
@@ -12,36 +12,55 @@ Most people don't need a deck-builder explained to them. They need it
 explained to them by someone who is also trying, very hard, to get a yes.
 
 This is the script for a comedy short. One phone call. We hear both sides.
-Danny called to get her over to his place, where the game is already out —
-all of it. She is putting her hair in rollers. He hangs up having survived a
-guided tour of the Marvel canon by way of daytime television, defended his
-hobby against its reputation, lost a round to her baby brother's Pokémon
-binder, climbed all the way down from his own living room, and — possibly —
-bought dinner for someone who says it isn't a date.
+Her profile said card games. Danny took that seriously — all of it is already
+out on his coffee table. She meant Uno, and she is putting her hair in rollers.
+He hangs up having survived a guided tour of the Marvel canon by way of daytime
+television, defended his hobby against its reputation, lost a round to her baby
+brother's Pokémon binder, climbed all the way down from his own living room,
+and — possibly — bought dinner for someone who says it isn't a date.
 
 ## The call
 
-*Phone rings. He picks up too fast. Behind him, a wall of card boxes, enough
-that forty-two feels plausible. The coffee table is cleared. A playmat is
-down. Nobody counts.*
+*Phone rings. He picks up too fast. Tight on him.*
 
 **DANNY:** Hey. Yeah, it's Danny. No, I wasn't sitting on the phone. I was
-near it. On purpose. Anyway. Saturday. Just come over. I already got it out.
+near it. On purpose. Anyway. I'm calling because you put card games on your
+profile.
 
-**HER:** Got what out?
+**HER:** I do like card games.
 
-**DANNY:** The game. And it's not a box. It's forty-two boxes. Core sets and
-expansions.
+**DANNY:** I also like card games. So, Saturday. Just come over. We'll play
+cards. I already got it out.
 
-**HER:** Okay…
+**HER:** Like Uno?
 
-**DANNY:** I already opened like eight of them. I punched the cardboard. I
-sorted the heroes. I cleared the coffee table. I made lanes. I spent like an
-hour making this look like a table and not a cry for help. You don't have to
-learn all of it. That's the point of you coming over. I'll do the work. I'm not
-asking you to bring a sleeping bag. I'm asking you to sit down.
+*Silence. The camera pulls back. Behind him, a wall of card boxes, enough that
+forty-two feels plausible. The coffee table is cleared. A playmat is down.
+Nobody counts.*
 
-**HER:** I can't come over. I'm putting my hair in rollers.
+**DANNY:** …Sure. Like Uno. Kind of. It's not a box. It's forty-two boxes.
+Core sets and expansions. The one with the heroes.
+
+**HER:** Or Cover Your Assets. The one with the houses.
+
+**DANNY:** Cover Your Assets.
+
+**HER:** Yeah.
+
+**DANNY:** Okay. That's… smaller than what I did. I already opened like eight
+of them. I punched the cardboard. I sorted the heroes. I cleared the coffee
+table. I made lanes. I spent like an hour making this look like a table and not
+a cry for help. You don't have to learn all of it. That's the point of you
+coming over. I'll do the work. I'm not asking you to bring a sleeping bag. I'm
+asking you to sit down.
+
+**HER:** That is a lot of boxes for a first hang. I didn't mean a whole…
+library.
+
+**DANNY:** I saw card games on your profile. I took that seriously. That's on
+me. I should've asked which ones before I opened a storage unit.
+
+**HER:** I can't come over anyway. I'm putting my hair in rollers.
 
 **DANNY:** Your hair.
 
@@ -54,9 +73,10 @@ built a city for nobody.
 
 *Beat.*
 
-**DANNY:** Okay. Not a date. Don't come over. Wait. Wait. Other idea. Just let
-me tell you what's in here, because you are turning down some very good people.
-There's Cap in here.
+**DANNY:** Okay. Not a date. Don't come over. Wait. Wait. Other idea. I can do
+Uno. I'll learn Uno. Uno is a card game the way a paper airplane is aviation,
+but I will do it. Or — just let me tell you what's in here, because you are
+turning down some very good people. There's Cap in here.
 
 **HER:** Oh no. Not him. I hated that movie.
 
@@ -90,7 +110,7 @@ agreeing with whatever the table said.
 
 **DANNY:** …Captain Marvel. We started at Cap, detoured through a talk show,
 hit the Disney+ show, and landed on Captain Marvel. That's a legal favorite.
-She's in here somewhere. I can find her.
+And she's in here. That's overlap. We have overlap. I can find her.
 
 *He looks at the wall.*
 
@@ -131,13 +151,14 @@ Oh. You're talking about Pokey-duh-mon.
 
 **HER:** Pokémon.
 
-**DANNY:** Yeah. Pokey-duh-mon. Well it is kinda like that. Little cards. You
-build a deck. You slap them down. Kids scream. Except these are grown-man
-boxes, the cards are Cap, Winter Soldier, Falcon, Captain Marvel — your
-favorite, I wrote it down — and you're not collecting three thousand animals so
-a ten-year-old can say "I have the rare one." You're recruiting a team for one
-scenario and trying not to get cooked. Shuffle is random. That's the card part.
-Everything above that is: did you think.
+**DANNY:** Yeah. Pokey-duh-mon. Okay. So your brother means Pokey-duh-mon, you
+mean Uno, and I mean the wall. Three games. One word. Well, mine is kinda like
+his. Little cards. You build a deck. You slap them down. Kids scream. Except
+these are grown-man boxes, the cards are Cap, Winter Soldier, Falcon, Captain
+Marvel — your favorite, I wrote it down — and you're not collecting three
+thousand animals so a ten-year-old can say "I have the rare one." You're
+recruiting a team for one scenario and trying not to get cooked. Shuffle is
+random. That's the card part. Everything above that is: did you think.
 
 **HER:** So it's like Pokémon but Marvel.
 
@@ -154,32 +175,38 @@ that your brother has a binder.
 
 *Beat. He looks at the wall.*
 
-**DANNY:** Okay, not forty-two boxes. I can't bring that to you. That's not a
-personality, that's a moving company. Okay. We go out. Leave the boxes. A
-booth. Food. Normal people—
+**DANNY:** Okay, not forty-two boxes. Cover Your Assets is two pounds. What I
+have is furniture. That's not a personality, that's a moving company. Okay. We
+go out. Leave the boxes. A booth. Food. Normal people—
 
 **HER:** I said I'm not doing a date.
 
 **DANNY:** Right. Not a date. Not my place. Not your place. Not out. Okay. We
-can hang online.
+can do it online.
 
-**HER:** I'm not going on there with you.
+**HER:** I'm not going back on there with you.
 
-**DANNY:** No. Not like Tinder. I'm not opening a second profile. I'm not
-asking you to swipe on Captain Marvel. Tinder is strangers and photos. This is
-two people and a rulebook.
+**DANNY:** No. Not the app. I'm not asking you to go back on the app. I'm not
+asking you to swipe on Captain Marvel. The app is strangers and photos. This is
+two people and a rulebook. I'm asking you to play the thing you said you like.
+Which I now realize you did not like.
 
 **HER:** So what is it?
 
-**DANNY:** The game is online. Legendary-arena.com. It's the game without the
-forty-two boxes. You stay home with your rollers. I stay here with my wall.
-Same heroes. Same stupid Mastermind. Nobody comes over, nobody punches
+**DANNY:** The game is online. There's a version with no boxes. I should've led
+with that. I led with the warehouse. Legendary-arena.com. It's the game without
+the forty-two boxes. You stay home with your rollers. I stay here with my wall.
+Same heroes. Same stupid Mastermind.
+
+**HER:** Is it easy?
+
+**DANNY:** It's not Uno. But I'll teach you. Nobody comes over, nobody punches
 cardboard, and we still play.
 
 **HER:** Okay. That's actually kind of smart.
 
-**DANNY:** And I'll send food. You do the rollers. I'll stare at the
-expansions.
+**DANNY:** And I'll send food. You do the hair. I'll pretend this is still what
+you wrote down.
 
 **HER:** You don't have to buy me dinner.
 
@@ -202,7 +229,7 @@ cheese?
 
 **DANNY:** Both. Food to you. Link to you. Legendary-arena.com. Assemble your
 heroes. Read the scenario. Earn your standing. It's not a cult. It's not The
-View. It's not Tinder. And it's not only for guys who think a playmat is a
+View. It's not Uno. And it's not only for guys who think a playmat is a
 personality.
 
 *He looks at the playmat. Then the wall.*
@@ -213,8 +240,8 @@ personality.
 
 *He hangs up. To himself, opening the delivery app:*
 
-**DANNY:** She said Captain Marvel. Brother plays Pokey-duh-mon. She's in
-rollers, eating my jackfruit. I can work with that.
+**DANNY:** She said Captain Marvel. Brother plays Pokey-duh-mon. She meant
+Uno. She's in rollers, eating my jackfruit. I can work with that.
 
 ## End card
 
@@ -224,8 +251,8 @@ Assemble your heroes. Read the scenario. Earn your standing.
 
 ## He got the pitch right
 
-Strip out the rollers, the talk-show detour, and the cashew brie, and Danny's
-sales job holds up.
+Strip out the rollers, the talk-show detour, the Uno, and the cashew brie, and
+Danny's sales job holds up.
 
 **The heroes are real.** Captain America, Winter Soldier, Falcon, and Captain
 Marvel are all in the card pool. She can have her favorite. He can have the
