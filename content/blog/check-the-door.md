@@ -191,9 +191,15 @@ never got answered. It got replaced.
 **A syllabus with no road home.** Exam boards still set *Lord of the Flies*, a
 novel whose author said man is "gripped by original sin." Many study guides
 teach it as "human nature" instead, and a parent's objection is filed on a list
-of challenged classics. The boys end in the pigsty, like the prodigal son, but
-never reach "when he came to himself." Run question two: who reports what the
-book means, and what did they leave out?
+of challenged classics. The boys end where the prodigal son ended, among "the
+husks that the swine did eat" (Luke 15:16), but they never reach the next
+verse: "And when he came to himself…" In the parable, the son turns, and
+"when he was yet a great way off, his father saw him, and had compassion, and
+ran, and fell on his neck, and kissed him" (15:20). On the island, nobody turns
+and no Father runs; a warship collects the boys instead. The syllabus keeps the
+pigsty and leaves out the road home: "For this my son was dead, and is alive
+again; he was lost, and is found" (15:24). Run question two: who reports what
+the book means, and what did they leave out?
 
 **A trade with one box.** In 2022 the United States traded Viktor Bout, the
 arms dealer called the "Merchant of Death," for Brittney Griner, a
