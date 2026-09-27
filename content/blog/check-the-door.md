@@ -20,6 +20,15 @@ A lens works the same way. So here it is in use on five ordinary arrangements,
 one paragraph each, with no new theory. None of them needs a villain. Each one
 has a seat.
 
+A lens shows you the lock. It isn't the whole story. The whole story fits in one
+line:
+
+> No Dad with a wayward son has ever said, "If only my boy would read that
+> award-winning book about the pigsty, *Lord of the Flies*." Every Dad wants his
+> son to know something else: that he can change, leave the pigsty, and start
+> down the road home — the road his Dad is already watching, ready to run and
+> meet him.
+
 ## The health plan that comes with the job
 
 Most working Americans get health insurance through their employer. That was
