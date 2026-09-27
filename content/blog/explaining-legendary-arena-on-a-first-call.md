@@ -11,8 +11,8 @@ cta: "play"
 Most people don't need a deck-builder explained to them. They need it
 explained to them by someone who is also trying, very hard, to get a yes.
 
-This is the script for a comedy short: fifteen seconds with his aunt, then one
-phone call. We hear both sides.
+This is the script for a comedy short: a short cold open with his aunt, then
+one phone call. We hear both sides.
 Her profile said card games. Danny took that seriously — all of it is already
 out on his coffee table. She meant Uno, and she is putting her hair in rollers.
 He hangs up having survived a guided tour of the Marvel canon by way of daytime
@@ -33,9 +33,14 @@ and — possibly — bought dinner for someone who says it isn't a date.
 **AUNT LAURA:** Take them off. A belt. You look like you're going to a recital.
 Did anybody press that shirt?
 
-**DANNY:** Mom already did it.
+**DANNY:** Yes. I know how to iron a shirt, Aunt Laura. Cotton setting. All the
+way up.
 
-**AUNT LAURA:** Good. Tucked in. What are you feeding her?
+**AUNT LAURA:** Is it cotton?
+
+**DANNY:** It's a shirt.
+
+**AUNT LAURA:** …Tucked in. What are you feeding her?
 
 **DANNY:** I made dinner.
 
@@ -294,7 +299,9 @@ One page. Want, veto, dictionary, secret. The script does the rest.
   never finds out.
 - **Play him:** fast, hopeful, covering. He isn't sad until a no lands, and then
   he invents the next plan in the same breath. The comedy is him staying in the
-  sale, not narrating that he's pathetic. The forty-two boxes are normal until
+  sale, not narrating that he's pathetic. He's a know-it-all about things he
+  half understands — "I know how to iron a shirt" is said with total authority
+  by a man who has never read a care label. The forty-two boxes are normal until
   "Like Uno?" "No. No." is a real defense. The vegan order is a cost of doing
   business.
 - **Don't:** wink at the camera, do a bit voice, apologize for the hobby, win
@@ -304,7 +311,7 @@ One page. Want, veto, dictionary, secret. The script does the rest.
 - **Wardrobe:** shiny polyester dress shirt he thinks reads as an event. On the
   back, a glazed, iron-shaped mark from being pressed on the cotton setting —
   hidden by the tight shot until the Uno pullback. Nobody mentions it, and he
-  never notices. It quietly contradicts "Mom already did it."
+  never notices. It's the payoff to "Cotton setting. All the way up."
 
 ### Her
 
@@ -473,6 +480,101 @@ Legendary Arena, not a fan film of someone else's IP.
 people-in-a-room motion, everything else as support. A tight two-minute
 storyboarded cut will tell you whether the short works. A pile of eight-second
 cinematic clips won't.
+
+
+### Update: what the current draft changes (Grok, 2026-09-27)
+
+The earlier version was a pitch that happened to be funny. This one is a
+mismatch comedy with a costume gag, a food gag, and a camera gag. Those three
+things are now the proof of concept, not "can Veo make a guy talk."
+
+**Load-bearing visuals:**
+
+- **Cold open:** Aunt Laura on the phone, suspenders on, the shirt he "knows
+  how to iron."
+- **Flash:** microwave TV dinner on the good china.
+- **Click-over:** belt threaded one-handed, tight.
+- **"Like Uno?" pullback:** wall of boxes, cleared table, playmat, lanes, the
+  belt as the only adult object, the iron-shaped melt on the back of the shirt.
+- **Hold on the wall** after "Captain Marvel… Eventually."
+- **Climb-down:** her place / FaceTime / booth / online.
+- **Tag:** cold TV dinner, bite anyway, phone showing the vegan order.
+
+The actor notes are doing real work — Danny covering instead of apologizing,
+her nos as boundaries not punchlines, Aunt Laura as a doorbell. An AI board
+will ignore that direction unless it's written into the shot list.
+
+**What this draft makes harder for AI** — the shots that break a naive "paste
+the script into Kling/Veo" pass:
+
+1. **The iron mark.** It has to exist from frame one and only become readable
+   on the Uno pullback. That's a locked costume element, not a prompt
+   adjective. Generate Danny's back-of-shirt still first and reuse it.
+2. **One-handed belt.** Hands and belts are still where video models smear.
+   Storyboard it, generate it last, or cover it with a cut to the buckle or his
+   face.
+3. **TV dinner on good china.** Easy as a still. Hard as a continuous insert if
+   the tray, the peeled film, and the plate have to match the tag.
+4. **Three voices.** Aunt Laura is on screen for seconds and still needs her
+   own ElevenLabs voice, or the cold open sounds like a different movie.
+5. **Her side.** The script wants her present without giving her the room.
+   Decide now: voice-only plus a rollers insert, or a real second location.
+   Mixed coverage — sometimes we see her, sometimes we don't — looks like a
+   mistake unless it's a rule.
+
+For the Cap / Bucky / Captain Marvel beats, cut to the wall, a box spine, or
+on-screen text. Don't ask the model for "Captain America card."
+
+**Order of operations.** Same tools, different order:
+
+| Priority | Make this first | Tool |
+|---|---|---|
+| 1 | Locked stills: Danny (front, and back with the iron mark), wall of boxes, table / playmat / lanes, TV dinner on china, her in rollers | Flux / Midjourney / Nano Banana |
+| 2 | Shot list from the script, not from vibes | LTX Studio |
+| 3 | Voices for Danny, Her, Aunt Laura | ElevenLabs |
+| 4 | Spoken close-ups | Veo 3.1 |
+| 5 | Looks, pullback, inserts | Kling 3.0 |
+| 6 | Cut to audio | CapCut / DaVinci Resolve |
+
+Don't generate video until the **iron-mark still** and the **wall still** are
+approved. Those two images are the show. Google Flow is still the cheap path
+with AI Pro, but it won't automatically protect the melt mark or the china
+across scenes. LTX Elements will.
+
+**The ~100-second POC board.** Not the whole call. These boards only:
+
+1. Tight: suspenders, "They're on." "Cotton setting. All the way up." "It's a
+   shirt."
+2. Flash: TV dinner on the good china.
+3. Beep. Belt, one hand.
+4. "Like Uno?" — silence — pullback. Wall, playmat, belt, iron mark.
+5. "I built a city."
+6. Rollers.
+7. "The View." / "Winter Soldier." (wall and box spines, not faces)
+8. Hold on the wall. "Eventually."
+9. "No. No."
+10. Climb-down, then legendary-arena.com as a real screen, not a generated UI.
+11. Hang up. Cold tray. Order confirmed.
+
+If that board gets a laugh on the Uno pullback and a second laugh on the cold
+dinner, the short works. If it doesn't, more Veo won't save it.
+
+**Production notes:**
+
+- Keep Aunt Laura under 20 seconds.
+- "Tonight," "this weekend's perfect," "nobody's here," and the secret that the
+  place is only his this weekend are a lot of fog. For the POC, one of them is
+  enough on screen; the rest lives in the actor notes.
+- "Text me the link" / "Both." is the real ending. The jackfruit line is the
+  button, and the cold dinner is the tag. Don't generate another joke after it.
+- Put the real site on screen during "I led with the warehouse," not only at
+  the end.
+- Spoken, the call runs about six to seven minutes played fast. The reading
+  time at the top of the page is page weight, not runtime.
+
+**Still the recommendation:** LTX for structure, Veo for talk, Kling for the
+room, ElevenLabs for the call. What changed is the first asset list. Design the
+burned shirt and the wall before spending a dollar on motion.
 
 ## He got the pitch right
 
