@@ -265,6 +265,10 @@ Text me the address.
 **DANNY:** She said Captain Marvel. Brother plays Pokey-duh-mon. She meant
 Uno. She's in rollers, eating my jackfruit. I can work with that.
 
+*He sits down at the good china. The TV dinner has gone cold. He takes a bite
+anyway. Beside the plate, his phone: order confirmed — cashew brie, jackfruit
+tacos.*
+
 ## End card
 
 **legendary-arena.com**
@@ -417,8 +421,8 @@ that proves tone, characters, and the pitch.
 2. **Approve a still storyboard before any video.** Twenty to thirty panels:
    the suspenders, the TV dinner on the good china, the beep, tight on Danny, the pullback on "Like Uno?",
    her in rollers, the Cap/Bucky banter as card cutaways, the hold on the wall
-   for "Eventually," the pivot to online play, the vegan food, the delivery
-   app, the hang-up.
+   for "Eventually," the pivot to online play, the vegan food, the hang-up,
+   the cold TV dinner beside the delivery app.
 3. **Generate only the load-bearing shots** — Veo for lines that need mouth
    movement and room tone, Kling for looks, gestures, and inserts.
 4. **Record or clone the voices in ElevenLabs**, drop them on the timeline, and
