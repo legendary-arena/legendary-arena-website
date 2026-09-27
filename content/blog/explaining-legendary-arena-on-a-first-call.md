@@ -1,7 +1,7 @@
 ---
 title: "Explaining Legendary Arena to a Girl I'm Trying to Take Out"
 date: 2026-09-26
-description: "A comedy short. One phone call. Danny is trying to lock down Saturday dinner, she is trying to name the one where Captain America's friend joins a cult, and somewhere in the middle he explains Legendary Arena."
+description: "A comedy short. One phone call. Danny has forty-two boxes of cards and a cleared coffee table. She has her hair in rollers. Somewhere between the two, he explains Legendary Arena."
 draft: false
 tags: ["comedy", "video", "heroes"]
 categories: ["comedy"]
@@ -9,29 +9,56 @@ cta: "play"
 ---
 
 Most people don't need a deck-builder explained to them. They need it
-explained to them by someone who is also trying, very hard, to get a yes on
-Saturday.
+explained to them by someone who is also trying, very hard, to get a yes.
 
-This is the script for a comedy short. One phone call. We hear
-both sides. Danny called to ask her to dinner. He hangs up having taught a
-card game, survived a guided tour of the Marvel canon by way of daytime
-television, defended his hobby against its reputation, lost a round to her
-baby brother's Pokémon binder, lost his living room to a delivery window,
-and — possibly — kept the date.
+This is the script for a comedy short. One phone call. We hear both sides.
+Danny called to get her over to his place, where the game is already out —
+all of it. She is putting her hair in rollers. He hangs up having survived a
+guided tour of the Marvel canon by way of daytime television, defended his
+hobby against its reputation, lost a round to her baby brother's Pokémon
+binder, climbed all the way down from his own living room, and — possibly —
+bought dinner for someone who says it isn't a date.
 
 ## The call
 
-*Phone rings. He picks up too fast.*
+*Phone rings. He picks up too fast. Behind him, a wall of card boxes, enough
+that forty-two feels plausible. The coffee table is cleared. A playmat is
+down. Nobody counts.*
 
 **DANNY:** Hey. Yeah, it's Danny. No, I wasn't sitting on the phone. I was
-near it. On purpose. Anyway. Saturday. Dinner. Before you decide I'm a guy who
-only talks about himself: do you like superhero movies?
+near it. On purpose. Anyway. Saturday. Just come over. I already got it out.
 
-**HER:** Yeah.
+**HER:** Got what out?
 
-**DANNY:** Cool. My favorite's Captain America.
+**DANNY:** The game. And it's not a box. It's forty-two boxes. Core sets and
+expansions.
 
-**HER:** Oh no. Not that one. I hated that one.
+**HER:** Okay…
+
+**DANNY:** I already opened like eight of them. I punched the cardboard. I
+sorted the heroes. I cleared the coffee table. I made lanes. I spent like an
+hour making this look like a table and not a cry for help. You don't have to
+learn all of it. That's the point of you coming over. I'll do the work. I'm not
+asking you to bring a sleeping bag. I'm asking you to sit down.
+
+**HER:** I can't come over. I'm putting my hair in rollers.
+
+**DANNY:** Your hair.
+
+**HER:** In rollers. It's a whole thing. They have to sit.
+
+**DANNY:** I wouldn't ask if it was one box. If you don't come, I'm the guy who
+built a city for nobody.
+
+**HER:** And I'm not really dating right now.
+
+*Beat.*
+
+**DANNY:** Okay. Not a date. Don't come over. Wait. Wait. Other idea. Just let
+me tell you what's in here, because you are turning down some very good people.
+There's Cap in here.
+
+**HER:** Oh no. Not him. I hated that movie.
 
 **DANNY:** You hated Captain America.
 
@@ -63,14 +90,11 @@ agreeing with whatever the table said.
 
 **DANNY:** …Captain Marvel. We started at Cap, detoured through a talk show,
 hit the Disney+ show, and landed on Captain Marvel. That's a legal favorite.
-I'm not dying on that hill. I'm trying to get a yes.
+She's in here somewhere. I can find her.
 
-*Beat.*
+*He looks at the wall.*
 
-**HER:** What is this actually about?
-
-**DANNY:** Website. Legendary-arena.com. I have to explain it like a person
-because if I say "digital deck-builder" you hang up and I eat a sandwich.
+**DANNY:** Eventually.
 
 **HER:** Is this just a game for overweight guys fantasizing they are in shape
 and have hot girlfriends?
@@ -79,7 +103,7 @@ and have hot girlfriends?
 
 No.
 
-*Beat.*
+*Beat. He is standing in front of the wall.*
 
 **DANNY:** I mean some of them, statistically, yes. That's every hobby. That's
 also the gym. That's also brunch. But the game itself is not "imagine you have
@@ -108,12 +132,12 @@ Oh. You're talking about Pokey-duh-mon.
 **HER:** Pokémon.
 
 **DANNY:** Yeah. Pokey-duh-mon. Well it is kinda like that. Little cards. You
-build a deck. You slap them down. Kids scream. Except in this one the cards are
-Cap, Winter Soldier, Falcon, Captain Marvel — your favorite, I wrote it down —
-and you're not collecting three thousand animals so a ten-year-old can say "I
-have the rare one." You're recruiting a team for one scenario and trying not to
-get cooked. Shuffle is random. That's the card part. Everything above that is:
-did you think.
+build a deck. You slap them down. Kids scream. Except these are grown-man
+boxes, the cards are Cap, Winter Soldier, Falcon, Captain Marvel — your
+favorite, I wrote it down — and you're not collecting three thousand animals so
+a ten-year-old can say "I have the rare one." You're recruiting a team for one
+scenario and trying not to get cooked. Shuffle is random. That's the card part.
+Everything above that is: did you think.
 
 **HER:** So it's like Pokémon but Marvel.
 
@@ -126,60 +150,18 @@ that your brother has a binder.
 
 **HER:** That actually sounds kind of fun.
 
-**DANNY:** Don't compliment it yet. I still need Saturday. Here's the plan.
-Dinner. Then you come over and I teach you. I already have it.
+**DANNY:** Great. So I can come to you.
 
-*A lid lifts off a box.*
+*Beat. He looks at the wall.*
 
-**HER:** You have it.
+**DANNY:** Okay, not forty-two boxes. I can't bring that to you. That's not a
+personality, that's a moving company. Okay. We go out. Leave the boxes. A
+booth. Food. Normal people—
 
-**DANNY:** Starter box. Sixty cards. Rulebook. I got the mat, too. It's on the
-table right now. Half unrolled. For nobody. That's where we are.
+**HER:** I said I'm not doing a date.
 
-**HER:** I can't come over.
-
-*Tape peels, slowly.*
-
-**DANNY:** Okay.
-
-**HER:** I'm waiting on a package.
-
-**DANNY:** On Saturday.
-
-**HER:** They said between six and eight. Or eight and ten. They said a window.
-
-**DANNY:** They said a window.
-
-**HER:** It's not a small one. I don't want it sitting out.
-
-**DANNY:** Okay. I can't argue with a box I can't see. That's the genius of it.
-Okay. I can bring it to you.
-
-*Beat.*
-
-**DANNY:** No. I heard that. Guy shows up at your door holding a box like a
-pizza. "Somebody order sixty cards?" No.
-
-Okay. Not your place. Not my place. Switzerland. A booth. Coffee shop. The
-library. That bar with the big tables.
-
-**HER:** I'm not playing cards next to someone's oat milk.
-
-**DANNY:** Fair. After the package, then. When does the window close?
-
-**HER:** They said a window.
-
-**DANNY:** So I'm scheduling around UPS. Great. I could FaceTime you the
-unboxing—
-
-**HER:** No.
-
-**DANNY:** No. That's a shopping channel. I heard it. We don't even have to
-play. You can just watch me lose.
-
-**HER:** Watch you how?
-
-**DANNY:** …Online. Yeah. We can play online.
+**DANNY:** Right. Not a date. Not my place. Not your place. Not out. Okay. We
+can hang online.
 
 **HER:** I'm not going on there with you.
 
@@ -189,47 +171,50 @@ two people and a rulebook.
 
 **HER:** So what is it?
 
-**DANNY:** It's the same game. They put the box on the internet so people with
-packages can still show up. You stay home with your package. I stay here with
-the lid in my lap. Same stupid Mastermind. We still play.
-
-*A stack of cards drops onto the table.*
+**DANNY:** The game is online. Legendary-arena.com. It's the game without the
+forty-two boxes. You stay home with your rollers. I stay here with my wall.
+Same heroes. Same stupid Mastermind. Nobody comes over, nobody punches
+cardboard, and we still play.
 
 **HER:** Okay. That's actually kind of smart.
 
-**DANNY:** I'm not trying to be a guy with a box. I'm trying to keep Saturday.
+**DANNY:** And I'll send food. You do the rollers. I'll stare at the
+expansions.
 
-**HER:** So is there still dinner?
+**HER:** You don't have to buy me dinner.
 
-**DANNY:** There's still dinner. I will not make you watch the Cap movie you
-already hate. We will not invite The View, because I would like to accomplish
-one thing that night. Dinner at five. You're home for the window. You sign for
-your mystery box, I go home to mine, and we play. You can be Captain Marvel.
-I'll be the brainwashed friend.
+**DANNY:** It's not dinner. It's not a date. It's catering. For a game.
 
-**HER:** Text me the place.
+**HER:** …There's a vegan place.
 
-**DANNY:** The place and the link. Place for dinner. Link for after.
-Legendary-arena.com. Assemble your heroes. Read the scenario. Earn your
-standing. It's not a cult. It's not The View. It's not Tinder. And it's not
-only for guys who think a playmat is a personality.
+**DANNY:** There's a vegan place.
 
-*He looks at the playmat.*
+**HER:** The one with the cashew brie. And the jackfruit tacos.
 
-**HER:** Package comes, I'll text you.
+**DANNY:** The cashew brie. Is that the one where the cheese costs more than
+cheese?
 
-**DANNY:** If it's shoes, I don't need to know. If it's a different card game,
-we have a problem.
+**HER:** It's really good.
+
+**DANNY:** Okay. Cashew brie. Jackfruit. Text me the address.
+
+**HER:** Text me the link.
+
+**DANNY:** Both. Food to you. Link to you. Legendary-arena.com. Assemble your
+heroes. Read the scenario. Earn your standing. It's not a cult. It's not The
+View. It's not Tinder. And it's not only for guys who think a playmat is a
+personality.
+
+*He looks at the playmat. Then the wall.*
 
 **HER:** Bye, Danny.
 
 **DANNY:** Bye.
 
-*He hangs up. To himself, rolling the mat back up:*
+*He hangs up. To himself, opening the delivery app:*
 
-**DANNY:** She said Captain Marvel. Brother plays Pokey-duh-mon. She's waiting
-on a package. Saturday's still on. Just geographically farther apart than I
-budgeted.
+**DANNY:** She said Captain Marvel. Brother plays Pokey-duh-mon. She's in
+rollers, eating my jackfruit. I can work with that.
 
 ## End card
 
@@ -239,8 +224,8 @@ Assemble your heroes. Read the scenario. Earn your standing.
 
 ## He got the pitch right
 
-Strip out the dinner negotiations and the talk-show detour, and Danny's sales
-job holds up.
+Strip out the rollers, the talk-show detour, and the cashew brie, and Danny's
+sales job holds up.
 
 **The heroes are real.** Captain America, Winter Soldier, Falcon, and Captain
 Marvel are all in the card pool. She can have her favorite. He can have the
@@ -253,6 +238,9 @@ you win because you sequenced it well against a Mastermind with a plan.
 **Nothing is for sale that changes the session.** No experience bars. No
 time-gated unlocks. No paying to make Captain Marvel taller. Standing comes from
 sessions played well, not hours logged or money spent.
+
+**You don't need the boxes.** The game is online. The coffee table is optional.
+So is the wall.
 
 **The rules don't drift.** What you learned Tuesday is what you face Thursday.
 The shuffle is the shuffle. Everything after that is your decisions.
