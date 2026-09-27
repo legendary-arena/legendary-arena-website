@@ -22,7 +22,8 @@ and — possibly — bought dinner for someone who says it isn't a date.
 
 ## Cold open
 
-*Phone rings. He answers already standing. Shirt on, suspenders visible.*
+*Phone rings. He answers already standing. Shirt on, suspenders visible, a
+clip-on bow tie.*
 
 **DANNY:** Hey, Aunt Laura.
 
@@ -70,7 +71,8 @@ cards. This weekend's perfect. Nobody's here. I already got it out.
 
 *Silence. The camera pulls back. Behind him, a wall of card boxes, enough that
 forty-two feels plausible. The coffee table is cleared. A playmat is down.
-Nobody counts. The belt is the only adult thing in the room. Between his
+Nobody counts. The clip-on bow tie is still on. The belt is the only adult
+thing in the room. Between his
 shoulder blades, the shirt has a shiny, iron-shaped patch where the polyester
 melted.*
 
@@ -312,6 +314,9 @@ One page. Want, veto, dictionary, secret. The script does the rest.
   back, a glazed, iron-shaped mark from being pressed on the cotton setting —
   hidden by the tight shot until the Uno pullback. Nobody mentions it, and he
   never notices. It's the payoff to "Cotton setting. All the way up."
+  Clip-on bow tie from the first frame of the cold open. Never mentioned. He
+  takes Laura's belt note and misses that she'd hate the bow tie, so it's still
+  on at the Uno pullback.
 
 ### Her
 
@@ -492,12 +497,13 @@ things are now the proof of concept, not "can Veo make a guy talk."
 
 **Load-bearing visuals:**
 
-- **Cold open:** Aunt Laura on the phone, suspenders on, the shirt he "knows
-  how to iron."
+- **Cold open:** Aunt Laura on the phone, suspenders and a clip-on bow tie,
+  the shirt he "knows how to iron."
 - **Flash:** microwave TV dinner on the good china.
 - **Click-over:** belt threaded one-handed, tight.
 - **"Like Uno?" pullback:** wall of boxes, cleared table, playmat, lanes, the
-  belt as the only adult object, the iron-shaped melt on the back of the shirt.
+  bow tie still on, the belt as the only adult object, the iron-shaped melt on
+  the back of the shirt.
 - **Hold on the wall** after "Captain Marvel… Eventually."
 - **Climb-down:** her place / FaceTime / booth / online.
 - **Tag:** cold TV dinner, bite anyway, phone showing the vegan order.
@@ -532,7 +538,7 @@ on-screen text. Don't ask the model for "Captain America card."
 
 | Priority | Make this first | Tool |
 |---|---|---|
-| 1 | Locked stills: Danny (front, and back with the iron mark), wall of boxes, table / playmat / lanes, TV dinner on china, her in rollers | Flux / Midjourney / Nano Banana |
+| 1 | Locked stills: Danny (front with clip-on bow tie, and back with the iron mark), wall of boxes, table / playmat / lanes, TV dinner on china, her in rollers | Flux / Midjourney / Nano Banana |
 | 2 | Shot list from the script, not from vibes | LTX Studio |
 | 3 | Voices for Danny, Her, Aunt Laura | ElevenLabs |
 | 4 | Spoken close-ups | Veo 3.1 |
@@ -546,11 +552,11 @@ across scenes. LTX Elements will.
 
 **The ~100-second POC board.** Not the whole call. These boards only:
 
-1. Tight: suspenders, "They're on." "Cotton setting. All the way up." "It's a
+1. Tight: suspenders, clip-on bow tie, "They're on." "Cotton setting. All the way up." "It's a
    shirt."
 2. Flash: TV dinner on the good china.
 3. Beep. Belt, one hand.
-4. "Like Uno?" — silence — pullback. Wall, playmat, belt, iron mark.
+4. "Like Uno?" — silence — pullback. Wall, playmat, bow tie, belt, iron mark.
 5. "I built a city."
 6. Rollers (the one cutaway to her side; voice-only otherwise).
 7. "The View." / "Winter Soldier." (wall and box spines, not faces)
