@@ -58,7 +58,7 @@ asking you to sit down.
 library.
 
 **DANNY:** I saw card games on your profile. I took that seriously. That's on
-me. I should've asked which ones before I opened a storage unit.
+me. I heard cards. I built a city.
 
 **HER:** I can't come over anyway. I don't really give that kind of access.
 Also I'm putting my hair in rollers.
@@ -130,8 +130,7 @@ No.
 also the gym. But the game itself is not "imagine you have
 abs and a girlfriend." It's "put heroes on a table and don't play like an
 idiot." You assemble a team. You read a scenario. There's a Mastermind trying
-to ruin the night. You win because you sequenced the cards, not because you
-bought a chest plate in the shop and told yourself that's the same as training.
+to ruin the night.
 
 **HER:** So you just sit around and talk?
 
@@ -221,9 +220,8 @@ cheese?
 
 **HER:** It's really good.
 
-**DANNY:** Okay. Cashew brie. Jackfruit. And after: legendary-arena.com.
-Assemble your heroes. Read the scenario. Earn your standing. It's not a cult.
-It's not Uno. Text me the address.
+**DANNY:** Okay. Cashew brie. Jackfruit. I send the food, you open the link.
+Text me the address.
 
 **HER:** Text me the link.
 
