@@ -270,7 +270,13 @@ One page. Want, veto, dictionary, secret. The script does the rest.
 
 ### Danny
 
-- **Age:** late 20s to late 30s. Competent mouth, bad situation. Not worldly.
+- **Character reference:** Alan (Zach Galifianakis) in *The Hangover*. Watch
+  the intervention scene from *Part III*:
+  <https://youtu.be/v4np7L0aJd0>. A grown man whose family still manages him,
+  who is completely sincere, and who has no idea the room is on his side of the
+  weirdness. Danny is that man on a phone call.
+- **Age:** late 20s to early 40s. The older he reads, the better Aunt Laura and
+  the pressed shirt land. Total confidence, no self-awareness. Not worldly.
 - **Wants:** her at his place Saturday, while nobody else is home, playing
   *his* card game. Failing that, don't lose the thread after she says no.
 - **Won't:** admit the wall is too much, explain the living situation, call it
@@ -279,13 +285,18 @@ One page. Want, veto, dictionary, secret. The script does the rest.
   Core sets and expansions. (He never says "Marvel Legendary" out loud.) He didn't misread a sentence. He misread a person.
 - **Secret:** the place is only his this weekend. The table is downstairs. She
   never finds out.
-- **Play him:** fast, hopeful, covering. He isn't sad until a no lands, and then
-  he invents the next plan in the same breath. The comedy is him staying in the
-  sale, not narrating that he's pathetic. The forty-two boxes are normal until
-  "Like Uno?" "No. No." is a real defense. The vegan order is a cost of doing
-  business.
+- **Play him:** earnest, hopeful, oblivious. Like Alan, he isn't hiding
+  anything — he genuinely thinks forty-two boxes and a cleared coffee table is
+  a generous invitation. He isn't sad until a no lands, and then he invents the
+  next plan in the same breath, with the same sincerity. The comedy is him
+  staying in the sale, never narrating that he's pathetic, because he doesn't
+  know he is. The boxes are normal to him even after "Like Uno?" — he just
+  learns she doesn't know that yet. "No. No." is a real defense, not a cover.
+  The vegan order is a cost of doing business.
 - **Don't:** wink at the camera, do a bit voice, apologize for the hobby, win
-  the argument about Captain Marvel, or explain boardgame.io.
+  the argument about Captain Marvel, or explain boardgame.io. Don't play Alan's
+  strangeness as a character voice either. Alan works because he believes every
+  word. So does Danny.
 - **Physical:** starts close on the phone. After Uno, the room gets bigger than
   he wanted. The delivery app is the only quiet he gets.
 
@@ -313,7 +324,8 @@ One page. Want, veto, dictionary, secret. The script does the rest.
 ### Aunt Laura
 
 - **One function:** family hands on the evening. Warm, brief, already knows too
-  much. She should sound like she has a key.
+  much. She should sound like she has a key. She is the Alan intervention in
+  miniature: family that still has opinions about a grown man's belt.
 - **Advice allowed:** one clothing note, one ironing note. Not hair, not
   flowers, not "be yourself." She is wardrobe, not a coach.
 - **Don't:** play her as comic relief that stays. She is a doorbell.
@@ -334,9 +346,10 @@ a link and an order, not a relationship.
   play it as a commercial read.
 - Nobody says the title of the video. Nobody says "basement," "parents," or the
   name of the app (no Hinge, no Tinder) unless it's added later on purpose.
-- **Tone reference:** Danny Polishchuk's "explain it to a normal person"
-  videos, for Danny's cadence only. Don't ask her to match it. She's the normal
-  person.
+- **Tone references, Danny only:** Alan for who he is (sincere, managed,
+  oblivious). Danny Polishchuk's "explain it to a normal person" videos for the
+  rhythm of the pitch passages — repeating her answers back like a police
+  report. Don't ask her to match either. She's the normal person.
 
 ### Keep out of the actor packet
 
