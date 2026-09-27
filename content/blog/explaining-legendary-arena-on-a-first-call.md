@@ -25,25 +25,25 @@ and — possibly — bought dinner for someone who says it isn't a date.
 *Phone rings. He answers already standing. Shirt on, suspenders visible, a
 clip-on bow tie.*
 
-**DANNY:** Hey, Aunt Laura.
+**DANNY K:** Hey, Aunt Laura.
 
 **AUNT LAURA:** Are you wearing the suspenders?
 
-**DANNY:** They're on.
+**DANNY K:** They're on.
 
 **AUNT LAURA:** Take them off. A belt. You look like you're going to a recital.
 Did anybody press that shirt?
 
-**DANNY:** Yes. I know how to iron a shirt, Aunt Laura. Cotton setting. All the
+**DANNY K:** Yes. I know how to iron a shirt, Aunt Laura. Cotton setting. All the
 way up.
 
 **AUNT LAURA:** Is it cotton?
 
-**DANNY:** It's a shirt.
+**DANNY K:** It's a shirt.
 
 **AUNT LAURA:** …What are you feeding Jenny?
 
-**DANNY:** I made dinner.
+**DANNY K:** I made dinner.
 
 *Flash: a microwave TV dinner, film peeled back, black plastic tray and all,
 set in the middle of the good china.*
@@ -52,23 +52,23 @@ set in the middle of the good china.*
 
 *Beep.*
 
-**DANNY:** That's her. I gotta go. Love you, Aunt Laura.
+**DANNY K:** That's her. I gotta go. Love you, Aunt Laura.
 
 ## The call
 
 *He clicks over, threading a belt one-handed. Tight on him.*
 
-**DANNY:** Jennifer? Hey. It's Danny. Danny K.
+**DANNY K:** Jennifer? Hey. It's Danny. Danny K.
 
 **JEN:** Jen.
 
-**DANNY:** Jen. No, I wasn't sitting on the phone. I was near it. On purpose.
+**DANNY K:** Jen. No, I wasn't sitting on the phone. I was near it. On purpose.
 Anyway. Thanks for calling back. I called because you put
 card games on your profile.
 
 **JEN:** I do like card games.
 
-**DANNY:** I also like card games. So, tonight. Just come over. We'll play
+**DANNY K:** I also like card games. So, tonight. Just come over. We'll play
 cards. Nobody's here. I already got it out.
 
 **JEN:** Like Uno?
@@ -82,16 +82,16 @@ The belt is the only adult thing in the room.*
 Between his shoulder blades, the shirt has a shiny, iron-shaped patch where
 the polyester melted.*
 
-**DANNY:** …Sure. Like Uno. Kind of. It's not a box. It's forty-two boxes.
+**DANNY K:** …Sure. Like Uno. Kind of. It's not a box. It's forty-two boxes.
 Core sets and expansions. The one with the heroes.
 
 **JEN:** Or Cover Your Assets. The one with the houses.
 
-**DANNY:** Cover Your Assets.
+**DANNY K:** Cover Your Assets.
 
 **JEN:** Yeah.
 
-**DANNY:** Okay. That's… smaller than what I did. I already opened like eight
+**DANNY K:** Okay. That's… smaller than what I did. I already opened like eight
 of them. I punched the cardboard. I sorted the heroes. I cleared the coffee
 table. I made lanes. I spent like an hour making this look like a table and not
 a cry for help. You don't have to learn all of it. That's the point of you
@@ -101,43 +101,43 @@ asking you to sit down.
 **JEN:** That is a lot of boxes for a first hang. I didn't mean a whole…
 library.
 
-**DANNY:** I saw card games on your profile. I took that seriously. That's on
+**DANNY K:** I saw card games on your profile. I took that seriously. That's on
 me. I heard cards. I built a city.
 
 **JEN:** I can't come over anyway. I don't really give that kind of access.
 Also I'm putting my hair in rollers.
 
-**DANNY:** Your hair.
+**DANNY K:** Your hair.
 
 **JEN:** In rollers. It's a whole thing. They have to sit.
 
-**DANNY:** I wouldn't ask if it was one box. If you don't come, I'm the guy who
+**DANNY K:** I wouldn't ask if it was one box. If you don't come, I'm the guy who
 built a city for nobody.
 
 **JEN:** And I'm not really dating right now.
 
 *Beat.*
 
-**DANNY:** Okay. Not a date. Don't come over. Wait. Wait. Other idea. I can do
+**DANNY K:** Okay. Not a date. Don't come over. Wait. Wait. Other idea. I can do
 Uno. I'll learn Uno. Uno is a card game the way a paper airplane is aviation,
 but I will do it. Or — just let me tell you what's in here, because you are
 turning down some very good people. There's Cap in here.
 
 **JEN:** Oh no. Not him. I hated that movie.
 
-**DANNY:** You hated Captain America.
+**DANNY K:** You hated Captain America.
 
 **JEN:** I like the one with his friend. The one who got brainwashed by a cult.
 
-**DANNY:** His friend. Brainwashed. By a cult.
+**DANNY K:** His friend. Brainwashed. By a cult.
 
 **JEN:** Yeah. Like… The View.
 
-**DANNY:** The View.
+**DANNY K:** The View.
 
 **JEN:** Yeah. That, right.
 
-**DANNY:** Okay. So your favorite movie is the one where Cap's roommate gets
+**DANNY K:** Okay. So your favorite movie is the one where Cap's roommate gets
 kidnapped by a daytime panel and they wipe his personality. That's *Winter
 Soldier*. Bucky. Metal arm. The cult is HYDRA. The View is also a cult, just
 with better lighting. Same result. Guy walks in with a name and walks out
@@ -145,32 +145,32 @@ agreeing with whatever the table said.
 
 **JEN:** *Winter Soldier.* Yeah.
 
-**DANNY:** Did you watch *The Falcon and the Winter Soldier*?
+**DANNY K:** Did you watch *The Falcon and the Winter Soldier*?
 
 **JEN:** Oh my God, I loved it.
 
-**DANNY:** You loved it.
+**DANNY K:** You loved it.
 
 **JEN:** So my favorite is Captain Marvel, okay?
 
-**DANNY:** …Captain Marvel. We started at Cap, detoured through a talk show,
+**DANNY K:** …Captain Marvel. We started at Cap, detoured through a talk show,
 hit the Disney+ show, and landed on Captain Marvel. That's a legal favorite.
 And she's in here. That's overlap. We have overlap. I can find her.
 
 *Hold on the wall.*
 
-**DANNY:** Eventually.
+**DANNY K:** Eventually.
 
 **JEN:** Is this just a game for overweight guys fantasizing they are in shape
 and have hot girlfriends?
 
-**DANNY:** No.
+**DANNY K:** No.
 
 No.
 
 *Beat. He is standing in front of the wall.*
 
-**DANNY:** I mean some of them, statistically, yes. That's every hobby. That's
+**DANNY K:** I mean some of them, statistically, yes. That's every hobby. That's
 also the gym. But the game itself is not "imagine you have
 abs and a girlfriend." It's "put heroes on a table and don't play like an
 idiot." You assemble a team. You read a scenario. There's a Mastermind trying
@@ -178,30 +178,30 @@ to ruin the night.
 
 **JEN:** So you just sit around and talk?
 
-**DANNY:** Yes. Kinda. Just sit around and talk and—
+**DANNY K:** Yes. Kinda. Just sit around and talk and—
 
 **JEN:** Yeah that's right. Just like The View.
 
-**DANNY:** Yeah. That's right. Just like The View. We sit around. We don't
+**DANNY K:** Yeah. That's right. Just like The View. We sit around. We don't
 accomplish anything. Difference is when we don't accomplish anything, a
 Mastermind beats us and the scoreboard says so. On The View they don't
 accomplish anything and they still go to commercial like it was a meeting.
 
 **JEN:** My baby brother plays a card game.
 
-**DANNY:** Oh, your baby brother plays a card game.
+**DANNY K:** Oh, your baby brother plays a card game.
 
 Oh. You're talking about Pokey-duh-mon.
 
 **JEN:** Pokémon.
 
-**DANNY:** Yeah. Pokey-duh-mon. Okay. So your brother means Pokey-duh-mon, you
+**DANNY K:** Yeah. Pokey-duh-mon. Okay. So your brother means Pokey-duh-mon, you
 mean Uno, and I mean the wall. Three games. One word. Mine's kinda like his, except
 grown-man boxes and a villain with a plan.
 
 **JEN:** So it's like Pokémon but Marvel.
 
-**DANNY:** It's like Pokémon if the animals were Avengers and nobody sold you
+**DANNY K:** It's like Pokémon if the animals were Avengers and nobody sold you
 a twenty-dollar pack that does the thinking for you. No grind. No paying to
 make Captain Marvel taller. You get credit for the game you just played, not
 for owning the wall. You play sloppy, you lose, and the game does not care that
@@ -209,62 +209,62 @@ she's your favorite.
 
 **JEN:** That actually sounds kind of fun.
 
-**DANNY:** Great. So I can come to you.
+**DANNY K:** Great. So I can come to you.
 
 *Beat. He looks at the wall.*
 
-**DANNY:** Okay, not forty-two boxes. Cover Your Assets is two pounds. What I
+**DANNY K:** Okay, not forty-two boxes. Cover Your Assets is two pounds. What I
 have is furniture. That's not a personality, that's a moving company. Okay.
 FaceTime. I prop the phone up, you watch the table—
 
 **JEN:** I'm in rollers.
 
-**DANNY:** Right. Nobody sees the rollers. Okay. We go out. Leave the boxes. A booth. Food. Normal people—
+**DANNY K:** Right. Nobody sees the rollers. Okay. We go out. Leave the boxes. A booth. Food. Normal people—
 
 **JEN:** I said I'm not doing a date.
 
-**DANNY:** Right. Not a date. Not my place. Not your place. Not out. Okay. We
+**DANNY K:** Right. Not a date. Not my place. Not your place. Not out. Okay. We
 can do it online.
 
 **JEN:** I'm not going back on there with you.
 
-**DANNY:** No. Not the app. I'm not asking you to swipe on Captain Marvel. I'm
+**DANNY K:** No. Not the app. I'm not asking you to swipe on Captain Marvel. I'm
 asking you to play the thing you said you like. Which I now realize you did not
 like.
 
 **JEN:** So what is it?
 
-**DANNY:** The game is online. There's a version with no boxes. I should've led
+**DANNY K:** The game is online. There's a version with no boxes. I should've led
 with that. I led with the warehouse. Legendary-arena.com. It's the game without
 the forty-two boxes. You stay home with your rollers. I stay here with my wall.
 Same heroes. Same stupid Mastermind.
 
 **JEN:** Is it easy?
 
-**DANNY:** It's not Uno. But I'll teach you. Nobody comes over, nobody punches
+**DANNY K:** It's not Uno. But I'll teach you. Nobody comes over, nobody punches
 cardboard, and we still play.
 
 **JEN:** Okay. That's actually kind of smart.
 
-**DANNY:** And I'll send food. You do the hair. I'll pretend this is still what
+**DANNY K:** And I'll send food. You do the hair. I'll pretend this is still what
 you wrote down.
 
 **JEN:** You don't have to buy me dinner.
 
-**DANNY:** It's not dinner. It's not a date. It's catering. For a game.
+**DANNY K:** It's not dinner. It's not a date. It's catering. For a game.
 
 **JEN:** …There's a vegan place.
 
-**DANNY:** There's a vegan place.
+**DANNY K:** There's a vegan place.
 
 **JEN:** The one with the cashew brie. And the jackfruit tacos.
 
-**DANNY:** The cashew brie. Is that the one where the cheese costs more than
+**DANNY K:** The cashew brie. Is that the one where the cheese costs more than
 cheese?
 
 **JEN:** It's really good.
 
-**DANNY:** You know what goes with cashew brie? Kombucha. I have kombucha. I
+**DANNY K:** You know what goes with cashew brie? Kombucha. I have kombucha. I
 made it. Come over, I'll pour you a glass.
 
 *Flash — how that would go: Danny, bow tie on, tips a one-gallon glass jar of
@@ -273,20 +273,20 @@ sloshes over the glass, the counter, and the shirt.*
 
 **JEN:** I'm still in rollers.
 
-**DANNY:** Right. Cashew brie. Jackfruit. I send the food, you open the link.
+**DANNY K:** Right. Cashew brie. Jackfruit. I send the food, you open the link.
 Text me the address.
 
 **JEN:** Text me the link.
 
-**DANNY:** Both.
+**DANNY K:** Both.
 
 **JEN:** Bye, Danny.
 
-**DANNY:** Bye.
+**DANNY K:** Bye.
 
 *He hangs up. To himself, opening the delivery app:*
 
-**DANNY:** She said Captain Marvel. Brother plays Pokey-duh-mon. She meant
+**DANNY K:** She said Captain Marvel. Brother plays Pokey-duh-mon. She meant
 Uno. She's in rollers, eating my jackfruit. I can work with that.
 
 *He sits down at the good china. The TV dinner has gone cold. He takes a bite
