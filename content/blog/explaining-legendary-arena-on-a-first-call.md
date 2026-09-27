@@ -294,7 +294,7 @@ One page. Want, veto, dictionary, secret. The script does the rest.
 
 ### Danny K
 
-- **Age:** late 20s to late 30s. Competent mouth, bad situation. Not worldly.
+- **Age:** mid 30s to early 40s. Competent mouth, bad situation. Not worldly.
 - **Wants:** her at his place tonight, while nobody else is home, playing
   *his* card game. Failing that, don't lose the thread after she says no.
 - **Won't:** admit the wall is too much, explain the living situation, call it
