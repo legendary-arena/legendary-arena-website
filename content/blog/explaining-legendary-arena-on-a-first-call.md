@@ -336,6 +336,11 @@ One page. Want, veto, dictionary, secret. The script does the rest.
 
 ### Jen
 
+- **Character reference:** The Onion's "Perfect One-Pot, Six-Pan, 10-Wok,
+  25-Baking Sheet Dinner" — see *Reference and background* at the end. Her
+  rollers-and-cashew-brie night is her twenty-five-baking-sheet dinner: a whole
+  production she honestly thinks of as easy. His forty-two boxes are homework.
+  Her routine is simple. She never notices the symmetry.
 - **Age:** mid 30s to early 40s. Put-together on the phone. Not a villain.
 - **Wants:** stay home, keep the call pleasant, not be rude enough to end it.
   Food is acceptable. Access is not.
@@ -382,9 +387,11 @@ a link and an order, not a relationship.
   play it as a commercial read.
 - Nobody says the title of the video. Nobody says "basement," "parents," or the
   name of the app (no Hinge, no Tinder) unless it's added later on purpose.
-- **Tone references, Danny only:** Danny Polishchuk for cadence, Zach
-  Galifianakis for texture. See *Reference and background* at the end. Don't
-  ask her to match either. She's the normal person.
+- **Tone references:** for Danny, Danny Polishchuk for cadence and Zach
+  Galifianakis for texture. For Jen, The Onion's one-pot dinner for her
+  everything-is-easy calm. See *Reference and background* at the end. Neither
+  actor borrows the other's references. She's the normal person — by her own
+  standard.
 
 ### Keep out of the actor packet
 
@@ -721,10 +728,11 @@ the boxes — the game is online, and the coffee table is optional.
 
 ## Reference and background
 
-Comic reference for the actor playing Danny. Two sources, two different jobs.
-Polishchuk is the engine: how Danny talks. Galifianakis is texture: a few
+Comic reference for the actors. For Danny, two sources with two different
+jobs. Polishchuk is the engine: how Danny talks. Galifianakis is texture: a few
 moments where Danny goes still and strange. Danny is not Alan. He knows what
-he's doing on this call. He just misjudged the room.
+he's doing on this call. He just misjudged the room. For Jen, one source: The
+Onion's one-pot dinner, for how she thinks about her own night.
 
 ### Danny Polishchuk — cadence
 
@@ -794,7 +802,37 @@ looked at.
 
 **More:** *Between Two Ferns* (Funny or Die; *Between Two Ferns: The Movie*, Netflix)
 
+### The Onion's "Perfect One-Pot" dinner — Jen
+
+**What it is:** a satirical cooking video from The Onion (article dated
+2017-11-29; listed on IMDb as a 2021 episode). The premise is in the title: a
+"one-pot" weeknight dinner that takes six pans, ten woks, and twenty-five
+baking sheets — potatoes, pasta, broccoli, beef, beets, and a dozen sauces all
+going at once — presented in the easygoing register of a simple-recipe video.
+
+**What Jen borrows:**
+
+- **The elaborate thing is the easy thing.** Rollers that "have to sit," a
+  vegan place, cashew brie, jackfruit tacos — to her that's a quiet night in,
+  and she'd describe it that way without irony.
+- **Calm about her own production, puzzled by his.** She hears forty-two boxes
+  as a library and a homework assignment. She'd never apply that word to her
+  own evening.
+- **Ordinary, not a bit.** The one-pot joke works because the video never
+  admits it's absurd. Jen never admits the rollers are a production, because to
+  her they aren't.
+
+**Where it stops:** the video is a parody of a host. Jen is a person. Borrow
+the serene everything-is-easy frame of mind, not a presenter voice, and not the
+satire. She is still specific, pleasant, and holding her ground.
+
+**Watch:**
+
+{{< youtube id="NGgpSWcaV1U" title="Perfect One-Pot, Six-Pan, 10-Wok, 25-Baking Sheet Dinner — The Onion" loading="lazy" >}}
+
 **Sources:**
+[The Onion — Perfect One-Pot, Six-Pan, 10-Wok, 25-Baking Sheet Dinner](https://theonion.com/perfect-one-pot-six-pan-10-wok-25-baking-sheet-dinne-1820847016/) ·
+[IMDb — episode listing](https://www.imdb.com/title/tt16758712/) ·
 [Stand-Up Global — Danny Polishchuk](https://standupglobal.com/danny-polishchuk.php) ·
 [New York Comedy Club — Danny Polishchuk](https://newyorkcomedyclub.com/comedians/danny-polishchuk) ·
 [AltComedy — Zach Galifianakis](https://www.altcomedy.com/comedians/zach-galifianakis.html) ·
