@@ -353,8 +353,10 @@ a link and an order, not a relationship.
 ### Rules for both
 
 - It's a phone call, not stand-up. Overlap a little. Don't wait for punchlines.
-- She can be heard. Even if the cut is one-sided, she has to feel like someone
-  who could hang up.
+- **Her side is voice-only, with one rollers cutaway.** We hear her the whole
+  call; we see her once, as an insert of the rollers when she says them. She
+  never delivers a line on camera. The voice still has to feel like someone who
+  could hang up.
 - The game pitch happens only because she asked what the pile is for. Don't
   play it as a commercial read.
 - Nobody says the title of the video. Nobody says "basement," "parents," or the
@@ -518,9 +520,10 @@ the script into Kling/Veo" pass:
 4. **Three voices.** Aunt Laura is on screen for seconds and still needs her
    own ElevenLabs voice, or the cold open sounds like a different movie.
 5. **Her side.** The script wants her present without giving her the room.
-   Decide now: voice-only plus a rollers insert, or a real second location.
-   Mixed coverage — sometimes we see her, sometimes we don't — looks like a
-   mistake unless it's a rule.
+   **Decided (2026-09-27): voice-only, plus one rollers cutaway.** She never
+   delivers a line on camera, so there's no second location to light and no
+   second face to keep consistent. The rollers insert is the only time she's
+   seen — that's the rule, which keeps it from looking like a mistake.
 
 For the Cap / Bucky / Captain Marvel beats, cut to the wall, a box spine, or
 on-screen text. Don't ask the model for "Captain America card."
@@ -549,7 +552,7 @@ across scenes. LTX Elements will.
 3. Beep. Belt, one hand.
 4. "Like Uno?" — silence — pullback. Wall, playmat, belt, iron mark.
 5. "I built a city."
-6. Rollers.
+6. Rollers (the one cutaway to her side; voice-only otherwise).
 7. "The View." / "Winter Soldier." (wall and box spines, not faces)
 8. Hold on the wall. "Eventually."
 9. "No. No."
