@@ -1,7 +1,7 @@
 ---
 title: "Explaining Legendary Arena to a Girl I'm Trying to Take Out"
 date: 2026-09-26
-description: "A comedy short. One phone call. Her profile said card games. So did his. She meant Uno. He has forty-two boxes and a cleared coffee table. Somewhere between the two, he explains Legendary Arena."
+description: "A comedy short. His aunt makes him wear a belt. Her profile said card games. So did his. She meant Uno. He has forty-two boxes and a cleared coffee table. Somewhere between the two, he explains Legendary Arena."
 draft: false
 tags: ["comedy", "video", "heroes"]
 categories: ["comedy"]
@@ -11,7 +11,8 @@ cta: "play"
 Most people don't need a deck-builder explained to them. They need it
 explained to them by someone who is also trying, very hard, to get a yes.
 
-This is the script for a comedy short. One phone call. We hear both sides.
+This is the script for a comedy short: fifteen seconds with his aunt, then one
+phone call. We hear both sides.
 Her profile said card games. Danny took that seriously — all of it is already
 out on his coffee table. She meant Uno, and she is putting her hair in rollers.
 He hangs up having survived a guided tour of the Marvel canon by way of daytime
@@ -19,13 +20,34 @@ television, defended his hobby against its reputation, lost a round to her baby
 brother's Pokémon binder, climbed all the way down from his own living room,
 and — possibly — bought dinner for someone who says it isn't a date.
 
+## Cold open
+
+*Phone rings. He answers already standing. Shirt on, suspenders visible.*
+
+**DANNY:** Hey, Aunt Laura.
+
+**AUNT LAURA:** Are you wearing the suspenders?
+
+**DANNY:** They're on.
+
+**AUNT LAURA:** Take them off. A belt. You look like you're going to a recital.
+Did anybody press that shirt?
+
+**DANNY:** Mom already did it.
+
+**AUNT LAURA:** Good. Tucked in. And don't start with the boxes, just—
+
+*Beep.*
+
+**DANNY:** That's her. I gotta go. Love you, Aunt Laura.
+
 ## The call
 
-*Phone rings. He picks up too fast. Tight on him.*
+*He clicks over, threading a belt one-handed. Tight on him.*
 
 **DANNY:** Hey. Yeah, it's Danny. No, I wasn't sitting on the phone. I was
-near it. On purpose. Anyway. I'm calling because you put card games on your
-profile.
+near it. On purpose. Anyway. Thanks for calling back. I called because you put
+card games on your profile.
 
 **HER:** I do like card games.
 
@@ -36,7 +58,7 @@ cards. This weekend's perfect. Nobody's here. I already got it out.
 
 *Silence. The camera pulls back. Behind him, a wall of card boxes, enough that
 forty-two feels plausible. The coffee table is cleared. A playmat is down.
-Nobody counts.*
+Nobody counts. The belt is the only adult thing in the room.*
 
 **DANNY:** …Sure. Like Uno. Kind of. It's not a box. It's forty-two boxes.
 Core sets and expansions. The one with the heroes.
@@ -248,7 +270,7 @@ One page. Want, veto, dictionary, secret. The script does the rest.
 
 ### Danny
 
-- **Age:** late 20s to late 30s. Competent mouth, bad situation.
+- **Age:** late 20s to late 30s. Competent mouth, bad situation. Not worldly.
 - **Wants:** her at his place Saturday, while nobody else is home, playing
   *his* card game. Failing that, don't lose the thread after she says no.
 - **Won't:** admit the wall is too much, explain the living situation, call it
@@ -287,6 +309,14 @@ One page. Want, veto, dictionary, secret. The script does the rest.
 - **Don't:** play dumb about every Marvel title, play mean, or turn The View
   into a speech. She is mixing things up and holding her ground, not performing
   stupidity.
+
+### Aunt Laura
+
+- **One function:** family hands on the evening. Warm, brief, already knows too
+  much. She should sound like she has a key.
+- **Advice allowed:** one clothing note, one ironing note. Not hair, not
+  flowers, not "be yourself." She is wardrobe, not a coach.
+- **Don't:** play her as comic relief that stays. She is a doorbell.
 
 ### Between them
 
