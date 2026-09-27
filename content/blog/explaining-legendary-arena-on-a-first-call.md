@@ -275,8 +275,8 @@ One page. Want, veto, dictionary, secret. The script does the rest.
   *his* card game. Failing that, don't lose the thread after she says no.
 - **Won't:** admit the wall is too much, explain the living situation, call it
   desperate, lecture the rules.
-- **Thinks "card games" means:** the one with the heroes. Core sets and
-  expansions. He didn't misread a sentence. He misread a person.
+- **Thinks "card games" means:** Marvel Legendary — the one with the heroes.
+  Core sets and expansions. (He never says "Marvel Legendary" out loud.) He didn't misread a sentence. He misread a person.
 - **Secret:** the place is only his this weekend. The table is downstairs. She
   never finds out.
 - **Play him:** fast, hopeful, covering. He isn't sad until a no lands, and then
@@ -284,8 +284,8 @@ One page. Want, veto, dictionary, secret. The script does the rest.
   sale, not narrating that he's pathetic. The forty-two boxes are normal until
   "Like Uno?" "No. No." is a real defense. The vegan order is a cost of doing
   business.
-- **Don't:** wink at the camera, do a bit voice, apologize for the hobby, or win
-  the argument about Captain Marvel.
+- **Don't:** wink at the camera, do a bit voice, apologize for the hobby, win
+  the argument about Captain Marvel, or explain boardgame.io.
 - **Physical:** starts close on the phone. After Uno, the room gets bigger than
   he wanted. The delivery app is the only quiet he gets.
 
@@ -333,66 +333,127 @@ a link and an order, not a relationship.
 - The game pitch happens only because she asked what the pile is for. Don't
   play it as a commercial read.
 - Nobody says the title of the video. Nobody says "basement," "parents," or the
-  name of the app.
+  name of the app (no Hinge, no Tinder) unless it's added later on purpose.
+- **Tone reference:** Danny Polishchuk's "explain it to a normal person"
+  videos, for Danny's cadence only. Don't ask her to match it. She's the normal
+  person.
+
+### Keep out of the actor packet
+
+- A feminism essay
+- His origin story with the Thursday-night table
+- A full Marvel recap
+- Brand voice guidelines
+- "Play her unlikeable so we like him"
 
 ## Making a proof of concept with AI
 
-Before anyone borrows a living room or stacks forty-two boxes behind an actor,
-the short gets built as an AI-generated proof of concept: a rough two-minute
-cut that answers one question. Does the call play?
+*Working notes. Tool recommendations and prices below come from Grok's review
+of the script (2026-09-27) and have not been independently checked.*
 
-That is a storyboard problem first and a clip-generation problem second. Video
-models make shots measured in seconds. None of them read a screenplay and keep
-Danny looking like Danny across dozens of cuts. So the work runs in order:
-break the script into shots, lock the characters and the room, time the
-dialogue, then generate only what the cut needs.
+The script is a dialogue comedy: a fifteen-second cold open, then two
+characters on a phone call, one living-room set, lots of banter, and cutaways
+to the wall of boxes, the playmat, cards, rollers, and food. The dialogue runs
+about 1,160 words — roughly seven minutes at a normal speaking pace, closer to
+six played fast.
+
+That is a script-to-storyboard problem first and a clip-generation problem
+second. Veo and Kling don't ingest a screenplay and keep Danny looking like
+Danny for seven minutes. They make 8–15 second shots. The script still has to
+be broken into shots, the characters locked, the dialogue timed, and the whole
+thing cut.
+
+**Recommendation:** start in LTX Studio. Generate hero shots in Veo 3.1 and
+Kling. Voices in ElevenLabs. Finish in CapCut or DaVinci Resolve.
 
 ### The stack
 
-| Job | Tool | Why |
+| Job | Tool | Why it fits this script |
 |---|---|---|
-| Script to shots to storyboard | LTX Studio | Takes a script, splits it into shots, and keeps characters and locations reusable across the board. This is the director layer. |
-| Spoken beats with room sound | Google Veo, through Flow | Strongest at dialogue and ambient audio in one pass. Clips are short, so use it for the lines that need a mouth moving. |
-| Looks, gestures, inserts | Kling | Better human motion and cheaper iteration. Danny turning to the wall. Her rollers. The food arriving. |
-| Locked stills | Midjourney, Flux, or Nano Banana | Design Danny, Her, Aunt Laura, the wall, and the playmat once. Feed those stills into every shot as references. |
-| Voices | ElevenLabs | Three voices that stay the same for the whole call. Per-clip audio drifts. A voice track doesn't. |
-| Assembly | DaVinci Resolve or CapCut | Intercut the two sides of the call, drop in the cutaways, lay the voices, add the end card. |
+| Script → scenes → storyboard → animatic | **LTX Studio** (Standard, ~$35/mo) | Uploads a script, splits it into shots, extracts reusable characters and locations, then generates from that board. Built for this workflow. |
+| Talking shots with synced sound | **Google Veo 3.1** (via Flow or LTX Pro) | Best current model for dialogue plus ambient audio in one pass. Clips are ~8s, so use it for beats, not the whole call. |
+| Faces, motion, start/end frames | **Kling 3.0** | Stronger on human motion, cheaper iteration. Danny looking at the wall, her in rollers, food arriving. |
+| Locked stills (boxes, playmat, cards, food) | **Flux / Midjourney / Nano Banana** | Design the wall of 42 boxes and the characters once. Feed those stills into Veo and Kling as references. |
+| Consistent voices | **ElevenLabs** | A seven-minute call needs voices that don't drift. Veo audio is great per clip, not across a conversation. |
+| Assembly | **CapCut** or **DaVinci Resolve** | Intercut the phone sides, insert cutaways, lay the voices, captions, end card. |
 
-If a Google AI subscription is already paid for, Flow alone can carry a first
-rough board. It is a weaker screenplay tool than LTX, but enough to learn
-whether the timing works.
+Copilot's earlier list (Veo + Kling + Midjourney + ElevenLabs + Runway) is the
+generation layer. LTX is the missing director layer. Without it, the result is
+pretty clips that don't add up to the call.
+
+### Why not just Kling or just Veo
+
+Those tools win shot-driven pieces: wide cinematic plates, costume, camera
+moves, little continuous dialogue. This piece is the opposite:
+
+- One location, two people (plus Aunt Laura), overlapping jokes
+- Timing lives in the beats: "The View," "not a date," cashew brie
+- Danny and Her have to stay the same people across dozens of cuts
+- The cutaways have to read as product: playmat, boxes, online play
+
+A single clip model gives a handsome eight-second tease. It won't give a
+proof of concept anyone can watch.
+
+Skip avatar tools (HeyGen, Synthesia) and blog-to-video tools (Pictory,
+Fliki). They make presenters and stock explainers, not this short.
 
 ### The path
 
-1. **Break the script in LTX Studio.** Split the cold open and the call into
-   shots. Lock Danny, Her, and Aunt Laura as reusable characters, and the wall
-   of boxes and the playmat as reusable props.
-2. **Approve a still storyboard before generating any video.** Twenty to thirty
-   panels: the suspenders and the beep, tight on Danny, the pullback on "Like
-   Uno?", her in rollers, the hold on the wall for "Eventually," the delivery
-   app, the end card.
-3. **Record the voices first.** Three readers, or three library voices in
-   ElevenLabs. Cut picture to the audio, not the other way around. Comedy dies
-   when the picture leads.
-4. **Generate only the load-bearing shots.** Veo for lines that need lip
-   movement, Kling for looks and inserts. Everything else can stay a storyboard
-   frame in the animatic.
-5. **Capture the game for real.** When Danny says the game is online, show a
-   screen capture of play.legendary-arena.com, not a generated interface. End
-   on the end card.
+Don't generate the full seven minutes first. Ship a **90–150 second animatic**
+that proves tone, characters, and the pitch.
 
-Skip avatar presenters and prompt-a-whole-video tools. They make explainers,
-and they flatten the timing the piece depends on. Runway is for fixing shots
-later, not a first purchase.
+1. **Paste the script into LTX Studio.** Let it break the cold open and the call
+   into shots. Lock Elements for Danny (the room, the wall of boxes, the
+   playmat), Her (her place, rollers), and Aunt Laura. Treat the wall and the
+   playmat as reusable props, not one-off prompts.
+2. **Approve a still storyboard before any video.** Twenty to thirty panels:
+   the suspenders and the beep, tight on Danny, the pullback on "Like Uno?",
+   her in rollers, the Cap/Bucky banter as card cutaways, the hold on the wall
+   for "Eventually," the pivot to online play, the vegan food, the delivery
+   app, the hang-up.
+3. **Generate only the load-bearing shots** — Veo for lines that need mouth
+   movement and room tone, Kling for looks, gestures, and inserts.
+4. **Record or clone the voices in ElevenLabs**, drop them on the timeline, and
+   cut picture to the audio, not the other way around. Comedy dies when the
+   picture leads.
+5. **End on the site**, not on Marvel faces. Use a real screen capture of
+   play.legendary-arena.com for the online beat.
 
-### What stays off screen
+**Budget variant:** with Google AI Pro (~$20/mo), storyboard in Google Flow
+with Veo 3.1 Lite, then up-res a handful of shots. Flow is weaker as a
+screenplay tool than LTX, but enough for a first proof of concept.
+**Katalist** (~$19/mo) is a reasonable LTX substitute for a character-locked
+board and rough preview, without model choice inside the same app.
 
-The script talks about Captain America, Bucky, HYDRA, and Captain Marvel. The
-video doesn't show them. No generated Marvel faces, no invented card art, no
-boxes that imitate anyone's packaging. The Marvel beats play on the actors'
-faces and, where a cutaway needs it, on-screen text: "Cap." "Bucky." "A cult
-with better lighting." Cards show their backs. The boxes are plain. That keeps
-the short about Legendary Arena, not a fan film of someone else's characters.
+### Rights: treat as a hard constraint
+
+The script name-checks Captain America, Winter Soldier, HYDRA, Falcon, and
+Captain Marvel. Generating those likenesses is a Marvel/Disney problem, even
+for an internal proof of concept. Use instead:
+
+- card backs, silhouettes, or generic comic-panel energy
+- on-screen text ("Cap," "Bucky," "the cult with better lighting") instead of
+  official faces
+- plain boxes, not anyone's packaging
+
+Brand rule on top of that: no invented card art presented as real cards
+(fabricated cards are on the brand kill-list). That also keeps the video about
+Legendary Arena, not a fan film of someone else's IP.
+
+### What not to do
+
+- Don't wait for iQIYI Nadou Pro or any "full AI movie studio." That's a
+  different industry.
+- Don't buy Runway first. It's excellent for fixing and controlling shots
+  *after* you have them.
+- Don't prompt the whole script into InVideo or Magiclight and expect a
+  finished comedy. They're fine for marketing assembly and will flatten the
+  timing that makes this piece work.
+
+**Bottom line:** open LTX Studio first. Veo 3.1 for spoken beats, Kling for
+people-in-a-room motion, everything else as support. A tight two-minute
+storyboarded cut will tell you whether the short works. A pile of eight-second
+cinematic clips won't.
 
 ## He got the pitch right
 
