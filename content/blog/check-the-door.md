@@ -201,6 +201,12 @@ pigsty and leaves out the road home: "For this my son was dead, and is alive
 again; he was lost, and is found" (15:24). Run question two: who reports what
 the book means, and what did they leave out?
 
+**Which book?** Between the one about living with the pigs and the one that
+completes the story, choose the second. The Prodigal Son already has the
+pigsty in it. What people can go a whole life without hearing is the rest: that
+a person can come to himself, and that the Father is already watching the road
+and runs to meet him.
+
 **A trade with one box.** In 2022 the United States traded Viktor Bout, the
 arms dealer called the "Merchant of Death," for Brittney Griner, a
 two-time Defensive Player of the Year with a 2015 disorderly-conduct plea after

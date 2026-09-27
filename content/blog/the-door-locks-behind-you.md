@@ -471,6 +471,17 @@ anyway. The syllabus keeps the diagnosis and drops the theology that named it.
 The chapter it leaves out is Luke 15: "For this my son was dead, and is alive
 again; he was lost, and is found." Questions one, two, four and five.
 
+Which book, then: the one about living with the pigs, or the one that completes
+the story? The second, and choosing it costs nothing. The Prodigal Son already
+contains everything *Lord of the Flies* teaches: the far country, the "riotous
+living," the famine, the hired hand feeding swine and envying their husks. Luke
+tells the truth about the pigsty as plainly as Golding does, and gives the
+diagnosis and the cure together. What *Lord of the Flies* adds is a longer stay
+in the pigsty, and no one needs a syllabus for that. Life supplies it daily.
+What people can go a whole life without hearing is verse 17 and verse 20: that a
+person can come to himself, and that the Father is already watching the road
+and runs to meet him.
+
 ## How to use it
 
 Ask the five questions in order, then read the answers together.
