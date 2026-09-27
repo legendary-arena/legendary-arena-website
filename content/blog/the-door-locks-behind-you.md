@@ -448,6 +448,29 @@ would agree with, to "abolish the police," which most would not. Kneel with us o
 you stand for brutality. The lens takes no side on policing. It asks who got to
 define the Sunday. Questions two and three.
 
+**The mandated pigsty.** *Lord of the Flies* is often taught as a secular book.
+Its author didn't think so. Golding wrote, as it is commonly quoted, "Man is a
+fallen being. He is gripped by original sin," and said in 1980, "I believe in
+God." The title is Beelzebub, the Hebrew for "lord of the flies." Simon, the one
+boy who sees the truth, is widely read as a Christ-figure, and the tribe kills
+him. The book's diagnosis is the Fall. What it lacks is the rest of the story.
+The boys hunt pigs and end where the prodigal son ended, among "the husks that
+the swine did eat" (Luke 15:16). They never reach the next verse: "And when he
+came to himself…" Rescue comes from a naval officer off a warship, and Ralph
+weeps for "the darkness of man's heart," with no Father running down the road.
+Taught on its own, the pigsty becomes the whole truth about a person, and the
+lie underneath goes unanswered: that no one can come home. Run the lens on the
+people who mandate it. Exam boards choose it and write the questions; England's
+AQA sets it, and Wales kept it in 2025 while dropping two other classics. Study
+guides decide what it means, and they split on whether religion belongs in it
+at all; "human nature" is the secular translation of original sin. A 1981
+parent objection that the book implies "man is little more than an animal" sits
+on the American Library Association's list of challenged classics. Golding
+himself called the book "boring and crude" in 1972, and the syllabus kept it
+anyway. The syllabus keeps the diagnosis and drops the theology that named it.
+The chapter it leaves out is Luke 15: "For this my son was dead, and is alive
+again; he was lost, and is found." Questions one, two, four and five.
+
 ## How to use it
 
 Ask the five questions in order, then read the answers together.

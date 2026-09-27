@@ -83,11 +83,11 @@ signing the note carries nearly all of it. The diagnostic from the last essay
 still applies: watch who resists proposals that would make schools share the
 loss when their loans go unpaid.
 
-## Ten more, from the news
+## Eleven more, from the news
 
 The five above are slow arrangements, built over decades. The lens works just as
-well on events that happened in a few weeks. Here are ten, one from 1973 and
-nine from recent years, one short paragraph each, with the question that does the
+well on events that happened in a few weeks. Here are eleven, one from 1973 and
+ten from recent years, one short paragraph each, with the question that does the
 work. The full version of
 each, with sources, is in
 [The Door Locks Behind You](/blog/the-door-locks-behind-you/#recent-cases).
@@ -188,6 +188,13 @@ claimed to hate anyone. A coach answered that the phrasing carried an
 want transgender people to exist." Run question three: the claim that was made
 never got answered. It got replaced.
 
+**A syllabus with no road home.** Exam boards still set *Lord of the Flies*, a
+novel whose author said man is "gripped by original sin." Many study guides
+teach it as "human nature" instead, and a parent's objection is filed on a list
+of challenged classics. The boys end in the pigsty, like the prodigal son, but
+never reach "when he came to himself." Run question two: who reports what the
+book means, and what did they leave out?
+
 **A trade with one box.** In 2022 the United States traded Viktor Bout, the
 arms dealer called the "Merchant of Death," for Brittney Griner, a
 two-time Defensive Player of the Year with a 2015 disorderly-conduct plea after
@@ -205,7 +212,7 @@ and only one of them was allowed to be *the* event.
 
 ## Now run it on something you love
 
-Fifteen arrangements, and not one of them needed a villain. Each is held in place
+Sixteen arrangements, and not one of them needed a villain. Each is held in place
 by a seat, a scope, or a door that is expensive to walk back through.
 
 It would be easy to stop here, with five examples comfortably outside your own
