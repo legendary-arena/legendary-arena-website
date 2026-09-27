@@ -207,6 +207,12 @@ pigsty in it. What people can go a whole life without hearing is the rest: that
 a person can come to himself, and that the Father is already watching the road
 and runs to meet him.
 
+No Dad with a wayward son has ever said, "If only my boy would read that
+award-winning book about the pigsty, *Lord of the Flies*." Every Dad wants his
+son to know something else: that he can change, leave the pigsty, and start
+down the road home — the road his Dad is already watching, ready to run and
+meet him.
+
 **A trade with one box.** In 2022 the United States traded Viktor Bout, the
 arms dealer called the "Merchant of Death," for Brittney Griner, a
 two-time Defensive Player of the Year with a 2015 disorderly-conduct plea after

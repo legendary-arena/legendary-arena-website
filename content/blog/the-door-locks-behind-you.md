@@ -482,6 +482,12 @@ What people can go a whole life without hearing is verse 17 and verse 20: that a
 person can come to himself, and that the Father is already watching the road
 and runs to meet him.
 
+No Dad with a wayward son has ever said, "If only my boy would read that
+award-winning book about the pigsty, *Lord of the Flies*." Every Dad wants his
+son to know something else: that he can change, leave the pigsty, and start
+down the road home — the road his Dad is already watching, ready to run and
+meet him.
+
 ## How to use it
 
 Ask the five questions in order, then read the answers together.
