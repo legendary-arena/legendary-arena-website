@@ -696,6 +696,11 @@ post slug exactly — `static/images/blog/explaining-legendary-arena-on-a-first-
 (1600×900 is a good export size). Keep the full-size generator originals
 outside the repo.
 
+**Status (round 1, 2026-09-27):** six of eight in. Approved: 1, 4, 5, 6, 7.
+Regenerate: 3 (iron mark). Pending: 2 and the 5b cold tag. Biggest
+consistency gap: Danny K's face and beard drift between stills 1, 3, and 7 —
+use still 1 as the face reference for every regeneration.
+
 **Shared style line (append to every prompt):** natural-light comedic realism,
 35mm film look, shallow depth of field, muted warm color, 16:9. No text, no
 logos, no brand packaging, no superhero costumes or likenesses.
@@ -709,6 +714,13 @@ slightly crooked, clip visible at the collar.
 
 *Save to* `static/images/blog/explaining-legendary-arena-on-a-first-call/01-danny-front-suspenders.webp`
 
+![Danny K on the phone in a pale-lavender shirt, black clip-on bow tie, and black suspenders, looking pleased with himself](/images/blog/explaining-legendary-arena-on-a-first-call/01-danny-front-suspenders.webp)
+
+*Round 1 — approved as the Danny K reference face.* Bow tie, suspenders, and
+lavender all read. Notes for the next pass: the shirt reads matte cotton, not
+shiny polyester, and it's short-sleeved; ask for long sleeves and a visible
+sheen so it matches still 7.
+
 > Medium close-up of Danny K standing, holding a phone to his ear, mid-sentence.
 > Shiny pale-lavender polyester dress shirt, black clip-on bow tie, black
 > elastic clip suspenders. Neutral wall behind him, nothing else in frame. He
@@ -718,6 +730,8 @@ slightly crooked, clip visible at the collar.
 
 *Save to* `static/images/blog/explaining-legendary-arena-on-a-first-call/02-danny-front-belt.webp`
 
+*Pending — not generated yet.*
+
 > Same man, same shirt, same black clip-on bow tie. Suspenders gone, a brown
 > leather belt now, shirt tucked. Tight on his face and shoulders, phone to his
 > ear, hopeful. Background soft and out of focus.
@@ -725,6 +739,15 @@ slightly crooked, clip visible at the collar.
 ### 3. Danny K, back — the iron mark (plate for pullback beat 2)
 
 *Save to* `static/images/blog/explaining-legendary-arena-on-a-first-call/03-danny-back-iron-mark.webp`
+
+![Danny K from behind on the phone, a large melted patch on the back of his lavender shirt, bow-tie band at the collar, brown belt](/images/blog/explaining-legendary-arena-on-a-first-call/03-danny-back-iron-mark.webp)
+
+*Round 1 — placeholder; regenerate.* The melt reads, but as a brown blob — a
+stain, not an iron. Next pass: a glossy, slightly puckered patch the same
+lavender as the shirt, in the exact outline of a clothes iron (pointed tip,
+flat heel), no brown. The body and hair read as a different man from still 1;
+lock the face and build to still 1. Black tabs at the waistband read as
+suspender clips — beat 2 is after the suspenders come off.
 
 > Same man seen from behind, half-turned, phone to his ear. Between his
 > shoulder blades the shiny pale-lavender polyester shirt has a glazed,
@@ -735,6 +758,13 @@ slightly crooked, clip visible at the collar.
 ### 4. The wall and the table (plate for beat 3)
 
 *Save to* `static/images/blog/explaining-legendary-arena-on-a-first-call/04-wall-table-playmat.webp`
+
+![A wood-paneled basement with shelves of colored boxes, a playmat with card lanes, two good-china place settings holding TV-dinner trays, a gallon jar of kombucha with a SCOBY, and a roll of paper towels](/images/blog/explaining-legendary-arena-on-a-first-call/04-wall-table-playmat.webp)
+
+*Round 1 — approved as the beat-3 plate.* Drop ceiling and paneling sell
+"downstairs," the jar shows the SCOBY, the paper towels stand at attention.
+Note: the shelves hold storage bins with handle cutouts, not square card-game
+boxes — close enough for the board, worth fixing for the final plate.
 
 > Wide shot of a low-ceilinged rec room with wood paneling and a drop-tile
 > ceiling. One wall is stacked floor to ceiling with about forty plain,
@@ -752,6 +782,11 @@ slightly crooked, clip visible at the collar.
 
 *Save to* `static/images/blog/explaining-legendary-arena-on-a-first-call/05-tv-dinner-china.webp`
 
+![Overhead shot of a black TV-dinner tray — Salisbury steak, mashed potatoes, peas, a brownie — sitting on a gold-rimmed china plate with a cloth napkin and silverware](/images/blog/explaining-legendary-arena-on-a-first-call/05-tv-dinner-china.webp)
+
+*Round 1 — approved for the cold-open flash.* (Delivered as the cold-tag
+variant, but it's the hot version — steam, no bite, no phone.)
+
 > Overhead shot of a formal place setting: an ornate white china plate with a
 > gold rim, cloth napkin, polished silverware. In the center of the plate sits
 > a black plastic microwave TV-dinner tray, film peeled back — Salisbury steak,
@@ -763,9 +798,16 @@ the same setting, the food gone cold and
 congealed, one bite taken. Beside the plate, a phone showing a generic food
 delivery order confirmation, no logos, text unreadable.
 
+*Tag variant pending — not generated yet.*
+
 ### 6. Rollers insert
 
 *Save to* `static/images/blog/explaining-legendary-arena-on-a-first-call/06-rollers-insert.webp`
+
+![A woman seen from behind, head full of pink velcro rollers, holding a phone to her ear on a couch in lamplight](/images/blog/explaining-legendary-arena-on-a-first-call/06-rollers-insert.webp)
+
+*Round 1 — approved.* Reads instantly with no face, which is the coverage
+rule.
 
 > Close insert from behind and slightly to the side: a woman's head full of
 > large pink velcro hair rollers, one hand holding a phone to her ear, soft lamp
@@ -774,6 +816,13 @@ delivery order confirmation, no logos, text unreadable.
 ### 7. The kombucha pour
 
 *Save to* `static/images/blog/explaining-legendary-arena-on-a-first-call/07-kombucha-pour.webp`
+
+![Danny K in a shiny lavender shirt and bow tie pouring murky kombucha from a gallon jar into a wine glass, splashing the counter and his shirt](/images/blog/explaining-legendary-arena-on-a-first-call/07-kombucha-pour.webp)
+
+*Round 1 — approved for the flash.* The shirt finally reads shiny polyester,
+and the splash and his committed face carry it. Notes: no SCOBY visible — ask
+for the pale disk sliding to the lip of the jar. He has a goatee here and a
+full short beard in still 1; lock to still 1.
 
 > Danny K at a kitchen counter, bow tie on, tipping a heavy one-gallon glass jar
 > of cloudy amber homebrewed kombucha toward a stemmed wine glass. A pale,
