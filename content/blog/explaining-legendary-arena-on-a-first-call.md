@@ -35,7 +35,14 @@ Did anybody press that shirt?
 
 **DANNY:** Mom already did it.
 
-**AUNT LAURA:** Good. Tucked in. And don't start with the boxes, just—
+**AUNT LAURA:** Good. Tucked in. What are you feeding her?
+
+**DANNY:** I made dinner.
+
+*Flash: a microwave TV dinner, film peeled back, black plastic tray and all,
+set in the middle of the good china.*
+
+**AUNT LAURA:** And don't start with the boxes, just—
 
 *Beep.*
 
@@ -51,7 +58,7 @@ card games on your profile.
 
 **HER:** I do like card games.
 
-**DANNY:** I also like card games. So, Saturday. Just come over. We'll play
+**DANNY:** I also like card games. So, tonight. Just come over. We'll play
 cards. This weekend's perfect. Nobody's here. I already got it out.
 
 **HER:** Like Uno?
@@ -271,7 +278,7 @@ One page. Want, veto, dictionary, secret. The script does the rest.
 ### Danny
 
 - **Age:** late 20s to late 30s. Competent mouth, bad situation. Not worldly.
-- **Wants:** her at his place Saturday, while nobody else is home, playing
+- **Wants:** her at his place tonight, while nobody else is home, playing
   *his* card game. Failing that, don't lose the thread after she says no.
 - **Won't:** admit the wall is too much, explain the living situation, call it
   desperate, lecture the rules.
@@ -314,7 +321,8 @@ One page. Want, veto, dictionary, secret. The script does the rest.
 
 - **One function:** family hands on the evening. Warm, brief, already knows too
   much. She should sound like she has a key.
-- **Advice allowed:** one clothing note, one ironing note. Not hair, not
+- **Advice allowed:** one clothing note, one ironing note, one dinner check.
+  Not hair, not
   flowers, not "be yourself." She is wardrobe, not a coach.
 - **Don't:** play her as comic relief that stays. She is a doorbell.
 
@@ -407,7 +415,7 @@ that proves tone, characters, and the pitch.
    playmat), Her (her place, rollers), and Aunt Laura. Treat the wall and the
    playmat as reusable props, not one-off prompts.
 2. **Approve a still storyboard before any video.** Twenty to thirty panels:
-   the suspenders and the beep, tight on Danny, the pullback on "Like Uno?",
+   the suspenders, the TV dinner on the good china, the beep, tight on Danny, the pullback on "Like Uno?",
    her in rollers, the Cap/Bucky banter as card cutaways, the hold on the wall
    for "Eventually," the pivot to online play, the vegan food, the delivery
    app, the hang-up.
