@@ -30,7 +30,7 @@ profile.
 **HER:** I do like card games.
 
 **DANNY:** I also like card games. So, Saturday. Just come over. We'll play
-cards. I already got it out.
+cards. This weekend's perfect. Nobody's here. I already got it out.
 
 **HER:** Like Uno?
 
@@ -60,7 +60,8 @@ library.
 **DANNY:** I saw card games on your profile. I took that seriously. That's on
 me. I should've asked which ones before I opened a storage unit.
 
-**HER:** I can't come over anyway. I'm putting my hair in rollers.
+**HER:** I can't come over anyway. I don't really give that kind of access.
+Also I'm putting my hair in rollers.
 
 **DANNY:** Your hair.
 
@@ -112,7 +113,7 @@ agreeing with whatever the table said.
 hit the Disney+ show, and landed on Captain Marvel. That's a legal favorite.
 And she's in here. That's overlap. We have overlap. I can find her.
 
-*He looks at the wall.*
+*Hold on the wall.*
 
 **DANNY:** Eventually.
 
@@ -126,7 +127,7 @@ No.
 *Beat. He is standing in front of the wall.*
 
 **DANNY:** I mean some of them, statistically, yes. That's every hobby. That's
-also the gym. That's also brunch. But the game itself is not "imagine you have
+also the gym. But the game itself is not "imagine you have
 abs and a girlfriend." It's "put heroes on a table and don't play like an
 idiot." You assemble a team. You read a scenario. There's a Mastermind trying
 to ruin the night. You win because you sequenced the cards, not because you
@@ -152,22 +153,16 @@ Oh. You're talking about Pokey-duh-mon.
 **HER:** Pokémon.
 
 **DANNY:** Yeah. Pokey-duh-mon. Okay. So your brother means Pokey-duh-mon, you
-mean Uno, and I mean the wall. Three games. One word. Well, mine is kinda like
-his. Little cards. You build a deck. You slap them down. Kids scream. Except
-these are grown-man boxes, the cards are Cap, Winter Soldier, Falcon, Captain
-Marvel — your favorite, I wrote it down — and you're not collecting three
-thousand animals so a ten-year-old can say "I have the rare one." You're
-recruiting a team for one scenario and trying not to get cooked. Shuffle is
-random. That's the card part. Everything above that is: did you think.
+mean Uno, and I mean the wall. Three games. One word. Mine's kinda like his, except
+grown-man boxes and a villain with a plan.
 
 **HER:** So it's like Pokémon but Marvel.
 
-**DANNY:** It's like Pokémon if the animals were Avengers, the opponent was a
-supervillain with a plan, and nobody sold you a twenty-dollar pack that does
-the thinking for you. No grind. No "come back in six hours." No paying to make
-Captain Marvel taller. Standing comes from the session you just played. You
-play sloppy, you lose, and the game does not care that she's your favorite or
-that your brother has a binder.
+**DANNY:** It's like Pokémon if the animals were Avengers and nobody sold you
+a twenty-dollar pack that does the thinking for you. No grind. No paying to
+make Captain Marvel taller. You get credit for the game you just played, not
+for owning the wall. You play sloppy, you lose, and the game does not care that
+she's your favorite.
 
 **HER:** That actually sounds kind of fun.
 
@@ -176,8 +171,12 @@ that your brother has a binder.
 *Beat. He looks at the wall.*
 
 **DANNY:** Okay, not forty-two boxes. Cover Your Assets is two pounds. What I
-have is furniture. That's not a personality, that's a moving company. Okay. We
-go out. Leave the boxes. A booth. Food. Normal people—
+have is furniture. That's not a personality, that's a moving company. Okay.
+FaceTime. I prop the phone up, you watch the table—
+
+**HER:** I'm in rollers.
+
+**DANNY:** Right. Nobody sees the rollers. Okay. We go out. Leave the boxes. A booth. Food. Normal people—
 
 **HER:** I said I'm not doing a date.
 
@@ -186,10 +185,9 @@ can do it online.
 
 **HER:** I'm not going back on there with you.
 
-**DANNY:** No. Not the app. I'm not asking you to go back on the app. I'm not
-asking you to swipe on Captain Marvel. The app is strangers and photos. This is
-two people and a rulebook. I'm asking you to play the thing you said you like.
-Which I now realize you did not like.
+**DANNY:** No. Not the app. I'm not asking you to swipe on Captain Marvel. I'm
+asking you to play the thing you said you like. Which I now realize you did not
+like.
 
 **HER:** So what is it?
 
@@ -223,16 +221,13 @@ cheese?
 
 **HER:** It's really good.
 
-**DANNY:** Okay. Cashew brie. Jackfruit. Text me the address.
+**DANNY:** Okay. Cashew brie. Jackfruit. And after: legendary-arena.com.
+Assemble your heroes. Read the scenario. Earn your standing. It's not a cult.
+It's not Uno. Text me the address.
 
 **HER:** Text me the link.
 
-**DANNY:** Both. Food to you. Link to you. Legendary-arena.com. Assemble your
-heroes. Read the scenario. Earn your standing. It's not a cult. It's not The
-View. It's not Uno. And it's not only for guys who think a playmat is a
-personality.
-
-*He looks at the playmat. Then the wall.*
+**DANNY:** Both.
 
 **HER:** Bye, Danny.
 
@@ -251,26 +246,7 @@ Assemble your heroes. Read the scenario. Earn your standing.
 
 ## He got the pitch right
 
-Strip out the rollers, the talk-show detour, the Uno, and the cashew brie, and
-Danny's sales job holds up.
-
-**The heroes are real.** Captain America, Winter Soldier, Falcon, and Captain
-Marvel are all in the card pool. She can have her favorite. He can have the
-metal arm. Somebody can take Cap, even if she won't.
-
-**The team is the point.** You don't win on the strength of one hero you love,
-or on the rarest card in the binder. You recruit a roster for one scenario, and
-you win because you sequenced it well against a Mastermind with a plan.
-
-**Nothing is for sale that changes the session.** No experience bars. No
-time-gated unlocks. No paying to make Captain Marvel taller. Standing comes from
-sessions played well, not hours logged or money spent.
-
-**You don't need the boxes.** The game is online. The coffee table is optional.
-So is the wall.
-
-**The rules don't drift.** What you learned Tuesday is what you face Thursday.
-The shuffle is the shuffle. Everything after that is your decisions.
-
-He's right about one more thing. The game does not care who your favorite is.
-Pick the team that works, read the scenario, and earn it.
+Danny's sales job holds up. The heroes are real: Captain America, Winter
+Soldier, Falcon, and Captain Marvel are all in the card pool. Nothing is for
+sale that changes the session, and the rules don't drift. And you don't need
+the boxes — the game is online, and the coffee table is optional.
