@@ -1,7 +1,7 @@
 ---
 title: "Explaining Legendary Arena to a Girl I'm Trying to Take Out"
 date: 2026-09-26
-description: "A three-minute comedy short. One phone call. Danny is trying to lock down Saturday dinner, she is trying to name the one where Captain America's friend joins a cult, and somewhere in the middle he explains Legendary Arena."
+description: "A comedy short. One phone call. Danny is trying to lock down Saturday dinner, she is trying to name the one where Captain America's friend joins a cult, and somewhere in the middle he explains Legendary Arena."
 draft: false
 tags: ["comedy", "video", "heroes"]
 categories: ["comedy"]
@@ -12,11 +12,12 @@ Most people don't need a deck-builder explained to them. They need it
 explained to them by someone who is also trying, very hard, to get a yes on
 Saturday.
 
-This is the script for a three-minute comedy short. One phone call. We hear
+This is the script for a comedy short. One phone call. We hear
 both sides. Danny called to ask her to dinner. He hangs up having taught a
 card game, survived a guided tour of the Marvel canon by way of daytime
 television, defended his hobby against its reputation, lost a round to her
-baby brother's Pokémon binder, and — possibly — gotten the date.
+baby brother's Pokémon binder, lost his living room to a delivery window,
+and — possibly — kept the date.
 
 ## The call
 
@@ -125,29 +126,110 @@ that your brother has a binder.
 
 **HER:** That actually sounds kind of fun.
 
-**DANNY:** Don't compliment it yet. I still need Saturday.
+**DANNY:** Don't compliment it yet. I still need Saturday. Here's the plan.
+Dinner. Then you come over and I teach you. I already have it.
 
-**HER:** Okay.
+*A lid lifts off a box.*
 
-**DANNY:** Dinner. I will not make you watch the Cap movie you already hate.
-You can be Captain Marvel. I'll be the brainwashed friend. We will not invite
-The View, because I would like to accomplish one thing that night.
+**HER:** You have it.
+
+**DANNY:** Starter box. Sixty cards. Rulebook. I got the mat, too. It's on the
+table right now. Half unrolled. For nobody. That's where we are.
+
+**HER:** I can't come over.
+
+*Tape peels, slowly.*
+
+**DANNY:** Okay.
+
+**HER:** I'm waiting on a package.
+
+**DANNY:** On Saturday.
+
+**HER:** They said between six and eight. Or eight and ten. They said a window.
+
+**DANNY:** They said a window.
+
+**HER:** It's not a small one. I don't want it sitting out.
+
+**DANNY:** Okay. I can't argue with a box I can't see. That's the genius of it.
+Okay. I can bring it to you.
+
+*Beat.*
+
+**DANNY:** No. I heard that. Guy shows up at your door holding a box like a
+pizza. "Somebody order sixty cards?" No.
+
+Okay. Not your place. Not my place. Switzerland. A booth. Coffee shop. The
+library. That bar with the big tables.
+
+**HER:** I'm not playing cards next to someone's oat milk.
+
+**DANNY:** Fair. After the package, then. When does the window close?
+
+**HER:** They said a window.
+
+**DANNY:** So I'm scheduling around UPS. Great. I could FaceTime you the
+unboxing—
+
+**HER:** No.
+
+**DANNY:** No. That's a shopping channel. I heard it. We don't even have to
+play. You can just watch me lose.
+
+**HER:** Watch you how?
+
+**DANNY:** …Online. Yeah. We can play online.
+
+**HER:** I'm not going on there with you.
+
+**DANNY:** No. Not like Tinder. I'm not opening a second profile. I'm not
+asking you to swipe on Captain Marvel. Tinder is strangers and photos. This is
+two people and a rulebook.
+
+**HER:** So what is it?
+
+**DANNY:** It's the same game. They put the box on the internet so people with
+packages can still show up. You stay home with your package. I stay here with
+the lid in my lap. Same stupid Mastermind. We still play.
+
+*A stack of cards drops onto the table.*
+
+**HER:** Okay. That's actually kind of smart.
+
+**DANNY:** I'm not trying to be a guy with a box. I'm trying to keep Saturday.
+
+**HER:** So is there still dinner?
+
+**DANNY:** There's still dinner. I will not make you watch the Cap movie you
+already hate. We will not invite The View, because I would like to accomplish
+one thing that night. Dinner at five. You're home for the window. You sign for
+your mystery box, I go home to mine, and we play. You can be Captain Marvel.
+I'll be the brainwashed friend.
 
 **HER:** Text me the place.
 
-**DANNY:** Done. If you get bored before Saturday: legendary-arena.com.
-Assemble your heroes. Read the scenario. Earn your standing. It's not a cult.
-It's not The View. And it's not only for guys who think a playmat is a
-personality.
+**DANNY:** The place and the link. Place for dinner. Link for after.
+Legendary-arena.com. Assemble your heroes. Read the scenario. Earn your
+standing. It's not a cult. It's not The View. It's not Tinder. And it's not
+only for guys who think a playmat is a personality.
+
+*He looks at the playmat.*
+
+**HER:** Package comes, I'll text you.
+
+**DANNY:** If it's shoes, I don't need to know. If it's a different card game,
+we have a problem.
 
 **HER:** Bye, Danny.
 
 **DANNY:** Bye.
 
-*He hangs up. To himself:*
+*He hangs up. To himself, rolling the mat back up:*
 
-**DANNY:** She said Captain Marvel. Brother plays Pokey-duh-mon. I can work
-with that.
+**DANNY:** She said Captain Marvel. Brother plays Pokey-duh-mon. She's waiting
+on a package. Saturday's still on. Just geographically farther apart than I
+budgeted.
 
 ## End card
 
