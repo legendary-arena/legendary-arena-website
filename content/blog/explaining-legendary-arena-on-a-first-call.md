@@ -493,7 +493,14 @@ film).
   separate it from the part that matters. That's the shape of the
   overweight-guys answer.
 
-**Watch:** [YouTube — Danny Polishchuk Comedy](https://www.youtube.com/c/DannyPolishchuk)
+**Watch the format:** his "Explaining … To My Normal Friend" series is the
+closest thing to Danny's pitch passages.
+
+{{< youtube id="rvNPM4VMN8I" title="Explaining the Clavicular Situation to My 45-Year-Old Friend — Danny Polishchuk Comedy" loading="lazy" >}}
+
+Another episode: [Explaining The Viral Lesbian Bar Story To My Normal Friend](https://www.youtube.com/watch?v=PWkINs5vR1s)
+
+**More:** [YouTube — Danny Polishchuk Comedy](https://www.youtube.com/c/DannyPolishchuk)
 · [@dannyjokes on Instagram](https://www.instagram.com/dannyjokes/)
 · [@Dannyjokes on X](https://x.com/Dannyjokes)
 · [IMDb](https://www.imdb.com/name/nm5084851/)
@@ -524,8 +531,11 @@ covers fast. Use Galifianakis for a beat, never for the whole performance. If
 the actor plays Alan start to finish, Danny stops selling and starts being
 looked at.
 
-**Watch:** [The Hangover Part III — Alan's intervention scene](https://youtu.be/v4np7L0aJd0)
-· *Between Two Ferns* (Funny or Die; *Between Two Ferns: The Movie*, Netflix)
+**Watch:** *The Hangover Part III* — Alan's intervention scene.
+
+{{< youtube id="v4np7L0aJd0" title="The Hangover Part III (2013) — Alan's Intervention Scene | Movieclips" loading="lazy" >}}
+
+**More:** *Between Two Ferns* (Funny or Die; *Between Two Ferns: The Movie*, Netflix)
 
 **Sources:**
 [Stand-Up Global — Danny Polishchuk](https://standupglobal.com/danny-polishchuk.php) ·
