@@ -73,14 +73,14 @@ cards. Nobody's here. I already got it out.
 
 **JEN:** Like Uno?
 
-*Silence. Hold on his face. Then the camera pulls back. Behind him, a wall of
-card boxes, enough that forty-two feels plausible. The coffee table is
-cleared. A playmat is down. Nobody counts. The clip-on bow tie is still on.
-The belt is the only adult thing in the room.*
+*Silence. Hold on his face. Then pull back to a three-quarter: the clip-on bow
+tie still on, the belt, the edge of the playmat, and behind him a wall of card
+boxes, enough that forty-two feels plausible. He's still facing us. Nobody
+counts. The belt is the only adult thing in the room.*
 
-*A half-second later he shifts the phone to his other ear and half-turns.
-Between his shoulder blades, the shirt has a shiny, iron-shaped patch where
-the polyester melted.*
+*A half-second later he shifts the phone to his other ear and half-turns. The
+camera stays wide enough to see between his shoulder blades: a shiny,
+iron-shaped patch where the polyester melted. The camera stops there.*
 
 **DANNY K:** …Sure. Like Uno. Kind of. It's not a box. It's forty-two boxes.
 Core sets and expansions. The one with the heroes.
@@ -93,7 +93,15 @@ Core sets and expansions. The one with the heroes.
 
 **DANNY K:** Okay. That's… smaller than what I did. I already opened like eight
 of them. I punched the cardboard. I sorted the heroes. I cleared the coffee
-table. I made lanes. I spent like an hour making this look like a table and not
+table. I made lanes.
+
+*Cut wide to the table. The coffee table, cleared, a playmat with face-down
+cards in neat lanes. At either end, a place setting of the good china, each
+with a TV-dinner tray under its film. The gallon jar of kombucha, lid on. A
+roll of paper towels standing by. Danny K is small in the frame, back to
+camera — the iron mark is there if you look, but the table is the joke.*
+
+**DANNY K:** I spent like an hour making this look like a table and not
 a cry for help. You don't have to learn all of it. That's the point of you
 coming over. I'll do the work. I'm not asking you to bring a sleeping bag. I'm
 asking you to sit down.
@@ -289,8 +297,8 @@ Text me the address.
 **DANNY K:** She said Captain Marvel. Brother plays Pokey-duh-mon. She meant
 Uno. She's in rollers, eating my jackfruit. I can work with that.
 
-*He sits down at the good china. The TV dinner has gone cold. He takes a bite
-anyway. Beside the plate, his phone: order confirmed — cashew brie, jackfruit
+*He sits down at the good china. The TV dinner has gone cold. Across from him,
+the second place setting, untouched. He takes a bite anyway. Beside the plate, his phone: order confirmed — cashew brie, jackfruit
 tacos.*
 
 ## End card
@@ -524,9 +532,12 @@ things are now the proof of concept, not "can Veo make a guy talk."
   the shirt he "knows how to iron."
 - **Flash:** microwave TV dinner on the good china.
 - **Click-over:** belt threaded one-handed, tight.
-- **"Like Uno?" pullback:** wall of boxes, cleared table, playmat, lanes, the
-  bow tie still on, the belt as the only adult object, the iron-shaped melt on
-  the back of the shirt.
+- **"Like Uno?" pullback, two beats:** three-quarter front (bow tie, belt,
+  wall, edge of playmat), then the half-turn for the iron-shaped melt on the
+  back of the shirt.
+- **Table wide on "I made lanes":** playmat and lanes, two place settings of
+  good china with TV-dinner trays, the kombucha jar lid on, paper towels;
+  Danny K small, back to camera.
 - **Hold on the wall** after "Captain Marvel… Eventually."
 - **Climb-down:** her place / FaceTime / booth / online.
 - **Tag:** cold TV dinner, bite anyway, phone showing the vegan order.
@@ -579,8 +590,10 @@ across scenes. LTX Elements will.
    shirt."
 2. Flash: TV dinner on the good china.
 3. Beep. Belt, one hand.
-4. "Like Uno?" — silence — pullback. Wall, playmat, bow tie, belt, iron mark.
-5. "I built a city."
+4. "Like Uno?" — silence — pullback to three-quarter (wall, bow tie, belt,
+   edge of playmat), then the half-turn for the iron mark.
+5. "I made lanes" — cut wide to the table: two settings, kombucha jar, paper
+   towels. "I built a city."
 6. Rollers (the one cutaway to her side; voice-only otherwise).
 7. "The View." / "Winter Soldier." (wall and box spines, not faces)
 8. Hold on the wall. "Eventually."
@@ -634,6 +647,42 @@ sloshing into a wine glass is a liquid-physics shot — make it a locked still
 first (storyboard still 7), then try a short Kling clip. If the pour smears,
 the still alone carries the joke as a flash.
 
+### Camera: three beats, two laughs (Grok, 2026-09-27)
+
+A zoom-out from his face can't show the iron mark — the melt is on his back.
+Front-wide gets the bow tie and the belt. Back-wide gets the shirt. Both, in
+that order, not one god shot.
+
+1. **"Like Uno?"** Hold on his face. Pull back to a three-quarter: bow tie
+   still on, belt, wall of boxes, edge of the playmat. He's still facing us.
+   No melt yet.
+2. **A half-second later.** He shifts the phone and half-turns. The camera
+   stays wide enough to see between the shoulder blades: the iron-shaped glaze
+   on the polyester. That's the zoom-out for the burn. Don't keep traveling —
+   if the camera keeps pulling to include both place settings, the gallon, and
+   the paper towels, the melt becomes texture.
+3. **"I made lanes."** Cut wide to the table: two place settings, TV-dinner
+   trays, the kombucha jar lid on, paper towels. Danny K is in the frame, small,
+   back to camera, so the mark is there if you look. It isn't the joke of this
+   frame. The table is.
+
+Zoom-out = costume. Cut-wide = tablescape. Same room, two laughs.
+
+**Don't:**
+
+- Write "camera zooms out to reveal the cards, the dinners, the kombucha, the
+  paper towels, and the iron mark." That's five punchlines in one move. The
+  mark only reads as a medium-back. The gallon only reads as a tabletop. They
+  want different lenses.
+- Start the call on his back to sneak the burn in early. Then "Cotton setting.
+  All the way up." has no payoff.
+
+**Stills:** still 3 is the plate for beat 2. Still 4 is the plate for beat 3 —
+if the model has to choose, generate the table clean with no Danny K and
+composite him in later. Asking one generation for a readable iron scorch, a
+SCOBY in a gallon jar, two TV dinners, forty boxes, and a bow tie will smear
+the scorch first.
+
 ## Storyboard stills
 
 Seven locked reference images to make before any video, in this order. The
@@ -667,7 +716,7 @@ slightly crooked, clip visible at the collar.
 > leather belt now, shirt tucked. Tight on his face and shoulders, phone to his
 > ear, hopeful. Background soft and out of focus.
 
-### 3. Danny K, back — the iron mark
+### 3. Danny K, back — the iron mark (plate for pullback beat 2)
 
 *Save to* `static/images/blog/explaining-legendary-arena/03-danny-back-iron-mark.png`
 
@@ -677,7 +726,7 @@ slightly crooked, clip visible at the collar.
 > fabric melted. The bow tie's band is visible at the back of the collar.
 > Brown belt.
 
-### 4. The wall, the table, the playmat
+### 4. The wall and the table (plate for beat 3)
 
 *Save to* `static/images/blog/explaining-legendary-arena/04-wall-table-playmat.png`
 
@@ -685,8 +734,13 @@ slightly crooked, clip visible at the collar.
 > ceiling. One wall is stacked floor to ceiling with about forty plain,
 > unbranded square card-game boxes in matte solid colors, some opened with
 > dividers showing. In front, a cleared coffee table with a dark neoprene
-> playmat and face-down cards laid out in neat lanes. Tidy, deliberate, a
-> little too much.
+> playmat and face-down cards laid out in neat lanes. At either end of the
+> table, a formal place setting of white gold-rimmed china, each holding a
+> black plastic TV-dinner tray under its film. A one-gallon glass jar of cloudy
+> kombucha, lid on. A roll of paper towels standing upright. No people. Tidy,
+> deliberate, a little too much.
+
+*Composite Danny K in later, small and back to camera, using still 3.*
 
 ### 5. TV dinner on the good china
 
