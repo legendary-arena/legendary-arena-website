@@ -335,6 +335,65 @@ a link and an order, not a relationship.
 - Nobody says the title of the video. Nobody says "basement," "parents," or the
   name of the app.
 
+## Making a proof of concept with AI
+
+Before anyone borrows a living room or stacks forty-two boxes behind an actor,
+the short gets built as an AI-generated proof of concept: a rough two-minute
+cut that answers one question. Does the call play?
+
+That is a storyboard problem first and a clip-generation problem second. Video
+models make shots measured in seconds. None of them read a screenplay and keep
+Danny looking like Danny across dozens of cuts. So the work runs in order:
+break the script into shots, lock the characters and the room, time the
+dialogue, then generate only what the cut needs.
+
+### The stack
+
+| Job | Tool | Why |
+|---|---|---|
+| Script to shots to storyboard | LTX Studio | Takes a script, splits it into shots, and keeps characters and locations reusable across the board. This is the director layer. |
+| Spoken beats with room sound | Google Veo, through Flow | Strongest at dialogue and ambient audio in one pass. Clips are short, so use it for the lines that need a mouth moving. |
+| Looks, gestures, inserts | Kling | Better human motion and cheaper iteration. Danny turning to the wall. Her rollers. The food arriving. |
+| Locked stills | Midjourney, Flux, or Nano Banana | Design Danny, Her, Aunt Laura, the wall, and the playmat once. Feed those stills into every shot as references. |
+| Voices | ElevenLabs | Three voices that stay the same for the whole call. Per-clip audio drifts. A voice track doesn't. |
+| Assembly | DaVinci Resolve or CapCut | Intercut the two sides of the call, drop in the cutaways, lay the voices, add the end card. |
+
+If a Google AI subscription is already paid for, Flow alone can carry a first
+rough board. It is a weaker screenplay tool than LTX, but enough to learn
+whether the timing works.
+
+### The path
+
+1. **Break the script in LTX Studio.** Split the cold open and the call into
+   shots. Lock Danny, Her, and Aunt Laura as reusable characters, and the wall
+   of boxes and the playmat as reusable props.
+2. **Approve a still storyboard before generating any video.** Twenty to thirty
+   panels: the suspenders and the beep, tight on Danny, the pullback on "Like
+   Uno?", her in rollers, the hold on the wall for "Eventually," the delivery
+   app, the end card.
+3. **Record the voices first.** Three readers, or three library voices in
+   ElevenLabs. Cut picture to the audio, not the other way around. Comedy dies
+   when the picture leads.
+4. **Generate only the load-bearing shots.** Veo for lines that need lip
+   movement, Kling for looks and inserts. Everything else can stay a storyboard
+   frame in the animatic.
+5. **Capture the game for real.** When Danny says the game is online, show a
+   screen capture of play.legendary-arena.com, not a generated interface. End
+   on the end card.
+
+Skip avatar presenters and prompt-a-whole-video tools. They make explainers,
+and they flatten the timing the piece depends on. Runway is for fixing shots
+later, not a first purchase.
+
+### What stays off screen
+
+The script talks about Captain America, Bucky, HYDRA, and Captain Marvel. The
+video doesn't show them. No generated Marvel faces, no invented card art, no
+boxes that imitate anyone's packaging. The Marvel beats play on the actors'
+faces and, where a cutaway needs it, on-screen text: "Cap." "Bucky." "A cult
+with better lighting." Cards show their backs. The boxes are plain. That keeps
+the short about Legendary Arena, not a fan film of someone else's characters.
+
 ## He got the pitch right
 
 Danny's sales job holds up. The heroes are real: Captain America, Winter
