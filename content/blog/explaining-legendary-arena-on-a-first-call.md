@@ -58,7 +58,7 @@ asking you to sit down.
 library.
 
 **DANNY:** I saw card games on your profile. I took that seriously. That's on
-me. I should've asked which ones before I opened a storage unit.
+me. I heard cards. I built a city.
 
 **HER:** I can't come over anyway. I don't really give that kind of access.
 Also I'm putting my hair in rollers.
@@ -130,8 +130,7 @@ No.
 also the gym. But the game itself is not "imagine you have
 abs and a girlfriend." It's "put heroes on a table and don't play like an
 idiot." You assemble a team. You read a scenario. There's a Mastermind trying
-to ruin the night. You win because you sequenced the cards, not because you
-bought a chest plate in the shop and told yourself that's the same as training.
+to ruin the night.
 
 **HER:** So you just sit around and talk?
 
@@ -221,9 +220,8 @@ cheese?
 
 **HER:** It's really good.
 
-**DANNY:** Okay. Cashew brie. Jackfruit. And after: legendary-arena.com.
-Assemble your heroes. Read the scenario. Earn your standing. It's not a cult.
-It's not Uno. Text me the address.
+**DANNY:** Okay. Cashew brie. Jackfruit. I send the food, you open the link.
+Text me the address.
 
 **HER:** Text me the link.
 
@@ -243,6 +241,69 @@ Uno. She's in rollers, eating my jackfruit. I can work with that.
 **legendary-arena.com**
 
 Assemble your heroes. Read the scenario. Earn your standing.
+
+## Actor notes
+
+One page. Want, veto, dictionary, secret. The script does the rest.
+
+### Danny
+
+- **Age:** late 20s to late 30s. Competent mouth, bad situation.
+- **Wants:** her at his place Saturday, while nobody else is home, playing
+  *his* card game. Failing that, don't lose the thread after she says no.
+- **Won't:** admit the wall is too much, explain the living situation, call it
+  desperate, lecture the rules.
+- **Thinks "card games" means:** the one with the heroes. Core sets and
+  expansions. He didn't misread a sentence. He misread a person.
+- **Secret:** the place is only his this weekend. The table is downstairs. She
+  never finds out.
+- **Play him:** fast, hopeful, covering. He isn't sad until a no lands, and then
+  he invents the next plan in the same breath. The comedy is him staying in the
+  sale, not narrating that he's pathetic. The forty-two boxes are normal until
+  "Like Uno?" "No. No." is a real defense. The vegan order is a cost of doing
+  business.
+- **Don't:** wink at the camera, do a bit voice, apologize for the hobby, or win
+  the argument about Captain Marvel.
+- **Physical:** starts close on the phone. After Uno, the room gets bigger than
+  he wanted. The delivery app is the only quiet he gets.
+
+### Her
+
+- **Age:** mid 20s to early 30s. Put-together on the phone. Not a villain.
+- **Wants:** stay home, keep the call pleasant, not be rude enough to end it.
+  Food is acceptable. Access is not.
+- **Won't:** come over, go out, go back on the app, play a homework game without
+  a translation, or explain her politics.
+- **Thinks "card games" means:** Uno. Cover Your Assets. Something you play with
+  a glass of wine. Captain Marvel is the one she's allowed to like. Rollers are
+  a real reason.
+- **Secret:** she likes the attention. The nos are boundaries and convenience
+  stacked together. She will take the jackfruit.
+- **Play her:** specific, not sarcastic-for-hire. "I don't really give that kind
+  of access" is calm, not a rally. Rollers are ordinary to her. Uno is ordinary.
+  The wall is the weird thing. "That actually sounds kind of fun" is real — that
+  is why he pounces. "Text me the link" is the closest thing to a yes she gives
+  him.
+- **Don't:** play dumb about every Marvel title, play mean, or turn The View
+  into a speech. She is mixing things up and holding her ground, not performing
+  stupidity.
+
+### Between them
+
+They matched. She wrote card games. He wrote card games. It's an early call,
+not a couple. He prepped like it was a third date; she showed up like it was
+optional. Neither is lying. They don't share a dictionary. By the end they have
+a link and an order, not a relationship.
+
+### Rules for both
+
+- It's a phone call, not stand-up. Overlap a little. Don't wait for punchlines.
+- She can be heard. Even if the cut is one-sided, she has to feel like someone
+  who could hang up.
+- The game pitch happens only because she asked what the pile is for. Don't
+  play it as a commercial read.
+- Nobody says the title of the video. Nobody says "basement," "parents," or the
+  name of the app.
 
 ## He got the pitch right
 
