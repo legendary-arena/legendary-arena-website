@@ -41,7 +41,7 @@ way up.
 
 **DANNY:** It's a shirt.
 
-**AUNT LAURA:** …Tucked in. What are you feeding Jenny?
+**AUNT LAURA:** …What are you feeding Jenny?
 
 **DANNY:** I made dinner.
 
@@ -69,16 +69,18 @@ card games on your profile.
 **JEN:** I do like card games.
 
 **DANNY:** I also like card games. So, tonight. Just come over. We'll play
-cards. This weekend's perfect. Nobody's here. I already got it out.
+cards. Nobody's here. I already got it out.
 
 **JEN:** Like Uno?
 
-*Silence. The camera pulls back. Behind him, a wall of card boxes, enough that
-forty-two feels plausible. The coffee table is cleared. A playmat is down.
-Nobody counts. The clip-on bow tie is still on. The belt is the only adult
-thing in the room. Between his
-shoulder blades, the shirt has a shiny, iron-shaped patch where the polyester
-melted.*
+*Silence. Hold on his face. Then the camera pulls back. Behind him, a wall of
+card boxes, enough that forty-two feels plausible. The coffee table is
+cleared. A playmat is down. Nobody counts. The clip-on bow tie is still on.
+The belt is the only adult thing in the room.*
+
+*A half-second later he shifts the phone to his other ear and half-turns.
+Between his shoulder blades, the shirt has a shiny, iron-shaped patch where
+the polyester melted.*
 
 **DANNY:** …Sure. Like Uno. Kind of. It's not a box. It's forty-two boxes.
 Core sets and expansions. The one with the heroes.
@@ -262,7 +264,16 @@ cheese?
 
 **JEN:** It's really good.
 
-**DANNY:** Okay. Cashew brie. Jackfruit. I send the food, you open the link.
+**DANNY:** You know what goes with cashew brie? Kombucha. I have kombucha. I
+made it. Come over, I'll pour you a glass.
+
+*Flash — how that would go: Danny, bow tie on, tips a one-gallon glass jar of
+cloudy homebrew toward a wine glass. The SCOBY slides to the lip. Kombucha
+sloshes over the glass, the counter, and the shirt.*
+
+**JEN:** I'm still in rollers.
+
+**DANNY:** Right. Cashew brie. Jackfruit. I send the food, you open the link.
 Text me the address.
 
 **JEN:** Text me the link.
@@ -295,7 +306,8 @@ One page. Want, veto, dictionary, secret. The script does the rest.
 ### Danny K
 
 - **Age:** mid 30s to early 40s. Competent mouth, bad situation. Not worldly.
-- **Wants:** her at his place tonight, while nobody else is home, playing
+- **Wants:** to impress her — kombucha, the good china, the pressed shirt —
+  and to get her at his place tonight, while nobody else is home, playing
   *his* card game. Failing that, don't lose the thread after she says no.
 - **Won't:** admit the wall is too much, explain the living situation, call it
   desperate, lecture the rules.
@@ -576,8 +588,9 @@ dinner, the short works. If it doesn't, more Veo won't save it.
 
 - Keep Aunt Laura under 20 seconds.
 - "Tonight," "this weekend's perfect," "nobody's here," and the secret that the
-  place is only his this weekend are a lot of fog. For the POC, one of them is
-  enough on screen; the rest lives in the actor notes.
+  place is only his this weekend are a lot of fog. **Resolved:** "This
+  weekend's perfect" is cut. The spoken line keeps "tonight" (the dinner needs
+  it) and "Nobody's here" (the leak); the secret stays in the actor notes.
 - "Text me the link" / "Both." is the real ending. The jackfruit line is the
   button, and the cold dinner is the tag. Don't generate another joke after it.
 - Put the real site on screen during "I led with the warehouse," not only at
@@ -588,6 +601,116 @@ dinner, the short works. If it doesn't, more Veo won't save it.
 **Still the recommendation:** LTX for structure, Veo for talk, Kling for the
 room, ElevenLabs for the call. What changed is the first asset list. Design the
 burned shirt and the wall before spending a dollar on motion.
+
+### Delta after the character pass (Grok, 2026-09-27)
+
+The tool stack doesn't change. The consistency burden does:
+
+- **The bow tie is a locked element from frame one.** Treat it like the melt —
+  a costume element, not a prompt word — or Veo and Kling will invent a new bow
+  tie every clip.
+- **The Uno pullback is two beats, not one.** Pull back to the wall, bow tie,
+  and belt; the iron mark reads a half-second later when he half-turns. If the
+  melt and the bow tie land in the same frame, neither lands.
+- **Three wardrobe stills before any video:** suspenders + bow tie, belt + bow
+  tie, and the back of the shirt.
+
+Jen is never on camera except the rollers insert, so don't spend credits on a
+second apartment. If the rollers don't read in a still, skip her picture
+entirely and let the voice carry it. For the 100-second POC, jump from "I can
+come to you" straight to "the game is online"; keep the full ladder in the
+shooting script. If the cold open crosses about 25 seconds, the call starts
+late.
+
+**Added after this review:** the kombucha flash. A one-gallon jar with a SCOBY
+sloshing into a wine glass is a liquid-physics shot — make it a locked still
+first (storyboard still 7), then try a short Kling clip. If the pour smears,
+the still alone carries the joke as a flash.
+
+## Storyboard stills
+
+Seven locked reference images to make before any video, in this order. The
+prompts are tool-agnostic — they work as written in Midjourney, Flux, or Nano
+Banana. Generate, pick one per slot, and save it to the path listed so it
+shows up on this page for every model working on the short.
+
+**Shared style line (append to every prompt):** natural-light comedic realism,
+35mm film look, shallow depth of field, muted warm color, 16:9. No text, no
+logos, no brand packaging, no superhero costumes or likenesses.
+
+**Danny K (lock across stills 1–3 and 7):** a man in his mid 30s to early 40s,
+slightly soft build, short trimmed beard, neat short haircut, earnest
+expression. Shiny pale-lavender polyester dress shirt. Black clip-on bow tie,
+slightly crooked, clip visible at the collar.
+
+### 1. Danny, front — cold open
+
+*Save to* `static/images/blog/explaining-legendary-arena/01-danny-front-suspenders.png`
+
+> Medium close-up of Danny K standing, holding a phone to his ear, mid-sentence.
+> Shiny pale-lavender polyester dress shirt, black clip-on bow tie, black
+> elastic clip suspenders. Neutral wall behind him, nothing else in frame. He
+> looks dressed for a recital and confident about it.
+
+### 2. Danny, front — the call
+
+*Save to* `static/images/blog/explaining-legendary-arena/02-danny-front-belt.png`
+
+> Same man, same shirt, same black clip-on bow tie. Suspenders gone, a brown
+> leather belt now, shirt tucked. Tight on his face and shoulders, phone to his
+> ear, hopeful. Background soft and out of focus.
+
+### 3. Danny, back — the iron mark
+
+*Save to* `static/images/blog/explaining-legendary-arena/03-danny-back-iron-mark.png`
+
+> Same man seen from behind, half-turned, phone to his ear. Between his
+> shoulder blades the shiny pale-lavender polyester shirt has a glazed,
+> slightly puckered patch in the exact shape of a clothes iron, where the
+> fabric melted. The bow tie's band is visible at the back of the collar.
+> Brown belt.
+
+### 4. The wall, the table, the playmat
+
+*Save to* `static/images/blog/explaining-legendary-arena/04-wall-table-playmat.png`
+
+> Wide shot of a low-ceilinged rec room with wood paneling and a drop-tile
+> ceiling. One wall is stacked floor to ceiling with about forty plain,
+> unbranded square card-game boxes in matte solid colors, some opened with
+> dividers showing. In front, a cleared coffee table with a dark neoprene
+> playmat and face-down cards laid out in neat lanes. Tidy, deliberate, a
+> little too much.
+
+### 5. TV dinner on the good china
+
+*Save to* `static/images/blog/explaining-legendary-arena/05-tv-dinner-china.png`
+
+> Overhead shot of a formal place setting: an ornate white china plate with a
+> gold rim, cloth napkin, polished silverware. In the center of the plate sits
+> a black plastic microwave TV-dinner tray, film peeled back — Salisbury steak,
+> mashed potatoes, peas, a brownie square. Steam rising.
+
+*Tag variant — same plate:* the same setting, the food gone cold and
+congealed, one bite taken. Beside the plate, a phone showing a generic food
+delivery order confirmation, no logos, text unreadable.
+
+### 6. Rollers insert
+
+*Save to* `static/images/blog/explaining-legendary-arena/06-rollers-insert.png`
+
+> Close insert from behind and slightly to the side: a woman's head full of
+> large pink velcro hair rollers, one hand holding a phone to her ear, soft lamp
+> light, a cozy couch edge. No face visible.
+
+### 7. The kombucha pour
+
+*Save to* `static/images/blog/explaining-legendary-arena/07-kombucha-pour.png`
+
+> Danny K at a kitchen counter, bow tie on, tipping a heavy one-gallon glass jar
+> of cloudy amber homebrewed kombucha toward a stemmed wine glass. A pale,
+> rubbery SCOBY disk is sliding toward the lip of the jar. Kombucha overshoots
+> the glass and splashes across the counter and onto his shirt. Frozen
+> mid-slosh, his face committed to the pour.
 
 ## He got the pitch right
 
