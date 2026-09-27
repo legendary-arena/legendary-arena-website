@@ -41,7 +41,7 @@ way up.
 
 **DANNY:** It's a shirt.
 
-**AUNT LAURA:** …Tucked in. What are you feeding her?
+**AUNT LAURA:** …Tucked in. What are you feeding Jenny?
 
 **DANNY:** I made dinner.
 
@@ -58,16 +58,20 @@ set in the middle of the good china.*
 
 *He clicks over, threading a belt one-handed. Tight on him.*
 
-**DANNY:** Hey. Yeah, it's Danny. No, I wasn't sitting on the phone. I was
-near it. On purpose. Anyway. Thanks for calling back. I called because you put
+**DANNY:** Jennifer? Hey. It's Danny. Danny K.
+
+**JEN:** Jen.
+
+**DANNY:** Jen. No, I wasn't sitting on the phone. I was near it. On purpose.
+Anyway. Thanks for calling back. I called because you put
 card games on your profile.
 
-**HER:** I do like card games.
+**JEN:** I do like card games.
 
 **DANNY:** I also like card games. So, tonight. Just come over. We'll play
 cards. This weekend's perfect. Nobody's here. I already got it out.
 
-**HER:** Like Uno?
+**JEN:** Like Uno?
 
 *Silence. The camera pulls back. Behind him, a wall of card boxes, enough that
 forty-two feels plausible. The coffee table is cleared. A playmat is down.
@@ -79,11 +83,11 @@ melted.*
 **DANNY:** …Sure. Like Uno. Kind of. It's not a box. It's forty-two boxes.
 Core sets and expansions. The one with the heroes.
 
-**HER:** Or Cover Your Assets. The one with the houses.
+**JEN:** Or Cover Your Assets. The one with the houses.
 
 **DANNY:** Cover Your Assets.
 
-**HER:** Yeah.
+**JEN:** Yeah.
 
 **DANNY:** Okay. That's… smaller than what I did. I already opened like eight
 of them. I punched the cardboard. I sorted the heroes. I cleared the coffee
@@ -92,23 +96,23 @@ a cry for help. You don't have to learn all of it. That's the point of you
 coming over. I'll do the work. I'm not asking you to bring a sleeping bag. I'm
 asking you to sit down.
 
-**HER:** That is a lot of boxes for a first hang. I didn't mean a whole…
+**JEN:** That is a lot of boxes for a first hang. I didn't mean a whole…
 library.
 
 **DANNY:** I saw card games on your profile. I took that seriously. That's on
 me. I heard cards. I built a city.
 
-**HER:** I can't come over anyway. I don't really give that kind of access.
+**JEN:** I can't come over anyway. I don't really give that kind of access.
 Also I'm putting my hair in rollers.
 
 **DANNY:** Your hair.
 
-**HER:** In rollers. It's a whole thing. They have to sit.
+**JEN:** In rollers. It's a whole thing. They have to sit.
 
 **DANNY:** I wouldn't ask if it was one box. If you don't come, I'm the guy who
 built a city for nobody.
 
-**HER:** And I'm not really dating right now.
+**JEN:** And I'm not really dating right now.
 
 *Beat.*
 
@@ -117,19 +121,19 @@ Uno. I'll learn Uno. Uno is a card game the way a paper airplane is aviation,
 but I will do it. Or — just let me tell you what's in here, because you are
 turning down some very good people. There's Cap in here.
 
-**HER:** Oh no. Not him. I hated that movie.
+**JEN:** Oh no. Not him. I hated that movie.
 
 **DANNY:** You hated Captain America.
 
-**HER:** I like the one with his friend. The one who got brainwashed by a cult.
+**JEN:** I like the one with his friend. The one who got brainwashed by a cult.
 
 **DANNY:** His friend. Brainwashed. By a cult.
 
-**HER:** Yeah. Like… The View.
+**JEN:** Yeah. Like… The View.
 
 **DANNY:** The View.
 
-**HER:** Yeah. That, right.
+**JEN:** Yeah. That, right.
 
 **DANNY:** Okay. So your favorite movie is the one where Cap's roommate gets
 kidnapped by a daytime panel and they wipe his personality. That's *Winter
@@ -137,15 +141,15 @@ Soldier*. Bucky. Metal arm. The cult is HYDRA. The View is also a cult, just
 with better lighting. Same result. Guy walks in with a name and walks out
 agreeing with whatever the table said.
 
-**HER:** *Winter Soldier.* Yeah.
+**JEN:** *Winter Soldier.* Yeah.
 
 **DANNY:** Did you watch *The Falcon and the Winter Soldier*?
 
-**HER:** Oh my God, I loved it.
+**JEN:** Oh my God, I loved it.
 
 **DANNY:** You loved it.
 
-**HER:** So my favorite is Captain Marvel, okay?
+**JEN:** So my favorite is Captain Marvel, okay?
 
 **DANNY:** …Captain Marvel. We started at Cap, detoured through a talk show,
 hit the Disney+ show, and landed on Captain Marvel. That's a legal favorite.
@@ -155,7 +159,7 @@ And she's in here. That's overlap. We have overlap. I can find her.
 
 **DANNY:** Eventually.
 
-**HER:** Is this just a game for overweight guys fantasizing they are in shape
+**JEN:** Is this just a game for overweight guys fantasizing they are in shape
 and have hot girlfriends?
 
 **DANNY:** No.
@@ -170,30 +174,30 @@ abs and a girlfriend." It's "put heroes on a table and don't play like an
 idiot." You assemble a team. You read a scenario. There's a Mastermind trying
 to ruin the night.
 
-**HER:** So you just sit around and talk?
+**JEN:** So you just sit around and talk?
 
 **DANNY:** Yes. Kinda. Just sit around and talk and—
 
-**HER:** Yeah that's right. Just like The View.
+**JEN:** Yeah that's right. Just like The View.
 
 **DANNY:** Yeah. That's right. Just like The View. We sit around. We don't
 accomplish anything. Difference is when we don't accomplish anything, a
 Mastermind beats us and the scoreboard says so. On The View they don't
 accomplish anything and they still go to commercial like it was a meeting.
 
-**HER:** My baby brother plays a card game.
+**JEN:** My baby brother plays a card game.
 
 **DANNY:** Oh, your baby brother plays a card game.
 
 Oh. You're talking about Pokey-duh-mon.
 
-**HER:** Pokémon.
+**JEN:** Pokémon.
 
 **DANNY:** Yeah. Pokey-duh-mon. Okay. So your brother means Pokey-duh-mon, you
 mean Uno, and I mean the wall. Three games. One word. Mine's kinda like his, except
 grown-man boxes and a villain with a plan.
 
-**HER:** So it's like Pokémon but Marvel.
+**JEN:** So it's like Pokémon but Marvel.
 
 **DANNY:** It's like Pokémon if the animals were Avengers and nobody sold you
 a twenty-dollar pack that does the thinking for you. No grind. No paying to
@@ -201,7 +205,7 @@ make Captain Marvel taller. You get credit for the game you just played, not
 for owning the wall. You play sloppy, you lose, and the game does not care that
 she's your favorite.
 
-**HER:** That actually sounds kind of fun.
+**JEN:** That actually sounds kind of fun.
 
 **DANNY:** Great. So I can come to you.
 
@@ -211,61 +215,61 @@ she's your favorite.
 have is furniture. That's not a personality, that's a moving company. Okay.
 FaceTime. I prop the phone up, you watch the table—
 
-**HER:** I'm in rollers.
+**JEN:** I'm in rollers.
 
 **DANNY:** Right. Nobody sees the rollers. Okay. We go out. Leave the boxes. A booth. Food. Normal people—
 
-**HER:** I said I'm not doing a date.
+**JEN:** I said I'm not doing a date.
 
 **DANNY:** Right. Not a date. Not my place. Not your place. Not out. Okay. We
 can do it online.
 
-**HER:** I'm not going back on there with you.
+**JEN:** I'm not going back on there with you.
 
 **DANNY:** No. Not the app. I'm not asking you to swipe on Captain Marvel. I'm
 asking you to play the thing you said you like. Which I now realize you did not
 like.
 
-**HER:** So what is it?
+**JEN:** So what is it?
 
 **DANNY:** The game is online. There's a version with no boxes. I should've led
 with that. I led with the warehouse. Legendary-arena.com. It's the game without
 the forty-two boxes. You stay home with your rollers. I stay here with my wall.
 Same heroes. Same stupid Mastermind.
 
-**HER:** Is it easy?
+**JEN:** Is it easy?
 
 **DANNY:** It's not Uno. But I'll teach you. Nobody comes over, nobody punches
 cardboard, and we still play.
 
-**HER:** Okay. That's actually kind of smart.
+**JEN:** Okay. That's actually kind of smart.
 
 **DANNY:** And I'll send food. You do the hair. I'll pretend this is still what
 you wrote down.
 
-**HER:** You don't have to buy me dinner.
+**JEN:** You don't have to buy me dinner.
 
 **DANNY:** It's not dinner. It's not a date. It's catering. For a game.
 
-**HER:** …There's a vegan place.
+**JEN:** …There's a vegan place.
 
 **DANNY:** There's a vegan place.
 
-**HER:** The one with the cashew brie. And the jackfruit tacos.
+**JEN:** The one with the cashew brie. And the jackfruit tacos.
 
 **DANNY:** The cashew brie. Is that the one where the cheese costs more than
 cheese?
 
-**HER:** It's really good.
+**JEN:** It's really good.
 
 **DANNY:** Okay. Cashew brie. Jackfruit. I send the food, you open the link.
 Text me the address.
 
-**HER:** Text me the link.
+**JEN:** Text me the link.
 
 **DANNY:** Both.
 
-**HER:** Bye, Danny.
+**JEN:** Bye, Danny.
 
 **DANNY:** Bye.
 
@@ -288,7 +292,7 @@ Assemble your heroes. Read the scenario. Earn your standing.
 
 One page. Want, veto, dictionary, secret. The script does the rest.
 
-### Danny
+### Danny K
 
 - **Age:** late 20s to late 30s. Competent mouth, bad situation. Not worldly.
 - **Wants:** her at his place tonight, while nobody else is home, playing
@@ -318,9 +322,9 @@ One page. Want, veto, dictionary, secret. The script does the rest.
   takes Laura's belt note and misses that she'd hate the bow tie, so it's still
   on at the Uno pullback.
 
-### Her
+### Jen
 
-- **Age:** mid 20s to early 30s. Put-together on the phone. Not a villain.
+- **Age:** mid 30s to early 40s. Put-together on the phone. Not a villain.
 - **Wants:** stay home, keep the call pleasant, not be rude enough to end it.
   Food is acceptable. Access is not.
 - **Won't:** come over, go out, go back on the app, play a homework game without
@@ -358,7 +362,7 @@ a link and an order, not a relationship.
 ### Rules for both
 
 - It's a phone call, not stand-up. Overlap a little. Don't wait for punchlines.
-- **Her side is voice-only, with one rollers cutaway.** We hear her the whole
+- **Jen's side is voice-only, with one rollers cutaway.** We hear her the whole
   call; we see her once, as an insert of the rollers when she says them. She
   never delivers a line on camera. The voice still has to feel like someone who
   could hang up.
@@ -420,7 +424,7 @@ moves, little continuous dialogue. This piece is the opposite:
 
 - One location, two people (plus Aunt Laura), overlapping jokes
 - Timing lives in the beats: "The View," "not a date," cashew brie
-- Danny and Her have to stay the same people across dozens of cuts
+- Danny and Jen have to stay the same people across dozens of cuts
 - The cutaways have to read as product: playmat, boxes, online play
 
 A single clip model gives a handsome eight-second tease. It won't give a
@@ -436,7 +440,7 @@ that proves tone, characters, and the pitch.
 
 1. **Paste the script into LTX Studio.** Let it break the cold open and the call
    into shots. Lock Elements for Danny (the room, the wall of boxes, the
-   playmat), Her (her place, rollers), and Aunt Laura. Treat the wall and the
+   playmat), Jen (her place, rollers), and Aunt Laura. Treat the wall and the
    playmat as reusable props, not one-off prompts.
 2. **Approve a still storyboard before any video.** Twenty to thirty panels:
    the suspenders, the TV dinner on the good china, the beep, tight on Danny, the pullback on "Like Uno?" (the wall, the belt, the
@@ -525,7 +529,7 @@ the script into Kling/Veo" pass:
    the tray, the peeled film, and the plate have to match the tag.
 4. **Three voices.** Aunt Laura is on screen for seconds and still needs her
    own ElevenLabs voice, or the cold open sounds like a different movie.
-5. **Her side.** The script wants her present without giving her the room.
+5. **Jen's side.** The script wants her present without giving her the room.
    **Decided (2026-09-27): voice-only, plus one rollers cutaway.** She never
    delivers a line on camera, so there's no second location to light and no
    second face to keep consistent. The rollers insert is the only time she's
@@ -540,7 +544,7 @@ on-screen text. Don't ask the model for "Captain America card."
 |---|---|---|
 | 1 | Locked stills: Danny (front with clip-on bow tie, and back with the iron mark), wall of boxes, table / playmat / lanes, TV dinner on china, her in rollers | Flux / Midjourney / Nano Banana |
 | 2 | Shot list from the script, not from vibes | LTX Studio |
-| 3 | Voices for Danny, Her, Aunt Laura | ElevenLabs |
+| 3 | Voices for Danny, Jen, Aunt Laura | ElevenLabs |
 | 4 | Spoken close-ups | Veo 3.1 |
 | 5 | Looks, pullback, inserts | Kling 3.0 |
 | 6 | Cut to audio | CapCut / DaVinci Resolve |
