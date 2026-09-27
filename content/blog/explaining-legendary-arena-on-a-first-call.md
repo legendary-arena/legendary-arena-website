@@ -15,24 +15,20 @@ Saturday.
 This is the script for a three-minute comedy short. One phone call. We hear
 both sides. Danny called to ask her to dinner. He hangs up having taught a
 card game, survived a guided tour of the Marvel canon by way of daytime
-television, and — possibly — gotten the date.
+television, defended his hobby against its reputation, lost a round to her
+baby brother's Pokémon binder, and — possibly — gotten the date.
 
 ## The call
 
-*Phone ringing. He picks up too fast.*
+*Phone rings. He picks up too fast.*
 
-**DANNY:** Hey. Hey, yeah, it's Danny. No, I wasn't waiting by the phone. I
-was… near the phone. On purpose. Anyway. So, Saturday. I was thinking dinner,
-but I don't want to do the whole "what do you do" thing for forty minutes. Can
-I ask you something real quick?
-
-**HER:** Okay…
-
-**DANNY:** Do you like superhero movies?
+**DANNY:** Hey. Yeah, it's Danny. No, I wasn't sitting on the phone. I was
+near it. On purpose. Anyway. Saturday. Dinner. Before you decide I'm a guy who
+only talks about himself: do you like superhero movies?
 
 **HER:** Yeah.
 
-**DANNY:** Cool. That's actually perfect. My favorite's Captain America.
+**DANNY:** Cool. My favorite's Captain America.
 
 **HER:** Oh no. Not that one. I hated that one.
 
@@ -40,7 +36,7 @@ I ask you something real quick?
 
 **HER:** I like the one with his friend. The one who got brainwashed by a cult.
 
-**DANNY:** His friend who got brainwashed by a cult.
+**DANNY:** His friend. Brainwashed. By a cult.
 
 **HER:** Yeah. Like… The View.
 
@@ -48,18 +44,15 @@ I ask you something real quick?
 
 **HER:** Yeah. That, right.
 
-**DANNY:** Okay. So just so I have this: your favorite Marvel movie is the one
-where Captain America's best friend gets kidnapped by a morning talk show.
-
-**HER:** No. The cult.
-
-**DANNY:** Right. The cult. Yeah, that's *Winter Soldier*. Bucky. Metal arm.
-They wipe his brain and make him do jobs. That's HYDRA, not Whoopi. Close,
-though. Same energy if you've ever watched an hour of it.
+**DANNY:** Okay. So your favorite movie is the one where Cap's roommate gets
+kidnapped by a daytime panel and they wipe his personality. That's *Winter
+Soldier*. Bucky. Metal arm. The cult is HYDRA. The View is also a cult, just
+with better lighting. Same result. Guy walks in with a name and walks out
+agreeing with whatever the table said.
 
 **HER:** *Winter Soldier.* Yeah.
 
-**DANNY:** Did you watch *The Falcon and the Winter Soldier*? The series.
+**DANNY:** Did you watch *The Falcon and the Winter Soldier*?
 
 **HER:** Oh my God, I loved it.
 
@@ -67,79 +60,85 @@ though. Same energy if you've ever watched an hour of it.
 
 **HER:** So my favorite is Captain Marvel, okay?
 
-**DANNY:** …Okay. So we went from Cap, to his brainwashed roommate, to The
-View, to the Disney+ show, and we landed on Captain Marvel.
-
-**HER:** Yeah.
-
-**DANNY:** That's fine. That's a legal favorite. I'm not gonna fight you on the
-phone. I'm trying to get a yes out of you.
+**DANNY:** …Captain Marvel. We started at Cap, detoured through a talk show,
+hit the Disney+ show, and landed on Captain Marvel. That's a legal favorite.
+I'm not dying on that hill. I'm trying to get a yes.
 
 *Beat.*
 
-**DANNY:** Alright. Here's why I asked. There's this thing. Website.
-Legendary-arena.com. And I need to explain it like you're a person, because if
-I say "digital deck-builder" you're gonna hang up and I'm gonna eat dinner with
-a sandwich.
+**HER:** What is this actually about?
 
-**HER:** Is this a game?
+**DANNY:** Website. Legendary-arena.com. I have to explain it like a person
+because if I say "digital deck-builder" you hang up and I eat a sandwich.
 
-**DANNY:** Yes. It's a card game. But not the kind where your nephew opens
-eighty packs and still doesn't have the one he wants.
+**HER:** Is this just a game for overweight guys fantasizing they are in shape
+and have hot girlfriends?
 
-**HER:** Okay…
+**DANNY:** No.
 
-**DANNY:** You know how in the movies everyone stands in a circle and then one
-person punches the sky? This is the opposite of that. You don't pick *a*
-favorite. You assemble a team. Cap, Winter Soldier, Falcon, Captain Marvel,
-whoever actually works together. You read a scenario. There's a bad guy running
-the table — they call him a Mastermind — and your job is to not get cooked
-because you drafted four people who all do the same thing.
+No.
 
-**HER:** So it's like the Avengers.
+*Beat.*
 
-**DANNY:** It's like the Avengers if the Avengers had to sit down, shut up, and
-make decisions in order. No grinding. No "come back in six hours for your
-reward." No paying twelve dollars to make Captain Marvel punch harder. You play
-the session well, you earn standing. You play it sloppy, you lose, and the game
-does not care that she's your favorite.
+**DANNY:** I mean some of them, statistically, yes. That's every hobby. That's
+also the gym. That's also brunch. But the game itself is not "imagine you have
+abs and a girlfriend." It's "put heroes on a table and don't play like an
+idiot." You assemble a team. You read a scenario. There's a Mastermind trying
+to ruin the night. You win because you sequenced the cards, not because you
+bought a chest plate in the shop and told yourself that's the same as training.
 
-**HER:** So you can use Captain Marvel.
+**HER:** So you just sit around and talk?
 
-**DANNY:** You can use Captain Marvel. You can use the guy with the metal arm.
-You can even use Cap, who you hate, which is honestly the most honest review of
-that character I've heard all year.
+**DANNY:** Yes. Kinda. Just sit around and talk and—
 
-**HER:** And it's online.
+**HER:** Yeah that's right. Just like The View.
 
-**DANNY:** Legendary-arena.com. You show up, you build the team, you play the
-scenario. The rules don't drift. Meaning the thing you learned Tuesday is still
-the thing on Thursday. Shuffle is random because that's cards. Everything else
-is: did you think, or did you just throw the shiny one down because you liked
-the movie.
+**DANNY:** Yeah. That's right. Just like The View. We sit around. We don't
+accomplish anything. Difference is when we don't accomplish anything, a
+Mastermind beats us and the scoreboard says so. On The View they don't
+accomplish anything and they still go to commercial like it was a meeting.
+
+**HER:** My baby brother plays a card game.
+
+**DANNY:** Oh, your baby brother plays a card game.
+
+Oh. You're talking about Pokey-duh-mon.
+
+**HER:** Pokémon.
+
+**DANNY:** Yeah. Pokey-duh-mon. Well it is kinda like that. Little cards. You
+build a deck. You slap them down. Kids scream. Except in this one the cards are
+Cap, Winter Soldier, Falcon, Captain Marvel — your favorite, I wrote it down —
+and you're not collecting three thousand animals so a ten-year-old can say "I
+have the rare one." You're recruiting a team for one scenario and trying not to
+get cooked. Shuffle is random. That's the card part. Everything above that is:
+did you think.
+
+**HER:** So it's like Pokémon but Marvel.
+
+**DANNY:** It's like Pokémon if the animals were Avengers, the opponent was a
+supervillain with a plan, and nobody sold you a twenty-dollar pack that does
+the thinking for you. No grind. No "come back in six hours." No paying to make
+Captain Marvel taller. Standing comes from the session you just played. You
+play sloppy, you lose, and the game does not care that she's your favorite or
+that your brother has a binder.
 
 **HER:** That actually sounds kind of fun.
 
-**DANNY:** Don't say that yet. I'm not done selling it. Also I'm still on the
-date part.
+**DANNY:** Don't compliment it yet. I still need Saturday.
 
 **HER:** Okay.
 
-**DANNY:** Saturday. We eat. If it goes well, I will not make you watch the
-Captain America movie you already hate. If it goes *really* well, I will let
-you be Captain Marvel, I will be the brainwashed friend, and we will not invite
-The View.
-
-**HER:** …Fine.
-
-**DANNY:** Fine like yes-fine, or fine like you're being polite so I'll get off
-the phone.
+**DANNY:** Dinner. I will not make you watch the Cap movie you already hate.
+You can be Captain Marvel. I'll be the brainwashed friend. We will not invite
+The View, because I would like to accomplish one thing that night.
 
 **HER:** Text me the place.
 
-**DANNY:** Done. And if you want to see the thing: legendary-arena.com.
-Assemble your heroes. Read the scenario. Earn your standing. That's the whole
-pitch. It's not a cult. That's the other franchise.
+**DANNY:** Done. If you get bored before Saturday: legendary-arena.com.
+Assemble your heroes. Read the scenario. Earn your standing. It's not a cult.
+It's not The View. And it's not only for guys who think a playmat is a
+personality.
 
 **HER:** Bye, Danny.
 
@@ -147,7 +146,8 @@ pitch. It's not a cult. That's the other franchise.
 
 *He hangs up. To himself:*
 
-**DANNY:** She said Captain Marvel. I can work with that.
+**DANNY:** She said Captain Marvel. Brother plays Pokey-duh-mon. I can work
+with that.
 
 ## End card
 
@@ -164,12 +164,12 @@ job holds up.
 Marvel are all in the card pool. She can have her favorite. He can have the
 metal arm. Somebody can take Cap, even if she won't.
 
-**The team is the point.** You don't win on the strength of one hero you love.
-You win on a roster that covers each other's gaps, against a Mastermind who is
-built to punish four copies of the same idea.
+**The team is the point.** You don't win on the strength of one hero you love,
+or on the rarest card in the binder. You recruit a roster for one scenario, and
+you win because you sequenced it well against a Mastermind with a plan.
 
 **Nothing is for sale that changes the session.** No experience bars. No
-time-gated unlocks. No twelve-dollar punch upgrade. Standing comes from
+time-gated unlocks. No paying to make Captain Marvel taller. Standing comes from
 sessions played well, not hours logged or money spent.
 
 **The rules don't drift.** What you learned Tuesday is what you face Thursday.
