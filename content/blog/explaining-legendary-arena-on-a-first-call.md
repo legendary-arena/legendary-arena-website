@@ -690,6 +690,12 @@ prompts are tool-agnostic — they work as written in Midjourney, Flux, or Nano
 Banana. Generate, pick one per slot, and save it to the path listed so it
 shows up on this page for every model working on the short.
 
+**File rules** (per the site's image conventions): the folder must match the
+post slug exactly — `static/images/blog/explaining-legendary-arena-on-a-first-call/`
+— with lowercase kebab-case names, WebP format, 16:9, and under 200KB each
+(1600×900 is a good export size). Keep the full-size generator originals
+outside the repo.
+
 **Shared style line (append to every prompt):** natural-light comedic realism,
 35mm film look, shallow depth of field, muted warm color, 16:9. No text, no
 logos, no brand packaging, no superhero costumes or likenesses.
@@ -701,7 +707,7 @@ slightly crooked, clip visible at the collar.
 
 ### 1. Danny K, front — cold open
 
-*Save to* `static/images/blog/explaining-legendary-arena/01-danny-front-suspenders.png`
+*Save to* `static/images/blog/explaining-legendary-arena-on-a-first-call/01-danny-front-suspenders.webp`
 
 > Medium close-up of Danny K standing, holding a phone to his ear, mid-sentence.
 > Shiny pale-lavender polyester dress shirt, black clip-on bow tie, black
@@ -710,7 +716,7 @@ slightly crooked, clip visible at the collar.
 
 ### 2. Danny K, front — the call
 
-*Save to* `static/images/blog/explaining-legendary-arena/02-danny-front-belt.png`
+*Save to* `static/images/blog/explaining-legendary-arena-on-a-first-call/02-danny-front-belt.webp`
 
 > Same man, same shirt, same black clip-on bow tie. Suspenders gone, a brown
 > leather belt now, shirt tucked. Tight on his face and shoulders, phone to his
@@ -718,7 +724,7 @@ slightly crooked, clip visible at the collar.
 
 ### 3. Danny K, back — the iron mark (plate for pullback beat 2)
 
-*Save to* `static/images/blog/explaining-legendary-arena/03-danny-back-iron-mark.png`
+*Save to* `static/images/blog/explaining-legendary-arena-on-a-first-call/03-danny-back-iron-mark.webp`
 
 > Same man seen from behind, half-turned, phone to his ear. Between his
 > shoulder blades the shiny pale-lavender polyester shirt has a glazed,
@@ -728,7 +734,7 @@ slightly crooked, clip visible at the collar.
 
 ### 4. The wall and the table (plate for beat 3)
 
-*Save to* `static/images/blog/explaining-legendary-arena/04-wall-table-playmat.png`
+*Save to* `static/images/blog/explaining-legendary-arena-on-a-first-call/04-wall-table-playmat.webp`
 
 > Wide shot of a low-ceilinged rec room with wood paneling and a drop-tile
 > ceiling. One wall is stacked floor to ceiling with about forty plain,
@@ -744,20 +750,22 @@ slightly crooked, clip visible at the collar.
 
 ### 5. TV dinner on the good china
 
-*Save to* `static/images/blog/explaining-legendary-arena/05-tv-dinner-china.png`
+*Save to* `static/images/blog/explaining-legendary-arena-on-a-first-call/05-tv-dinner-china.webp`
 
 > Overhead shot of a formal place setting: an ornate white china plate with a
 > gold rim, cloth napkin, polished silverware. In the center of the plate sits
 > a black plastic microwave TV-dinner tray, film peeled back — Salisbury steak,
 > mashed potatoes, peas, a brownie square. Steam rising.
 
-*Tag variant — same plate:* the same setting, the food gone cold and
+*Tag variant — same plate* (save to
+`static/images/blog/explaining-legendary-arena-on-a-first-call/05b-tv-dinner-cold-tag.webp`):
+the same setting, the food gone cold and
 congealed, one bite taken. Beside the plate, a phone showing a generic food
 delivery order confirmation, no logos, text unreadable.
 
 ### 6. Rollers insert
 
-*Save to* `static/images/blog/explaining-legendary-arena/06-rollers-insert.png`
+*Save to* `static/images/blog/explaining-legendary-arena-on-a-first-call/06-rollers-insert.webp`
 
 > Close insert from behind and slightly to the side: a woman's head full of
 > large pink velcro hair rollers, one hand holding a phone to her ear, soft lamp
@@ -765,7 +773,7 @@ delivery order confirmation, no logos, text unreadable.
 
 ### 7. The kombucha pour
 
-*Save to* `static/images/blog/explaining-legendary-arena/07-kombucha-pour.png`
+*Save to* `static/images/blog/explaining-legendary-arena-on-a-first-call/07-kombucha-pour.webp`
 
 > Danny K at a kitchen counter, bow tie on, tipping a heavy one-gallon glass jar
 > of cloudy amber homebrewed kombucha toward a stemmed wine glass. A pale,
