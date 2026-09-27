@@ -29,6 +29,15 @@ Outside the game, the arrangements are harder to see, because nobody lays the
 Scheme card face up. So here is a lens for reading them. It works at the table,
 and it works on anything that asks for your trust.
 
+A lens shows you the lock. It isn't the whole story. The whole story fits in one
+line:
+
+> No Dad with a wayward son has ever said, "If only my boy would read that
+> award-winning book about the pigsty, *Lord of the Flies*." Every Dad wants his
+> son to know something else: that he can change, leave the pigsty, and start
+> down the road home — the road his Dad is already watching, ready to run and
+> meet him.
+
 ## Judge the arrangement by what it does
 
 Start with one discipline, because everything else depends on it: **judge by
