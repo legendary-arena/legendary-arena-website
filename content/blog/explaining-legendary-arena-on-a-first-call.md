@@ -13,7 +13,7 @@ explained to them by someone who is also trying, very hard, to get a yes.
 
 This is the script for a comedy short: a short cold open with his aunt, then
 one phone call. We hear both sides.
-Her profile said card games. Danny took that seriously — all of it is already
+Her profile said card games. Danny K took that seriously — all of it is already
 out on his coffee table. She meant Uno, and she is putting her hair in rollers.
 He hangs up having survived a guided tour of the Marvel canon by way of daytime
 television, defended his hobby against its reputation, lost a round to her baby
@@ -267,7 +267,7 @@ cheese?
 **DANNY K:** You know what goes with cashew brie? Kombucha. I have kombucha. I
 made it. Come over, I'll pour you a glass.
 
-*Flash — how that would go: Danny, bow tie on, tips a one-gallon glass jar of
+*Flash — how that would go: Danny K, bow tie on, tips a one-gallon glass jar of
 cloudy homebrew toward a wine glass. The SCOBY slides to the lip. Kombucha
 sloshes over the glass, the counter, and the shirt.*
 
@@ -387,7 +387,7 @@ a link and an order, not a relationship.
   play it as a commercial read.
 - Nobody says the title of the video. Nobody says "basement," "parents," or the
   name of the app (no Hinge, no Tinder) unless it's added later on purpose.
-- **Tone references:** for Danny, Danny Polishchuk for cadence and Zach
+- **Tone references:** for Danny K, Danny Polishchuk for cadence and Zach
   Galifianakis for texture. For Jen, The Onion's one-pot dinner for her
   everything-is-easy calm. See *Reference and background* at the end. Neither
   actor borrows the other's references. She's the normal person — by her own
@@ -413,8 +413,8 @@ about 1,160 words — roughly seven minutes at a normal speaking pace, closer to
 six played fast.
 
 That is a script-to-storyboard problem first and a clip-generation problem
-second. Veo and Kling don't ingest a screenplay and keep Danny looking like
-Danny for seven minutes. They make 8–15 second shots. The script still has to
+second. Veo and Kling don't ingest a screenplay and keep Danny K looking like
+Danny K for seven minutes. They make 8–15 second shots. The script still has to
 be broken into shots, the characters locked, the dialogue timed, and the whole
 thing cut.
 
@@ -427,7 +427,7 @@ Kling. Voices in ElevenLabs. Finish in CapCut or DaVinci Resolve.
 |---|---|---|
 | Script → scenes → storyboard → animatic | **LTX Studio** (Standard, ~$35/mo) | Uploads a script, splits it into shots, extracts reusable characters and locations, then generates from that board. Built for this workflow. |
 | Talking shots with synced sound | **Google Veo 3.1** (via Flow or LTX Pro) | Best current model for dialogue plus ambient audio in one pass. Clips are ~8s, so use it for beats, not the whole call. |
-| Faces, motion, start/end frames | **Kling 3.0** | Stronger on human motion, cheaper iteration. Danny looking at the wall, her in rollers, food arriving. |
+| Faces, motion, start/end frames | **Kling 3.0** | Stronger on human motion, cheaper iteration. Danny K looking at the wall, her in rollers, food arriving. |
 | Locked stills (boxes, playmat, cards, food) | **Flux / Midjourney / Nano Banana** | Design the wall of 42 boxes and the characters once. Feed those stills into Veo and Kling as references. |
 | Consistent voices | **ElevenLabs** | A seven-minute call needs voices that don't drift. Veo audio is great per clip, not across a conversation. |
 | Assembly | **CapCut** or **DaVinci Resolve** | Intercut the phone sides, insert cutaways, lay the voices, captions, end card. |
@@ -443,7 +443,7 @@ moves, little continuous dialogue. This piece is the opposite:
 
 - One location, two people (plus Aunt Laura), overlapping jokes
 - Timing lives in the beats: "The View," "not a date," cashew brie
-- Danny and Jen have to stay the same people across dozens of cuts
+- Danny K and Jen have to stay the same people across dozens of cuts
 - The cutaways have to read as product: playmat, boxes, online play
 
 A single clip model gives a handsome eight-second tease. It won't give a
@@ -458,11 +458,11 @@ Don't generate the full seven minutes first. Ship a **90–150 second animatic**
 that proves tone, characters, and the pitch.
 
 1. **Paste the script into LTX Studio.** Let it break the cold open and the call
-   into shots. Lock Elements for Danny (the room, the wall of boxes, the
+   into shots. Lock Elements for Danny K (the room, the wall of boxes, the
    playmat), Jen (her place, rollers), and Aunt Laura. Treat the wall and the
    playmat as reusable props, not one-off prompts.
 2. **Approve a still storyboard before any video.** Twenty to thirty panels:
-   the suspenders, the TV dinner on the good china, the beep, tight on Danny, the pullback on "Like Uno?" (the wall, the belt, the
+   the suspenders, the TV dinner on the good china, the beep, tight on Danny K, the pullback on "Like Uno?" (the wall, the belt, the
    iron mark on his back),
    her in rollers, the Cap/Bucky banter as card cutaways, the hold on the wall
    for "Eventually," the pivot to online play, the vegan food, the hang-up,
@@ -531,7 +531,7 @@ things are now the proof of concept, not "can Veo make a guy talk."
 - **Climb-down:** her place / FaceTime / booth / online.
 - **Tag:** cold TV dinner, bite anyway, phone showing the vegan order.
 
-The actor notes are doing real work — Danny covering instead of apologizing,
+The actor notes are doing real work — Danny K covering instead of apologizing,
 her nos as boundaries not punchlines, Aunt Laura as a doorbell. An AI board
 will ignore that direction unless it's written into the shot list.
 
@@ -540,7 +540,7 @@ the script into Kling/Veo" pass:
 
 1. **The iron mark.** It has to exist from frame one and only become readable
    on the Uno pullback. That's a locked costume element, not a prompt
-   adjective. Generate Danny's back-of-shirt still first and reuse it.
+   adjective. Generate Danny K's back-of-shirt still first and reuse it.
 2. **One-handed belt.** Hands and belts are still where video models smear.
    Storyboard it, generate it last, or cover it with a cut to the buckle or his
    face.
@@ -561,9 +561,9 @@ on-screen text. Don't ask the model for "Captain America card."
 
 | Priority | Make this first | Tool |
 |---|---|---|
-| 1 | Locked stills: Danny (front with clip-on bow tie, and back with the iron mark), wall of boxes, table / playmat / lanes, TV dinner on china, her in rollers | Flux / Midjourney / Nano Banana |
+| 1 | Locked stills: Danny K (front with clip-on bow tie, and back with the iron mark), wall of boxes, table / playmat / lanes, TV dinner on china, her in rollers | Flux / Midjourney / Nano Banana |
 | 2 | Shot list from the script, not from vibes | LTX Studio |
-| 3 | Voices for Danny, Jen, Aunt Laura | ElevenLabs |
+| 3 | Voices for Danny K, Jen, Aunt Laura | ElevenLabs |
 | 4 | Spoken close-ups | Veo 3.1 |
 | 5 | Looks, pullback, inserts | Kling 3.0 |
 | 6 | Cut to audio | CapCut / DaVinci Resolve |
@@ -650,7 +650,7 @@ slightly soft build, short trimmed beard, neat short haircut, earnest
 expression. Shiny pale-lavender polyester dress shirt. Black clip-on bow tie,
 slightly crooked, clip visible at the collar.
 
-### 1. Danny, front — cold open
+### 1. Danny K, front — cold open
 
 *Save to* `static/images/blog/explaining-legendary-arena/01-danny-front-suspenders.png`
 
@@ -659,7 +659,7 @@ slightly crooked, clip visible at the collar.
 > elastic clip suspenders. Neutral wall behind him, nothing else in frame. He
 > looks dressed for a recital and confident about it.
 
-### 2. Danny, front — the call
+### 2. Danny K, front — the call
 
 *Save to* `static/images/blog/explaining-legendary-arena/02-danny-front-belt.png`
 
@@ -667,7 +667,7 @@ slightly crooked, clip visible at the collar.
 > leather belt now, shirt tucked. Tight on his face and shoulders, phone to his
 > ear, hopeful. Background soft and out of focus.
 
-### 3. Danny, back — the iron mark
+### 3. Danny K, back — the iron mark
 
 *Save to* `static/images/blog/explaining-legendary-arena/03-danny-back-iron-mark.png`
 
@@ -721,16 +721,16 @@ delivery order confirmation, no logos, text unreadable.
 
 ## He got the pitch right
 
-Danny's sales job holds up. The heroes are real: Captain America, Winter
+Danny K's sales job holds up. The heroes are real: Captain America, Winter
 Soldier, Falcon, and Captain Marvel are all in the card pool. Nothing is for
 sale that changes the session, and the rules don't drift. And you don't need
 the boxes — the game is online, and the coffee table is optional.
 
 ## Reference and background
 
-Comic reference for the actors. For Danny, two sources with two different
-jobs. Polishchuk is the engine: how Danny talks. Galifianakis is texture: a few
-moments where Danny goes still and strange. Danny is not Alan. He knows what
+Comic reference for the actors. For Danny K, two sources with two different
+jobs. Polishchuk is the engine: how Danny K talks. Galifianakis is texture: a few
+moments where Danny K goes still and strange. Danny K is not Alan. He knows what
 he's doing on this call. He just misjudged the room. For Jen, one source: The
 Onion's one-pot dinner, for how she thinks about her own night.
 
@@ -742,7 +742,7 @@ Long and host of the weekly YouTube call-in show *Low Value Mail*. Nominated
 for two Canadian Comedy Awards in 2017 (writing in a comedy series; short
 film).
 
-**What Danny borrows:**
+**What Danny K borrows:**
 
 - **Repeat her answer back like he's filing a police report.** "You hated
   Captain America." "His friend. Brainwashed. By a cult." "The View." The laugh
@@ -759,7 +759,7 @@ film).
   overweight-guys answer.
 
 **Watch the format:** his "Explaining … To My Normal Friend" series is the
-closest thing to Danny's pitch passages.
+closest thing to Danny K's pitch passages.
 
 {{< youtube id="rvNPM4VMN8I" title="Explaining the Clavicular Situation to My 45-Year-Old Friend — Danny Polishchuk Comedy" loading="lazy" >}}
 
@@ -779,21 +779,21 @@ one-liners. Created *Between Two Ferns* for Funny or Die, a deliberately
 awkward anti-talk-show built on a flat, faintly hostile interview style with
 celebrity guests, later a Netflix movie. Played Alan in *The Hangover* films.
 
-**What Danny borrows, sparingly:**
+**What Danny K borrows, sparingly:**
 
 - **Total sincerity.** Galifianakis never signals that something is a joke.
-  When Danny says "I made lanes," he means it as a selling point.
+  When Danny K says "I made lanes," he means it as a selling point.
 - **Comfort with dead air.** Let a silence sit longer than is polite. The
   pause after "Like Uno?" and before "Eventually." are Galifianakis moments.
-- **Strange confidence.** Alan states odd things as settled fact. Danny gets
+- **Strange confidence.** Alan states odd things as settled fact. Danny K gets
   one or two of those: "That's overlap. We have overlap."
 - **Being managed.** Alan's intervention scene in *The Hangover Part III* is a
   grown man's family deciding things for him in his own house. That's the
   flavor of the Aunt Laura cold open, and it's where it stops.
 
-**Where it stops:** Alan doesn't know he's strange. Danny mostly does, and
+**Where it stops:** Alan doesn't know he's strange. Danny K mostly does, and
 covers fast. Use Galifianakis for a beat, never for the whole performance. If
-the actor plays Alan start to finish, Danny stops selling and starts being
+the actor plays Alan start to finish, Danny K stops selling and starts being
 looked at.
 
 **Watch:** *The Hangover Part III* — Alan's intervention scene.
