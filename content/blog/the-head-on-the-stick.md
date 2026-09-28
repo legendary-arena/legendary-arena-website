@@ -389,6 +389,74 @@ son.
 The circle ends where someone absorbs the blow. And the goals go back on the
 field the moment someone shows the boys where home is.
 
+## Friday without Sunday
+
+Who is stronger, Satan or Jesus? Read *Lord of the Flies* to the end and the
+book seems to answer: Satan.
+
+Get the cast right first. Satan in the book is not Jack. Satan is the head on
+the stick, the Lord of the Flies, Beelzebub. Jack is the one who serves him,
+and scripture already has his type: **Cain**. "Not as Cain, who was of that
+wicked one, and slew his brother. And wherefore slew he him? Because his own
+works were evil, and his brother's righteous" (1 John 3:12).
+
+The likeness runs deep. Cain brought an offering the Lord "had not respect"
+unto (Genesis 4:5), and it was Satan who had told him to make it: "And Cain
+loved Satan more than God. And Satan commanded him, saying: Make an offering
+unto the Lord" (Moses 5:18). Jack mounts the pig's head as his offering to the
+beast. Cain and Satan then swore a secret oath, the first gang: "swear thy
+brethren by their heads ... that they tell it not; ... and this that **thy
+father may not know it**" (Moses 5:29). Cain named himself "Master Mahan, the
+master of this great secret, that I may murder and get gain" (5:31). Jack's
+tribe is the same thing: paint, chants, a chief, and a murder, with no father
+anywhere to see it. When the Lord asked Cain where his brother was, he
+answered with the island's whole creed: "Am I my brother's keeper?" (Genesis
+4:9).
+
+Even Cain was not beyond the door. Before the murder the Lord told him: "If
+thou doest well, shalt thou not be accepted? and if thou doest not well, sin
+lieth at the door" (Genesis 4:7). Jack had the same choice every day on that
+island. He did not take it.
+
+And Simon is Abel, the brother who did right and was killed for it. He is the
+boy widely read as the Christ-figure, and in the book he looks weak. He faints
+in the heat. He goes alone into the jungle. He meets the head, carries the
+truth down the mountain, and the circle kills him before he can say it. His
+body drifts out to sea. That is where his story ends. Golding wrote the
+crucifixion and stopped. There is no third day.
+
+Friday always looks like losing. Scripture says so plainly: "the weakness of
+God is stronger than men" (1 Corinthians 1:25), and "though he was crucified
+through weakness, yet he liveth by the power of God" (2 Corinthians 13:4). What
+turns the cross into victory is Sunday, and Golding never wrote Sunday. "He is
+not here: for he is risen, as he said" (Matthew 28:6). "I am he that liveth,
+and was dead; and, behold, I am alive for evermore, Amen; and have the keys of
+hell and of death" (Revelation 1:18). "But there is a resurrection, therefore
+the grave hath no victory, and the sting of death is swallowed up in Christ"
+(Mosiah 16:8).
+
+The question of strength is settled in the same chapter that names the Lord of
+the Flies. The Pharisees said Jesus cast out devils "by Beelzebub the prince of
+the devils" (Matthew 12:24). He answered: "how can one enter into a strong man's
+house, and spoil his goods, except he **first bind the strong man**?" (12:29).
+He came "that through death he might destroy him that had the power of death,
+that is, the devil" (Hebrews 2:14). "For this purpose the Son of God was
+manifested, that he might destroy the works of the devil" (1 John 3:8).
+
+Abel's blood cried out from the ground (Genesis 4:10), and on the island that
+cry is all anyone hears. But there is other blood, "the blood of sprinkling,
+that **speaketh better things than that of Abel**" (Hebrews 12:24). Abel's
+blood cries for justice. Christ's blood speaks mercy, and it reaches even the
+brother who did the killing.
+
+The 2026 series changed Simon more than any other character. It gave the
+Christ-figure a new inner life centered on longing for Jack, the boy who leads
+his killers, and it still left him dead on Friday. So the message a reader
+carries away is the one this whole essay has been answering: *you are stuck in
+the circle, and even if you believe Jesus will save you, He is too weak.* That
+is not the gospel. It is Friday without Sunday. Satan's best argument was never
+a lie about the cross. It is a story that stops before the tomb is empty.
+
 ## Which book to hand your son
 
 *Lord of the Flies* stays in the pigsty because it is a diagnosis without a
