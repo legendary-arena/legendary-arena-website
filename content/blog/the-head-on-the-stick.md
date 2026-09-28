@@ -345,10 +345,11 @@ verse and the road home are still missing.
 
 Golding's whole premise fits in one line: we are fallen, the natural man is
 violent, and nothing on the island can get him out of it. Not the rules, not
-reason, not the conch. Two games from any schoolyard show it better than a
-syllabus.
+reason, not the conch. Jesus taught in parables, stories small enough to
+carry and true enough to keep. Here are two from the schoolyard that tell it
+better than a syllabus.
 
-The first is soccer without goals. Take the goals off the field and hand the
+**The parable of the field without goals.** Take the goals off the field and hand the
 boys a ball. For a few minutes it still looks like soccer: running, passing, a
 little keep-away. Then, with nothing to score and nowhere to aim, the game
 stops being about the ball. It becomes about who is bigger, who shoves harder,
@@ -356,7 +357,7 @@ who can take it from whom. Without a goal, the game turns on the players. That
 is the island. The boys had one goal, the signal fire, their way home. Once
 they let it go out, nothing was left to play for but each other.
 
-The second is played standing in a circle. One boy punches the kid next to him
+**The parable of the circle.** Boys stand in a circle. One boy punches the kid next to him
 in the arm and says, "Pass it along." That kid hits the next one, and the punch
 goes around the ring. One boy started it. Everyone else keeps it going. No rule
 says you have to hit the next kid, but nobody wants to be the only one who took
