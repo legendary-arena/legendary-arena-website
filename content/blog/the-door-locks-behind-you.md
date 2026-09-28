@@ -462,10 +462,14 @@ Its author didn't think so. Golding wrote, as it is commonly quoted, "Man is a
 fallen being. He is gripped by original sin," and said in 1980, "I believe in
 God." The title is Beelzebub, the Hebrew for "lord of the flies." Simon, the one
 boy who sees the truth, is widely read as a Christ-figure, and the tribe kills
-him. The book's diagnosis is the Fall. What it lacks is the rest of the story.
-The boys hunt pigs and end where the prodigal son ended, among "the husks that
-the swine did eat" (Luke 15:16). They never reach the next verse: "And when he
-came to himself…" Rescue comes from a naval officer off a warship, and Ralph
+him. The book's diagnosis is the Fall. What it lacks is the rest of the story,
+at both ends. Luke begins the parable at home, not in the pigsty: "A certain
+man had two sons" (Luke 15:11). The boy is a son before the far country, and
+nothing he does there changes it; "we are the children of God" (Romans 8:16).
+The island has no first verse. It opens on the beach, and the boys are never
+told whose they are. They hunt pigs and end where the prodigal son ended,
+among "the husks that the swine did eat" (15:16). They never reach the next
+verse: "And when he came to himself…" Rescue comes from a naval officer off a warship, and Ralph
 weeps for "the darkness of man's heart," with no Father running down the road.
 Taught on its own, the pigsty becomes the whole truth about a person, and the
 lie underneath goes unanswered: that no one can come home. Run the lens on the
@@ -487,9 +491,11 @@ living," the famine, the hired hand feeding swine and envying their husks. Luke
 tells the truth about the pigsty as plainly as Golding does, and gives the
 diagnosis and the cure together. What *Lord of the Flies* adds is a longer stay
 in the pigsty, and no one needs a syllabus for that. Life supplies it daily.
-What people can go a whole life without hearing is verse 17 and verse 20: that a
-person can come to himself, and that the Father is already watching the road
-and runs to meet him.
+What people can go a whole life without hearing is how the story begins and how
+it ends. It begins with verse 11: he is a son. It ends on the road, with verse
+17, that a person can come to himself, and verse 20: "But when he was yet a
+great way off, his father saw him, and had compassion, and ran, and fell on his
+neck, and kissed him."
 
 No Dad with a wayward son has ever said, "If only my boy would read that
 award-winning book about the pigsty, *Lord of the Flies*." Every Dad wants his

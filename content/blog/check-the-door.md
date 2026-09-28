@@ -200,9 +200,11 @@ never got answered. It got replaced.
 **A syllabus with no road home.** Exam boards still set *Lord of the Flies*, a
 novel whose author said man is "gripped by original sin." Many study guides
 teach it as "human nature" instead, and a parent's objection is filed on a list
-of challenged classics. The boys end where the prodigal son ended, among "the
-husks that the swine did eat" (Luke 15:16), but they never reach the next
-verse: "And when he came to himself…" In the parable, the son turns, and
+of challenged classics. Luke's parable begins where the island never does, at
+home: "A certain man had two sons" (Luke 15:11). He is a son before the far
+country, and still one in it. The boys are never told whose they are. They end
+where the prodigal son ended, among "the husks that the swine did eat" (15:16),
+but they never reach the next verse: "And when he came to himself…" In the parable, the son turns, and
 "when he was yet a great way off, his father saw him, and had compassion, and
 ran, and fell on his neck, and kissed him" (15:20). On the island, nobody turns
 and no Father runs; a warship collects the boys instead. The syllabus keeps the
@@ -212,9 +214,10 @@ the book means, and what did they leave out?
 
 **Which book?** Between the one about living with the pigs and the one that
 completes the story, choose the second. The Prodigal Son already has the
-pigsty in it. What people can go a whole life without hearing is the rest: that
-a person can come to himself, and that the Father is already watching the road
-and runs to meet him.
+pigsty in it. What people can go a whole life without hearing is the beginning
+and the end: that they are sons and daughters before they are anything else,
+that a person can come to himself, and that the Father is already watching the
+road and runs to meet him.
 
 No Dad with a wayward son has ever said, "If only my boy would read that
 award-winning book about the pigsty, *Lord of the Flies*." Every Dad wants his
