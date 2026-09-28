@@ -157,6 +157,12 @@ heart of the parable. The father's run discredits it. Someone is coming. He
 has been watching the road the whole time, and when you turn toward home, he
 does not wait for you to arrive. He gives up his dignity and runs to you.
 
+The son gets the speech out anyway — "am no more worthy to be called thy son"
+(15:21) — and the father does not even answer it. He answers with a robe, a
+ring, and shoes (15:22), and with the only verdict that ever mattered: "For
+**this my son** was dead, and is alive again; he was lost, and is found"
+(15:24). Not a hired servant. His son. He always had been.
+
 ## The line that almost got cut
 
 This essay was drafted with Claude, an AI assistant. Claude's first draft said
@@ -180,11 +186,116 @@ the message that you can get out of it, and that a Father is already running
 down the road to help you. He will use whatever tool is at hand to trim it. A
 rule, a mark scheme, a careful edit. Even this one.
 
-The son gets the speech out anyway — "am no more worthy to be called thy son"
-(15:21) — and the father does not even answer it. He answers with a robe, a
-ring, and shoes (15:22), and with the only verdict that ever mattered: "For
-**this my son** was dead, and is alive again; he was lost, and is found"
-(15:24). Not a hired servant. His son. He always had been.
+## Every pigsty tells the same lie
+
+The far country is not only the prodigal's. The lie that keeps a person there
+uses the same words wherever someone is stuck: *you can't leave, and no one is
+coming to help you.*
+
+Luke 15 does not answer it with one story. It answers with three. Before the
+son, Jesus tells of a lost sheep and a lost coin. The son walks home on his own
+feet. A sheep cannot find its way back, and a coin can do nothing at all. So
+the shepherd goes "after that which is lost, **until he find it**" (15:4), and
+"when he hath found it, he layeth it on his shoulders, rejoicing" (15:5). The
+woman lights a candle, sweeps the house, and seeks "diligently till she find
+it" (15:8). Some people leave the pigsty walking. Some are carried out. Neither
+is left there.
+
+**The abusive home.** A person in an abusive relationship did not choose the
+far country. They are the sheep, not the son. The abuser's first tool is
+isolation: cut off the family and the friends, then say it again and again
+that no one would believe you and no one will help. That is the head on the
+stick talking in someone's kitchen. People leave. It starts the way verse 17
+starts, with seeing the thing for what it is. Then someone has to run toward
+them, and it goes best with a plan and with people already committed to
+helping: family, friends, a ward or a congregation who will not look away.
+
+**The gang.** "Once you're in, you never get out" is the gang's own recruiting
+line, and the numbers say otherwise. A 2015 national study by David Pyrooz and
+Gary Sweeten
+[found](https://www.sciencedaily.com/releases/2015/02/150212131817.htm) that
+for most young people gang membership lasts a year or two. Roughly as many
+teenagers leave gangs each year as join them. Pyrooz called the belief that
+members cannot leave "patently false."
+
+**The addiction.** The addiction says you belong to it forever. A national
+study led by John Kelly in 2017
+[found](https://pubmed.ncbi.nlm.nih.gov/29055821/) that 9.1 percent of American
+adults, more than 22 million people, report having resolved a significant
+problem with alcohol or drugs. About half had help along the way, most often
+from mutual-help groups. About half did not. Millions have come home from that
+country.
+
+**The welfare office.** Here the lock is real, but it is built into rules, not
+people. Studying poverty spells, Mary Jo Bane and David Ellwood found that
+three in five people just beginning one were out within three years. The
+longer someone stays, though, the harder the exit gets, and the rules help keep
+them there. The Federal Reserve Bank of Atlanta
+[describes](https://www.atlantafed.org/what-we-study/workforce-development/advancing-careers-for-low-income-families/what-are-benefits-cliffs)
+the trap plainly: "career advancement may result in a family being financially
+worse off (a benefits cliff) or no better off (a benefits plateau) than before
+the wage increase." Take the raise, and you can lose more in benefits than you
+gained in pay. Nobody guards that door. The paperwork does. It is a soft lock,
+the kind [Check the Door](/blog/check-the-door/) teaches you to spot: leaving
+is not forbidden, only priced. People still climb out, and they climb out best
+the way the prodigal did: with a plan to get all the way over the cliff instead
+of to its edge, and with family close enough to run the last part of the road
+with them.
+
+**The great and spacious building.** Lehi saw a building that "stood as it were
+in the air, high above the earth," full of people whose "manner of dress was
+exceedingly fine," and "they were in the attitude of mocking and pointing their
+fingers" at those eating the fruit of the tree (1 Nephi 8:26–27). Its lock is
+not a chain. It is shame. People who had tasted the fruit "were ashamed,
+because of those that were scoffing at them; and they fell away into forbidden
+paths and were lost" (8:28). "For as many as heeded them, had fallen away"
+(8:34).
+
+Lehi's dream does not show anyone walking out of the building. It shows
+something better: the building cannot stand. It has no foundation. It hangs in
+the air. Nephi saw what it was and what became of it: "the great and spacious
+building was the pride of the world; and it fell, and the fall thereof was
+exceedingly great" (1 Nephi 11:36). The mockers look secure and are not. The
+only way not to fall with the building is to leave it, and the door has never
+been locked from the Lord's side: "he sendeth an invitation unto all men, for
+the arms of mercy are extended towards them, and he saith: Repent, and I will
+receive you" (Alma 5:33).
+
+## Too far, too long
+
+The head on the stick has one more version of the lie, for the person who has
+been in the far country a long time: *maybe others can come home, but you went
+too far, and you have been gone too long.*
+
+Scripture keeps telling the opposite story about exactly those people.
+
+Manasseh was the worst king Judah ever had. He "caused his children to pass
+through the fire," practiced witchcraft, and "made Judah and the inhabitants of
+Jerusalem to err, and to do worse than the heathen" (2 Chronicles 33:6, 9).
+The Assyrians took him "among the thorns, and bound him with fetters, and
+carried him to Babylon" (33:11). As far a country as a king of Judah could go.
+"And when he was in affliction, he besought the Lord his God, and humbled
+himself greatly," and the Lord "heard his supplication, and **brought him
+again to Jerusalem** into his kingdom" (33:12–13).
+
+Alma the Younger "became a very wicked and an idolatrous man" and went about
+"seeking to destroy the church" (Mosiah 27:8, 10). His own account of coming
+back: "**I was in the darkest abyss; but now I behold the marvelous light of
+God**" (27:29).
+
+The Lord puts the principle in one sentence through Isaiah: "though your sins
+be as scarlet, they shall be as white as snow" (Isaiah 1:18). Moroni records
+how often the door opens: "as oft as they repented and sought forgiveness,
+with real intent, they were forgiven" (Moroni 6:8).
+
+Scripture does name one people for whom "the day of grace was passed"
+(Mormon 2:15). The verse before it gives the reason, and the reason is not
+distance or time: "they did not come unto Jesus with broken hearts and
+contrite spirits, but they did curse God" (2:14). That door was locked from
+the inside. No one in scripture is kept from home because they went too far or
+stayed too long. The only person who cannot come home is the one who will not
+turn around. Manasseh turned in fetters in Babylon. Alma turned in the darkest
+abyss. The prodigal turned among the swine. The Father ran every time.
 
 ## Which book to hand your son
 
