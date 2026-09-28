@@ -9,6 +9,39 @@ series: "The Soul of Legendary Arena"
 cta: "play"
 ---
 
+## In brief
+
+*Lord of the Flies* is one of the most honored novels in the English language.
+Seven publishers turned it down before Faber and Faber published it in 1954.
+Since then it has collected nearly every honor a novel can:
+
+- **E. M. Forster** named it his outstanding novel of the year.
+- **Time** named it one of the 100 best English-language novels published
+  between 1923 and 2005, and put it on its list of the 100 best young-adult
+  books of all time.
+- **The Modern Library** ranked it 41st on its list of the 100 best novels of
+  the twentieth century.
+- **The BBC's Big Read** ranked it 70th in the nation's vote for its best-loved
+  novel.
+- **The Nobel Prize in Literature** went to William Golding in 1983, "for his
+  novels which, with the perspicuity of realistic narrative art and the
+  diversity and universality of myth, illuminate the human condition in the
+  world of today." He was knighted in 1988.
+- **Exam boards** still set it, and generation after generation of
+  ninth-graders still reads it.
+
+Every one of those honors is for the middle of a story. Golding tells the truth
+about the pigsty as well as anyone ever has: the fall, the far country, the
+natural man, the circle of boys who cannot stop hitting each other.
+
+But the book is missing the most important parts of the story: **the beginning
+and the end of the Prodigal Son.** The beginning is who you are: "A certain man
+had two sons" (Luke 15:11). You are a son of God before you ever reach the far
+country. The end is that you can change, that you have a home, and that your
+Father is already on the road: "But when he was yet a great way off, his father
+saw him, and had compassion, and ran, and fell on his neck, and kissed him"
+(Luke 15:20). This essay puts them back.
+
 ![A Faber paperback cover of Lord of the Flies: a grey watercolor pig's head on a stick, red running from its eyes and mouth, on a white field](/images/blog/the-head-on-the-stick/cover.webp)
 
 *Faber & Faber paperback cover of* Lord of the Flies*, shown for commentary.*
