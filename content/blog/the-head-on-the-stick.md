@@ -535,6 +535,51 @@ the circle, and even if you believe Jesus will save you, He is too weak.* That
 is not the gospel. It is Friday without Sunday. Satan's best argument was never
 a lie about the cross. It is a story that stops before the tomb is empty.
 
+## The whole story, beginning to end
+
+Here is the whole essay in one place. Every story has a beginning, a middle,
+and an end. Golding tells only the middle. The left column is the story
+scripture tells. The middle column is Golding's island. The right column is what
+a 9th-grade boy who goes to church is likely to take away when the middle is all
+he is given.
+
+### Beginning: you are a son of God, and you are not alone
+
+| The Prodigal Son and other scripture stories | Golding's boys on the island | What a 9th-grade white boy who goes to church would feel |
+|---|---|---|
+| **He is a son first.** "A certain man had two sons" (Luke 15:11); "we are the children of God" (Romans 8:16). | The book opens on the beach after the crash. No boy is ever told whose he is. | *I'm just a kid on my own. Nobody claims me.* |
+| **Goodly parents, and people to lead him.** "Having been born of goodly parents, therefore I was taught" (1 Nephi 1:1). He gave "apostles … prophets … pastors and teachers … that we henceforth be no more children, tossed to and fro" (Ephesians 4:11–14). | No parents, no church, no coach, no leader. The only structure is a choir with no choirmaster, and the loudest boy takes charge. | *No one older is here to show me the way. I follow whoever shouts loudest.* |
+| **One measure for all.** "All are alike unto God" (2 Nephi 26:33). | *(2026 series)* The boy who keeps order is recast. The villain stays a white, blond choirboy. | *The villain looks like me, on purpose.* |
+
+### Middle: on the island, in the pigsty
+
+| The Prodigal Son and other scripture stories | Golding's boys on the island | What a 9th-grade white boy who goes to church would feel |
+|---|---|---|
+| **The far country is real.** Riotous living, famine, feeding swine, the husks (Luke 15:13–16). | They hunt pigs, chant over the kill, and mount a head on a stick. | *Take away the rules and I'd turn into an animal too.* |
+| **Satan commanded the offering.** "Satan commanded him, saying: Make an offering unto the Lord" (Moses 5:18). | The choir, in black cloaks with silver crosses, becomes the hunting tribe. The head chorister leads the killing. | *The church boys are the violent ones. That's me in the robe.* |
+| **Cain was warned at the door.** "If thou doest well, shalt thou not be accepted?" (Genesis 4:7). | Jack gets no warning at the door and no second chance. | *Some kids are just born bad, and maybe I'm one of them.* |
+| **Darkness hides.** "From thy face shall I be hid" (Genesis 4:14); "men loved darkness rather than light" (John 3:19). | The paint frees Jack from shame. | *Shame is the problem. The mask is freedom.* |
+| **"Am I my brother's keeper?"** (Genesis 4:9) | Pass it along: every blow goes around the circle. | *Hit back or you're next.* |
+| **Abel did right and was killed** (Genesis 4:8–10). | Simon sees the truth, and the circle kills him before he can say it. | *The kid who does right is the one who gets killed.* |
+| **The cross looks weak.** "Crucified through weakness" (2 Corinthians 13:4). | Simon faints, dies, and drifts out to sea. *(2026 series)* His inner life becomes about Jack. | *Jesus is weak. Faith loses.* |
+| **The accuser names Beelzebub** (Matthew 12:24). | The head on the stick wins the argument. Nobody answers it. | *Evil is stronger than good.* |
+
+### End: you can change — repent, remember you have a home, and your Dad is running to you while you are still a great way off
+
+| The Prodigal Son and other scripture stories | Golding's boys on the island | What a 9th-grade white boy who goes to church would feel |
+|---|---|---|
+| **"He came to himself … I will arise and go to my father"** (Luke 15:17–18). | No boy ever comes to himself. | *Once you're in, there's no turning back.* |
+| **The natural man can be put off.** "Unless he yields … and putteth off the natural man" (Mosiah 3:19). | Only the first half of the verse: fallen, violent, no way out. | *I can't change who I am.* |
+| **No one is too far gone.** Manasseh "brought again to Jerusalem" (2 Chronicles 33:13); "as oft as they repented … they were forgiven" (Moroni 6:8). | Nobody returns from what they did. | *If I mess up badly enough, I'm done.* |
+| **Someone takes the hit.** "Turn to him the other also" (Matthew 5:39); "with his stripes we are healed" (Isaiah 53:5). | No one absorbs the blow. The circle never breaks. | *There's no way out of the fight.* |
+| **The strong man is bound, and He is risen.** "First bind the strong man" (Matthew 12:29); "He is not here: for he is risen" (Matthew 28:6). | No third day. The head gets the last word. | *Friday is the end of the story.* |
+| **The shepherd searches.** He goes after the lost sheep "until he find it" and carries it home on his shoulders (Luke 15:4–5). | The littlun with the birthmark vanishes in the first fire. No one looks for him. | *If I get lost, nobody's coming for me.* |
+| **Restored as a son.** Robe, ring, shoes; "this my son was dead, and is alive again; he was lost, and is found" (Luke 15:22–24). | Ralph weeps for "the darkness of man's heart." | *For boys like me, the story ends in darkness.* |
+| **The Father runs.** "But when he was yet a great way off, his father saw him, and had compassion, and ran, and fell on his neck, and kissed him" (Luke 15:20). | The only grown-up who comes is a naval officer off a warship, at war himself. | *No one is running to me.* |
+
+The right-hand column is what the middle teaches when it is taught alone. The
+left-hand column is the answer to every line of it.
+
 ## Which book to hand your son
 
 *Lord of the Flies* stays in the pigsty because it is a diagnosis without a
