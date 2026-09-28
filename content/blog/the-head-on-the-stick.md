@@ -140,6 +140,21 @@ He saw his boy from a great way off — which means he was looking. He had
 compassion before he heard one word of the speech. He ran. And he fell on his
 son's neck and kissed him while the boy still smelled of the pigs.
 
+Commentators who know the world Jesus was speaking into point out how much that
+one word, *ran*, cost. Kenneth Bailey, in *The Cross and the Prodigal*, notes
+that a village patriarch did not run. He walked slowly, with dignity. To run,
+he had to gather up his robe and bare his legs in front of the whole village,
+a public humiliation for a man of his standing. The father did it anyway. He
+took the shame himself so it would never land on his son, and he reached the
+boy before anyone else on that road could.
+
+That is the answer to the lie the pigsty tells. The head on the stick, the
+husks, the far country all sell the same thing: *you can't leave, and no one
+is coming to help you.* It is the Adversary's pitch, and it aims at the very
+heart of the parable. The father's run discredits it. Someone is coming. He
+has been watching the road the whole time, and when you turn toward home, he
+does not wait for you to arrive. He gives up his dignity and runs to you.
+
 The son gets the speech out anyway — "am no more worthy to be called thy son"
 (15:21) — and the father does not even answer it. He answers with a robe, a
 ring, and shoes (15:22), and with the only verdict that ever mattered: "For
