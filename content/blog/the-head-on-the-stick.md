@@ -1,7 +1,7 @@
 ---
 title: "The Head on the Stick"
 date: 2026-09-28
-description: "The pig's head on the cover of Lord of the Flies tells the boys there is no way off the island. Every Mastermind makes the same claim. At the table it is a lie — four Tactics, and the last one ends him. Luke 15 says the same about the pigsty."
+description: "The pig's head on the cover of Lord of the Flies tells the boys there is no way off the island. Every Mastermind makes the same claim. At the table it is a lie — four Tactics, and the last one ends him. Luke 15 tells the whole story the novel cuts short: it begins with a son, and it ends with his father running down the road."
 draft: false
 tags: ["mastermind", "redemption", "inspiration"]
 categories: ["soul-of-legendary-arena"]
@@ -75,26 +75,44 @@ That is the promise the game makes before anyone draws a card, and it's the
 same promise every honest rule makes: the system you face can be beaten by the
 people who face it. The head on the stick says otherwise. The head is lying.
 
+## The first verse
+
+Jesus told a story about a pigsty too, and He did not begin it in the pigsty.
+He began it at home: "**A certain man had two sons**" (Luke 15:11).
+
+Before the far country, before the famine, before the swine, the story says
+who this young man is. He is a son. That is the first thing true about him, and
+nothing that happens later un-writes it. It is the first thing true about every
+one of us: "The Spirit itself beareth witness with our spirit, that we are the
+children of God" (Romans 8:16). A child of God is who you are. Everything the
+far country hands you afterward — the debts, the hunger, the job feeding pigs —
+is where you are.
+
+*Lord of the Flies* has no first verse. It opens on the beach, after the crash,
+and the boys are never once told whose they are. By the end they have
+forgotten it themselves.
+
 ## The pigsty
 
 Here is what makes Golding's book hard to argue with: everything it says about
 the pigsty is true.
 
-Jesus told the same story first. A younger son takes his inheritance, "took his
-journey into a far country, and there wasted his substance with riotous living"
-(Luke 15:13). The money goes. The famine comes. "And he went and joined himself
+Luke tells it just as plainly. The younger son says, "Father, give me the
+portion of goods that falleth to me" (Luke 15:12), and the father gives it. The
+son "took his journey into a far country, and there wasted his substance with
+riotous living" (15:13). The money goes. The famine comes. "And he went and joined himself
 to a citizen of that country; and he sent him into his fields to feed swine"
 (15:15). The bottom of it is the line Golding spent a whole novel on: "And he
 would fain have filled his belly with the husks that the swine did eat: and no
 man gave unto him" (15:16).
 
 That is the island — the far country, the hunt, the pigs, the hunger that
-nobody feeds. Luke tells the truth about the pigsty as plainly as Golding
-does. Nothing in *Lord of the Flies* is missing from Luke 15.
+nobody feeds. Nothing in *Lord of the Flies* is missing from Luke 15.
 
-What is missing from *Lord of the Flies* is the next verse.
+What is missing from *Lord of the Flies* is the beginning and the end: the
+verse that says who the boy is, and the verse that says he can go home.
 
-## The next verse
+## The road home
 
 "**And when he came to himself**, he said, How many hired servants of my
 father's have bread enough and to spare, and I perish with hunger! I will
@@ -104,30 +122,42 @@ That is the fourth Tactic. The pigsty told the son the same thing the head on
 the stick told Simon: this is who you are now, and there is no getting out.
 Verse 17 is the moment he stops believing it. Nothing about his circumstances
 has changed yet. He is still in the field, still hungry, still wearing what the
-far country made of him. What changed is that he remembered he had a father,
-and that the road home was still there.
+far country made of him. What changed is that he remembered he had a father —
+that the first verse was still true — and that the road home was still there.
 
-Then comes the verse no one on the island ever reaches: "And he arose, and came
-to his father. But **when he was yet a great way off, his father saw him, and
-had compassion, and ran, and fell on his neck, and kissed him**" (15:20).
+Even then the pigsty has one more lie in him. He rehearses a speech on the way:
+"And am no more worthy to be called thy son: make me as one of thy hired
+servants" (15:19). He is ready to come home as a hired hand. He thinks the far
+country took the first verse away.
+
+It never did. "And he arose, and came to his father. But **when he was yet a
+great way off, his father saw him, and had compassion, and ran, and fell on
+his neck, and kissed him**" (15:20).
 
 The son did not walk the whole road. He only had to turn around and start. The
 father had been watching the road the entire time, and he ran the rest of it.
+He saw his boy from a great way off — which means he was looking. He had
+compassion before he heard one word of the speech. He ran. And he fell on his
+son's neck and kissed him while the boy still smelled of the pigs.
 
-And then the verdict, the one the Lord of the Flies never lets anyone hear:
-"For this my son was dead, and is alive again; he was lost, and is found"
-(15:24).
+The son gets the speech out anyway — "am no more worthy to be called thy son"
+(15:21) — and the father does not even answer it. He answers with a robe, a
+ring, and shoes (15:22), and with the only verdict that ever mattered: "For
+**this my son** was dead, and is alive again; he was lost, and is found"
+(15:24). Not a hired servant. His son. He always had been.
 
 ## Which book to hand your son
 
 *Lord of the Flies* stays in the pigsty because it is a diagnosis without a
 cure, and a diagnosis without a cure, taught long enough, starts to sound like
-a sentence. The boys never come to themselves. No father runs. The head on the
-stick gets the last word, and the last word is that there is no way home.
+a sentence. The boys are never told whose they are, never come to themselves,
+and no father runs. The head on the stick gets the last word, and the last word
+is that there is no way home.
 
 Luke 15 has the whole diagnosis in it — the far country, the swine, the husks,
-the hunger — and then it keeps going. It costs nothing to choose it. You lose
-nothing Golding teaches and gain the three verses he left out.
+the hunger — and it has what Golding left out on both ends. It begins with a
+son, and it ends with his father running down the road. It costs nothing to
+choose it. You lose nothing Golding teaches.
 
 At the table, the Mastermind always sounds like he has already won. He hasn't.
 Four Tactics, and the last one ends him. Every heavy season of a life sounds
@@ -140,6 +170,11 @@ award-winning book about the pigsty, *Lord of the Flies*." Every Dad wants his
 son to know something else: that he can change, leave the pigsty, and start
 down the road home — the road his Dad is already watching, ready to run and
 meet him.
+
+> "But when he was yet a great way off, his father saw him, and had
+> compassion, and ran, and fell on his neck, and kissed him."
+>
+> — Luke 15:20
 
 ---
 
