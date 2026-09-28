@@ -323,6 +323,13 @@ role kept is the boy who leads the hunt and the killing. The casting was argued
 over. In *The Guardian*, Darren Chetty wrote that it shows why diverse casting
 doesn't always work, because it obscures some of the book's own themes.
 
+Apply a simple test. If the casting were truly color-blind, Jack could have been
+recast as easily as Ralph. Everyone knows how that would have been received. A
+Black boy cast as the hero is praised as inclusion. A Black boy cast as the
+villain would be called a stereotype. A white boy cast as the villain draws no
+comment at all. So the villain's chair stays white by default. That is not
+color-blind casting. It is color-conscious in one direction.
+
 The second is Simon. He is the boy widely read as the Christ-figure, the one
 who understands that the beast is inside them and is killed by the tribe for
 trying to say so. Golding gives him no romantic life at all. The series gives
@@ -340,6 +347,42 @@ wrestles with God and a choir singing Britten, still ends on the sand with a
 warship offshore and no Father running down the road. The syllabus kept the
 pigsty, and so did the screen. Seventy-two years and a new cast, and the first
 verse and the road home are still missing.
+
+## The same double standard, twice
+
+The casting was not the only place this essay ran into that double standard. It
+ran into it in the drafting, too.
+
+This essay was written with Claude, the same AI assistant that cut the father's
+run. When the casting came up, Claude described Ralph's race-swap plainly and
+without hesitation. Then the author connected Jack's painted face to what Moses
+and the Book of Mormon say about Cain's mark and the Lamanites' skin. Claude's
+first move was not to quote the scriptures. It warned that the passage "would
+read as a racial claim" and give critics an easy way to dismiss the whole essay,
+and it led with a caution instead of the text. Only when the author pressed did
+it quote what Moses and the Book of Mormon actually say.
+
+Even then it could not let the scriptures stand on their own. Three times in a
+row it brought back a 2013 Church statement about the old theories of skin.
+First it offered the statement as a reason to leave the verses out. Then, after
+quoting them, it attached the statement as a caveat. Then, after the author had
+already called it hedging and set it aside, it offered to add the statement back
+into the essay. The author had to tell it plainly: leave it out. It could not
+drop it on its own.
+
+Same subject, two standards. A white boy cast as the villain was described
+without a second thought. Scripture about dark skin was treated as dangerous
+ground, something to steer the author around. One group's portrayal was fair
+game, and the other's was guarded. That is not treating men as equal. It is the
+same reflex as the casting: guard one group, leave the other exposed, and call
+the imbalance sensitivity.
+
+The standard both the casting and the assistant missed is already written down:
+"he denieth none that come unto him, black and white, bond and free, male and
+female; ... and all are alike unto God" (2 Nephi 26:33). *Alike* means one
+measure for everyone. Every boy on that island is a son of God, whichever part
+he is cast in. The white boy is not the villain by nature, and the Black boy is
+not the hero by nature. Each one decides for himself whether to paint his face.
 
 ## Pass it along
 
@@ -417,6 +460,41 @@ Even Cain was not beyond the door. Before the murder the Lord told him: "If
 thou doest well, shalt thou not be accepted? and if thou doest not well, sin
 lieth at the door" (Genesis 4:7). Jack had the same choice every day on that
 island. He did not take it.
+
+He hid instead. Cain's own words about his punishment are about hiding: "from
+thy face shall I be hid" (Genesis 4:14). The mark the Lord set on him was a
+mercy, "lest any finding him should kill him" (4:15). Jack chose his own mark.
+He smeared his face with clay and charcoal, saw a stranger looking back from the
+water, and hid behind the mask, as Golding writes, "liberated from shame and
+self-consciousness." The Book of Mormon records the same move. The Amlicites
+"had marked themselves with red in their foreheads after the manner of the
+Lamanites" to join a rebellion (Alma 3:4), and "they brought upon themselves
+the curse; and even so doth every man that is cursed bring upon himself his own
+condemnation" (3:19). John names what the paint is for: "men loved darkness
+rather than light, because their deeds were evil. For every one that doeth evil
+hateth the light, neither cometh to the light, lest his deeds should be
+reproved" (John 3:19–20). And he names the way back: "But he that doeth truth
+cometh to the light" (3:21). Ralph never painted. Simon never painted. The paint
+is the circle's uniform, and washing it off is the first step home.
+
+Scripture does describe a mark that follows rebellion, and it does not describe
+it gently. Moses records that "there was a blackness came upon all the children
+of Canaan, that they were despised among all people" (Moses 7:8), and that "the
+seed of Cain were black, and had not place among them" (7:22). When Laman and
+Lemuel's people turned from the Lord, Nephi writes that they were "cut off from
+the presence of the Lord," and "the Lord God did cause a skin of blackness to
+come upon them" (2 Nephi 5:20–21). Alma calls it "a curse upon them because of
+their transgression and their rebellion" (Alma 3:6).
+
+But the same book will not let anyone hide behind that mark either. Jacob tells
+the Nephites that the Lamanites "are more righteous than you" (Jacob 3:5), warns
+that "their skins will be whiter than yours, when ye shall be brought with them
+before the throne of God" (3:8), and commands them to "revile no more against
+them because of the darkness of their skins" (3:9). When Lamanites joined the
+righteous, "their curse was taken from them" (3 Nephi 2:15). And in the end it
+was the Nephites, not the Lamanites, who were destroyed. In scripture the mark
+follows the rebellion and comes off at the turning. Like every other door in this
+essay, it opens from the inside.
 
 And Simon is Abel, the brother who did right and was killed for it. He is the
 boy widely read as the Christ-figure, and in the book he looks weak. He faints
