@@ -99,6 +99,14 @@ naval officer off a warship — a man at war, come to collect children who were
 waging their own. Ralph weeps for "the darkness of man's heart." The book ends
 there.
 
+Look at which fire brought the ship. The signal fire, the one Ralph kept for
+rescue, failed. A ship passed the island while the hunters had let it go out.
+The ship that finally came saw the smoke of the fire Jack set to burn Ralph out
+of the forest. The boys were rescued by the fire meant to kill one of them. That
+is Golding's irony, and it is the opposite of the parable. The officer did not
+come looking for anyone. He came because the island was burning. No one on
+that beach was found by a Father who had been watching the road.
+
 ## Four Tactics
 
 The table ends somewhere else, and the rules are why.
@@ -135,6 +143,14 @@ is where you are.
 and the boys are never once told whose they are. By the end they have
 forgotten it themselves.
 
+That is the head's real lie, and it is subtler than it looks. The lie is not
+that there is no island. The boys were not born there. They arrived by plane,
+and there was always a world outside. The lie is that **there is no outside that
+still claims you.** Once a boy believes that, no one has to forbid him to leave.
+Leaving only has to look childish, disloyal, or impossible, and the circle
+polices itself. The first verse is the answer to that lie. You are claimed
+before you ever reach the island, and nothing you do there cancels the claim.
+
 ## The pigsty
 
 Here is what makes Golding's book hard to argue with: everything it says about
@@ -167,6 +183,24 @@ Verse 17 is the moment he stops believing it. Nothing about his circumstances
 has changed yet. He is still in the field, still hungry, still wearing what the
 far country made of him. What changed is that he remembered he had a father —
 that the first verse was still true — and that the road home was still there.
+
+Leaving the island works the same way, and the steps are small:
+
+1. **Remember you are not from here.** "And when he came to himself" (Luke
+   15:17). The island is where you are, not who you are.
+2. **Remember who still claims you.** "How many hired servants of my father's
+   have bread enough and to spare" (15:17). There is a house, and it is still
+   yours.
+3. **Listen to the one who is not hunting.** On the island it was Simon. For
+   the rest of us it is the voice King Benjamin names: the natural man is put
+   off when "he yields to the enticings of the Holy Spirit" (Mosiah 3:19).
+4. **Do not join the dance.** "I will arise" (Luke 15:18). Step out of the
+   circle, even if you are the only one who does.
+5. **Start walking toward home.** "And he arose, and came to his father"
+   (15:20). You do not have to walk the whole road. You only have to start.
+
+The head on the stick cannot survive that sequence. That is why the circle
+killed Simon the moment he walked back into camp with the news.
 
 Even then the pigsty has one more lie in him. He rehearses a speech on the way:
 "And am no more worthy to be called thy son: make me as one of thy hired
