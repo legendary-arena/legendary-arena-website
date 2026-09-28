@@ -310,15 +310,27 @@ Nicholas.
 
 Read it with the second question of the
 [Mastermind Lens](/blog/the-door-locks-behind-you/), *who reports what the
-story means*, and a few choices stand out. Golding introduces Ralph as "the boy with fair
-hair" and gives Jack red hair under his choir cap. The series casts Ralph, the
-boy who keeps the conch and the signal fire, with Winston Sawyers, son of the
-Black American actor Parker Sawyers. It casts Jack, who turns the choir into
-hunters, with Lox Pratt, a white boy with blond hair. And reviewers
-[read Simon's diary](https://slate.com/culture/2026/05/lord-of-the-flies-2026-netflix-tv-show-bbc-jack-thorne.html)
-as suggesting he has feelings for Jack. The casting was argued over. In *The
-Guardian*, Darren Chetty wrote that it shows why diverse casting doesn't always
-work, because it obscures some of the book's own themes.
+story means*, and two choices stand out.
+
+The first is the casting. Golding introduces Ralph as "the boy with fair hair"
+and gives Jack red hair under his choir cap. The series race-swaps Ralph: the
+boy who keeps the conch, the rules, and the signal fire is played by Winston
+Sawyers, son of the Black American actor Parker Sawyers. The villain was not
+swapped. Jack, the head chorister who marches the choir onto the beach in their
+black cloaks and turns it into a hunting tribe, is played by Lox Pratt, a white
+boy with blond hair. The one role recast is the boy who stands for order. The
+role kept is the boy who leads the hunt and the killing. The casting was argued
+over. In *The Guardian*, Darren Chetty wrote that it shows why diverse casting
+doesn't always work, because it obscures some of the book's own themes.
+
+The second is Simon. He is the boy widely read as the Christ-figure, the one
+who understands that the beast is inside them and is killed by the tribe for
+trying to say so. Golding gives him no romantic life at all. The series gives
+him a diary, and reviewers
+[read it](https://slate.com/culture/2026/05/lord-of-the-flies-2026-netflix-tv-show-bbc-jack-thorne.html)
+as showing feelings for Jack. The one character who carries Golding's religious
+meaning is where the adaptation invented the most. Every one of these choices
+is about who the boys are. None of them is about where the boys could go.
 
 What nobody argued over was the ending. Thorne kept it
 [almost word for word](https://www.tvguide.co.uk/articles/lord-of-the-flies-bbc-ending-explained/):
