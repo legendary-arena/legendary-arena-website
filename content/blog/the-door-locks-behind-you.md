@@ -459,8 +459,10 @@ define the Sunday. Questions two and three.
 
 **The mandated pigsty.** *Lord of the Flies* is often taught as a secular book.
 Its author didn't think so. Golding wrote, as it is commonly quoted, "Man is a
-fallen being. He is gripped by original sin," and said in 1980, "I believe in
-God." The title is Beelzebub, the Hebrew for "lord of the flies." Simon, the one
+fallen being. He is gripped by original sin." He knew the doctrine of the Fall,
+then wrote a whole novel about it and left God out, like King Noah's priests,
+whom Abinadi asked, "If ye teach the law of Moses why do ye not keep it?"
+(Mosiah 12:29). The title is Beelzebub, the Hebrew for "lord of the flies." Simon, the one
 boy who sees the truth, is widely read as a Christ-figure, and the tribe kills
 him. The book's diagnosis is the Fall. What it lacks is the rest of the story,
 at both ends. Luke begins the parable at home, not in the pigsty: "A certain
