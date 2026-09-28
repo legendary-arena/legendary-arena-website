@@ -297,6 +297,38 @@ stayed too long. The only person who cannot come home is the one who will not
 turn around. Manasseh turned in fetters in Babylon. Alma turned in the darkest
 abyss. The prodigal turned among the swine. The Father ran every time.
 
+## Seventy-two years later
+
+In 2026 the book got its first television adaptation: four episodes written by
+Jack Thorne and directed by Marc Munden, shown on the BBC in February and
+released on Netflix in the United States in May. It keeps Golding's early-1950s
+setting, and it gives faith more room than any version before it. Simon keeps a
+diary about what the series summary calls
+[his "complicated relationship with religion."](https://en.wikipedia.org/wiki/Lord_of_the_Flies_(TV_series))
+Britten's church music runs under the island. Piggy finally gets a name,
+Nicholas.
+
+Read it with the second question of the
+[Mastermind Lens](/blog/the-door-locks-behind-you/), *who reports what the
+story means*, and a few choices stand out. Golding introduces Ralph as "the boy with fair
+hair" and gives Jack red hair under his choir cap. The series casts Ralph, the
+boy who keeps the conch and the signal fire, with Winston Sawyers, son of the
+Black American actor Parker Sawyers. It casts Jack, who turns the choir into
+hunters, with Lox Pratt, a white boy with blond hair. And reviewers
+[read Simon's diary](https://slate.com/culture/2026/05/lord-of-the-flies-2026-netflix-tv-show-bbc-jack-thorne.html)
+as suggesting he has feelings for Jack. The casting was argued over. In *The
+Guardian*, Darren Chetty wrote that it shows why diverse casting doesn't always
+work, because it obscures some of the book's own themes.
+
+What nobody argued over was the ending. Thorne kept it
+[almost word for word](https://www.tvguide.co.uk/articles/lord-of-the-flies-bbc-ending-explained/):
+the smoke, the naval officers on the beach, the officer's disappointment in a
+pack of British boys, Ralph in tears. A new adaptation, with a diary that
+wrestles with God and a choir singing Britten, still ends on the sand with a
+warship offshore and no Father running down the road. The syllabus kept the
+pigsty, and so did the screen. Seventy-two years and a new cast, and the first
+verse and the road home are still missing.
+
 ## Which book to hand your son
 
 *Lord of the Flies* stays in the pigsty because it is a diagnosis without a
