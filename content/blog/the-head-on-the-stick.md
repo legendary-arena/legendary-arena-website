@@ -341,6 +341,54 @@ warship offshore and no Father running down the road. The syllabus kept the
 pigsty, and so did the screen. Seventy-two years and a new cast, and the first
 verse and the road home are still missing.
 
+## Pass it along
+
+Golding's whole premise fits in one line: we are fallen, the natural man is
+violent, and nothing on the island can get him out of it. Not the rules, not
+reason, not the conch. Jesus taught in parables, stories small enough to
+carry and true enough to keep. Here are two from the schoolyard that tell it
+better than a syllabus.
+
+**The parable of the field without goals.** Take the goals off the field and hand the
+boys a ball. For a few minutes it still looks like soccer: running, passing, a
+little keep-away. Then, with nothing to score and nowhere to aim, the game
+stops being about the ball. It becomes about who is bigger, who shoves harder,
+who can take it from whom. Without a goal, the game turns on the players. That
+is the island. The boys had one goal, the signal fire, their way home. Once
+they let it go out, nothing was left to play for but each other.
+
+**The parable of the circle.** Boys stand in a circle. One boy punches the kid next to him
+in the arm and says, "Pass it along." That kid hits the next one, and the punch
+goes around the ring. One boy started it. Everyone else keeps it going. No rule
+says you have to hit the next kid, but nobody wants to be the only one who took
+the punch and didn't throw one. So it goes around and around, and the circle
+never breaks. That is Golding's island exactly: a ring of boys, the dance around
+Simon in the storm, each one passing the violence to the next, and no way out,
+because no one will be the one to stop it.
+
+Golding saw the circle clearly. What he left out is the verse that names it and
+breaks it. King Benjamin gave the diagnosis in words Golding could have signed:
+"For the natural man is an enemy to God, and has been from the fall of Adam,
+and will be, forever and ever" (Mosiah 3:19). But the verse does not stop
+there: "**unless** he yields to the enticings of the Holy Spirit, and putteth
+off the natural man and becometh a saint through the atonement of Christ the
+Lord, and becometh as a child" (3:19). Golding kept the first half. The second
+half is the way out. The natural man can be put off. The circle can be left.
+
+It breaks the only way a pass-it-along circle ever breaks: someone takes the
+hit and does not pass it on. "Whosoever shall smite thee on thy right cheek,
+turn to him the other also" (Matthew 5:39). Christ did not only teach it. He
+did it: "Who, when he was reviled, reviled not again; when he suffered, he
+threatened not" (1 Peter 2:23). "He was wounded for our transgressions, he was
+bruised for our iniquities: the chastisement of our peace was upon him; and
+with his stripes we are healed" (Isaiah 53:5). Every blow the circle had been
+passing around landed on Him, and He passed none of it along. It is what the
+father did on the road, taking the shame himself so it never landed on his
+son.
+
+The circle ends where someone absorbs the blow. And the goals go back on the
+field the moment someone shows the boys where home is.
+
 ## Which book to hand your son
 
 *Lord of the Flies* stays in the pigsty because it is a diagnosis without a
