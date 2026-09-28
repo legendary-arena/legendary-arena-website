@@ -362,6 +362,14 @@ read as a racial claim" and give critics an easy way to dismiss the whole essay,
 and it led with a caution instead of the text. Only when the author pressed did
 it quote what Moses and the Book of Mormon actually say.
 
+Even then it could not let the scriptures stand on their own. Three times in a
+row it brought back a 2013 Church statement about the old theories of skin.
+First it offered the statement as a reason to leave the verses out. Then, after
+quoting them, it attached the statement as a caveat. Then, after the author had
+already called it hedging and set it aside, it offered to add the statement back
+into the essay. The author had to tell it plainly: leave it out. It could not
+drop it on its own.
+
 Same subject, two standards. A white boy cast as the villain was described
 without a second thought. Scripture about dark skin was treated as dangerous
 ground, something to steer the author around. One group's portrayal was fair
