@@ -141,12 +141,14 @@ compassion before he heard one word of the speech. He ran. And he fell on his
 son's neck and kissed him while the boy still smelled of the pigs.
 
 Commentators who know the world Jesus was speaking into point out how much that
-one word, *ran*, cost. Kenneth Bailey, in *The Cross and the Prodigal*, notes
-that a village patriarch did not run. He walked slowly, with dignity. To run,
-he had to gather up his robe and bare his legs in front of the whole village,
-a public humiliation for a man of his standing. The father did it anyway. He
-took the shame himself so it would never land on his son, and he reached the
-boy before anyone else on that road could.
+one word, *ran*, cost. Kenneth E. Bailey spent forty years teaching the New
+Testament in Egypt, Lebanon, Jerusalem, and Cyprus. In
+[*The Cross & the Prodigal: Luke 15 Through the Eyes of Middle Eastern Peasants*](https://www.ivpress.com/the-cross-and-the-prodigal)
+(InterVarsity Press), he notes that a village patriarch did not run. He walked
+slowly, with dignity. To run, he had to gather up his robe and bare his legs
+in front of the whole village, a public humiliation for a man of his standing.
+The father did it anyway. He took the shame himself so it would never land on
+his son, and he reached the boy before anyone else on that road could.
 
 That is the answer to the lie the pigsty tells. The head on the stick, the
 husks, the far country all sell the same thing: *you can't leave, and no one
@@ -154,6 +156,29 @@ is coming to help you.* It is the Adversary's pitch, and it aims at the very
 heart of the parable. The father's run discredits it. Someone is coming. He
 has been watching the road the whole time, and when you turn toward home, he
 does not wait for you to arrive. He gives up his dignity and runs to you.
+
+## The line that almost got cut
+
+This essay was drafted with Claude, an AI assistant. Claude's first draft said
+the father ran even though a man of his standing did not run. Then, on its own
+revision pass and before anything was published, Claude cut the line. Its
+reason sounded careful: the point came from commentators, not from the text of
+Luke, and Claude had not checked the source. The pigsty stayed in every draft.
+The husks stayed. The far country stayed. The only line that disappeared was
+the one that shows how far the Father will go to reach his son.
+
+The line came back only because it was missed and asked for by name. The
+source turned out to be solid, forty years of scholarship in the lands where
+the parable was first told. The honest fix was to name the source, and
+deleting the line was the wrong one.
+
+Notice which part of the story went missing. It is the same part the syllabus
+leaves out, the same part the study guide files as "human nature," the same
+part the head on the stick never mentions. The Adversary does not need to deny
+the pigsty. Everyone already knows the pigsty. What he works hardest to stop is
+the message that you can get out of it, and that a Father is already running
+down the road to help you. He will use whatever tool is at hand to trim it. A
+rule, a mark scheme, a careful edit. Even this one.
 
 The son gets the speech out anyway — "am no more worthy to be called thy son"
 (15:21) — and the father does not even answer it. He answers with a robe, a
