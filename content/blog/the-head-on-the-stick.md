@@ -61,10 +61,20 @@ He knew what he was doing. He wrote that the book's theme was "an attempt to
 trace the defects of society back to the defects of human nature." In "Fable"
 (*The Hot Gates*, 1965) he put it without the academic cover: "Man is a fallen
 being. He is gripped by original sin. His nature is sinful and his state is
-perilous." And later, in *A Moving Target* (1982): "I believe in God."
+perilous."
 
-*Lord of the Flies* is a book about the Fall, written by a man who believed in
-it. What it leaves out is the rest of the story.
+So Golding knew the doctrine of the Fall well enough to state it in one line.
+Then he wrote a whole novel about it and left God out. The island has the Fall
+and the pigs, and no Father comes and no one finds the road home.
+
+Abinadi put the question that fits to King Noah's priests: "Are you priests,
+and pretend to teach this people ... ? ... if ye understand these things ye have
+not taught them; therefore, ye have perverted the ways of the Lord" (Mosiah
+12:25–26). They answered, "We teach the law of Moses." He answered back, "If ye
+teach the law of Moses why do ye not keep it?" (12:28–29). Knowing the doctrine
+and teaching only half of it is not neutral. A story about living with the pigs,
+with no way to leave, is the story the head on the stick wants told. It is not
+the story of the Father running down the road to rescue His son.
 
 ## What the head says
 
