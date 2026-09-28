@@ -207,7 +207,11 @@ where the prodigal son ended, among "the husks that the swine did eat" (15:16),
 but they never reach the next verse: "And when he came to himself…" In the parable, the son turns, and
 "when he was yet a great way off, his father saw him, and had compassion, and
 ran, and fell on his neck, and kissed him" (15:20). On the island, nobody turns
-and no Father runs; a warship collects the boys instead. The syllabus keeps the
+and no Father runs; a warship collects the boys instead. Even the rescue is
+ironic. The signal fire, kept for rescue, failed: a ship passed while it was
+out. The ship that finally came saw the smoke of the fire Jack set to burn
+Ralph out of the forest. The boys were rescued by the fire meant to kill one of
+them, by an officer who was not looking for anyone. The syllabus keeps the
 pigsty and leaves out the road home: "For this my son was dead, and is alive
 again; he was lost, and is found" (15:24). Run question two: who reports what
 the book means, and what did they leave out?
