@@ -657,6 +657,57 @@ he is given.
 The right-hand column is what the middle teaches when it is taught alone. The
 left-hand column is the answer to every line of it.
 
+## Why the book room keeps the pigsty
+
+The leaders who choose what a 9th-grade boy reads know what helps him. They
+know he does better with a father in the home, a faith, and grown-ups who show
+him the way. Then they assign the opposite: a book that pulls him down at the
+least, and at worst discredits the very things that could heal him.
+
+Here is how that happens. In 1963, in *Abington School District v. Schempp*,
+the Supreme Court struck down school-sponsored Bible reading, while allowing
+that the Bible may be studied as literature or history. A public school may
+teach *about* religion. It may not teach a boy, as the lesson, that God is real
+and that the way off the island is home to a Father.
+
+So Golding's omissions go into the book room as literature. The book leaves
+out parents as a living claim, leaves out God, and leaves out any grown-up
+whose job is to get the boy off the island without burning it. The committee
+files all of that under theme, allegory, and "civilization versus savagery." It
+is allowed to land on the boy as a description of what he is. The missing
+Father is not counted as a religious message. It is counted as art.
+
+Now imagine a text that told a boy, in the school's own voice:
+
+- there is a God,
+- you were not born without parents,
+- you can leave the island without becoming Jack's fire.
+
+That text would be filed as preaching. The committee would call it "not
+neutral." It would ask whether a boy of another faith, or of no faith, was
+being preached at. It would not ask the matching question about Golding:
+whether a boy from a broken home is being preached a closed island.
+
+Pieces of the repair are allowed to sneak in. "You have people who love you"
+can hang on a counselor's poster. "Don't destroy yourself to win" can be taught
+as a social-emotional skill. "There is a God" is the part that never reaches
+the required list.
+
+When a state does try, it becomes a fight. In 2024 Texas approved an optional
+state reading curriculum for the elementary grades that includes Bible stories,
+the parable of the Prodigal Son among them. Of the state's 20 largest school
+districts, [only one adopted it](https://www.the74million.org/article/texas-passed-a-bible-themed-curriculum-but-many-districts-arent-using-it/).
+In Oklahoma, a 2024 order to put Bibles in classrooms was
+[dropped](https://www.au.org/how-we-protect-religious-freedom/legal-cases/cases/rev-lori-walke-v-ryan-walters/)
+after the superintendent who issued it resigned. Meanwhile *Lord of the Flies*
+has sat in the book room for seventy-two years without a fight.
+
+The committees have defined Golding's omissions as neutral and the repair as
+religious. Family, God, and the grown-up who is not at war are treated as
+private beliefs. The pigsty is treated as public knowledge. So the leaders who
+know what heals a boy hand him the book that tells him nothing can, and turn
+away the one story that tells him he has a Father running down the road.
+
 ## Which book to hand your son
 
 *Lord of the Flies* stays in the pigsty because it is a diagnosis without a
