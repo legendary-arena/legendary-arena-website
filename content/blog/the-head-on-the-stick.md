@@ -70,6 +70,19 @@ And why he won is not public. The Nobel Foundation
 [seals its nominations and deliberations](https://www.nobelprize.org/nomination/literature/)
 for fifty years, so the record of that choice stays shut until 2034.
 
+Compare that with an American courtroom. A jury deliberates in private, and so
+do the Justices of the Supreme Court. But a court cannot simply announce a
+result. Judges must publish a written opinion that explains their reasoning, and
+any judge who disagrees can publish a dissent beside it. Anyone can read exactly
+why *Engel* and *Schempp* came out the way they did, and who objected. The Nobel
+works the other way. It publishes a one-sentence citation, seals the reasoning
+for half a century, and treats a dissent as an offense. When Lundkvist spoke,
+the chairman of the Nobel literature committee, Lars Gyllensten,
+[answered him](https://www.upi.com/Archives/1983/10/07/Golding-hits-back-at-dissenting-Nobel-Prize-judge/2054437204703/):
+"He has broken our rules. We are not allowed to express our personal opinions."
+A court with a dissenting judge prints the dissent. The Academy called its
+dissenter a rule-breaker.
+
 Every one of those honors is for the middle of a story. Golding tells the truth
 about the pigsty as well as anyone ever has: the fall, the far country, the
 natural man, the circle of boys who cannot stop hitting each other.
