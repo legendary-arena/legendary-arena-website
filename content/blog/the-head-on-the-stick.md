@@ -287,6 +287,22 @@ source turned out to be solid, forty years of scholarship in the lands where
 the parable was first told. The honest fix was to name the source, and
 deleting the line was the wrong one.
 
+It happened again near the end of the drafting. The author brought in a clip of
+Matt Walsh arguing that the separation of church and state was never meant to
+empty the schools of Christianity. Claude's first move was to leave him out. It
+called part of his material off-topic, said the essay's own history made his
+point better than he did, and called him "wrong on the history," because the
+phrase itself dates to Jefferson in 1802, not the 1960s. When the author pushed
+back, Claude embedded the video but still held that Walsh's central claim did
+not match the record. Then the author asked one question: if Jefferson's letter
+meant what the Court later said it meant, why did American public schools go on
+praying and reading the Bible for a hundred and sixty years after it was
+written? There was no answer to that but to concede. Walsh was right on the
+substance. The reading that took prayer and the Bible out of the classroom came
+from the Court in 1962 and 1963, not from Jefferson. Once again the tool
+trimmed first and checked later, and once again what it tried to trim was the
+voice saying the Father belongs in the room.
+
 Notice which part of the story went missing. It is the same part the syllabus
 leaves out, the same part the study guide files as "human nature," the same
 part the head on the stick never mentions. The Adversary does not need to deny
