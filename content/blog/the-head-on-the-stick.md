@@ -454,7 +454,7 @@ record shows since 2015:
 | Year | Production | Made for | Character | How the source describes the character | Cast as | The villain, as cast |
 |---|---|---|---|---|---|---|
 | 2015 | *Fantastic Four* | 20th Century Fox | Johnny Storm | Blond, blue-eyed in the comics | Michael B. Jordan | Doctor Doom: Toby Kebbell, white |
-| 2015 | *Hamilton* (stage) | Broadway | The Founding Fathers | Historical white Americans | Actors of color | King George III: Jonathan Groff, white |
+| 2015 | *Hamilton* (stage) | Broadway | The Founding Fathers | Historical white Americans | Actors of color | King George III: played by a white actor |
 | 2016 | *Harry Potter and the Cursed Child* (stage) | West End | Hermione Granger | "Bushy brown hair"; played white in all eight films | Noma Dumezweni | — |
 | 2019 | *The Personal History of David Copperfield* | FilmNation, Film4 | David Copperfield | Dickens's Victorian English boy | Dev Patel | Uriah Heep: Ben Whishaw, white |
 | 2023 | *The Little Mermaid* | Disney | Ariel | Andersen: skin "clear and delicate as a rose-leaf"; red-haired in Disney's 1989 film | Halle Bailey | Ursula: Melissa McCarthy, white |
@@ -491,6 +491,17 @@ his fingerprints and the results of his work.
 The game table works the same way. You never fight the Mastermind first. You learn
 the Scheme by what it does to the city, turn after turn, until the pattern is
 plain enough to read. The pattern is the Scheme.
+
+So name the elephant in the room. A pattern this steady has an author, and he
+is not in the credits. Scripture named him long ago: Beelzebub, the lord of the
+flies, the head on the stick. Then look at who all of it lands on. The book
+tells a ninth-grade white boy who goes to church that the choirboys became the
+killers. The casting tells him the villain looks like him. The syllabus tells him
+no Father is coming. Three messages, one boy, and every one of them says what
+the head said to Simon: *there is no outside that still claims you.* That is the
+Mastermind's work. It is not a man with a memo. It is one voice behind every
+version of the lie, aimed at the boy who most needs to hear the first verse and
+the road home.
 
 This essay ran into the same double standard a second time, in its own
 drafting.
