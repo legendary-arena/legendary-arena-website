@@ -9,6 +9,28 @@ series: "The Soul of Legendary Arena"
 cta: "play"
 ---
 
+## The test
+
+Hold the book up to one question before anything else:
+
+**Are Golding, and the committees that require his book, trying to help a
+ninth-grade boy discover the power of Jesus Christ, or trying to divert him
+from it?**
+
+President Russell M. Nelson's October 2022 general conference address,
+"[Overcome the World and Find Rest](https://www.churchofjesuschrist.org/study/general-conference/2022/10/47nelson?lang=eng)":
+
+> "Now, how does overcoming the world bless our lives? The answer is clear:
+> entering into a covenant relationship with God binds us to Him in a way that
+> makes *everything* about life easier. Please do not misunderstand me: I did
+> *not* say that making covenants makes life *easy*. In fact, expect
+> opposition, because the adversary does not want you to discover the power of
+> Jesus Christ. But yoking yourself with the Savior means you have access to
+> *His* strength and redeeming power."
+
+A required book either helps a boy find that power or it trains him to live as if
+it were not there.
+
 ## In brief
 
 *Lord of the Flies* is one of the most honored novels in the English language.
