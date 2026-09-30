@@ -26,9 +26,15 @@ Since then it has collected nearly every honor a novel can:
 - **The Nobel Prize in Literature** went to William Golding in 1983, "for his
   novels which, with the perspicuity of realistic narrative art and the
   diversity and universality of myth, illuminate the human condition in the
-  world of today." He was knighted in 1988.
+  world of today."
+- **Knighted by Queen Elizabeth II.** In the summer of 1988, William Golding
+  was knighted in the Queen's Birthday Honours. He was 76.
 - **Exam boards** still set it, and generation after generation of
   ninth-graders still reads it.
+
+![William Golding, white-haired and bearded, in a morning coat, holding open the case with the insignia of his knighthood, standing between two women in summer hats](/images/blog/the-head-on-the-stick/golding-knighted-1988.webp)
+
+*Sir William Golding with the insignia of his knighthood, 1988.*
 
 Every one of those honors is for the middle of a story. Golding tells the truth
 about the pigsty as well as anyone ever has: the fall, the far country, the
