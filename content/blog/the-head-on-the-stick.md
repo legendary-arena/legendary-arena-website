@@ -492,6 +492,17 @@ The game table works the same way. You never fight the Mastermind first. You lea
 the Scheme by what it does to the city, turn after turn, until the pattern is
 plain enough to read. The pattern is the Scheme.
 
+So name the elephant in the room. A pattern this steady has an author, and he
+is not in the credits. Scripture named him long ago: Beelzebub, the lord of the
+flies, the head on the stick. Then look at who all of it lands on. The book
+tells a ninth-grade white boy who goes to church that the choirboys became the
+killers. The casting tells him the villain looks like him. The syllabus tells him
+no Father is coming. Three messages, one boy, and every one of them says what
+the head said to Simon: *there is no outside that still claims you.* That is the
+Mastermind's work. It is not a man with a memo. It is one voice behind every
+version of the lie, aimed at the boy who most needs to hear the first verse and
+the road home.
+
 This essay ran into the same double standard a second time, in its own
 drafting.
 
