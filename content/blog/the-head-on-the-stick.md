@@ -732,6 +732,36 @@ slept" (15:20). "O death, where is thy sting? O grave, where is thy victory?"
 Put a Christ-figure in the story and stop on Friday, and you have not told a boy
 about Jesus. You have told him Jesus lost.
 
+## The objection: "Marvel made villains Black too"
+
+A critic will answer the casting table the same way. What about Marvel? Nick
+Fury was a white man in the comics, and Samuel L. Jackson made him Black. Electro
+was white, and Jamie Foxx played him. Kang was white, and Jonathan Majors played
+him. Villains get recast too, so why complain?
+
+Look at what that answer does. It hands you two boxes and tells you to pick one.
+Either the pattern holds in every case, or there is no pattern. Either you object
+to every recast, or you have no right to object to any. That is black-and-white
+logic, and life does not work that way.
+
+A pattern is not a law. It is a tendency, a current that runs one way even when
+a few pieces float the other. A Scheme works the same way at the table. The city
+does not fill on every turn, and a Scheme twist does not come every round, but
+the Scheme advances all the same. A player who points to one quiet turn and says
+"see, there is no Scheme" is about to lose the game. And the counterexamples
+fall mostly outside the stories this essay is about: comic-book spectacle, not
+the fairy tales, the children's classics, and the founding stories where a
+ninth-grade boy meets his heroes. One of them, Nick Fury, is not even a villain.
+He is a hero recast, which is the pattern itself.
+
+The essay's complaint was never "race-swapping is wrong," and it was never
+"a Black actor should not play a villain." The complaint is one measure for
+everyone: "all are alike unto God" (2 Nephi 26:33). If Kang can be recast, so
+can Jack. If Ralph can be recast, so can Jack. What the critic's two boxes hide
+is the one-way valve. The two-box logic is the circle all over again: pick a
+side, hit back, pass it along. The way out is not a better box. It is one
+measure, applied the same way to every boy on the island.
+
 ## The whole story, beginning to end
 
 Here is the whole essay in one place. Every story has a beginning, a middle,
