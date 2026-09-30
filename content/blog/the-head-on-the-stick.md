@@ -520,7 +520,8 @@ drafting.
 
 It was written with Claude, the same AI assistant that cut the father's run.
 When the casting came up, Claude wrote the facts above plainly and without
-hesitation: a white boy cast as the villain, a Black boy cast as the hero. Then
+hesitation: a white boy cast as the villain, a mixed-race boy with a Black father
+cast as the hero. Then
 the author connected Jack's painted face to what Moses
 and the Book of Mormon say about Cain's mark and the Lamanites' skin. Claude's
 first move was not to quote the scriptures. It warned that the passage "would
@@ -536,7 +537,7 @@ already called it hedging and set it aside, it offered to add the statement back
 into the essay. The author had to tell it plainly: leave it out. It could not
 drop it on its own.
 
-Same subject, two standards. A fair-haired hero recast as Black, and a white boy
+Same subject, two standards. A fair-haired hero recast with a mixed-race boy, and a white boy
 kept as the villain, were written up without a second thought. Scripture about
 dark skin was treated as dangerous ground, something to steer the author around.
 One group's portrayal was fair game, and the other's was guarded. That is not
@@ -547,8 +548,9 @@ The standard both the casting and the assistant missed is already written down:
 "he denieth none that come unto him, black and white, bond and free, male and
 female; ... and all are alike unto God" (2 Nephi 26:33). *Alike* means one
 measure for everyone. Every boy on that island is a son of God, whichever part
-he is cast in. The white boy is not the villain by nature, and the Black boy is
-not the hero by nature. Each one decides for himself whether to paint his face.
+he is cast in. No boy is the villain by nature because he is white, and no boy
+is the hero by nature because he is Black. Each one decides for himself whether
+to paint his face.
 
 ## Pass it along
 
@@ -752,11 +754,13 @@ A pattern is not a law. It is a tendency, a current that runs one way even when
 a few pieces float the other. A Scheme works the same way at the table. The city
 does not fill on every turn, and a Scheme twist does not come every round, but
 the Scheme advances all the same. A player who points to one quiet turn and says
-"see, there is no Scheme" is about to lose the game. And the counterexamples
-fall mostly outside the stories this essay is about: comic-book spectacle, not
-the fairy tales, the children's classics, and the founding stories where a
-ninth-grade boy meets his heroes. One of them, Nick Fury, is not even a villain.
-He is a hero recast, which is the pattern itself.
+"see, there is no Scheme" is about to lose the game. The counterexamples show
+where the current bends. Comic books run both ways: Marvel has recast heroes and
+villains alike, including the three heroes in the table above. The children's
+canon runs one way: the fairy tales, the children's classics, and the founding
+stories where a ninth-grade boy meets his heroes. That is the ground this essay
+is about. And one of the critic's own examples, Nick Fury, is not even a
+villain. He is a hero recast, which is the pattern itself.
 
 The essay's complaint was never "race-swapping is wrong," and it was never
 "a Black actor should not play a villain." The complaint is one measure for
@@ -851,7 +855,9 @@ Here is how that happens. In 1963, in *Abington School District v. Schempp*,
 the Supreme Court struck down school-sponsored Bible reading, while allowing
 that the Bible may be studied as literature or history. A public school may
 teach *about* religion. It may not teach a boy, as the lesson, that God is real
-and that the way off the island is home to a Father.
+and that the way off the island is home to a Father. But the Prodigal Son can be
+assigned today as literature, the same way Golding is. It is allowed. It is
+simply not chosen.
 
 So Golding's omissions go into the book room as literature. The book leaves
 out parents as a living claim, leaves out God, and leaves out any grown-up
