@@ -483,6 +483,53 @@ measure for everyone. Every boy on that island is a son of God, whichever part
 he is cast in. The white boy is not the villain by nature, and the Black boy is
 not the hero by nature. Each one decides for himself whether to paint his face.
 
+## Fingerprints
+
+*Lord of the Flies* is not the only place this has happened. Here is what the
+record shows since 2015:
+
+| Year | Production | Made for | Character | How the source describes the character | Cast as | The villain, as cast |
+|---|---|---|---|---|---|---|
+| 2015 | *Fantastic Four* | 20th Century Fox | Johnny Storm | Blond, blue-eyed in the comics | Michael B. Jordan | Doctor Doom: Toby Kebbell, white |
+| 2015 | *Hamilton* (stage) | Broadway | The Founding Fathers | Historical white Americans | Actors of color | King George III: Jonathan Groff, white |
+| 2016 | *Harry Potter and the Cursed Child* (stage) | West End | Hermione Granger | "Bushy brown hair"; played white in all eight films | Noma Dumezweni | — |
+| 2019 | *The Personal History of David Copperfield* | FilmNation, Film4 | David Copperfield | Dickens's Victorian English boy | Dev Patel | Uriah Heep: Ben Whishaw, white |
+| 2021 | *Anne Boleyn* | Channel 5 | Anne Boleyn | Tudor queen of England | Jodie Turner-Smith | — |
+| 2022 | *House of the Dragon* | HBO | Corlys Velaryon | Valyrian: silver hair, pale skin | Steve Toussaint | — |
+| 2023 | *The Little Mermaid* | Disney | Ariel | Andersen: skin "clear and delicate as a rose-leaf"; red-haired in Disney's 1989 film | Halle Bailey | Ursula: Melissa McCarthy, white |
+| 2023 | *Peter Pan & Wendy* | Disney | Tinker Bell | Blonde in Disney's own 1953 film | Yara Shahidi | Captain Hook: Jude Law, white |
+| 2023 | *Percy Jackson and the Olympians* | Disney+ | Annabeth Chase | "Curly blond hair," gray eyes | Leah Sava Jeffries | — |
+| 2023 | *Queen Cleopatra* | Netflix | Cleopatra VII | Egypt's antiquities ministry: "light skin and Hellenistic (Greek) features" | Adele James | — |
+| 2025 | *Snow White* | Disney | Snow White | Skin "white as snow"; the film renamed her for a snowstorm instead | Rachel Zegler | The Evil Queen: Gal Gadot, white |
+| 2026 | *Harry Potter* (HBO, premieres December) | HBO | Severus Snape | "Sallow skin" | Paapa Essiedu | — |
+| 2026 | *Lord of the Flies* | BBC (Netflix in the US) | Ralph | "The boy with fair hair" | Winston Sawyers | Jack: Lox Pratt, white |
+
+Thirteen productions over eleven years. Different studios, networks, and
+theaters: Fox, Disney, HBO, Netflix, Channel 5, the BBC, Broadway, the West End.
+Different directors, different writers, two countries. No memo ties them
+together, and no one person made all of these calls. Yet the pattern runs one
+way. The roles recast are mostly heroes, heroines, founders, and princesses. In
+every production here with a clear villain, the villain stayed white.
+
+The message is not subtle. Keep the villain white, and recast nearly everyone
+else. *Hamilton* did it in the open. Lin-Manuel Miranda cast every founder with
+an actor of color and said, "Our story should look the way our country looks."
+The one villain on the stage, the King of England, was played by a white actor.
+*Lord of the Flies* did the same thing seventy-two years after Golding wrote it.
+The fair-haired boy who keeps the fire was recast, and the white choirboy who
+leads the killing was kept. A ninth-grade boy who looks like Jack does not need
+it explained to him. He can read the casting.
+
+That is how a Mastermind works. You will not find his name in the credits. Ask
+who decided that every ninth-grader for more than sixty years should read *Lord
+of the Flies*, and you get the same answer: an exam board, a committee, a book
+room, a list. No one person. You cannot find the Mastermind. You can only see
+his fingerprints and the results of his work.
+
+The table works the same way. You never fight the Mastermind first. You learn
+the Scheme by what it does to the city, turn after turn, until the pattern is
+plain enough to read. The pattern is the Scheme.
+
 ## Pass it along
 
 Golding's whole premise fits in one line: we are fallen, the natural man is
