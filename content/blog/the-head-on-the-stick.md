@@ -17,6 +17,8 @@ Hold the book up to one question before anything else:
 ninth-grade boy discover the power of Jesus Christ, or trying to divert him
 from it?**
 
+Before you answer it, ask two things: who set this up, and what got left out.
+
 President Russell M. Nelson's October 2022 general conference address,
 "[Overcome the World and Find Rest](https://www.churchofjesuschrist.org/study/general-conference/2022/10/47nelson?lang=eng)":
 
@@ -57,6 +59,29 @@ Since then it has collected nearly every honor a novel can:
 <img width="320" style="margin: 1rem auto;" src="/images/blog/the-head-on-the-stick/golding-knighted-1988.webp" alt="William Golding, white-haired and bearded, in a morning coat, holding open the case with the insignia of his knighthood, standing between two women in summer hats" loading="lazy">
 
 *Sir William Golding with the insignia of his knighthood, 1988.*
+
+The prize everyone cites was fought over inside the room. Hours after the 1983
+announcement, one of the Swedish Academy's own judges, Artur Lundkvist, broke
+the Academy's rule of silence and
+[called Golding](https://www.upi.com/Archives/1983/10/06/William-Golding-whose-novel-Lord-of-the-Flies-depicted/8476434260800/)
+"a small English phenomenon of no great interest." According to an anonymous
+source in the Academy, it took two rounds of voting before Golding narrowly won.
+And why he won is not public. The Nobel Foundation
+[seals its nominations and deliberations](https://www.nobelprize.org/nomination/literature/)
+for fifty years, so the record of that choice stays shut until 2034.
+
+Compare that with an American courtroom. A jury deliberates in private, and so
+do the Justices of the Supreme Court. But a court cannot simply announce a
+result. Judges must publish a written opinion that explains their reasoning, and
+any judge who disagrees can publish a dissent beside it. Anyone can read exactly
+why *Engel* and *Schempp* came out the way they did, and who objected. The Nobel
+works the other way. It publishes a one-sentence citation, seals the reasoning
+for half a century, and treats a dissent as an offense. When Lundkvist spoke,
+the chairman of the Nobel literature committee, Lars Gyllensten,
+[answered him](https://www.upi.com/Archives/1983/10/07/Golding-hits-back-at-dissenting-Nobel-Prize-judge/2054437204703/):
+"He has broken our rules. We are not allowed to express our personal opinions."
+A court with a dissenting judge prints the dissent. The Academy called its
+dissenter a rule-breaker.
 
 Every one of those honors is for the middle of a story. Golding tells the truth
 about the pigsty as well as anyone ever has: the fall, the far country, the
@@ -265,6 +290,8 @@ is coming to help you.* It is the Adversary's pitch, and it aims at the very
 heart of the parable. The father's run discredits it. Someone is coming. He
 has been watching the road the whole time, and when you turn toward home, he
 does not wait for you to arrive. He gives up his dignity and runs to you.
+You don't crawl home rehearsing your apology. You get up, because someone is
+already coming.
 
 The son gets the speech out anyway — "am no more worthy to be called thy son"
 (15:21) — and the father does not even answer it. He answers with a robe, a
@@ -638,6 +665,30 @@ son.
 
 The circle ends where someone absorbs the blow. And the goals go back on the
 field the moment someone shows the boys where home is.
+
+## The experiment
+
+Golding built his island like an experiment. Take away the parents. Take away
+the goal. Leave Beelzebub on the island. Then write down what happens, and call
+the result human nature.
+
+It has been tried before, on real children. In the thirteenth century the
+Emperor Frederick II wanted to know what language people would speak by nature,
+so he had infants raised with food and washing but no one allowed to speak to
+them. The chronicler Salimbene recorded the result: "he laboured in vain, for the
+children could not live without clappings of the hands, and gestures, and
+gladness of countenance, and blandishments." The children died.
+
+An experiment that takes away what a child needs and then records how he fails
+does not discover his nature. It discovers what happens when you take those
+things away. Frederick took away the voices, and the children died. Golding took
+away the Father and the goal, and the boys became hunters.
+
+Salimbene's list reads almost like Luke 15:20 turned inside out. The children
+died for lack of a glad face, open arms, and a tender word. The prodigal was met
+with all of them: "his father saw him, and had compassion, and ran, and fell on
+his neck, and kissed him." Put the Father back in the experiment, and the result
+changes.
 
 ## Friday without Sunday
 
