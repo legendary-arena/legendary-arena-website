@@ -697,6 +697,71 @@ the circle, and even if you believe Jesus will save you, He is too weak.* That
 is not the gospel. It is Friday without Sunday. Satan's best argument was never
 a lie about the cross. It is a story that stops before the tomb is empty.
 
+## The objection: "Simon is Christ"
+
+A critic will answer everything above in one line: there *is* a Christ in the
+book. Simon is the Christ-figure. He goes alone into the wilderness, faces the
+lord of the flies, carries the truth down the mountain, and is killed by the
+crowd he came to save, just as Jesus was. Golding even surrounds his body with
+light in the water as the tide carries it out to sea. What more do you want?
+
+That objection proves the point. Look at the Christ it hands a boy:
+
+- **He is weak.** He faints in the heat before the first assembly.
+- **He dies, and he stays dead.** His body goes out to sea, and no one sees him
+  again. No tomb is empty. No one on the island is changed. The boys who killed
+  him go back to hunting.
+- **In the 2026 series, he is rewritten.** His inner life is recentered on
+  longing for the boy who leads his killers.
+
+A Christ who dies and stays dead is not the Christ of the gospels. Paul said so
+plainly: "if Christ be not risen, then is our preaching vain, and your faith is
+also vain" (1 Corinthians 15:14), and "if Christ be not raised, your faith is
+vain; ye are yet in your sins" (15:17). A Friday-only Christ leaves the boy
+exactly where the island left him: still in his sins, still in the circle, with
+no way home. Paul even named the theology of a Christ who never rises: "If in
+this life only we have hope in Christ, we are of all men most miserable"
+(15:19). That is the island's whole creed.
+
+The light on the water is beautiful, and it is not a resurrection. Beauty on
+the tide is not an empty tomb. Paul's answer is the one Golding never wrote:
+"But now is Christ risen from the dead, and become the firstfruits of them that
+slept" (15:20). "O death, where is thy sting? O grave, where is thy victory?"
+(15:55).
+
+Put a Christ-figure in the story and stop on Friday, and you have not told a boy
+about Jesus. You have told him Jesus lost.
+
+## The objection: "Marvel made villains Black too"
+
+A critic will answer the casting table the same way. What about Marvel? Nick
+Fury was a white man in the comics, and Samuel L. Jackson made him Black. Electro
+was white, and Jamie Foxx played him. Kang was white, and Jonathan Majors played
+him. Villains get recast too, so why complain?
+
+Look at what that answer does. It hands you two boxes and tells you to pick one.
+Either the pattern holds in every case, or there is no pattern. Either you object
+to every recast, or you have no right to object to any. That is black-and-white
+logic, and life does not work that way.
+
+A pattern is not a law. It is a tendency, a current that runs one way even when
+a few pieces float the other. A Scheme works the same way at the table. The city
+does not fill on every turn, and a Scheme twist does not come every round, but
+the Scheme advances all the same. A player who points to one quiet turn and says
+"see, there is no Scheme" is about to lose the game. And the counterexamples
+fall mostly outside the stories this essay is about: comic-book spectacle, not
+the fairy tales, the children's classics, and the founding stories where a
+ninth-grade boy meets his heroes. One of them, Nick Fury, is not even a villain.
+He is a hero recast, which is the pattern itself.
+
+The essay's complaint was never "race-swapping is wrong," and it was never
+"a Black actor should not play a villain." The complaint is one measure for
+everyone: "all are alike unto God" (2 Nephi 26:33). If Kang can be recast, so
+can Jack. If Ralph can be recast, so can Jack. What the critic's two boxes hide
+is the one-way valve. The two-box logic is the circle all over again: pick a
+side, hit back, pass it along. The way out is not a better box. It is one
+measure, applied the same way to every boy on the island.
+
 ## The whole story, beginning to end
 
 Here is the whole essay in one place. Every story has a beginning, a middle,
