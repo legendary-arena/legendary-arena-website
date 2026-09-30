@@ -992,7 +992,11 @@ many American public schools opened the day with prayer and read from the Bible,
 and the Supreme Court never read his letter to forbid it. That reading came from
 the Court in 1962 and 1963.
 
+<div style="max-width: 360px; margin: 1rem auto;">
+
 {{< youtube id="33tEw6c_UXM" loading="lazy" title="This Is Never What Separation of Church and State Meant" >}}
+
+</div>
 
 *Matt Walsh, ["This Is Never What Separation of Church and State Meant"](https://youtu.be/33tEw6c_UXM) (Matt Walsh Clips).*
 
