@@ -98,7 +98,7 @@ fear is not out in the jungle but inside them. Then Simon runs down the
 mountain to tell the others the truth, and the tribe, dancing and chanting in
 the storm, kills him before he can say it.
 
-<img width="360" style="margin: 1rem auto;" src="/images/blog/the-head-on-the-stick/simon-pig-head-1990.webp" alt="A fair-haired boy stares in shock beside a pig's head on a stick, its mouth open and flies on its snout" loading="lazy">
+<img width="360" style="margin: 1rem auto;" src="/images/blog/the-head-on-the-stick/simon-pig-head-1990.webp" alt="A fair-haired boy stares in shock beside a dark pig's head on a stick, its mouth hanging open" loading="lazy">
 
 *Simon faces the Lord of the Flies, in the 1990 film.*
 
