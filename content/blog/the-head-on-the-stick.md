@@ -28,6 +28,9 @@ President Russell M. Nelson's October 2022 general conference address,
 > Jesus Christ. But yoking yourself with the Savior means you have access to
 > *His* strength and redeeming power."
 
+A required book either helps a boy find that power or it trains him to live as if
+it were not there.
+
 ## In brief
 
 *Lord of the Flies* is one of the most honored novels in the English language.
