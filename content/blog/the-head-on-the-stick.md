@@ -454,7 +454,7 @@ record shows since 2015:
 | Year | Production | Made for | Character | How the source describes the character | Cast as | The villain, as cast |
 |---|---|---|---|---|---|---|
 | 2015 | *Fantastic Four* | 20th Century Fox | Johnny Storm | Blond, blue-eyed in the comics | Michael B. Jordan | Doctor Doom: Toby Kebbell, white |
-| 2015 | *Hamilton* (stage) | Broadway | The Founding Fathers | Historical white Americans | Actors of color | King George III: Jonathan Groff, white |
+| 2015 | *Hamilton* (stage) | Broadway | The Founding Fathers | Historical white Americans | Actors of color | King George III: played by a white actor |
 | 2016 | *Harry Potter and the Cursed Child* (stage) | West End | Hermione Granger | "Bushy brown hair"; played white in all eight films | Noma Dumezweni | — |
 | 2019 | *The Personal History of David Copperfield* | FilmNation, Film4 | David Copperfield | Dickens's Victorian English boy | Dev Patel | Uriah Heep: Ben Whishaw, white |
 | 2023 | *The Little Mermaid* | Disney | Ariel | Andersen: skin "clear and delicate as a rose-leaf"; red-haired in Disney's 1989 film | Halle Bailey | Ursula: Melissa McCarthy, white |
