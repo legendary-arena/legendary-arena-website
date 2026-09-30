@@ -433,12 +433,28 @@ verse and the road home are still missing.
 
 ## The same double standard, twice
 
-The casting was not the only place this essay ran into that double standard. It
-ran into it in the drafting, too.
+Start with how Golding wrote the two boys. Ralph is "the boy with fair hair,"
+broad in the shoulders, with "a mildness about his mouth and eyes that
+proclaimed no devil." Jack, the head chorister, is tall, thin, and bony, "and
+his hair was red beneath the black cap." Golding gave the boy who keeps the
+conch and the fire fair hair and a face with no devil in it.
 
-This essay was written with Claude, the same AI assistant that cut the father's
-run. When the casting came up, Claude described Ralph's race-swap plainly and
-without hesitation. Then the author connected Jack's painted face to what Moses
+The 2026 BBC and Netflix series cast Ralph with Winston Sawyers, whose father is
+the Black American actor Parker Sawyers. It cast Jack with Lox Pratt, a white
+boy with blond hair. The fair-haired boy whose face "proclaimed no devil" was
+race-swapped. The boy who leads the hunt and the killing stayed white. If the
+casting were truly color-blind, Jack could have been recast just as easily.
+Nobody would have dared, because a Black villain would have been called a
+stereotype, while a white villain draws no comment at all. That is the first
+double standard: one group is guarded, and the other is left exposed.
+
+This essay ran into the same double standard a second time, in its own
+drafting.
+
+It was written with Claude, the same AI assistant that cut the father's run.
+When the casting came up, Claude wrote the facts above plainly and without
+hesitation: a white boy cast as the villain, a Black boy cast as the hero. Then
+the author connected Jack's painted face to what Moses
 and the Book of Mormon say about Cain's mark and the Lamanites' skin. Claude's
 first move was not to quote the scriptures. It warned that the passage "would
 read as a racial claim" and give critics an easy way to dismiss the whole essay,
@@ -453,12 +469,12 @@ already called it hedging and set it aside, it offered to add the statement back
 into the essay. The author had to tell it plainly: leave it out. It could not
 drop it on its own.
 
-Same subject, two standards. A white boy cast as the villain was described
-without a second thought. Scripture about dark skin was treated as dangerous
-ground, something to steer the author around. One group's portrayal was fair
-game, and the other's was guarded. That is not treating men as equal. It is the
-same reflex as the casting: guard one group, leave the other exposed, and call
-the imbalance sensitivity.
+Same subject, two standards. A fair-haired hero recast as Black, and a white boy
+kept as the villain, were written up without a second thought. Scripture about
+dark skin was treated as dangerous ground, something to steer the author around.
+One group's portrayal was fair game, and the other's was guarded. That is not
+treating men as equal. It is the same reflex as the casting: guard one group,
+leave the other exposed, and call the imbalance sensitivity.
 
 The standard both the casting and the assistant missed is already written down:
 "he denieth none that come unto him, black and white, bond and free, male and
