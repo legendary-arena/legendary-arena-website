@@ -448,11 +448,11 @@ Nobody would have dared, because a Black villain would have been called a
 stereotype, while a white villain draws no comment at all. That is the first
 double standard: one group is guarded, and the other is left exposed.
 
-![Winston Sawyers as Ralph: a boy with dark curly hair in a dirty school shirt, standing on the beach beside sharpened stakes](/images/blog/the-head-on-the-stick/ralph-winston-sawyers.webp)
+<img width="360" style="margin: 1rem auto;" src="/images/blog/the-head-on-the-stick/ralph-winston-sawyers.webp" alt="Winston Sawyers as Ralph: a boy with dark curly hair in a dirty school shirt, standing on the beach beside sharpened stakes" loading="lazy">
 
 *Ralph, "the boy with fair hair," as the 2026 series cast him: Winston Sawyers. (BBC)*
 
-![Lox Pratt as Jack: a blond boy in the forest, his face painted white with dark rings around the eyes and blood running down his neck](/images/blog/the-head-on-the-stick/jack-lox-pratt.webp)
+<img width="360" style="margin: 1rem auto;" src="/images/blog/the-head-on-the-stick/jack-lox-pratt.webp" alt="Lox Pratt as Jack: a blond boy in the forest, his face painted white with dark rings around the eyes and blood running down his neck" loading="lazy">
 
 *Jack, the red-haired head chorister, as the 2026 series cast him: Lox Pratt, painted for the hunt. (BBC)*
 
