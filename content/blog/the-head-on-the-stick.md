@@ -726,6 +726,52 @@ the circle, and even if you believe Jesus will save you, He is too weak.* That
 is not the gospel. It is Friday without Sunday. Satan's best argument was never
 a lie about the cross. It is a story that stops before the tomb is empty.
 
+## The wrong focus
+
+Even a story that tells Friday truthfully can point the eye the wrong way. *The
+Passion of the Christ* (2004) showed the scourging and the cross in unsparing
+detail. What Jesus suffered was real. But a story that dwells only on the pain
+can miss the point, the same way the pigsty is true and still not the point of
+the prodigal.
+
+A few weeks after that film opened, Elder M. Russell Ballard answered the public
+commentary, without naming the film, in his April 2004 general conference
+address, "[The Atonement and the Value of One Soul](https://www.churchofjesuschrist.org/study/general-conference/2004/04/the-atonement-and-the-value-of-one-soul?lang=eng)":
+
+> "The Savior later endured the agony of inquisition, cruel beatings, and death
+> by crucifixion on the cross at Calvary. Recently there has been a great deal of
+> commentary about this, none of which has made clear the singular point that no
+> one had the power to take the Savior's life from Him. He gave it as a ransom
+> for us all. As the Son of God, He had the power to alter the situation. Yet the
+> scriptures clearly state that He yielded Himself to scourging, humiliation,
+> suffering, and finally crucifixion because of His great love toward the
+> children of men (see 1 Nephi 19:9–10)."
+
+The missing piece is not more footage of pain. It is the *why*. Jesus said it
+Himself: "No man taketh it from me, but I lay it down of myself. I have power to
+lay it down, and I have power to take it again" (John 10:18). Nephi saw the same
+thing six centuries earlier: "they scourge him, and he suffereth it; and they
+smite him, and he suffereth it. Yea, they spit upon him, and he suffereth it,
+because of his loving kindness and his long-suffering towards the children of
+men" (1 Nephi 19:9).
+
+That is the difference between Simon and the Savior. Simon is overpowered by the
+circle. Christ is not overpowered by anyone. He lays His life down out of love,
+and He takes it again.
+
+The night before the cross, Jesus gave His disciples a picture for exactly this,
+and it was a mother giving birth: "A woman when she is in travail hath sorrow,
+because her hour is come: but as soon as she is delivered of the child, she
+remembereth no more the anguish, for joy that a man is born into the world"
+(John 16:21). The labor is real. No mother pretends it was not. But a mother who
+remembered only the pain would have missed the child in her arms. "Ye now
+therefore have sorrow: but I will see you again, and your heart shall rejoice,
+and your joy no man taketh from you" (16:22).
+
+The pigsty, the scourging, the labor. All three are true, and none of them is
+the point. The point is the son coming home, the tomb standing empty, and the
+child in his mother's arms.
+
 ## The objection: "Simon is Christ"
 
 A critic will answer everything above in one line: there *is* a Christ in the
