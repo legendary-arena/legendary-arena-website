@@ -402,7 +402,8 @@ story means*, and two choices stand out.
 The first is the casting. Golding introduces Ralph as "the boy with fair hair"
 and gives Jack red hair under his choir cap. The series race-swaps Ralph: the
 boy who keeps the conch, the rules, and the signal fire is played by Winston
-Sawyers, son of the Black American actor Parker Sawyers. The villain was not
+Sawyers, son of the Black American actor Parker Sawyers and a Lithuanian mother.
+The villain was not
 swapped. Jack, the head chorister who marches the choir onto the beach in their
 black cloaks and turns it into a hunting tribe, is played by Lox Pratt, a white
 boy with blond hair. The one role recast is the boy who stands for order. The
@@ -444,7 +445,7 @@ his hair was red beneath the black cap." Golding gave the boy who keeps the
 conch and the fire fair hair and a face with no devil in it.
 
 The 2026 BBC and Netflix series cast Ralph with Winston Sawyers, whose father is
-the Black American actor Parker Sawyers. It cast Jack with Lox Pratt, a white
+the Black American actor Parker Sawyers and whose mother is Lithuanian. It cast Jack with Lox Pratt, a white
 boy with blond hair. The fair-haired boy whose face "proclaimed no devil" was
 race-swapped. The boy who leads the hunt and the killing stayed white. If the
 casting were truly color-blind, Jack could have been recast just as easily.
@@ -473,7 +474,7 @@ record shows since 2015:
 | 2023 | *Peter Pan & Wendy* | Disney | Tinker Bell | Blonde in Disney's own 1953 film | Yara Shahidi | Captain Hook: Jude Law, white |
 | 2023 | *Percy Jackson and the Olympians* | Disney+ | Annabeth Chase | "Curly blond hair," gray eyes | Leah Sava Jeffries | — |
 | 2023 | *Queen Cleopatra* | Netflix | Cleopatra VII | Egypt's antiquities ministry: "light skin and Hellenistic (Greek) features" | Adele James | — |
-| 2025 | *Captain America: Brave New World* | Marvel Studios (Disney) | Captain America | Steve Rogers: blond, blue-eyed | Anthony Mackie, as Sam Wilson, the former Falcon, handed the shield | Red Hulk: Harrison Ford, white |
+| 2025 | *Captain America: Brave New World* | Marvel Studios (Disney) | Captain America | Steve Rogers: blond, blue-eyed | Anthony Mackie, as Sam Wilson, the former Falcon, handed the shield | The Leader: Tim Blake Nelson, white |
 | 2025 | *Snow White* | Disney | Snow White | Skin "white as snow"; the film renamed her for a snowstorm instead | Rachel Zegler | The Evil Queen: Gal Gadot, white |
 | 2025 | *The Fantastic Four: First Steps* | Marvel Studios (Disney) | The Silver Surfer | Norrin Radd, a man in the comics | Julia Garner, the role given to a woman | Galactus: Ralph Ineson, white |
 | 2026 | *Harry Potter* (HBO, premieres December) | HBO | Severus Snape | "Sallow skin" | Paapa Essiedu | — |
