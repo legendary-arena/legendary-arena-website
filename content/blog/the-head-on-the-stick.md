@@ -32,7 +32,7 @@ Since then it has collected nearly every honor a novel can:
 - **Exam boards** still set it, and generation after generation of
   ninth-graders still reads it.
 
-![William Golding, white-haired and bearded, in a morning coat, holding open the case with the insignia of his knighthood, standing between two women in summer hats](/images/blog/the-head-on-the-stick/golding-knighted-1988.webp)
+<img width="320" style="margin: 1rem auto;" src="/images/blog/the-head-on-the-stick/golding-knighted-1988.webp" alt="William Golding, white-haired and bearded, in a morning coat, holding open the case with the insignia of his knighthood, standing between two women in summer hats" loading="lazy">
 
 *Sir William Golding with the insignia of his knighthood, 1988.*
 
