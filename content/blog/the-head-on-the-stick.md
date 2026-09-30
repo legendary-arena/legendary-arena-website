@@ -766,6 +766,35 @@ is the one-way valve. The two-box logic is the circle all over again: pick a
 side, hit back, pass it along. The way out is not a better box. It is one
 measure, applied the same way to every boy on the island.
 
+## The objection: "Jack's fire saved them"
+
+Some readers take the two fires the other way. A
+[ScreenRant preview of the BBC series](https://screenrant.com/bbc-lord-of-the-flies-tv-show-get-right-book/)
+put it this way: "Jack's animalistic destruction got the boys all saved." It
+called the ending hopeful and nihilistic at the same time, full of profound
+ambivalence and deeper meaning.
+
+Follow that logic anywhere else and it falls apart.
+
+- A boy tries to take his own life and survives. The ambulance comes, and he
+  wakes up in the hospital. No one standing at his bedside says, "See, it all
+  worked out."
+- In the pass-it-along circle, one punch lands so hard that a boy is knocked out
+  cold. The school nurse comes running, and the game stops. No one says, "Jack
+  almost killed him, but it saved us. It stopped the game."
+
+Harm that brings help is still harm. The help came in spite of the fire, not
+because of it. The nurse came for the boy on the ground, and the ship came for
+an island in flames. Neither one came because anyone turned. And even then, no
+one was taken home. The officer collected the boys onto a warship, into a
+grown-up war.
+
+The parable has hard times in it too. The famine drove the prodigal to the end
+of himself. But the famine did not save him. He came to himself, he turned, and
+his father ran. On the island, the fire changed no one. It only drew a ship to
+the wreckage. Calling that hopeful is the head on the stick's last trick: make
+the disaster look like the rescue, so no one ever looks for the road home.
+
 ## The whole story, beginning to end
 
 Here is the whole essay in one place. Every story has a beginning, a middle,
