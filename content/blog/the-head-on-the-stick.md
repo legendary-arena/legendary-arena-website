@@ -987,7 +987,10 @@ the Supreme Court took Jefferson's phrase and declared that the wall must be kep
 "high and impregnable." In [1962](https://constitutioncenter.org/the-constitution/supreme-court-case-library/engel-v-vitale)
 it turned that wall on school prayer, and in 1963 on school Bible reading. A
 wall meant to keep the government out of the church now keeps the Father out of
-the classroom.
+the classroom. For a hundred and sixty years after Jefferson wrote his letter,
+many American public schools opened the day with prayer and read from the Bible,
+and the Supreme Court never read his letter to forbid it. That reading came from
+the Court in 1962 and 1963.
 
 {{< youtube id="33tEw6c_UXM" loading="lazy" title="This Is Never What Separation of Church and State Meant" >}}
 
