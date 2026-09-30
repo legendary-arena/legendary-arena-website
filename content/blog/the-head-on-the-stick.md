@@ -960,6 +960,38 @@ In Oklahoma, a 2024 order to put Bibles in classrooms was
 after the superintendent who issued it resigned. Meanwhile *Lord of the Flies*
 has sat in the book room for seventy-two years without a fight.
 
+Ask why, and the book room gives seven reasons. Run each one against Luke 15
+and see which survive.
+
+| Why the book room keeps Golding | The same test on scripture | What the test shows |
+|---|---|---|
+| **Already bought.** Class sets, mark schemes, and past papers are on the shelf. | [Most American homes](https://www.americanbible.org/news/articles/most-americans-own-a-bible-so-why-arent-they-reading-it/) already own a Bible, and there is one in nearly every hotel drawer. Luke 15 is in the public domain. Nothing has to be ordered. | The cheaper, more common book is already in the house. It is not chosen. |
+| **Short and teachable.** About 200 pages; the conch, the fire, the paint, the head. | The Prodigal Son is a single page, with the lost sheep and the lost coin beside it. A boy can carry the whole story in his head. | Length is not the filter. The parable is shorter and just as rich in symbols. |
+| **Official prestige.** The Nobel, *Time*, the Modern Library, a knighthood. | Scripture's standing is older and wider than any prize, and it is treated as the problem. | This is the "experts say" dodge: the committee's honors outrank the parent, the teacher, and the counselor. A Nobel does not make a missing Father into literature. |
+| **Fits the secular syllabus.** After *Schempp*, the Fall may be taught as "human nature." A living Father may not be taught as the lesson. | *Schempp* itself allows the Bible to be studied as literature. The Prodigal Son can be set the same way Golding is. | "Secular" is sold as a neutral, empty room. It works as a room with one thing carried out: Christ. Golding's omissions count as art; the repair counts as preaching. |
+| **Produces writable answers.** Conflict, symbol, irony, and a last paragraph for every essay. | Luke 15 has a beginning, a turn, and an end. So do Joseph, Alma, and the cross and the empty tomb. | Almost any serious book produces essays. Writability does not prefer a closed island to a father on the road. |
+| **Teachers were assigned it.** The people who choose the list read it as children. | They were never assigned Luke 15 as the required text. | "We did it before, so we can't change" is the opposite of teaching a boy he can leave the island. |
+| **Treated as a warning.** Without rules, we become the hunters. | Scripture warns too: the far country, the pigsty, the natural man (Mosiah 3:19). And then it opens the door: he came to himself, and his father ran. | Golding's warning lands as a sentence: you are the violence, the circle never breaks, no one is coming. A warning with no way home is not a warning. The Bible's is better because it is not the last word. |
+
+Only two of the seven survive the test: the prestige and the "secular" filing
+rule. The rest fail the moment Luke 15 is set on the same desk.
+
+And the rule is younger than people think. The words "separation of church and
+state" are not in the Constitution. They come from a letter Thomas Jefferson
+wrote in 1802 to the
+[Danbury Baptists](https://billofrightsinstitute.org/primary-sources/danburybaptists/),
+a religious minority in Connecticut, assuring them that the government would not
+interfere with their faith. The wall was built to protect the church from the
+state. In [1947](https://firstamendment.mtsu.edu/article/everson-v-board-of-education/)
+the Supreme Court took Jefferson's phrase and declared that the wall must be kept
+"high and impregnable." In [1962](https://constitutioncenter.org/the-constitution/supreme-court-case-library/engel-v-vitale)
+it turned that wall on school prayer, and in 1963 on school Bible reading. A
+wall meant to keep the government out of the church now keeps the Father out of
+the classroom.
+
+The book room kept Golding because it was easy, and because the repair was
+labeled religion. The Bible was already in the house.
+
 The committees have defined Golding's omissions as neutral and the repair as
 religious. Family, God, and the grown-up who is not at war are treated as
 private beliefs. The pigsty is treated as public knowledge. So the leaders who
