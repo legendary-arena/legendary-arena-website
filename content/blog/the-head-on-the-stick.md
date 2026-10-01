@@ -208,6 +208,46 @@ That is the promise the game makes before anyone draws a card, and it's the
 same promise every honest rule makes: the system you face can be beaten by the
 people who face it. The head on the stick says otherwise. The head is lying.
 
+## Legion
+
+The head's lie has been told before, and it has been answered.
+
+Mark tells of a man who lived among the tombs (Mark 5:2). He "ware no clothes,
+neither abode in any house" (Luke 8:27). "No man could bind him, no, not with
+chains" (Mark 5:3). The chains were plucked apart and the fetters broken in
+pieces, "neither could any man tame him" (5:4). "And always, night and day, he
+was in the mountains, and in the tombs, crying, and cutting himself with stones"
+(5:5). Every human remedy had failed. Everything the head tells Simon looked
+true of this man: no one could help him, the thing inside him was stronger than
+he was, and there was no way out.
+
+Then Jesus came. "But when he saw Jesus afar off, he ran and worshipped him"
+(5:6). The spirit gave its name: "My name is Legion: for we are many" (5:9).
+Notice that it speaks in the plural. So does Golding's head: "we shall do you."
+The lie never speaks for itself alone. It speaks for the crowd.
+
+Christ cast them out, and the devils begged to be sent into a herd of swine
+feeding nearby. "And the unclean spirits went out, and entered into the swine:
+and the herd ran violently down a steep place into the sea, (they were about two
+thousand;) and were choked in the sea" (5:13). On Golding's island, a pig's head
+rules the boys. In Mark, the devils go into the pigs, and the pigs go into the
+sea. Two thousand swine could not stand against one word from Christ.
+
+Now measure Golding's Christ-figure against that. One pig's head on one stick is
+enough to master Simon. He stands before it, faints, and falls into its mouth.
+The Christ of the gospels did not faint before one pig. He commanded a legion,
+and two thousand swine went into the sea. Golding's Simon is ruled by one pig.
+Jesus ruled two thousand.
+
+And look where the man ends. The townspeople came and found him "sitting at the
+feet of Jesus, clothed, and in his right mind" (Luke 8:35). He asked to go with
+Jesus. Instead, Jesus sent him home: "Go home to thy friends, and tell them how
+great things the Lord hath done for thee, and hath had compassion on thee" (Mark
+5:19). *Home*, and *compassion*, the same word Luke uses for the father on the
+road. The man among the tombs ran to Christ from afar off. The father ran to his
+son from a great way off. Either way, someone was running, and the head was
+lying.
+
 ## The first verse
 
 Jesus told a story about a pigsty too, and He did not begin it in the pigsty.
