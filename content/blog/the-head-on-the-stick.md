@@ -1249,13 +1249,22 @@ belongs to daughters as fully as to sons. Paul wrote "the children of God"
 holds only boys, and because a father wrote it. Every daughter is a child of God
 too, and her Father is on the same road.
 
-**On the casting: the history is real, and both boys are in the room.** That is
-true, and saying it costs this essay nothing. But notice what the defense
-concedes. It does not deny the asymmetry. It calls it a "correction," which
-means it is deliberate. Moving the flinch from one boy to the other heals
-neither of them. The answer this essay gives is the one it gave before: one
-measure for everyone, "all are alike unto God" (2 Nephi 26:33). No boy is the
-villain by nature, and no boy should be taught that he is.
+**On the casting: the issue is not who gets to be the hero. It is rewriting a
+story that already exists.** No one objects to a new story with a Black hero.
+Write it, and let it stand on its own. The objection is to taking a story that
+already exists, written seventy years ago with a fair-haired boy at its center,
+and changing it to carry a message its author never wrote. Golding wrote Ralph
+as "the boy with fair hair." The series kept his ending almost word for word and
+changed the boy. That is not representation. It is revision. And the
+"correction" defense concedes the point: it admits the change was deliberate,
+made to send a message of its own. If the films of the past failed some
+children, the remedy is new stories, not rewritten old ones.
+
+This is the same complaint this whole essay makes. The parable cut off at Luke
+15:16. The syllabus that keeps Golding's diagnosis and drops the theology that
+named it. Simon given a new inner life the book never gave him. Each one takes a
+story that already exists and quietly changes it to say something else. Recasting
+Ralph is the same move, made with a camera.
 
 **On the structural and the spiritual: both can be true.** This essay names the
 benefits cliff as a problem built into rules, not people, and nothing here argues
