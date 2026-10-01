@@ -1022,7 +1022,7 @@ does not fill on every turn, and a Scheme twist does not come every round, but
 the Scheme advances all the same. A player who points to one quiet turn and says
 "see, there is no Scheme" is about to lose the game. The counterexamples show
 where the current bends. Comic books run both ways: Marvel has recast heroes and
-villains alike, including the three heroes in the table above. The children's
+villains alike, including the three heroes in [the table above](#the-same-double-standard-twice). The children's
 canon runs one way: the fairy tales, the children's classics, and the founding
 stories where a ninth-grade boy meets his heroes. That is the ground this essay
 is about. And one of the critic's own examples, Nick Fury, is not even a
@@ -1038,7 +1038,7 @@ measure, applied the same way to every boy on the island.
 
 ## The objection: "Jack's fire saved them"
 
-Some readers take the two fires the other way. A
+Some readers take [the two fires](#what-the-head-says) the other way. A
 [ScreenRant preview of the BBC series](https://screenrant.com/bbc-lord-of-the-flies-tv-show-get-right-book/)
 put it this way: "Jack's animalistic destruction got the boys all saved." It
 called the ending hopeful and nihilistic at the same time, full of profound
@@ -1239,14 +1239,14 @@ road home, assign the road home beside the pigsty and let her argue."
 ### Commentary
 
 **On the faith that failed: yes, and that is the point.** The choir arrives
-wearing the cross and becomes the hunting tribe. This essay already says so:
+wearing the cross and becomes the hunting tribe. [This essay already says so](#the-forbidden-experiment):
 Golding kept the costume of the faith and removed the faith. Formation without
 faith is the problem Abinadi named in King Noah's priests. Formation alone was
 never going to put off the natural man. King Benjamin says how that happens:
 "through the atonement of Christ the Lord" (Mosiah 3:19). The choir's failure is
 not evidence against the road home. It is the reason the road home matters.
 
-**On the girls in the room: fair, and easily answered.** The first verse
+**On the girls in the room: fair, and easily answered.** [The first verse](#the-first-verse)
 belongs to daughters as fully as to sons. Paul wrote "the children of God"
 (Romans 8:16), not the sons. This essay speaks of sons because Golding's island
 holds only boys, and because a father wrote it. Every daughter is a child of God
@@ -1261,11 +1261,13 @@ as "the boy with fair hair." The series kept his ending almost word for word and
 changed the boy. That is not representation. It is revision. And the
 "correction" defense concedes the point: it admits the change was deliberate,
 made to send a message of its own. If the films of the past failed some
-children, the remedy is new stories, not rewritten old ones.
+children, the remedy is new stories, not rewritten old ones. And if a studio
+rewrites the story anyway, the measure is the same for both boys: [if Ralph can be
+recast, so can Jack](#the-objection-marvel-made-villains-black-too).
 
-This is the same complaint this whole essay makes. The parable cut off at Luke
-15:16. The syllabus that keeps Golding's diagnosis and drops the theology that
-named it. Simon given a new inner life the book never gave him. Each one takes a
+This is the same complaint this whole essay makes. [The parable cut off at Luke
+15:16](#the-pigsty). [The syllabus](#why-the-book-room-keeps-the-pigsty) that keeps Golding's diagnosis and drops the theology that
+named it. [Simon given a new inner life](#seventy-two-years-later) the book never gave him. Each one takes a
 story that already exists and quietly changes it to say something else. Recasting
 Ralph is the same move, made with a camera.
 
@@ -1275,21 +1277,21 @@ hero who looked like him, and the Jewish girl in the second row. Neither of them
 said what she puts in their mouths. She speaks for them, and she uses them to
 justify treating a different child by the color of his skin: the white boy
 whose hero was recast and whose villain was kept. Treating one boy by his race
-to make up for others is still treating a boy by his race. The move has a name
-in the Mastermind's playbook. It is the oldest cover a liar has: *yes, I bent
+to make up for others is still treating a boy by his race. The move is the
+oldest cover in the Mastermind's playbook: *yes, I bent
 the truth, but only to expose a bigger lie.* A claim of good purpose is always
 the first thing offered, and it never settles whether the thing itself was
 right. The test is the same one this essay has used all along, one measure for
 every child, and the Professor's defense does not pass it.
 
-**On the structural and the spiritual: both can be true.** This essay names the
-benefits cliff as a problem built into rules, not people, and nothing here argues
+**On the structural and the spiritual: both can be true.** This essay [names the
+benefits cliff](#every-pigsty-tells-the-same-lie) as a problem built into rules, not people, and nothing here argues
 against fixing the rule. What it adds is who runs the last part of the road:
 family, close enough to help. Fix the rule, and have someone running.
 
 **On Walsh: attack the argument, not the man.** Dismissing a witness by his
-reputation instead of answering his claim is the first move in the head's own
-playbook: shame the witness. And the argument about Jefferson's letter and the
+reputation instead of answering his claim is the first move in [the head's own
+playbook](#what-the-head-says): shame the witness. And [the argument about Jefferson's letter](#why-the-book-room-keeps-the-pigsty) and the
 Court's rulings in 1962 and 1963 is Walsh's argument. It is the title of his
 video. On the prayer: this essay's concrete ask for the classroom is not a
 prayer. It is the Prodigal Son, assigned as literature, which the Supreme Court
@@ -1297,15 +1299,16 @@ has always allowed.
 
 #### What the Professor confessed
 
-Read closely, the Professor's objection confesses more than it refutes. She
-admits the double standard is deliberate, and she calls the book room's choice
+Read closely, the Professor's objection confesses more than it refutes. She is a
+voice, not a person, so these are not one woman's confessions. They are what
+this argument concedes, whoever makes it. She admits the double standard is deliberate, and she calls the book room's choice
 "a failure of nerve." She also gives away nine more things, each in her own
 words:
 
 1. **Who the correction is aimed at.** "Color-blindness was the slogan of the
    unmarked category, which was white, male, and Christian." She names the
-   target herself: the same ninth-grade white boy who goes to church that this
-   essay named.
+   category the correction is aimed at: white, male, and Christian. That is the
+   boy [this essay named](#the-same-double-standard-twice), the ninth-grade white boy who goes to church.
 2. **What reading is for.** She spends her energy on "the causes that department
    taught her to treat as the point of reading," then faults this essay for
    treating the novel as "a delivery system." Her department already uses books
@@ -1317,26 +1320,27 @@ words:
    before I had the rank to stop saying it, and the Jewish girl in the second
    row is the reason I stopped." The decision was hers, made the moment she had
    the rank. The girl is the reason offered.
-5. **The classroom teaches the choir as the killer.** Simon, she says, "is also
-   killed by the hymn." That is exactly what the churchgoing boy in this essay's
-   table takes away: the church boys are the violent ones.
+5. **The choir as the killer.** Simon, she says, "is also killed by the hymn."
+   That is exactly the reading [this essay's table](#the-whole-story-beginning-to-end) predicts a churchgoing boy
+   will take away: the church boys are the violent ones.
 6. **Compassion assigned by group.** "Your compassion runs toward the child whose
    image was the assumption. Mine has to run toward the child whose image was
    the exception." She chooses which child receives her compassion by his group.
    That is the opposite of one measure.
 7. **The institution as the answer.** This essay, she says, turns a structural
-   problem into a spiritual one "so that nobody has to fund the bridge." Her
-   remedy is a funded program. This essay's is a father running.
+   problem into a spiritual one "so that nobody has to fund the bridge." The
+   answer she reaches for is the institution's money. This essay's is a father
+   running.
 8. **The classroom is hers to fill.** She faults Walsh for telling students
    "what their classrooms are allowed to contain." She speaks as the one who
    decides what they contain, which is the book room this essay describes.
 9. **The fair-haired boy flinched too.** "We know which child flinched, and it
-   was not only him." She concedes the white boy was hurt by the casting, and
-   tells him not to call it an injury.
+   was not only him." She concedes the white boy was hurt by the casting too,
+   and tells him it was not the real injury.
 
 **On her conclusion: it is this essay's conclusion.** "Assign the road home
 beside the pigsty and let her argue" is exactly the case this essay makes: it is
-allowed, and it is simply not chosen. She also calls the book room's habit "a
+[allowed, and it is simply not chosen](#why-the-book-room-keeps-the-pigsty). She also calls the book room's habit "a
 failure of nerve," a way to talk about cruelty "without having to take a vote on
 God." That is this essay's case, made from the other side of the room. The
 strongest objection anyone brought ends where the essay ends. Put Luke 15 on the
