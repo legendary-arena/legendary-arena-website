@@ -9,6 +9,17 @@ series: "The Soul of Legendary Arena"
 cta: "play"
 ---
 
+## The premise
+
+A secular literary reading usually sums up the book this way: *Lord of the
+Flies* is about what happens when civilization breaks down and human beings are
+left to themselves.
+
+Watch that phrase, "left to themselves," because it is the one this essay takes
+apart. Golding did not leave the boys to themselves. He took away their
+parents, their faith, and every grown-up who could raise them, and then he left
+them with a devil on a stick.
+
 ## The test
 
 Hold the book up to one question before anything else:
