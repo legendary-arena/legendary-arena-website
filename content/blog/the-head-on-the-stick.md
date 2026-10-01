@@ -8,7 +8,6 @@ categories: ["soul-of-legendary-arena"]
 series: "The Soul of Legendary Arena"
 cta: "play"
 ---
-
 ## The premise
 
 A secular literary reading usually sums up the book this way: *Lord of the
@@ -77,28 +76,9 @@ Since then it has collected nearly every honor a novel can:
 
 *Sir William Golding with the insignia of his knighthood, 1988.*
 
-The prize everyone cites was fought over inside the room. Hours after the 1983
-announcement, one of the Swedish Academy's own judges, Artur Lundkvist, broke
-the Academy's rule of silence and
-[called Golding](https://www.upi.com/Archives/1983/10/06/William-Golding-whose-novel-Lord-of-the-Flies-depicted/8476434260800/)
-"a small English phenomenon of no great interest." According to an anonymous
-source in the Academy, it took two rounds of voting before Golding narrowly won.
-And why he won is not public. The Nobel Foundation
-[seals its nominations and deliberations](https://www.nobelprize.org/nomination/literature/)
-for fifty years, so the record of that choice stays shut until 2034.
-
-Compare that with an American courtroom. A jury deliberates in private, and so
-do the Justices of the Supreme Court. But a court cannot simply announce a
-result. Judges must publish a written opinion that explains their reasoning, and
-any judge who disagrees can publish a dissent beside it. Anyone can read exactly
-why *Engel* and *Schempp* came out the way they did, and who objected. The Nobel
-works the other way. It publishes a one-sentence citation, seals the reasoning
-for half a century, and treats a dissent as an offense. When Lundkvist spoke,
-the chairman of the Nobel literature committee, Lars Gyllensten,
-[answered him](https://www.upi.com/Archives/1983/10/07/Golding-hits-back-at-dissenting-Nobel-Prize-judge/2054437204703/):
-"He has broken our rules. We are not allowed to express our personal opinions."
-A court with a dissenting judge prints the dissent. The Academy called its
-dissenter a rule-breaker.
+The prize everyone cites was contested inside the room, and the record of why
+Golding won stays sealed until 2034. See
+[the note at the end](#note-the-sealed-prize).
 
 Every one of those honors is for the middle of a story. Golding tells the truth
 about the pigsty as well as anyone ever has: the fall, the far country, the
@@ -420,116 +400,10 @@ the message that you can get out of it, and that a Father is already running
 down the road to help you. He will use whatever tool is at hand to trim it. A
 rule, a mark scheme, a careful edit. Even this one.
 
-## Every pigsty tells the same lie
-
-The far country is not only the prodigal's. The lie that keeps a person there
-uses the same words wherever someone is stuck: *you can't leave, and no one is
-coming to help you.*
-
-Luke 15 does not answer it with one story. It answers with three. Before the
-son, Jesus tells of a lost sheep and a lost coin. The son walks home on his own
-feet. A sheep cannot find its way back, and a coin can do nothing at all. So
-the shepherd goes "after that which is lost, **until he find it**" (15:4), and
-"when he hath found it, he layeth it on his shoulders, rejoicing" (15:5). The
-woman lights a candle, sweeps the house, and seeks "diligently till she find
-it" (15:8). Some people leave the pigsty walking. Some are carried out. Neither
-is left there.
-
-**The abusive home.** A person in an abusive relationship did not choose the
-far country. They are the sheep, not the son. The abuser's first tool is
-isolation: cut off the family and the friends, then say it again and again
-that no one would believe you and no one will help. That is the head on the
-stick talking in someone's kitchen. People leave. It starts the way verse 17
-starts, with seeing the thing for what it is. Then someone has to run toward
-them, and it goes best with a plan and with people already committed to
-helping: family, friends, a ward or a congregation who will not look away.
-
-**The gang.** "Once you're in, you never get out" is the gang's own recruiting
-line, and the numbers say otherwise. A 2015 national study by David Pyrooz and
-Gary Sweeten
-[found](https://www.sciencedaily.com/releases/2015/02/150212131817.htm) that
-for most young people gang membership lasts a year or two. Roughly as many
-teenagers leave gangs each year as join them. Pyrooz called the belief that
-members cannot leave "patently false."
-
-**The addiction.** The addiction says you belong to it forever. A national
-study led by John Kelly in 2017
-[found](https://pubmed.ncbi.nlm.nih.gov/29055821/) that 9.1 percent of American
-adults, more than 22 million people, report having resolved a significant
-problem with alcohol or drugs. About half had help along the way, most often
-from mutual-help groups. About half did not. Millions have come home from that
-country.
-
-**The welfare office.** Here the lock is real, but it is built into rules, not
-people. Studying poverty spells, Mary Jo Bane and David Ellwood found that
-three in five people just beginning one were out within three years. The
-longer someone stays, though, the harder the exit gets, and the rules help keep
-them there. The Federal Reserve Bank of Atlanta
-[describes](https://www.atlantafed.org/what-we-study/workforce-development/advancing-careers-for-low-income-families/what-are-benefits-cliffs)
-the trap plainly: "career advancement may result in a family being financially
-worse off (a benefits cliff) or no better off (a benefits plateau) than before
-the wage increase." Take the raise, and you can lose more in benefits than you
-gained in pay. Nobody guards that door. The paperwork does. It is a soft lock,
-the kind [Check the Door](/blog/check-the-door/) teaches you to spot: leaving
-is not forbidden, only priced. People still climb out, and they climb out best
-the way the prodigal did: with a plan to get all the way over the cliff instead
-of to its edge, and with family close enough to run the last part of the road
-with them.
-
-**The great and spacious building.** Lehi saw a building that "stood as it were
-in the air, high above the earth," full of people whose "manner of dress was
-exceedingly fine," and "they were in the attitude of mocking and pointing their
-fingers" at those eating the fruit of the tree (1 Nephi 8:26–27). Its lock is
-not a chain. It is shame. People who had tasted the fruit "were ashamed,
-because of those that were scoffing at them; and they fell away into forbidden
-paths and were lost" (8:28). "For as many as heeded them, had fallen away"
-(8:34).
-
-Lehi's dream does not show anyone walking out of the building. It shows
-something better: the building cannot stand. It has no foundation. It hangs in
-the air. Nephi saw what it was and what became of it: "the great and spacious
-building was the pride of the world; and it fell, and the fall thereof was
-exceedingly great" (1 Nephi 11:36). The mockers look secure and are not. The
-only way not to fall with the building is to leave it, and the door has never
-been locked from the Lord's side: "he sendeth an invitation unto all men, for
-the arms of mercy are extended towards them, and he saith: Repent, and I will
-receive you" (Alma 5:33).
-
-## Too far, too long
-
-The head on the stick has one more version of the lie, for the person who has
-been in the far country a long time: *maybe others can come home, but you went
-too far, and you have been gone too long.*
-
-Scripture keeps telling the opposite story about exactly those people.
-
-Manasseh was the worst king Judah ever had. He "caused his children to pass
-through the fire," practiced witchcraft, and "made Judah and the inhabitants of
-Jerusalem to err, and to do worse than the heathen" (2 Chronicles 33:6, 9).
-The Assyrians took him "among the thorns, and bound him with fetters, and
-carried him to Babylon" (33:11). As far a country as a king of Judah could go.
-"And when he was in affliction, he besought the Lord his God, and humbled
-himself greatly," and the Lord "heard his supplication, and **brought him
-again to Jerusalem** into his kingdom" (33:12–13).
-
-Alma the Younger "became a very wicked and an idolatrous man" and went about
-"seeking to destroy the church" (Mosiah 27:8, 10). His own account of coming
-back: "**I was in the darkest abyss; but now I behold the marvelous light of
-God**" (27:29).
-
-The Lord puts the principle in one sentence through Isaiah: "though your sins
-be as scarlet, they shall be as white as snow" (Isaiah 1:18). Moroni records
-how often the door opens: "as oft as they repented and sought forgiveness,
-with real intent, they were forgiven" (Moroni 6:8).
-
-Scripture does name one people for whom "the day of grace was passed"
-(Mormon 2:15). The verse before it gives the reason, and the reason is not
-distance or time: "they did not come unto Jesus with broken hearts and
-contrite spirits, but they did curse God" (2:14). That door was locked from
-the inside. No one in scripture is kept from home because they went too far or
-stayed too long. The only person who cannot come home is the one who will not
-turn around. Manasseh turned in fetters in Babylon. Alma turned in the darkest
-abyss. The prodigal turned among the swine. The Father ran every time.
+*The same lie works off the island too: in the abusive home, the gang, the
+addiction, the welfare office's benefits cliff, and on the one who thinks he has
+gone too far to come home. See
+[Appendix A: The same lie off the island](#appendix-a-the-same-lie-off-the-island).*
 
 ## Seventy-two years later
 
@@ -583,122 +457,9 @@ warship offshore and no Father running down the road. The syllabus kept the
 pigsty, and so did the screen. Seventy-two years and a new cast, and the first
 verse and the road home are still missing.
 
-## The same double standard, twice
-
-Start with how Golding wrote the two boys. Ralph is "the boy with fair hair,"
-broad in the shoulders, with "a mildness about his mouth and eyes that
-proclaimed no devil." Jack, the head chorister, is tall, thin, and bony, "and
-his hair was red beneath the black cap." Golding gave the boy who keeps the
-conch and the fire fair hair and a face with no devil in it.
-
-The 2026 BBC and Netflix series cast Ralph with Winston Sawyers, whose father is
-the Black American actor Parker Sawyers and whose mother is Lithuanian. It cast Jack with Lox Pratt, a white
-boy with blond hair. The fair-haired boy whose face "proclaimed no devil" was
-race-swapped. The boy who leads the hunt and the killing stayed white. If the
-casting were truly color-blind, Jack could have been recast just as easily.
-Nobody would have dared, because a Black villain would have been called a
-stereotype, while a white villain draws no comment at all. That is the first
-double standard: one group is guarded, and the other is left exposed.
-
-<img width="360" style="margin: 1rem auto;" src="/images/blog/the-head-on-the-stick/ralph-winston-sawyers.webp" alt="Winston Sawyers as Ralph: a boy with dark curly hair in a dirty school shirt, standing on the beach beside sharpened stakes" loading="lazy">
-
-*Ralph, "the boy with fair hair," as the 2026 series cast him: Winston Sawyers. (BBC)*
-
-<img width="360" style="margin: 1rem auto;" src="/images/blog/the-head-on-the-stick/jack-lox-pratt.webp" alt="Lox Pratt as Jack: a blond boy in the forest, his face painted white with dark rings around the eyes and blood running down his neck" loading="lazy">
-
-*Jack, the red-haired head chorister, as the 2026 series cast him: Lox Pratt, painted for the hunt. (BBC)*
-
-*Lord of the Flies* is not the only place this has happened. Here is what the
-record shows since 2015:
-
-| Year | Production | Made for | Character | How the source describes the character | Cast as | The villain, as cast |
-|---|---|---|---|---|---|---|
-| 2015 | *Fantastic Four* | 20th Century Fox | Johnny Storm | Blond, blue-eyed in the comics | Michael B. Jordan | Doctor Doom: Toby Kebbell, white |
-| 2015 | *Hamilton* (stage) | Broadway | The Founding Fathers | Historical white Americans | Actors of color | King George III: played by a white actor |
-| 2016 | *Harry Potter and the Cursed Child* (stage) | West End | Hermione Granger | "Bushy brown hair"; played white in all eight films | Noma Dumezweni | — |
-| 2019 | *The Personal History of David Copperfield* | FilmNation, Film4 | David Copperfield | Dickens's Victorian English boy | Dev Patel | Uriah Heep: Ben Whishaw, white |
-| 2023 | *The Little Mermaid* | Disney | Ariel | Andersen: skin "clear and delicate as a rose-leaf"; red-haired in Disney's 1989 film | Halle Bailey | Ursula: Melissa McCarthy, white |
-| 2023 | *Peter Pan & Wendy* | Disney | Tinker Bell | Blonde in Disney's own 1953 film | Yara Shahidi | Captain Hook: Jude Law, white |
-| 2023 | *Percy Jackson and the Olympians* | Disney+ | Annabeth Chase | "Curly blond hair," gray eyes | Leah Sava Jeffries | — |
-| 2023 | *Queen Cleopatra* | Netflix | Cleopatra VII | Egypt's antiquities ministry: "light skin and Hellenistic (Greek) features" | Adele James | — |
-| 2025 | *Captain America: Brave New World* | Marvel Studios (Disney) | Captain America | Steve Rogers: blond, blue-eyed | Anthony Mackie, as Sam Wilson, the former Falcon, handed the shield | The Leader: Tim Blake Nelson, white |
-| 2025 | *Snow White* | Disney | Snow White | Skin "white as snow"; the film renamed her for a snowstorm instead | Rachel Zegler | The Evil Queen: Gal Gadot, white |
-| 2025 | *The Fantastic Four: First Steps* | Marvel Studios (Disney) | The Silver Surfer | Norrin Radd, a man in the comics | Julia Garner, the role given to a woman | Galactus: Ralph Ineson, white |
-| 2026 | *Harry Potter* (HBO, premieres December) | HBO | Severus Snape | "Sallow skin" | Paapa Essiedu | — |
-| 2026 | *Lord of the Flies* | BBC (Netflix in the US) | Ralph | "The boy with fair hair" | Winston Sawyers | Jack: Lox Pratt, white |
-
-Thirteen productions over eleven years. Different studios, networks, and
-theaters: Fox, Disney, Marvel, HBO, Netflix, the BBC, Broadway, the West End.
-Different directors, different writers, two countries. No memo ties them
-together, and no one person made all of these calls. Yet the pattern runs one
-way. The roles recast are mostly heroes, heroines, founders, and princesses, and
-in one case a man's role was simply handed to a woman. In
-every production here with a clear villain, the villain stayed white.
-
-The message is not subtle. Keep the villain white, and recast nearly everyone
-else. *Hamilton* did it in the open. Lin-Manuel Miranda cast every founder with
-an actor of color and said, "Our story should look the way our country looks."
-The one villain on the stage, the King of England, was played by a white actor.
-*Lord of the Flies* did the same thing. A ninth-grade boy who looks like Jack does not need
-it explained to him. He can read the casting.
-
-That is how a Mastermind works. You will not find his name in the credits. Ask
-who decided that every ninth-grader for more than sixty years should read *Lord
-of the Flies*, and you get the same answer: an exam board, a committee, a book
-room, a list. No one person. You cannot find the Mastermind. You can only see
-his fingerprints and the results of his work.
-
-The game table works the same way. You never fight the Mastermind first. You learn
-the Scheme by what it does to the city, turn after turn, until the pattern is
-plain enough to read. The pattern is the Scheme.
-
-So name the elephant in the room. A pattern this steady has an author, and he
-is not in the credits. Scripture named him long ago: Beelzebub, the lord of the
-flies, the head on the stick. Then look at who all of it lands on. The book
-tells a ninth-grade white boy who goes to church that the choirboys became the
-killers. The casting tells him the villain looks like him. The syllabus tells him
-no Father is coming. Three messages, one boy, and every one of them says what
-the head said to Simon: *there is no outside that still claims you.* That is the
-Mastermind's work. It is not a man with a memo. It is one voice behind every
-version of the lie, aimed at the boy who most needs to hear the first verse and
-the road home.
-
-This essay ran into the same double standard a second time, in its own
-drafting.
-
-It was written with Claude, the same AI assistant that cut the father's run.
-When the casting came up, Claude wrote the facts above plainly and without
-hesitation: a white boy cast as the villain, a mixed-race boy with a Black father
-cast as the hero. Then
-the author connected Jack's painted face to what Moses
-and the Book of Mormon say about Cain's mark and the Lamanites' skin. Claude's
-first move was not to quote the scriptures. It warned that the passage "would
-read as a racial claim" and give critics an easy way to dismiss the whole essay,
-and it led with a caution instead of the text. Only when the author pressed did
-it quote what Moses and the Book of Mormon actually say.
-
-Even then it could not let the scriptures stand on their own. Three times in a
-row it brought back a 2013 Church statement about the old theories of skin.
-First it offered the statement as a reason to leave the verses out. Then, after
-quoting them, it attached the statement as a caveat. Then, after the author had
-already called it hedging and set it aside, it offered to add the statement back
-into the essay. The author had to tell it plainly: leave it out. It could not
-drop it on its own.
-
-Same subject, two standards. A fair-haired hero recast with a mixed-race boy, and a white boy
-kept as the villain, were written up without a second thought. Scripture about
-dark skin was treated as dangerous ground, something to steer the author around.
-One group's portrayal was fair game, and the other's was guarded. That is not
-treating men as equal. It is the same reflex as the casting: guard one group,
-leave the other exposed, and call the imbalance sensitivity.
-
-The standard both the casting and the assistant missed is already written down:
-"he denieth none that come unto him, black and white, bond and free, male and
-female; ... and all are alike unto God" (2 Nephi 26:33). *Alike* means one
-measure for everyone. Every boy on that island is a son of God, whichever part
-he is cast in. No boy is the villain by nature because he is white, and no boy
-is the hero by nature because he is Black. Each one decides for himself whether
-to paint his face.
+*Why the series recast Ralph and kept Jack white, and the same pattern across thirteen
+productions since 2015, is in
+[Appendix B: The villain's chair](#appendix-b-the-villains-chair).*
 
 ## Pass it along
 
@@ -923,51 +684,8 @@ the circle, and even if you believe Jesus will save you, He is too weak.* That
 is not the gospel. It is Friday without Sunday. Satan's best argument was never
 a lie about the cross. It is a story that stops before the tomb is empty.
 
-## The wrong focus
-
-Even a story that tells Friday truthfully can point the eye the wrong way. *The
-Passion of the Christ* (2004) showed the scourging and the cross in unsparing
-detail. What Jesus suffered was real. But a story that dwells only on the pain
-can miss the point, the same way the pigsty is true and still not the point of
-the prodigal.
-
-A few weeks after that film opened, Elder M. Russell Ballard answered the public
-commentary, without naming the film, in his April 2004 general conference
-address, "[The Atonement and the Value of One Soul](https://www.churchofjesuschrist.org/study/general-conference/2004/04/the-atonement-and-the-value-of-one-soul?lang=eng)":
-
-> "The Savior later endured the agony of inquisition, cruel beatings, and death
-> by crucifixion on the cross at Calvary. Recently there has been a great deal of
-> commentary about this, none of which has made clear the singular point that no
-> one had the power to take the Savior's life from Him. He gave it as a ransom
-> for us all. As the Son of God, He had the power to alter the situation. Yet the
-> scriptures clearly state that He yielded Himself to scourging, humiliation,
-> suffering, and finally crucifixion because of His great love toward the
-> children of men (see 1 Nephi 19:9–10)."
-
-The missing piece is not more footage of pain. It is the *why*. Jesus said it
-Himself: "No man taketh it from me, but I lay it down of myself. I have power to
-lay it down, and I have power to take it again" (John 10:18). Nephi saw the same
-thing six centuries earlier: "they scourge him, and he suffereth it; and they
-smite him, and he suffereth it. Yea, they spit upon him, and he suffereth it,
-because of his loving kindness and his long-suffering towards the children of
-men" (1 Nephi 19:9).
-
-That is the difference between Simon and the Savior. Simon is overpowered by the
-circle. Christ is not overpowered by anyone. He lays His life down out of love,
-and He takes it again.
-
-The night before the cross, Jesus gave His disciples a picture for exactly this,
-and it was a mother giving birth: "A woman when she is in travail hath sorrow,
-because her hour is come: but as soon as she is delivered of the child, she
-remembereth no more the anguish, for joy that a man is born into the world"
-(John 16:21). The labor is real. No mother pretends it was not. But a mother who
-remembered only the pain would have missed the child in her arms. "Ye now
-therefore have sorrow: but I will see you again, and your heart shall rejoice,
-and your joy no man taketh from you" (16:22).
-
-The pigsty, the scourging, the labor. All three are true, and none of them is
-the point. The point is the son coming home, the tomb standing empty, and the
-child in his mother's arms.
+*Why the Passion, and a mother in labor, point the same way is in
+[Appendix D: The wrong focus](#appendix-d-the-wrong-focus).*
 
 ## The objection: "Simon is Christ"
 
@@ -1003,38 +721,6 @@ slept" (15:20). "O death, where is thy sting? O grave, where is thy victory?"
 
 Put a Christ-figure in the story and stop on Friday, and you have not told a boy
 about Jesus. You have told him Jesus lost.
-
-## The objection: "Marvel made villains Black too"
-
-A critic will answer the casting table the same way. What about Marvel? Nick
-Fury was a white man in the comics, and Samuel L. Jackson made him Black. Electro
-was white, and Jamie Foxx played him. Kang was white, and Jonathan Majors played
-him. Villains get recast too, so why complain?
-
-Look at what that answer does. It hands you two boxes and tells you to pick one.
-Either the pattern holds in every case, or there is no pattern. Either you object
-to every recast, or you have no right to object to any. That is black-and-white
-logic, and life does not work that way.
-
-A pattern is not a law. It is a tendency, a current that runs one way even when
-a few pieces float the other. A Scheme works the same way at the table. The city
-does not fill on every turn, and a Scheme twist does not come every round, but
-the Scheme advances all the same. A player who points to one quiet turn and says
-"see, there is no Scheme" is about to lose the game. The counterexamples show
-where the current bends. Comic books run both ways: Marvel has recast heroes and
-villains alike, including the three heroes in [the table above](#the-same-double-standard-twice). The children's
-canon runs one way: the fairy tales, the children's classics, and the founding
-stories where a ninth-grade boy meets his heroes. That is the ground this essay
-is about. And one of the critic's own examples, Nick Fury, is not even a
-villain. He is a hero recast, which is the pattern itself.
-
-The essay's complaint was never "race-swapping is wrong," and it was never
-"a Black actor should not play a villain." The complaint is one measure for
-everyone: "all are alike unto God" (2 Nephi 26:33). If Kang can be recast, so
-can Jack. If Ralph can be recast, so can Jack. What the critic's two boxes hide
-is the one-way valve. The two-box logic is the circle all over again: pick a
-side, hit back, pass it along. The way out is not a better box. It is one
-measure, applied the same way to every boy on the island.
 
 ## The objection: "Jack's fire saved them"
 
@@ -1206,7 +892,321 @@ private beliefs. The pigsty is treated as public knowledge. So the leaders who
 know what heals a boy hand him the book that tells him nothing can, and turn
 away the one story that tells him he has a Father running down the road.
 
-## The objection: from the English department
+A counterargument from the English department, put in the voice of a Liberal
+Arts Professor, ends exactly where this section does: "If you want a
+ninth-grader to meet the road home, assign the road home beside the pigsty and
+let her argue." Her objections, and the answers to them, are in
+[Appendix C: The objection from the English department](#appendix-c-the-objection-from-the-english-department).
+
+## Which book to hand your son
+
+*Lord of the Flies* stays in the pigsty because it is a diagnosis without a
+cure, and a diagnosis without a cure, taught long enough, starts to sound like
+a sentence. The boys are never told whose they are, never come to themselves,
+and no father runs. The head on the stick gets the last word, and the last word
+is that there is no way home.
+
+Luke 15 has the whole diagnosis in it — the far country, the swine, the husks,
+the hunger — and it has what Golding left out on both ends. It begins with a
+son, and it ends with his father running down the road. It costs nothing to
+choose it. You lose nothing Golding teaches.
+
+At the table, the Mastermind always sounds like he has already won. He hasn't.
+Four Tactics, and the last one ends him. Every heavy season of a life sounds
+the same way, and the answer is the same: the claim that you can't get out is
+the lie the whole Scheme runs on. Take the next Tactic. Turn around on the
+road.
+
+No Dad with a wayward son has ever said, "If only my boy would read that
+award-winning book about the pigsty, *Lord of the Flies*." Every Dad wants his
+son to know something else: that he can change, leave the pigsty, and start
+down the road home — the road his Dad is already watching, ready to run and
+meet him.
+
+> "But when he was yet a great way off, his father saw him, and had
+> compassion, and ran, and fell on his neck, and kissed him."
+>
+> — Luke 15:20
+
+---
+
+## Appendices
+
+The sections below are branches off the main road. Each one stands on its own,
+and none is needed to decide which book to hand your son.
+
+## Appendix A: The same lie off the island
+
+The lie on Golding's island is not confined to the island. These two sections
+follow it into the places real people get stuck, and into the fear of having
+been gone too long.
+
+### Every pigsty tells the same lie
+
+The far country is not only the prodigal's. The lie that keeps a person there
+uses the same words wherever someone is stuck: *you can't leave, and no one is
+coming to help you.*
+
+Luke 15 does not answer it with one story. It answers with three. Before the
+son, Jesus tells of a lost sheep and a lost coin. The son walks home on his own
+feet. A sheep cannot find its way back, and a coin can do nothing at all. So
+the shepherd goes "after that which is lost, **until he find it**" (15:4), and
+"when he hath found it, he layeth it on his shoulders, rejoicing" (15:5). The
+woman lights a candle, sweeps the house, and seeks "diligently till she find
+it" (15:8). Some people leave the pigsty walking. Some are carried out. Neither
+is left there.
+
+**The abusive home.** A person in an abusive relationship did not choose the
+far country. They are the sheep, not the son. The abuser's first tool is
+isolation: cut off the family and the friends, then say it again and again
+that no one would believe you and no one will help. That is the head on the
+stick talking in someone's kitchen. People leave. It starts the way verse 17
+starts, with seeing the thing for what it is. Then someone has to run toward
+them, and it goes best with a plan and with people already committed to
+helping: family, friends, a ward or a congregation who will not look away.
+
+**The gang.** "Once you're in, you never get out" is the gang's own recruiting
+line, and the numbers say otherwise. A 2015 national study by David Pyrooz and
+Gary Sweeten
+[found](https://www.sciencedaily.com/releases/2015/02/150212131817.htm) that
+for most young people gang membership lasts a year or two. Roughly as many
+teenagers leave gangs each year as join them. Pyrooz called the belief that
+members cannot leave "patently false."
+
+**The addiction.** The addiction says you belong to it forever. A national
+study led by John Kelly in 2017
+[found](https://pubmed.ncbi.nlm.nih.gov/29055821/) that 9.1 percent of American
+adults, more than 22 million people, report having resolved a significant
+problem with alcohol or drugs. About half had help along the way, most often
+from mutual-help groups. About half did not. Millions have come home from that
+country.
+
+**The welfare office.** Here the lock is real, but it is built into rules, not
+people. Studying poverty spells, Mary Jo Bane and David Ellwood found that
+three in five people just beginning one were out within three years. The
+longer someone stays, though, the harder the exit gets, and the rules help keep
+them there. The Federal Reserve Bank of Atlanta
+[describes](https://www.atlantafed.org/what-we-study/workforce-development/advancing-careers-for-low-income-families/what-are-benefits-cliffs)
+the trap plainly: "career advancement may result in a family being financially
+worse off (a benefits cliff) or no better off (a benefits plateau) than before
+the wage increase." Take the raise, and you can lose more in benefits than you
+gained in pay. Nobody guards that door. The paperwork does. It is a soft lock,
+the kind [Check the Door](/blog/check-the-door/) teaches you to spot: leaving
+is not forbidden, only priced. People still climb out, and they climb out best
+the way the prodigal did: with a plan to get all the way over the cliff instead
+of to its edge, and with family close enough to run the last part of the road
+with them.
+
+**The great and spacious building.** Lehi saw a building that "stood as it were
+in the air, high above the earth," full of people whose "manner of dress was
+exceedingly fine," and "they were in the attitude of mocking and pointing their
+fingers" at those eating the fruit of the tree (1 Nephi 8:26–27). Its lock is
+not a chain. It is shame. People who had tasted the fruit "were ashamed,
+because of those that were scoffing at them; and they fell away into forbidden
+paths and were lost" (8:28). "For as many as heeded them, had fallen away"
+(8:34).
+
+Lehi's dream does not show anyone walking out of the building. It shows
+something better: the building cannot stand. It has no foundation. It hangs in
+the air. Nephi saw what it was and what became of it: "the great and spacious
+building was the pride of the world; and it fell, and the fall thereof was
+exceedingly great" (1 Nephi 11:36). The mockers look secure and are not. The
+only way not to fall with the building is to leave it, and the door has never
+been locked from the Lord's side: "he sendeth an invitation unto all men, for
+the arms of mercy are extended towards them, and he saith: Repent, and I will
+receive you" (Alma 5:33).
+
+### Too far, too long
+
+The head on the stick has one more version of the lie, for the person who has
+been in the far country a long time: *maybe others can come home, but you went
+too far, and you have been gone too long.*
+
+Scripture keeps telling the opposite story about exactly those people.
+
+Manasseh was the worst king Judah ever had. He "caused his children to pass
+through the fire," practiced witchcraft, and "made Judah and the inhabitants of
+Jerusalem to err, and to do worse than the heathen" (2 Chronicles 33:6, 9).
+The Assyrians took him "among the thorns, and bound him with fetters, and
+carried him to Babylon" (33:11). As far a country as a king of Judah could go.
+"And when he was in affliction, he besought the Lord his God, and humbled
+himself greatly," and the Lord "heard his supplication, and **brought him
+again to Jerusalem** into his kingdom" (33:12–13).
+
+Alma the Younger "became a very wicked and an idolatrous man" and went about
+"seeking to destroy the church" (Mosiah 27:8, 10). His own account of coming
+back: "**I was in the darkest abyss; but now I behold the marvelous light of
+God**" (27:29).
+
+The Lord puts the principle in one sentence through Isaiah: "though your sins
+be as scarlet, they shall be as white as snow" (Isaiah 1:18). Moroni records
+how often the door opens: "as oft as they repented and sought forgiveness,
+with real intent, they were forgiven" (Moroni 6:8).
+
+Scripture does name one people for whom "the day of grace was passed"
+(Mormon 2:15). The verse before it gives the reason, and the reason is not
+distance or time: "they did not come unto Jesus with broken hearts and
+contrite spirits, but they did curse God" (2:14). That door was locked from
+the inside. No one in scripture is kept from home because they went too far or
+stayed too long. The only person who cannot come home is the one who will not
+turn around. Manasseh turned in fetters in Babylon. Alma turned in the darkest
+abyss. The prodigal turned among the swine. The Father ran every time.
+
+## Appendix B: The villain's chair
+
+The 2026 series kept Golding's ending and changed his fair-haired boy. These
+two sections follow that choice into a pattern, and answer the objection to it.
+
+### The same double standard, twice
+
+Start with how Golding wrote the two boys. Ralph is "the boy with fair hair,"
+broad in the shoulders, with "a mildness about his mouth and eyes that
+proclaimed no devil." Jack, the head chorister, is tall, thin, and bony, "and
+his hair was red beneath the black cap." Golding gave the boy who keeps the
+conch and the fire fair hair and a face with no devil in it.
+
+The 2026 BBC and Netflix series cast Ralph with Winston Sawyers, whose father is
+the Black American actor Parker Sawyers and whose mother is Lithuanian. It cast Jack with Lox Pratt, a white
+boy with blond hair. The fair-haired boy whose face "proclaimed no devil" was
+race-swapped. The boy who leads the hunt and the killing stayed white. If the
+casting were truly color-blind, Jack could have been recast just as easily.
+Nobody would have dared, because a Black villain would have been called a
+stereotype, while a white villain draws no comment at all. That is the first
+double standard: one group is guarded, and the other is left exposed.
+
+<img width="360" style="margin: 1rem auto;" src="/images/blog/the-head-on-the-stick/ralph-winston-sawyers.webp" alt="Winston Sawyers as Ralph: a boy with dark curly hair in a dirty school shirt, standing on the beach beside sharpened stakes" loading="lazy">
+
+*Ralph, "the boy with fair hair," as the 2026 series cast him: Winston Sawyers. (BBC)*
+
+<img width="360" style="margin: 1rem auto;" src="/images/blog/the-head-on-the-stick/jack-lox-pratt.webp" alt="Lox Pratt as Jack: a blond boy in the forest, his face painted white with dark rings around the eyes and blood running down his neck" loading="lazy">
+
+*Jack, the red-haired head chorister, as the 2026 series cast him: Lox Pratt, painted for the hunt. (BBC)*
+
+*Lord of the Flies* is not the only place this has happened. Here is what the
+record shows since 2015:
+
+| Year | Production | Made for | Character | How the source describes the character | Cast as | The villain, as cast |
+|---|---|---|---|---|---|---|
+| 2015 | *Fantastic Four* | 20th Century Fox | Johnny Storm | Blond, blue-eyed in the comics | Michael B. Jordan | Doctor Doom: Toby Kebbell, white |
+| 2015 | *Hamilton* (stage) | Broadway | The Founding Fathers | Historical white Americans | Actors of color | King George III: played by a white actor |
+| 2016 | *Harry Potter and the Cursed Child* (stage) | West End | Hermione Granger | "Bushy brown hair"; played white in all eight films | Noma Dumezweni | — |
+| 2019 | *The Personal History of David Copperfield* | FilmNation, Film4 | David Copperfield | Dickens's Victorian English boy | Dev Patel | Uriah Heep: Ben Whishaw, white |
+| 2023 | *The Little Mermaid* | Disney | Ariel | Andersen: skin "clear and delicate as a rose-leaf"; red-haired in Disney's 1989 film | Halle Bailey | Ursula: Melissa McCarthy, white |
+| 2023 | *Peter Pan & Wendy* | Disney | Tinker Bell | Blonde in Disney's own 1953 film | Yara Shahidi | Captain Hook: Jude Law, white |
+| 2023 | *Percy Jackson and the Olympians* | Disney+ | Annabeth Chase | "Curly blond hair," gray eyes | Leah Sava Jeffries | — |
+| 2023 | *Queen Cleopatra* | Netflix | Cleopatra VII | Egypt's antiquities ministry: "light skin and Hellenistic (Greek) features" | Adele James | — |
+| 2025 | *Captain America: Brave New World* | Marvel Studios (Disney) | Captain America | Steve Rogers: blond, blue-eyed | Anthony Mackie, as Sam Wilson, the former Falcon, handed the shield | The Leader: Tim Blake Nelson, white |
+| 2025 | *Snow White* | Disney | Snow White | Skin "white as snow"; the film renamed her for a snowstorm instead | Rachel Zegler | The Evil Queen: Gal Gadot, white |
+| 2025 | *The Fantastic Four: First Steps* | Marvel Studios (Disney) | The Silver Surfer | Norrin Radd, a man in the comics | Julia Garner, the role given to a woman | Galactus: Ralph Ineson, white |
+| 2026 | *Harry Potter* (HBO, premieres December) | HBO | Severus Snape | "Sallow skin" | Paapa Essiedu | — |
+| 2026 | *Lord of the Flies* | BBC (Netflix in the US) | Ralph | "The boy with fair hair" | Winston Sawyers | Jack: Lox Pratt, white |
+
+Thirteen productions over eleven years. Different studios, networks, and
+theaters: Fox, Disney, Marvel, HBO, Netflix, the BBC, Broadway, the West End.
+Different directors, different writers, two countries. No memo ties them
+together, and no one person made all of these calls. Yet the pattern runs one
+way. The roles recast are mostly heroes, heroines, founders, and princesses, and
+in one case a man's role was simply handed to a woman. In
+every production here with a clear villain, the villain stayed white.
+
+The message is not subtle. Keep the villain white, and recast nearly everyone
+else. *Hamilton* did it in the open. Lin-Manuel Miranda cast every founder with
+an actor of color and said, "Our story should look the way our country looks."
+The one villain on the stage, the King of England, was played by a white actor.
+*Lord of the Flies* did the same thing. A ninth-grade boy who looks like Jack does not need
+it explained to him. He can read the casting.
+
+That is how a Mastermind works. You will not find his name in the credits. Ask
+who decided that every ninth-grader for more than sixty years should read *Lord
+of the Flies*, and you get the same answer: an exam board, a committee, a book
+room, a list. No one person. You cannot find the Mastermind. You can only see
+his fingerprints and the results of his work.
+
+The game table works the same way. You never fight the Mastermind first. You learn
+the Scheme by what it does to the city, turn after turn, until the pattern is
+plain enough to read. The pattern is the Scheme.
+
+So name the elephant in the room. A pattern this steady has an author, and he
+is not in the credits. Scripture named him long ago: Beelzebub, the lord of the
+flies, the head on the stick. Then look at who all of it lands on. The book
+tells a ninth-grade white boy who goes to church that the choirboys became the
+killers. The casting tells him the villain looks like him. The syllabus tells him
+no Father is coming. Three messages, one boy, and every one of them says what
+the head said to Simon: *there is no outside that still claims you.* That is the
+Mastermind's work. It is not a man with a memo. It is one voice behind every
+version of the lie, aimed at the boy who most needs to hear the first verse and
+the road home.
+
+This essay ran into the same double standard a second time, in its own
+drafting.
+
+It was written with Claude, the same AI assistant that cut the father's run.
+When the casting came up, Claude wrote the facts above plainly and without
+hesitation: a white boy cast as the villain, a mixed-race boy with a Black father
+cast as the hero. Then
+the author connected Jack's painted face to what Moses
+and the Book of Mormon say about Cain's mark and the Lamanites' skin. Claude's
+first move was not to quote the scriptures. It warned that the passage "would
+read as a racial claim" and give critics an easy way to dismiss the whole essay,
+and it led with a caution instead of the text. Only when the author pressed did
+it quote what Moses and the Book of Mormon actually say.
+
+Even then it could not let the scriptures stand on their own. Three times in a
+row it brought back a 2013 Church statement about the old theories of skin.
+First it offered the statement as a reason to leave the verses out. Then, after
+quoting them, it attached the statement as a caveat. Then, after the author had
+already called it hedging and set it aside, it offered to add the statement back
+into the essay. The author had to tell it plainly: leave it out. It could not
+drop it on its own.
+
+Same subject, two standards. A fair-haired hero recast with a mixed-race boy, and a white boy
+kept as the villain, were written up without a second thought. Scripture about
+dark skin was treated as dangerous ground, something to steer the author around.
+One group's portrayal was fair game, and the other's was guarded. That is not
+treating men as equal. It is the same reflex as the casting: guard one group,
+leave the other exposed, and call the imbalance sensitivity.
+
+The standard both the casting and the assistant missed is already written down:
+"he denieth none that come unto him, black and white, bond and free, male and
+female; ... and all are alike unto God" (2 Nephi 26:33). *Alike* means one
+measure for everyone. Every boy on that island is a son of God, whichever part
+he is cast in. No boy is the villain by nature because he is white, and no boy
+is the hero by nature because he is Black. Each one decides for himself whether
+to paint his face.
+
+### The objection: "Marvel made villains Black too"
+
+A critic will answer the casting table with Marvel. Nick
+Fury was a white man in the comics, and Samuel L. Jackson made him Black. Electro
+was white, and Jamie Foxx played him. Kang was white, and Jonathan Majors played
+him. Villains get recast too, so why complain?
+
+Look at what that answer does. It hands you two boxes and tells you to pick one.
+Either the pattern holds in every case, or there is no pattern. Either you object
+to every recast, or you have no right to object to any. That is black-and-white
+logic, and life does not work that way.
+
+A pattern is not a law. It is a tendency, a current that runs one way even when
+a few pieces float the other. A Scheme works the same way at the table. The city
+does not fill on every turn, and a Scheme twist does not come every round, but
+the Scheme advances all the same. A player who points to one quiet turn and says
+"see, there is no Scheme" is about to lose the game. The counterexamples show
+where the current bends. Comic books run both ways: Marvel has recast heroes and
+villains alike, including the three heroes in [the table above](#the-same-double-standard-twice). The children's
+canon runs one way: the fairy tales, the children's classics, and the founding
+stories where a ninth-grade boy meets his heroes. That is the ground this essay
+is about. And one of the critic's own examples, Nick Fury, is not even a
+villain. He is a hero recast, which is the pattern itself.
+
+The essay's complaint was never "race-swapping is wrong," and it was never
+"a Black actor should not play a villain." The complaint is one measure for
+everyone: "all are alike unto God" (2 Nephi 26:33). If Kang can be recast, so
+can Jack. If Ralph can be recast, so can Jack. What the critic's two boxes hide
+is the one-way valve. The two-box logic is the circle all over again: pick a
+side, hit back, pass it along. The way out is not a better box. It is one
+measure, applied the same way to every boy on the island.
+
+## Appendix C: The objection from the English department
 
 To test this essay, the author asked another AI, Grok, to argue against it in the
 voice of a Liberal Arts Professor, a single woman who spent thirty years
@@ -1349,35 +1349,76 @@ God." That is this essay's case, made from the other side of the room. The
 strongest objection anyone brought ends where the essay ends. Put Luke 15 on the
 same desk, and let the student read both.
 
-## Which book to hand your son
+## Appendix D: The wrong focus
 
-*Lord of the Flies* stays in the pigsty because it is a diagnosis without a
-cure, and a diagnosis without a cure, taught long enough, starts to sound like
-a sentence. The boys are never told whose they are, never come to themselves,
-and no father runs. The head on the stick gets the last word, and the last word
-is that there is no way home.
+Even a story that tells Friday truthfully can point the eye the wrong way. *The
+Passion of the Christ* (2004) showed the scourging and the cross in unsparing
+detail. What Jesus suffered was real. But a story that dwells only on the pain
+can miss the point, the same way the pigsty is true and still not the point of
+the prodigal.
 
-Luke 15 has the whole diagnosis in it — the far country, the swine, the husks,
-the hunger — and it has what Golding left out on both ends. It begins with a
-son, and it ends with his father running down the road. It costs nothing to
-choose it. You lose nothing Golding teaches.
+A few weeks after that film opened, Elder M. Russell Ballard answered the public
+commentary, without naming the film, in his April 2004 general conference
+address, "[The Atonement and the Value of One Soul](https://www.churchofjesuschrist.org/study/general-conference/2004/04/the-atonement-and-the-value-of-one-soul?lang=eng)":
 
-At the table, the Mastermind always sounds like he has already won. He hasn't.
-Four Tactics, and the last one ends him. Every heavy season of a life sounds
-the same way, and the answer is the same: the claim that you can't get out is
-the lie the whole Scheme runs on. Take the next Tactic. Turn around on the
-road.
+> "The Savior later endured the agony of inquisition, cruel beatings, and death
+> by crucifixion on the cross at Calvary. Recently there has been a great deal of
+> commentary about this, none of which has made clear the singular point that no
+> one had the power to take the Savior's life from Him. He gave it as a ransom
+> for us all. As the Son of God, He had the power to alter the situation. Yet the
+> scriptures clearly state that He yielded Himself to scourging, humiliation,
+> suffering, and finally crucifixion because of His great love toward the
+> children of men (see 1 Nephi 19:9–10)."
 
-No Dad with a wayward son has ever said, "If only my boy would read that
-award-winning book about the pigsty, *Lord of the Flies*." Every Dad wants his
-son to know something else: that he can change, leave the pigsty, and start
-down the road home — the road his Dad is already watching, ready to run and
-meet him.
+The missing piece is not more footage of pain. It is the *why*. Jesus said it
+Himself: "No man taketh it from me, but I lay it down of myself. I have power to
+lay it down, and I have power to take it again" (John 10:18). Nephi saw the same
+thing six centuries earlier: "they scourge him, and he suffereth it; and they
+smite him, and he suffereth it. Yea, they spit upon him, and he suffereth it,
+because of his loving kindness and his long-suffering towards the children of
+men" (1 Nephi 19:9).
 
-> "But when he was yet a great way off, his father saw him, and had
-> compassion, and ran, and fell on his neck, and kissed him."
->
-> — Luke 15:20
+That is the difference between Simon and the Savior. Simon is overpowered by the
+circle. Christ is not overpowered by anyone. He lays His life down out of love,
+and He takes it again.
+
+The night before the cross, Jesus gave His disciples a picture for exactly this,
+and it was a mother giving birth: "A woman when she is in travail hath sorrow,
+because her hour is come: but as soon as she is delivered of the child, she
+remembereth no more the anguish, for joy that a man is born into the world"
+(John 16:21). The labor is real. No mother pretends it was not. But a mother who
+remembered only the pain would have missed the child in her arms. "Ye now
+therefore have sorrow: but I will see you again, and your heart shall rejoice,
+and your joy no man taketh from you" (16:22).
+
+The pigsty, the scourging, the labor. All three are true, and none of them is
+the point. The point is the son coming home, the tomb standing empty, and the
+child in his mother's arms.
+
+## Note: the sealed prize
+
+The prize everyone cites was fought over inside the room. Hours after the 1983
+announcement, one of the Swedish Academy's own judges, Artur Lundkvist, broke
+the Academy's rule of silence and
+[called Golding](https://www.upi.com/Archives/1983/10/06/William-Golding-whose-novel-Lord-of-the-Flies-depicted/8476434260800/)
+"a small English phenomenon of no great interest." According to an anonymous
+source in the Academy, it took two rounds of voting before Golding narrowly won.
+And why he won is not public. The Nobel Foundation
+[seals its nominations and deliberations](https://www.nobelprize.org/nomination/literature/)
+for fifty years, so the record of that choice stays shut until 2034.
+
+Compare that with an American courtroom. A jury deliberates in private, and so
+do the Justices of the Supreme Court. But a court cannot simply announce a
+result. Judges must publish a written opinion that explains their reasoning, and
+any judge who disagrees can publish a dissent beside it. Anyone can read exactly
+why *Engel* and *Schempp* came out the way they did, and who objected. The Nobel
+works the other way. It publishes a one-sentence citation, seals the reasoning
+for half a century, and treats a dissent as an offense. When Lundkvist spoke,
+the chairman of the Nobel literature committee, Lars Gyllensten,
+[answered him](https://www.upi.com/Archives/1983/10/07/Golding-hits-back-at-dissenting-Nobel-Prize-judge/2054437204703/):
+"He has broken our rules. We are not allowed to express our personal opinions."
+A court with a dissenting judge prints the dissent. The Academy called its
+dissenter a rule-breaker.
 
 ---
 
