@@ -1204,8 +1204,8 @@ away the one story that tells him he has a Father running down the road.
 ## The objection: from the English department
 
 To test this essay, the author asked another AI, Grok, to argue against it in the
-voice of a teacher who spent thirty years teaching *Lord of the Flies* in a
-university English department. She is not a real person, but her objections
+voice of a Liberal Arts Professor, a single woman who spent thirty years
+teaching *Lord of the Flies* in a university English department. She is not a real person, but her objections
 are the ones a real department would raise, and they deserve a fair hearing.
 Here they are at full strength.
 
@@ -1265,6 +1265,19 @@ This is the same complaint this whole essay makes. The parable cut off at Luke
 named it. Simon given a new inner life the book never gave him. Each one takes a
 story that already exists and quietly changes it to say something else. Recasting
 Ralph is the same move, made with a camera.
+
+**On the children she speaks for: a shield, not an argument.** Look at who the
+Professor brings into the room to make her case: the Black boy who never saw a
+hero who looked like him, and the Jewish girl in the second row. Neither of them
+said what she puts in their mouths. She speaks for them, and she uses them to
+justify treating a different child by the color of his skin: the white boy
+whose hero was recast and whose villain was kept. Treating one boy by his race
+to make up for others is still treating a boy by his race. The move has a name
+in the Mastermind's playbook. It is the oldest cover a liar has: *yes, I bent
+the truth, but only to expose a bigger lie.* A claim of good purpose is always
+the first thing offered, and it never settles whether the thing itself was
+right. The test is the same one this essay has used all along, one measure for
+every child, and the Professor's defense does not pass it.
 
 **On the structural and the spiritual: both can be true.** This essay names the
 benefits cliff as a problem built into rules, not people, and nothing here argues
