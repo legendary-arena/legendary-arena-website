@@ -76,6 +76,10 @@ Since then it has collected nearly every honor a novel can:
 
 *Sir William Golding with the insignia of his knighthood, 1988.*
 
+Before the honors, Golding was a schoolmaster and a naval officer who was off
+the French coast on D-Day. Who he was, and what he said the war taught him, is
+in [the note on William Golding](#note-who-william-golding-was).
+
 The prize everyone cites was contested inside the room, and the record of why
 Golding won stays sealed until 2034. See
 [the note at the end](#note-the-sealed-prize).
@@ -1394,6 +1398,43 @@ and your joy no man taketh from you" (16:22).
 The pigsty, the scourging, the labor. All three are true, and none of them is
 the point. The point is the son coming home, the tomb standing empty, and the
 child in his mother's arms.
+
+## Note: who William Golding was
+
+William Gerald Golding was born in Newquay, Cornwall, on September 19, 1911,
+and died in Cornwall on June 19, 1993. His father was a schoolmaster. He went
+up to Brasenose College, Oxford, to read natural sciences, and after two years
+switched to English literature.
+
+**A husband and a father.** He married Ann Brookfield on September 30, 1939.
+Their son David was born in September 1940, and their daughter Judith in July
+1945.
+
+**A schoolmaster.** In April 1940 he began teaching English, philosophy, Greek,
+and drama at Bishop Wordsworth's School in Salisbury. He went back to teaching
+after the war and did not retire from it until 1962, eight years after *Lord of
+the Flies* was published. The boys on the island were written by a man who
+taught boys every day.
+
+**A sailor at war.** He joined the Royal Navy in December 1940 and spent most of
+the next six years afloat. In the words of his
+[Nobel biography](https://www.nobelprize.org/prizes/literature/1983/golding/biographical/),
+"He saw action against battleships (at the sinking of the Bismarck), submarines
+and aircraft. Finished as Lieutenant in command of a rocket ship. He was present
+off the French coast for the D-Day invasion, and later at the island of
+Walcheren."
+
+**What the war taught him, in his own words.** In his essay "Fable" (*The Hot
+Gates*, 1965), Golding wrote: "Before the Second World War I believed in the
+perfectibility of social man; that a correct structure of society would produce
+goodwill." After the war he could not, because "I had discovered what one man
+could do to another." And: "anyone who moved through those years without
+understanding that man produces evil as a bee produces honey, must have been
+blind or wrong in the head."
+
+This essay does not argue with what he saw. He watched the twentieth century's
+Friday up close and told the truth about it. The quarrel is with where his book
+stops: [Friday without Sunday](#friday-without-sunday).
 
 ## Note: the sealed prize
 
