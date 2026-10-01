@@ -1211,7 +1211,8 @@ away the one story that tells him he has a Father running down the road.
 To test this essay, the author asked another AI, Grok, to argue against it in the
 voice of a Liberal Arts Professor, a single woman who spent thirty years
 teaching *Lord of the Flies* in a university English department. She is not a real person, but her objections
-are the ones a real department would raise, and they deserve a fair hearing.
+are objections a department reader actually makes, and they deserve a fair
+hearing.
 Here they are at full strength.
 
 - **The faith they had failed.** Golding was a schoolmaster, and he put the
@@ -1253,7 +1254,7 @@ holds only boys, and because a father wrote it. Every daughter is a child of God
 too, and her Father is on the same road.
 
 **On the casting: the issue is not who gets to be the hero. It is rewriting a
-story that already exists.** No one objects to a new story with a Black hero.
+story that already exists.** This essay has no objection to a new story with a Black hero.
 Write it, and let it stand on its own. The objection is to taking a story that
 already exists, written seventy years ago with a fair-haired boy at its center,
 and changing it to carry a message its author never wrote. Golding wrote Ralph
@@ -1278,8 +1279,8 @@ said what she puts in their mouths. She speaks for them, and she uses them to
 justify treating a different child by the color of his skin: the white boy
 whose hero was recast and whose villain was kept. Treating one boy by his race
 to make up for others is still treating a boy by his race. The move is the
-oldest cover in the Mastermind's playbook: *yes, I bent
-the truth, but only to expose a bigger lie.* A claim of good purpose is always
+oldest cover in the Mastermind's playbook: *yes, we changed
+the story, but only to answer a bigger wrong.* A claim of good purpose is always
 the first thing offered, and it never settles whether the thing itself was
 right. The test is the same one this essay has used all along, one measure for
 every child, and the Professor's defense does not pass it.
@@ -1316,10 +1317,11 @@ words:
 3. **The current reading is an orthodoxy.** Assigning Luke 15, she says,
    "replaces one orthodoxy with another." Only an orthodoxy can be replaced by
    another one. The book room was never neutral.
-4. **She removed the prayer herself.** "I said it in my classroom for years
-   before I had the rank to stop saying it, and the Jewish girl in the second
-   row is the reason I stopped." The decision was hers, made the moment she had
-   the rank. The girl is the reason offered.
+4. **The argument credits the child with the adult's decision.** "I said it in
+   my classroom for years before I had the rank to stop saying it, and the
+   Jewish girl in the second row is the reason I stopped." An adult with
+   authority makes the choice, and a child is named as its cause. That is the
+   shield.
 5. **The choir as the killer.** Simon, she says, "is also killed by the hymn."
    That is exactly the reading [this essay's table](#the-whole-story-beginning-to-end) predicts a churchgoing boy
    will take away: the church boys are the violent ones.
@@ -1327,13 +1329,14 @@ words:
    image was the assumption. Mine has to run toward the child whose image was
    the exception." She chooses which child receives her compassion by his group.
    That is the opposite of one measure.
-7. **The institution as the answer.** This essay, she says, turns a structural
-   problem into a spiritual one "so that nobody has to fund the bridge." The
-   answer she reaches for is the institution's money. This essay's is a father
-   running.
-8. **The classroom is hers to fill.** She faults Walsh for telling students
-   "what their classrooms are allowed to contain." She speaks as the one who
-   decides what they contain, which is the book room this essay describes.
+7. **The argument stops at the bridge.** This essay, she says, turns a
+   structural problem into a spiritual one "so that nobody has to fund the
+   bridge." Her argument stops at funding the bridge. This essay says fix the
+   rule, and have someone running.
+8. **The argument assumes the department decides.** She faults Walsh for
+   telling students "what their classrooms are allowed to contain." The
+   objection only works if the room is the department's to fill, which is the
+   book room this essay describes.
 9. **The fair-haired boy flinched too.** "We know which child flinched, and it
    was not only him." She concedes the white boy was hurt by the casting too,
    and tells him it was not the real injury.
