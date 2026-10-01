@@ -141,7 +141,13 @@ The head on the stick makes the same argument, and it makes it to the one boy
 who could have answered it. Simon, the quiet one who goes alone into the
 jungle, who is widely read as a Christ-figure, meets the head in the clearing,
 and it tells him there is no getting away from it — that the beast the boys
-fear is not out in the jungle but inside them. Then Simon runs down the
+fear is not out in the jungle but inside them. In Golding's words, the head puts
+the whole lie in one breath
+([chapter 8, "Gift for the Darkness"](https://www.enotes.com/topics/lord-of-the-flies/questions/in-chapter-8-of-lord-of-the-flies-what-does-the-375820)):
+
+> "There isn't anyone to help you. Only me. And I'm the Beast."
+
+No one is coming, and the only one here is the thing you fear. Then Simon runs down the
 mountain to tell the others the truth, and the tribe, dancing and chanting in
 the storm, kills him before he can say it.
 
