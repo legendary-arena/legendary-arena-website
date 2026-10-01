@@ -147,7 +147,26 @@ the whole lie in one breath
 
 > "There isn't anyone to help you. Only me. And I'm the Beast."
 
-No one is coming, and the only one here is the thing you fear. Then Simon runs down the
+No one is coming, and the only one here is the thing you fear.
+
+The rest of the head's speech runs the Mastermind's playbook almost in order:
+
+| What the head says | The tactic |
+|---|---|
+| "just an ignorant, silly little boy" | Shame the witness instead of answering him |
+| "They think you're batty." "You like Ralph a lot, don't you?" | Tribe: the fear of being cast out |
+| "There isn't anyone to help you." | No outside that still claims you |
+| "I'm part of you?" | The natural man, sold as the whole truth |
+| "Get back to the others and we'll forget the whole thing." | The small yes that buys silence |
+| "so don't try to escape!" | Stop the story on Friday: there is no way out |
+| In "the voice of a schoolmaster": "do you think you know better than I do?" | Borrowed authority, the "experts say" dodge |
+| "we shall do you … Jack and Roger and Maurice and Robert and Bill and Piggy and Ralph" | The circle, named by name, and it comes true |
+
+Look at the schoolmaster's voice. Golding gave the Lord of the Flies the voice of a
+schoolmaster, asking a boy whether he thinks he knows better. The book that
+schoolmasters assign puts the devil in their own voice.
+
+Then Simon runs down the
 mountain to tell the others the truth, and the tribe, dancing and chanting in
 the storm, kills him before he can say it.
 
@@ -710,8 +729,8 @@ works were evil, and his brother's righteous" (1 John 3:12).
 The likeness runs deep. Cain brought an offering the Lord "had not respect"
 unto (Genesis 4:5), and it was Satan who had told him to make it: "And Cain
 loved Satan more than God. And Satan commanded him, saying: Make an offering
-unto the Lord" (Moses 5:18). Jack mounts the pig's head as his offering to the
-beast. Cain and Satan then swore a secret oath, the first gang: "swear thy
+unto the Lord" (Moses 5:18). Jack mounts the pig's head as his offering, and
+names it in his own words: "This head is for the beast. It's a gift." Cain and Satan then swore a secret oath, the first gang: "swear thy
 brethren by their heads ... that they tell it not; ... and this that **thy
 father may not know it**" (Moses 5:29). Cain named himself "Master Mahan, the
 master of this great secret, that I may murder and get gain" (5:31). Jack's
