@@ -365,6 +365,11 @@ ring, and shoes (15:22), and with the only verdict that ever mattered: "For
 **this my son** was dead, and is alive again; he was lost, and is found"
 (15:24). Not a hired servant. His son. He always had been.
 
+*The same lie works off the island too: in the abusive home, the gang, the
+addiction, the welfare office's benefits cliff, and on the one who thinks he has
+gone too far to come home. See
+[Appendix A: The same lie off the island](#appendix-a-the-same-lie-off-the-island).*
+
 ## The line that almost got cut
 
 This essay was drafted with Claude, an AI assistant. Claude's first draft said
@@ -403,11 +408,6 @@ the pigsty. Everyone already knows the pigsty. What he works hardest to stop is
 the message that you can get out of it, and that a Father is already running
 down the road to help you. He will use whatever tool is at hand to trim it. A
 rule, a mark scheme, a careful edit. Even this one.
-
-*The same lie works off the island too: in the abusive home, the gang, the
-addiction, the welfare office's benefits cliff, and on the one who thinks he has
-gone too far to come home. See
-[Appendix A: The same lie off the island](#appendix-a-the-same-lie-off-the-island).*
 
 ## Seventy-two years later
 
