@@ -731,14 +731,14 @@ son.
 The circle ends where someone absorbs the blow. And the goals go back on the
 field the moment someone shows the boys where home is.
 
-## The experiment
+## The Forbidden Experiment
 
 Golding built his island like an experiment. Take away the parents. Take away
 the goal. Leave Beelzebub on the island. Then write down what happens, and call
 the result human nature.
 
-It has been tried before, on real children. In the thirteenth century the
-Emperor Frederick II wanted to know what language people would speak by nature,
+It has been tried before, on real children. In the 1200s the Emperor
+Frederick II wanted to know what language people would speak by nature,
 so he had infants raised with food and washing but no one allowed to speak to
 them. The chronicler Salimbene recorded the result: "he laboured in vain, for the
 children could not live without clappings of the hands, and gestures, and
@@ -746,8 +746,16 @@ gladness of countenance, and blandishments." The children died.
 
 An experiment that takes away what a child needs and then records how he fails
 does not discover his nature. It discovers what happens when you take those
-things away. Frederick took away the voices, and the children died. Golding took
-away the Father and the goal, and the boys became hunters.
+things away. Frederick took away the love in a mother's voice, and the babies
+died. Golding took away the love of the Father, and the boys became violent
+hunters.
+
+Did Frederick's experiment reveal that babies are dumb and only mimic what
+they hear? No. The flawed experiment revealed that a baby needs a mother's love
+to survive, which any mother knows by instinct, without the experiment. Did
+Golding's experiment reveal that boys are evil and violent? No. The flawed
+experiment revealed that a boy needs his father's love to become a man, which
+any dad knows by instinct, without the book.
 
 Salimbene's list reads almost like Luke 15:20 turned inside out. The children
 died for lack of a glad face, open arms, and a tender word. The prodigal was met
