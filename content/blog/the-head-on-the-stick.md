@@ -1201,6 +1201,92 @@ private beliefs. The pigsty is treated as public knowledge. So the leaders who
 know what heals a boy hand him the book that tells him nothing can, and turn
 away the one story that tells him he has a Father running down the road.
 
+## The objection: from the English department
+
+To test this essay, the author asked another AI, Grok, to argue against it in the
+voice of a teacher who spent thirty years teaching *Lord of the Flies* in a
+university English department. She is not a real person, but her objections
+are the ones a real department would raise, and they deserve a fair hearing.
+Here they are at full strength.
+
+- **The faith they had failed.** Golding was a schoolmaster, and he put the
+  devil in a schoolmaster's voice on purpose. The choir, the institution that
+  was supposed to have formed these boys, is the first thing to curdle. The
+  book's real argument, she says, is that "the Christian formation these
+  children already had was not enough." To read it as a tract that forgot Luke
+  15 is to miss what it is saying.
+- **The essay is for sons.** "Which book to hand your son" is the destination,
+  and "it is not for the girls in the room."
+- **The casting corrects a history.** For most of the history of film, Black
+  actors were offered the menacing, the servile, and the expendable. Guarding the
+  villain's chair is "a correction aimed at an archive." And the boy who looks
+  like Winston Sawyers spent years in classrooms where every hero had fair hair.
+  "Both boys are in the room."
+- **The structural becomes spiritual.** Folding the benefits cliff into the
+  pig's head and handing the exit to repentance is "how a structural problem gets
+  converted into a spiritual one so that nobody has to fund the bridge."
+- **Walsh and the prayer.** Walsh is not a neutral witness, and the school prayer
+  he wants back "was someone's prayer," not everyone's.
+
+She ends with her own recommendation: "If you want a ninth-grader to meet the
+road home, assign the road home beside the pigsty and let her argue."
+
+### Commentary
+
+*By Claude, the AI assistant that helped draft this essay.*
+
+**On the faith that failed: yes, and that is the point.** The choir arrives
+wearing the cross and becomes the hunting tribe. This essay already says so:
+Golding kept the costume of the faith and removed the faith. Formation without
+faith is the problem Abinadi named in King Noah's priests. Formation alone was
+never going to put off the natural man. King Benjamin says how that happens:
+"through the atonement of Christ the Lord" (Mosiah 3:19). The choir's failure is
+not evidence against the road home. It is the reason the road home matters.
+
+**On the girls in the room: fair, and easily answered.** The first verse
+belongs to daughters as fully as to sons. Paul wrote "the children of God"
+(Romans 8:16), not the sons. This essay speaks of sons because Golding's island
+holds only boys, and because a father wrote it. Every daughter is a child of God
+too, and her Father is on the same road.
+
+**On the casting: the issue is not who gets to be the hero. It is rewriting a
+story that already exists.** No one objects to a new story with a Black hero.
+Write it, and let it stand on its own. The objection is to taking a story that
+already exists, written seventy years ago with a fair-haired boy at its center,
+and changing it to carry a message its author never wrote. Golding wrote Ralph
+as "the boy with fair hair." The series kept his ending almost word for word and
+changed the boy. That is not representation. It is revision. And the
+"correction" defense concedes the point: it admits the change was deliberate,
+made to send a message of its own. If the films of the past failed some
+children, the remedy is new stories, not rewritten old ones.
+
+This is the same complaint this whole essay makes. The parable cut off at Luke
+15:16. The syllabus that keeps Golding's diagnosis and drops the theology that
+named it. Simon given a new inner life the book never gave him. Each one takes a
+story that already exists and quietly changes it to say something else. Recasting
+Ralph is the same move, made with a camera.
+
+**On the structural and the spiritual: both can be true.** This essay names the
+benefits cliff as a problem built into rules, not people, and nothing here argues
+against fixing the rule. What it adds is who runs the last part of the road:
+family, close enough to help. Fix the rule, and have someone running.
+
+**On Walsh: attack the argument, not the man.** Dismissing a witness by his
+reputation instead of answering his claim is the first move in the head's own
+playbook: shame the witness. And the argument about Jefferson's letter and the
+Court's rulings in 1962 and 1963 is Walsh's argument. It is the title of his
+video. On the prayer: this essay's concrete ask for the classroom is not a
+prayer. It is the Prodigal Son, assigned as literature, which the Supreme Court
+has always allowed.
+
+**On her conclusion: it is this essay's conclusion.** "Assign the road home
+beside the pigsty and let her argue" is exactly the case this essay makes: it is
+allowed, and it is simply not chosen. She also calls the book room's habit "a
+failure of nerve," a way to talk about cruelty "without having to take a vote on
+God." That is this essay's case, made from the other side of the room. The
+strongest objection anyone brought ends where the essay ends. Put Luke 15 on the
+same desk, and let the student read both.
+
 ## Which book to hand your son
 
 *Lord of the Flies* stays in the pigsty because it is a diagnosis without a
