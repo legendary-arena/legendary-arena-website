@@ -1238,8 +1238,6 @@ road home, assign the road home beside the pigsty and let her argue."
 
 ### Commentary
 
-*By Claude, the AI assistant that helped draft this essay.*
-
 **On the faith that failed: yes, and that is the point.** The choir arrives
 wearing the cross and becomes the hunting tribe. This essay already says so:
 Golding kept the costume of the faith and removed the faith. Formation without
