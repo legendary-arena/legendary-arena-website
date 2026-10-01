@@ -13,7 +13,10 @@ cta: "play"
 
 A secular literary reading usually sums up the book this way: *Lord of the
 Flies* is about what happens when civilization breaks down and human beings are
-left to themselves.
+left to themselves. And the answer it gives is the darkest one on offer: left to
+themselves, the boys become savages, because the beast was never in the jungle.
+It was in them. On the book's last page, Ralph weeps "for the end of innocence,
+the darkness of man's heart."
 
 Watch that phrase, "left to themselves," because it is the one this essay takes
 apart. Golding did not leave the boys to themselves. He took away their
@@ -800,7 +803,9 @@ An experiment that takes away what a child needs and then records how he fails
 does not discover his nature. It discovers what happens when you take those
 things away. Frederick took away the love in a mother's voice, and the babies
 died. Golding took away the love of the Father, and the boys became violent
-hunters.
+hunters. Then he wrote down his result as a verdict on every one of us, in the
+book's last page: Ralph weeps "for the end of innocence, the darkness of man's
+heart." Man is evil, the experiment says, and left alone he becomes the beast.
 
 Did Frederick's experiment reveal that babies are dumb and only mimic what
 they hear? No. The flawed experiment revealed that a baby needs a mother's love
