@@ -1204,8 +1204,8 @@ away the one story that tells him he has a Father running down the road.
 ## The objection: from the English department
 
 To test this essay, the author asked another AI, Grok, to argue against it in the
-voice of a Liberal Arts Professor who spent thirty years teaching *Lord of the
-Flies* in a university English department. She is not a real person, but her objections
+voice of a Liberal Arts Professor, a single woman who spent thirty years
+teaching *Lord of the Flies* in a university English department. She is not a real person, but her objections
 are the ones a real department would raise, and they deserve a fair hearing.
 Here they are at full strength.
 
