@@ -62,6 +62,9 @@ Since then it has collected nearly every honor a novel can:
   novels which, with the perspicuity of realistic narrative art and the
   diversity and universality of myth, illuminate the human condition in the
   world of today."
+  *In plain words:* the Nobel committee rewarded Golding for exposing the
+  darkness in man. This essay's critique is that he leaves out the light that
+  can redeem him.
 - **Knighted by Queen Elizabeth II.** In the summer of 1988, William Golding
   was knighted in the Queen's Birthday Honours. He was 76.
 - **Exam boards** still set it, and generation after generation of
