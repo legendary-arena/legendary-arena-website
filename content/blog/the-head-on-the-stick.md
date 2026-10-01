@@ -1292,6 +1292,45 @@ video. On the prayer: this essay's concrete ask for the classroom is not a
 prayer. It is the Prodigal Son, assigned as literature, which the Supreme Court
 has always allowed.
 
+#### What the Professor confessed
+
+Read closely, the Professor's objection confesses more than it refutes. She
+admits the double standard is deliberate, and she calls the book room's choice
+"a failure of nerve." She also gives away nine more things, each in her own
+words:
+
+1. **Who the correction is aimed at.** "Color-blindness was the slogan of the
+   unmarked category, which was white, male, and Christian." She names the
+   target herself: the same ninth-grade white boy who goes to church that this
+   essay named.
+2. **What reading is for.** She spends her energy on "the causes that department
+   taught her to treat as the point of reading," then faults this essay for
+   treating the novel as "a delivery system." Her department already uses books
+   to deliver its causes. She objects only to which message gets delivered.
+3. **The current reading is an orthodoxy.** Assigning Luke 15, she says,
+   "replaces one orthodoxy with another." Only an orthodoxy can be replaced by
+   another one. The book room was never neutral.
+4. **She removed the prayer herself.** "I said it in my classroom for years
+   before I had the rank to stop saying it, and the Jewish girl in the second
+   row is the reason I stopped." The decision was hers, made the moment she had
+   the rank. The girl is the reason offered.
+5. **The classroom teaches the choir as the killer.** Simon, she says, "is also
+   killed by the hymn." That is exactly what the churchgoing boy in this essay's
+   table takes away: the church boys are the violent ones.
+6. **Compassion assigned by group.** "Your compassion runs toward the child whose
+   image was the assumption. Mine has to run toward the child whose image was
+   the exception." She chooses which child receives her compassion by his group.
+   That is the opposite of one measure.
+7. **The institution as the answer.** This essay, she says, turns a structural
+   problem into a spiritual one "so that nobody has to fund the bridge." Her
+   remedy is a funded program. This essay's is a father running.
+8. **The classroom is hers to fill.** She faults Walsh for telling students
+   "what their classrooms are allowed to contain." She speaks as the one who
+   decides what they contain, which is the book room this essay describes.
+9. **The fair-haired boy flinched too.** "We know which child flinched, and it
+   was not only him." She concedes the white boy was hurt by the casting, and
+   tells him not to call it an injury.
+
 **On her conclusion: it is this essay's conclusion.** "Assign the road home
 beside the pigsty and let her argue" is exactly the case this essay makes: it is
 allowed, and it is simply not chosen. She also calls the book room's habit "a
