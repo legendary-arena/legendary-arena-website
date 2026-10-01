@@ -233,6 +233,12 @@ thousand;) and were choked in the sea" (5:13). On Golding's island, a pig's head
 rules the boys. In Mark, the devils go into the pigs, and the pigs go into the
 sea. Two thousand swine could not stand against one word from Christ.
 
+Now measure Golding's Christ-figure against that. One pig's head on one stick is
+enough to master Simon. He stands before it, faints, and falls into its mouth.
+The Christ of the gospels did not faint before one pig. He commanded a legion,
+and two thousand swine went into the sea. Golding's Simon is ruled by one pig.
+Jesus ruled two thousand.
+
 And look where the man ends. The townspeople came and found him "sitting at the
 feet of Jesus, clothed, and in his right mind" (Luke 8:35). He asked to go with
 Jesus. Instead, Jesus sent him home: "Go home to thy friends, and tell them how
