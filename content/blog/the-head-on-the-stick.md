@@ -737,6 +737,26 @@ Golding built his island like an experiment. Take away the parents. Take away
 the goal. Leave Beelzebub on the island. Then write down what happens, and call
 the result human nature.
 
+Here is what Golding cleared off the island before the first page:
+
+- **Parents.** None survive the crash. Ralph expects his father, a Navy
+  commander, to come for him. No parent ever walks the beach.
+- **God, and a faith that is lived.** The choirboys are only singers. No one on
+  the island prays to God for help, opens the scriptures, keeps the
+  commandments, or serves the way Christ served. No one is his brother's keeper.
+- **The grown-ups who raise a boy.** No teacher, coach, counselor, or mentor,
+  no adult whose work is to help a boy grow into a man.
+- **Who they are.** No boy is ever told he is a child of God. The book has no
+  first verse.
+- **A Father running to save them.** No one is watching the road.
+
+And here is what he kept:
+
+- **The devil and his temptations.** The pig's head on the stick, the Lord of
+  the Flies, Beelzebub himself, speaking to the boy who sees.
+
+Golding removes a Father running to save them, and keeps a devil to kill them.
+
 It has been tried before, on real children. In the 1200s the Emperor
 Frederick II wanted to know what language people would speak by nature,
 so he had infants raised with food and washing but no one allowed to speak to
@@ -754,9 +774,11 @@ learned ruler of his time. The man who recorded the experiment,
 Franciscan friar from Parma, a city Frederick besieged in 1247 and 1248, and he
 wrote his chronicle in the early 1280s. Salimbene was no friend of the emperor,
 but historians generally trust his record, and he gives no year for the
-experiment, only that it happened in Frederick's day. The most brilliant mind of
-the century set out to find human nature and only proved what every nurse in his
-kingdom could have told him.
+experiment, only that it happened in Frederick's day. Whether every detail is
+fact or was told against him, and an older story about the Egyptian king
+Psammetichus in Herodotus runs the same way, the lesson stands. The most
+brilliant mind of the century set out to find human nature and only proved what
+every nurse in his kingdom could have told him.
 
 An experiment that takes away what a child needs and then records how he fails
 does not discover his nature. It discovers what happens when you take those
