@@ -744,6 +744,20 @@ them. The chronicler Salimbene recorded the result: "he laboured in vain, for th
 children could not live without clappings of the hands, and gestures, and
 gladness of countenance, and blandishments." The children died.
 
+Frederick was no village tyrant. He was
+[Frederick II](https://en.wikipedia.org/wiki/Frederick_II,_Holy_Roman_Emperor)
+(1194–1250), King of Sicily from 1198 (a kingdom that then took in all of
+southern Italy) and Holy Roman Emperor from 1220. He held court at Palermo and
+Foggia, and his age called him *Stupor mundi*, the Wonder of the World: the most
+learned ruler of his time. The man who recorded the experiment,
+[Salimbene di Adam](https://en.wikipedia.org/wiki/Salimbene_di_Adam), was a
+Franciscan friar from Parma, a city Frederick besieged in 1247 and 1248, and he
+wrote his chronicle in the early 1280s. Salimbene was no friend of the emperor,
+but historians generally trust his record, and he gives no year for the
+experiment, only that it happened in Frederick's day. The most brilliant mind of
+the century set out to find human nature and only proved what every nurse in his
+kingdom could have told him.
+
 An experiment that takes away what a child needs and then records how he fails
 does not discover his nature. It discovers what happens when you take those
 things away. Frederick took away the love in a mother's voice, and the babies
