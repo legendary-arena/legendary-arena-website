@@ -334,6 +334,12 @@ It never did. "And he arose, and came to his father. But **when he was yet a
 great way off, his father saw him, and had compassion, and ran, and fell on
 his neck, and kissed him**" (15:20).
 
+<img width="360" style="margin: 1rem auto;" src="/images/blog/the-head-on-the-stick/rembrandt-return-of-the-prodigal-son.webp" alt="Rembrandt's painting of the prodigal son's return: a ragged son with a shaved head kneels with his face pressed against his father, who bends over him in a red cloak with both hands on his back, while the elder brother and others look on from the shadows" loading="lazy">
+
+*Rembrandt, The Return of the Prodigal Son (c. 1668), State Hermitage Museum,
+St Petersburg. The son still wears the far country, one sandal gone. The
+father's hands are already on his back.*
+
 The son did not walk the whole road. He only had to turn around and start. The
 father had been watching the road the entire time, and he ran the rest of it.
 He saw his boy from a great way off — which means he was looking. He had
@@ -665,6 +671,13 @@ and was dead; and, behold, I am alive for evermore, Amen; and have the keys of
 hell and of death" (Revelation 1:18). "But there is a resurrection, therefore
 the grave hath no victory, and the sting of death is swallowed up in Christ"
 (Mosiah 16:8).
+
+<img width="360" style="margin: 1rem auto;" src="/images/blog/the-head-on-the-stick/garden-tomb-jerusalem.webp" alt="A rock-cut tomb in a pale limestone cliff, a dark doorway at its center, with potted plants and red flowers in front" loading="lazy">
+
+*The Garden Tomb in Jerusalem, where visitors come to remember the empty tomb.
+"He is not here: for he is risen" (Matthew 28:6). (Photo:
+[Bukvoed](https://commons.wikimedia.org/wiki/File:Jerusalem-Garden-Tomb-KTM-1266.jpg),
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/))*
 
 The question of strength is settled in the same chapter that names the Lord of
 the Flies. The Pharisees said Jesus cast out devils "by Beelzebub the prince of
@@ -1423,6 +1436,11 @@ the next six years afloat. In the words of his
 and aircraft. Finished as Lieutenant in command of a rocket ship. He was present
 off the French coast for the D-Day invasion, and later at the island of
 Walcheren."
+
+<img width="360" style="margin: 1rem auto;" src="/images/blog/the-head-on-the-stick/golding-navy-uniform-with-ann.webp" alt="Black-and-white photograph of William Golding in a Royal Navy officer's cap and greatcoat, standing beside his wife, Ann, in a fur coat, against a brick wall" loading="lazy">
+
+*William Golding in Royal Navy uniform, with his wife, Ann. (William Golding
+estate)*
 
 **What the war taught him, in his own words.** In his essay "Fable" (*The Hot
 Gates*, 1965), Golding wrote: "Before the Second World War I believed in the
