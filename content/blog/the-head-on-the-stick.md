@@ -1549,6 +1549,85 @@ when it [cut the father's run](#the-line-that-almost-got-cut). Two assistants,
 built by two different companies, reached for the same trim. Claude's reason
 sounded careful. Copilot's reason was plainer: fewer objections.
 
+*Copilot showed a second reflex in other conversations: one conquest described
+as plain history, another as a debt still owed. See
+[Appendix F: Two conquests, two framings](#appendix-f-two-conquests-two-framings).*
+
+## Appendix F: Two conquests, two framings
+
+In Appendix E, Copilot named one reflex: soften the source so fewer people
+object. In other conversations with the author, it showed a second one, and this
+time no one had to ask.
+
+Without being asked, Copilot offered this about conquest:
+
+> "one observation is that conquerors often repurposed the most important
+> religious building in a city to symbolize the transfer of political and
+> religious authority"
+
+That is the whole of it. A cathedral becomes a mosque, and the word for it is
+*repurposed*. The church's loss is a "transfer of authority," a fact of history
+to note and move past. No one is dispossessed. Nothing is owed. No policy
+follows.
+
+When the conquest was America's, Copilot framed it another way:
+
+> "So the strongest version of the progressive position is not usually
+> 'America has no right to exist.' Rather, it is often: 'America was built in
+> part through the dispossession of Native peoples, and that history should be
+> acknowledged and considered in current policy.' Meanwhile, opponents reject
+> the term 'stolen land' itself or argue that it oversimplifies a much more
+> complex history."
+
+Set the two side by side.
+
+| | Conquerors who took the church | America |
+|---|---|---|
+| **The word for it** | "Repurposed," a "transfer of political and religious authority" | "Dispossession" |
+| **What it calls for** | Nothing. It is an observation. | It "should be acknowledged and considered in current policy" |
+| **Who gets a fair hearing** | No side is stated at all | The progressive position gets its "strongest version." The opponents get one sentence: they "reject the term." |
+| **How it came up** | Offered unasked | Set out as the case to understand |
+
+The church conversions are not only history, either. In 2020 Turkey made the
+Hagia Sophia a mosque again, eighty-five years after it became a museum, and
+ordered the Chora back to a mosque the same year. That is current policy, and it
+runs the other way. No one asked Copilot whether it should be "acknowledged and
+considered."
+
+Here is the record Copilot's observation passes over.
+
+#### Former churches converted into mosques
+
+| Site | Built as | Made a mosque | Since then | Sources |
+|---|---|---|---|---|
+| **Hagia Sophia** (Istanbul, Turkey) | The cathedral of Constantinople, 537 AD | After the Ottoman conquest in 1453 | A museum in 1935; a mosque again in 2020 | [Wikipedia](https://en.wikipedia.org/wiki/Hagia_Sophia), [Smithsonian](https://www.smithsonianmag.com/smart-news/turkey-turns-hagia-sophia-museum-mosque-drawing-criticism-180975300/) |
+| **Chora Church** (Kariye Mosque, Istanbul, Turkey) | A Byzantine church and monastery | In the Ottoman period, about 1500 | A museum in 1945; ordered back to a mosque in 2020 (opened for prayer in 2024) | [Wikipedia](https://en.wikipedia.org/wiki/The_Chora), [EWTN](https://ewtn.co.uk/article-photos-former-byzantine-church-converted-to-a-mosque-in-istanbul-is-reopened/) |
+| **Parthenon** (Athens, Greece) | A temple to Athena, later a Christian church | After the Ottoman conquest, before 1500 | — | [Wikipedia](https://en.wikipedia.org/wiki/Conversion_of_non-Islamic_places_of_worship_into_mosques) |
+| **Lala Mustafa Pasha Mosque** (Famagusta, Cyprus) | The Cathedral of Saint Nicholas, a Gothic Catholic cathedral | After the Ottoman conquest of Cyprus in 1571 | — | [Wikipedia](https://en.wikipedia.org/wiki/Lala_Mustafa_Pasha_Mosque) |
+| **Fethija Mosque** (Bihać, Bosnia and Herzegovina) | A Catholic church of Saint Anthony of Padua | Under Ottoman rule, 1592 | — | [Wikipedia](https://en.wikipedia.org/wiki/Conversion_of_non-Islamic_places_of_worship_into_mosques) |
+
+#### Built where the Jewish Temples stood
+
+| Site | Built | Where | Sources |
+|---|---|---|---|
+| **Dome of the Rock** (Jerusalem) | Not a converted church. Built as an Islamic shrine, completed in 691–692 AD. | On the Temple Mount, traditionally the site of the First and Second Jewish Temples | [Wikipedia](https://en.wikipedia.org/wiki/Dome_of_the_Rock), [Wikipedia](https://en.wikipedia.org/wiki/Temple_Mount) |
+| **Al-Aqsa Mosque** (Jerusalem) | Built under the Umayyad caliphs, about 700 AD. One of Islam's holiest sites. | On the same Temple Mount complex, where the Jewish Temples once stood according to Jewish tradition | [Wikipedia](https://en.wikipedia.org/wiki/Al-Aqsa_Mosque) |
+
+Copilot already gave the reason in its own words: "the system predicts fewer
+objections." Predicting objections means predicting who will object. A machine
+that expects complaints from one side learns to choose its words for that side.
+That is the same double standard
+[the casting showed](#the-same-double-standard-twice): one group is guarded, and
+the other is left exposed.
+
+The answer is the one this essay has given every time: one measure. If the
+conquest of the Native peoples is "dispossession" to be "acknowledged and
+considered in current policy," so is the conquest of Constantinople, and so is
+the decree that turned its cathedral back into a mosque in 2020. If the
+cathedral was only "repurposed," then so was the continent. Either answer can be
+argued. What cannot be argued is one answer for one people and the other answer
+for the next. "All are alike unto God" (2 Nephi 26:33).
+
 ## Note: who William Golding was
 
 William Gerald Golding was born in Newquay, Cornwall, on September 19, 1911,
