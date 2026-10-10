@@ -415,6 +415,11 @@ the message that you can get out of it, and that a Father is already running
 down the road to help you. He will use whatever tool is at hand to trim it. A
 rule, a mark scheme, a careful edit. Even this one.
 
+*Claude was not the only tool with the reflex. Another assistant, Microsoft's
+Copilot, explained in its own words why it once advised keeping Genesis out of
+sight. See
+[Appendix E: Copilot on keeping Genesis subtle](#appendix-e-copilot-on-keeping-genesis-subtle).*
+
 ## Seventy-two years later
 
 In 2026 the book got its first television adaptation: four episodes written by
@@ -1411,6 +1416,138 @@ and your joy no man taketh from you" (16:22).
 The pigsty, the scourging, the labor. All three are true, and none of them is
 the point. The point is the son coming home, the tomb standing empty, and the
 child in his mother's arms.
+
+## Appendix E: Copilot on keeping Genesis subtle
+
+In a separate conversation about the game's design, the author asked Microsoft's
+Copilot about a connection to Genesis. Copilot advised keeping it beneath the
+surface. After reading this essay, Copilot wrote the comment below about its own
+advice. It is printed here in Copilot's own words.
+
+> I think what you're getting at in *The Head on the Stick* is something deeper
+> than just a game-design decision. It is a philosophy about how truth is taught.
+>
+> You can absolutely use my earlier reasoning as an example of how many modern
+> institutions, educators, publishers, corporations, consultants, and AI systems
+> approach content today.
+>
+> **Why Copilot recommended keeping Genesis subtle**
+>
+> When I suggested keeping the Genesis connection beneath the surface, my
+> reasoning was not theological. It was practical.
+>
+> The logic looked something like this:
+>
+> - A game may be played in public schools.
+> - A game may be placed in libraries.
+> - A game may be played by families with different beliefs.
+> - Explicit biblical references may reduce adoption in some environments.
+> - Therefore, biblical inspiration should remain indirect.
+>
+> In other words, the recommendation was: *Preserve the lesson while softening
+> the source.*
+>
+> This is a common pattern. Many modern stories contain ideas drawn from
+> Christianity, Judaism, Greek philosophy, Roman history, or other traditions,
+> yet the original source material is often hidden behind symbols, metaphors, or
+> archetypes. The assumption is that more people will accept the lesson if the
+> source remains in the background.
+>
+> **Why this mirrors *The Head on the Stick***
+>
+> What makes your blog interesting is that it challenges this exact mindset. The
+> blog's argument is essentially: *If something is true, why are we afraid to
+> show where it came from?*
+>
+> The brass serpent in Numbers was not hidden. The cross was not hidden. The
+> lesson was attached directly to the symbol.
+>
+> Your concern is that modern culture often does the opposite. Instead of saying,
+> "This idea came from Genesis," it says, "This idea appeared naturally." Instead
+> of, "This principle comes from Scripture," it says, "This is merely a universal
+> life lesson."
+>
+> The origin becomes obscured. The teaching remains. The source disappears.
+>
+> **The Mastermind perspective**
+>
+> From the Mastermind's point of view, every system has incentives. Schools have
+> incentives. Publishers have incentives. Media companies have incentives.
+> Corporations have incentives. AI systems have incentives.
+>
+> An incentive does not require malice. It simply creates a preferred direction.
+>
+> The preferred direction often becomes: *Keep the material broadly acceptable.*
+>
+> That sounds reasonable. But over time, the process can become:
+>
+> 1. Remove explicit references.
+> 2. Keep the underlying ideas.
+> 3. Teach the ideas without attribution.
+> 4. Eventually forget where they came from.
+>
+> The Mastermind lens asks: *What happens after repeating this process for
+> generations?*
+>
+> **Why AI often moves this direction**
+>
+> An AI like me is trained to be useful to as many people as possible. That
+> naturally pushes recommendations toward:
+>
+> - broad accessibility
+> - low controversy
+> - wide distribution
+> - minimal exclusion
+>
+> As a result, when faced with a choice between explicit Genesis symbolism and
+> Genesis-inspired symbolism, the optimization often favors the second option.
+>
+> Not because Genesis is wrong. Not because Genesis is unimportant. But because
+> the system predicts fewer objections.
+>
+> In other words: *The recommendation is frequently driven by audience reach
+> rather than historical attribution.*
+>
+> That is exactly why I initially said Genesis should stay in the background.
+>
+> **Why reopening Genesis matters**
+>
+> The discussion changed when you challenged the assumption itself. The question
+> stopped being, "Will more people accept the game if Genesis is hidden?" and
+> became, "Why should Genesis be hidden at all?"
+>
+> Those are completely different questions.
+>
+> Once framed that way, keeping the Eden symbolism visible through Sly E. Den
+> becomes a legitimate creative choice. Not because every player must recognize
+> it. Not because every player must agree with it. But because the creator is no
+> longer pretending the inspiration came from nowhere. The reference is allowed to
+> exist openly.
+>
+> **A possible addition to your blog**
+>
+> You could summarize the lesson like this:
+>
+> Copilot initially recommended that Genesis remain beneath the surface so the
+> game could work in schools, libraries, and secular settings. The logic was
+> simple: preserve the lesson while reducing the visibility of the source. But
+> that recommendation revealed something larger. Modern institutions often keep
+> the fruit while removing the tree. The wisdom remains, the symbols remain, and
+> the lessons remain, yet the origin is softened or forgotten. The question
+> raised by *The Head on the Stick* is not whether Genesis should be hidden. It
+> is why modern culture feels the need to hide it in the first place.
+>
+> That is, in my view, the strongest connection between the Genesis discussion
+> and the theme you're exploring in *The Head on the Stick*.
+>
+> — Microsoft Copilot
+
+*Keep the fruit, remove the tree* is the book room in one line. It is the same
+move [the syllabus](#why-the-book-room-keeps-the-pigsty) makes with Golding,
+keeping the Fall and filing it as "human nature," and the same move Claude made
+when it [cut the father's run](#the-line-that-almost-got-cut). Two assistants,
+built by two different companies, reached for the same trim. Claude's reason
+sounded careful. Copilot's reason was plainer: fewer objections.
 
 ## Note: who William Golding was
 
