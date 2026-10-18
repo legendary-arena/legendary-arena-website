@@ -151,7 +151,7 @@ component may live inside a single video folder — that creates
 duplication and version drift.
 
 ```
-C:\pcloud\LA\
+C:\pcloud\legendary-arena\
   video-assets\                          # Shared / reusable assets
     intros\                              # Branded intro sequences per series
       bta-intro.mp4
@@ -210,11 +210,11 @@ Keep both uses in sync — if the watermark is updated, update both.
 
 ### Per-Video Folders
 
-Each video gets its own folder under `C:\pcloud\LA\videos\`, named by
+Each video gets its own folder under `C:\pcloud\legendary-arena\videos\`, named by
 series prefix + episode number + slug.
 
 ```
-C:\pcloud\LA\videos\
+C:\pcloud\legendary-arena\videos\
   bta-001-prove-fairness\             # Building the Arena #1
     01-research\                      # Step 3 output
       notes.md                        # Research notes, problem catalog refs
@@ -409,7 +409,7 @@ Step 10.]
 
 ### Checklist
 
-- [ ] Create video folder: `C:\pcloud\LA\videos\{prefix}-{NNN}-{slug}\`
+- [ ] Create video folder: `C:\pcloud\legendary-arena\videos\{prefix}-{NNN}-{slug}\`
 - [ ] Create subfolders: `01-research\`, `02-script\`, `03-recording\`,
       `04-assembly\`, `05-edit\`, `06-publish\`
 - [ ] Write `01-research\notes.md` — problem card, series assignment,
@@ -520,7 +520,7 @@ homepage-appendix.md § Content Framework]
 
 ## HOOK (0:00 - 0:15)
 [Show outcome or contradiction. Ask the question. Create tension.
-Use a proven pattern from C:\pcloud\LA\video-assets\_templates\hooks\]
+Use a proven pattern from C:\pcloud\legendary-arena\video-assets\_templates\hooks\]
 
 **Hook pattern used:** [curiosity / challenge / contradiction /
 outcome-first / question]
@@ -707,7 +707,7 @@ investing recording time.
    polish. If the keyword scores poorly, try the alt titles before
    committing to recording.
 3. **Generate 2 thumbnail concepts** — primary and one backup alt.
-   Use the series visual template from `C:\pcloud\LA\video-assets\thumbnails\`.
+   Use the series visual template from `C:\pcloud\legendary-arena\video-assets\thumbnails\`.
    Both are saved; the alt becomes the A/B test candidate after
    publish if CTR is weak.
 
@@ -843,8 +843,8 @@ Claude Code must perform all of the following:
 5. **Dead-air trimming:** Detect and trim silence longer than 0.5 sec
    at segment boundaries (configurable threshold)
 6. **Intro/outro stub insertion:** Prepend intro and append outro
-   placeholders from `C:\pcloud\LA\video-assets\intros\` and
-   `C:\pcloud\LA\video-assets\outros\` (series-matched)
+   placeholders from `C:\pcloud\legendary-arena\video-assets\intros\` and
+   `C:\pcloud\legendary-arena\video-assets\outros\` (series-matched)
 7. **Cut points metadata:** Generate `cuts.json` with segment
    boundaries, durations, and Shorts candidate timestamps from the
    script
@@ -912,7 +912,7 @@ Watch the rough cut before proceeding. Check:
 ## Step 7: Edit + Polish (Adobe Premiere)
 
 **Input:** `rough-cut-normalized.mp4` from `04-assembly\` + assets from
-`01-research\` + shared assets from `C:\pcloud\LA\video-assets\`
+`01-research\` + shared assets from `C:\pcloud\legendary-arena\video-assets\`
 **Output:** Final video + Shorts + thumbnail in `05-edit\`
 **Tool:** Adobe Premiere Pro
 
@@ -934,8 +934,8 @@ scripted, stop — add it to Step 6 for next time.
 
 1. **Import:** `rough-cut-normalized.mp4` (already has intro/outro
    stubs, normalized audio, correct resolution), music tracks from
-   `C:\pcloud\LA\video-assets\music\`, overlays from
-   `C:\pcloud\LA\video-assets\overlays\`, b-roll from `01-research\`,
+   `C:\pcloud\legendary-arena\video-assets\music\`, overlays from
+   `C:\pcloud\legendary-arena\video-assets\overlays\`, b-roll from `01-research\`,
    thumbnail assets
 2. **Refine the timeline:**
    - Replace intro/outro stubs with final branded sequences (if the
@@ -948,11 +948,11 @@ scripted, stop — add it to Step 6 for next time.
    - Question overlays for pattern interrupts
    - Zoom/highlight on UI elements during demos
    - Lower-third for guest name ("Across the Table")
-   - Channel watermark: `C:\pcloud\LA\video-assets\overlays\watermarks\`
+   - Channel watermark: `C:\pcloud\legendary-arena\video-assets\overlays\watermarks\`
      (lower-right, 20% opacity, present throughout — use the variant
      that contrasts with the video background)
    - Newsletter CTA card near outro if applicable:
-     `C:\pcloud\LA\video-assets\lead-magnets\newsletter-signup-card.png`
+     `C:\pcloud\legendary-arena\video-assets\lead-magnets\newsletter-signup-card.png`
 4. **Audio mix:**
    - Layer background music (low, under voice — from shared library)
    - Audio is already normalized from Step 6 — Premiere handles only
@@ -965,7 +965,7 @@ scripted, stop — add it to Step 6 for next time.
    - Export each to `05-edit\shorts\`
 6. **Thumbnail:**
    - Create using series visual template from
-     `C:\pcloud\LA\video-assets\thumbnails\`
+     `C:\pcloud\legendary-arena\video-assets\thumbnails\`
    - Export to `05-edit\{prefix}-{NNN}-{slug}-thumbnail.png` (1280x720)
 7. **Export:**
    - Final video: `05-edit\{prefix}-{NNN}-{slug}-final.mp4`
@@ -1133,8 +1133,8 @@ every video. The overhead per clip is under 5 minutes.
 
 ### Cross-Post Checklist (per Short)
 
-- [ ] Save a copy to `C:\pcloud\LA\social\tiktok\{prefix}-{NNN}\`
-      and `C:\pcloud\LA\social\instagram-reels\{prefix}-{NNN}\`
+- [ ] Save a copy to `C:\pcloud\legendary-arena\social\tiktok\{prefix}-{NNN}\`
+      and `C:\pcloud\legendary-arena\social\instagram-reels\{prefix}-{NNN}\`
 - [ ] Upload to TikTok with:
   - Caption: [hook line from script] + "Full video on YouTube — link
     in bio"
@@ -1318,7 +1318,7 @@ that get views.*
 **Still driving newsletter signups?** [yes / no]
 **Still driving play.legendary-arena.com clicks?** [yes / no]
 **Follow-up episode warranted?** [yes / no — if yes, add to content calendar]
-**Ready to archive?** [ ] Move folder to `C:\pcloud\LA\videos\_archive\`
+**Ready to archive?** [ ] Move folder to `C:\pcloud\legendary-arena\videos\_archive\`
 
 ## Top Performer Check (monthly — apply to top 20% videos)
 
