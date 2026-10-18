@@ -332,7 +332,7 @@ today (verified — `content/` has no get-started/primer page; ST-02 is
 This is **Gate G2** and a week-1–4 deliverable:
 
 1. Produce the primer PDF (drafting location:
-   `C:\pcloud\LA\video-assets\lead-magnets\deckbuilding-primer-v1.pdf`, per
+   `C:\pcloud\legendary-arena\video-assets\lead-magnets\deckbuilding-primer-v1.pdf`, per
    the workflow file layout).
 2. Build the `/get-started` capture page (ST-02) with the Brevo signup form
    (WP-015 pattern) and the matching UTM contract (WP-020).

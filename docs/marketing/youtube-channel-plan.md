@@ -320,7 +320,7 @@ Each video must include:
 - **Hook (0-15 sec):** Show the outcome first, ask a question, or
   create tension. Example: "This game looks random... but I can prove
   it isn't." Use a proven structure from the Hook Library
-  (`C:\pcloud\LA\video-assets\hooks\`).
+  (`C:\pcloud\legendary-arena\video-assets\hooks\`).
 - **First 30 seconds gate:** By 0:30, the video must have delivered a
   payoff, confirmed its promise, or escalated the tension. If
   retention drops below 50% at 30 seconds in the performance review,
