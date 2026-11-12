@@ -42,6 +42,36 @@ The Fantasy), §19 (as amended by D-24843), §20–§26 (scoring), and
 §Non-Goals NG-1…NG-8. The engine document stays authoritative; this page is
 public copy, not governance.
 
+## Copy pass (2026-11-12, external review)
+
+A Grok review of the live page proposed seven edits. Adopted:
+
+- **Tighter promise lines** for rhythm, except "Skill decides", which keeps
+  the approved message-bank line verbatim ("Standing comes from sessions
+  played well, not hours logged or money spent") instead of the clipped
+  "not hours or money".
+- **Longevity sentence** in the opening: new expansions arrive with the same
+  cards and rules, closed with the message-bank line "The system you learn
+  today is the system you face tomorrow." The review's "added as data"
+  phrasing was dropped as mechanics-first.
+- **"Together"** in the opening, so a first-time reader knows the play is
+  cooperative.
+- **Heroism paragraph:** losing a civilian now also reads as worse than a
+  villain escaping empty-handed.
+
+Declined:
+
+- **"Rescuing civilians is the strongest positive action."** Inaccurate since
+  engine D-24409 (WP-599): a rescue is its printed 1 Victory Point with no
+  bonus, and the moral hierarchy sits on the penalty side.
+- **A second card-registry link** and **repeating the close-call line at the
+  page foot.** The promise already links the registry, and the close-call
+  line already ends the promise section; repeating either adds length for
+  no new claim.
+- **An accessibility / performance line.** It would be a public commitment
+  ahead of the product's accessibility work; it stays in the engine vision
+  (§16–§17) for now.
+
 ## Notes
 
 - Copy follows `docs/brand/strategy.md` §2–3 (voice, verb palette, canonical
