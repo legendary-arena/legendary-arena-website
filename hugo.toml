@@ -182,6 +182,14 @@ enableRobotsTXT = true
   url = "/about/"
   weight = 10
 
+# Vision — the public statement of the game's promise (WP-253). Sits
+# beside About, which links to it.
+[[menu.footer]]
+  identifier = "footer-vision"
+  name = "Vision"
+  url = "/vision/"
+  weight = 11
+
 [[menu.footer]]
   identifier = "footer-blog"
   name = "Blog"
