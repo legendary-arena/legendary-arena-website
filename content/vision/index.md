@@ -11,28 +11,27 @@ The arena awaits.
 Legendary Arena is built to be the definitive home of heroic
 deck-building: a place to play, compete, and master the game for decades.
 You assemble a team of heroes and, turn by turn, push back a Mastermind's
-scheme before the city falls. Every session is good against evil, and the
-momentum belongs to the team that earns it.
+scheme together before the city falls. Every session is good against evil,
+and the momentum belongs to the team that earns it. New expansions arrive
+with the same cards and the same rules: the system you learn today is the
+system you face tomorrow.
 
 ## The promise
 
 Every decision behind Legendary Arena answers to six lines.
 
-- **Exact rules.** Every card plays as printed. Every timing, trigger, and
-  erratum follows the rulebook. No shortcuts, no digital-only
-  simplifications.
-- **The real cards.** The same images, names, and text as the printed
-  cards. Anyone can check them in the
-  [card registry](https://cards.legendary-arena.com/).
-- **Verifiable fairness.** Every shuffle is seeded, and every session can
-  be replayed step for step. No hidden modifiers. The system never makes a
-  decision for you.
+- **Exact rules.** Every card plays as printed. Timings, triggers, and
+  errata follow the rulebook.
+- **The real cards.** The same images, names, and text. Check them yourself
+  in the [card registry](https://cards.legendary-arena.com/).
+- **Verifiable fairness.** Seeded shuffles. Every session replays step for
+  step. No hidden modifiers. The system never decides for you.
 - **Skill decides.** Standing comes from sessions played well, not hours
   logged or money spent.
 - **No advantage you can buy.** Nothing for sale changes how a session
   plays.
-- **Your record is yours.** Your replays and standings are kept in an open
-  format you can take with you.
+- **Your record is yours.** Replays and standings in an open format you can
+  take with you.
 
 When a call is close, we make the one a player who believed this promise
 would expect.
@@ -50,8 +49,9 @@ Scenarios earn recognition of their own. Every standing is re-scored from
 its replay, so no score can be edited into place.
 
 The scoring rewards heroism over caution. Rescued civilians count toward
-your Victory Points, and losing a civilian to an escaping villain costs you
-more than any other outcome. Board control never outscores the people you
+your Victory Points. Losing a civilian to an escaping villain costs you
+more than any other outcome, more than letting a villain escape
+empty-handed. Board control never outscores the people you
 came to protect.
 
 ## AI stays out of the session
