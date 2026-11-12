@@ -21,6 +21,9 @@ ruleset doesn't grade on a curve. Within a session, shuffle and draw
 stay random — that's still deck-building. Above that line, everything
 is consistent and knowable.
 
+The promise behind it, and the lines it will never cross, are on the
+[vision page](/vision/).
+
 ## Who's behind it
 
 Legendary Arena is built at **BarefootBetters** by Jeffery Jensen. The
