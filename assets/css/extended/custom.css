@@ -692,12 +692,16 @@ pre code {
 .home-problem-empathy,
 .home-results-stakes {
   color: var(--la-color-text-secondary);
-  font-size: var(--la-font-size-body);
+  font-size: var(--la-font-size-h4);
+  line-height: var(--la-line-height-h4);
   max-width: 640px;
   margin: 0;
 }
 
+/* The stakes line is the warning the section turns on, so it reads in the
+   primary text colour; the empathy line stays secondary, as an aside. */
 .home-results-stakes {
+  color: var(--la-color-text-primary);
   margin-bottom: var(--la-space-5);
 }
 
@@ -731,6 +735,24 @@ pre code {
   line-height: 1;
   color: var(--la-color-gold);
   margin-bottom: var(--la-space-2);
+}
+
+/* Phone width: number beside the step, not above it, so three steps don't
+   take a full screen. */
+@media (max-width: 560px) {
+  .home-plan-steps {
+    gap: var(--la-space-3);
+  }
+  .home-plan-steps li {
+    display: flex;
+    align-items: baseline;
+    gap: var(--la-space-3);
+  }
+  .home-plan-steps li::before {
+    font-size: var(--la-font-size-h2);
+    margin-bottom: 0;
+    min-width: 1ch;
+  }
 }
 
 .home-promise h3 {
