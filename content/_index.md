@@ -5,7 +5,7 @@ description: "Legendary Arena is a skill-first, web-based deck-building system. 
 draft: false
 heroImage: "/images/home/banner-la-medusa-dr-oct.jpg"
 heroAlt: "Legendary Arena — face the scenario"
-ctaLabel: "Play now"
+ctaLabel: "Play free"
 ctaHref: "https://play.legendary-arena.com/"
 sections:
   - heading: "Skill decides."
@@ -16,4 +16,4 @@ sections:
     body: "A deterministic ruleset means the system you learn today is the system you face tomorrow. Shuffle and draw stay random — that's deck-building. Everything above that is consistent and knowable."
 ---
 
-Assemble your heroes. Read the scenario. Earn your standing.
+A deck-building card game where skill decides every match. Runs in your browser. No advantage you can buy.
