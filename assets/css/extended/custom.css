@@ -905,6 +905,40 @@ ul#menu li a span.active {
   }
 }
 
+/* WP-255: phone header. The single-row menu (overflow-x: auto) hid three
+   of its seven links past the right edge behind a scrollbar, and the cart
+   sat alone on its own row.
+   - The menu becomes a fixed four-column grid: two rows, every link
+     visible, no scroll. The row count follows the item count, not the
+     text width, so the Inter font swap still can't add a row (the CLS
+     concern above holds).
+   - Links drop PaperMod's 60px header line-height to 40px per row (still
+     well above the 24px touch-target minimum).
+   - The cart moves up beside the wordmark (flex order + auto margin).
+   The single row needs about 477px of links; at 561px and up (533px of
+   row after gutters) it fits, so the menu keeps its single row there. */
+@media (max-width: 560px) {
+  .header-nav > .header-cart {
+    order: 1;
+    margin-inline-start: auto;
+  }
+  .header-nav > .menu {
+    order: 2;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: start;
+    column-gap: var(--la-space-5);
+    row-gap: 0;
+    overflow-x: visible;
+  }
+  .header-nav > .menu a {
+    line-height: 40px;
+  }
+  .header-nav > .header-search {
+    order: 3;
+  }
+}
+
 /* §8.2 Footer nav region
    Sits as the first child of <footer class="footer"> per the
    WP-010 footer.html override, iterates site.Menus.footer from
