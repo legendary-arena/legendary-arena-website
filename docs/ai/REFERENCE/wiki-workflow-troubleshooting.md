@@ -198,7 +198,7 @@ When adding images/graphics to the wiki:
 
 1. Copy files to the asset directory:
    ```bash
-   cp "source/image.png" "C:\pcloud\BB\DEV\legendary-arena\ewiki\<page-slug>\"
+   cp "source/image.png" "C:\dev\legendary-arena\ewiki\<page-slug>\"
    ```
 
 2. Add the asset directory to git:
@@ -236,9 +236,9 @@ Use this when making wiki changes:
 
 | Location | Purpose |
 |---|---|
-| `C:\pcloud\BB\DEV\legendary-arena\wiki\*.md` | Wiki markdown pages (authoring location) |
-| `C:\pcloud\BB\DEV\legendary-arena\ewiki\<slug>\` | Wiki asset directories (images, screenshots) |
-| `C:\pcloud\BB\DEV\legendary-arena\wiki\README.md` | Wiki authoring workflow guide |
+| `C:\dev\legendary-arena\wiki\*.md` | Wiki markdown pages (authoring location) |
+| `C:\dev\legendary-arena\ewiki\<slug>\` | Wiki asset directories (images, screenshots) |
+| `C:\dev\legendary-arena\wiki\README.md` | Wiki authoring workflow guide |
 | `.github/workflows/wiki-viewer.yml` | Wiki CI pipeline |
 | `https://ewiki.legendary-arena.com/` | Published wiki site |
 
@@ -246,6 +246,6 @@ Use this when making wiki changes:
 
 ## Further reading
 
-- [Wiki authoring workflow](../../pcloud/BB/DEV/legendary-arena/wiki/README.md) — full guide in the wiki repo
-- [SCHEMA.md](../../pcloud/BB/DEV/legendary-arena/wiki/SCHEMA.md) — wiki page contract and conventions
+- [Wiki authoring workflow](https://github.com/barefootbetters/legendary-arena/blob/main/wiki/README.md) — full guide in the engine repo
+- [SCHEMA.md](https://github.com/barefootbetters/legendary-arena/blob/main/wiki/SCHEMA.md) — wiki page contract and conventions
 - [Render deployment docs](https://render.com/docs) — Render platform reference

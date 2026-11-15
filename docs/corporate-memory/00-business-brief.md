@@ -48,8 +48,7 @@ progression-by-spending.
 | What | Local path | GitHub |
 |---|---|---|
 | Marketing site (this repo) | `C:\www\legendary-arena-com` | `github.com/legendary-arena/legendary-arena-website` |
-| Engine monorepo (active checkout) | `C:\pcloud\BB\DEV\legendary-arena` | `github.com/barefootbetters/legendary-arena` |
-| Engine monorepo (stale backup — do not edit) | `C:\www\legendary-arena` | — |
+| Engine monorepo | `C:\dev\legendary-arena` (moved off pCloud 2026-10-17) | `github.com/barefootbetters/legendary-arena` |
 
 Engine monorepo holds `apps/arena-client`, `apps/registry-viewer`,
 `apps/server`, `packages/game-engine`, `packages/registry`.

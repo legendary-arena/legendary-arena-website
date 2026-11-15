@@ -22,9 +22,9 @@ person and the portfolio index.
 
 | Layer | Location | Holds |
 |---|---|---|
-| Personal / identity / portfolio | `C:\www\jefferyjjensen-corporate-memory` (private, no remote) | Owner profile, operating principles, cross-business portfolio index |
+| Personal / identity / portfolio | `C:\www\jefferyjjensen-corporate-memory` (private repo) | Owner profile, operating principles, cross-business portfolio index |
 | **Legendary Arena (this repo)** | `C:\www\legendary-arena-com\docs\corporate-memory\` | LA business brief, decisions, KPIs, open questions |
-| Engine monorepo | `C:\pcloud\BB\DEV\legendary-arena` (org `barefootbetters`) | *(future — its own memory when scaffolded)* |
+| Engine monorepo | `C:\dev\legendary-arena` (org `barefootbetters`) | *(future — its own memory when scaffolded)* |
 | BarefootBetters site | *(repo TBD)* | *(future)* |
 
 The portfolio index that ties these together lives in

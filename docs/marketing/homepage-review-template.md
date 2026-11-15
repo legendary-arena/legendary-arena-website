@@ -7,10 +7,10 @@
 >    `FIX:` is limited to the content lane (`content/**`, `static/images/**`) — `docs/` requires `SPEC:`.
 > 3. Push to `main`, or branch + PR if you want review.
 > 4. If edits change scope or structure, also update the ewiki page at
->    `C:\pcloud\BB\DEV\legendary-arena\wiki\homepage-review-template.md`
+>    `C:\dev\legendary-arena\wiki\homepage-review-template.md`
 >    and push the `legendary-arena` repo separately.
 > 5. If edits change what the homepage actually implements, re-grade the
->    scorecard at `C:\pcloud\BB\DEV\legendary-arena\wiki\homepage-marketing-scorecard.md`.
+>    scorecard at `C:\dev\legendary-arena\wiki\homepage-marketing-scorecard.md`.
 >
 > **Related files:**
 > - `C:\www\legendary-arena-com\docs\marketing\homepage-spec.md` — build document (split from this template)
@@ -67,7 +67,7 @@ current-state scorecard, and the Sales Conversion Audit overlay.
    questions, refresh the element tables, and bump the "last recorded"
    date.
 5. If the homepage's implementation changed, re-grade the ewiki scorecard
-   at `C:\pcloud\BB\DEV\legendary-arena\wiki\homepage-marketing-scorecard.md`
+   at `C:\dev\legendary-arena\wiki\homepage-marketing-scorecard.md`
    (see the editing note at the top of this file).
 
 ---

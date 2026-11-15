@@ -6,18 +6,15 @@ This repo (`legendary-arena-com`) is the **Hugo marketing site** for
 `www.legendary-arena.com`. It owns brand governance, roadmap, vision,
 and cross-site WPs (WP-007a, WP-007b, etc.).
 
-The **engine monorepo** (`legendary-arena`) is checked out in two places
-on this machine:
+The **engine monorepo** (`legendary-arena`, GitHub
+`barefootbetters/legendary-arena`) is checked out at **`C:\dev\legendary-arena\`**.
+That's the one checkout; engine sessions run there. It moved off pCloud on
+2026-10-17: `C:\pcloud\BB\DEV\legendary-arena.RETIRED-2026-10-17\` is a
+rollback copy (never work in it), and the old `C:\www\legendary-arena\`
+clone is deleted. The engine checkout is often on a feature branch, so read
+the engine's current state from GitHub `main`, not from that folder.
 
-- **Active checkout — `C:\pcloud\BB\DEV\legendary-arena\`.** This is the
-  working tree: at `origin/main` HEAD, with `node_modules` installed, and
-  where engine sessions actually run. Use this path for all engine work.
-- **Secondary/stale clone — `C:\www\legendary-arena\`.** A backup copy that
-  lags `origin/main` (it was 132 commits behind with no `node_modules` when
-  this note was written, 2026-06-09). Do **not** treat it as canonical — pull
-  it or ignore it, but don't edit against it.
-
-Either checkout contains:
+It contains:
 
 - `apps/registry-viewer/` — the Vue app at `cards.legendary-arena.com`
 - `apps/arena-client/` — the Vue app at `play.legendary-arena.com`
@@ -25,7 +22,7 @@ Either checkout contains:
 
 When a WP in this repo references `apps/registry-viewer/src/...` or
 `apps/arena-client/src/...`, those paths live in the engine monorepo
-(`C:\pcloud\BB\DEV\legendary-arena\`), not here. Do not attempt to edit
+(`C:\dev\legendary-arena\`), not here. Do not attempt to edit
 engine monorepo files from this working directory.
 
 ## Marketing asset generation
