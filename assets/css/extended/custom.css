@@ -434,6 +434,10 @@ pre code {
 .hero-image {
   display: block;
   width: 100%;
+  /* WP-254: without this the img's height="315" attribute holds at every
+     width, so phones got a 315px-tall crop that pushed the CTA below the
+     fold. The width/height attributes still reserve the aspect ratio. */
+  height: auto;
   max-height: 480px;
   object-fit: cover;
   border-radius: var(--la-radius-md);

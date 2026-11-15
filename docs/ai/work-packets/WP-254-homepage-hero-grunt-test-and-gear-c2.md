@@ -30,7 +30,7 @@ This file is the self-contained record. There is no separate ROADMAP entry
 |---|---|
 | `content/_index.md` | Hero prose becomes the category and benefit line: "A deck-building card game where skill decides every match. Runs in your browser. No advantage you can buy." `ctaLabel` becomes "Play free" (in the spec's approved CTA bank and within the strategy.md §2 CTA contract: two words, one verb). The H1 "The arena awaits." stays, as the fantasy lead `strategy.md` §2 calls for. |
 | `layouts/index.html` | Hero copy and CTA move into a `.hero-panel`; with a hero image it gets `.hero-panel--lifted`. Featured Gear lists only `featured: true` products whose `image` is set and is not an `.svg`; with none, the section is omitted. Product `alt` uses the product's own title. |
-| `assets/css/extended/custom.css` | `.hero-panel--lifted` overlaps the banner's bottom edge as a raised panel (tokens only: `--la-space-*`, `--la-radius-lg`, `--la-shadow-strong`, `--la-color-bg-primary`). The hero CTA is larger and carries `--la-shadow-strong`; its color stays on `--la-color-cta`. Phone width overlaps less. |
+| `assets/css/extended/custom.css` | `.hero-panel--lifted` overlaps the banner's bottom edge as a raised panel (tokens only: `--la-space-*`, `--la-radius-lg`, `--la-shadow-strong`, `--la-color-bg-primary`). The hero CTA is larger and carries `--la-shadow-strong`; its color stays on `--la-color-cta`. Phone width overlaps less. `.hero-image` gets `height: auto`: before, the `height="315"` attribute held at every width, so a 375px phone showed a 315px-tall crop of the banner and the CTA sat below the fold (864px on an 812px screen, measured on production 2026-11-15). |
 
 ## Notes
 
