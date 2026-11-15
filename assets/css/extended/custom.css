@@ -436,9 +436,11 @@ pre code {
   width: 100%;
   /* WP-254: without this the img's height="315" attribute holds at every
      width, so phones got a 315px-tall crop that pushed the CTA below the
-     fold. The width/height attributes still reserve the aspect ratio. */
+     fold. The width/height attributes still reserve the aspect ratio.
+     The 315px cap keeps wide screens on the same cropped strip they had
+     before (taller art there pushes the CTA toward the fold). */
   height: auto;
-  max-height: 480px;
+  max-height: 315px;
   object-fit: cover;
   border-radius: var(--la-radius-md);
   border: 1px solid var(--la-color-border-subtle);
