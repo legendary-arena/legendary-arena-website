@@ -434,7 +434,13 @@ pre code {
 .hero-image {
   display: block;
   width: 100%;
-  max-height: 480px;
+  /* WP-254: without this the img's height="315" attribute holds at every
+     width, so phones got a 315px-tall crop that pushed the CTA below the
+     fold. The width/height attributes still reserve the aspect ratio.
+     The 315px cap keeps wide screens on the same cropped strip they had
+     before (taller art there pushes the CTA toward the fold). */
+  height: auto;
+  max-height: 315px;
   object-fit: cover;
   border-radius: var(--la-radius-md);
   border: 1px solid var(--la-color-border-subtle);
@@ -458,6 +464,33 @@ pre code {
   max-width: 640px;
   margin-top: 0;
   margin-bottom: var(--la-space-5);
+}
+
+/* WP-254: depth. The copy panel rides up over the banner's bottom edge
+   (back = art, middle = panel, front = the CTA). The overlap is static
+   layout, so it adds no CLS. */
+.hero-panel--lifted {
+  position: relative;
+  /* Cancel .hero-image-wrap's bottom margin, then overlap by --la-space-8. */
+  margin: calc(-1 * (var(--la-space-6) + var(--la-space-8))) var(--la-space-5) 0;
+  padding: var(--la-space-6);
+  background-color: var(--la-color-bg-primary);
+  border: 1px solid var(--la-color-border-subtle);
+  border-radius: var(--la-radius-lg);
+  box-shadow: var(--la-shadow-strong);
+}
+
+.hero .hero-cta {
+  margin-bottom: 0;
+}
+
+/* The one primary action on the first screen: larger, and lifted in front
+   of the panel. Color stays on the CTA token (Highlighter rule). */
+.hero .hero-cta .button {
+  padding: var(--la-space-3) var(--la-space-6);
+  font-size: var(--la-font-size-h4);
+  font-weight: var(--la-font-weight-bold);
+  box-shadow: var(--la-shadow-strong);
 }
 
 /* §5.2 Buttons / CTAs
@@ -534,6 +567,11 @@ pre code {
   .hero {
     padding-top: var(--la-space-7);
     padding-bottom: var(--la-space-7);
+  }
+  /* Phone-width banner is short; overlap less and use the full width. */
+  .hero-panel--lifted {
+    margin: calc(-1 * (var(--la-space-6) + var(--la-space-5))) var(--la-space-3) 0;
+    padding: var(--la-space-5);
   }
 }
 

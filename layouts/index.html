@@ -39,17 +39,22 @@
     {{- end }}
   </div>
   {{- end }}
-  <h1>{{ .Title }}</h1>
-  {{- with .Content }}
-  <div class="hero-prose">
-    {{ . }}
+  {{- /* WP-254: the copy sits on a raised panel that overlaps the banner's
+         bottom edge, so the page reads in three layers: art behind, copy in
+         the middle, the one CTA in front. */ -}}
+  <div class="hero-panel{{ with .Params.heroImage }} hero-panel--lifted{{ end }}">
+    <h1>{{ .Title }}</h1>
+    {{- with .Content }}
+    <div class="hero-prose">
+      {{ . }}
+    </div>
+    {{- end }}
+    <p class="hero-cta">
+      <a class="button" href="{{ .Params.ctaHref | default "https://play.legendary-arena.com/" }}">
+        {{ .Params.ctaLabel | default "Play now" }}
+      </a>
+    </p>
   </div>
-  {{- end }}
-  <p>
-    <a class="button" href="{{ .Params.ctaHref | default "https://play.legendary-arena.com/" }}">
-      {{ .Params.ctaLabel | default "Play now" }}
-    </a>
-  </p>
 </section>
 
 {{- with .Params.sections }}
@@ -101,9 +106,20 @@
 {{- /* Featured products — pulls non-draft shop items with featured: true,
        limited to 3, ordered by weight (front-matter). */ -}}
 {{- $sPage := site.GetPage "/shop" }}
+{{- /* WP-254: only products with a real photograph surface here. An item
+       with no image or an SVG stand-in fails the video-commerce C2 gate
+       ("Real imagery") and the brand-asset kill-list ("placeholder imagery
+       presented as product"), so it stays off the home page until a photo
+       of the shipped unit replaces the SVG. When none qualify, the whole
+       section is omitted (with $featured). */ -}}
 {{- $featured := slice }}
 {{- with $sPage }}
-  {{- $featured = where .Pages "Params.featured" true }}
+  {{- range where .Pages "Params.featured" true }}
+    {{- $img := lower (.Params.image | default "") }}
+    {{- if and $img (not (strings.HasSuffix $img ".svg")) }}
+      {{- $featured = $featured | append . }}
+    {{- end }}
+  {{- end }}
   {{- $featured = first 3 $featured }}
 {{- end }}
 {{- with $featured }}
@@ -111,9 +127,10 @@
   <h2>Featured Gear</h2>
   <div class="product-grid">
     {{- range . }}
+    {{- $product := . }}
     <div class="product-card">
       {{- with .Params.image }}
-      <img class="product-card-image" src="{{ . }}" alt="{{ $.Title }}" loading="lazy">
+      <img class="product-card-image" src="{{ . }}" alt="{{ $product.Title }}" loading="lazy">
       {{- end }}
       <div class="product-card-body">
         <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
