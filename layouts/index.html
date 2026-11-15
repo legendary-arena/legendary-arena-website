@@ -57,8 +57,33 @@
   </div>
 </section>
 
+{{- /* WP-256: the homepage-spec story arc after the hero:
+       problem -> pillars -> plan + promise -> CTA -> results -> objections
+       -> story -> closing CTA. Copy lives in content/_index.md front matter
+       (WP-004 contract); each block renders only when its key is set.
+       Tournaments and gear follow the closing CTA (spec flow #16, #17). */ -}}
+{{- $playHref := .Params.ctaHref | default "https://play.legendary-arena.com/" }}
+{{- $playLabel := .Params.ctaLabel | default "Play now" }}
+
+{{- with .Params.problem }}
+<section class="section home-problem">
+  <h2>{{ .heading }}</h2>
+  <ul class="home-problem-levels">
+    {{- range .levels }}
+    <li>{{ . | markdownify }}</li>
+    {{- end }}
+  </ul>
+  {{- with .empathy }}
+  <p class="home-problem-empathy">{{ . | markdownify }}</p>
+  {{- end }}
+</section>
+{{- end }}
+
 {{- with .Params.sections }}
-<div class="section">
+<div class="section home-pillars">
+  {{- with $.Params.pillarsHeading }}
+  <h2 class="home-section-heading">{{ . }}</h2>
+  {{- end }}
   {{- range . }}
   <div class="card">
     <h2>{{ .heading }}</h2>
@@ -66,6 +91,112 @@
   </div>
   {{- end }}
 </div>
+{{- end }}
+
+{{- with .Params.plan }}
+<section class="section home-plan">
+  <h2 class="home-section-heading">{{ .heading }}</h2>
+  <ol class="home-plan-steps">
+    {{- range .steps }}
+    <li>{{ . }}</li>
+    {{- end }}
+  </ol>
+  {{- with .promise }}
+  <div class="card home-promise">
+    <h3>{{ .heading }}</h3>
+    <ul>
+      {{- range .items }}
+      <li>{{ . | markdownify }}</li>
+      {{- end }}
+    </ul>
+  </div>
+  {{- end }}
+  <p class="home-cta-row">
+    <a class="button" href="{{ $playHref }}">{{ $playLabel }}</a>
+    {{- with .secondary }}
+    <a class="home-cta-secondary" href="{{ .href }}">{{ .label }}</a>
+    {{- end }}
+  </p>
+</section>
+{{- end }}
+
+{{- with .Params.results }}
+<section class="section home-results">
+  <h2 class="home-section-heading">{{ .heading }}</h2>
+  {{- with .stakes }}
+  <p class="home-results-stakes">{{ . }}</p>
+  {{- end }}
+  <ul class="home-results-outcomes">
+    {{- range .outcomes }}
+    <li>{{ . | markdownify }}</li>
+    {{- end }}
+  </ul>
+  {{- with .transformation }}
+  <dl class="home-results-transformation">
+    {{- range . }}
+    <div>
+      <dt>From</dt><dd class="home-from">{{ .from }}</dd>
+      <dt>To</dt><dd class="home-to">{{ .to }}</dd>
+    </div>
+    {{- end }}
+  </dl>
+  {{- end }}
+</section>
+{{- end }}
+
+{{- with .Params.objections }}
+<section class="section home-objections">
+  <h2 class="home-section-heading">{{ .heading }}</h2>
+  <dl class="home-objections-list">
+    {{- range .items }}
+    <div>
+      <dt>{{ .q }}</dt>
+      <dd>{{ .a | markdownify }}</dd>
+    </div>
+    {{- end }}
+  </dl>
+  {{- with .newsletter }}
+  <div class="home-objections-newsletter">
+    {{- partial "newsletter-form.html" (dict "id" "home" "source" "home-objections" "heading" .heading "description" .description) }}
+  </div>
+  {{- end }}
+</section>
+{{- end }}
+
+{{- /* Featured story — the blog post flagged featured: true (first 1).
+       Its own section, parallel to tournaments/gear — deliberately NOT a
+       fourth .Params.sections card, which would break the homepage-spec
+       "exactly 3 pillars" rule. See WP-251. WP-256 moved it ahead of the
+       closing CTA: the origin story is the guide's empathy, so it belongs
+       in the arc, not after it. */ -}}
+{{- $bPage := site.GetPage "/blog" }}
+{{- $story := slice }}
+{{- with $bPage }}
+  {{- $story = where .Pages "Params.featured" true }}
+  {{- $story = first 1 $story }}
+{{- end }}
+{{- with $story }}
+<div class="section home-story">
+  <h2>Why the Arena Exists</h2>
+  {{- range . }}
+  <div class="card story-card">
+    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    <p>{{ .Description }}</p>
+    {{- /* WP-256: a text link, not a CTA button. The red button is kept
+           for Play (Highlighter rule: the accent marks the one action). */ -}}
+    <a class="home-cta-secondary" href="{{ .RelPermalink }}">Read the story</a>
+  </div>
+  {{- end }}
+</div>
+{{- end }}
+
+{{- with .Params.closing }}
+<section class="section home-closing">
+  <h2>{{ .heading }}</h2>
+  <p class="home-cta-row">
+    <a class="button" href="{{ $playHref }}">{{ $playLabel }}</a>
+  </p>
+</section>
 {{- end }}
 
 {{- /* Upcoming tournaments — pulls from content/tournaments/, sorted by
@@ -144,29 +275,6 @@
   <p class="home-products-cta">
     <a href="/shop/">Browse all gear</a>
   </p>
-</div>
-{{- end }}
-
-{{- /* Featured story — the blog post flagged featured: true (first 1).
-       Its own section, parallel to tournaments/gear — deliberately NOT a
-       fourth .Params.sections card, which would break the homepage-spec
-       "exactly 3 pillars" rule. See WP-251. */ -}}
-{{- $bPage := site.GetPage "/blog" }}
-{{- $story := slice }}
-{{- with $bPage }}
-  {{- $story = where .Pages "Params.featured" true }}
-  {{- $story = first 1 $story }}
-{{- end }}
-{{- with $story }}
-<div class="section home-story">
-  <h2>Why the Arena Exists</h2>
-  {{- range . }}
-  <div class="card story-card">
-    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-    <p>{{ .Description }}</p>
-    <a class="button" href="{{ .RelPermalink }}">Read the story</a>
-  </div>
-  {{- end }}
 </div>
 {{- end }}
 

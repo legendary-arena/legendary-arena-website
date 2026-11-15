@@ -647,6 +647,206 @@ pre code {
   color: var(--la-color-blue);
 }
 
+/* §5.6a Home — story arc (WP-256)
+   Problem -> pillars -> plan + promise -> results -> objections -> closing.
+   Section headings share the display treatment of §5.5. One red button per
+   CTA row (Highlighter rule); the secondary action is a blue text link,
+   per palette.md §4.3 (blue-bright carries interactive affordance). */
+
+.home-problem h2,
+.home-section-heading,
+.home-story h2,
+.home-closing h2 {
+  font-family: var(--la-font-display);
+  font-size: var(--la-font-size-h2);
+  line-height: var(--la-line-height-h2);
+  font-weight: var(--la-font-weight-h2);
+  letter-spacing: var(--la-letter-spacing-display);
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: var(--la-space-5);
+}
+
+.home-problem-levels,
+.home-results-outcomes {
+  list-style: none;
+  margin: 0 0 var(--la-space-5);
+  padding: 0;
+  max-width: 640px;
+}
+
+.home-problem-levels li,
+.home-results-outcomes li {
+  font-size: var(--la-font-size-h4);
+  line-height: var(--la-line-height-h4);
+  padding-left: var(--la-space-4);
+  border-left: 3px solid var(--la-color-border-subtle);
+  margin-bottom: var(--la-space-3);
+}
+
+.home-problem-levels li p,
+.home-results-outcomes li p {
+  margin: 0;
+}
+
+.home-problem-empathy,
+.home-results-stakes {
+  color: var(--la-color-text-secondary);
+  font-size: var(--la-font-size-body);
+  max-width: 640px;
+  margin: 0;
+}
+
+.home-results-stakes {
+  margin-bottom: var(--la-space-5);
+}
+
+.home-pillars .card + .card {
+  margin-top: var(--la-space-4);
+}
+
+.home-plan-steps {
+  list-style: none;
+  counter-reset: la-step;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--la-space-4);
+  margin: 0 0 var(--la-space-5);
+  padding: 0;
+}
+
+.home-plan-steps li {
+  counter-increment: la-step;
+  font-family: var(--la-font-display);
+  font-size: var(--la-font-size-h4);
+  line-height: var(--la-line-height-h4);
+  letter-spacing: var(--la-letter-spacing-display);
+  text-transform: uppercase;
+}
+
+.home-plan-steps li::before {
+  content: counter(la-step);
+  display: block;
+  font-size: var(--la-font-size-h1);
+  line-height: 1;
+  color: var(--la-color-gold);
+  margin-bottom: var(--la-space-2);
+}
+
+.home-promise h3 {
+  margin-top: 0;
+  margin-bottom: var(--la-space-3);
+}
+
+.home-promise ul {
+  margin: 0;
+  padding-left: var(--la-space-5);
+}
+
+.home-promise li + li {
+  margin-top: var(--la-space-2);
+}
+
+.home-promise li p {
+  margin: 0;
+}
+
+.home-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--la-space-5);
+  margin: var(--la-space-6) 0 0;
+}
+
+.home-cta-secondary {
+  color: var(--la-color-blue-bright);
+  text-decoration: underline;
+}
+
+.home-cta-secondary:hover {
+  color: var(--la-color-blue);
+}
+
+.home-results-transformation {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--la-space-4);
+  margin: 0;
+}
+
+.home-results-transformation > div {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: var(--la-space-3);
+  row-gap: var(--la-space-1);
+  align-items: baseline;
+  padding: var(--la-space-4);
+  border: 1px solid var(--la-color-border-subtle);
+  border-radius: var(--la-radius-md);
+}
+
+.home-results-transformation dt {
+  font-size: var(--la-font-size-small);
+  text-transform: uppercase;
+  letter-spacing: var(--la-letter-spacing-display);
+  color: var(--la-color-text-secondary);
+}
+
+.home-results-transformation dd {
+  margin: 0;
+}
+
+.home-results-transformation .home-from {
+  color: var(--la-color-text-secondary);
+  text-decoration: line-through;
+}
+
+.home-results-transformation .home-to {
+  font-weight: var(--la-font-weight-semibold);
+}
+
+.home-objections-list {
+  margin: 0;
+  max-width: 720px;
+}
+
+.home-objections-list > div + div {
+  margin-top: var(--la-space-4);
+}
+
+.home-objections-list dt {
+  font-weight: var(--la-font-weight-semibold);
+}
+
+.home-objections-list dd {
+  margin: var(--la-space-1) 0 0;
+  color: var(--la-color-text-secondary);
+}
+
+.home-objections-list dd p {
+  margin: 0;
+}
+
+.home-objections-newsletter {
+  max-width: 560px;
+  margin-top: var(--la-space-6);
+}
+
+.story-card .home-cta-secondary {
+  display: inline-block;
+  margin-top: var(--la-space-2);
+}
+
+.home-closing {
+  text-align: center;
+}
+
+.home-closing .home-cta-row {
+  justify-content: center;
+  margin-top: 0;
+}
+
 /* §5.7 Utility helpers */
 
 .text-muted {
