@@ -9,7 +9,7 @@ from the source PDF. Run this whenever the rulebook is updated; do not hand-edit
 
 Inputs live in two sibling repos, not in this one:
 
-- **Engine monorepo** (`C:\pcloud\BB\DEV\legendary-arena\`):
+- **Engine monorepo** (`C:\dev\legendary-arena\`):
   - `docs/Marvel Legendary Universal Rules v23 (hyperlinks).pdf` — the rulebook PDF
     (~43 MB; too large to vendor here). Hosted copy the page links to:
     `https://images.legendary-arena.com/docs/legendary-universal-rules-v23.pdf`.
@@ -34,7 +34,7 @@ npm install pdfjs-dist@4
 From this repo's root, with `$ENGINE` pointing at the engine monorepo:
 
 ```sh
-ENGINE="C:/pcloud/BB/DEV/legendary-arena"
+ENGINE="C:/dev/legendary-arena"
 node scripts/rules/extract.mjs "$ENGINE/docs/Marvel Legendary Universal Rules v23 (hyperlinks).pdf" /tmp/pages.json
 node scripts/rules/build.mjs /tmp/pages.json "$ENGINE" content/rules/index.md
 hugo --quiet   # verify it builds
