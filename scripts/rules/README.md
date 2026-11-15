@@ -7,7 +7,7 @@ from the source PDF. Run this whenever the rulebook is updated; do not hand-edit
 
 ## Sources (cross-repo)
 
-Inputs live in two sibling repos, not in this one:
+The rulebook inputs live in the engine repo; the icons live here.
 
 - **Engine monorepo** (`C:\dev\legendary-arena\`):
   - `docs/Marvel Legendary Universal Rules v23 (hyperlinks).pdf` — the rulebook PDF
@@ -16,10 +16,12 @@ Inputs live in two sibling repos, not in this one:
   - `data/metadata/keywords-full.json` — used only as the keyword-name dictionary
     (which extracted lines are keyword headings) and to size the cross-reference
     coverage report. The prose is the verbatim rulebook, **not** the glossary text.
-- **legendary-setup repo** (`C:\pcloud\BB\DEV\barefootbetters-legendary-setup\`):
-  the icon SVG assets (`src/assets/svg/icons/card-info`, `public/img/icons/hero-classes`,
-  `public/img/icons/hero-teams`). The ones referenced by `icon-map.json` are
-  vendored into this repo under `static/img/icons/`. Re-copy if the map grows.
+- **Icons — this repo, `static/img/icons/`** (`card-info/`, `hero-classes/`,
+  `hero-teams/`). These SVGs were copied from the old `barefootbetters-legendary-setup`
+  project, which no longer exists (no source on disk or GitHub; its leftover
+  folder was deleted 2026-11-15). This repo now holds the only copy, so
+  `static/img/icons/` is the source of truth. If `icon-map.json` grows to need an
+  icon that isn't there, add the SVG to the matching folder by hand.
 
 ## Prerequisites
 
