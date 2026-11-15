@@ -1,6 +1,13 @@
 ---
 title: "Tournament Calendar"
 description: "Organized play is coming to Legendary Arena — year-round open tables, a weekly scenario, and a seasonal championship. Standing is earned by playing well, never bought."
+# The three WP-022 sample events (Founders Cup, Summer Invitational 2026,
+# Weekly Ladder Week 1) were never real and were removed 2026-11-15. Their
+# URLs were in the sitemap, so they redirect here instead of 404ing.
+aliases:
+  - /tournaments/founders-cup/
+  - /tournaments/summer-invitational-2026/
+  - /tournaments/weekly-ladder-week-1/
 ---
 
 **Organized play is on the way.** We're building a year-round calendar of open
